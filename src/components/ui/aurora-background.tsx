@@ -44,7 +44,7 @@ export const AuroraBackground = ({
             [background-position:50%_50%]
             filter blur-[10px]
 
-            after:content-[""] after:absolute after:inset-0
+            after:content-[''] after:absolute after:inset-0
              after:[background-image:var(--aurora)]
             after:[background-size:200%]
             after:animate-aurora
