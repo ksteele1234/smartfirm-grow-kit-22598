@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <AuroraBackground className="h-[100vh]">
+    <AuroraBackground className="h-[100vh]" showRadialGradient={false}>
       <motion.div
         initial={{ opacity: 0.0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
