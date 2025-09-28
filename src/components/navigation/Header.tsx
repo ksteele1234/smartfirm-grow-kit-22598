@@ -65,8 +65,8 @@ const Header = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger asChild>
-                  <a href="/services" className="group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none">
+                <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium">
+                  <a href="/services" className="flex items-center">
                     Services
                   </a>
                 </NavigationMenuTrigger>
@@ -94,8 +94,8 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger asChild>
-                  <a href="/solutions" className="group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none">
+                <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium">
+                  <a href="/solutions" className="flex items-center">
                     Solutions
                   </a>
                 </NavigationMenuTrigger>
@@ -121,8 +121,8 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger asChild>
-                  <a href="/industries" className="group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none">
+                <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium">
+                  <a href="/industries" className="flex items-center">
                     Industries
                   </a>
                 </NavigationMenuTrigger>
