@@ -103,9 +103,6 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <a href="/resources" className="text-foreground hover:text-primary transition-colors font-medium">
-              Resources
-            </a>
             <a href="/success-stories" className="text-foreground hover:text-primary transition-colors font-medium">
               Success Stories
             </a>
@@ -147,9 +144,6 @@ const Header = () => {
               </a>
               <a href="/industries" className="text-foreground hover:text-primary transition-colors font-medium">
                 Industries
-              </a>
-              <a href="/resources" className="text-foreground hover:text-primary transition-colors font-medium">
-                Resources
               </a>
               <a href="/success-stories" className="text-foreground hover:text-primary transition-colors font-medium">
                 Success Stories
