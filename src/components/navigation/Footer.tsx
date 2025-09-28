@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
-import smartFirmLogo from "@/assets/smartfirm-logo.svg";
+import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 
 const Footer = () => {
   const services = [

@@ -18,31 +18,31 @@ import {
 const Services = () => {
   const serviceCategories = [
     {
-      icon: <Zap className="h-8 w-8 text-primary-blue" />,
+      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Marketing Automation",
       description: "Lead Generation & Follow-up, Website & SEO, Review & Reputation Management, Social Media & Advertising, Marketing Technology, Support & Optimization.",
       link: "/services/marketing-automation"
     },
     {
-      icon: <Settings className="h-8 w-8 text-primary-teal" />,
+      icon: <Settings className="h-8 w-8 text-teal" />,
       title: "Technology Solutions", 
       description: "Tech Stack Optimization and Business Process Automation to streamline your firm's operations and improve efficiency.",
       link: "/services/technology-solutions"
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Business Optimization",
       description: "Process Improvement and Executive Dashboards to help you make data-driven decisions and optimize your firm's performance.",
       link: "/services/business-optimization"
     },
     {
-      icon: <Users className="h-8 w-8 text-primary-teal" />,
+      icon: <Users className="h-8 w-8 text-teal" />,
       title: "Executive Services",
       description: "Fractional CIO Services and Fractional CFO Services providing executive-level expertise without the full-time commitment.",
       link: "/services/executive-services"
     },
     {
-      icon: <Package className="h-8 w-8 text-primary-blue" />,
+      icon: <Package className="h-8 w-8 text-primary" />,
       title: "Service Packages",
       description: "Marketing Starter Package, Tech Optimizer Package, Business Growth Package, Executive Suite Package, Complete Transformation Package.",
       link: "/services/packages"

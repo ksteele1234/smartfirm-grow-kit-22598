@@ -1,3 +1,5 @@
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
@@ -10,6 +12,7 @@ interface IndustryPageTemplateProps {
 const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-primary/10">
         <div className="max-w-7xl mx-auto text-center">
@@ -155,6 +158,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

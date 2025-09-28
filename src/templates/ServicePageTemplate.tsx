@@ -1,3 +1,5 @@
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServicePageData } from "@/types/cms";
@@ -10,6 +12,7 @@ interface ServicePageTemplateProps {
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto">
@@ -131,6 +134,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </Button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

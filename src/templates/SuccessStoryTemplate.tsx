@@ -1,3 +1,5 @@
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,6 +13,7 @@ interface SuccessStoryTemplateProps {
 const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="max-w-7xl mx-auto">
@@ -187,6 +190,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

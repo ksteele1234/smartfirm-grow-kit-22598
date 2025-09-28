@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import smartFirmLogo from "@/assets/smartfirm-logo.svg";
+import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -117,10 +117,9 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="hero" size="default">
-              Get Started
+            <Button variant="hero" size="default" asChild>
+              <a href="/get-started">Get Started</a>
             </Button>
           </div>
 
@@ -161,8 +160,8 @@ const Header = () => {
               <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact
               </a>
-              <Button variant="hero" size="default" className="w-full mt-4">
-                Get Started
+              <Button variant="hero" size="default" className="w-full mt-4" asChild>
+                <a href="/get-started">Get Started</a>
               </Button>
             </nav>
           </div>

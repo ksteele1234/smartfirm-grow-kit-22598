@@ -1,3 +1,5 @@
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +14,7 @@ interface ResourcePageTemplateProps {
 const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -163,6 +166,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
