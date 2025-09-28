@@ -20,34 +20,40 @@ import {
 const Resources = () => {
   const resourceCategories = [
     {
-      icon: <BookOpen className="h-8 w-8 text-primary-blue" />,
+      icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Guides & Whitepapers",
       description: "In-depth articles, e-books, and whitepapers on marketing, automation, and business growth.",
       link: "/resources/guides"
     },
     {
-      icon: <Calculator className="h-8 w-8 text-primary-teal" />,
+      icon: <Calculator className="h-8 w-8 text-teal" />,
       title: "Tools & Calculators",
       description: "Interactive tools like ROI calculators, profit estimators, and workflow templates.",
       link: "/tools"
     },
     {
-      icon: <FileText className="h-8 w-8 text-primary-blue" />,
+      icon: <FileText className="h-8 w-8 text-primary" />,
       title: "Blog",
       description: "Latest articles, industry news, and thought leadership posts.",
       link: "/resources/blog"
     },
     {
-      icon: <BarChart3 className="h-8 w-8 text-primary-teal" />,
+      icon: <BarChart3 className="h-8 w-8 text-teal" />,
       title: "Case Studies",
       description: "Real-world examples of client success and transformation stories.",
       link: "/resources/case-studies"
     },
     {
-      icon: <Video className="h-8 w-8 text-primary-blue" />,
+      icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
       link: "/resources/webinars"
+    },
+    {
+      icon: <MessageSquare className="h-8 w-8 text-teal" />,
+      title: "FAQ",
+      description: "Frequently asked questions about our services and solutions for accounting firms.",
+      link: "/faq"
     }
   ];
 

@@ -2,6 +2,12 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   ArrowRight, 
   Zap, 
@@ -250,6 +256,78 @@ const Services = () => {
                   Explore Our Solutions
                 </a>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+                  Frequently Asked Questions About Our Services
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Common questions accounting firms have about our marketing automation and technology solutions.
+                </p>
+              </div>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    What marketing automation services do you provide for accounting firms?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    We provide comprehensive marketing automation including automated lead follow-up, email marketing campaigns, client review generation, SEO for accountants, social media management, and website design. Our services are specifically tailored for CPAs, bookkeepers, and accounting firms of all sizes.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    How long does it take to implement marketing automation for my CPA firm?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Most accounting firms see their marketing automation systems fully operational within 30-60 days. This includes lead generation setup, email sequences, CRM integration, and staff training. We work around your schedule to minimize disruption during tax season or busy periods.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Do you integrate with accounting software like QuickBooks and Xero?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, our technology solutions integrate seamlessly with popular accounting software including QuickBooks, Xero, Drake, Lacerte, and practice management systems like Karbon and Canopy. This ensures your marketing data flows directly into your existing workflows.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    What kind of ROI can accounting firms expect from marketing automation?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Our clients typically see a 250% increase in qualified leads, 150% improvement in conversion rates, and save 15+ hours per week on manual marketing tasks. Most accounting firms achieve positive ROI within 90 days of implementation.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Is marketing automation compliant with accounting industry regulations?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Absolutely. All our marketing automation solutions comply with AICPA guidelines, state board regulations, and data privacy laws. We understand the unique compliance requirements for CPAs and ensure all communications maintain professional standards.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Do you provide ongoing support after implementing marketing automation?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, we provide comprehensive ongoing support including monthly optimization, performance reporting, strategy adjustments, and unlimited technical support. Our team continuously monitors your systems to ensure optimal performance and growth.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>

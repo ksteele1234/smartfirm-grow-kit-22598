@@ -2,6 +2,12 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   ArrowRight, 
   User, 
@@ -328,6 +334,78 @@ const Industries = () => {
                   View All Services
                 </a>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+                  Industry-Specific FAQ for Accounting Professionals
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Common questions about tailored marketing solutions for different types of accounting practices and specializations.
+                </p>
+              </div>
+              
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Do you have specific marketing solutions for solo CPAs versus large accounting firms?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, we tailor our approach based on firm size. Solo CPAs get streamlined, cost-effective automation focused on efficiency. Small firms (2-10 employees) receive collaboration tools and standardized workflows. Large firms get enterprise-level solutions with advanced analytics and multi-office coordination.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    How do marketing strategies differ for tax preparation versus bookkeeping services?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Tax preparation marketing focuses on seasonal campaigns, deadline reminders, and quick turnaround messaging. Bookkeeping services emphasize ongoing relationships, monthly value delivery, and business growth support. We customize lead magnets, email sequences, and service presentations for each specialization.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Can you help specialized practices like forensic accounting or wealth management?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Absolutely. Specialized practices require targeted marketing to reach specific audiences. We develop industry-specific content, networking automation, and thought leadership campaigns that position you as the expert in your niche while maintaining compliance with professional standards.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    How do you handle marketing for accounting firms in different geographic markets?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    We implement local SEO strategies, geo-targeted advertising, and community-specific content marketing. Whether you're in a major metropolitan area or a smaller market, we optimize your visibility for local searches and establish your firm as the go-to accounting practice in your area.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    Do you understand the unique compliance requirements for different accounting specializations?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    Yes, we're well-versed in industry regulations including AICPA guidelines, state board requirements, SEC regulations for audit firms, and IRS circular 230 for tax practitioners. All our marketing materials and automation sequences comply with professional standards and ethical requirements.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left">
+                    How do you help accounting firms differentiate from their competition?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    We identify your unique value proposition and amplify it through strategic positioning, specialized content marketing, and targeted messaging. Whether it's your technology expertise, industry specialization, or client service approach, we help you stand out in a crowded marketplace.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
           </div>
         </section>
