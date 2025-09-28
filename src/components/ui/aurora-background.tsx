@@ -26,8 +26,8 @@ export const AuroraBackground = ({
           className={cn(
             `
               /* White vs dark stripe layer */
-              [--white-gradient:repeating-linear-gradient(100deg,hsl(var(--white))_0%,hsl(var(--white))_7%,transparent_10%,transparent_12%,hsl(var(--white))_16%)]
-              [--dark-gradient:repeating-linear-gradient(100deg,hsl(var(--black))_0%,hsl(var(--black))_7%,transparent_10%,transparent_12%,hsl(var(--black))_16%)]
+              [--white-gradient:repeating-linear-gradient(100deg,hsl(var(--background))_0%,hsl(var(--background))_7%,transparent_10%,transparent_12%,hsl(var(--background))_16%)]
+              [--dark-gradient:repeating-linear-gradient(100deg,hsl(var(--foreground))_0%,hsl(var(--foreground))_7%,transparent_10%,transparent_12%,hsl(var(--foreground))_16%)]
 
               /* Aurora with your exact palette */
               [--aurora:repeating-linear-gradient(
@@ -43,7 +43,7 @@ export const AuroraBackground = ({
             dark:[background-image:var(--dark-gradient),var(--aurora)]
             [background-size:300%,_200%]
             [background-position:50%_50%,50%_50%]
-            filter blur-[10px] invert dark:invert-0
+            filter blur-[10px]
 
             after:content-[""] after:absolute after:inset-0
             after:[background-image:var(--white-gradient),var(--aurora)]
@@ -54,7 +54,7 @@ export const AuroraBackground = ({
             after:mix-blend-difference
 
             pointer-events-none
-            absolute -inset-[10px] opacity-50 will-change-transform
+            absolute -inset-[10px] opacity-80 will-change-transform
             `,
             showRadialGradient &&
               `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,transparent_70%)]`

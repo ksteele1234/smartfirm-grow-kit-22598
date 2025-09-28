@@ -17,12 +17,12 @@ export default {
     },
     extend: {
       colors: {
-        // Aurora Background Colors - Using exact palette
-        "aurora-1": "#647FBC",
-        "aurora-2": "#647FBC", 
-        "aurora-3": "#647FBC",
-        "aurora-4": "#7AB2B2",
-        "aurora-5": "#FAFDD6",
+        // Aurora Background Colors - Using exact palette as HSL tokens (not hex)
+        "aurora-1": "225 43% 56%",
+        "aurora-2": "225 43% 56%", 
+        "aurora-3": "225 43% 56%",
+        "aurora-4": "180 28% 60%",
+        "aurora-5": "64 89% 92%",
         
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
