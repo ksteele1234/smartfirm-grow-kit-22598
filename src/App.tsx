@@ -38,6 +38,13 @@ import ToolsCalculators from "./pages/ToolsCalculators";
 import EfficiencyQuiz from "./pages/tools/EfficiencyQuiz";
 import MarketingScorecard from "./pages/tools/MarketingScorecard";
 import ROICalculator from "./pages/tools/ROICalculator";
+import AutomationReadinessQuiz from "./pages/tools/AutomationReadinessQuiz";
+import WorkflowBottleneckFinder from "./pages/tools/WorkflowBottleneckFinder";
+import TechStackROICalculator from "./pages/tools/TechStackROICalculator";
+import ClientLifetimeValueCalculator from "./pages/tools/ClientLifetimeValueCalculator";
+import LeadGenerationScorecard from "./pages/tools/LeadGenerationScorecard";
+import ModernFirmQuiz from "./pages/tools/ModernFirmQuiz";
+import GrowthPotentialScorecard from "./pages/tools/GrowthPotentialScorecard";
 
 // Legal Pages
 import Privacy from "./pages/Privacy";
@@ -87,6 +94,13 @@ const App = () => (
         <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
         <Route path="/tools/marketing-scorecard" element={<MarketingScorecard />} />
         <Route path="/tools/roi-calculator" element={<ROICalculator />} />
+        <Route path="/tools/automation-readiness-quiz" element={<AutomationReadinessQuiz />} />
+        <Route path="/tools/workflow-bottleneck-finder" element={<WorkflowBottleneckFinder />} />
+        <Route path="/tools/tech-stack-roi-calculator" element={<TechStackROICalculator />} />
+        <Route path="/tools/client-lifetime-value-calculator" element={<ClientLifetimeValueCalculator />} />
+        <Route path="/tools/lead-generation-scorecard" element={<LeadGenerationScorecard />} />
+        <Route path="/tools/modern-firm-quiz" element={<ModernFirmQuiz />} />
+        <Route path="/tools/growth-potential-scorecard" element={<GrowthPotentialScorecard />} />
         
         {/* Legal Pages */}
         <Route path="/privacy" element={<Privacy />} />
