@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,68 +54,112 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
-              Home
-            </a>
-            
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors font-medium">
-                Services <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border shadow-soft">
-                {services.map((service) => (
-                  <DropdownMenuItem key={service} className="hover:bg-accent">
-                    <a href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {service}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                )}>
+                  Home
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[500px] grid-cols-2">
+                    {services.map((service) => (
+                      <NavigationMenuLink
+                        key={service}
+                        href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">{service}</div>
+                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                          {service === "Automated Lead Follow-up" && "Convert more prospects with automated email sequences"}
+                          {service === "Client Review Generation" && "Get more positive reviews and testimonials"}
+                          {service === "SEO for Accountants" && "Rank higher in local search results"}
+                          {service === "Social Media Management" && "Professional social media presence"}
+                          {service === "Email Marketing" && "Nurture leads with targeted campaigns"}
+                          {service === "Website Design" && "Modern, conversion-optimized websites"}
+                        </p>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors font-medium">
-                <a href="/solutions" className="flex items-center">
-                  Solutions <ChevronDown className="ml-1 h-4 w-4" />
-                </a>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border shadow-soft">
-                {solutions.map((solution) => (
-                  <DropdownMenuItem key={solution} className="hover:bg-accent">
-                    <a href={`/solutions/${solution.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {solution}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[500px] grid-cols-1">
+                    {solutions.map((solution) => (
+                      <NavigationMenuLink
+                        key={solution}
+                        href={`/solutions/${solution.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">{solution}</div>
+                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                          {solution === "I need more leads" && "Generate qualified prospects consistently"}
+                          {solution === "I want to scale my firm" && "Grow without proportional overhead increase"}
+                          {solution === "I'm losing clients to competitors" && "Strengthen your competitive position"}
+                          {solution === "I need better client retention" && "Keep clients engaged and loyal"}
+                        </p>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors font-medium">
-                Industries <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border border-border shadow-soft">
-                {industries.map((industry) => (
-                  <DropdownMenuItem key={industry} className="hover:bg-accent">
-                    <a href={`/industries/${industry.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {industry}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[400px] grid-cols-1">
+                    {industries.map((industry) => (
+                      <NavigationMenuLink
+                        key={industry}
+                        href={`/industries/${industry.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">{industry}</div>
+                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                          {industry === "Tax Preparation" && "Specialized marketing for tax professionals"}
+                          {industry === "Bookkeeping Services" && "Growth strategies for bookkeepers"}
+                          {industry === "Business Advisory" && "Marketing for advisory services"}
+                          {industry === "Audit & Assurance" && "Professional services marketing"}
+                        </p>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-            <a href="/success-stories" className="text-foreground hover:text-primary transition-colors font-medium">
-              Success Stories
-            </a>
-            <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
-              About Us
-            </a>
-            <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
-              Contact
-            </a>
-          </nav>
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/success-stories" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                )}>
+                  Success Stories
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/about" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                )}>
+                  About Us
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink href="/contact" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                )}>
+                  Contact
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="hero" size="default" asChild>
