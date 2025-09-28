@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import smartFirmLogo from "@/assets/smartfirm-logo.svg";
 
 const Footer = () => {
   const services = [
@@ -35,11 +36,15 @@ const Footer = () => {
             {/* Brand Column */}
             <div className="lg:col-span-2">
               <div className="mb-6">
-                <a href="/" className="text-3xl font-heading font-bold text-primary">
-                  SmartFirm<span className="text-teal">.io</span>
+                <a href="/" className="flex items-center mb-4">
+                  <img 
+                    src={smartFirmLogo} 
+                    alt="SmartFirm - Marketing and Automation for Accounting Firms" 
+                    className="h-8 w-auto"
+                  />
                 </a>
-                <p className="text-text-secondary mt-4 leading-relaxed max-w-md">
-                  Helping ambitious accounting firms grow through proven marketing automation and strategic guidance.
+                <p className="text-text-secondary leading-relaxed max-w-md">
+                  Marketing and automation solutions designed specifically for ambitious accounting firms seeking consistent growth and operational excellence.
                 </p>
               </div>
 

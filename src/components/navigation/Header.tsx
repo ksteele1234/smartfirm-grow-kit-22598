@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import smartFirmLogo from "@/assets/smartfirm-logo.svg";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -40,8 +41,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-heading font-bold text-primary">
-              SmartFirm<span className="text-teal">.io</span>
+            <a href="/" className="flex items-center">
+              <img 
+                src={smartFirmLogo} 
+                alt="SmartFirm - Marketing and Automation for Accounting Firms" 
+                className="h-8 w-auto"
+              />
             </a>
           </div>
 
