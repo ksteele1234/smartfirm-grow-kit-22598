@@ -209,41 +209,49 @@ const Services = () => {
         </section>
 
         {/* Testimonial Section */}
-        <section className="section-padding">
-          <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
-                <Mail className="h-12 w-12 text-primary-teal mx-auto mb-6" />
-                <blockquote className="text-xl text-text-primary italic mb-6">
-                  "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours, 
-                  and their strategic guidance helped us identify growth opportunities we never saw before. It's like having a whole 
-                  team of experts working for our firm."
-                </blockquote>
-                <cite className="text-text-secondary">
-                  — David Thompson, Thompson Financial Services
-                </cite>
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-r from-primary/5 to-teal/5 p-8 md:p-12 rounded-lg border border-border">
+                <div className="mb-6">
+                  <div className="flex justify-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-lg md:text-xl text-muted-foreground italic mb-6">
+                    "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours, 
+                    and our client satisfaction has never been higher. We've grown 40% this year alone."
+                  </blockquote>
+                  <div className="flex items-center justify-center">
+                    <div>
+                      <div className="font-semibold text-foreground">Sarah Johnson</div>
+                      <div className="text-sm text-muted-foreground">— David Thompson, Thompson Financial Services</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="section-padding bg-gradient-to-br from-primary-blue to-primary-teal text-white">
-          <div className="container mx-auto text-center">
+        {/* CTA Section */}
+        <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-teal text-primary-foreground">
+          <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Firm?
+              Ready to Transform Your Accounting Firm?
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
               Discover how our tailored services can drive your growth and efficiency. Let's discuss your specific needs and create a custom solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 variant="white-on-dark"
-                size="lg" 
+                size="lg"
                 asChild
               >
                 <a href="/get-started">
-                  Book a Free Strategy Call
+                  Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
