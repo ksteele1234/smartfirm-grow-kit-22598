@@ -2,57 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* SmartFirm.io Design System - Official Brand Guidelines
+All colors MUST be HSL converted from the official brand colors.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    /* Official SmartFirm Brand Colors */
+    --primary-blue: 225 43% 56%; /* #647FBC */
+    --blue-grey: 218 34% 67%; /* #91ADC8 */
+    --primary-teal: 193 35% 45%; /* #4D869C */
+    --light-teal: 180 28% 60%; /* #7AB2B2 */
+    --accent-light: 64 89% 92%; /* #FAFDD6 */
+    
+    /* Text Colors */
+    --text-primary: 0 0% 20%; /* #333333 */
+    --text-secondary: 0 0% 40%; /* #666666 */
+    --text-light: 0 0% 60%; /* #999999 */
+    
+    /* Background Colors */
+    --background-white: 0 0% 100%; /* #FFFFFF */
+    --background-light: 210 17% 98%; /* #F8F9FA */
+    
+    /* Semantic Design System Tokens */
+    --background: var(--background-white);
+    --foreground: var(--text-primary);
+    
+    --card: var(--background-white);
+    --card-foreground: var(--text-primary);
+    
+    --popover: var(--background-white);
+    --popover-foreground: var(--text-primary);
+    
+    --primary: var(--primary-blue);
+    --primary-foreground: var(--background-white);
+    
+    --secondary: var(--blue-grey);
+    --secondary-foreground: var(--background-white);
+    
+    --muted: var(--background-light);
+    --muted-foreground: var(--text-light);
+    
+    --accent: var(--accent-light);
+    --accent-foreground: var(--text-primary);
+    
+    --teal: var(--primary-teal);
+    --teal-foreground: var(--background-white);
+    
+    --light-teal: var(--light-teal);
+    --light-teal-foreground: var(--text-primary);
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--background-white);
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: var(--primary-blue);
+    
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Typography System */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 12px hsl(var(--primary-blue) / 0.1);
+    --shadow-card: 0 2px 8px hsl(var(--primary-blue) / 0.08);
+    
+    /* Spacing */
+    --section-padding: 5rem; /* 80px */
+    --section-padding-mobile: 2.5rem; /* 40px */
   }
 
   .dark {
@@ -101,5 +120,23 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+  
+  h1 {
+    @apply text-4xl lg:text-5xl text-primary;
+  }
+  
+  h2 {
+    @apply text-3xl lg:text-4xl text-primary;
+  }
+  
+  h3 {
+    @apply text-xl lg:text-2xl text-teal font-medium;
   }
 }

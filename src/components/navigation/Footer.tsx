@@ -1,0 +1,170 @@
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+
+const Footer = () => {
+  const services = [
+    "Automated Lead Follow-up",
+    "Client Review Generation",
+    "SEO for Accountants",
+    "Email Marketing",
+    "Social Media Management",
+    "Website Optimization"
+  ];
+
+  const solutions = [
+    "Lead Generation",
+    "Firm Scaling", 
+    "Client Retention",
+    "Competitive Positioning"
+  ];
+
+  const resources = [
+    "Marketing Guides",
+    "Industry Reports",
+    "Case Studies",
+    "Blog Posts",
+    "Webinars",
+    "Tools & Calculators"
+  ];
+
+  return (
+    <footer className="bg-background-light border-t border-border">
+      <div className="container mx-auto px-4 lg:px-6">
+        {/* Main Footer Content */}
+        <div className="py-16">
+          <div className="grid lg:grid-cols-5 gap-8">
+            {/* Brand Column */}
+            <div className="lg:col-span-2">
+              <div className="mb-6">
+                <a href="/" className="text-3xl font-heading font-bold text-primary">
+                  SmartFirm<span className="text-teal">.io</span>
+                </a>
+                <p className="text-text-secondary mt-4 leading-relaxed max-w-md">
+                  Helping ambitious accounting firms grow through proven marketing automation and strategic guidance.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span>(555) SMART-FIRM</span>
+                </div>
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <span>hello@smartfirm.io</span>
+                </div>
+                <div className="flex items-center space-x-3 text-text-secondary">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <span>Austin, TX</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4 mt-6">
+                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+
+            {/* Services Column */}
+            <div>
+              <h4 className="font-heading font-semibold text-foreground mb-4">Services</h4>
+              <ul className="space-y-3">
+                {services.map((service) => (
+                  <li key={service}>
+                    <a 
+                      href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-text-secondary hover:text-primary transition-colors"
+                    >
+                      {service}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Solutions Column */}
+            <div>
+              <h4 className="font-heading font-semibold text-foreground mb-4">Solutions</h4>
+              <ul className="space-y-3">
+                {solutions.map((solution) => (
+                  <li key={solution}>
+                    <a 
+                      href={`/solutions/${solution.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-text-secondary hover:text-primary transition-colors"
+                    >
+                      {solution}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Resources Column */}
+            <div>
+              <h4 className="font-heading font-semibold text-foreground mb-4">Resources</h4>
+              <ul className="space-y-3">
+                {resources.map((resource) => (
+                  <li key={resource}>
+                    <a 
+                      href={`/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="text-text-secondary hover:text-primary transition-colors"
+                    >
+                      {resource}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <a 
+                  href="/about" 
+                  className="block text-text-secondary hover:text-primary transition-colors mb-2"
+                >
+                  About Us
+                </a>
+                <a 
+                  href="/contact" 
+                  className="block text-text-secondary hover:text-primary transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Footer */}
+        <div className="py-6 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-text-light text-sm">
+              © 2024 SmartFirm.io. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <a href="/privacy" className="text-text-light hover:text-primary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-text-light hover:text-primary transition-colors">
+                Terms of Service
+              </a>
+              <a href="/cookies" className="text-text-light hover:text-primary transition-colors">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
