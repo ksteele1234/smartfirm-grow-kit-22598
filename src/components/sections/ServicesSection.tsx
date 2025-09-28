@@ -16,13 +16,13 @@ const ServicesSection = () => {
     },
     {
       icon: Search,
-      title: "SEO for Accountants",
-      description: "Dominate local search results and attract high-value clients actively looking for accounting services."
+      title: "SEO for Accounting Firms",
+      description: "Dominate local search results and attract high-value clients actively searching for CPA services and accounting expertise."
     },
     {
       icon: Mail,
-      title: "Email Marketing",
-      description: "Nurture relationships and stay top-of-mind with targeted email campaigns that drive retention."
+      title: "Email Marketing for CPAs",
+      description: "Nurture client relationships and stay top-of-mind with targeted email marketing campaigns designed specifically for accounting practices."
     },
     {
       icon: Users,
@@ -42,11 +42,11 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            A Complete Marketing System,
-            <span className="text-teal block">Tailored to Your Needs</span>
+            Complete Marketing Solutions for
+            <span className="text-teal block">Accounting Firms & CPAs</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Everything you need to attract, convert, and retain more clients. Our proven system works for firms of all sizes.
+            From lead generation for accounting firms to client retention strategies, our marketing automation delivers everything you need to grow your practice consistently.
           </p>
         </div>
 

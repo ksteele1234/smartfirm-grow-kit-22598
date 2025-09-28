@@ -26,15 +26,15 @@ const HeroSection = () => {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight">
-                Marketing and Automation for
+                Marketing for Accounting Firms That
                 <span className="text-teal block">
-                  Ambitious Accounting Firms
+                  Actually Drives Growth
                 </span>
               </h1>
               
               {/* Subheadline */}
               <p className="text-xl lg:text-2xl text-text-secondary leading-relaxed font-body">
-                Stop wasting time on marketing that doesn't work. SmartFirm helps you attract more clients and grow your firm with less effort.
+                Stop wasting time on marketing strategies that don't work. Our proven accounting firm marketing automation helps CPAs attract more qualified clients and scale their practice efficiently.
               </p>
             </div>
 

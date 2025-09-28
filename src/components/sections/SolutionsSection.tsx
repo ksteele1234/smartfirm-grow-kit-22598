@@ -7,8 +7,8 @@ const SolutionsSection = () => {
     {
       icon: TrendingUp,
       title: "I need more leads",
-      description: "Stop waiting for clients to find you. Our proven lead generation system brings qualified prospects directly to your door.",
-      features: ["SEO optimization", "PPC campaigns", "Content marketing", "Local listing management"],
+      description: "Stop waiting for clients to find you. Our proven lead generation for accounting firms brings qualified prospects directly to your practice.",
+      features: ["SEO for accounting firms", "PPC campaigns for CPAs", "Content marketing strategies", "Local listing management"],
       color: "from-primary/10 to-primary/5",
       link: "/solutions/lead-generation"
     },
@@ -44,11 +44,11 @@ const SolutionsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Solve Your Biggest
-            <span className="text-teal block">Growth Challenges</span>
+            Proven CPA Marketing Solutions for
+            <span className="text-teal block">Common Growth Challenges</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Every accounting firm faces unique challenges. We've developed specific solutions for the most common growth obstacles.
+            Whether you need lead generation for your CPA firm or better client acquisition strategies, we've developed targeted marketing solutions for accounting practices at every stage.
           </p>
         </div>
 

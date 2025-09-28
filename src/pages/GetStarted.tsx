@@ -67,10 +67,10 @@ const GetStarted = () => {
       <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-            Your Journey to Growth Starts Here
+            Get Started with Marketing for Your Accounting Firm
           </h1>
           <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
-            Whether you're ready for a deep dive or just exploring, find the best way to connect with SmartFirm and begin your transformation.
+            Whether you're ready for comprehensive CPA marketing automation or just exploring digital marketing strategies for accounting practices, find the best way to connect with SmartFirm and begin your growth journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero-secondary" size="hero">
