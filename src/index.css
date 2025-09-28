@@ -70,16 +70,6 @@ All colors MUST be HSL converted from the official brand colors.
     /* Spacing */
     --section-padding: 5rem; /* 80px */
     --section-padding-mobile: 2.5rem; /* 40px */
-    
-    /* Aurora Background Variables */
-    --white: 0 0% 100%;
-    --black: 0 0% 0%;
-    --transparent: transparent;
-    --aurora-1: 225 43% 56%; /* #647FBC */
-    --aurora-2: 225 43% 56%; /* #647FBC */
-    --aurora-3: 225 43% 56%; /* #647FBC */
-    --aurora-4: 180 28% 60%; /* #7AB2B2 */
-    --aurora-5: 64 89% 92%; /* #FAFDD6 */
   }
 
   .dark {
