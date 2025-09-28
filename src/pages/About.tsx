@@ -89,12 +89,12 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-background to-background-light">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-blue mb-6">
+        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Our Story: Empowering Accounting Firms to Thrive
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               We believe every accounting firm has the potential for extraordinary growth. 
               Our mission is to provide the tools, expertise, and support to make that vision a reality.
             </p>

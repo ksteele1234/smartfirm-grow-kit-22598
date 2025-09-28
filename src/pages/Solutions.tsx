@@ -43,12 +43,12 @@ const Solutions = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-background to-background-light">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-blue mb-6">
+        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Solving Your Biggest Accounting Firm Challenges
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               We understand the unique pressures of running an accounting firm. From competition to client expectations, 
               technology demands to growth challenges - SmartFirm provides proven solutions that work specifically for practices like yours.
             </p>
@@ -56,30 +56,30 @@ const Solutions = () => {
         </section>
 
         {/* Solution Categories */}
-        <section className="section-padding">
-          <div className="container mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue text-center mb-12">
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-16">
               Common Pain Points We Address
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {solutionCategories.map((solution, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border">
-                  <CardHeader className="text-center pb-4">
-                    <div className="mx-auto mb-4 p-3 rounded-lg bg-accent-light/20 w-fit">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                  <CardHeader className="text-center pb-6 px-8 pt-8">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
                       {solution.icon}
                     </div>
-                    <CardTitle className="text-xl text-primary-blue mb-3">
+                    <CardTitle className="text-xl text-foreground mb-4">
                       {solution.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
                       {solution.subtitle}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
+                  <CardContent className="pt-0 px-8 pb-8">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary-blue group-hover:text-white transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 border-primary text-primary"
                       asChild
                     >
                       <a href={solution.link}>

@@ -131,15 +131,15 @@ const SuccessStories = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-20">
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary to-teal">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
             Real Results, Real Growth: SmartFirm Success Stories
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
+          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
             Explore how accounting firms like yours have achieved significant growth and efficiency with SmartFirm's tailored solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="hero-secondary" size="hero">
               Read All Case Studies
             </Button>
@@ -151,13 +151,13 @@ const SuccessStories = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
             Proof of Partnership: Our Clients' Achievements
           </h2>
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            These aren't just success stories—they're proof of what's possible when you partner with SmartFirm. 
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            These aren't just success stories—they're proof of what's possible when you partner with SmartFirm.
             Every firm featured here started with challenges similar to yours and achieved transformational results 
             through our proven methodologies and dedicated support.
           </p>

@@ -26,19 +26,19 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-20">
+      <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-24">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
             Contact SmartFirm
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             Ready to transform your accounting firm's marketing? Get in touch with our team of experts who understand the unique challenges of accounting practices.
           </p>
         </div>
       </section>
 
       {/* Contact Information & Form Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             
