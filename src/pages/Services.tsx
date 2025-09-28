@@ -63,11 +63,11 @@ const Services = () => {
               From marketing automation to technology optimization, SmartFirm provides the tools and expertise you need to scale efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary-blue hover:bg-primary-blue/90">
+              <Button variant="cta-primary" size="lg">
                 Explore All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
+              <Button variant="cta-outline" size="lg">
                 Book a Free Consultation
               </Button>
             </div>
@@ -105,8 +105,8 @@ const Services = () => {
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto">
                     <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-primary-blue group-hover:text-white transition-all duration-300"
+                      variant="cta-outline" 
+                      className="w-full"
                       asChild
                     >
                       <a href={category.link}>
@@ -189,7 +189,7 @@ const Services = () => {
                   </div>
                   
                   <div className="text-center pt-4">
-                    <Button size="lg" className="bg-primary-blue hover:bg-primary-blue/90" asChild>
+                    <Button variant="cta-primary" size="lg" asChild>
                       <a href="/services/automated-lead-follow-up">
                         Learn More About This Service
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -232,9 +232,8 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                variant="white-on-dark"
                 size="lg" 
-                variant="secondary"
-                className="bg-white text-primary-blue hover:bg-white/90"
                 asChild
               >
                 <a href="/get-started">
@@ -243,9 +242,8 @@ const Services = () => {
                 </a>
               </Button>
               <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary-blue"
+                variant="outline-on-dark"
+                size="lg"
                 asChild
               >
                 <a href="/solutions">

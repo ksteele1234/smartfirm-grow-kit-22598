@@ -9,9 +9,9 @@ All colors MUST be HSL converted from the official brand colors.
 @layer base {
   :root {
     /* Official SmartFirm Brand Colors - Exact Match to Guidelines */
-    --primary: 225 43% 56%; /* #647FBC - Primary Blue */
-    --secondary: 218 34% 67%; /* #91ADC8 - Blue Grey */
-    --teal: 193 35% 45%; /* #4D869C - Primary Teal */
+    --primary-blue: 225 43% 56%; /* #647FBC - Primary Blue */
+    --secondary-blue: 218 34% 67%; /* #91ADC8 - Blue Grey */
+    --primary-teal: 193 35% 45%; /* #4D869C - Primary Teal */
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
     --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
     
@@ -34,30 +34,27 @@ All colors MUST be HSL converted from the official brand colors.
     --popover: var(--background-white);
     --popover-foreground: var(--text-primary);
     
-    --primary: 225 43% 56%; /* #647FBC */
+    --primary: var(--primary-blue);
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 218 34% 67%; /* #91ADC8 */
+    --secondary: var(--secondary-blue);
     --secondary-foreground: 0 0% 100%;
     
     --muted: var(--background-light);
     --muted-foreground: var(--text-light);
     
-    --accent: 64 89% 92%; /* #FAFDD6 */
+    --accent: var(--accent-light);
     --accent-foreground: var(--text-primary);
     
-    --teal: 193 35% 45%; /* #4D869C */
+    --teal: var(--primary-teal);
     --teal-foreground: 0 0% 100%;
-    
-    --blue-grey: 218 34% 67%; /* #91ADC8 */
-    --blue-grey-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: var(--background-white);
     
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 225 43% 56%; /* #647FBC */
+    --ring: var(--primary-blue);
     
     --radius: 0.5rem;
     
@@ -66,8 +63,9 @@ All colors MUST be HSL converted from the official brand colors.
     --font-body: 'DM Sans', sans-serif;
     
     /* Shadows */
-    --shadow-soft: 0 4px 12px hsl(225 43% 56% / 0.1);
-    --shadow-card: 0 2px 8px hsl(225 43% 56% / 0.08);
+    --shadow-soft: 0 4px 12px hsl(var(--primary-blue) / 0.1);
+    --shadow-card: 0 2px 8px hsl(var(--primary-blue) / 0.08);
+    --shadow-elegant: 0 10px 30px hsl(var(--primary-blue) / 0.15);
     
     /* Spacing */
     --section-padding: 5rem; /* 80px */

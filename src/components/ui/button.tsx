@@ -17,6 +17,10 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline font-medium",
         hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-lg rounded-xl font-semibold",
         "hero-secondary": "border-2 border-white text-white bg-white/10 hover:bg-white hover:text-primary rounded-xl font-semibold backdrop-blur-sm",
+        "cta-primary": "bg-primary-blue text-white hover:bg-primary-blue/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
+        "cta-outline": "border-2 border-primary-blue text-primary-blue bg-background hover:bg-primary-blue hover:text-white rounded-lg font-semibold",
+        "white-on-dark": "bg-white text-primary-blue hover:bg-white/90 shadow-soft rounded-lg font-semibold",
+        "outline-on-dark": "border-2 border-white text-white hover:bg-white hover:text-primary-blue rounded-lg font-semibold",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm",
