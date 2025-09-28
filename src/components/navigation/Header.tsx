@@ -68,7 +68,9 @@ const Header = () => {
 
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors font-medium">
-                Solutions <ChevronDown className="ml-1 h-4 w-4" />
+                <a href="/solutions" className="flex items-center">
+                  Solutions <ChevronDown className="ml-1 h-4 w-4" />
+                </a>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border border-border shadow-soft">
                 {solutions.map((solution) => (
