@@ -127,7 +127,7 @@ const Footer = () => {
                 {resources.map((resource) => (
                   <li key={resource}>
                     <a 
-                      href={`/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={resource === "Tools & Calculators" ? "/tools" : `/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
                       className="text-text-secondary hover:text-primary transition-colors"
                     >
                       {resource}
