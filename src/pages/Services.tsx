@@ -54,15 +54,15 @@ const Services = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-background to-background-light">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-blue mb-6">
+        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Comprehensive Solutions for Your Accounting Firm's Growth
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
               From marketing automation to technology optimization, SmartFirm provides the tools and expertise you need to scale efficiently.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="cta-primary" size="lg">
                 Explore All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -75,12 +75,12 @@ const Services = () => {
         </section>
 
         {/* Introduction to Services */}
-        <section className="section-padding">
-          <div className="container mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+        <section className="py-20 md:py-28">
+          <div className="container mx-auto px-4 text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
               Our Core Service Areas
             </h2>
-            <p className="text-lg text-text-secondary max-w-4xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               SmartFirm takes a holistic approach to supporting accounting firms. Our comprehensive suite of services works together 
               to create a unified growth strategy that addresses every aspect of your practice, from marketing and technology 
               to business optimization and executive leadership.
@@ -88,22 +88,22 @@ const Services = () => {
           </div>
 
           {/* Service Categories Grid */}
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {serviceCategories.map((category, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border h-full">
-                  <CardHeader className="text-center pb-4">
-                    <div className="mx-auto mb-4 p-3 rounded-lg bg-accent-light/20 w-fit">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-background">
+                  <CardHeader className="text-center pb-6 px-8 pt-8">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
                       {category.icon}
                     </div>
-                    <CardTitle className="text-xl text-primary-blue mb-3">
+                    <CardTitle className="text-xl text-foreground mb-4">
                       {category.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
                       {category.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0 mt-auto">
+                  <CardContent className="pt-0 mt-auto px-8 pb-8">
                     <Button 
                       variant="cta-outline" 
                       className="w-full"
@@ -122,73 +122,73 @@ const Services = () => {
         </section>
 
         {/* Featured Service Section */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <Card className="shadow-elegant border-light-border">
-                <CardHeader className="text-center pb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-teal/10 text-primary-teal text-sm font-medium mb-4">
-                    <Star className="h-4 w-4 mr-1" />
+        <section className="py-20 md:py-28 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <Card className="shadow-lg border-border bg-background">
+                <CardHeader className="text-center pb-8 px-10 pt-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal/10 text-teal text-sm font-medium mb-6">
+                    <Star className="h-4 w-4 mr-2" />
                     Spotlight Service
                   </div>
-                  <CardTitle className="text-3xl md:text-4xl text-primary-blue mb-4">
+                  <CardTitle className="text-3xl md:text-4xl text-foreground mb-6">
                     Automated Lead Follow-up
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary max-w-2xl mx-auto">
+                  <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                     Turn prospects into clients with our sophisticated automated follow-up system. Never lose a lead again 
                     with personalized, timely communication that nurtures relationships and converts opportunities.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <h4 className="font-semibold text-primary-teal flex items-center">
+                <CardContent className="space-y-8 px-10 pb-10">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <h4 className="font-semibold text-teal flex items-center text-lg">
                         <Target className="h-5 w-5 mr-2" />
                         Key Features:
                       </h4>
-                      <ul className="space-y-2 text-text-secondary">
+                      <ul className="space-y-3 text-muted-foreground">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
                           Personalized email sequences
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
                           Smart timing optimization
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
                           Lead scoring and prioritization
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
                           Automated appointment scheduling
                         </li>
                       </ul>
                     </div>
                     
-                    <div className="bg-accent-light/30 p-6 rounded-lg">
-                      <h4 className="font-semibold text-primary-blue mb-3 flex items-center">
+                    <div className="bg-accent/30 p-8 rounded-lg">
+                      <h4 className="font-semibold text-foreground mb-6 flex items-center text-lg">
                         <BarChart3 className="h-5 w-5 mr-2" />
                         Results:
                       </h4>
-                      <div className="space-y-3">
+                      <div className="space-y-4">
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Lead Response Rate</span>
-                          <span className="font-bold text-primary-blue">+250%</span>
+                          <span className="text-muted-foreground">Lead Response Rate</span>
+                          <span className="font-bold text-primary">+250%</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Conversion Rate</span>
-                          <span className="font-bold text-primary-blue">+150%</span>
+                          <span className="text-muted-foreground">Conversion Rate</span>
+                          <span className="font-bold text-primary">+150%</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Time Saved/Week</span>
-                          <span className="font-bold text-primary-blue">15+ Hours</span>
+                          <span className="text-muted-foreground">Time Saved/Week</span>
+                          <span className="font-bold text-primary">15+ Hours</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="text-center pt-4">
+                  <div className="text-center pt-6">
                     <Button variant="cta-primary" size="lg" asChild>
                       <a href="/services/automated-lead-follow-up">
                         Learn More About This Service
