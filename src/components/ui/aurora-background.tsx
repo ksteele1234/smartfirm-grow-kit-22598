@@ -25,19 +25,19 @@ export const AuroraBackground = ({
         <div
           className={cn(
             `
-            /* White vs dark stripe layer */
-            [--white-gradient:repeating-linear-gradient(100deg,var(--background)_0%,var(--background)_7%,transparent_10%,transparent_12%,var(--background)_16%)]
-            [--dark-gradient:repeating-linear-gradient(100deg,var(--foreground)_0%,var(--foreground)_7%,transparent_10%,transparent_12%,var(--foreground)_16%)]
+              /* White vs dark stripe layer */
+              [--white-gradient:repeating-linear-gradient(100deg,hsl(var(--white))_0%,hsl(var(--white))_7%,transparent_10%,transparent_12%,hsl(var(--white))_16%)]
+              [--dark-gradient:repeating-linear-gradient(100deg,hsl(var(--black))_0%,hsl(var(--black))_7%,transparent_10%,transparent_12%,hsl(var(--black))_16%)]
 
-            /* Aurora with your exact palette */
-            [--aurora:repeating-linear-gradient(
-              100deg,
-              var(--aurora-1)_10%,
-              var(--aurora-2)_15%,
-              var(--aurora-3)_20%,
-              var(--aurora-4)_25%,
-              var(--aurora-5)_30%
-            )]
+              /* Aurora with your exact palette */
+              [--aurora:repeating-linear-gradient(
+                100deg,
+                hsl(var(--aurora-1))_10%,
+                hsl(var(--aurora-2))_15%,
+                hsl(var(--aurora-3))_20%,
+                hsl(var(--aurora-4))_25%,
+                hsl(var(--aurora-5))_30%
+              )]
 
             [background-image:var(--white-gradient),var(--aurora)]
             dark:[background-image:var(--dark-gradient),var(--aurora)]
