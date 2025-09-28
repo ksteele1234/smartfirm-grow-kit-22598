@@ -13,6 +13,26 @@ import SuccessStories from "./pages/SuccessStories";
 import GetStarted from "./pages/GetStarted";
 import NotFound from "./pages/NotFound";
 
+// Solution Pages
+import LeadGeneration from "./pages/solutions/LeadGeneration";
+import ScaleFirm from "./pages/solutions/ScaleFirm";
+import ClientRetention from "./pages/solutions/ClientRetention";
+import RetentionStrategies from "./pages/solutions/RetentionStrategies";
+
+// Service Pages
+import AutomatedLeadFollowUp from "./pages/services/AutomatedLeadFollowUp";
+import ClientReviewGeneration from "./pages/services/ClientReviewGeneration";
+import SEOForAccountants from "./pages/services/SEOForAccountants";
+import SocialMediaManagement from "./pages/services/SocialMediaManagement";
+import EmailMarketing from "./pages/services/EmailMarketing";
+import WebsiteDesign from "./pages/services/WebsiteDesign";
+
+// Industry Pages
+import TaxPreparation from "./pages/industries/TaxPreparation";
+import BookkeepingServices from "./pages/industries/BookkeepingServices";
+import BusinessAdvisory from "./pages/industries/BusinessAdvisory";
+import AuditAssurance from "./pages/industries/AuditAssurance";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +50,27 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/success-stories" element={<SuccessStories />} />
         <Route path="/get-started" element={<GetStarted />} />
+        
+        {/* Solution Sub-pages */}
+        <Route path="/solutions/i-need-more-leads" element={<LeadGeneration />} />
+        <Route path="/solutions/i-want-to-scale-my-firm" element={<ScaleFirm />} />
+        <Route path="/solutions/i'm-losing-clients-to-competitors" element={<ClientRetention />} />
+        <Route path="/solutions/i-need-better-client-retention" element={<RetentionStrategies />} />
+        
+        {/* Service Sub-pages */}
+        <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
+        <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
+        <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
+        <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
+        <Route path="/services/email-marketing" element={<EmailMarketing />} />
+        <Route path="/services/website-design" element={<WebsiteDesign />} />
+        
+        {/* Industry Sub-pages */}
+        <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
+        <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
+        <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
+        <Route path="/industries/audit-&-assurance" element={<AuditAssurance />} />
+        
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

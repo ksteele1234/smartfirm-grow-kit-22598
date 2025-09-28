@@ -1,0 +1,73 @@
+import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
+import { IndustryPageData } from "@/types/cms";
+
+const BookkeepingServices = () => {
+  const industryData: IndustryPageData = {
+    id: "bookkeeping-services",
+    title: "Marketing for Bookkeeping Services",
+    slug: "bookkeeping-services", 
+    content: {},
+    heroTitle: "Marketing Solutions for Bookkeeping Services",
+    heroSubtitle: "Build a consistent pipeline of small business clients and establish recurring revenue streams with marketing strategies tailored for bookkeeping professionals.",
+    industryOverview: "Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.",
+    challenges: [
+      {
+        title: "Price Competition with Software",
+        description: "Competing against DIY bookkeeping software and low-cost providers",
+        solution: "Position the value of professional expertise, accuracy, and business insights"
+      },
+      {
+        title: "Client Education on Value",
+        description: "Small business owners often don't understand the full value of professional bookkeeping",
+        solution: "Content marketing that educates prospects on the true cost of bookkeeping mistakes"
+      },
+      {
+        title: "Scaling Service Delivery",
+        description: "Balancing growth with maintaining quality and personal service",
+        solution: "Systems and processes that allow growth while maintaining service standards"
+      }
+    ],
+    services: [
+      {
+        title: "Small Business Lead Generation",
+        description: "Target and attract growing small businesses that need bookkeeping services",
+        link: "/solutions/lead-generation"
+      },
+      {
+        title: "Value-Based Positioning",
+        description: "Position your expertise above price competition",
+        link: "/services/value-positioning"
+      },
+      {
+        title: "Recurring Revenue Optimization", 
+        description: "Maximize client lifetime value and reduce churn",
+        link: "/solutions/retention-strategies"
+      },
+      {
+        title: "Local Market Domination",
+        description: "Become the go-to bookkeeper in your local market",
+        link: "/services/seo-for-accountants"
+      }
+    ],
+    caseStudies: [
+      {
+        title: "200% Monthly Recurring Revenue Growth",
+        client: "QuickBooks Certified Bookkeeper",
+        result: "Built $25K MRR through systematic client acquisition",
+        link: "/success-stories/quickbooks-certified"
+      },
+      {
+        title: "Premium Pricing Success",
+        client: "Business Bookkeeping Solutions",
+        result: "Increased rates 60% while improving client retention",
+        link: "/success-stories/premium-pricing"
+      }
+    ],
+    ctaTitle: "Build Your Bookkeeping Empire",
+    ctaDescription: "Discover how to attract quality small business clients and build predictable recurring revenue."
+  };
+
+  return <IndustryPageTemplate data={industryData} />;
+};
+
+export default BookkeepingServices;
