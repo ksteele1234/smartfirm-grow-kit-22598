@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+// @ts-ignore
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
@@ -14,6 +17,13 @@ export default {
     },
     extend: {
       colors: {
+        // Aurora Background Colors - Using exact palette
+        "aurora-1": "#647FBC",
+        "aurora-2": "#647FBC", 
+        "aurora-3": "#647FBC",
+        "aurora-4": "#7AB2B2",
+        "aurora-5": "#FAFDD6",
+        
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -88,6 +98,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        aurora: {
+          from: { backgroundPosition: "50% 50%, 50% 50%" },
+          to: { backgroundPosition: "350% 50%, 350% 50%" },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -106,10 +120,23 @@ export default {
         },
       },
       animation: {
+        aurora: "aurora 60s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
+
+// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
