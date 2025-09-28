@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
@@ -19,6 +20,21 @@ import {
 } from "lucide-react";
 
 const GetStarted = () => {
+  useEffect(() => {
+    // Load the booking script
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
   const engagementOptions = [
     {
       icon: Calendar,
@@ -73,14 +89,15 @@ const GetStarted = () => {
             Whether you're ready for comprehensive CPA marketing automation or just exploring digital marketing strategies for accounting practices, find the best way to connect with SmartFirm and begin your growth journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero-secondary" size="hero">
-              <Calendar className="w-5 h-5 mr-2" />
-              Book a Free Consultation
-            </Button>
-            <Button variant="hero" size="hero">
-              <Zap className="w-5 h-5 mr-2" />
-              Explore Quick Start Options
-            </Button>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft">
+              <iframe 
+                src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
+                style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '500px'}}
+                scrolling="no" 
+                id="KLvW5plbvzaBvLcQYv7k_1759007988370"
+                title="Book Your Free Consultation"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -52,7 +52,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>(555) SMART-FIRM</span>
+                  <span>(541) 658-3789</span>
                 </div>
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Mail className="h-5 w-5 text-primary" />
@@ -60,7 +60,12 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <MapPin className="h-5 w-5 text-primary" />
-                  <span>Austin, TX</span>
+                  <span>Eugene, OR</span>
+                </div>
+                <div className="text-text-secondary text-sm">
+                  <div className="font-medium mb-1">Business Hours:</div>
+                  <div>Monday - Friday: 9 AM - 6 PM</div>
+                  <div>Saturday - Sunday: Closed</div>
                 </div>
               </div>
 
