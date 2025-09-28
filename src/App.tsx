@@ -33,6 +33,12 @@ import BookkeepingServices from "./pages/industries/BookkeepingServices";
 import BusinessAdvisory from "./pages/industries/BusinessAdvisory";
 import AuditAssurance from "./pages/industries/AuditAssurance";
 
+// Tools & Calculators Pages
+import ToolsCalculators from "./pages/ToolsCalculators";
+import EfficiencyQuiz from "./pages/tools/EfficiencyQuiz";
+import MarketingScorecard from "./pages/tools/MarketingScorecard";
+import ROICalculator from "./pages/tools/ROICalculator";
+
 // Legal Pages
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -75,6 +81,12 @@ const App = () => (
         <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
         <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
         <Route path="/industries/audit-&-assurance" element={<AuditAssurance />} />
+        
+        {/* Tools & Calculators */}
+        <Route path="/tools" element={<ToolsCalculators />} />
+        <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
+        <Route path="/tools/marketing-scorecard" element={<MarketingScorecard />} />
+        <Route path="/tools/roi-calculator" element={<ROICalculator />} />
         
         {/* Legal Pages */}
         <Route path="/privacy" element={<Privacy />} />

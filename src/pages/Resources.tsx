@@ -29,7 +29,7 @@ const Resources = () => {
       icon: <Calculator className="h-8 w-8 text-primary-teal" />,
       title: "Tools & Calculators",
       description: "Interactive tools like ROI calculators, profit estimators, and workflow templates.",
-      link: "/resources/tools"
+      link: "/tools"
     },
     {
       icon: <FileText className="h-8 w-8 text-primary-blue" />,
