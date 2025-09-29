@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Mail, Search, Star, Users, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 const ServicesSection = () => {
   const services = [
@@ -37,8 +39,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section className="py-24 bg-background relative overflow-hidden">
+      <BackgroundPattern pattern="dots" />
+      <div className="container relative mx-auto px-4 lg:px-6">
+        <FloatingShapes variant="circles" />
+        
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
@@ -50,29 +55,103 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 stagger-container">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background scale-feedback color-transition">
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
-                    <IconComponent className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-text-secondary leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <GeometricDivider variant="lines" />
+
+        {/* Services Grid - Asymmetrical Layout */}
+        <div className="grid gap-8 mb-12 stagger-container">
+          {/* First Row - 2 cards */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.slice(0, 2).map((service, index) => {
+              const IconComponent = service.icon;
+              const cardVariants = ["elevated", "gradient"];
+              const hoverEffects = ["lift", "glow"];
+              return (
+                <EnhancedCard 
+                  key={index} 
+                  variant={cardVariants[index % 2] as any}
+                  hoverEffect={hoverEffects[index % 2] as any}
+                  className="scale-feedback color-transition"
+                >
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
+                      <IconComponent className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-text-secondary leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
+          </div>
+          
+          {/* Second Row - 3 cards offset */}
+          <div className="grid md:grid-cols-3 gap-8 md:ml-12">
+            {services.slice(2, 5).map((service, index) => {
+              const IconComponent = service.icon;
+              const cardVariants = ["tilted", "outlined", "default"];
+              const hoverEffects = ["scale", "lift", "glow"];
+              return (
+                <EnhancedCard 
+                  key={index + 2} 
+                  variant={cardVariants[index % 3] as any}
+                  hoverEffect={hoverEffects[index % 3] as any}
+                  className="scale-feedback color-transition"
+                >
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
+                      <IconComponent className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-text-secondary leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
+          </div>
+          
+          {/* Third Row - Single centered card */}
+          <div className="flex justify-center">
+            {services.slice(5).map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <EnhancedCard 
+                  key={index + 5} 
+                  variant="gradient"
+                  hoverEffect="lift"
+                  className="scale-feedback color-transition max-w-md"
+                >
+                  <CardHeader className="pb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
+                      <IconComponent className="h-6 w-6 text-primary" />
+                    </div>
+                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {service.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-text-secondary leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
+          </div>
         </div>
+
+        <GeometricDivider variant="wave" />
 
         {/* CTA Section */}
         <div className="text-center">

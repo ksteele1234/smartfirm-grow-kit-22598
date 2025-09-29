@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
@@ -14,7 +16,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
+        <FloatingShapes variant="circles" />
+        <BackgroundPattern pattern="dots" />
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -51,7 +55,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -61,37 +65,77 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               Discover how this service transforms your accounting firm
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.benefits.map((benefit, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <CheckCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {benefit.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          
+          <GeometricDivider variant="lines" />
+          
+          {/* Asymmetrical Benefits Grid */}
+          <div className="space-y-8">
+            {/* First row - 2 cards */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {data.benefits.slice(0, 2).map((benefit, index) => {
+                const variants = ["elevated", "gradient"];
+                return (
+                  <EnhancedCard key={index} variant={variants[index] as any} hoverEffect="lift">
+                    <CardHeader>
+                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <CheckCircle className="h-6 w-6 text-primary" />
+                      </div>
+                      <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-base">
+                        {benefit.description}
+                      </CardDescription>
+                    </CardContent>
+                  </EnhancedCard>
+                );
+              })}
+            </div>
+            
+            {/* Remaining cards offset */}
+            {data.benefits.length > 2 && (
+              <div className="grid md:grid-cols-3 gap-8 md:ml-12">
+                {data.benefits.slice(2).map((benefit, index) => {
+                  const variants = ["tilted", "outlined", "default"];
+                  return (
+                    <EnhancedCard key={index + 2} variant={variants[index % 3] as any} hoverEffect="scale">
+                      <CardHeader>
+                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                          <CheckCircle className="h-6 w-6 text-primary" />
+                        </div>
+                        <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base">
+                          {benefit.description}
+                        </CardDescription>
+                      </CardContent>
+                    </EnhancedCard>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+        <BackgroundPattern pattern="grid" />
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Features & Capabilities
             </h2>
           </div>
+          
+          <GeometricDivider variant="wave" />
+          
           <div className="grid lg:grid-cols-2 gap-8">
-            {data.features.map((feature, index) => (
-              <Card key={index} className="bg-background">
+            {data.features.map((feature, index) => {
+              const hoverEffects = ["lift", "glow"];
+              return (
+                <EnhancedCard key={index} variant="elevated" hoverEffect={hoverEffects[index % 2] as any}>
                 <CardHeader>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                   <CardDescription className="text-base">
@@ -110,8 +154,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                     </ul>
                   </CardContent>
                 )}
-              </Card>
-            ))}
+              </EnhancedCard>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote, Star } from "lucide-react";
+import { GeometricDivider, BackgroundPattern } from "@/components/ui/visual-accents";
+import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,8 +43,9 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-background-light">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section className="py-24 bg-background-light relative overflow-hidden">
+      <BackgroundPattern pattern="diagonal" />
+      <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
@@ -54,9 +57,15 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <Card className="bg-white shadow-soft border-border/50 overflow-hidden">
+        <GeometricDivider variant="dots" />
+
+        {/* Testimonial Carousel - Offset Layout */}
+        <div className="max-w-5xl mx-auto lg:ml-24">
+          <EnhancedCard 
+            variant="elevated" 
+            hoverEffect="glow" 
+            className="overflow-hidden"
+          >
             <CardContent className="p-8 lg:p-12">
               <div className="relative">
                 {/* Quote Icon */}
@@ -100,7 +109,7 @@ const TestimonialsSection = () => {
                 </div>
               </div>
             </CardContent>
-          </Card>
+          </EnhancedCard>
 
           {/* Carousel Indicators */}
           <div className="flex justify-center mt-6 space-x-2">

@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, Target, Shield, ArrowRight } from "lucide-react";
+import { GeometricDivider, FloatingShapes, AccentLine } from "@/components/ui/visual-accents";
+import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 const SolutionsSection = () => {
   const solutions = [
@@ -39,8 +41,9 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section className="py-24 bg-background relative overflow-hidden">
+      <FloatingShapes variant="squares" />
+      <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
@@ -52,59 +55,135 @@ const SolutionsSection = () => {
           </p>
         </div>
 
-        {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12 stagger-container">
-          {solutions.map((solution, index) => {
-            const IconComponent = solution.icon;
-            return (
-              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background overflow-hidden scale-feedback color-transition">
-                <CardHeader className={`bg-gradient-to-br ${solution.gradient} pb-6`}>
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <IconComponent className="h-6 w-6 text-primary" />
+        <AccentLine variant="gradient" className="max-w-md mx-auto mb-12" />
+
+        {/* Solutions Grid - Mixed Layout */}
+        <div className="space-y-8 stagger-container">
+          {/* Top row - 2 cards */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {solutions.slice(0, 2).map((solution, index) => {
+              const IconComponent = solution.icon;
+              const variants = ["elevated", "gradient"];
+              const hoverEffects = ["lift", "glow"];
+              
+              return (
+                <EnhancedCard 
+                  key={index} 
+                  variant={variants[index] as any}
+                  hoverEffect={hoverEffects[index] as any}
+                  className="overflow-hidden"
+                >
+                  <CardHeader className={`bg-gradient-to-br ${solution.gradient} pb-6`}>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-xl font-heading font-bold text-foreground mb-2">
+                          {solution.title}
+                        </CardTitle>
+                        <p className="text-text-secondary leading-relaxed">
+                          {solution.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-xl font-heading font-bold text-foreground mb-2">
-                        {solution.title}
-                      </CardTitle>
-                      <p className="text-text-secondary leading-relaxed">
-                        {solution.description}
-                      </p>
+                  </CardHeader>
+                  
+                  <CardContent className="pt-6">
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-foreground text-sm uppercase tracking-wide">
+                          What's Included:
+                        </h4>
+                        <ul className="space-y-2">
+                          {solution.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-text-secondary">
+                              <div className="w-1.5 h-1.5 bg-teal rounded-full flex-shrink-0"></div>
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <Button 
+                        variant="ghost" 
+                        className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                        asChild
+                      >
+                        <a href={solution.link}>
+                          Learn More About This Solution
+                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
                     </div>
-                  </div>
-                </CardHeader>
-                
-                <CardContent className="pt-6">
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-foreground text-sm uppercase tracking-wide">
-                        What's Included:
-                      </h4>
-                      <ul className="space-y-2">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center space-x-2 text-sm text-text-secondary">
-                            <div className="w-1.5 h-1.5 bg-teal rounded-full flex-shrink-0"></div>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
+          </div>
+          
+          {/* Bottom row - 2 cards offset */}
+          <div className="grid md:grid-cols-2 gap-8 md:ml-16">
+            {solutions.slice(2).map((solution, index) => {
+              const IconComponent = solution.icon;
+              const variants = ["tilted", "outlined"];
+              const hoverEffects = ["scale", "lift"];
+              
+              return (
+                <EnhancedCard 
+                  key={index + 2} 
+                  variant={variants[index] as any}
+                  hoverEffect={hoverEffects[index] as any}
+                  className="overflow-hidden"
+                >
+                  <CardHeader className={`bg-gradient-to-br ${solution.gradient} pb-6`}>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-xl font-heading font-bold text-foreground mb-2">
+                          {solution.title}
+                        </CardTitle>
+                        <p className="text-text-secondary leading-relaxed">
+                          {solution.description}
+                        </p>
+                      </div>
                     </div>
-                    
-                    <Button 
-                      variant="ghost" 
-                      className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                      asChild
-                    >
-                      <a href={solution.link}>
-                        Learn More About This Solution
-                        <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+                  </CardHeader>
+                  
+                  <CardContent className="pt-6">
+                    <div className="space-y-4">
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-foreground text-sm uppercase tracking-wide">
+                          What's Included:
+                        </h4>
+                        <ul className="space-y-2">
+                          {solution.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-text-secondary">
+                              <div className="w-1.5 h-1.5 bg-teal rounded-full flex-shrink-0"></div>
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <Button 
+                        variant="ghost" 
+                        className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                        asChild
+                      >
+                        <a href={solution.link}>
+                          Learn More About This Solution
+                          <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
+          </div>
         </div>
 
         {/* CTA Section */}
@@ -135,5 +214,6 @@ const SolutionsSection = () => {
     </section>
   );
 };
-
+        
+        <GeometricDivider variant="wave" className="my-12" />
 export default SolutionsSection;

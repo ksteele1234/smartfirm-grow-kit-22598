@@ -1,5 +1,6 @@
 import { Phone, FileText, Rocket, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { GeometricDivider, FloatingShapes, AccentLine } from "@/components/ui/visual-accents";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -24,8 +25,9 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-background-light">
-      <div className="container mx-auto px-4 lg:px-6">
+    <section id="how-it-works" className="py-24 bg-background-light relative overflow-hidden">
+      <FloatingShapes variant="triangles" />
+      <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
@@ -36,45 +38,53 @@ const HowItWorksSection = () => {
             Our proven 3-step process takes the guesswork out of marketing so you can focus on client service while we handle the heavy lifting.
           </p>
         </div>
-
+        
+        <GeometricDivider variant="zigzag" />
         {/* Steps */}
         <div className="relative">
-          {/* Connection Line */}
+          {/* Connection Line with Accent */}
           <div className="hidden lg:block absolute top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
             <div className="relative">
-              <div className="absolute top-0 left-1/6 right-1/6 h-0.5 bg-gradient-to-r from-primary via-teal to-primary opacity-30"></div>
+              <AccentLine className="opacity-30" />
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 stagger-container">
+          {/* Asymmetrical Step Layout */}
+          <div className="space-y-16 stagger-container">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
+              const isEven = index % 2 === 0;
+              
               return (
-                <div key={index} className="relative text-center group scale-feedback">
-                  {/* Step Number */}
-                  <div className="relative inline-block mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shadow-soft group-hover:shadow-lg transition-all duration-300">
-                      <IconComponent className="h-8 w-8 text-white" />
+                <div key={index} className={`flex items-center gap-8 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                  {/* Content */}
+                  <div className={`flex-1 ${isEven ? 'lg:text-right' : 'lg:text-left'} text-center`}>
+                    <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-text-secondary leading-relaxed max-w-md mx-auto lg:mx-0">
+                      {step.description}
+                    </p>
+                  </div>
+                  
+                  {/* Icon Circle */}
+                  <div className="relative flex-shrink-0">
+                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shadow-soft group-hover:shadow-lg transition-all duration-300 scale-feedback">
+                      <IconComponent className="h-10 w-10 text-white" />
                     </div>
                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent-light border-2 border-primary rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
+                    {/* Connector for next step */}
+                    {index < steps.length - 1 && (
+                      <div className="hidden lg:block absolute top-full left-1/2 transform -translate-x-1/2 mt-8">
+                        <AccentLine orientation="vertical" className="h-16" variant="dashed" />
+                      </div>
+                    )}
                   </div>
-
-                  {/* Content */}
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-heading font-bold text-primary group-hover:text-teal transition-colors">
-                      {step.title}
-                    </h3>
-                    <p className="text-text-secondary leading-relaxed max-w-sm mx-auto">
-                      {step.description}
-                    </p>
-                  </div>
-
-                  {/* Check Mark */}
-                  <div className="mt-6 flex justify-center">
-                    <CheckCircle className="h-6 w-6 text-teal opacity-60" />
-                  </div>
+                  
+                  {/* Spacer for alignment */}
+                  <div className="flex-1 hidden lg:block"></div>
                 </div>
               );
             })}

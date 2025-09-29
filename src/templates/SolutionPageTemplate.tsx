@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
+import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
+import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
@@ -14,8 +16,9 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/10 to-accent/10">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/10 to-accent/10 overflow-hidden">
+        <FloatingShapes variant="squares" />
+        <div className="max-w-7xl mx-auto text-center relative">
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {data.heroTitle}
           </h1>
@@ -30,10 +33,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
+          {/* Asymmetrical layout with accent line */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative">
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 The Challenge
               </h2>
@@ -41,7 +45,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 {data.problemStatement}
               </p>
             </div>
-            <div>
+            <div className="relative lg:ml-8">
+              <AccentLine orientation="vertical" className="absolute -left-4 top-0 h-full hidden lg:block" />
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Our Solution
               </h2>
@@ -54,16 +59,27 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+        <BackgroundPattern pattern="dots" />
+        <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
               Key Benefits
             </h2>
           </div>
+          
+          <GeometricDivider variant="zigzag" />
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.keyBenefits.map((benefit, index) => (
-              <Card key={index} className="bg-background hover:shadow-lg transition-shadow duration-300">
+            {data.keyBenefits.map((benefit, index) => {
+              const variants = ["elevated", "gradient", "tilted"];
+              const hoverEffects = ["lift", "glow", "scale"];
+              return (
+                <EnhancedCard 
+                  key={index} 
+                  variant={variants[index % 3] as any}
+                  hoverEffect={hoverEffects[index % 3] as any}
+                >
                 <CardHeader>
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                     <TrendingUp className="h-6 w-6 text-secondary" />
@@ -74,9 +90,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   <CardDescription className="text-base">
                     {benefit.description}
                   </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </EnhancedCard>
+              );
+            })}
           </div>
         </div>
       </section>
