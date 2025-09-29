@@ -119,13 +119,13 @@ const SolutionsSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
                 <a href="/get-started">
-                  Get a Custom Growth Plan
+                  📊 Get a Custom Growth Plan
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
                 <a href="/solutions">
-                  Browse All Solutions
+                  👀 Browse All Solutions
                 </a>
               </Button>
             </div>

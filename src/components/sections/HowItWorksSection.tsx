@@ -93,13 +93,13 @@ const HowItWorksSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="hero" className="group" asChild>
                 <a href="/get-started">
-                  Start My Growth Plan
+                  🚀 Start My Growth Plan
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="hero" className="group" asChild>
                 <a href="/services">
-                  Learn More About the Process
+                  👀 Learn More About the Process
                 </a>
               </Button>
             </div>

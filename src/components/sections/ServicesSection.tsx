@@ -86,13 +86,13 @@ const ServicesSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
                 <a href="/get-started">
-                  Book Your Free Strategy Call
+                  📞 Book Your Free Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
                 <a href="/services">
-                  Explore All Services
+                  👀 Explore All Services
                 </a>
               </Button>
             </div>
