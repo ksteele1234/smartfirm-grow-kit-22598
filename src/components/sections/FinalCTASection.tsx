@@ -45,15 +45,18 @@ const FinalCTASection = () => {
           </div>
 
           {/* Alternative Contact */}
-          <div className="border-t border-white/20 pt-8 mt-8">
-            <p className="text-white/90 text-lg">
-              📞 Prefer to speak directly? Call us at <a 
-                href="tel:+15416583789" 
-                className="inline-flex items-center text-white hover:text-accent-light transition-colors font-semibold underline"
-              >
-                541-658-3789
-              </a>
-            </p>
+          <div className="border-t border-white/20 pt-12 mt-12">
+            <div className="flex items-center justify-center space-x-3">
+              <Phone className="h-5 w-5 text-white" />
+              <p className="text-white/90 text-lg">
+                Prefer to speak directly? Call us at <a 
+                  href="tel:+15416583789" 
+                  className="text-white hover:text-accent-light transition-colors font-semibold underline ml-2"
+                >
+                  541-658-3789
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Trust Indicators */}
