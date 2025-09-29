@@ -25,10 +25,53 @@ const Header = () => {
   ];
 
   const solutions = [
-    "I need more leads",
-    "I want to scale my firm", 
-    "I'm losing clients to competitors",
-    "I need better client retention"
+    // Main Solution Categories
+    { 
+      title: "Stop Losing Clients to Tech-Savvy CPAs", 
+      href: "/solutions/stop-losing-clients-to-tech-savvy-cpas",
+      description: "Stay competitive with modern systems and automation"
+    },
+    { 
+      title: "Get More Referrals Without Asking", 
+      href: "/solutions/get-more-referrals-without-asking",
+      description: "Turn satisfied clients into active advocates"
+    },
+    { 
+      title: "Work Less, Earn More", 
+      href: "/solutions/work-less-earn-more",
+      description: "Maximize profitability through automation"
+    },
+    { 
+      title: "Grow Without the Growing Pains", 
+      href: "/solutions/grow-without-growing-pains",
+      description: "Scale smoothly with efficient systems"
+    },
+    { 
+      title: "Protect Your Practice & Your Future", 
+      href: "/solutions/protect-practice-and-future",
+      description: "Safeguard against threats and future-proof your firm"
+    },
+    // Specific Solution Areas
+    { 
+      title: "I need more leads", 
+      href: "/solutions/lead-generation",
+      description: "Generate qualified prospects consistently"
+    },
+    { 
+      title: "I want to scale my firm", 
+      href: "/solutions/scale-firm",
+      description: "Grow without proportional overhead increase"
+    },
+    { 
+      title: "I need better client retention", 
+      href: "/solutions/client-retention",
+      description: "Keep clients engaged and loyal"
+    },
+    { 
+      title: "Advanced Client Retention Strategies", 
+      href: "/solutions/retention-strategies",
+      description: "Strengthen your competitive position"
+    }
   ];
 
   const industries = [
@@ -100,22 +143,41 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[500px] grid-cols-1">
-                    {solutions.map((solution) => (
-                      <NavigationMenuLink
-                        key={solution}
-                        href={`/solutions/${solution.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">{solution}</div>
-                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {solution === "I need more leads" && "Generate qualified prospects consistently"}
-                          {solution === "I want to scale my firm" && "Grow without proportional overhead increase"}
-                          {solution === "I'm losing clients to competitors" && "Strengthen your competitive position"}
-                          {solution === "I need better client retention" && "Keep clients engaged and loyal"}
-                        </p>
-                      </NavigationMenuLink>
-                    ))}
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1">
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-primary mb-2">Main Solutions</h4>
+                      <div className="grid gap-2">
+                        {solutions.slice(0, 5).map((solution) => (
+                          <NavigationMenuLink
+                            key={solution.title}
+                            href={solution.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {solution.description}
+                            </p>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="border-t pt-4">
+                      <h4 className="text-sm font-semibold text-primary mb-2">Specific Areas</h4>
+                      <div className="grid gap-2">
+                        {solutions.slice(5).map((solution) => (
+                          <NavigationMenuLink
+                            key={solution.title}
+                            href={solution.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {solution.description}
+                            </p>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>

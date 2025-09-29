@@ -35,6 +35,11 @@ const ServicesSection = () => {
       icon: Globe,
       title: "Website Optimization",
       description: "Turn visitors into clients with conversion-focused websites built for accounting firms. From secure client portals to mobile-friendly design, our sites are optimized for compliance, speed, and trust."
+    },
+    {
+      icon: Phone,
+      title: "Marketing Automation",
+      description: "Streamline your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice while you focus on what you do best—accounting."
     }
   ];
 
@@ -90,17 +95,17 @@ const ServicesSection = () => {
             })}
           </div>
           
-          {/* Second Row - 3 cards offset */}
-          <div className="grid md:grid-cols-3 gap-8 md:ml-12">
-            {services.slice(2, 5).map((service, index) => {
+          {/* Second Row - 2 cards */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.slice(2, 4).map((service, index) => {
               const IconComponent = service.icon;
-              const cardVariants = ["elevated", "outlined", "default"];
-              const hoverEffects = ["scale", "lift", "glow"];
+              const cardVariants = ["elevated", "outlined"];
+              const hoverEffects = ["scale", "lift"];
               return (
                 <EnhancedCard 
                   key={index + 2} 
-                  variant={cardVariants[index % 3] as any}
-                  hoverEffect={hoverEffects[index % 3] as any}
+                  variant={cardVariants[index % 2] as any}
+                  hoverEffect={hoverEffects[index % 2] as any}
                   className="scale-feedback color-transition"
                 >
                   <CardHeader className="pb-4">
@@ -121,16 +126,18 @@ const ServicesSection = () => {
             })}
           </div>
           
-          {/* Third Row - Single centered card */}
-          <div className="flex justify-center">
-            {services.slice(5).map((service, index) => {
+          {/* Third Row - 3 cards offset */}
+          <div className="grid md:grid-cols-3 gap-8 md:ml-12">
+            {services.slice(4).map((service, index) => {
               const IconComponent = service.icon;
+              const cardVariants = ["default", "gradient", "elevated"];
+              const hoverEffects = ["glow", "lift", "scale"];
               return (
                 <EnhancedCard 
-                  key={index + 5} 
-                  variant="gradient"
-                  hoverEffect="lift"
-                  className="scale-feedback color-transition max-w-md"
+                  key={index + 4} 
+                  variant={cardVariants[index % 3] as any}
+                  hoverEffect={hoverEffects[index % 3] as any}
+                  className="scale-feedback color-transition"
                 >
                   <CardHeader className="pb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
