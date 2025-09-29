@@ -23,37 +23,24 @@ export const AuroraBackground = ({
       {...props}
     >
       {/* Aurora Layer */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div
-          className={cn(
-            `
-            /* Full-strength Aurora using SmartFirm brand colors */
-            [--aurora:repeating-linear-gradient(
-              110deg,
-              hsl(var(--primary-blue)/0.95)_0%,
-              hsl(var(--primary-blue)/0.95)_10%,
-              hsl(var(--secondary-blue)/0.92)_12%,
-              hsl(var(--secondary-blue)/0.92)_22%,
-              hsl(var(--primary-teal)/0.9)_24%,
-              hsl(var(--primary-teal)/0.9)_34%,
-              hsl(var(--accent-light)/0.88)_36%,
-              hsl(var(--accent-light)/0.88)_46%
-            )]
-            [--glow:radial-gradient(60%_60%_at_70%_20%,hsl(var(--light-teal)/0.95),transparent_62%),
-                     radial-gradient(55%_55%_at_20%_70%,hsl(var(--primary-teal)/0.9),transparent_62%),
-                     radial-gradient(45%_45%_at_85%_80%,hsl(var(--accent-light)/0.95),transparent_62%)]
-
-            [background-image:var(--glow),var(--aurora)]
-            [background-size:160%_160%,400%]
-            [background-position:50%_50%,50%_50%]
-            animate-aurora opacity-100
-
-            pointer-events-none absolute -inset-[10px]
-          `)}
+          className="absolute -inset-[10px] pointer-events-none animate-aurora"
+          style={{
+            backgroundImage:
+              'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%),\
+radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%),\
+radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%),\
+repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 10%, hsl(var(--secondary-blue) / 0.92) 12%, hsl(var(--secondary-blue) / 0.92) 22%, hsl(var(--primary-teal) / 0.9) 24%, hsl(var(--primary-teal) / 0.9) 34%, hsl(var(--accent-light) / 0.88) 36%, hsl(var(--accent-light) / 0.88) 46%)',
+            backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+            backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+            animation: 'aurora 40s linear infinite',
+            opacity: 1,
+          }}
         />
       </div>
 
-      {children}
+      <div className="relative z-10 w-full">{children}</div>
     </div>
   );
 };
