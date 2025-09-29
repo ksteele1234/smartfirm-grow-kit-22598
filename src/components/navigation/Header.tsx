@@ -16,12 +16,58 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const services = [
-    "Automated Lead Follow-up",
-    "Client Review Generation", 
-    "SEO for Accountants",
-    "Social Media Management",
-    "Email Marketing",
-    "Website Design"
+    // Top-tier Service Categories
+    { 
+      title: "Marketing Automation", 
+      href: "/services/marketing-automation",
+      description: "Complete marketing automation platform for accounting firms"
+    },
+    { 
+      title: "Technology Solutions", 
+      href: "/services/technology-solutions",
+      description: "Tech stack optimization and business process automation"
+    },
+    { 
+      title: "Business Optimization", 
+      href: "/services/business-optimization",
+      description: "Process improvement and executive dashboards"
+    },
+    { 
+      title: "Executive Services", 
+      href: "/services/executive-services",
+      description: "Fractional CIO and CFO services for growing firms"
+    },
+    // Individual Services
+    { 
+      title: "Automated Lead Follow-up", 
+      href: "/services/automated-lead-follow-up",
+      description: "Convert more prospects with automated email sequences"
+    },
+    { 
+      title: "Client Review Generation", 
+      href: "/services/client-review-generation",
+      description: "Get more positive reviews and testimonials"
+    },
+    { 
+      title: "SEO for Accountants", 
+      href: "/services/seo-for-accountants",
+      description: "Rank higher in local search results"
+    },
+    { 
+      title: "Social Media Management", 
+      href: "/services/social-media-management",
+      description: "Professional social media presence"
+    },
+    { 
+      title: "Email Marketing", 
+      href: "/services/email-marketing",
+      description: "Nurture leads with targeted campaigns"
+    },
+    { 
+      title: "Website Design", 
+      href: "/services/website-design",
+      description: "Modern, conversion-optimized websites"
+    }
   ];
 
   const solutions = [
@@ -114,24 +160,41 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[500px] grid-cols-2">
-                    {services.map((service) => (
-                      <NavigationMenuLink
-                        key={service}
-                        href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">{service}</div>
-                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {service === "Automated Lead Follow-up" && "Convert more prospects with automated email sequences"}
-                          {service === "Client Review Generation" && "Get more positive reviews and testimonials"}
-                          {service === "SEO for Accountants" && "Rank higher in local search results"}
-                          {service === "Social Media Management" && "Professional social media presence"}
-                          {service === "Email Marketing" && "Nurture leads with targeted campaigns"}
-                          {service === "Website Design" && "Modern, conversion-optimized websites"}
-                        </p>
-                      </NavigationMenuLink>
-                    ))}
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-background border border-border shadow-lg z-50">
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-primary mb-2">Main Service Categories</h4>
+                      <div className="grid gap-2">
+                        {services.slice(0, 4).map((service) => (
+                          <NavigationMenuLink
+                            key={service.title}
+                            href={service.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="border-t pt-4">
+                      <h4 className="text-sm font-semibold text-primary mb-2">Individual Services</h4>
+                      <div className="grid gap-2">
+                        {services.slice(4).map((service) => (
+                          <NavigationMenuLink
+                            key={service.title}
+                            href={service.href}
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </NavigationMenuLink>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>

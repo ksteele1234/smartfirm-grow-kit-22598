@@ -289,7 +289,7 @@ const About = () => {
                 if (member.name === "Yvonne Galicia") {
                   imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top";
                 } else if (member.name === "Grace Mendez") {
-                  imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center scale-110";
+                  imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center scale-125";
                 }
                 
                 return (
