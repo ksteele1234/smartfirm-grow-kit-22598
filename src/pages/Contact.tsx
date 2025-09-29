@@ -40,10 +40,10 @@ const Contact = () => {
       {/* Contact Information & Form Section */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-16 max-w-7xl mx-auto">
             
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="text-3xl font-heading font-bold text-primary mb-6">
                   Get in Touch
@@ -120,7 +120,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
+            <div className="lg:col-span-3">
               <Card className="shadow-card">
                 <CardHeader>
                   <CardTitle className="text-2xl font-heading text-primary">
