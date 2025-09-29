@@ -9,18 +9,31 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-card hover:shadow-soft rounded-lg",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-lg",
-        outline: "border-2 border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground rounded-lg",
-        secondary: "bg-teal text-teal-foreground hover:bg-teal/90 shadow-card hover:shadow-soft rounded-lg",
-        ghost: "hover:bg-accent hover:text-accent-foreground rounded-lg",
+        // High contrast blue variants
+        default: "bg-primary text-white hover:bg-primary/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
+        hero: "bg-primary text-white hover:bg-primary/90 shadow-soft hover:shadow-lg rounded-xl font-semibold",
+        
+        // High contrast teal variants  
+        secondary: "bg-teal text-white hover:bg-teal/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
+        
+        // White with blue/teal outline variants
+        outline: "border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white rounded-lg font-semibold",
+        "outline-teal": "border-2 border-teal text-teal bg-white hover:bg-teal hover:text-white rounded-lg font-semibold",
+        
+        // Gradient variants with white text
+        "gradient-primary": "bg-gradient-to-r from-primary to-teal text-white hover:from-primary/90 hover:to-teal/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
+        "gradient-reverse": "bg-gradient-to-r from-teal to-primary text-white hover:from-teal/90 hover:to-primary/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
+        
+        // White on dark backgrounds
+        "white-on-dark": "bg-white text-primary hover:bg-white/90 shadow-soft rounded-lg font-semibold",
+        "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary rounded-lg font-semibold",
+        
+        // Destructive - red with white text
+        destructive: "bg-red-600 text-white hover:bg-red-700 rounded-lg font-semibold",
+        
+        // Minimal variants for special cases
+        ghost: "hover:bg-primary/10 hover:text-primary rounded-lg",
         link: "text-primary underline-offset-4 hover:underline font-medium",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-lg rounded-xl font-semibold",
-        "hero-secondary": "border-2 border-white text-white bg-white/10 hover:bg-white hover:text-primary rounded-xl font-semibold backdrop-blur-sm",
-        "cta-primary": "bg-primary-blue text-white hover:bg-primary-blue/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
-        "cta-outline": "border-2 border-primary-blue text-primary-blue bg-background hover:bg-primary-blue hover:text-white rounded-lg font-semibold",
-        "white-on-dark": "bg-white text-primary-blue hover:bg-white/90 shadow-soft rounded-lg font-semibold",
-        "outline-on-dark": "border-2 border-white text-white hover:bg-white hover:text-primary-blue rounded-lg font-semibold",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm",

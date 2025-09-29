@@ -78,7 +78,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-heading font-semibold text-primary">Email</h3>
-                        <p className="text-text-secondary">hello@smartfirm.io</p>
+                        <p className="text-text-secondary">contact@smartfirm.io</p>
                         <p className="text-sm text-text-light">We respond within 24 hours</p>
                       </div>
                     </div>

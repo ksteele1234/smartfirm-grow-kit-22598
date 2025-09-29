@@ -333,7 +333,7 @@ const GetStarted = () => {
               </div>
             </div>
 
-            <Button variant="hero-secondary" size="hero" className="mb-6">
+            <Button variant="white-on-dark" size="hero" className="mb-6">
               <Users className="w-5 h-5 mr-2" />
               Speak to an Advisor
             </Button>

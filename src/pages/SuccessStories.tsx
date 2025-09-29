@@ -140,7 +140,7 @@ const SuccessStories = () => {
             Explore how accounting firms like yours have achieved significant growth and efficiency with SmartFirm's tailored solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button variant="hero-secondary" size="hero">
+            <Button variant="white-outline-on-dark" size="hero">
               Read All Case Studies
             </Button>
             <Button variant="hero" size="hero">
@@ -437,7 +437,7 @@ const SuccessStories = () => {
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-10">
             Let SmartFirm help you achieve your business goals. Contact us today to discuss your unique needs and discover how we can transform your accounting practice.
           </p>
-          <Button variant="hero-secondary" size="hero">
+          <Button variant="white-on-dark" size="hero">
             <Calendar className="w-5 h-5 mr-2" />
             Book Your Free Strategy Call
           </Button>

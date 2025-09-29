@@ -313,7 +313,7 @@ const Resources = () => {
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Our experts are here to help. Contact us for personalized advice and guidance tailored to your firm's specific needs.
               </p>
-              <Button size="lg" variant="hero-secondary" asChild>
+              <Button size="lg" variant="hero" asChild>
                 <a href="/contact">
                   Speak to an Expert
                   <MessageSquare className="ml-2 h-4 w-4" />

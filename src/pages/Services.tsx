@@ -69,11 +69,11 @@ const Services = () => {
               From marketing automation to technology optimization, SmartFirm provides the tools and expertise you need to scale efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="cta-primary" size="lg">
+              <Button variant="default" size="lg">
                 Explore All Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="cta-outline" size="lg">
+              <Button variant="outline" size="lg">
                 Book a Free Consultation
               </Button>
             </div>
@@ -112,7 +112,7 @@ const Services = () => {
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
                     <Button 
-                      variant="cta-outline" 
+                      variant="outline"
                       className="w-full"
                       asChild
                     >
@@ -143,7 +143,7 @@ const Services = () => {
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
                     <Button 
-                      variant="cta-outline" 
+                      variant="outline" 
                       className="w-full"
                       asChild
                     >
@@ -227,7 +227,7 @@ const Services = () => {
                   </div>
                   
                   <div className="text-center pt-6">
-                    <Button variant="cta-primary" size="lg" asChild>
+                    <Button variant="hero" size="lg" asChild>
                       <a href="/services/automated-lead-follow-up">
                         Learn More About This Service
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -288,7 +288,7 @@ const Services = () => {
                 </a>
               </Button>
               <Button 
-                variant="outline-on-dark"
+                variant="white-outline-on-dark"
                 size="lg"
                 asChild
               >
