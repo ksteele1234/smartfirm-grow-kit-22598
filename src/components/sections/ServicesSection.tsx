@@ -1,8 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { StandardCard } from "@/components/ui/standard-card";
 import { ArrowRight, Mail, Search, Star, Users, Zap, Globe, Phone, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
-import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 const ServicesSection = () => {
   const services = [
@@ -62,99 +61,47 @@ const ServicesSection = () => {
 
         <GeometricDivider variant="lines" />
 
-        {/* Services Grid - Asymmetrical Layout */}
+        {/* Services Grid - Consistent Layout */}
         <div className="grid gap-8 mb-12 stagger-container">
           {/* First Row - 2 cards */}
           <div className="grid md:grid-cols-2 gap-8">
-            {services.slice(0, 2).map((service, index) => {
-              const IconComponent = service.icon;
-              const cardVariants = ["elevated", "gradient"];
-              const hoverEffects = ["lift", "glow"];
-              return (
-                <EnhancedCard 
-                  key={index} 
-                  variant={cardVariants[index % 2] as any}
-                  hoverEffect={hoverEffects[index % 2] as any}
-                  className="scale-feedback color-transition"
-                >
-                  <CardHeader className="pb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
-                      <IconComponent className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-text-secondary leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </EnhancedCard>
-              );
-            })}
+            {services.slice(0, 2).map((service, index) => (
+              <StandardCard
+                key={index}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                variant={index === 1 ? "featured" : "default"}
+                className="scale-feedback color-transition"
+              />
+            ))}
           </div>
           
           {/* Second Row - 2 cards */}
           <div className="grid md:grid-cols-2 gap-8">
-            {services.slice(2, 4).map((service, index) => {
-              const IconComponent = service.icon;
-              const cardVariants = ["elevated", "outlined"];
-              const hoverEffects = ["scale", "lift"];
-              return (
-                <EnhancedCard 
-                  key={index + 2} 
-                  variant={cardVariants[index % 2] as any}
-                  hoverEffect={hoverEffects[index % 2] as any}
-                  className="scale-feedback color-transition"
-                >
-                  <CardHeader className="pb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
-                      <IconComponent className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-text-secondary leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </EnhancedCard>
-              );
-            })}
+            {services.slice(2, 4).map((service, index) => (
+              <StandardCard
+                key={index + 2}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                className="scale-feedback color-transition"
+              />
+            ))}
           </div>
           
           {/* Third Row - 3 cards offset */}
           <div className="grid md:grid-cols-3 gap-8 md:ml-12">
-            {services.slice(4).map((service, index) => {
-              const IconComponent = service.icon;
-              const cardVariants = ["default", "gradient", "elevated"];
-              const hoverEffects = ["glow", "lift", "scale"];
-              return (
-                <EnhancedCard 
-                  key={index + 4} 
-                  variant={cardVariants[index % 3] as any}
-                  hoverEffect={hoverEffects[index % 3] as any}
-                  className="scale-feedback color-transition"
-                >
-                  <CardHeader className="pb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
-                      <IconComponent className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-text-secondary leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                  </CardContent>
-                </EnhancedCard>
-              );
-            })}
+            {services.slice(4).map((service, index) => (
+              <StandardCard
+                key={index + 4}
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                variant={index === 1 ? "popular" : "default"}
+                className="scale-feedback color-transition"
+              />
+            ))}
           </div>
         </div>
 

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Quote, Star } from "lucide-react";
-import { GeometricDivider, BackgroundPattern } from "@/components/ui/visual-accents";
-import { EnhancedCard } from "@/components/ui/enhanced-card";
+import { StandardCard } from "@/components/ui/standard-card";
+import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { GeometricDivider } from "@/components/ui/visual-accents";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,6 +42,16 @@ const TestimonialsSection = () => {
     return () => clearInterval(timer);
   }, []);
 
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
     <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5 relative overflow-hidden">
       <div className="container relative mx-auto px-4 lg:px-6">
@@ -58,72 +68,110 @@ const TestimonialsSection = () => {
 
         <GeometricDivider variant="dots" />
 
-        {/* Testimonial Carousel - Offset Layout */}
-        <div className="max-w-5xl mx-auto">
-          <EnhancedCard 
-            variant="elevated" 
-            hoverEffect="glow" 
-            className="overflow-hidden"
+        {/* Featured Testimonial */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <StandardCard
+            icon={Quote}
+            title={currentTestimonial.results}
+            description=""
+            variant="featured"
+            className="relative"
           >
-            <CardContent className="p-8 lg:p-12">
-              <div className="relative">
-                {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Quote className="h-8 w-8 text-primary" />
-                </div>
+            <div className="space-y-6">
+              {/* Stars */}
+              <div className="flex justify-center space-x-1">
+                {[...Array(currentTestimonial.rating)].map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                ))}
+              </div>
 
-                {/* Testimonial Content */}
-                <div className="space-y-6">
-                  {/* Stars */}
-                  <div className="flex justify-center space-x-1">
-                    {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                    ))}
-                  </div>
+              {/* Content */}
+              <blockquote className="text-xl lg:text-2xl text-text-primary leading-relaxed text-center max-w-3xl mx-auto">
+                "{currentTestimonial.content}"
+              </blockquote>
 
-                  {/* Content */}
-                  <blockquote className="text-xl lg:text-2xl text-text-primary leading-relaxed text-center max-w-3xl mx-auto">
-                    "{testimonials[currentIndex].content}"
-                  </blockquote>
-
-                  {/* Author Info */}
-                  <div className="flex items-center justify-center space-x-4">
-                    <img 
-                      src={testimonials[currentIndex].image} 
-                      alt={testimonials[currentIndex].name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
-                    />
-                    <div className="text-center">
-                      <div className="font-semibold text-lg text-foreground">
-                        {testimonials[currentIndex].name}
-                      </div>
-                      <div className="text-text-light">
-                        {testimonials[currentIndex].firm}
-                      </div>
-                      <div className="inline-block mt-2 px-3 py-1 bg-teal/10 text-teal rounded-full text-sm font-medium">
-                        {testimonials[currentIndex].results}
-                      </div>
+              {/* Author Info */}
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-4">
+                  <img 
+                    src={currentTestimonial.image} 
+                    alt={currentTestimonial.name}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
+                  />
+                  <div>
+                    <div className="font-semibold text-lg text-foreground">
+                      {currentTestimonial.name}
+                    </div>
+                    <div className="text-text-light">
+                      {currentTestimonial.firm}
                     </div>
                   </div>
                 </div>
+                
+                <div className="flex items-center space-x-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={prevTestimonial}
+                    className="w-10 h-10 p-0"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={nextTestimonial}
+                    className="w-10 h-10 p-0"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </Button>
+                </div>
               </div>
-            </CardContent>
-          </EnhancedCard>
+            </div>
+          </StandardCard>
+        </div>
 
-          {/* Carousel Indicators */}
-          <div className="flex justify-center mt-6 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 scale-feedback color-transition ${
-                  index === currentIndex 
-                    ? 'bg-primary scale-125' 
-                    : 'bg-primary/30 hover:bg-primary/50'
-                }`}
-              />
-            ))}
-          </div>
+        {/* Carousel Indicators */}
+        <div className="flex justify-center space-x-2 mb-12">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 scale-feedback color-transition ${
+                index === currentIndex 
+                  ? 'bg-primary scale-125' 
+                  : 'bg-primary/30 hover:bg-primary/50'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Results Overview */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <StandardCard
+            title="Client Satisfaction"
+            description="Average rating from accounting firms using SmartFirm's marketing automation systems."
+            className="text-center"
+          >
+            <div className="text-3xl font-heading font-bold text-primary">98%</div>
+          </StandardCard>
+          
+          <StandardCard
+            title="Lead Growth"
+            description="Average increase in qualified leads within 90 days of implementation."
+            variant="popular"
+            className="text-center"
+          >
+            <div className="text-3xl font-heading font-bold text-primary">250%</div>
+          </StandardCard>
+          
+          <StandardCard
+            title="ROI Achievement"
+            description="Firms see positive ROI within the first quarter of working with SmartFirm."
+            className="text-center"
+          >
+            <div className="text-3xl font-heading font-bold text-primary">ROI+</div>
+          </StandardCard>
         </div>
 
         {/* Partner Logos */}

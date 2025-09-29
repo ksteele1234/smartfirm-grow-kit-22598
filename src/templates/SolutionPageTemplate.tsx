@@ -1,11 +1,11 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
+import { StandardCard } from "@/components/ui/standard-card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
-import { EnhancedCard } from "@/components/ui/enhanced-card";
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
@@ -78,30 +78,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           
           {/* Dynamic grid based on number of benefits */}
           <div className={`grid gap-8 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2 lg:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
-            {data.keyBenefits.map((benefit, index) => {
-              const variants = ["elevated", "gradient", "outlined"];
-              const hoverEffects = ["lift", "glow", "scale"];
-              return (
-                <EnhancedCard 
-                  key={index} 
-                  variant={variants[index % 3] as any}
-                  hoverEffect={hoverEffects[index % 3] as any}
-                  className="bg-gradient-to-br from-background to-primary/5"
-                >
-                <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-teal/20 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl text-primary mb-3">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base text-text-secondary leading-relaxed">
-                    {benefit.description}
-                  </CardDescription>
-                  </CardContent>
-                </EnhancedCard>
-              );
-            })}
+            {data.keyBenefits.map((benefit, index) => (
+              <StandardCard
+                key={index}
+                icon={TrendingUp}
+                title={benefit.title}
+                description={benefit.description}
+                variant={index === 1 ? "popular" : index === 2 ? "featured" : "default"}
+                className="bg-gradient-to-br from-background to-primary/5"
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -120,17 +106,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           {/* Dynamic grid based on number of steps */}
           <div className={`grid gap-8 ${data.howItWorks.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.howItWorks.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
+              <StandardCard
+                key={index}
+                title={step.title}
+                description={step.description}
+                variant={index === Math.floor(data.howItWorks.length / 2) ? "featured" : "default"}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-text-secondary leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              </StandardCard>
             ))}
           </div>
         </div>
@@ -150,21 +136,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           {/* Dynamic grid based on number of results */}
           <div className={`grid gap-8 ${data.results.length === 3 ? 'md:grid-cols-1 lg:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-4'}`}>
             {data.results.map((result, index) => (
-              <Card key={index} className="bg-gradient-to-br from-background to-teal/5 text-center border-border/50 shadow-card hover:shadow-soft transition-all duration-300">
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-4xl font-bold text-gradient bg-gradient-to-r from-primary to-teal bg-clip-text text-transparent">
-                    {result.value}
-                  </CardTitle>
-                  <CardDescription className="text-lg font-semibold text-primary mt-2">
-                    {result.metric}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-text-secondary leading-relaxed">
-                    {result.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <StandardCard
+                key={index}
+                title={result.metric}
+                description={result.description}
+                variant={index === 1 ? "popular" : "default"}
+                className="text-center bg-gradient-to-br from-background to-teal/5"
+              >
+                <div className="text-4xl font-bold text-gradient bg-gradient-to-r from-primary to-teal bg-clip-text text-transparent mb-2">
+                  {result.value}
+                </div>
+              </StandardCard>
             ))}
           </div>
         </div>
