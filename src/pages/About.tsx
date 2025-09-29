@@ -50,25 +50,29 @@ const About = () => {
       name: "Katie Steele",
       title: "Founder & CEO",
       bio: "With over 20 years of experience leading business transformations across industries, Katie helps accounting firms unlock their full potential through smart systems and scalable growth strategies that work.",
-      image: katieSteeleImage
+      image: katieSteeleImage,
+      linkedin: "https://www.linkedin.com/in/katie-steele1/"
     },
     {
       name: "Brian Hellewell",
       title: "Sales Advisor",
       bio: "Brian brings extensive experience in sales strategy and client relationship management to help accounting firms grow their client base.",
-      image: brianHellewellImage
+      image: brianHellewellImage,
+      linkedin: "https://www.linkedin.com/in/brian-hellewell/"
     },
     {
       name: "Grace Mendez",
       title: "Customer Service Manager",
       bio: "Grace leads our customer service team, ensuring accounting firms receive exceptional support and guidance throughout their journey with SmartFirm.",
-      image: graceMendezImage
+      image: graceMendezImage,
+      linkedin: "https://www.linkedin.com/in/mary-grace-mendez26/"
     },
     {
       name: "Yvonne Galicia",
       title: "Social Media Ads & Content Manager",
       bio: "Yvonne creates compelling content and manages strategic ad campaigns that help accounting firms build their brand and reach their ideal clients.",
-      image: yvonneGaliciaImage
+      image: yvonneGaliciaImage,
+      linkedin: "https://www.linkedin.com/in/yvonne-galicia-brandbloom/"
     }
   ];
 
@@ -99,7 +103,7 @@ const About = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Our Story: Empowering Accounting Firms to Thrive
@@ -112,7 +116,7 @@ const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="section-padding">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <Card className="border-light-border shadow-elegant">
@@ -149,7 +153,7 @@ const About = () => {
         </section>
 
         {/* Core Values */}
-        <section className="section-padding bg-background-light">
+        <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
@@ -182,7 +186,7 @@ const About = () => {
         </section>
 
         {/* Founder Story */}
-        <section className="section-padding">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
@@ -266,7 +270,7 @@ const About = () => {
         </section>
 
         {/* Meet the Team */}
-        <section className="section-padding bg-background-light">
+        <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
@@ -294,10 +298,12 @@ const About = () => {
                       {member.bio}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <Button variant="outline" size="sm">
-                      <Linkedin className="h-4 w-4 mr-2" />
-                      LinkedIn Profile
+                   <CardContent className="pt-0">
+                    <Button variant="outline" size="sm" asChild>
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="h-4 w-4 mr-2" />
+                        LinkedIn Profile
+                      </a>
                     </Button>
                   </CardContent>
                 </Card>
@@ -307,7 +313,7 @@ const About = () => {
         </section>
 
         {/* Why Choose SmartFirm */}
-        <section className="section-padding">
+        <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
@@ -339,7 +345,7 @@ const About = () => {
         </section>
 
         {/* Testimonial */}
-        <section className="section-padding bg-background-light">
+        <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
@@ -358,7 +364,7 @@ const About = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="section-padding bg-gradient-to-br from-primary-blue to-primary-teal text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary-blue to-primary-teal text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube, Instagram } from "lucide-react";
 import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 
 const Footer = () => {
@@ -75,17 +75,27 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="flex space-x-4 mt-6">
-                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
-                  <Twitter className="h-5 w-5" />
+                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
                   <Youtube className="h-5 w-5" />
+                </a>
+                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="https://www.tiktok.com/@SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.242-1.89-1.242-3.338h-2.877v13.938c0 2.27-1.847 4.118-4.118 4.118s-4.118-1.847-4.118-4.118 1.847-4.118 4.118-4.118c.228 0 .452.019.67.056V7.359c-.218-.026-.437-.043-.67-.043C4.558 7.316 0 11.875 0 17.382 0 22.89 4.558 27.447 10.066 27.447c5.508 0 10.066-4.558 10.066-10.066V9.197a8.717 8.717 0 0 0 4.868 1.47V7.79c-1.617 0-3.086-.69-4.126-1.794-.849-.901-1.349-2.096-1.349-3.434h-2.204z"/>
+                  </svg>
                 </a>
               </div>
             </div>
@@ -161,7 +171,7 @@ const Footer = () => {
         <div className="py-6 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-text-light text-sm">
-              © 2024 SmartFirm.io. All rights reserved.
+              © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="text-text-light hover:text-primary transition-colors">
