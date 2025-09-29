@@ -52,11 +52,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Phone className="h-5 w-5 text-primary" />
-                  <span>(541) 658-3789</span>
+                  <a href="tel:+15416583789" className="hover:text-primary transition-colors">
+                    (541) 658-3789
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span>hello@smartfirm.io</span>
+                  <a href="mailto:contact@smartfirm.io" className="hover:text-primary transition-colors">
+                    contact@smartfirm.io
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3 text-text-secondary">
                   <MapPin className="h-5 w-5 text-primary" />

@@ -48,10 +48,13 @@ const FinalCTASection = () => {
               variant="hero-secondary" 
               size="hero" 
               className="group text-xl px-12 py-6 h-auto"
+              asChild
             >
-              <Calendar className="mr-3 h-6 w-6" />
-              Book My Free Strategy Call
-              <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              <a href="/get-started">
+                <Calendar className="mr-3 h-6 w-6" />
+                Book My Free Strategy Call
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             
             <div className="flex items-center justify-center space-x-2 text-white/80">
@@ -66,11 +69,11 @@ const FinalCTASection = () => {
               Prefer to speak directly? Call us now:
             </p>
             <a 
-              href="tel:+1-555-SMART-FIRM" 
+              href="tel:+15416583789" 
               className="inline-flex items-center text-accent-light hover:text-white transition-colors font-semibold text-lg"
             >
               <Phone className="mr-2 h-5 w-5" />
-              (555) SMART-FIRM
+              (541) 658-3789
             </a>
           </div>
 

@@ -7,32 +7,32 @@ const ServicesSection = () => {
     {
       icon: Zap,
       title: "Automated Lead Follow-up",
-      description: "Never lose a prospect again with our intelligent follow-up sequences that convert leads into clients."
+      description: "Convert inquiries into booked calls within 24–48 hours. Our intelligent follow-up sequences (email, SMS, and voicemail) integrate with QuickBooks, Xero, Karbon, and Canopy—so no lead slips through the cracks."
     },
     {
       icon: Star,
       title: "Client Review Generation",
-      description: "Build trust and credibility with automated systems that generate authentic 5-star reviews."
+      description: "Build credibility and outshine competitors with automated review requests. Firms using this system typically triple their 5-star reviews in 90 days, strengthening trust and client retention."
     },
     {
       icon: Search,
-      title: "SEO for Accounting Firms",
-      description: "Dominate local search results and attract high-value clients actively searching for CPA services and accounting expertise."
+      title: "SEO for Accounting Firms", 
+      description: "Dominate local search and appear where high-value clients are looking. Our SEO for accountants improves rankings on Google Maps, local listings, and search results—bringing in qualified leads who are ready to buy."
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
-      description: "Nurture client relationships and stay top-of-mind with targeted email marketing campaigns designed specifically for accounting practices."
+      description: "Stay top-of-mind with personalized nurture campaigns designed for CPAs and tax professionals. Clients report higher renewal rates and upsell opportunities when email automation keeps relationships warm year-round."
     },
     {
       icon: Users,
       title: "Social Media Management",
-      description: "Establish thought leadership and build your brand across all major social platforms."
+      description: "Establish thought leadership across LinkedIn, Facebook, and beyond with done-for-you branded content. Position your firm as the go-to authority while we manage scheduling, posting, and engagement."
     },
     {
       icon: Globe,
       title: "Website Optimization",
-      description: "Convert more visitors into clients with high-performing websites designed for accounting firms."
+      description: "Turn visitors into clients with conversion-focused websites built for accounting firms. From secure client portals to mobile-friendly design, our sites are optimized for compliance, speed, and trust."
     }
   ];
 
@@ -45,8 +45,8 @@ const ServicesSection = () => {
             Complete Marketing Solutions for
             <span className="text-teal block">Accounting Firms & CPAs</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            From lead generation for accounting firms to client retention strategies, our marketing automation delivers everything you need to grow your practice consistently.
+          <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
+            Grow your practice with marketing automation designed specifically for accountants. From lead generation for accounting firms to client retention strategies, SmartFirm delivers a done-for-you system that consistently wins new clients, keeps them engaged, and frees up your time.
           </p>
         </div>
 
@@ -83,9 +83,11 @@ const ServicesSection = () => {
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
               Let's discuss how our marketing system can help you achieve your growth goals. Book a free strategy call today.
             </p>
-            <Button variant="hero" size="lg" className="group">
-              Explore All Services
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="hero" size="lg" className="group" asChild>
+              <a href="/services">
+                Explore All Services
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
         </div>

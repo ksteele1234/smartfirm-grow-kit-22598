@@ -108,14 +108,18 @@ No chasing leads, no juggling tools, no wasted time.</p>
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="hero" size="hero" className="group">
-                  Book My Free Growth Strategy Call
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <Button variant="hero" size="hero" className="group" asChild>
+                  <a href="/get-started">
+                    Book My Free Growth Strategy Call
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 
-                <Button variant="outline" size="lg" className="group">
-                  <Play className="mr-2 h-5 w-5" />
-                  See How It Works
+                <Button variant="outline" size="lg" className="group" asChild>
+                  <a href="#how-it-works">
+                    <Play className="mr-2 h-5 w-5" />
+                    See How It Works
+                  </a>
                 </Button>
               </motion.div>
 

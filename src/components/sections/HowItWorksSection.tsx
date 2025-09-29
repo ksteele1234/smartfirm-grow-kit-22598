@@ -1,4 +1,5 @@
 import { Phone, FileText, Rocket, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -23,7 +24,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background-light">
+    <section id="how-it-works" className="py-24 bg-background-light">
       <div className="container mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -90,13 +91,17 @@ const HowItWorksSection = () => {
               Join hundreds of accounting firms that have transformed their marketing with SmartFirm. Your growth journey starts with a simple conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-lg rounded-xl font-semibold h-16 px-8 text-lg transition-all duration-300 group">
-                Book Your Free Strategy Call
-                <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-              </button>
-              <button className="border-2 border-primary text-primary bg-background hover:bg-primary hover:text-primary-foreground rounded-xl font-medium h-16 px-8 text-lg transition-all duration-300">
-                Learn More About Our Process
-              </button>
+              <Button variant="hero" size="hero" className="group" asChild>
+                <a href="/get-started">
+                  Book Your Free Strategy Call
+                  <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                </a>
+              </Button>
+              <Button variant="outline" size="hero" className="group" asChild>
+                <a href="/services">
+                  Learn More About Our Process
+                </a>
+              </Button>
             </div>
           </div>
         </div>
