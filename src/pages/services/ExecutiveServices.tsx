@@ -1,0 +1,76 @@
+import ServicePageTemplate from "@/templates/ServicePageTemplate";
+import { ServicePageData } from "@/types/cms";
+
+const ExecutiveServices = () => {
+  const serviceData: ServicePageData = {
+    id: "executive-services",
+    title: "Executive Services for Accounting Firms",
+    slug: "executive-services",
+    content: {},
+    heroTitle: "Fractional Executive Services for Growing Firms",
+    heroSubtitle: "Access experienced CIO and CFO expertise without the full-time cost to accelerate your firm's growth and strategic initiatives.",
+    heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
+    benefits: [
+      {
+        title: "Fractional CIO Services",
+        description: "Strategic technology leadership and digital transformation guidance",
+        icon: "Monitor"
+      },
+      {
+        title: "Fractional CFO Services",
+        description: "Financial strategy, planning, and performance optimization expertise",
+        icon: "DollarSign"
+      },
+      {
+        title: "Cost-Effective Leadership",
+        description: "Access C-level expertise without full-time executive compensation",
+        icon: "TrendingDown"
+      },
+      {
+        title: "Strategic Growth Planning",
+        description: "Develop and execute strategic initiatives for sustainable growth",
+        icon: "Target"
+      }
+    ],
+    features: [
+      {
+        title: "Fractional CIO Services",
+        description: "Technology strategy and digital transformation leadership",
+        details: [
+          "Technology roadmap development and execution",
+          "Digital transformation strategy and implementation",
+          "Cybersecurity and risk management oversight",
+          "Technology vendor evaluation and management"
+        ]
+      },
+      {
+        title: "Fractional CFO Services",
+        description: "Financial leadership and strategic financial management",
+        details: [
+          "Financial planning and analysis (FP&A)",
+          "Cash flow management and forecasting",
+          "Investment and growth strategy development",
+          "Financial reporting and dashboard creation"
+        ]
+      },
+      {
+        title: "Strategic Business Consulting",
+        description: "Executive-level guidance for critical business decisions",
+        details: [
+          "Market expansion and growth strategy",
+          "Mergers and acquisitions advisory",
+          "Organizational development and culture",
+          "Performance improvement initiatives"
+        ]
+      }
+    ],
+    ctaTitle: "Access Executive-Level Expertise",
+    ctaDescription: "Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.",
+    ctaButtonText: "Explore Services",
+    ctaButtonLink: "/get-started"
+  };
+
+  return <ServicePageTemplate data={serviceData} />;
+};
+
+export default ExecutiveServices;

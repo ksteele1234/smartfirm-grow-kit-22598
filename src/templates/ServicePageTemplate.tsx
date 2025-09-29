@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
-import { EnhancedCard } from "@/components/ui/enhanced-card";
+import { StandardCard } from "@/components/ui/standard-card";
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
@@ -72,47 +72,29 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <div className="space-y-8">
             {/* First row - 2 cards */}
             <div className="grid md:grid-cols-2 gap-8">
-              {data.benefits.slice(0, 2).map((benefit, index) => {
-                const variants = ["elevated", "gradient"];
-                return (
-                  <EnhancedCard key={index} variant={variants[index] as any} hoverEffect="lift">
-                    <CardHeader>
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                        <CheckCircle className="h-6 w-6 text-primary" />
-                      </div>
-                      <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base">
-                        {benefit.description}
-                      </CardDescription>
-                    </CardContent>
-                  </EnhancedCard>
-                );
-              })}
+              {data.benefits.slice(0, 2).map((benefit, index) => (
+                <StandardCard
+                  key={index}
+                  icon={CheckCircle}
+                  title={benefit.title}
+                  description={benefit.description}
+                  variant={index === 1 ? "featured" : "default"}
+                />
+              ))}
             </div>
             
             {/* Remaining cards offset */}
             {data.benefits.length > 2 && (
               <div className="grid md:grid-cols-3 gap-8 md:ml-12">
-                {data.benefits.slice(2).map((benefit, index) => {
-                  const variants = ["tilted", "outlined", "default"];
-                  return (
-                    <EnhancedCard key={index + 2} variant={variants[index % 3] as any} hoverEffect="scale">
-                      <CardHeader>
-                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                          <CheckCircle className="h-6 w-6 text-primary" />
-                        </div>
-                        <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-base">
-                          {benefit.description}
-                        </CardDescription>
-                      </CardContent>
-                    </EnhancedCard>
-                  );
-                })}
+                {data.benefits.slice(2).map((benefit, index) => (
+                  <StandardCard
+                    key={index + 2}
+                    icon={CheckCircle}
+                    title={benefit.title}
+                    description={benefit.description}
+                    variant={index === 1 ? "popular" : "default"}
+                  />
+                ))}
               </div>
             )}
           </div>
@@ -132,31 +114,27 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <GeometricDivider variant="wave" />
           
           <div className="grid lg:grid-cols-2 gap-8">
-            {data.features.map((feature, index) => {
-              const hoverEffects = ["lift", "glow"];
-              return (
-                <EnhancedCard key={index} variant="elevated" hoverEffect={hoverEffects[index % 2] as any}>
-                <CardHeader>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardHeader>
+            {data.features.map((feature, index) => (
+              <StandardCard
+                key={index}
+                title={feature.title}
+                description={feature.description}
+                variant={index === 1 ? "featured" : "default"}
+              >
                 {feature.details && (
-                  <CardContent>
+                  <div className="mt-4">
                     <ul className="space-y-2">
                       {feature.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start gap-2">
                           <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-sm text-muted-foreground">{detail}</span>
+                          <span className="text-sm text-text-secondary">{detail}</span>
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
+                  </div>
                 )}
-              </EnhancedCard>
-              );
-            })}
+              </StandardCard>
+            ))}
           </div>
         </div>
       </section>

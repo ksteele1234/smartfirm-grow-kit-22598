@@ -163,9 +163,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               Book a Strategy Call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="white-outline-on-dark">
-              View Case Studies
-            </Button>
           </div>
         </div>
       </section>

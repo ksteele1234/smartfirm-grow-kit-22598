@@ -146,7 +146,7 @@ const Resources = () => {
                         {category.title === "Guides & Whitepapers" ? "View All Guides" :
                          category.title === "Tools & Calculators" ? "View All Tools" :
                          category.title === "Blog" ? "Read Our Blog" :
-                         category.title === "Case Studies" ? "View Case Studies" :
+                         category.title === "Case Studies" ? "View Success Stories" :
                          "Watch Webinars"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>

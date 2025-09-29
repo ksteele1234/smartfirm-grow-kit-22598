@@ -31,6 +31,10 @@ import SEOForAccountants from "./pages/services/SEOForAccountants";
 import SocialMediaManagement from "./pages/services/SocialMediaManagement";
 import EmailMarketing from "./pages/services/EmailMarketing";
 import WebsiteDesign from "./pages/services/WebsiteDesign";
+import MarketingAutomation from "./pages/services/MarketingAutomation";
+import TechnologySolutions from "./pages/services/TechnologySolutions";
+import BusinessOptimization from "./pages/services/BusinessOptimization";
+import ExecutiveServices from "./pages/services/ExecutiveServices";
 
 // Industry Pages
 import TaxPreparation from "./pages/industries/TaxPreparation";
@@ -97,6 +101,10 @@ const App = () => (
         <Route path="/solutions/protect-your-practice" element={<ProtectPractice />} />
         
         {/* Service Sub-pages */}
+        <Route path="/services/marketing-automation" element={<MarketingAutomation />} />
+        <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
+        <Route path="/services/business-optimization" element={<BusinessOptimization />} />
+        <Route path="/services/executive-services" element={<ExecutiveServices />} />
         <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
         <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
         <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
