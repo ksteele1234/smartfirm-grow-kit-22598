@@ -22,7 +22,7 @@ const FinalCTASection = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Headline */}
           <div className="space-y-6 mb-12">
-            <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight text-white">
+            <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight text-light-teal">
               Why Firms Choose
               <span className="block text-white">SmartFirm</span>
             </h2>
