@@ -8,29 +8,29 @@ const StopLosingClients = () => {
     slug: "stop-losing-clients-to-tech-savvy-cpas",
     metaDescription: "CPA marketing automation that prevents client loss through modern systems, faster response times, and professional automation that keeps you ahead of tech-savvy competitors.",
     content: {},
-    heroTitle: "Stop Losing Clients to Tech-Savvy CPAs",
-    heroSubtitle: "Stay competitive with modern systems that impress clients and automate what your competitors do manually",
-    problemStatement: "Tech-savvy CPAs are winning clients with modern systems, faster responses, and professional automation while traditional firms lose ground with outdated processes and slow communication.",
-    solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything.",
+    heroTitle: "CPA Marketing Automation That Stops Client Loss",
+    heroSubtitle: "Stay competitive with modern systems that impress clients and automate what tech-savvy CPAs do manually",
+    problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
+    solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",
     keyBenefits: [
       {
         title: "Get Found Online When Clients Search",
-        description: "Dominate local search results and convert website visitors into paying clients with proven SEO and conversion optimization.",
+        description: "Dominate local search results and convert website visitors into paying clients with proven SEO for CPAs and conversion optimization designed for CPA firms.",
         icon: "Search"
       },
       {
         title: "Look Professional with Modern Systems",
-        description: "Impress clients with professional client portals, automated communications, and modern website design.",
+        description: "Impress clients with professional client portals, automated communications, and modern CPA websites that showcase your expertise.",
         icon: "Star"
       },
       {
         title: "Respond Faster Than Competition",
-        description: "Never miss a lead with instant chat, automated scheduling, and mobile access to everything.",
+        description: "Never miss a lead with instant chat, automated scheduling, and mobile access to everything through our CPA marketing automation tools.",
         icon: "Zap"
       },
       {
         title: "Automate What Others Do Manually",
-        description: "Set up automated follow-ups, social media, reviews, and lead tracking that works 24/7.",
+        description: "Set up automated follow-ups, social media marketing for CPAs, reviews, and lead tracking that works 24/7 without your involvement.",
         icon: "Settings"
       }
     ],
@@ -74,7 +74,7 @@ const StopLosingClients = () => {
       }
     ],
     ctaTitle: "Don't Let Tech-Savvy CPAs Win Your Clients",
-    ctaDescription: "Get the modern systems and automation that keeps you competitive. Book a strategy call to see how we can transform your practice."
+    ctaDescription: "Get the modern CPA marketing automation and systems that keeps you competitive. Book a strategy call to see how we can transform your practice with proven digital marketing for CPAs."
   };
 
   return <SolutionPageTemplate data={solutionData} />;

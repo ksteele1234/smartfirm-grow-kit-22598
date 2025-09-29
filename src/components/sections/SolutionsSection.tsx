@@ -57,9 +57,9 @@ const SolutionsSection = () => {
 
         <AccentLine variant="gradient" className="max-w-md mx-auto mb-12" />
 
-        {/* Solutions Grid - Full Width Distribution */}
+        {/* Solutions Grid - Proper Full Width Distribution */}
         <div className="space-y-8 stagger-container">
-          {/* First row - 2 cards */}
+          {/* First row - 2 cards taking full width */}
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.slice(0, 2).map((solution, index) => {
               const IconComponent = solution.icon;
