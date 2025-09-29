@@ -22,9 +22,9 @@ const FinalCTASection = () => {
         <div className="max-w-4xl mx-auto text-center text-white">
           {/* Main Headline */}
           <div className="space-y-6 mb-12">
-            <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight">
+            <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight text-white">
               Why Firms Choose
-              <span className="block text-accent-light">SmartFirm</span>
+              <span className="block text-white">SmartFirm</span>
             </h2>
           </div>
 
@@ -45,11 +45,11 @@ const FinalCTASection = () => {
           </div>
 
           {/* Alternative Contact */}
-          <div className="border-t border-white/20 pt-8">
-            <p className="text-white/90 mb-4">
-              Prefer to speak directly? Call us at <a 
+          <div className="border-t border-white/20 pt-8 mt-8">
+            <p className="text-white/90 text-lg">
+              📞 Prefer to speak directly? Call us at <a 
                 href="tel:+15416583789" 
-                className="inline-flex items-center text-accent-light hover:text-white transition-colors font-semibold"
+                className="inline-flex items-center text-white hover:text-accent-light transition-colors font-semibold underline"
               >
                 541-658-3789
               </a>
@@ -58,18 +58,14 @@ const FinalCTASection = () => {
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-white/20">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-accent-light mb-2">500+</div>
-                <div className="text-white/80 text-sm">Firms Served</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent-light mb-2">2.5x</div>
-                <div className="text-white/80 text-sm">Average ROI</div>
+                <div className="text-3xl font-bold text-accent-light mb-2">100%</div>
+                <div className="text-white/80 text-sm">Client Satisfaction Rate</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent-light mb-2">95%</div>
-                <div className="text-white/80 text-sm">Client Satisfaction</div>
+                <div className="text-white/80 text-sm">Client Retention</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent-light mb-2">30</div>
