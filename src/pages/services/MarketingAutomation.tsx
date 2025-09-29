@@ -62,6 +62,16 @@ const MarketingAutomation = () => {
           "Response management for online reviews",
           "Review showcase integration on your website"
         ]
+      },
+      {
+        title: "Analytics & Reporting",
+        description: "Know what works with clear attribution and ROI insights",
+        details: [
+          "Campaign performance dashboards",
+          "Conversion tracking across forms and calls",
+          "A/B testing and optimization insights",
+          "ROI and pipeline impact reporting"
+        ]
       }
     ],
     ctaTitle: "Ready to Automate Your Marketing?",
