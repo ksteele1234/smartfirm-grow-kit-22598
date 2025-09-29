@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Users, Target, Shield, ArrowRight } from "lucide-react";
+import { TrendingUp, Users, Target, Shield, ArrowRight, BarChart3, Eye } from "lucide-react";
 import { GeometricDivider, FloatingShapes, AccentLine } from "@/components/ui/visual-accents";
 import { EnhancedCard } from "@/components/ui/enhanced-card";
 
@@ -198,13 +198,15 @@ const SolutionsSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
                 <a href="/get-started">
-                  📊 Get a Custom Growth Plan
+                  <BarChart3 className="mr-2 h-5 w-5" />
+                  Get a Custom Growth Plan
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
                 <a href="/solutions">
-                  👀 Browse All Solutions
+                  <Eye className="mr-2 h-5 w-5" />
+                  Browse All Solutions
                 </a>
               </Button>
             </div>
