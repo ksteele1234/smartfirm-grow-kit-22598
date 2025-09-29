@@ -19,12 +19,15 @@ const Footer = () => {
   ];
 
   const resources = [
-    "Marketing Guides",
-    "Industry Reports",
-    "Case Studies",
     "Blog Posts",
-    "Webinars",
     "Tools & Calculators"
+  ];
+
+  const hiddenResources = [
+    "Marketing Guides",
+    "Industry Reports", 
+    "Case Studies",
+    "Webinars"
   ];
 
   return (

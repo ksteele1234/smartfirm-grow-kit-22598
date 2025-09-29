@@ -26,9 +26,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
             {data.heroSubtitle}
           </p>
-          <Button size="lg" variant="hero" className="group bg-gradient-to-r from-primary to-teal hover:from-primary/90 hover:to-teal/90 text-white">
-            Get Your Solution
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Button size="lg" variant="hero" className="group bg-gradient-to-r from-primary to-teal hover:from-primary/90 hover:to-teal/90 text-white" asChild>
+            <a href="/get-started">
+              Get Your Solution
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
         </div>
       </section>

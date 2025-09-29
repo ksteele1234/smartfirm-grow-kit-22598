@@ -209,7 +209,7 @@ const Header = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem>
+              <NavigationMenuItem className="hidden">
                 <NavigationMenuLink href="/success-stories" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
                 )}>
@@ -266,7 +266,7 @@ const Header = () => {
               <a href="/industries" className="text-foreground hover:text-primary transition-colors font-medium">
                 Industries
               </a>
-              <a href="/success-stories" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/success-stories" className="text-foreground hover:text-primary transition-colors font-medium hidden">
                 Success Stories
               </a>
               <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
