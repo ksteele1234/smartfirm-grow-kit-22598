@@ -8,10 +8,10 @@ const GrowWithoutPains = () => {
     slug: "grow-without-growing-pains",
     metaDescription: "Scale your accounting firm smoothly with systems that handle growth efficiently, avoiding the typical growing pains that overwhelm expanding practices.",
     content: {},
-    heroTitle: "Grow Without the Growing Pains",
-    heroSubtitle: "Scale your firm smoothly with systems that handle growth efficiently, avoiding overwhelm and maintaining quality",
-    problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume.",
-    solutionOverview: "Our growth management systems ensure smooth scaling with automated workflows, quality controls, and infrastructure that grows with you without the typical growing pains.",
+    heroTitle: "AI-Driven Growth Without the Growing Pains",
+    heroSubtitle: "Scale your firm smoothly with intelligent systems that handle growth efficiently using predictive analytics, avoiding overwhelm and maintaining quality through automation",
+    problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
+    solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
     keyBenefits: [
       {
         title: "Scalable Systems Architecture",

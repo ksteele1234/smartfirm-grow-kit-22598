@@ -7,9 +7,9 @@ const EmailMarketing = () => {
     title: "Email Marketing for CPAs",
     slug: "email-marketing",
     content: {},
-    heroTitle: "Email Marketing for CPAs",
-    heroSubtitle: "Nurture client relationships and stay top-of-mind with targeted email marketing campaigns designed specifically for accounting practices.",
-    heroDescription: "Our email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through strategic communication.",
+    heroTitle: "AI-Powered Email Marketing for CPAs",
+    heroSubtitle: "Nurture client relationships and stay top-of-mind with intelligent, predictive email marketing campaigns designed specifically for accounting practices.",
+    heroDescription: "Our AI-driven email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through automated personalization and data-driven communication strategies.",
     benefits: [
       {
         title: "Client Retention",

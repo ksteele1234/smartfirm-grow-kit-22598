@@ -95,8 +95,8 @@ const About = () => {
               Our Story: Empowering Accounting Firms to Thrive
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We believe every accounting firm has the potential for extraordinary growth. 
-              Our mission is to provide the tools, expertise, and support to make that vision a reality.
+              We believe every accounting firm has the potential for extraordinary growth through AI-driven innovation. 
+              Our mission is to provide the intelligent tools, predictive expertise, and automated support to make that vision a reality.
             </p>
           </div>
         </section>
@@ -114,8 +114,8 @@ const About = () => {
                     Our Mission
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To empower accounting firms with innovative marketing automation and technology solutions that drive sustainable growth, 
-                    improve operational efficiency, and enhance client relationships while maintaining the personal touch that makes each practice unique.
+                    To empower accounting firms with AI-powered marketing automation and intelligent technology solutions that drive predictive growth, 
+                    optimize operational efficiency through data-driven insights, and enhance client relationships using automated personalization while maintaining the personal touch that makes each practice unique.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -129,8 +129,8 @@ const About = () => {
                     Our Vision
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To be the leading partner for accounting firms seeking to modernize their practices, scale intelligently, and build lasting value. 
-                    We envision a future where technology amplifies human expertise, not replaces it.
+                    To be the leading AI-driven partner for accounting firms seeking to modernize their practices, scale intelligently with predictive analytics, and build lasting value through data-driven decision making. 
+                    We envision a future where artificial intelligence amplifies human expertise, delivering actionable insights and automated efficiency.
                   </CardDescription>
                 </CardHeader>
               </Card>

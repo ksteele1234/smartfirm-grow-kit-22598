@@ -25,32 +25,32 @@ const Services = () => {
   const serviceCategories = [
     {
       icon: <Zap className="h-8 w-8 text-primary" />,
-      title: "Marketing Automation",
-      description: "Lead Generation & Follow-up, Website & SEO, Review & Reputation Management, Social Media & Advertising, Marketing Technology, Support & Optimization.",
+      title: "AI-Powered Marketing Automation",
+      description: "Intelligent Lead Generation with predictive scoring, AI-driven Website & SEO optimization, Automated Review & Reputation Management with sentiment analysis, Smart Social Media campaigns with behavioral targeting.",
       link: "/services/marketing-automation"
     },
     {
       icon: <Settings className="h-8 w-8 text-teal" />,
-      title: "Technology Solutions", 
-      description: "Tech Stack Optimization and Business Process Automation to streamline your firm's operations and improve efficiency.",
+      title: "AI-Ready Technology Solutions", 
+      description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
       link: "/services/technology-solutions"
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "Business Optimization",
-      description: "Process Improvement and Executive Dashboards to help you make data-driven decisions and optimize your firm's performance.",
+      title: "AI-Driven Business Intelligence",
+      description: "Predictive Process Improvement and AI-powered Executive Dashboards that provide actionable insights to optimize your firm's performance and forecast growth opportunities.",
       link: "/services/business-optimization"
     },
     {
       icon: <Users className="h-8 w-8 text-teal" />,
-      title: "Executive Services",
-      description: "Fractional CIO Services and Fractional CFO Services providing executive-level expertise without the full-time commitment.",
+      title: "Strategic AI Consulting",
+      description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
       link: "/services/executive-services"
     },
     {
       icon: <Package className="h-8 w-8 text-primary" />,
-      title: "Service Packages",
-      description: "Marketing Starter Package, Tech Optimizer Package, Business Growth Package, Executive Suite Package, Complete Transformation Package.",
+      title: "AI-Enhanced Service Packages",
+      description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
       link: "/services/packages"
     }
   ];
@@ -63,10 +63,10 @@ const Services = () => {
         <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Comprehensive Solutions for Your Accounting Firm's Growth
+              AI-Powered Solutions for Your Accounting Firm's Growth
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-              From marketing automation to technology optimization, SmartFirm provides the tools and expertise you need to scale efficiently.
+              From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="default" size="lg">
@@ -170,11 +170,11 @@ const Services = () => {
                     Spotlight Service
                   </div>
                   <CardTitle className="text-3xl md:text-4xl text-foreground mb-6">
-                    Automated Lead Follow-up
+                    AI-Powered Lead Intelligence
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Turn prospects into clients with our sophisticated automated follow-up system. Never lose a lead again 
-                    with personalized, timely communication that nurtures relationships and converts opportunities.
+                    Turn prospects into clients with our AI-driven automated follow-up system. Never lose a lead again 
+                    with predictive communication that adapts to client behavior, intelligent timing optimization, and personalized messaging that nurtures relationships and converts opportunities.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8 px-10 pb-10">

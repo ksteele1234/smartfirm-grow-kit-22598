@@ -7,10 +7,10 @@ const LeadGeneration = () => {
     title: "Lead Generation for Accounting Firms",
     slug: "lead-generation",
     content: {},
-    heroTitle: "Generate More Qualified Leads for Your Accounting Firm",
-    heroSubtitle: "Stop waiting for clients to find you. Our proven lead generation system brings qualified prospects directly to your practice with automated marketing that works around the clock.",
-    problemStatement: "Most accounting firms struggle with inconsistent lead flow, relying on referrals and word-of-mouth. This leaves revenue unpredictable and growth stagnant. Without a systematic approach to lead generation, you're missing out on potential clients who are actively searching for accounting services.",
-    solutionOverview: "Our comprehensive lead generation system combines SEO optimization, targeted advertising, content marketing, and automated follow-up sequences to create a predictable pipeline of qualified prospects for your accounting firm.",
+    heroTitle: "AI-Powered Lead Generation for Your Accounting Firm",
+    heroSubtitle: "Stop waiting for clients to find you. Our AI-driven lead generation system uses predictive analytics to bring qualified prospects directly to your practice with intelligent marketing automation that works around the clock.",
+    problemStatement: "Most accounting firms struggle with inconsistent lead flow, relying on referrals and word-of-mouth. This leaves revenue unpredictable and growth stagnant. Without an AI-powered systematic approach to lead generation, you're missing out on potential clients who are actively searching for accounting services.",
+    solutionOverview: "Our comprehensive AI-driven lead generation system combines intelligent SEO optimization, predictive advertising targeting, automated content personalization, and smart follow-up sequences to create a predictable pipeline of qualified prospects for your accounting firm.",
     keyBenefits: [
       {
         title: "Predictable Lead Flow",

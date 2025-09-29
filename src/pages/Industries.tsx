@@ -91,11 +91,11 @@ const Industries = () => {
         <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Tailored Marketing & Automation for Your Accounting Niche
+              AI-Powered Marketing & Automation for Your Accounting Niche
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Every accounting specialization has unique challenges and opportunities. SmartFirm delivers customized solutions 
-              that understand your specific industry needs, client expectations, and growth potential.
+              Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions 
+              with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
             </p>
           </div>
         </section>

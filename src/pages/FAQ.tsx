@@ -27,8 +27,8 @@ const FAQ = () => {
       category: "Getting Started",
       questions: [
         {
-          question: "What is marketing automation for accounting firms?",
-          answer: "Marketing automation for accounting firms involves using software and technology to streamline, automate, and measure marketing tasks and workflows. This includes automated lead follow-up, email campaigns, client onboarding sequences, review generation, and social media management - all specifically designed for CPAs, bookkeepers, and accounting professionals."
+          question: "What is AI-powered marketing automation for accounting firms?",
+          answer: "AI-powered marketing automation for accounting firms involves using intelligent software and predictive technology to streamline, automate, and optimize marketing tasks and workflows. This includes AI-driven lead follow-up with behavioral triggers, predictive email campaigns, automated client onboarding sequences, intelligent review generation, and smart social media management - all specifically designed for CPAs, bookkeepers, and accounting professionals using data-driven insights."
         },
         {
           question: "How do I know if my accounting firm needs marketing automation?",

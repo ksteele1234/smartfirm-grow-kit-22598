@@ -7,9 +7,9 @@ const SEOForAccountants = () => {
     title: "SEO for Accounting Firms",
     slug: "seo-for-accountants",
     content: {},
-    heroTitle: "SEO for Accounting Firms",
-    heroSubtitle: "Dominate local search results and attract high-value clients actively searching for CPA services and accounting expertise.",
-    heroDescription: "Our specialized SEO for accounting firms helps you rank higher on Google, attract qualified prospects, and grow your practice through organic search traffic.",
+    heroTitle: "AI-Optimized SEO for Accounting Firms",
+    heroSubtitle: "Dominate local search results with intelligent SEO strategies that attract high-value clients actively searching for CPA services and accounting expertise.",
+    heroDescription: "Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.",
     benefits: [
       {
         title: "Higher Google Rankings",

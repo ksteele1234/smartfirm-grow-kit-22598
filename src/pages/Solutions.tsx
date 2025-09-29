@@ -55,11 +55,11 @@ const Solutions = () => {
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Solving Your Biggest Accounting Firm Challenges
+              AI-Driven Solutions for Your Biggest Accounting Firm Challenges
             </h1>
             <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
               We understand the unique pressures of running an accounting firm. From competition to client expectations, 
-              technology demands to growth challenges - SmartFirm provides proven solutions that work specifically for practices like yours.
+              technology demands to growth challenges - SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
             </p>
           </div>
         </section>

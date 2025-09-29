@@ -7,10 +7,10 @@ const ClientRetention = () => {
     title: "Client Retention Strategies",
     slug: "client-retention",
     content: {},
-    heroTitle: "Stop Losing Clients to Tech-Savvy Competitors",
-    heroSubtitle: "Strengthen client relationships and position your firm as the obvious choice in your market. Our retention strategies keep your best clients engaged and loyal for years.",
-    problemStatement: "Accounting firms are losing clients to competitors who offer better communication, modern technology, and proactive service. Without strong retention strategies, you're constantly replacing lost clients instead of growing your practice.",
-    solutionOverview: "Our client retention solution combines competitive analysis, value proposition development, communication systems, and client experience optimization to strengthen relationships and reduce churn.",
+    heroTitle: "AI-Powered Client Retention Strategies",
+    heroSubtitle: "Strengthen client relationships with predictive analytics and intelligent automation. Our AI-driven retention strategies keep your best clients engaged and loyal for years through data-driven insights.",
+    problemStatement: "Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you're constantly replacing lost clients instead of growing your practice.",
+    solutionOverview: "Our AI-driven client retention solution combines predictive client behavior analysis, automated value proposition optimization, intelligent communication systems, and data-driven client experience enhancement to strengthen relationships and reduce churn.",
     keyBenefits: [
       {
         title: "Reduced Client Churn",
