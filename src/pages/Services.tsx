@@ -296,15 +296,6 @@ Your Accounting Firm's Growth</h1>
 
                 <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
                   <AccordionTrigger className="text-left text-sm">
-                    What kind of ROI can accounting firms expect from marketing automation?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Our clients typically see a 250% increase in qualified leads, 150% improvement in conversion rates, and save 15+ hours per week on manual marketing tasks. Most accounting firms achieve positive ROI within 90 days of implementation.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left text-sm">
                     Is marketing automation compliant with accounting industry regulations?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -312,7 +303,7 @@ Your Accounting Firm's Growth</h1>
                   </AccordionContent>
                 </AccordionItem>
 
-                <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
+                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
                   <AccordionTrigger className="text-left text-sm">
                     Do you provide ongoing support after implementing marketing automation?
                   </AccordionTrigger>
