@@ -16,6 +16,7 @@ import {
   Linkedin,
   CheckCircle
 } from "lucide-react";
+import katieSteeleImage from "@/assets/katie-steele.png";
 
 const About = () => {
   const coreValues = [
@@ -43,22 +44,28 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Sarah Mitchell",
+      name: "Katie Steele",
       title: "Founder & CEO",
-      bio: "With over 15 years of experience in accounting firm operations and marketing automation, Sarah founded SmartFirm to bridge the gap between traditional accounting practices and modern growth strategies.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+      bio: "With over 20 years of experience leading business transformations across industries, Katie helps accounting firms unlock their full potential through smart systems and scalable growth strategies that work.",
+      image: katieSteeleImage
     },
     {
-      name: "Michael Chen",
-      title: "CTO & Technology Director",
-      bio: "Michael leads our technology initiatives with expertise in automation platforms, CRM systems, and business process optimization. He ensures our solutions are cutting-edge yet practical.",
+      name: "Team Member",
+      title: "Position Title",
+      bio: "Team member bio and background will be added here.",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
     },
     {
-      name: "Jennifer Rodriguez",
-      title: "Director of Client Success",
-      bio: "Jennifer oversees client relationships and ensures every firm achieves their growth objectives. Her background in accounting operations provides deep industry insight.",
+      name: "Team Member",
+      title: "Position Title",
+      bio: "Team member bio and background will be added here.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+    },
+    {
+      name: "Team Member",
+      title: "Position Title",
+      bio: "Team member bio and background will be added here.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
     }
   ];
 
@@ -171,51 +178,85 @@ const About = () => {
           </div>
         </section>
 
-        {/* Company Story */}
+        {/* Founder Story */}
         <section className="section-padding">
           <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
-                  The SmartFirm Story
+                <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                  Meet the Founder & CEO
                 </h2>
-                <h3 className="text-xl md:text-2xl font-semibold text-primary-teal mb-6">
-                  How We Started
-                </h3>
+                <p className="text-2xl font-semibold text-primary-teal mb-8">
+                  Hey, I'm Katie!
+                </p>
               </div>
               
-              <div className="prose prose-lg max-w-none text-text-secondary mb-12">
-                <p className="text-lg leading-relaxed mb-6">
-                  SmartFirm was born from a simple observation: accounting firms were struggling to keep pace with the digital transformation 
-                  happening in every other industry. While they excelled at financial expertise, many found themselves losing ground to 
-                  tech-savvy competitors who leveraged automation and modern marketing strategies.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  Our founder, Sarah Mitchell, experienced this firsthand while consulting for traditional accounting practices. 
-                  She saw brilliant accountants working harder, not smarter, and losing potential clients to firms that simply had better systems. 
-                  That's when she decided to bridge this gap.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  Today, SmartFirm has helped hundreds of accounting firms transform their operations, automate their marketing, 
-                  and achieve sustainable growth—all while maintaining the personal relationships that make accounting practices special.
-                </p>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <div className="lg:col-span-1 flex justify-center items-start">
+                  <img 
+                    src={katieSteeleImage} 
+                    alt="Katie Steele, Founder & CEO"
+                    className="w-64 h-64 rounded-lg object-cover shadow-elegant"
+                  />
+                </div>
+                
+                <div className="lg:col-span-2 space-y-6 text-text-secondary">
+                  <div>
+                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</h3>
+                    <p className="text-lg leading-relaxed">
+                      Hi, I'm Katie Steele, founder of SmartFirm.
+                    </p>
+                  </div>
+                  
+                  <p className="text-lg leading-relaxed">
+                    I created SmartFirm because I saw firsthand how many accounting professionals were drowning in daily tasks, struggling to keep up with marketing, and missing out on business growth—not because they weren't good at what they do, but because they didn't have the right systems in place and most aren't career marketers.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed">
+                    Before SmartFirm, I spent over 20 years leading business transformations across industries and countries helping companies streamline operations, implement smarter systems, and scale with confidence. From turning around struggling hospitality brands to guiding private equity investments and implementing Microsoft Dynamics 365 at enterprise scale, I've built a career helping businesses unlock their full potential.
+                  </p>
+                  
+                  <p className="text-lg leading-relaxed">
+                    Now I bring all of that to the work I do with accounting firms.
+                  </p>
+                </div>
               </div>
 
-              {/* Timeline */}
-              <div className="space-y-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-primary-blue text-center mb-8">
-                  Our Journey
-                </h3>
-                {milestones.map((milestone, index) => (
-                  <div key={index} className="flex items-center space-x-4">
-                    <div className="flex-shrink-0 w-16 h-16 bg-primary-blue text-white rounded-full flex items-center justify-center font-bold">
-                      {milestone.year}
-                    </div>
-                    <div className="flex-1 p-4 bg-accent-light/20 rounded-lg">
-                      <p className="text-text-secondary">{milestone.event}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="space-y-8">
+                <Card className="border-light-border shadow-elegant">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works</CardTitle>
+                    <CardDescription className="text-lg text-text-secondary space-y-4">
+                      <p>I don't just understand marketing — I understand business. I've helped companies:</p>
+                      <ul className="space-y-2 ml-6 list-disc">
+                        <li>Double revenue in less than a year</li>
+                        <li>Reduce manual workload with smart automation</li>
+                        <li>Turn referrals into consistent, trackable growth</li>
+                        <li>Build scalable systems that don't rely on guesswork</li>
+                      </ul>
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card className="border-light-border shadow-elegant">
+                  <CardHeader>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm</CardTitle>
+                    <CardDescription className="text-lg text-text-secondary space-y-4">
+                      <p>
+                        Most firm owners don't have the time, or desire, to become tech experts. I get it. You want more clients, more time, and more peace of mind. You don't need another software; you need a system that works for you. That's exactly what SmartFirm delivers.
+                      </p>
+                      <p>
+                        We set everything up: lead capture tools, review automation, voice and chat AI, appointment funnels, SEO boosters, and nurture campaigns so you don't have to touch the tech. Everything is designed to run in the background while you stay focused on serving your clients.
+                      </p>
+                      <p>
+                        SmartFirm is the system I wish every accounting firm had years ago. It's simple, effective, and built to help you grow without burnout.
+                      </p>
+                      <p className="font-semibold text-primary-blue pt-4">
+                        If you're ready to finally have your marketing handled and actually start seeing results, I'd love to show you how.
+                      </p>
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
               </div>
             </div>
           </div>
@@ -233,7 +274,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <Card key={index} className="text-center border-light-border shadow-elegant">
                   <CardHeader className="pb-4">
