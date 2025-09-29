@@ -35,7 +35,7 @@ const Services = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">AI-Powered Services for 
 Your Accounting Firm's Growth</h1>
@@ -55,7 +55,7 @@ Your Accounting Firm's Growth</h1>
         </section>
 
         {/* Introduction to Services */}
-        <section className="py-20 md:py-28">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
               Our Core Service Areas
@@ -122,7 +122,7 @@ Your Accounting Firm's Growth</h1>
         </section>
 
         {/* Featured Service Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-12 md:py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Card className="shadow-lg border-border bg-background">
@@ -203,7 +203,7 @@ Your Accounting Firm's Growth</h1>
         </section>
 
         {/* Testimonial Section */}
-        <section className="py-20 md:py-28">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-primary/5 to-teal/5 p-8 md:p-12 rounded-lg border border-border">
@@ -228,7 +228,7 @@ Your Accounting Firm's Growth</h1>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-teal text-primary-foreground">
+        <section className="py-12 md:py-16 bg-gradient-to-br from-primary to-teal text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Accounting Firm?
@@ -253,7 +253,7 @@ Your Accounting Firm's Growth</h1>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 md:py-28">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
