@@ -282,32 +282,43 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="text-center border-light-border shadow-elegant">
-                  <CardHeader className="pb-4">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                    />
-                    <CardTitle className="text-xl text-primary-blue mb-2">
-                      {member.name}
-                    </CardTitle>
-                    <p className="text-primary-teal font-medium mb-4">{member.title}</p>
-                    <CardDescription className="text-text-secondary leading-relaxed">
-                      {member.bio}
-                    </CardDescription>
-                  </CardHeader>
-                   <CardContent className="pt-0">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="h-4 w-4 mr-2" />
-                        LinkedIn Profile
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+              {teamMembers.map((member, index) => {
+                // Apply specific positioning for team members
+                let imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover";
+                
+                if (member.name === "Yvonne Galicia") {
+                  imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top";
+                } else if (member.name === "Grace Mendez") {
+                  imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center scale-110";
+                }
+                
+                return (
+                  <Card key={index} className="text-center border-light-border shadow-elegant">
+                    <CardHeader className="pb-4">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className={imageClasses}
+                      />
+                      <CardTitle className="text-xl text-primary-blue mb-2">
+                        {member.name}
+                      </CardTitle>
+                      <p className="text-primary-teal font-medium mb-4">{member.title}</p>
+                      <CardDescription className="text-text-secondary leading-relaxed">
+                        {member.bio}
+                      </CardDescription>
+                    </CardHeader>
+                     <CardContent className="pt-0">
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                          <Linkedin className="h-4 w-4 mr-2" />
+                          LinkedIn Profile
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
