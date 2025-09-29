@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import katieSteeleImage from "@/assets/katie-steele.png";
 import brianHellewellImage from "@/assets/brian-hellewell.png";
+import graceMendezImage from "@/assets/grace-mendez.png";
 
 const About = () => {
   const coreValues = [
@@ -57,10 +58,10 @@ const About = () => {
       image: brianHellewellImage
     },
     {
-      name: "Team Member",
-      title: "Position Title",
-      bio: "Team member bio and background will be added here.",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+      name: "Grace Mendez",
+      title: "Customer Service Manager",
+      bio: "Grace leads our customer service team, ensuring accounting firms receive exceptional support and guidance throughout their journey with SmartFirm.",
+      image: graceMendezImage
     },
     {
       name: "Team Member",
