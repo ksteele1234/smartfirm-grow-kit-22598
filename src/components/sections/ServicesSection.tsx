@@ -44,7 +44,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-16 bg-background relative overflow-hidden">
       <BackgroundPattern pattern="dots" />
       <div className="container relative mx-auto px-4 lg:px-6">
         <FloatingShapes variant="circles" />

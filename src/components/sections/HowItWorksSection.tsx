@@ -25,7 +25,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-background-light relative overflow-hidden">
+    <section id="how-it-works" className="py-16 bg-background-light relative overflow-hidden">
       <FloatingShapes variant="triangles" />
       <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}

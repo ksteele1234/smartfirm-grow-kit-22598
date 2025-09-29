@@ -43,8 +43,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-background-light relative overflow-hidden">
-      <BackgroundPattern pattern="diagonal" />
+    <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5 relative overflow-hidden">
       <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -60,7 +59,7 @@ const TestimonialsSection = () => {
         <GeometricDivider variant="dots" />
 
         {/* Testimonial Carousel - Offset Layout */}
-        <div className="max-w-5xl mx-auto lg:ml-24">
+        <div className="max-w-5xl mx-auto">
           <EnhancedCard 
             variant="elevated" 
             hoverEffect="glow" 
