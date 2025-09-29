@@ -16,16 +16,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary/10 to-accent/10 overflow-hidden">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-secondary/5 to-teal/10 overflow-hidden">
         <FloatingShapes variant="squares" />
         <div className="max-w-7xl mx-auto text-center relative">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             {data.heroTitle}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
             {data.heroSubtitle}
           </p>
-          <Button size="lg" className="group">
+          <Button size="lg" className="group bg-gradient-to-r from-primary to-teal hover:from-primary/90 hover:to-teal/90">
             Get Your Solution
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -80,14 +80,14 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   variant={variants[index % 3] as any}
                   hoverEffect={hoverEffects[index % 3] as any}
                 >
-                <CardHeader>
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="h-6 w-6 text-secondary" />
+                <CardHeader className="bg-gradient-to-br from-primary/5 to-teal/5">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-teal/20 rounded-lg flex items-center justify-center mb-4">
+                    <TrendingUp className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                  <CardTitle className="text-xl text-primary">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-base text-text-secondary">
                     {benefit.description}
                   </CardDescription>
                   </CardContent>
@@ -155,16 +155,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary text-secondary-foreground">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">{data.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-8">{data.ctaDescription}</p>
+          <h2 className="text-3xl font-bold mb-4 text-white">{data.ctaTitle}</h2>
+          <p className="text-xl opacity-90 mb-8 text-white/90">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="default" className="group">
+            <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90">
               Book a Strategy Call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               View Case Studies
             </Button>
           </div>

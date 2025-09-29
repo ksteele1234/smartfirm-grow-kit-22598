@@ -57,9 +57,9 @@ const SolutionsSection = () => {
 
         <AccentLine variant="gradient" className="max-w-md mx-auto mb-12" />
 
-        {/* Solutions Grid - Mixed Layout */}
+        {/* Solutions Grid - Full Width Distribution */}
         <div className="space-y-8 stagger-container">
-          {/* Top row - 2 cards */}
+          {/* First row - 2 cards */}
           <div className="grid md:grid-cols-2 gap-8">
             {solutions.slice(0, 2).map((solution, index) => {
               const IconComponent = solution.icon;
@@ -122,8 +122,8 @@ const SolutionsSection = () => {
             })}
           </div>
           
-          {/* Bottom row - 2 cards offset */}
-          <div className="grid md:grid-cols-2 gap-8 md:ml-16">
+          {/* Second row - 2 cards taking full width */}
+          <div className="grid md:grid-cols-2 gap-8">
             {solutions.slice(2).map((solution, index) => {
               const IconComponent = solution.icon;
               const variants = ["elevated", "outlined"];

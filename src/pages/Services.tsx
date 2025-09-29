@@ -93,13 +93,45 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Service Categories Grid */}
+          {/* Service Categories Grid - Full Width Distribution */}
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-              {serviceCategories.map((category, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-background">
+            {/* First row - 3 cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
+              {serviceCategories.slice(0, 3).map((category, index) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-primary/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
-                    <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
+                      {category.icon}
+                    </div>
+                    <CardTitle className="text-xl text-foreground mb-4">
+                      {category.title}
+                    </CardTitle>
+                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="pt-0 mt-auto px-8 pb-8">
+                    <Button 
+                      variant="cta-outline" 
+                      className="w-full"
+                      asChild
+                    >
+                      <a href={category.link}>
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            {/* Second row - 2 cards taking full width */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              {serviceCategories.slice(3).map((category, index) => (
+                <Card key={index + 3} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-teal/5">
+                  <CardHeader className="text-center pb-6 px-8 pt-8">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
                       {category.icon}
                     </div>
                     <CardTitle className="text-xl text-foreground mb-4">

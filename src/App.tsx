@@ -18,6 +18,11 @@ import LeadGeneration from "./pages/solutions/LeadGeneration";
 import ScaleFirm from "./pages/solutions/ScaleFirm";
 import ClientRetention from "./pages/solutions/ClientRetention";
 import RetentionStrategies from "./pages/solutions/RetentionStrategies";
+import StopLosingClients from "./pages/solutions/StopLosingClients";
+import GetMoreReferrals from "./pages/solutions/GetMoreReferrals";
+import WorkLessEarnMore from "./pages/solutions/WorkLessEarnMore";
+import GrowWithoutPains from "./pages/solutions/GrowWithoutPains";
+import ProtectPractice from "./pages/solutions/ProtectPractice";
 
 // Service Pages
 import AutomatedLeadFollowUp from "./pages/services/AutomatedLeadFollowUp";
@@ -72,9 +77,24 @@ const App = () => (
         
         {/* Solution Sub-pages */}
         <Route path="/solutions/i-need-more-leads" element={<LeadGeneration />} />
+        <Route path="/solutions/lead-generation" element={<LeadGeneration />} />
         <Route path="/solutions/i-want-to-scale-my-firm" element={<ScaleFirm />} />
+        <Route path="/solutions/scale-firm" element={<ScaleFirm />} />
         <Route path="/solutions/i'm-losing-clients-to-competitors" element={<ClientRetention />} />
+        <Route path="/solutions/client-retention" element={<ClientRetention />} />
         <Route path="/solutions/i-need-better-client-retention" element={<RetentionStrategies />} />
+        <Route path="/solutions/retention-strategies" element={<RetentionStrategies />} />
+        
+        {/* Main Solution Categories */}
+        <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
+        <Route path="/solutions/compete-with-tech-savvy-cpas" element={<StopLosingClients />} />
+        <Route path="/solutions/get-more-referrals-without-asking" element={<GetMoreReferrals />} />
+        <Route path="/solutions/increase-referrals" element={<GetMoreReferrals />} />
+        <Route path="/solutions/work-less-earn-more" element={<WorkLessEarnMore />} />
+        <Route path="/solutions/grow-without-growing-pains" element={<GrowWithoutPains />} />
+        <Route path="/solutions/sustainable-growth" element={<GrowWithoutPains />} />
+        <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
+        <Route path="/solutions/protect-your-practice" element={<ProtectPractice />} />
         
         {/* Service Sub-pages */}
         <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
