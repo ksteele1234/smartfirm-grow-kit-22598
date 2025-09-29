@@ -17,6 +17,7 @@ import {
   CheckCircle
 } from "lucide-react";
 import katieSteeleImage from "@/assets/katie-steele.png";
+import brianHellewellImage from "@/assets/brian-hellewell.png";
 
 const About = () => {
   const coreValues = [
@@ -50,10 +51,10 @@ const About = () => {
       image: katieSteeleImage
     },
     {
-      name: "Team Member",
-      title: "Position Title",
-      bio: "Team member bio and background will be added here.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+      name: "Brian Hellewell",
+      title: "Sales Advisor",
+      bio: "Brian brings extensive experience in sales strategy and client relationship management to help accounting firms grow their client base.",
+      image: brianHellewellImage
     },
     {
       name: "Team Member",
