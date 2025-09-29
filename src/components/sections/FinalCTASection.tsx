@@ -17,64 +17,37 @@ const FinalCTASection = () => {
           {/* Main Headline */}
           <div className="space-y-6 mb-12">
             <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight">
-              Ready to Grow
-              <span className="block text-accent-light">Your Firm?</span>
+              Why Firms Choose
+              <span className="block text-accent-light">SmartFirm</span>
             </h2>
-            
-            <p className="text-xl lg:text-2xl text-blue-grey leading-relaxed max-w-3xl mx-auto">
-              Book a free, no-obligation strategy call to see how SmartFirm can help you reach your goals.
-            </p>
           </div>
 
           {/* Value Props */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">Free 30-minute consultation</span>
+              <span className="text-white/90">Cloud-Native & Secure</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">Custom growth strategy</span>
+              <span className="text-white/90">100% Client Satisfaction Rate</span>
             </div>
             <div className="flex items-center justify-center space-x-3">
               <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">No high-pressure sales</span>
-            </div>
-          </div>
-
-          {/* Main CTA */}
-          <div className="space-y-6 mb-12">
-            <Button 
-              variant="hero-secondary" 
-              size="hero" 
-              className="group text-xl px-12 py-6 h-auto"
-              asChild
-            >
-              <a href="/get-started">
-                <Calendar className="mr-3 h-6 w-6" />
-                Book My Free Strategy Call
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            
-            <div className="flex items-center justify-center space-x-2 text-white/80">
-              <Clock className="h-4 w-4" />
-              <span className="text-sm">Usually within 24 hours</span>
+              <span className="text-white/90">Results in 30 Days or Less</span>
             </div>
           </div>
 
           {/* Alternative Contact */}
           <div className="border-t border-white/20 pt-8">
             <p className="text-white/90 mb-4">
-              Prefer to speak directly? Call us now:
+              Prefer to speak directly? Call us at <a 
+                href="tel:+15416583789" 
+                className="inline-flex items-center text-accent-light hover:text-white transition-colors font-semibold"
+              >
+                541-658-3789
+              </a>
             </p>
-            <a 
-              href="tel:+15416583789" 
-              className="inline-flex items-center text-accent-light hover:text-white transition-colors font-semibold text-lg"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              (541) 658-3789
-            </a>
           </div>
 
           {/* Trust Indicators */}

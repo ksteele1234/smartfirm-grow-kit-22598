@@ -7,19 +7,19 @@ const HowItWorksSection = () => {
       icon: Phone,
       number: "01",
       title: "Book a Call",
-      description: "Schedule a free 30-minute strategy session where we'll understand your goals, challenges, and current marketing efforts."
+      description: "Schedule a free 30-minute strategy session. We'll uncover your biggest opportunities for growth and highlight where firms like yours are losing leads."
     },
     {
       icon: FileText,
       number: "02", 
       title: "Get a Plan",
-      description: "We'll design a custom marketing strategy tailored to your firm's needs, complete with timelines and expected outcomes."
+      description: "Receive a custom growth strategy with timelines, expected outcomes, and ROI projections—all aligned with your accounting tech stack (QuickBooks, Xero, Karbon, Canopy)."
     },
     {
       icon: Rocket,
       number: "03",
-      title: "Launch & Grow",
-      description: "We'll implement the plan and manage everything for you, while you focus on serving clients and growing your practice."
+      title: "Launch & Grow", 
+      description: "We implement and manage everything for you. Most firms see new client inquiries within 30 days and measurable improvements in retention by 90 days."
     }
   ];
 
@@ -29,11 +29,11 @@ const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Your Path to
+            Your Path to 
             <span className="text-teal block">Effortless Growth</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Our proven 3-step process takes the complexity out of marketing, so you can focus on what you do best.
+            Our proven 3-step process takes the guesswork out of marketing so you can focus on client service while we handle the heavy lifting.
           </p>
         </div>
 
@@ -87,19 +87,19 @@ const HowItWorksSection = () => {
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to Get Started?
             </h3>
-            <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
               Join hundreds of accounting firms that have transformed their marketing with SmartFirm. Your growth journey starts with a simple conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="hero" className="group" asChild>
                 <a href="/get-started">
-                  Book Your Free Strategy Call
+                  Start My Growth Plan
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="hero" className="group" asChild>
                 <a href="/services">
-                  Learn More About Our Process
+                  Learn More About the Process
                 </a>
               </Button>
             </div>

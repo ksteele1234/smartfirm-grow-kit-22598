@@ -81,14 +81,21 @@ const ServicesSection = () => {
               Ready to Transform Your Marketing?
             </h3>
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-              Let's discuss how our marketing system can help you achieve your growth goals. Book a free strategy call today.
+              Let's map out a growth plan built for your firm. With SmartFirm's done-for-you marketing automation, you'll get predictable growth, stronger client retention, and systems that scale with your firm.
             </p>
-            <Button variant="hero" size="lg" className="group" asChild>
-              <a href="/services">
-                Explore All Services
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href="/get-started">
+                  Book Your Free Strategy Call
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="group" asChild>
+                <a href="/services">
+                  Explore All Services
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

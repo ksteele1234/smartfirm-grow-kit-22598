@@ -5,35 +5,35 @@ import { TrendingUp, Users, Target, Shield, ArrowRight } from "lucide-react";
 const SolutionsSection = () => {
   const solutions = [
     {
-      icon: TrendingUp,
+      icon: Target,
       title: "I need more leads",
-      description: "Stop waiting for clients to find you. Our proven lead generation for accounting firms brings qualified prospects directly to your practice.",
-      features: ["SEO for accounting firms", "PPC campaigns for CPAs", "Content marketing strategies", "Local listing management"],
-      color: "from-primary/10 to-primary/5",
+      description: "Stop waiting for referrals. Our lead generation for accounting firms delivers qualified prospects ready to work with you.",
+      features: ["SEO for accountants", "PPC campaigns for CPAs", "Content marketing", "Local listing optimization"],
+      gradient: "from-primary/10 to-teal/10",
       link: "/solutions/lead-generation"
     },
     {
-      icon: Users,
-      title: "I want to scale my firm",
-      description: "Break through growth plateaus with systems that work without your constant involvement.",
-      features: ["Marketing automation", "Client onboarding systems", "Referral programs", "Strategic planning"],
-      color: "from-teal/10 to-teal/5",
+      icon: TrendingUp,
+      title: "I want to scale my firm", 
+      description: "Break growth plateaus with systems that run without your constant involvement.",
+      features: ["Automation systems", "Client onboarding workflows", "Referral programs", "Strategic planning"],
+      gradient: "from-teal/10 to-secondary/10",
       link: "/solutions/scale-firm"
     },
     {
-      icon: Target,
+      icon: Shield,
       title: "I'm losing clients to competitors",
       description: "Strengthen client relationships and position your firm as the obvious choice in your market.",
-      features: ["Competitive analysis", "Value proposition development", "Client retention strategies", "Brand positioning"],
-      color: "from-blue-grey/10 to-blue-grey/5",
+      features: ["Competitive analysis", "Client retention campaigns", "Brand positioning", "Differentiation strategy"],
+      gradient: "from-secondary/10 to-primary/10", 
       link: "/solutions/client-retention"
     },
     {
-      icon: Shield,
+      icon: Users,
       title: "I need better client retention",
-      description: "Keep your best clients happy and engaged with automated touchpoints and value-added services.",
-      features: ["Client communication systems", "Review generation", "Upselling automation", "Satisfaction tracking"],
-      color: "from-accent-light/30 to-accent-light/10",
+      description: "Keep your best clients engaged with proactive touchpoints and automated follow-ups.",
+      features: ["Communication systems", "Review generation", "Upselling automation", "Satisfaction tracking"],
+      gradient: "from-primary/10 to-accent/20",
       link: "/solutions/retention-strategies"
     }
   ];
@@ -44,7 +44,7 @@ const SolutionsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Proven CPA Marketing Solutions for
+            Proven Solutions for
             <span className="text-teal block">Common Growth Challenges</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -58,7 +58,7 @@ const SolutionsSection = () => {
             const IconComponent = solution.icon;
             return (
               <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background overflow-hidden scale-feedback color-transition">
-                <CardHeader className={`bg-gradient-to-br ${solution.color} pb-6`}>
+                <CardHeader className={`bg-gradient-to-br ${solution.gradient} pb-6`}>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0">
                       <IconComponent className="h-6 w-6 text-primary" />
@@ -111,18 +111,22 @@ const SolutionsSection = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-primary/5 to-teal/5 rounded-2xl p-8 lg:p-12 border border-border/50">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
-              Not Sure Which Solution Is Right for You?
+              Ready to See Results?
             </h3>
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-              Book a free strategy call and we'll help you identify the biggest opportunities for growth in your firm.
+              Let's create a custom growth plan that addresses your specific challenges and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="group">
-                Get a Custom Growth Plan
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href="/get-started">
+                  Get a Custom Growth Plan
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                Browse All Solutions
+              <Button variant="outline" size="lg" className="group" asChild>
+                <a href="/solutions">
+                  Browse All Solutions
+                </a>
               </Button>
             </div>
           </div>
