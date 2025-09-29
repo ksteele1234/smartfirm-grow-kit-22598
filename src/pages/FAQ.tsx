@@ -276,7 +276,7 @@ const FAQ = () => {
                   </CardHeader>
                   <CardContent>
                     <Button variant="outline" className="w-full" asChild>
-                      <a href="mailto:hello@smartfirm.io">Send Email</a>
+                      <a href="mailto:contact@smartfirm.io">Send Email</a>
                     </Button>
                   </CardContent>
                 </Card>

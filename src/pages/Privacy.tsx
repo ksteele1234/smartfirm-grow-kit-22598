@@ -23,59 +23,224 @@ const Privacy = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto prose prose-lg">
             <div className="text-text-secondary space-y-8">
+              <div className="text-sm text-text-light mb-8">
+                <p>Our Privacy Policy was last updated on June 28, 2025</p>
+              </div>
+
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Information We Collect</h2>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">SmartFirm.io Privacy Policy</h2>
                 <p>
-                  We collect information you provide directly to us, such as when you create an account, 
-                  fill out a form, or contact us. This may include your name, email address, phone number, 
-                  company information, and any other information you choose to provide.
+                  This Privacy Policy has been updated to comply with the Oregon Consumer Privacy Act (OCPA), 
+                  effective July 1, 2024. It outlines how SmartFirm ("we," "us," or "our") collects, uses, 
+                  maintains, and discloses information from users ("Users") of our website ("Site") and all 
+                  products and services offered by us. By using SmartFirm, you agree to the collection and 
+                  use of information in accordance with this Privacy Policy.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">How We Use Your Information</h2>
-                <p>We use the information we collect to:</p>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Information Collection</h2>
+                
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Personal Information Collected</h3>
+                <p>We collect personal information when you:</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Provide, maintain, and improve our services</li>
-                  <li>Process transactions and send related information</li>
-                  <li>Send you technical notices, updates, security alerts, and support messages</li>
-                  <li>Respond to your comments, questions, and customer service requests</li>
-                  <li>Communicate with you about products, services, and promotional offers</li>
+                  <li>Register an account</li>
+                  <li>Purchase a subscription or service</li>
+                  <li>Communicate with us via email, chat, or customer support</li>
+                  <li>Use any of our products, tools, or services</li>
+                </ul>
+                
+                <p className="mt-4">This information may include:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Name, email address, phone number</li>
+                  <li>Billing and payment details</li>
+                  <li>Business and demographic details</li>
+                  <li>Support inquiries and user activity on our platform</li>
+                </ul>
+
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Non-Personal Information</h3>
+                <p>We may also collect non-personal data such as:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Browser type and version</li>
+                  <li>IP address and device identifiers</li>
+                  <li>Website usage and analytics data</li>
+                  <li>Cookies and tracking technologies</li>
                 </ul>
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Information Sharing</h2>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Use of Information</h2>
+                <p>We use your information to:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Process and fulfill orders or subscriptions</li>
+                  <li>Improve customer support and user experience</li>
+                  <li>Personalize content and recommendations</li>
+                  <li>Send order updates, product announcements, and marketing communications (with opt-out options)</li>
+                  <li>Improve security and fraud prevention</li>
+                  <li>Comply with legal and regulatory requirements</li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Protection of Information</h2>
                 <p>
-                  We do not sell, trade, or otherwise transfer your personal information to third parties 
-                  without your consent, except as described in this policy. We may share your information 
-                  with trusted service providers who assist us in operating our website and conducting our business.
+                  We take reasonable security measures to protect your personal data from unauthorized access, 
+                  alteration, disclosure, or destruction. These include:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Secure encryption protocols for data storage and transmission</li>
+                  <li>Limited access to personal information within our organization</li>
+                  <li>Regular security audits and compliance reviews</li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Sharing of Information</h2>
+                
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">No Selling of Data</h3>
+                <p>
+                  We do not sell, trade, or rent your personal information to third parties for marketing purposes.
+                </p>
+
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Trusted Third Parties</h3>
+                <p>
+                  We may share data with service providers who assist in operating our platform (e.g., payment 
+                  processors, hosting providers) under strict confidentiality agreements. These third parties are 
+                  prohibited from using your data for any purpose other than providing services to SmartFirm.
+                </p>
+
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Third-Party Integrations</h3>
+                <p>
+                  Our platform integrates with services such as Stripe, Meta (Facebook/Instagram), Google, and 
+                  GoHighLevel. Use of features powered by these tools is also governed by their individual terms 
+                  and privacy policies. We encourage you to review their policies when using integrated services.
+                </p>
+
+                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Legal Compliance & Protection</h3>
+                <p>
+                  We may disclose information when required by law or to enforce our policies, protect SmartFirm's 
+                  rights, or prevent fraud or security threats.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Security</h2>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Cookies & Tracking Technologies</h2>
                 <p>
-                  We implement appropriate security measures to protect your personal information against 
-                  unauthorized access, alteration, disclosure, or destruction. However, no method of 
-                  transmission over the internet is 100% secure.
+                  We use cookies and similar tracking technologies to enhance your experience, analyze traffic, 
+                  and deliver personalized content. You may disable cookies in your browser settings; however, 
+                  this may affect platform functionality.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Transfers & Storage Locations</h2>
+                <p>
+                  SmartFirm may store and process your information on servers located in the United States or 
+                  other jurisdictions. By using our services, you consent to the transfer of your data to these locations.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Automated Decision-Making & Profiling</h2>
+                <p>
+                  We may use automated systems and AI to analyze behavior, score leads, send personalized content, 
+                  or support customer service operations. You may request human intervention in decisions made 
+                  solely by automated means if those decisions have legal or significant personal effects.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Retention Policy</h2>
+                <p>
+                  We retain personal information for as long as necessary to provide our services, comply with 
+                  legal obligations, resolve disputes, and enforce our agreements. After this period, your 
+                  information is either securely deleted or anonymized.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">User Account Deletion</h2>
+                <p>
+                  Users may request full account deletion by contacting us at contact@smartfirm.io. Once verified, 
+                  we will delete all associated data unless retention is required for legal or operational reasons.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Breach Notification</h2>
+                <p>
+                  In the unlikely event of a data breach affecting your personal information, we will notify you 
+                  in accordance with applicable laws and take immediate action to mitigate any potential impact.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Your Rights Under Oregon Law</h2>
+                <p>The OCPA grants Oregon residents the following rights regarding their personal data:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><strong>Right to Access:</strong> Request details of your personal data and a list of third parties it has been shared with</li>
+                  <li><strong>Right to Correction:</strong> Request that we correct any inaccurate or outdated personal data</li>
+                  <li><strong>Right to Deletion:</strong> Request deletion of your personal data, subject to certain legal exceptions</li>
+                  <li><strong>Right to Portability:</strong> Obtain a copy of your personal data in a usable format</li>
+                  <li><strong>Right to Opt-Out:</strong> Opt out of the sale of data, targeted advertising, or profiling that has legal or significant effects</li>
+                </ul>
+                <p className="mt-4">
+                  To exercise your rights or designate an authorized agent, contact us at contact@smartfirm.io. 
+                  We will respond within 45 days of receiving a verified request (with a possible 45-day extension if needed).
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Children's Data Protection</h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>For children under 13: Parental or guardian consent is required for collection or processing of sensitive data</li>
+                  <li>For ages 13–15: Opt-in consent is required for targeted advertising or profiling</li>
+                </ul>
+                <p className="mt-4">
+                  We do not knowingly collect or store data from users under the age of 13 without parental consent.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Third-Party Websites</h2>
+                <p>
+                  SmartFirm may contain links to third-party sites. We are not responsible for the privacy 
+                  practices or content of those sites. Please review their policies before sharing your information.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Compliance with Laws</h2>
+                <p>We may disclose personal information when required to:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Comply with applicable laws, regulations, or government requests</li>
+                  <li>Enforce our Terms of Service or internal policies</li>
+                  <li>Prevent fraud or mitigate security threats</li>
+                </ul>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Changes to This Privacy Policy</h2>
+                <p>
+                  We reserve the right to update this Privacy Policy at any time. Changes will be posted on 
+                  this page with an updated effective date. Your continued use of SmartFirm services after 
+                  changes are posted signifies your acceptance of the revised policy.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-heading font-bold text-primary mb-4">Contact Us</h2>
                 <p>
-                  If you have any questions about this Privacy Policy, please contact us at:
+                  If you have questions about this Privacy Policy or your rights, or if you'd like to exercise 
+                  any data protection requests, contact us at:
                 </p>
-                <p>
-                  Email: hello@smartfirm.io<br />
-                  Phone: (541) 658-3789<br />
-                  Address: Eugene, OR
+                <p className="mt-4">
+                  📧 Email: contact@smartfirm.io
                 </p>
-              </div>
-
-              <div className="text-sm text-text-light">
-                <p>Last updated: {new Date().toLocaleDateString()}</p>
+                <p className="mt-2">
+                  You may also direct privacy-specific concerns to our designated Data Protection Officer at 
+                  the same address.
+                </p>
               </div>
             </div>
           </div>

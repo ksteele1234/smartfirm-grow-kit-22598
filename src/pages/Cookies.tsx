@@ -81,7 +81,7 @@ const Cookies = () => {
                   If you have any questions about our use of cookies, please contact us at:
                 </p>
                 <p>
-                  Email: hello@smartfirm.io<br />
+                  Email: contact@smartfirm.io<br />
                   Phone: (541) 658-3789<br />
                   Address: Eugene, OR
                 </p>
