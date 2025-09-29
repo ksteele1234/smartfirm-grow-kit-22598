@@ -251,7 +251,7 @@ const About = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
+                    <Button variant="outline" size="sm">
                       <Linkedin className="h-4 w-4 mr-2" />
                       LinkedIn Profile
                     </Button>
@@ -337,8 +337,7 @@ const About = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary-blue"
+                variant="white-outline-on-dark"
                 asChild
               >
                 <a href="/get-started">

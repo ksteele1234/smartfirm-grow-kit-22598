@@ -326,8 +326,7 @@ const Industries = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary-blue"
+                variant="white-outline-on-dark"
                 asChild
               >
                 <a href="/services">

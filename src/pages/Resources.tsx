@@ -97,7 +97,7 @@ const Resources = () => {
                 Explore All Resources
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button size="lg" variant="outline">
                 Subscribe to Our Newsletter
                 <Mail className="ml-2 h-4 w-4" />
               </Button>
@@ -137,10 +137,10 @@ const Resources = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
-                    <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 border-primary text-primary"
-                      asChild
+                      <Button 
+                        variant="outline" 
+                        className="w-full"
+                        asChild
                     >
                       <a href={category.link}>
                         {category.title === "Guides & Whitepapers" ? "View All Guides" :
@@ -258,7 +258,7 @@ const Resources = () => {
             </div>
 
             <div className="text-center">
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+              <Button variant="outline" asChild>
                 <a href="/resources/blog">
                   View All Blog Posts
                   <ArrowRight className="ml-2 h-4 w-4" />

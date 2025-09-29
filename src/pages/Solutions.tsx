@@ -90,7 +90,7 @@ const Solutions = () => {
                   <CardContent className="pt-0 px-8 pb-8">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300 border-primary text-primary hover:border-primary"
+                      className="w-full"
                       asChild
                     >
                       <a href={solution.link}>
@@ -121,7 +121,7 @@ const Solutions = () => {
                   <CardContent className="pt-0 px-8 pb-8">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300 border-primary text-primary hover:border-primary"
+                      className="w-full"
                       asChild
                     >
                       <a href={solution.link}>
@@ -236,8 +236,7 @@ const Solutions = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary font-semibold"
+                variant="white-outline-on-dark"
                 asChild
               >
                 <a href="/services">

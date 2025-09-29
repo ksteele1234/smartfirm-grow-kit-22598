@@ -175,11 +175,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <h2 className="text-3xl font-bold mb-6 text-white">{data.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-10 text-white/90 leading-relaxed">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold">
+            <Button size="lg" variant="white-on-dark" className="group font-semibold">
               Book a Strategy Call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary font-semibold">
+            <Button size="lg" variant="white-outline-on-dark">
               View Case Studies
             </Button>
           </div>

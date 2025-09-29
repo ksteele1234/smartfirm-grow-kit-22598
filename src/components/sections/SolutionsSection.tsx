@@ -107,7 +107,7 @@ const SolutionsSection = () => {
                       
                       <Button 
                         variant="ghost" 
-                        className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                        className="w-full justify-between transition-all duration-300"
                         asChild
                       >
                         <a href={solution.link}>
@@ -170,7 +170,7 @@ const SolutionsSection = () => {
                       
                       <Button 
                         variant="ghost" 
-                        className="w-full justify-between group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                        className="w-full justify-between transition-all duration-300"
                         asChild
                       >
                         <a href={solution.link}>
