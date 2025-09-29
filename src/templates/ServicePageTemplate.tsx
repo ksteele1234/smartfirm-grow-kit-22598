@@ -55,9 +55,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Key Benefits
             </h2>
@@ -68,44 +68,26 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           
           <GeometricDivider variant="lines" />
           
-          {/* Consistent Benefits Grid */}
-          <div className="grid gap-8 mb-8">
-            {/* First row - 2 cards */}
-            <div className="grid md:grid-cols-2 gap-8">
-              {data.benefits.slice(0, 2).map((benefit, index) => (
-                <StandardCard
-                  key={index}
-                  icon={CheckCircle}
-                  title={benefit.title}
-                  description={benefit.description}
-                  variant={index === 1 ? "featured" : "default"}
-                />
-              ))}
-            </div>
-            
-            {/* Remaining cards */}
-            {data.benefits.length > 2 && (
-              <div className="grid md:grid-cols-2 gap-8">
-                {data.benefits.slice(2).map((benefit, index) => (
-                  <StandardCard
-                    key={index + 2}
-                    icon={CheckCircle}
-                    title={benefit.title}
-                    description={benefit.description}
-                    variant={index === 1 ? "popular" : "default"}
-                  />
-                ))}
-              </div>
-            )}
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            {data.benefits.map((benefit, index) => (
+              <StandardCard
+                key={index}
+                icon={CheckCircle}
+                title={benefit.title}
+                description={benefit.description}
+                variant={index === 1 ? "featured" : index === 3 ? "popular" : "default"}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
         <BackgroundPattern pattern="grid" />
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
               Features & Capabilities
             </h2>
@@ -113,7 +95,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           
           <GeometricDivider variant="wave" />
           
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 mt-8">
             {data.features.map((feature, index) => (
               <StandardCard
                 key={index}
@@ -140,7 +122,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-light-teal">{data.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-8 text-white/90">{data.ctaDescription}</p>
