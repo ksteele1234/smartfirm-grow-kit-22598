@@ -66,7 +66,7 @@ const SEOForAccountants = () => {
     ],
     ctaTitle: "Ready to Dominate Local Search Results?",
     ctaDescription: "Let's optimize your website to attract more qualified prospects from Google search.",
-    ctaButtonText: "Get SEO Audit",
+    ctaButtonText: "Talk to Us",
     ctaButtonLink: "/get-started"
   };
 

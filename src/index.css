@@ -138,7 +138,8 @@ All colors MUST be HSL converted from the official brand colors.
   .dark-bg h2,
   [class*="bg-gradient-to-"] h2,
   [class*="from-primary"] h2,
-  [class*="to-teal"] h2 {
+  [class*="to-teal"] h2,
+  [class*="bg-primary"] h2 {
     @apply text-light-teal !important;
   }
   

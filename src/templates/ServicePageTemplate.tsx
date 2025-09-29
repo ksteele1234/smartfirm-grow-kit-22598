@@ -55,21 +55,21 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">
               Key Benefits
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
               Discover how this service transforms your accounting firm
             </p>
           </div>
           
           <GeometricDivider variant="lines" />
           
-          {/* Asymmetrical Benefits Grid */}
-          <div className="space-y-8">
+          {/* Consistent Benefits Grid */}
+          <div className="grid gap-8 mb-8">
             {/* First row - 2 cards */}
             <div className="grid md:grid-cols-2 gap-8">
               {data.benefits.slice(0, 2).map((benefit, index) => (
@@ -83,9 +83,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               ))}
             </div>
             
-            {/* Remaining cards offset */}
+            {/* Remaining cards */}
             {data.benefits.length > 2 && (
-              <div className="grid md:grid-cols-3 gap-8 md:ml-12">
+              <div className="grid md:grid-cols-2 gap-8">
                 {data.benefits.slice(2).map((benefit, index) => (
                   <StandardCard
                     key={index + 2}
@@ -102,11 +102,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30 relative overflow-hidden">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
         <BackgroundPattern pattern="grid" />
         <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">
               Features & Capabilities
             </h2>
           </div>
@@ -140,13 +140,13 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-primary text-primary-foreground">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">{data.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-8">{data.ctaDescription}</p>
+          <h2 className="text-3xl font-bold mb-6 text-light-teal">{data.ctaTitle}</h2>
+          <p className="text-xl opacity-90 mb-8 text-white/90">{data.ctaDescription}</p>
           <Button 
             size="lg" 
-            variant="secondary"
+            variant="white-on-dark"
             className="group"
             asChild
           >
