@@ -34,8 +34,8 @@ radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent
 repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
             backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
             backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
-            animation: 'aurora 80s linear infinite',
-            opacity: 0.4,
+            animation: 'aurora 120s linear infinite',
+            opacity: 0.2,
           }}
         />
       </div>

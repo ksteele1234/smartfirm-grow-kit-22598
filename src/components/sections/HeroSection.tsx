@@ -3,9 +3,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const rotatingWords = ["Accounting Firms", "Bookkeepers", "Tax Preparers", "CPAs", "Accountants"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <AuroraBackground className="h-[100vh]">
       <motion.div
@@ -26,15 +37,27 @@ const HeroSection = () => {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight">
-                  Marketing for Accounting Firms That
+                  Predictable Growth for{" "}
                   <span className="text-teal block">
-                    Actually Drives Growth
+                    <AnimatePresence mode="wait">
+                      <motion.span
+                        key={currentIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.5 }}
+                        className="inline-block"
+                      >
+                        {rotatingWords[currentIndex]}
+                      </motion.span>
+                    </AnimatePresence>
                   </span>
+                  <span className="block">Without the Marketing Headaches</span>
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed font-body">
-                  Stop wasting time on marketing strategies that don't work. Our proven accounting firm marketing automation helps CPAs attract more qualified clients and scale their practice efficiently.
+                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">
+                  SmartFirm gives accountants a done-for-you growth system—so you can consistently attract and retain clients while focusing on client service. No chasing leads, no juggling tools, no wasted time.
                 </p>
               </div>
 
@@ -67,13 +90,13 @@ const HeroSection = () => {
                 transition={{ delay: 0.9, duration: 0.6, ease: "easeInOut" }}
               >
                 <Button variant="hero" size="hero" className="group">
-                  Get Your Free Growth Plan
+                  Book My Free Growth Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
                 <Button variant="outline" size="lg" className="group">
                   <Play className="mr-2 h-5 w-5" />
-                  See Our Services
+                  See How It Works
                 </Button>
               </motion.div>
 
