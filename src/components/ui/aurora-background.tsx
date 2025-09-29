@@ -31,7 +31,7 @@ export const AuroraBackground = ({
               'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%),\
 radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%),\
 radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%),\
-repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 10%, hsl(var(--secondary-blue) / 0.92) 12%, hsl(var(--secondary-blue) / 0.92) 22%, hsl(var(--primary-teal) / 0.9) 24%, hsl(var(--primary-teal) / 0.9) 34%, hsl(var(--accent-light) / 0.88) 36%, hsl(var(--accent-light) / 0.88) 46%)',
+repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
             backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
             backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
             animation: 'aurora 40s linear infinite',
