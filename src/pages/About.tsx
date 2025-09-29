@@ -55,8 +55,8 @@ const About = () => {
     },
     {
       name: "Brian Hellewell",
-      title: "Sales Advisor",
-      bio: "Brian brings extensive experience in sales strategy and client relationship management to help accounting firms grow their client base.",
+      title: "Technology Transformation Leader",
+      bio: "CPA and former SpaceX product manager, Brian helps accounting firms modernize with secure, scalable systems—driving efficiency, compliance, and growth through 20+ years of expertise in IT strategy, financial systems, and business optimization.",
       image: brianHellewellImage,
       linkedin: "https://www.linkedin.com/in/brian-hellewell/"
     },
