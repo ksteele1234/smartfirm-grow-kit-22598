@@ -19,6 +19,7 @@ import {
 import katieSteeleImage from "@/assets/katie-steele.png";
 import brianHellewellImage from "@/assets/brian-hellewell.png";
 import graceMendezImage from "@/assets/grace-mendez.png";
+import yvonneGaliciaImage from "@/assets/yvonne-galicia.png";
 
 const About = () => {
   const coreValues = [
@@ -64,10 +65,10 @@ const About = () => {
       image: graceMendezImage
     },
     {
-      name: "Team Member",
-      title: "Position Title",
-      bio: "Team member bio and background will be added here.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+      name: "Yvonne Galicia",
+      title: "Social Media Ads & Content Manager",
+      bio: "Yvonne creates compelling content and manages strategic ad campaigns that help accounting firms build their brand and reach their ideal clients.",
+      image: yvonneGaliciaImage
     }
   ];
 
