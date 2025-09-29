@@ -131,7 +131,7 @@ All colors MUST be HSL converted from the official brand colors.
   }
   
   h2 {
-    @apply text-3xl lg:text-4xl text-primary;
+    @apply text-3xl lg:text-4xl text-teal;
   }
   
   h3 {

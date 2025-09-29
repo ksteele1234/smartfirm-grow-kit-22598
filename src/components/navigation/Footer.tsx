@@ -92,11 +92,6 @@ const Footer = () => {
                 <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="https://www.tiktok.com/@SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center transition-colors">
-                  <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.242-1.89-1.242-3.338h-2.877v13.938c0 2.27-1.847 4.118-4.118 4.118s-4.118-1.847-4.118-4.118 1.847-4.118 4.118-4.118c.228 0 .452.019.67.056V7.359c-.218-.026-.437-.043-.67-.043C4.558 7.316 0 11.875 0 17.382 0 22.89 4.558 27.447 10.066 27.447c5.508 0 10.066-4.558 10.066-10.066V9.197a8.717 8.717 0 0 0 4.868 1.47V7.79c-1.617 0-3.086-.69-4.126-1.794-.849-.901-1.349-2.096-1.349-3.434h-2.204z"/>
-                  </svg>
-                </a>
               </div>
             </div>
 
