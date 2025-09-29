@@ -137,62 +137,70 @@ const Solutions = () => {
         </section>
 
         {/* Featured Solution */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <Card className="shadow-elegant border-light-border">
-                <CardHeader className="text-center pb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-teal/10 text-primary-teal text-sm font-medium mb-4">
-                    <Star className="h-4 w-4 mr-1" />
+        <section className="py-24 bg-gradient-to-br from-teal/5 to-primary/5 relative overflow-hidden">
+          <BackgroundPattern pattern="dots" className="opacity-20" />
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <Card className="shadow-lg border-border/50 bg-gradient-to-br from-background to-teal/5 overflow-hidden">
+                <CardHeader className="text-center pb-8 px-6 md:px-10 pt-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal/20 to-primary/20 text-primary text-sm font-medium mb-6">
+                    <Star className="h-4 w-4 mr-2" />
                     Featured Solution
                   </div>
-                  <CardTitle className="text-3xl md:text-4xl text-primary-blue mb-4">
-                    Grow Without the Growing Pains
+                  <CardTitle className="text-3xl md:text-4xl text-primary mb-6 leading-tight">
+                    Get More Referrals Without Asking
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary max-w-2xl mx-auto">
-                    Scale your practice systematically with proven frameworks that maintain quality while reducing your personal workload. 
-                    Handle 2x more clients without doubling your stress.
+                  <CardDescription className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Turn satisfied clients into active advocates with automated systems that generate referrals naturally. 
+                    Our clients typically see 300% more referrals within 6 months without awkward conversations.
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-4">
-                      <h4 className="font-semibold text-primary-teal">Key Benefits:</h4>
-                      <ul className="space-y-2 text-text-secondary">
+                <CardContent className="space-y-8 px-6 md:px-10 pb-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <h4 className="font-semibold text-primary flex items-center text-lg">
+                        <Users className="h-5 w-5 mr-2" />
+                        Key Benefits:
+                      </h4>
+                      <ul className="space-y-3 text-text-secondary">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
-                          Handle more clients without more stress
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          Turn happy clients into advocates automatically
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
-                          Scale without hiring full-time staff
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          Get found by people looking for CPAs
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
-                          Maintain quality while growing
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          Build trust before you even meet prospects
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
-                          Plan for growth without guesswork
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          Stay top-of-mind year-round with automation
                         </li>
                       </ul>
                     </div>
                     
-                    <div className="bg-accent-light/30 p-6 rounded-lg">
-                      <h4 className="font-semibold text-primary-blue mb-3">Client Success Story:</h4>
-                      <blockquote className="text-text-secondary italic">
-                        "SmartFirm's growth framework helped us double our client base in 18 months while actually working fewer hours. 
-                        Their systems approach meant we could scale without sacrificing the personal service our clients expect."
+                    <div className="bg-gradient-to-br from-teal/10 to-primary/10 p-6 md:p-8 rounded-lg border border-border/30">
+                      <h4 className="font-semibold text-primary mb-6 flex items-center text-lg">
+                        <TrendingUp className="h-5 w-5 mr-2" />
+                        Client Success Story:
+                      </h4>
+                      <blockquote className="text-text-secondary italic mb-4 leading-relaxed">
+                        "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a 
+                        systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love 
+                        sharing our services because the process makes it easy for them."
                       </blockquote>
-                      <cite className="text-sm text-text-light mt-3 block">
-                        — Sarah Johnson, Johnson & Associates CPA
+                      <cite className="text-sm text-text-light block">
+                        — Jennifer Chen, Chen & Associates CPA
                       </cite>
                     </div>
                   </div>
                   
-                  <div className="text-center pt-4">
-                    <Button size="lg" className="bg-primary-blue hover:bg-primary-blue/90" asChild>
-                      <a href="/solutions/sustainable-growth">
+                  <div className="text-center pt-6">
+                    <Button size="lg" variant="hero" className="bg-gradient-to-r from-teal to-primary hover:from-teal/90 hover:to-primary/90 text-white" asChild>
+                      <a href="/solutions/get-more-referrals-without-asking">
                         Learn About This Solution
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
