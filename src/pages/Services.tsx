@@ -2,69 +2,43 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { 
-  ArrowRight, 
-  Zap, 
-  Settings, 
-  TrendingUp, 
-  Users, 
-  Package, 
-  Mail, 
-  Star,
-  Target,
-  BarChart3
-} from "lucide-react";
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
 const Services = () => {
-  const serviceCategories = [
-    {
-      icon: <Zap className="h-8 w-8 text-primary" />,
-      title: "AI-Powered Marketing Automation",
-      description: "Intelligent Lead Generation with predictive scoring, AI-driven Website & SEO optimization, Automated Review & Reputation Management with sentiment analysis, Smart Social Media campaigns with behavioral targeting.",
-      link: "/services/marketing-automation"
-    },
-    {
-      icon: <Settings className="h-8 w-8 text-teal" />,
-      title: "AI-Ready Technology Solutions", 
-      description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
-      link: "/services/technology-solutions"
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "AI-Driven Business Intelligence",
-      description: "Predictive Process Improvement and AI-powered Executive Dashboards that provide actionable insights to optimize your firm's performance and forecast growth opportunities.",
-      link: "/services/business-optimization"
-    },
-    {
-      icon: <Users className="h-8 w-8 text-teal" />,
-      title: "Strategic AI Consulting",
-      description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
-      link: "/services/executive-services"
-    },
-    {
-      icon: <Package className="h-8 w-8 text-primary" />,
-      title: "AI-Enhanced Service Packages",
-      description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
-      link: "/services/packages"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const serviceCategories = [{
+    icon: <Zap className="h-8 w-8 text-primary" />,
+    title: "AI-Powered Marketing Automation",
+    description: "Intelligent Lead Generation with predictive scoring, AI-driven Website & SEO optimization, Automated Review & Reputation Management with sentiment analysis, Smart Social Media campaigns with behavioral targeting.",
+    link: "/services/marketing-automation"
+  }, {
+    icon: <Settings className="h-8 w-8 text-teal" />,
+    title: "AI-Ready Technology Solutions",
+    description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
+    link: "/services/technology-solutions"
+  }, {
+    icon: <TrendingUp className="h-8 w-8 text-primary" />,
+    title: "AI-Driven Business Intelligence",
+    description: "Predictive Process Improvement and AI-powered Executive Dashboards that provide actionable insights to optimize your firm's performance and forecast growth opportunities.",
+    link: "/services/business-optimization"
+  }, {
+    icon: <Users className="h-8 w-8 text-teal" />,
+    title: "Strategic AI Consulting",
+    description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
+    link: "/services/executive-services"
+  }, {
+    icon: <Package className="h-8 w-8 text-primary" />,
+    title: "AI-Enhanced Service Packages",
+    description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
+    link: "/services/packages"
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              AI-Powered Solutions for Your Accounting Firm's Growth
-            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">AI-Powered Services for 
+Your Accounting Firm's Growth</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
               From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
             </p>
@@ -97,8 +71,7 @@ const Services = () => {
           <div className="container mx-auto px-4">
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
-              {serviceCategories.slice(0, 3).map((category, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-primary/5">
+              {serviceCategories.slice(0, 3).map((category, index) => <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-primary/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
                       {category.icon}
@@ -111,25 +84,19 @@ const Services = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
-                    <Button 
-                      variant="outline"
-                      className="w-full"
-                      asChild
-                    >
+                    <Button variant="outline" className="w-full" asChild>
                       <a href={category.link}>
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
             
             {/* Second row - 2 cards taking full width */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {serviceCategories.slice(3).map((category, index) => (
-                <Card key={index + 3} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-teal/5">
+              {serviceCategories.slice(3).map((category, index) => <Card key={index + 3} className="group hover:shadow-lg transition-all duration-300 border-border h-full bg-gradient-to-br from-background to-teal/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
                       {category.icon}
@@ -142,19 +109,14 @@ const Services = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
-                    <Button 
-                      variant="outline" 
-                      className="w-full"
-                      asChild
-                    >
+                    <Button variant="outline" className="w-full" asChild>
                       <a href={category.link}>
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -247,9 +209,7 @@ const Services = () => {
               <div className="bg-gradient-to-r from-primary/5 to-teal/5 p-8 md:p-12 rounded-lg border border-border">
                 <div className="mb-6">
                   <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
                   </div>
                   <blockquote className="text-lg md:text-xl text-muted-foreground italic mb-6">
                     "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours, 
@@ -277,21 +237,13 @@ const Services = () => {
               Discover how our tailored services can drive your growth and efficiency. Let's discuss your specific needs and create a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                variant="white-on-dark"
-                size="lg"
-                asChild
-              >
+              <Button variant="white-on-dark" size="lg" asChild>
                 <a href="/get-started">
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button 
-                variant="white-outline-on-dark"
-                size="lg"
-                asChild
-              >
+              <Button variant="white-outline-on-dark" size="lg" asChild>
                 <a href="/solutions">
                   Explore Our Solutions
                 </a>
@@ -373,8 +325,6 @@ const Services = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
