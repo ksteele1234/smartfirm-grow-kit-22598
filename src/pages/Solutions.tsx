@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
+import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 
 const Solutions = () => {
   const solutionCategories = [
@@ -49,12 +50,14 @@ const Solutions = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-background to-teal/10 relative overflow-hidden">
+          <BackgroundPattern pattern="dots" className="opacity-20" />
+          <FloatingShapes variant="circles" className="opacity-30" />
+          <div className="container mx-auto px-4 text-center relative">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Solving Your Biggest Accounting Firm Challenges
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
               We understand the unique pressures of running an accounting firm. From competition to client expectations, 
               technology demands to growth challenges - SmartFirm provides proven solutions that work specifically for practices like yours.
             </p>
@@ -72,22 +75,22 @@ const Solutions = () => {
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
               {solutionCategories.slice(0, 3).map((solution, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-gradient-to-br from-background to-primary/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
-                    <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
                       {solution.icon}
                     </div>
-                    <CardTitle className="text-xl text-foreground mb-4">
+                    <CardTitle className="text-xl text-primary mb-4">
                       {solution.title}
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                    <CardDescription className="text-text-secondary leading-relaxed text-base">
                       {solution.subtitle}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 px-8 pb-8">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 border-primary text-primary"
+                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300 border-primary text-primary hover:border-primary"
                       asChild
                     >
                       <a href={solution.link}>
@@ -103,22 +106,22 @@ const Solutions = () => {
             {/* Second row - 2 cards taking full width */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {solutionCategories.slice(3).map((solution, index) => (
-                <Card key={index + 3} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                <Card key={index + 3} className="group hover:shadow-lg transition-all duration-300 border-border bg-gradient-to-br from-background to-teal/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
-                    <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
+                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
                       {solution.icon}
                     </div>
-                    <CardTitle className="text-xl text-foreground mb-4">
+                    <CardTitle className="text-xl text-primary mb-4">
                       {solution.title}
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                    <CardDescription className="text-text-secondary leading-relaxed text-base">
                       {solution.subtitle}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 px-8 pb-8">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 border-primary text-primary"
+                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300 border-primary text-primary hover:border-primary"
                       asChild
                     >
                       <a href={solution.link}>
@@ -202,19 +205,20 @@ const Solutions = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="section-padding bg-gradient-to-br from-primary-blue to-primary-teal text-white">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+          <FloatingShapes variant="circles" className="opacity-20" />
+          <div className="container mx-auto text-center relative">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to Solve Your Firm's Challenges?
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
               Let us help you implement the right strategies for sustainable growth. Book a free strategy call to discuss your specific challenges.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-white text-primary-blue hover:bg-white/90"
+                className="bg-white text-primary hover:bg-white/90 font-semibold"
                 asChild
               >
                 <a href="/get-started">
@@ -225,7 +229,7 @@ const Solutions = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary-blue"
+                className="border-white text-white hover:bg-white hover:text-primary font-semibold"
                 asChild
               >
                 <a href="/services">
