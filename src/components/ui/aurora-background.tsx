@@ -27,24 +27,26 @@ export const AuroraBackground = ({
         <div
           className={cn(
             `
-            /* Base aurora made from SmartFirm brand colors */
+            /* Full-strength Aurora using SmartFirm brand colors */
             [--aurora:repeating-linear-gradient(
               110deg,
-              hsl(var(--primary-blue))_0%,
-              hsl(var(--primary-blue))_6%,
-              hsl(var(--secondary-blue))_8%,
-              hsl(var(--secondary-blue))_14%,
-              transparent_16%,
-              transparent_20%
+              hsl(var(--primary-blue)/0.95)_0%,
+              hsl(var(--primary-blue)/0.95)_10%,
+              hsl(var(--secondary-blue)/0.92)_12%,
+              hsl(var(--secondary-blue)/0.92)_22%,
+              hsl(var(--primary-teal)/0.9)_24%,
+              hsl(var(--primary-teal)/0.9)_34%,
+              hsl(var(--accent-light)/0.88)_36%,
+              hsl(var(--accent-light)/0.88)_46%
             )]
-            [--glow:radial-gradient(60%_60%_at_70%_20%,hsl(var(--light-teal)/0.55),transparent_60%),
-                     radial-gradient(50%_50%_at_20%_70%,hsl(var(--primary-teal)/0.45),transparent_60%),
-                     radial-gradient(40%_40%_at_85%_80%,hsl(var(--accent-light)/0.65),transparent_60%)]
+            [--glow:radial-gradient(60%_60%_at_70%_20%,hsl(var(--light-teal)/0.95),transparent_62%),
+                     radial-gradient(55%_55%_at_20%_70%,hsl(var(--primary-teal)/0.9),transparent_62%),
+                     radial-gradient(45%_45%_at_85%_80%,hsl(var(--accent-light)/0.95),transparent_62%)]
 
             [background-image:var(--glow),var(--aurora)]
-            [background-size:120%_120%,300%]
+            [background-size:160%_160%,400%]
             [background-position:50%_50%,50%_50%]
-            animate-aurora opacity-70
+            animate-aurora opacity-100
 
             pointer-events-none absolute -inset-[10px]
           `)}
