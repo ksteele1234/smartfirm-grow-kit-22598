@@ -118,11 +118,32 @@ export default {
             height: "0",
           },
         },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        "scale-hover": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.02)" }
+        },
+        "magnetic": {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(var(--mouse-x, 0), var(--mouse-y, 0))" }
+        }
       },
       animation: {
-        aurora: "aurora 60s linear infinite",
+        aurora: "aurora 240s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out",
+        "scale-hover": "scale-hover 0.2s ease-out",
+        "magnetic": "magnetic 0.15s ease-out"
       },
     },
   },

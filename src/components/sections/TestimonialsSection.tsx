@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 scale-feedback color-transition ${
                   index === currentIndex 
                     ? 'bg-primary scale-125' 
                     : 'bg-primary/30 hover:bg-primary/50'

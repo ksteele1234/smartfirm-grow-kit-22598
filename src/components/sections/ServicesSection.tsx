@@ -51,11 +51,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 stagger-container">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background">
+              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background scale-feedback color-transition">
                 <CardHeader className="pb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-xl flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300">
                     <IconComponent className="h-6 w-6 text-primary" />

@@ -53,11 +53,11 @@ const SolutionsSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 stagger-container">
           {solutions.map((solution, index) => {
             const IconComponent = solution.icon;
             return (
-              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background overflow-hidden">
+              <Card key={index} className="group hover:shadow-soft transition-all duration-300 border-border/50 hover:border-primary/20 bg-background overflow-hidden scale-feedback color-transition">
                 <CardHeader className={`bg-gradient-to-br ${solution.color} pb-6`}>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0">

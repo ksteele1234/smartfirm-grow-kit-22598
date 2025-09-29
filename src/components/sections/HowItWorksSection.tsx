@@ -45,11 +45,11 @@ const HowItWorksSection = () => {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 stagger-container">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
-                <div key={index} className="relative text-center group">
+                <div key={index} className="relative text-center group scale-feedback">
                   {/* Step Number */}
                   <div className="relative inline-block mb-6">
                     <div className="w-20 h-20 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shadow-soft group-hover:shadow-lg transition-all duration-300">
