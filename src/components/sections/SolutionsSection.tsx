@@ -126,7 +126,7 @@ const SolutionsSection = () => {
           <div className="grid md:grid-cols-2 gap-8 md:ml-16">
             {solutions.slice(2).map((solution, index) => {
               const IconComponent = solution.icon;
-              const variants = ["tilted", "outlined"];
+              const variants = ["elevated", "outlined"];
               const hoverEffects = ["scale", "lift"];
               
               return (

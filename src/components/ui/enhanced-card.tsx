@@ -12,7 +12,7 @@ const EnhancedCard = React.forwardRef<HTMLDivElement, EnhancedCardProps>(
   ({ className, variant = "default", hoverEffect = "lift", children, ...props }, ref) => {
     const variants = {
       default: "bg-card text-card-foreground border-border/50",
-      tilted: "bg-card text-card-foreground border-border/50 transform rotate-1 hover:rotate-0 transition-transform duration-300",
+      tilted: "bg-card text-card-foreground border-border/50",
       elevated: "bg-card text-card-foreground border-border/50 shadow-lg hover:shadow-xl",
       outlined: "bg-transparent border-2 border-primary/20 hover:border-primary/40 text-card-foreground",
       gradient: "bg-gradient-to-br from-primary/5 via-white to-teal/5 text-card-foreground border-border/30"

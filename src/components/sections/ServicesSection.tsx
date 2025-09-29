@@ -94,7 +94,7 @@ const ServicesSection = () => {
           <div className="grid md:grid-cols-3 gap-8 md:ml-12">
             {services.slice(2, 5).map((service, index) => {
               const IconComponent = service.icon;
-              const cardVariants = ["tilted", "outlined", "default"];
+              const cardVariants = ["elevated", "outlined", "default"];
               const hoverEffects = ["scale", "lift", "glow"];
               return (
                 <EnhancedCard 
