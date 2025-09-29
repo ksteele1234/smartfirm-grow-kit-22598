@@ -352,7 +352,7 @@ const Industries = () => {
               
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Do you have specific marketing solutions for solo CPAs versus large accounting firms?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -361,7 +361,7 @@ const Industries = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How do marketing strategies differ for tax preparation versus bookkeeping services?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -370,7 +370,7 @@ const Industries = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Can you help specialized practices like forensic accounting or wealth management?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -379,7 +379,7 @@ const Industries = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How do you handle marketing for accounting firms in different geographic markets?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -388,7 +388,7 @@ const Industries = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Do you understand the unique compliance requirements for different accounting specializations?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -397,7 +397,7 @@ const Industries = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How do you help accounting firms differentiate from their competition?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">

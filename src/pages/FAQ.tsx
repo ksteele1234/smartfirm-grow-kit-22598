@@ -40,7 +40,7 @@ const FAQ = () => {
         },
         {
           question: "How long does it take to implement marketing automation?",
-          answer: "Most accounting firms have their core marketing automation systems operational within 30-60 days. This includes lead capture setup, email sequences, CRM integration, and team training. We work around your schedule, especially during busy seasons like tax time."
+          answer: "Most accounting firms see their marketing automation systems fully operational within 30. Your website should be up sooner, then we build the automations around that. This includes lead generation setup, email sequences, CRM integration, and staff training. We work around your schedule to minimize disruption during tax season or busy periods."
         }
       ]
     },
@@ -185,7 +185,7 @@ const FAQ = () => {
                         value={`${categoryIndex}-${index}`}
                         className="border border-border rounded-lg px-6 bg-background"
                       >
-                        <AccordionTrigger className="text-left">
+                        <AccordionTrigger className="text-left text-sm">
                           {faq.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-muted-foreground leading-relaxed">

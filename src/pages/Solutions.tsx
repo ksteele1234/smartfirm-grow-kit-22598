@@ -262,7 +262,7 @@ const Solutions = () => {
               
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="item-1" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How do I compete with tech-savvy CPAs who seem to get all the clients?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -271,7 +271,7 @@ const Solutions = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Why aren't my accounting clients referring new business to me?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -280,7 +280,7 @@ const Solutions = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How can I work less while growing my accounting practice?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -289,7 +289,7 @@ const Solutions = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     What's the best way to scale my accounting firm without hiring more staff?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -298,7 +298,7 @@ const Solutions = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How do I protect my accounting practice from cybersecurity threats?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -307,7 +307,7 @@ const Solutions = () => {
                 </AccordionItem>
 
                 <AccordionItem value="item-6" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How long before I see results from implementing these solutions?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">

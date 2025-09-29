@@ -132,11 +132,12 @@ Your Accounting Firm's Growth</h1>
                     Spotlight Service
                   </div>
                   <CardTitle className="text-3xl md:text-4xl text-foreground mb-6">
-                    AI-Powered Lead Intelligence
+                    AI-Powered Marketing Automation
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Turn prospects into clients with our AI-driven automated follow-up system. Never lose a lead again 
-                    with predictive communication that adapts to client behavior, intelligent timing optimization, and personalized messaging that nurtures relationships and converts opportunities.
+                    Transform your accounting firm's marketing with intelligent automation that works 24/7. From predictive lead scoring to 
+                    automated email campaigns and smart social media management, our AI-driven system helps you attract, nurture, and convert 
+                    more clients while you focus on serving them.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8 px-10 pb-10">
@@ -267,7 +268,7 @@ Your Accounting Firm's Growth</h1>
               
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     What marketing automation services do you provide for accounting firms?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -276,16 +277,16 @@ Your Accounting Firm's Growth</h1>
                 </AccordionItem>
 
                 <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     How long does it take to implement marketing automation for my CPA firm?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
-                    Most accounting firms see their marketing automation systems fully operational within 30-60 days. This includes lead generation setup, email sequences, CRM integration, and staff training. We work around your schedule to minimize disruption during tax season or busy periods.
+                    Most accounting firms see their marketing automation systems fully operational within 30. Your website should be up sooner, then we build the automations around that. This includes lead generation setup, email sequences, CRM integration, and staff training. We work around your schedule to minimize disruption during tax season or busy periods.
                   </AccordionContent>
                 </AccordionItem>
 
                 <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Do you integrate with accounting software like QuickBooks and Xero?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -294,7 +295,7 @@ Your Accounting Firm's Growth</h1>
                 </AccordionItem>
 
                 <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     What kind of ROI can accounting firms expect from marketing automation?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -303,7 +304,7 @@ Your Accounting Firm's Growth</h1>
                 </AccordionItem>
 
                 <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Is marketing automation compliant with accounting industry regulations?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -312,7 +313,7 @@ Your Accounting Firm's Growth</h1>
                 </AccordionItem>
 
                 <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
-                  <AccordionTrigger className="text-left">
+                  <AccordionTrigger className="text-left text-sm">
                     Do you provide ongoing support after implementing marketing automation?
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
