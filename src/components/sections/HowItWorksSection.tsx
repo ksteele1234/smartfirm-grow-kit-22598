@@ -75,12 +75,6 @@ const HowItWorksSection = () => {
                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent-light border-2 border-primary rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
-                    {/* Connector for next step */}
-                    {index < steps.length - 1 && (
-                      <div className="hidden lg:block absolute top-full left-1/2 transform -translate-x-1/2 mt-8">
-                        <AccentLine orientation="vertical" className="h-16" variant="dashed" />
-                      </div>
-                    )}
                   </div>
                   
                   {/* Spacer for alignment */}
