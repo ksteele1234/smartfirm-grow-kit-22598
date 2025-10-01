@@ -233,17 +233,25 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
     const h1Elements = doc.querySelectorAll('h1');
     
-    // Better body text extraction - exclude nav, header, footer, scripts
+    // Better body text extraction - target main content areas
     const mainContent = doc.querySelector('main') || doc.body;
     let bodyText = '';
     if (mainContent) {
       const clone = mainContent.cloneNode(true) as HTMLElement;
-      // Remove navigation, scripts, styles
-      clone.querySelectorAll('nav, script, style, header, footer, [role="navigation"]').forEach(el => el.remove());
+      // Remove non-content elements
+      clone.querySelectorAll('nav, script, style, header, footer, [role="navigation"], button, .btn, [class*="button"]').forEach(el => el.remove());
       bodyText = clone.textContent || '';
     }
-    const wordCount = bodyText.trim().split(/\s+/).filter(w => w.length > 2).length;
-    const first100Words = bodyText.trim().split(/\s+/).slice(0, 100).join(' ');
+    
+    // Clean and count words (filter out very short words and whitespace)
+    const words = bodyText.trim().split(/\s+/).filter(w => w.length > 2);
+    const wordCount = words.length;
+    const first100Words = words.slice(0, 100).join(' ');
+    
+    // Debug logging for low word counts
+    if (wordCount < 200) {
+      console.log(`⚠️ Low word count on ${url}: ${wordCount} words extracted`);
+    }
 
     // A) Technical & Indexability (25 pts)
     // Canonical present & self-referencing (6)
@@ -336,16 +344,17 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       });
     }
 
-    // Page speed proxy: load time ≤ 2.5s desktop / ≤ 3.0s mobile (5)
-    if (loadTimeMs <= 2500) {
+    // Page speed proxy: adjusted for iframe overhead (5)
+    // Iframe adds 2-3s overhead, so adjust thresholds accordingly
+    if (loadTimeMs <= 5000) {
       technicalScore += 5;
-    } else if (loadTimeMs > 3000) {
+    } else if (loadTimeMs > 8000) {
       suggestions.push({
         priority: "P1",
         effort: "L",
         impact: "medium",
         issueType: "slow_load",
-        recommendation: `Optimize page load time (current: ${loadTimeMs}ms, target: ≤2500ms)`,
+        recommendation: `Optimize page load time (current: ${loadTimeMs}ms, significantly above normal)`,
         notes: "Consider optimizing images, reducing bundle size, and implementing code splitting"
       });
     } else {
@@ -375,14 +384,21 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       });
     }
 
-    // Sufficient depth for intent (7)
-    const minWordCount = pageType === 'service' ? minWordCountService : 
-                        pageType === 'blog' ? minWordCountBlog : 600;
+    // Sufficient depth for intent (7) - adjusted by page type
+    let minWordCount = 600; // default
+    if (pageType === 'service') minWordCount = minWordCountService;
+    else if (pageType === 'blog') minWordCount = minWordCountBlog;
+    else if (pageType === 'solution') minWordCount = 700;
+    else if (pageType === 'industry') minWordCount = 800;
+    else if (pageType === 'tool') minWordCount = 400; // tools can be shorter
+    else if (pageType === 'legal') minWordCount = 300; // legal pages can be shorter
+    else if (pageType === 'core' && url === '/') minWordCount = 500; // homepage
+    
     if (wordCount >= minWordCount) {
       contentScore += 7;
-    } else {
+    } else if (wordCount > 100) { // Only flag if significantly thin
       suggestions.push({
-        priority: "P1",
+        priority: pageType === 'tool' || pageType === 'legal' ? "P2" : "P1",
         effort: "L",
         impact: "high",
         issueType: "thin_content",
@@ -392,10 +408,13 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     }
 
     // Intro sets context + includes primary phrase in first 100 words (4)
-    const primaryPhrase = title.split('|')[0].trim().toLowerCase();
-    if (first100Words.toLowerCase().includes(primaryPhrase)) {
+    // Use H1 text as primary keyword if available, fallback to title
+    const h1Text = h1Elements.length > 0 ? h1Elements[0].textContent?.trim() : '';
+    const primaryPhrase = (h1Text || title.split('|')[0].trim()).toLowerCase();
+    
+    if (first100Words.toLowerCase().includes(primaryPhrase.slice(0, 30))) {
       contentScore += 4;
-    } else {
+    } else if (primaryPhrase.length > 10) { // Only suggest if we have a meaningful keyword
       suggestions.push({
         priority: "P1",
         effort: "S",
@@ -424,19 +443,23 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       }
     });
 
-    // Orphan page check (6)
-    const isOrphan = internalLinksCount === 0;
-    if (!isOrphan) {
+    // Orphan page check (6) - page has NO outbound internal links
+    // Note: True orphan detection requires checking if OTHER pages link TO this page
+    // For now, we check if this page links OUT to the site (inverse proxy)
+    const hasOutboundInternalLinks = internalLinksCount >= 2;
+    if (hasOutboundInternalLinks) {
       linkingScore += 6;
-    } else {
+    } else if (internalLinksCount === 0) {
       suggestions.push({
         priority: "P0",
         effort: "M",
         impact: "high",
         issueType: "orphan_page",
-        recommendation: "Add internal links from relevant pages",
+        recommendation: "Add internal links to relevant pages (page has no outbound links)",
         suggestedInternalLinks: getSuggestedInternalLinks(url, pageType)
       });
+    } else {
+      linkingScore += 3; // Partial credit for having at least one link
     }
 
     // Contextual internal links (2-4 with descriptive anchors) (5)
@@ -625,6 +648,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     // Calculate total score
     const totalScore = technicalScore + contentScore + linkingScore + schemaScore + aiSignalsScore + brandUXScore;
     const grade = getGrade(totalScore);
+    
+    const isOrphan = internalLinksCount === 0;
 
     return {
       url,
@@ -693,20 +718,72 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
   };
 
   const generateFAQs = (pageType: string): { question: string; answer: string }[] => {
-    return [
-      {
-        question: `What are the benefits of this ${pageType}?`,
-        answer: "This provides significant value by addressing key challenges and delivering measurable results for accounting firms."
-      },
-      {
-        question: "How long does implementation take?",
-        answer: "Most implementations are completed within 2-4 weeks, depending on complexity and requirements."
-      },
-      {
-        question: "What kind of support is available?",
-        answer: "We provide comprehensive support including onboarding, training, and ongoing technical assistance."
-      }
-    ];
+    // Generate contextual FAQs based on page type
+    const faqs: { question: string; answer: string }[] = [];
+    
+    if (pageType === 'service') {
+      faqs.push(
+        {
+          question: "How long does implementation take?",
+          answer: "Most service implementations are completed within 2-4 weeks, with initial results visible in the first month."
+        },
+        {
+          question: "What integrations are supported?",
+          answer: "We integrate with leading accounting platforms including QuickBooks, Xero, and popular CRM systems."
+        },
+        {
+          question: "Is training included?",
+          answer: "Yes, we provide comprehensive onboarding and training for your team to ensure smooth adoption."
+        }
+      );
+    } else if (pageType === 'solution') {
+      faqs.push(
+        {
+          question: "How quickly will I see results?",
+          answer: "Most firms see measurable improvements within 30-60 days of implementation."
+        },
+        {
+          question: "What support is included?",
+          answer: "All solutions include dedicated support, regular check-ins, and ongoing optimization."
+        },
+        {
+          question: "Can this scale with my firm?",
+          answer: "Yes, our solutions are designed to grow with your firm from 5 to 50+ employees."
+        }
+      );
+    } else if (pageType === 'industry') {
+      faqs.push(
+        {
+          question: "Do you work with firms like mine?",
+          answer: "Yes, we specialize in serving firms in your industry with tailored solutions for your unique challenges."
+        },
+        {
+          question: "What makes your approach different?",
+          answer: "We combine industry expertise with proven automation to deliver measurable results for accounting firms."
+        },
+        {
+          question: "How do you ensure compliance?",
+          answer: "All our solutions are designed with accounting industry standards and compliance requirements in mind."
+        }
+      );
+    } else {
+      faqs.push(
+        {
+          question: "How do I get started?",
+          answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+        },
+        {
+          question: "What is the pricing structure?",
+          answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
+        },
+        {
+          question: "Do you offer guarantees?",
+          answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+        }
+      );
+    }
+    
+    return faqs;
   };
 
   const runGrading = async () => {
