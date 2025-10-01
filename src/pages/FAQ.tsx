@@ -1,5 +1,6 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -139,8 +140,17 @@ const FAQ = () => {
     )
   })).filter(category => category.questions.length > 0);
 
+  // Flatten all FAQs for structured data
+  const allFAQs = faqCategories.flatMap(category => category.questions);
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Frequently Asked Questions"
+        description="Find answers to common questions about SmartFirm's marketing automation, technology solutions, and services for accounting firms."
+        pageType="faq"
+        faqs={allFAQs}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

@@ -7,10 +7,16 @@ interface SEOProps {
   image?: string;
   noindex?: boolean;
   // Template fields
-  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'default';
+  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'default';
   serviceName?: string;
   audience?: string;
   topic?: string;
+  // Structured data fields
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 const SEO = ({ 
@@ -21,7 +27,12 @@ const SEO = ({
   pageType = 'default',
   serviceName,
   audience,
-  topic
+  topic,
+  datePublished,
+  dateModified,
+  author,
+  breadcrumbs,
+  faqs
 }: SEOProps) => {
   const location = useLocation();
   
@@ -89,6 +100,28 @@ const SEO = ({
       
       element.href = href;
     };
+
+    // Add or update JSON-LD structured data
+    const updateStructuredData = (id: string, data: any) => {
+      let script = document.querySelector(`script[data-schema="${id}"]`);
+      
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.setAttribute('data-schema', id);
+        document.head.appendChild(script);
+      }
+      
+      script.textContent = JSON.stringify(data);
+    };
+
+    // Remove structured data script
+    const removeStructuredData = (id: string) => {
+      const script = document.querySelector(`script[data-schema="${id}"]`);
+      if (script) {
+        script.remove();
+      }
+    };
     
     // Basic meta tags
     updateMetaTag('description', pageDescription);
@@ -120,8 +153,115 @@ const SEO = ({
     
     // Canonical URL
     updateLinkTag('canonical', canonicalUrl);
+
+    // JSON-LD Structured Data
     
-  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex]);
+    // 1. Organization + Website (always present)
+    updateStructuredData('organization', {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SmartFirm",
+      "url": `https://${primaryDomain}`,
+      "logo": `https://${primaryDomain}${defaultImage}`,
+      "sameAs": [
+        // Add LinkedIn/YouTube URLs here when available
+      ]
+    });
+
+    updateStructuredData('website', {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SmartFirm",
+      "url": `https://${primaryDomain}`,
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `https://${primaryDomain}/resources?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    });
+
+    // 2. Service page
+    if (pageType === 'service' && serviceName) {
+      updateStructuredData('service', {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": serviceName,
+        "provider": {
+          "@type": "Organization",
+          "name": "SmartFirm"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "description": pageDescription
+      });
+    } else {
+      removeStructuredData('service');
+    }
+
+    // 3. Blog post / Article
+    if (pageType === 'blog' && topic) {
+      updateStructuredData('article', {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": topic,
+        "datePublished": datePublished || new Date().toISOString(),
+        "dateModified": dateModified || datePublished || new Date().toISOString(),
+        "author": {
+          "@type": "Organization",
+          "name": author || "SmartFirm Editorial"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SmartFirm",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `https://${primaryDomain}${defaultImage}`
+          }
+        },
+        "image": `https://${primaryDomain}${pageImage}`,
+        "description": pageDescription
+      });
+    } else {
+      removeStructuredData('article');
+    }
+
+    // 4. FAQ page
+    if (pageType === 'faq' && faqs && faqs.length > 0) {
+      updateStructuredData('faq', {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      });
+    } else {
+      removeStructuredData('faq');
+    }
+
+    // 5. Breadcrumb list
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      updateStructuredData('breadcrumb', {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": crumb.name,
+          "item": `https://${primaryDomain}${crumb.url}`
+        }))
+      });
+    } else {
+      removeStructuredData('breadcrumb');
+    }
+    
+  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, primaryDomain, defaultImage]);
   
   return null;
 };
