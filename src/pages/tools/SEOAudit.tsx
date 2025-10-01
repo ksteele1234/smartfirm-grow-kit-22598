@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Download, Play, AlertCircle, CheckCircle, Info } from "lucide-react";
+import { Download, Play, AlertCircle, CheckCircle, Info, ArrowRight } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import AdvancedSEOQA from "./AdvancedSEOQA";
 
 interface PageAudit {
   url: string;
@@ -32,6 +34,7 @@ interface PageAudit {
 }
 
 const SEOAudit = () => {
+  const [activeTab, setActiveTab] = useState<"basic" | "advanced">("basic");
   const [isAuditing, setIsAuditing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<PageAudit[]>([]);
@@ -308,164 +311,192 @@ const SEOAudit = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-primary mb-4">
-              SEO Audit Tool
+              SEO Audit Tools
             </h1>
             <p className="text-lg text-muted-foreground">
-              Comprehensive internal SEO analysis for all pages
+              Choose between basic SEO audit or advanced QA analysis
             </p>
           </div>
 
-          <Alert className="mb-8">
-            <Info className="h-4 w-4" />
-            <AlertDescription>
-              This tool audits {routes.length} pages internally. No external crawlers are used. Results include title/meta analysis, heading structure, canonical tags, indexability, structured data, and link counts.
-            </AlertDescription>
-          </Alert>
+          <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "basic" | "advanced")} className="w-full">
+            <TabsList className="grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="basic">Basic SEO Audit</TabsTrigger>
+              <TabsTrigger value="advanced">Advanced SEO QA</TabsTrigger>
+            </TabsList>
 
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle>Run Audit</CardTitle>
-              <CardDescription>
-                Analyze all pages and export results to CSV
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {!isAuditing && results.length === 0 && (
-                <Button onClick={runAudit} size="lg" className="w-full">
-                  <Play className="mr-2 h-5 w-5" />
-                  Start SEO Audit
-                </Button>
-              )}
+            <TabsContent value="basic" className="space-y-8">
+              <Alert>
+                <Info className="h-4 w-4" />
+                <AlertDescription>
+                  This tool audits {routes.length} pages internally. No external crawlers are used. Results include title/meta analysis, heading structure, canonical tags, indexability, structured data, and link counts.
+                </AlertDescription>
+              </Alert>
 
-              {isAuditing && (
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between text-sm mb-2">
-                      <span className="text-muted-foreground">
-                        Auditing: {currentPage}
-                      </span>
-                      <span className="font-semibold">
-                        {Math.round(progress)}%
-                      </span>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Run Basic SEO Audit</CardTitle>
+                  <CardDescription>
+                    Analyze all pages and export results to CSV
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {!isAuditing && results.length === 0 && (
+                    <div className="space-y-4">
+                      <Button onClick={runAudit} size="lg" className="w-full">
+                        <Play className="mr-2 h-5 w-5" />
+                        Start SEO Audit
+                      </Button>
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground mb-3">
+                          Need more comprehensive analysis?
+                        </p>
+                        <Button 
+                          variant="outline" 
+                          onClick={() => setActiveTab("advanced")}
+                          className="w-full"
+                        >
+                          Try Advanced SEO QA
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
-                    <Progress value={progress} />
-                  </div>
-                </div>
-              )}
+                  )}
 
-              {!isAuditing && results.length > 0 && (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <Card>
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-sm">Pages Audited</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="text-3xl font-bold text-primary">
-                          {results.length}
+                  {isAuditing && (
+                    <div className="space-y-4">
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="text-muted-foreground">
+                            Auditing: {currentPage}
+                          </span>
+                          <span className="font-semibold">
+                            {Math.round(progress)}%
+                          </span>
                         </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card>
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-sm">Total Issues</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="text-3xl font-bold text-destructive">
-                          {totalIssues}
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card>
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-sm">Pages with Issues</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="text-3xl font-bold text-orange-500">
-                          {pagesWithIssues}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <Button onClick={exportToCSV} size="lg" className="flex-1">
-                      <Download className="mr-2 h-5 w-5" />
-                      Export to CSV
-                    </Button>
-                    <Button onClick={runAudit} variant="outline" size="lg">
-                      Re-run Audit
-                    </Button>
-                  </div>
-
-                  {/* Preview Results */}
-                  <div className="border rounded-lg overflow-hidden">
-                    <div className="bg-muted p-4">
-                      <h3 className="font-semibold">Audit Results Preview</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Showing pages with issues (full export available via CSV)
-                      </p>
+                        <Progress value={progress} />
+                      </div>
                     </div>
-                    <div className="divide-y max-h-96 overflow-y-auto">
-                      {results.filter(r => r.issues.length > 0).map((result, index) => (
-                        <div key={index} className="p-4 hover:bg-muted/50">
-                          <div className="flex items-start justify-between mb-2">
-                            <div className="font-mono text-sm text-primary">
-                              {result.url}
+                  )}
+
+                  {!isAuditing && results.length > 0 && (
+                    <div className="space-y-6">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <Card>
+                          <CardHeader className="pb-3">
+                            <CardTitle className="text-sm">Pages Audited</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-3xl font-bold text-primary">
+                              {results.length}
                             </div>
-                            <Badge variant={result.issues.length > 3 ? "destructive" : "secondary"}>
-                              {result.issues.length} issues
-                            </Badge>
-                          </div>
-                          <div className="space-y-1">
-                            {result.issues.map((issue, i) => (
-                              <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <AlertCircle className="h-3 w-3" />
-                                {issue}
-                              </div>
-                            ))}
-                          </div>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader className="pb-3">
+                            <CardTitle className="text-sm">Total Issues</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-3xl font-bold text-destructive">
+                              {totalIssues}
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader className="pb-3">
+                            <CardTitle className="text-sm">Pages with Issues</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-3xl font-bold text-orange-500">
+                              {pagesWithIssues}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      <div className="flex gap-4">
+                        <Button onClick={exportToCSV} size="lg" className="flex-1">
+                          <Download className="mr-2 h-5 w-5" />
+                          Export to CSV
+                        </Button>
+                        <Button onClick={runAudit} variant="outline" size="lg">
+                          Re-run Audit
+                        </Button>
+                      </div>
+
+                      {/* Preview Results */}
+                      <div className="border rounded-lg overflow-hidden">
+                        <div className="bg-muted p-4">
+                          <h3 className="font-semibold">Audit Results Preview</h3>
+                          <p className="text-sm text-muted-foreground">
+                            Showing pages with issues (full export available via CSV)
+                          </p>
                         </div>
-                      ))}
+                        <div className="divide-y max-h-96 overflow-y-auto">
+                          {results.filter(r => r.issues.length > 0).map((result, index) => (
+                            <div key={index} className="p-4 hover:bg-muted/50">
+                              <div className="flex items-start justify-between mb-2">
+                                <div className="font-mono text-sm text-primary">
+                                  {result.url}
+                                </div>
+                                <Badge variant={result.issues.length > 3 ? "destructive" : "secondary"}>
+                                  {result.issues.length} issues
+                                </Badge>
+                              </div>
+                              <div className="space-y-1">
+                                {result.issues.map((issue, i) => (
+                                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                    <AlertCircle className="h-3 w-3" />
+                                    {issue}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Audit Criteria</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-semibold mb-2">Checks Performed:</h4>
+                      <ul className="space-y-1 text-muted-foreground">
+                        <li>• Title tag length (&lt;60 chars)</li>
+                        <li>• Meta description length (&lt;160 chars)</li>
+                        <li>• H1 presence (single)</li>
+                        <li>• H2 presence</li>
+                        <li>• Canonical tag</li>
+                        <li>• Indexability status</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Additional Metrics:</h4>
+                      <ul className="space-y-1 text-muted-foreground">
+                        <li>• OG image presence</li>
+                        <li>• JSON-LD structured data</li>
+                        <li>• Images missing alt text</li>
+                        <li>• Internal/external link counts</li>
+                        <li>• HTML page size</li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-              )}
-            </CardContent>
-          </Card>
+                </CardContent>
+              </Card>
+            </TabsContent>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Audit Criteria</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <h4 className="font-semibold mb-2">Checks Performed:</h4>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>• Title tag length (&lt;60 chars)</li>
-                    <li>• Meta description length (&lt;160 chars)</li>
-                    <li>• H1 presence (single)</li>
-                    <li>• H2 presence</li>
-                    <li>• Canonical tag</li>
-                    <li>• Indexability status</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Additional Metrics:</h4>
-                  <ul className="space-y-1 text-muted-foreground">
-                    <li>• OG image presence</li>
-                    <li>• JSON-LD structured data</li>
-                    <li>• Images missing alt text</li>
-                    <li>• Internal/external link counts</li>
-                    <li>• HTML page size</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            <TabsContent value="advanced">
+              <AdvancedSEOQA onBack={() => setActiveTab("basic")} />
+            </TabsContent>
+          </Tabs>
         </div>
       </main>
       
