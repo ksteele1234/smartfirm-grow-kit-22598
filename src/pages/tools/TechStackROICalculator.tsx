@@ -8,6 +8,7 @@ import { ArrowLeft, DollarSign, TrendingUp, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const commonTools = [
   { id: "quickbooks", name: "QuickBooks", avgCost: 50 },
@@ -149,6 +150,11 @@ const TechStackROICalculator = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Tech Stack ROI Calculator Results | SmartFirm"
+          description="Your tech stack analysis results with cost savings and efficiency recommendations."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
@@ -266,6 +272,11 @@ const TechStackROICalculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Tech Stack ROI Calculator | SmartFirm"
+        description="Calculate ROI on your accounting firm's technology stack. Find cost savings and efficiency improvements."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">

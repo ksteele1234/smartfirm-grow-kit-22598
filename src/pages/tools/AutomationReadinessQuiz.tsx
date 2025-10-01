@@ -8,6 +8,7 @@ import { CheckCircle, Clock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const questions = [
   {
@@ -125,6 +126,11 @@ const AutomationReadinessQuiz = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Automation Readiness Quiz Results | SmartFirm"
+          description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto">
@@ -179,6 +185,11 @@ const AutomationReadinessQuiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Automation Readiness Quiz | SmartFirm"
+        description="Assess your firm's automation readiness. Discover opportunities to streamline operations and improve efficiency."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto">

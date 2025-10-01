@@ -16,7 +16,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       <SEO 
         pageType="industry"
         title={data.title}
-        description={data.heroSubtitle || data.industryOverview}
+        description={(data.heroSubtitle || data.industryOverview).substring(0, 155)}
+        noindex={false}
       />
       <Header />
       {/* Hero Section */}

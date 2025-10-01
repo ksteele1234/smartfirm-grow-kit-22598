@@ -20,7 +20,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         serviceName={data.title.replace(' for Accounting Firms', '').replace(' for Finance Firms', '')}
         audience="accounting firms"
         title={data.title}
-        description={data.heroDescription || data.heroSubtitle}
+        description={(data.heroDescription || data.heroSubtitle).substring(0, 155)}
+        noindex={false}
       />
       <Header />
       {/* Hero Section */}

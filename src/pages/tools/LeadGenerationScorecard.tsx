@@ -8,6 +8,7 @@ import { TrendingUp, Clock, ArrowLeft, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const questions = [
   {
@@ -192,6 +193,11 @@ const LeadGenerationScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Lead Generation Scorecard Results | SmartFirm"
+          description="Your lead generation assessment results with recommendations to improve your accounting firm's marketing."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-3xl mx-auto">
@@ -290,6 +296,11 @@ const LeadGenerationScorecard = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Lead Generation Scorecard | SmartFirm"
+        description="Assess your accounting firm's lead generation effectiveness. Get scored recommendations for improvement."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto">

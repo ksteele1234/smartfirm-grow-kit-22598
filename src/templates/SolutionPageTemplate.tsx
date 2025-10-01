@@ -18,7 +18,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       <SEO 
         pageType="solution"
         title={data.title}
-        description={data.heroSubtitle || data.problemStatement}
+        description={(data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
+        noindex={false}
       />
       <Header />
       {/* Hero Section */}

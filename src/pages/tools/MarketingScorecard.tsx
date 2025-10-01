@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -137,6 +138,11 @@ const MarketingScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Marketing Scorecard Results | SmartFirm"
+          description="Your marketing assessment results with personalized recommendations for accounting firm growth."
+          noindex={false}
+        />
         <Header />
         <main className="pt-20">
           <section className="section-padding">
@@ -265,6 +271,11 @@ const MarketingScorecard = () => {
   if (showEmailForm) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Marketing Scorecard | SmartFirm"
+          description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
+          noindex={false}
+        />
         <Header />
         <main className="pt-20">
           <section className="section-padding">
@@ -311,6 +322,11 @@ const MarketingScorecard = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Marketing Scorecard | SmartFirm"
+        description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
+        noindex={false}
+      />
       <Header />
       <main className="pt-20">
         <section className="section-padding">

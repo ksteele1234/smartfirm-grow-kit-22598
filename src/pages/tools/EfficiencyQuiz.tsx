@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -164,6 +165,11 @@ const EfficiencyQuiz = () => {
     
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Efficiency Quiz | SmartFirm"
+          description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
+          noindex={false}
+        />
         <Header />
         <main className="pt-20">
           <section className="section-padding">
@@ -244,6 +250,11 @@ const EfficiencyQuiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Efficiency Quiz | SmartFirm"
+        description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
+        noindex={false}
+      />
       <Header />
       <main className="pt-20">
         <section className="section-padding">

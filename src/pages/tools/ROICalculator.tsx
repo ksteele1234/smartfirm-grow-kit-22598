@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -91,6 +92,11 @@ const ROICalculator = () => {
   if (showResults) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Marketing ROI Calculator Results | SmartFirm"
+          description="Your marketing ROI analysis for accounting firms. See your return on investment and growth potential."
+          noindex={false}
+        />
         <Header />
         <main className="pt-20">
           <section className="section-padding">
@@ -245,6 +251,11 @@ const ROICalculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Marketing ROI Calculator | SmartFirm"
+        description="Calculate marketing ROI for your accounting firm. Estimate returns on ad spend and client lifetime value."
+        noindex={false}
+      />
       <Header />
       <main className="pt-20">
         <section className="section-padding">

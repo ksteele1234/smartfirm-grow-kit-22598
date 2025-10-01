@@ -1,5 +1,6 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -48,6 +49,11 @@ const ToolsCalculators = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Free Tools & Calculators | SmartFirm"
+        description="Free assessment tools for accounting firms. Measure efficiency, marketing ROI, and growth potential with expert-designed calculators."
+        noindex={false}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

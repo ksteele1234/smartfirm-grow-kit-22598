@@ -8,6 +8,7 @@ import { ArrowLeft, TrendingUp, BarChart3, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const GrowthPotentialScorecard = () => {
   const [annualRevenue, setAnnualRevenue] = useState<number>(0);
@@ -165,6 +166,11 @@ const GrowthPotentialScorecard = () => {
     if (!benchmarks) {
       return (
         <div className="min-h-screen bg-background">
+          <SEO 
+            title="Growth Potential Scorecard | SmartFirm"
+            description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
+            noindex={false}
+          />
           <Header />
           <main className="container mx-auto px-4 py-16">
             <div className="max-w-2xl mx-auto text-center">
@@ -181,6 +187,11 @@ const GrowthPotentialScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Growth Potential Scorecard Results | SmartFirm"
+          description="Your growth potential analysis with benchmarking and recommendations for your accounting firm."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
@@ -320,6 +331,11 @@ const GrowthPotentialScorecard = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Growth Potential Scorecard | SmartFirm"
+        description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto">

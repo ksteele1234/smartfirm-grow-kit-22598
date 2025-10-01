@@ -8,6 +8,7 @@ import { ArrowLeft, DollarSign, TrendingDown, AlertTriangle } from "lucide-react
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const ClientLifetimeValueCalculator = () => {
   const [avgMonthlyValue, setAvgMonthlyValue] = useState<number>(0);
@@ -84,6 +85,11 @@ const ClientLifetimeValueCalculator = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Client Lifetime Value Calculator Results | SmartFirm"
+          description="Your client lifetime value analysis with retention recommendations for your accounting firm."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
@@ -224,6 +230,11 @@ const ClientLifetimeValueCalculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Client Lifetime Value Calculator | SmartFirm"
+        description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto">

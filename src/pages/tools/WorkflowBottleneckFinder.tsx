@@ -7,6 +7,7 @@ import { ArrowLeft, Clock, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const workflowAreas = [
   {
@@ -154,6 +155,11 @@ const WorkflowBottleneckFinder = () => {
 
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Workflow Bottleneck Finder Results | SmartFirm"
+          description="Your workflow analysis results with time savings recommendations for your accounting firm."
+          noindex={false}
+        />
         <Header />
         <main className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
@@ -232,6 +238,11 @@ const WorkflowBottleneckFinder = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Workflow Bottleneck Finder | SmartFirm"
+        description="Find workflow bottlenecks and time-wasting tasks. Calculate potential time savings for your accounting firm."
+        noindex={false}
+      />
       <Header />
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
