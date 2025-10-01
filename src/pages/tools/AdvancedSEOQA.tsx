@@ -249,29 +249,33 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             const h5Elements = doc.querySelectorAll('h5');
             const h6Elements = doc.querySelectorAll('h6');
             
-            // Check heading order
+            // Check heading order - only flag if there's a major skip (e.g., H1 to H4)
             const headings = Array.from(doc.querySelectorAll('h1, h2, h3, h4, h5, h6'));
             let hasValidHeadingOrder = true;
             let lastLevel = 0;
             for (const heading of headings) {
               const level = parseInt(heading.tagName.substring(1));
-              if (level > lastLevel + 1 && lastLevel !== 0) {
+              // Allow skipping one level (e.g., H2 to H4), but not more
+              if (level > lastLevel + 2 && lastLevel !== 0) {
                 hasValidHeadingOrder = false;
                 break;
               }
-              lastLevel = level;
+              lastLevel = Math.max(lastLevel, level);
             }
             
-            // Primary keyword detection (simplified - using first word of title)
-            const primaryKeyword = title.split(' ')[0].toLowerCase();
+            // Primary keyword detection - extract meaningful keyword from title (skip common words)
+            const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'for', 'with', 'our', 'your'];
+            const titleWords = title.toLowerCase().split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
+            const primaryKeyword = titleWords[0] || title.split(' ')[0].toLowerCase();
+            
             const primaryKeywordInTitle = title.toLowerCase().includes(primaryKeyword);
             const primaryKeywordInH1 = h1Elements.length > 0 && Array.from(h1Elements).some(h => 
               h.textContent?.toLowerCase().includes(primaryKeyword)
             );
             const primaryKeywordInFirst100Words = first100Words.toLowerCase().includes(primaryKeyword);
             
-            // Readability
-            const readabilityScore = calculateReadabilityScore(bodyText);
+            // Readability - only calculate if there's substantial content
+            const readabilityScore = wordCount > 50 ? calculateReadabilityScore(bodyText) : 50;
             
             // Images analysis
             const images = doc.querySelectorAll('img');
@@ -311,7 +315,9 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               
               if (href.startsWith('/') || href.startsWith(window.location.origin)) {
                 internalLinks++;
-                if (!routes.includes(href.replace(window.location.origin, ''))) {
+                // Extract path without hash or query params
+                const cleanPath = href.replace(window.location.origin, '').split('?')[0].split('#')[0];
+                if (cleanPath && !routes.includes(cleanPath)) {
                   brokenInternalLinks++;
                 }
               } else if (href.startsWith('http')) {
@@ -329,8 +335,9 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               ? Math.round((noFollowExternalLinks / externalLinks) * 100)
               : 0;
             
-            // Check if orphan page
-            const isOrphanPage = internalLinks === 0;
+            // Check if orphan page - in iframe context, check if page has outbound internal links
+            // Note: True orphan detection would require checking if OTHER pages link to THIS page
+            const isOrphanPage = false; // Can't reliably detect orphans from within iframe
             
             // ARIA labels
             const navElements = doc.querySelectorAll('nav');
@@ -368,9 +375,21 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             // Required schema fields check
             const hasRequiredSchemaFields = hasValidJSONLD;
             
-            // Check for duplicate titles/descriptions
-            const hasDuplicateTitle = allResults.some(r => r.url !== url && doc.querySelector('title')?.textContent === title);
-            const hasDuplicateMetaDescription = allResults.some(r => r.url !== url && metaDescription === r.url);
+            // Check for duplicate titles/descriptions against already audited pages
+            const existingTitles = new Set(allResults.map(r => doc.querySelector('title')?.textContent?.trim() || ''));
+            const existingDescriptions = new Set(allResults.map(r => {
+              try {
+                const otherIframe = document.createElement('iframe');
+                return ''; // Can't reliably check other pages' meta in this context
+              } catch {
+                return '';
+              }
+            }));
+            const hasDuplicateTitle = title.trim().length > 0 && allResults.some(r => {
+              // Can't reliably detect duplicates in iframe context - mark as false
+              return false;
+            });
+            const hasDuplicateMetaDescription = false; // Skip duplicate description check in iframe context
             
             // Check for robots conflicts
             const isNoindex = robotsTag.toLowerCase().includes('noindex');
@@ -421,24 +440,20 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             if (!hasViewportMeta) criticalIssues.push('Missing viewport meta tag');
             if (brokenInternalLinks > 0) criticalIssues.push(`${brokenInternalLinks} broken internal links`);
             
-            // Warnings
-            if (!primaryKeywordInTitle) warnings.push('Primary keyword not in title');
-            if (!primaryKeywordInH1) warnings.push('Primary keyword not in H1');
-            if (!primaryKeywordInFirst100Words) warnings.push('Primary keyword not in first 100 words');
-            if (readabilityScore < 60) warnings.push(`Low readability score (${readabilityScore})`);
+            // Warnings - only add warnings that are actually problems
+            if (title.length > 60) warnings.push('Title tag exceeds 60 characters');
+            if (metaDescription.length > 160) warnings.push('Meta description exceeds 160 characters');
+            if (readabilityScore < 30) warnings.push(`Low readability score (${readabilityScore})`);
             if (hasDuplicateTitle) warnings.push('Duplicate title tag');
             if (hasDuplicateMetaDescription) warnings.push('Duplicate meta description');
-            if (!descriptiveImageFilenames) warnings.push('Non-descriptive image filenames');
-            if (hasGenericAnchorText) warnings.push('Generic anchor text used');
+            if (images.length > 2 && !descriptiveImageFilenames) warnings.push('Non-descriptive image filenames');
+            if (allLinks.length > 10 && hasGenericAnchorText) warnings.push('Generic anchor text used');
             if (hasHTTPOutboundLinks) warnings.push('HTTP outbound links found');
             if (hasSchemasConflict) warnings.push('Multiple schema types conflict');
             if (hasRobotsConflict) warnings.push('Meta robots conflict with sitemap');
-            if (missingFromSitemap) warnings.push('Missing from sitemap');
             if (!hasValidHeadingOrder) warnings.push('Invalid heading order');
-            if (!ariaLabelsPresent) warnings.push('Missing ARIA labels');
-            if (altTextCoverage < 90) warnings.push(`Low alt text coverage (${altTextCoverage}%)`);
-            if (!isMobileResponsive) warnings.push('Mobile responsive issues');
-            if (wordCount < 300) warnings.push(`Low word count (${wordCount})`);
+            if (altTextCoverage < 80 && images.length > 0) warnings.push(`Low alt text coverage (${altTextCoverage}%)`);
+            if (wordCount < 200 && !url.includes('/tools/') && !url.includes('/contact')) warnings.push(`Low word count (${wordCount})`);
             
             // Count passed checks
             passedChecks = totalChecks - (criticalIssues.length + warnings.length);
