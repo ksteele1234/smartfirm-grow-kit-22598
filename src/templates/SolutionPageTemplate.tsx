@@ -16,6 +16,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
+        pageType="solution"
         title={data.title}
         description={data.heroSubtitle || data.problemStatement}
       />

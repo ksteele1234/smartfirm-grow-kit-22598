@@ -14,6 +14,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
+        pageType="industry"
         title={data.title}
         description={data.heroSubtitle || data.industryOverview}
       />

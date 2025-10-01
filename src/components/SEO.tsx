@@ -6,13 +6,22 @@ interface SEOProps {
   description?: string;
   image?: string;
   noindex?: boolean;
+  // Template fields
+  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'default';
+  serviceName?: string;
+  audience?: string;
+  topic?: string;
 }
 
 const SEO = ({ 
   title, 
   description,
   image,
-  noindex = true // Pre-launch: noindex by default
+  noindex = true, // Pre-launch: noindex by default
+  pageType = 'default',
+  serviceName,
+  audience,
+  topic
 }: SEOProps) => {
   const location = useLocation();
   
@@ -22,8 +31,31 @@ const SEO = ({
   const siteName = "SmartFirm";
   const primaryDomain = "smartfirm.io";
   
-  const pageTitle = title ? `${title} | SmartFirm` : defaultTitle;
-  const pageDescription = description || defaultDescription;
+  // Generate title based on template or use custom
+  let generatedTitle = defaultTitle;
+  if (title) {
+    // Custom title provided - check if it already includes " | SmartFirm"
+    generatedTitle = title.includes('SmartFirm') ? title : `${title} | SmartFirm`;
+  } else if (pageType === 'service' && serviceName) {
+    generatedTitle = `${serviceName} for Finance Firms | SmartFirm`;
+  } else if (pageType === 'blog' && topic) {
+    generatedTitle = `${topic} | SmartFirm Blog`;
+  }
+  
+  // Generate description based on template or use custom
+  let generatedDescription = defaultDescription;
+  if (description) {
+    // Custom description provided
+    generatedDescription = description;
+  } else if (pageType === 'service' && serviceName) {
+    const targetAudience = audience || 'accounting firms';
+    generatedDescription = `Discover how SmartFirm's ${serviceName} helps ${targetAudience} automate processes, improve client experience, and grow.`;
+  } else if (pageType === 'blog' && topic) {
+    generatedDescription = `Learn ${topic} for finance firms: actionable tips and tools from SmartFirm.`;
+  }
+  
+  const pageTitle = generatedTitle;
+  const pageDescription = generatedDescription;
   const pageImage = image || defaultImage;
   const canonicalUrl = `https://${primaryDomain}${location.pathname}`;
   

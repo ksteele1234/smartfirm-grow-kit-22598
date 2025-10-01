@@ -16,6 +16,8 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
+        pageType={data.category.toLowerCase().includes('blog') ? 'blog' : 'default'}
+        topic={data.category.toLowerCase().includes('blog') ? data.heroTitle : undefined}
         title={data.title}
         description={data.heroSubtitle || data.metaDescription}
       />

@@ -16,6 +16,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
+        pageType="service"
+        serviceName={data.title.replace(' for Accounting Firms', '').replace(' for Finance Firms', '')}
+        audience="accounting firms"
         title={data.title}
         description={data.heroDescription || data.heroSubtitle}
       />
