@@ -285,6 +285,8 @@ const TechStackROICalculator = () => {
             Back to Tools
           </Link>
           
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Tech Stack ROI Calculator</h1>
+          
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary flex items-center">

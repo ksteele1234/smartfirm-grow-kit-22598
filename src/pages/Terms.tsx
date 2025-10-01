@@ -1,9 +1,16 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Terms of Service | SmartFirm"
+        description="SmartFirm terms of service governing the use of our software, tools, and services. Updated for Oregon law compliance."
+        pageType="default"
+        noindex={false}
+      />
       <Header />
       
       {/* Hero Section */}

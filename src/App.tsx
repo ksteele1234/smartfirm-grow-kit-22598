@@ -121,7 +121,7 @@ const App = () => (
         <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
         <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
         <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
-        <Route path="/industries/audit-&-assurance" element={<AuditAssurance />} />
+        <Route path="/industries/audit-assurance" element={<AuditAssurance />} />
         
         {/* Tools & Calculators */}
         <Route path="/tools" element={<ToolsCalculators />} />

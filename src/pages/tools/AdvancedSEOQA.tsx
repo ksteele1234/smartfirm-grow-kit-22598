@@ -84,7 +84,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     "/services/social-media-management", "/services/email-marketing",
     "/services/website-design", "/industries/tax-preparation",
     "/industries/bookkeeping-services", "/industries/business-advisory",
-    "/industries/audit-&-assurance", "/tools",
+    "/industries/audit-assurance", "/tools",
     "/tools/efficiency-quiz", "/tools/marketing-scorecard", "/tools/roi-calculator",
     "/tools/automation-readiness-quiz", "/tools/workflow-bottleneck-finder",
     "/tools/tech-stack-roi-calculator", "/tools/client-lifetime-value-calculator",

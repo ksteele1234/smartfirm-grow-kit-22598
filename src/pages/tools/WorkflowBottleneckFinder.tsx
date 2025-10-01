@@ -251,6 +251,8 @@ const WorkflowBottleneckFinder = () => {
             Back to Tools
           </Link>
           
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Workflow Bottleneck Finder</h1>
+          
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Workflow Bottleneck Finder</CardTitle>

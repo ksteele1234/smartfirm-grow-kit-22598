@@ -82,7 +82,7 @@ const SEOAudit = () => {
     "/industries/tax-preparation",
     "/industries/bookkeeping-services",
     "/industries/business-advisory",
-    "/industries/audit-&-assurance",
+    "/industries/audit-assurance",
     "/tools",
     "/tools/efficiency-quiz",
     "/tools/marketing-scorecard",

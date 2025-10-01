@@ -309,6 +309,8 @@ const LeadGenerationScorecard = () => {
             Back to Tools
           </Link>
           
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Lead Generation Scorecard</h1>
+          
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Lead Generation Scorecard</CardTitle>

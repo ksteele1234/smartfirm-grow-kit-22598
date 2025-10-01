@@ -1,9 +1,16 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const Cookies = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cookie Policy | SmartFirm"
+        description="Learn how SmartFirm uses cookies to improve your website experience. Manage your cookie preferences and settings."
+        pageType="default"
+        noindex={false}
+      />
       <Header />
       
       {/* Hero Section */}

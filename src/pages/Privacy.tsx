@@ -1,9 +1,16 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Privacy Policy | SmartFirm"
+        description="Learn how SmartFirm collects, uses, and protects your information. Updated to comply with Oregon Consumer Privacy Act (OCPA)."
+        pageType="default"
+        noindex={false}
+      />
       <Header />
       
       {/* Hero Section */}
