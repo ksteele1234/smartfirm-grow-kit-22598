@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Linkedin, Youtube, Instagram } from "lucide-react";
+import OptimizedImage from "@/components/ui/optimized-image";
 import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 
 const Footer = () => {
@@ -40,9 +41,11 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <a href="/" className="flex items-center mb-4">
-                  <img 
+                  <OptimizedImage 
                     src={smartFirmLogo} 
-                    alt="SmartFirm - Marketing and Automation for Accounting Firms" 
+                    alt="SmartFirm - Marketing and Automation for Accounting Firms"
+                    width={150}
+                    height={32}
                     className="h-8 w-auto"
                   />
                 </a>

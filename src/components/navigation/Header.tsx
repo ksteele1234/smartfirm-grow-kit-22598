@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/optimized-image";
 import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 import {
   NavigationMenu,
@@ -134,9 +135,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <img 
+              <OptimizedImage 
                 src={smartFirmLogo} 
-                alt="SmartFirm - Marketing and Automation for Accounting Firms" 
+                alt="SmartFirm - Marketing and Automation for Accounting Firms"
+                width={150}
+                height={32}
+                priority
                 className="h-8 w-auto"
               />
             </a>

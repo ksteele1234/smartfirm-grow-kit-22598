@@ -1,10 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Home, Search, ArrowLeft } from "lucide-react";
+import { Home, Search } from "lucide-react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import OptimizedImage from "@/components/ui/optimized-image";
 import piggyBank from "@/assets/404-piggy-bank.png";
 
 const NotFound = () => {
@@ -27,9 +28,13 @@ const NotFound = () => {
         <div className="max-w-2xl w-full text-center">
           {/* Piggy Bank Image */}
           <div className="mb-8 flex justify-center">
-            <img 
+            <OptimizedImage 
               src={piggyBank} 
-              alt="Cracked piggy bank smiling" 
+              alt="Cracked piggy bank smiling"
+              width={192}
+              height={192}
+              description="Cracked piggy bank smiling"
+              context="404 error page"
               className="w-48 h-48 object-contain"
             />
           </div>

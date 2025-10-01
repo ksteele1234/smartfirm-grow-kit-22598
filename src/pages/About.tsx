@@ -2,6 +2,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import OptimizedImage from "@/components/ui/optimized-image";
 import { 
   ArrowRight, 
   Target, 
@@ -205,9 +206,13 @@ const About = () => {
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
                 <div className="lg:col-span-1 flex justify-center items-start">
-                  <img 
+                  <OptimizedImage 
                     src={katieSteeleImage} 
                     alt="Katie Steele, Founder & CEO"
+                    width={256}
+                    height={256}
+                    description="Katie Steele professional headshot"
+                    context="About SmartFirm page"
                     className="w-64 h-64 rounded-lg object-cover shadow-elegant"
                   />
                 </div>
@@ -300,9 +305,13 @@ const About = () => {
                 return (
                   <Card key={index} className="text-center border-light-border shadow-elegant">
                     <CardHeader className="pb-4">
-                      <img 
+                      <OptimizedImage 
                         src={member.image} 
                         alt={member.name}
+                        width={128}
+                        height={128}
+                        description={`${member.name} professional headshot`}
+                        context="SmartFirm team member"
                         className={imageClasses}
                       />
                       <CardTitle className="text-xl text-primary-blue mb-2">
