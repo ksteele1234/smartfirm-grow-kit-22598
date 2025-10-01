@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
+import { 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+} from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 
 interface IndustryPageTemplateProps {
@@ -11,6 +14,21 @@ interface IndustryPageTemplateProps {
 }
 
 const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
+  const defaultFAQs = [
+    {
+      question: "Do you work with firms like mine?",
+      answer: "Yes, we specialize in serving firms in your industry with tailored solutions for your unique challenges."
+    },
+    {
+      question: "What makes your approach different?",
+      answer: "We combine industry expertise with proven automation to deliver measurable results for accounting firms."
+    },
+    {
+      question: "How do you ensure compliance?",
+      answer: "All our solutions are designed with accounting industry standards and compliance requirements in mind."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -18,8 +36,37 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         title={data.title}
         description={(data.heroSubtitle || data.industryOverview).substring(0, 155)}
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Industries", url: "/industries" },
+          { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
+        ]}
+        faqs={defaultFAQs}
       />
       <Header />
+      
+      {/* Breadcrumbs */}
+      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+        <div className="max-w-7xl mx-auto">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/industries">Industries</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-primary/10">
         <div className="max-w-7xl mx-auto text-center">
@@ -144,6 +191,23 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                   </Button>
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {defaultFAQs.map((faq, index) => (
+              <details key={index} className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
+                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>

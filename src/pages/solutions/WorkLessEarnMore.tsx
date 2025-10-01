@@ -9,7 +9,7 @@ const WorkLessEarnMore = () => {
     metaDescription: "Maximize profitability while reducing hours through automation, efficient systems, and strategic positioning that lets you work less while earning more.",
     content: {},
     heroTitle: "Work Less, Earn More",
-    heroSubtitle: "Maximize your profitability while reducing your hours through smart automation and efficient systems",
+    heroSubtitle: "Work less, earn more—that's the promise of smart automation. Maximize your profitability while reducing your hours through efficient systems and strategic positioning.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
     keyBenefits: [

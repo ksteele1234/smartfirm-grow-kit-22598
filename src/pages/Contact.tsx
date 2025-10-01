@@ -113,7 +113,7 @@ const Contact = () => {
                         <Phone className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-primary">Phone</h3>
+                        <p className="font-heading font-semibold text-primary">Phone</p>
                         <p className="text-text-secondary">(541) 658-3789</p>
                         <p className="text-sm text-text-light">Monday - Friday: 9 AM - 6 PM PST</p>
                       </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                         <Mail className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-primary">Email</h3>
+                        <p className="font-heading font-semibold text-primary">Email</p>
                         <p className="text-text-secondary">contact@smartfirm.io</p>
                         <p className="text-sm text-text-light">We respond within 24 hours</p>
                       </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-primary">Location</h3>
+                        <p className="font-heading font-semibold text-primary">Location</p>
                         <p className="text-text-secondary">Eugene, OR</p>
                         <p className="text-sm text-text-light">Serving accounting firms nationwide</p>
                       </div>
@@ -158,7 +158,7 @@ const Contact = () => {
                         <Clock className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-primary">Business Hours</h3>
+                        <p className="font-heading font-semibold text-primary">Business Hours</p>
                         <div className="text-text-secondary">
                           <div>Monday - Friday: 9 AM - 6 PM</div>
                           <div>Saturday - Sunday: Closed</div>

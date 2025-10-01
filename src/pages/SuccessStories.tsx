@@ -229,10 +229,10 @@ const SuccessStories = () => {
             <Card className="max-w-4xl mx-auto shadow-card">
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                <div>
+                    <p className="text-2xl font-heading font-bold text-primary mb-4">
                       {featuredCaseStudy.title}
-                    </h3>
+                    </p>
                     <p className="text-text-secondary mb-6">
                       {featuredCaseStudy.summary}
                     </p>

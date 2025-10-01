@@ -6,6 +6,9 @@ import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
+import { 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+} from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 
 interface ServicePageTemplateProps {
@@ -13,6 +16,21 @@ interface ServicePageTemplateProps {
 }
 
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
+  const defaultFAQs = [
+    {
+      question: "How long does implementation take?",
+      answer: "Most service implementations are completed within 2-4 weeks, with initial results visible in the first month."
+    },
+    {
+      question: "What integrations are supported?",
+      answer: "We integrate with leading accounting platforms including QuickBooks, Xero, and popular CRM systems."
+    },
+    {
+      question: "Is training included?",
+      answer: "Yes, we provide comprehensive onboarding and training for your team to ensure smooth adoption."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -22,8 +40,37 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         title={data.title}
         description={(data.heroDescription || data.heroSubtitle).substring(0, 155)}
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), url: window.location.pathname }
+        ]}
+        faqs={defaultFAQs}
       />
       <Header />
+      
+      {/* Breadcrumbs */}
+      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+        <div className="max-w-7xl mx-auto">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', '')}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
       {/* Hero Section */}
       <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
         <FloatingShapes variant="circles" />
@@ -125,6 +172,23 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                   </div>
                 )}
               </StandardCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {defaultFAQs.map((faq, index) => (
+              <details key={index} className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
+                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>

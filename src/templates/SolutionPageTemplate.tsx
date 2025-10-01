@@ -6,6 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
+import { 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+} from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 
 interface SolutionPageTemplateProps {
@@ -13,6 +16,21 @@ interface SolutionPageTemplateProps {
 }
 
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
+  const defaultFAQs = [
+    {
+      question: "How quickly will I see results?",
+      answer: "Most firms see measurable improvements within 30-60 days of implementation."
+    },
+    {
+      question: "What support is included?",
+      answer: "All solutions include dedicated support, regular check-ins, and ongoing optimization."
+    },
+    {
+      question: "Can this scale with my firm?",
+      answer: "Yes, our solutions are designed to grow with your firm from 5 to 50+ employees."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -20,8 +38,37 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         title={data.title}
         description={(data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Solutions", url: "/solutions" },
+          { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
+        ]}
+        faqs={defaultFAQs}
       />
       <Header />
+      
+      {/* Breadcrumbs */}
+      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+        <div className="max-w-7xl mx-auto">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
         <FloatingShapes variant="squares" />
@@ -48,18 +95,18 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           {/* Asymmetrical layout with accent line */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <h2 className="text-3xl font-bold text-primary mb-6">
+              <p className="text-3xl font-bold text-primary mb-6">
                 The Challenge
-              </h2>
+              </p>
               <p className="text-lg text-text-secondary mb-8 leading-relaxed">
                 {data.problemStatement}
               </p>
             </div>
             <div className="relative lg:ml-8">
               <AccentLine orientation="vertical" className="absolute -left-4 top-0 h-full hidden lg:block" />
-              <h2 className="text-3xl font-bold text-teal mb-6">
+              <p className="text-3xl font-bold text-teal mb-6">
                 Our Solution
-              </h2>
+              </p>
               <p className="text-lg text-text-secondary leading-relaxed">
                 {data.solutionOverview}
               </p>
@@ -154,6 +201,23 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   {result.value}
                 </div>
               </StandardCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            {defaultFAQs.map((faq, index) => (
+              <details key={index} className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
+                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+              </details>
             ))}
           </div>
         </div>
