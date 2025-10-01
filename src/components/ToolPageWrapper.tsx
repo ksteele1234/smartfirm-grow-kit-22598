@@ -1,0 +1,141 @@
+import { ReactNode } from "react";
+import Header from "@/components/navigation/Header";
+import Footer from "@/components/navigation/Footer";
+import SEO from "@/components/SEO";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+
+interface ToolPageWrapperProps {
+  title: string;
+  description: string;
+  pageTitle: string;
+  intro?: string;
+  children: ReactNode;
+  faqs?: Array<{ question: string; answer: string }>;
+}
+
+const defaultFAQs = [
+  {
+    question: "How do these tools help my accounting firm?",
+    answer: "Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources."
+  },
+  {
+    question: "Are these assessments really free?",
+    answer: "Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement."
+  },
+  {
+    question: "How long do the assessments take?",
+    answer: "Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations."
+  },
+  {
+    question: "What happens after I complete an assessment?",
+    answer: "You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements."
+  }
+];
+
+export const ToolPageWrapper = ({
+  title,
+  description,
+  pageTitle,
+  intro,
+  children,
+  faqs = defaultFAQs
+}: ToolPageWrapperProps) => {
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title={title}
+        description={description}
+        pageType="default"
+        noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Free Tools & Calculators", url: "/tools" },
+          { name: pageTitle, url: window.location.pathname }
+        ]}
+        faqs={faqs}
+      />
+      <Header />
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/tools">Free Tools & Calculators</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+
+      <main className="py-8">
+        {/* Keyword Intro Section */}
+        {intro && (
+          <section className="py-8 bg-gradient-to-br from-background to-muted/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {intro}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
+                  <span>Trusted by accounting professionals</span>
+                  <span>•</span>
+                  <span>Recommended by <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA</a></span>
+                  <span>•</span>
+                  <span>Integrates with <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">QuickBooks</a></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {children}
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {faqs.map((faq, index) => (
+                  <details key={index} className="group border border-border rounded-lg p-6 bg-background">
+                    <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                      {faq.question}
+                      <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default ToolPageWrapper;

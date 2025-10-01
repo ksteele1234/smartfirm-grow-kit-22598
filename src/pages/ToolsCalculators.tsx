@@ -12,6 +12,14 @@ import {
   Users,
   BarChart3
 } from "lucide-react";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const ToolsCalculators = () => {
   const tools = [
@@ -52,19 +60,60 @@ const ToolsCalculators = () => {
       <SEO 
         title="Free Tools & Calculators | SmartFirm"
         description="Free assessment tools for accounting firms. Measure efficiency, marketing ROI, and growth potential with expert-designed calculators."
+        pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Free Tools & Calculators", url: "/tools" }
+        ]}
+        faqs={[
+          {
+            question: "How do these tools help my accounting firm?",
+            answer: "Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources."
+          },
+          {
+            question: "Are these assessments really free?",
+            answer: "Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement."
+          },
+          {
+            question: "How long do the assessments take?",
+            answer: "Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations."
+          },
+          {
+            question: "What happens after I complete an assessment?",
+            answer: "You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements."
+          }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Free Tools & Calculators</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+
+      <main>
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-background to-muted">
-          <div className="container mx-auto text-center">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-muted">
+          <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Free Tools & Calculators
+              Free Tools & Calculators for Accounting Firms
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Assess your firm's performance, identify growth opportunities, and make data-driven decisions 
-              with our expert-designed business intelligence tools.
+              Discover how free tools & calculators can transform your practice. Assess your firm's performance, identify growth opportunities, and make data-driven decisions with our expert-designed business intelligence tools tailored specifically for accounting professionals.
             </p>
           </div>
         </section>
@@ -160,8 +209,8 @@ const ToolsCalculators = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding">
-          <div className="container mx-auto text-center">
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4 text-center">
             <Card className="max-w-2xl mx-auto border-primary/20 bg-gradient-to-br from-accent/30 to-accent/10">
               <CardHeader>
                 <CardTitle className="text-2xl md:text-3xl text-primary mb-4">
@@ -181,6 +230,58 @@ const ToolsCalculators = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    How do these tools help my accounting firm?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    Are these assessments really free?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    How long do the assessments take?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    What happens after I complete an assessment?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                    You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements.
+                  </p>
+                </details>
+              </div>
+            </div>
           </div>
         </section>
       </main>
