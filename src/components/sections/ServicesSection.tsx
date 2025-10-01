@@ -125,7 +125,7 @@ const ServicesSection = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
-                <a href="/services">
+                <a href="/services/all">
                   <Eye className="mr-2 h-5 w-5" />
                   Explore All Services
                 </a>
