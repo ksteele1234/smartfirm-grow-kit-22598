@@ -16,6 +16,7 @@ import {
   Filter,
   ArrowRight
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const SuccessStories = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -128,6 +129,10 @@ const SuccessStories = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Success Stories"
+        description="Real results from accounting firms using SmartFirm's AI-powered automation. See how firms achieved significant growth and operational efficiency."
+      />
       <Header />
       
       {/* Hero Section */}

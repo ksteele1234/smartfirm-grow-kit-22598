@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
+import SEO from "@/components/SEO";
 
 interface IndustryPageTemplateProps {
   data: IndustryPageData;
@@ -12,6 +13,10 @@ interface IndustryPageTemplateProps {
 const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={data.title}
+        description={data.heroSubtitle || data.industryOverview}
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-primary/10">

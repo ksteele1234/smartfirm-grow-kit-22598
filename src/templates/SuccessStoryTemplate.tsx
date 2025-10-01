@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { SuccessStoryData } from "@/types/cms";
 import { Quote, TrendingUp, ArrowRight, Building } from "lucide-react";
+import SEO from "@/components/SEO";
 
 interface SuccessStoryTemplateProps {
   data: SuccessStoryData;
@@ -13,6 +14,10 @@ interface SuccessStoryTemplateProps {
 const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={data.title}
+        description={data.testimonial.quote || `${data.clientName} success story - ${data.industry}`}
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 to-secondary/10">

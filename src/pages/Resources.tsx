@@ -16,6 +16,7 @@ import {
   Mail,
   MessageSquare
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Resources = () => {
   const resourceCategories = [
@@ -80,6 +81,10 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Resources"
+        description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert resources for CPA marketing and practice management."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

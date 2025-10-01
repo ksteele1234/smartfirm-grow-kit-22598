@@ -20,6 +20,7 @@ import katieSteeleImage from "@/assets/katie-steele.png";
 import brianHellewellImage from "@/assets/brian-hellewell.png";
 import graceMendezImage from "@/assets/grace-mendez.png";
 import yvonneGaliciaImage from "@/assets/yvonne-galicia.png";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const coreValues = [
@@ -100,6 +101,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="About Us"
+        description="SmartFirm empowers accounting firms with AI-powered marketing automation and technology solutions. Learn about our mission to help firms grow through intelligent automation."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

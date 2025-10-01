@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import SEO from "@/components/SEO";
 
 const Solutions = () => {
   const solutionCategories = [
@@ -47,6 +48,10 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Solutions"
+        description="AI-powered solutions for accounting firms' biggest challenges. From client retention to competitive positioning and sustainable growth strategies."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

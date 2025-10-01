@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ResourcePageData } from "@/types/cms";
 import { Calendar, Clock, Download, ArrowRight, BookOpen } from "lucide-react";
+import SEO from "@/components/SEO";
 
 interface ResourcePageTemplateProps {
   data: ResourcePageData;
@@ -14,6 +15,10 @@ interface ResourcePageTemplateProps {
 const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={data.title}
+        description={data.heroSubtitle || data.metaDescription}
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-secondary/10">

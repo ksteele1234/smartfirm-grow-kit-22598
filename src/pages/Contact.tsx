@@ -3,6 +3,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   useEffect(() => {
@@ -23,6 +24,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with SmartFirm to transform your accounting firm's marketing. Speak with experts who understand the unique challenges of accounting practices."
+      />
       <Header />
       
       {/* Hero Section */}

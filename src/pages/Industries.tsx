@@ -22,6 +22,7 @@ import {
   FileText,
   PieChart
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Industries = () => {
   const industryCategories = [
@@ -85,6 +86,10 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Industries We Serve"
+        description="AI-powered marketing and automation solutions tailored for solo CPAs, small firms, bookkeepers, tax preparation, and business advisory practices."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

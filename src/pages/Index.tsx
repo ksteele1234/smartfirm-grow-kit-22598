@@ -6,10 +6,15 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title=""
+        description="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth."
+      />
       <Header />
       <main>
         <HeroSection />

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+
 const Services = () => {
   const serviceCategories = [{
     icon: <Zap className="h-8 w-8 text-primary" />,
@@ -33,6 +35,10 @@ const Services = () => {
     link: "/services/packages"
   }];
   return <div className="min-h-screen bg-background">
+      <SEO 
+        title="Services"
+        description="AI-powered services for accounting firms. From intelligent marketing automation to predictive business intelligence and strategic AI consulting."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

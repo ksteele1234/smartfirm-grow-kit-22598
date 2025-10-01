@@ -6,6 +6,7 @@ import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
+import SEO from "@/components/SEO";
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
@@ -14,6 +15,10 @@ interface ServicePageTemplateProps {
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={data.title}
+        description={data.heroDescription || data.heroSubtitle}
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">

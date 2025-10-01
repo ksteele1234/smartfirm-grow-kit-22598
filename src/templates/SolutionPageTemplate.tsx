@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
+import SEO from "@/components/SEO";
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
@@ -14,6 +15,10 @@ interface SolutionPageTemplateProps {
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={data.title}
+        description={data.heroSubtitle || data.problemStatement}
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">

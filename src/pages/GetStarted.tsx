@@ -18,6 +18,7 @@ import {
   Clock,
   Target
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const GetStarted = () => {
   useEffect(() => {
@@ -77,6 +78,10 @@ const GetStarted = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Get Started"
+        description="Start your journey with SmartFirm. Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm."
+      />
       <Header />
       
       {/* Hero Section */}

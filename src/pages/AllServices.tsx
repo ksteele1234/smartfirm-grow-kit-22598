@@ -17,6 +17,7 @@ import {
   Phone
 } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import SEO from "@/components/SEO";
 
 const AllServices = () => {
   const services = [
@@ -84,6 +85,10 @@ const AllServices = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="All Services"
+        description="Complete suite of marketing automation, technology solutions, and business optimization services for accounting firms. From lead generation to client retention."
+      />
       <Header />
       
       {/* Hero Section */}
