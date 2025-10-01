@@ -157,6 +157,12 @@ const SEO = ({
     updateMetaTag('twitter:description', pageDescription);
     updateMetaTag('twitter:image', pageImage.startsWith('http') ? pageImage : `https://${primaryDomain}${pageImage}`);
     
+    // Article meta for freshness
+    updateMetaTag('article:modified_time', dateModified || new Date().toISOString(), true);
+    if (datePublished) {
+      updateMetaTag('article:published_time', datePublished, true);
+    }
+    
     // Canonical URL
     updateLinkTag('canonical', canonicalUrl);
 

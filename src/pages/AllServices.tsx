@@ -18,6 +18,9 @@ import {
 } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
+import { 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+} from "@/components/ui/breadcrumb";
 
 const AllServices = () => {
   const services = [
@@ -90,8 +93,35 @@ const AllServices = () => {
         description="Complete suite of marketing, technology, and optimization services for accounting firms. Lead generation to client retention."
         pageType="service"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" },
+          { name: "All Services", url: "/services/all" }
+        ]}
       />
       <Header />
+      
+      {/* Breadcrumbs */}
+      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+        <div className="max-w-7xl mx-auto">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/services">Services</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>All Services</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
       
       {/* Hero Section */}
       <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
@@ -131,10 +161,77 @@ const AllServices = () => {
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</h3>
+              <ul className="list-disc pl-6 text-text-secondary space-y-2">
+                <li>Predictable pipeline with automation that follows up 24/7</li>
+                <li>Higher close rates from faster response and better nurturing</li>
+                <li>Improved client retention through consistent touchpoints</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Operational Wins</h3>
+              <ul className="list-disc pl-6 text-text-secondary space-y-2">
+                <li>Less tool-juggling with integrated systems that your team will use</li>
+                <li>Clear reporting and dashboards in plain English</li>
+                <li>Processes that scale without adding headcount</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-background-light/50 border-t border-border/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</h3>
+              <p className="text-text-secondary">We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">2) Implementation</h3>
+              <p className="text-text-secondary">We configure automations, integrations, and content—done for you—to launch quickly.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-2">3) Optimize & Scale</h3>
+              <p className="text-text-secondary">We measure results, refine campaigns, and expand what works across services and offices.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Frequently Asked Questions</h2>
+          <div className="space-y-4">
+            <details className="border border-border rounded-lg p-4 bg-background">
+              <summary className="cursor-pointer font-medium text-foreground">How fast can we get live?</summary>
+              <div className="text-muted-foreground mt-2">Most firms launch within 2–4 weeks, with early wins often in the first 30 days.</div>
+            </details>
+            <details className="border border-border rounded-lg p-4 bg-background">
+              <summary className="cursor-pointer font-medium text-foreground">Will this integrate with our tools?</summary>
+              <div className="text-muted-foreground mt-2">Yes—QuickBooks, Xero, Google/Microsoft, and practice tools like Karbon and Canopy.</div>
+            </details>
+            <details className="border border-border rounded-lg p-4 bg-background">
+              <summary className="cursor-pointer font-medium text-foreground">Is training provided?</summary>
+              <div className="text-muted-foreground mt-2">We include team training and documentation so adoption sticks.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-light-teal">Ready to Transform Your Practice?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</h2>
           <p className="text-xl opacity-90 mb-8 text-white/90">
             Let's create a customized growth plan for your firm. Book a free strategy call to discover which services will have the biggest impact on your practice.
           </p>

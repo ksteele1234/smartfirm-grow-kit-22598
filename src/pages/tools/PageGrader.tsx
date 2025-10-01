@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -241,10 +241,9 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
     const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
     const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
-    const h1Elements = doc.querySelectorAll('h1');
-    
     // Improved body text extraction - target main content areas more carefully
     const mainContent = doc.querySelector('main') || doc.body;
+    const h1Elements = mainContent.querySelectorAll('h1');
     let bodyText = '';
     if (mainContent) {
       const clone = mainContent.cloneNode(true) as HTMLElement;
@@ -664,7 +663,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
 
     // F) Brand, Accessibility & UX (10 pts)
     // Heading hierarchy valid (4)
-    const headings = Array.from(doc.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headings = Array.from((mainContent || doc.body).querySelectorAll('h1, h2, h3, h4, h5, h6'));
     let hasValidHeadingOrder = true;
     let lastLevel = 0;
     
@@ -1186,7 +1185,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
                   </TableHeader>
                   <TableBody>
                     {filteredResults.map((page) => (
-                      <>
+                      <Fragment key={page.url}>
                         <TableRow key={page.url} className="cursor-pointer hover:bg-muted/50">
                           <TableCell className="font-medium">{page.url}</TableCell>
                           <TableCell>{page.score}/100</TableCell>
@@ -1325,7 +1324,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
                             </TableCell>
                           </TableRow>
                         )}
-                      </>
+                      </Fragment>
                     ))}
                   </TableBody>
                 </Table>
