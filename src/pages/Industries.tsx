@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -91,11 +99,34 @@ const Industries = () => {
         description="Marketing solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices."
         pageType="industry"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Industries", url: "/industries" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Industries</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Marketing Solutions for Your Accounting Niche
@@ -108,16 +139,21 @@ const Industries = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              Serving a Spectrum of Accounting Professionals
-            </h2>
-            <p className="text-lg text-text-secondary max-w-4xl mx-auto">
-              From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
-              challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
-              perfectly with your practice area and growth stage.
-            </p>
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+                Serving a Spectrum of Accounting Professionals
+              </h2>
+              <p className="text-lg text-text-secondary text-center leading-relaxed">
+                From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
+                challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
+                perfectly with your practice area and growth stage.
+              </p>
+              <p className="text-lg text-text-secondary text-center leading-relaxed">
+                Whether you're a solo CPA looking to streamline operations, a small firm aiming to compete with larger practices, or an established firm seeking to modernize your marketing approach, SmartFirm delivers industry-specific solutions that drive results. We've helped hundreds of accounting professionals across all specializations achieve measurable growth through targeted strategies and proven methodologies.
+              </p>
+            </div>
           </div>
         </section>
 

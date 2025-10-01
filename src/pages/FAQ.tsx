@@ -1,6 +1,14 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -150,18 +158,41 @@ const FAQ = () => {
         description="Common questions about SmartFirm's marketing automation, technology solutions, and services for accounting firms."
         pageType="faq"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "FAQ", url: "/faq" }
+        ]}
         faqs={allFAQs}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>FAQ</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Frequently Asked Questions
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-              Get answers to common questions about marketing automation, technology solutions, and growth strategies for accounting firms.
+              Get answers to common questions about marketing automation, technology solutions, and growth strategies for accounting firms. Whether you're working with <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA</a> standards or integrating with platforms like <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">QuickBooks</a>, we provide solutions designed specifically for CPAs and accounting professionals.
             </p>
             
             {/* Search Bar */}
@@ -178,8 +209,19 @@ const FAQ = () => {
           </div>
         </section>
 
+        {/* Introduction Content */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-6 text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                SmartFirm specializes in helping accounting firms leverage technology and automation to grow their practices. Our solutions are built on proven methodologies that comply with professional standards while delivering measurable results. We understand the unique challenges accountants face and provide clear, practical answers to help you make informed decisions.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Content */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (

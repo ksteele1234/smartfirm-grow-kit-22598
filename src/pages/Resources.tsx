@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -86,11 +94,34 @@ const Resources = () => {
         description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert CPA marketing resources."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Resources", url: "/resources" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Resources</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Grow Your Firm with Our Expert Resources
@@ -113,16 +144,21 @@ const Resources = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              Your Hub for Accounting Firm Success
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies. 
-              Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations, 
-              our expert-curated content provides the guidance you need to succeed.
-            </p>
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+                Your Hub for Accounting Firm Success
+              </h2>
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
+                SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies. 
+                Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations, 
+                our expert-curated content provides the guidance you need to succeed.
+              </p>
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
+                We've compiled years of experience working with accounting firms into comprehensive guides, interactive tools, and case studies that deliver real-world results. From ROI calculators to SEO audits, marketing scorecards to workflow templates, every resource is designed to help you make informed decisions and take action toward growth.
+              </p>
+            </div>
           </div>
         </section>
 

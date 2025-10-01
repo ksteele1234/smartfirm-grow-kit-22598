@@ -3,6 +3,14 @@ import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/ui/optimized-image";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { 
   ArrowRight, 
   Target, 
@@ -107,18 +115,56 @@ const About = () => {
         description="SmartFirm empowers accounting firms with marketing automation and technology solutions. Our mission is to help firms grow."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "About Us", url: "/about" }
+        ]}
+        faqs={[
+          {
+            question: "How do I get started?",
+            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+          },
+          {
+            question: "What is the pricing structure?",
+            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
+          },
+          {
+            question: "Do you offer guarantees?",
+            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+          }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>About Us</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Our Story: Empowering Accounting Firms to Thrive
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We believe every accounting firm has the potential for extraordinary growth through AI-driven innovation. 
-              Our mission is to provide the intelligent tools, predictive expertise, and automated support to make that vision a reality.
+              At SmartFirm, we're dedicated to empowering accounting firms to thrive in today's competitive marketplace. 
+              We believe every practice—whether solo CPA, small firm, or large enterprise—has the potential for extraordinary growth through intelligent automation and strategic marketing. 
+              Our mission is to provide the AI-driven tools, expert guidance, and proven systems to make that vision a reality.
             </p>
           </div>
         </section>
@@ -390,8 +436,50 @@ const About = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    How do I get started?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    Book a free strategy call to discuss your firm's specific needs and goals. We'll evaluate your current situation and provide customized recommendations for growth.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    What is the pricing structure?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    Do you offer guarantees?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. Our solutions are backed by proven results from hundreds of accounting firms.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-primary-blue to-primary-teal text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary to-teal text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares

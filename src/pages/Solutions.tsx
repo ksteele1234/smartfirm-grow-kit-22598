@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -53,11 +61,34 @@ const Solutions = () => {
         description="Growth solutions for accounting firms. Client retention, lead generation, and competitive strategies that drive results."
         pageType="solution"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Solutions", url: "/solutions" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-4 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Solutions</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-background to-teal/10 relative overflow-hidden">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-teal/10 relative overflow-hidden">
           <BackgroundPattern pattern="dots" className="opacity-20" />
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
@@ -71,8 +102,22 @@ const Solutions = () => {
           </div>
         </section>
 
+        {/* Introduction Content */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Every accounting firm faces unique challenges in today's competitive marketplace. Whether you're struggling to attract new clients, retain existing ones, or scale your practice efficiently, SmartFirm provides targeted solutions designed specifically for accounting professionals.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our proven methodologies combine marketing automation, technology integration, and strategic guidance to help you overcome obstacles and achieve sustainable growth. We understand the accounting industry inside and out, ensuring our solutions align with your professional standards and business objectives.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Solution Categories */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-16">
               Common Pain Points We Address
