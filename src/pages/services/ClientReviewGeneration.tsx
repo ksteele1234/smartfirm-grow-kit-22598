@@ -62,6 +62,16 @@ const ClientReviewGeneration = () => {
           "Thank you message automation",
           "Review analysis and insights"
         ]
+      },
+      {
+        title: "Reputation Monitoring & Analytics",
+        description: "Track and analyze your online reputation performance",
+        details: [
+          "Real-time review notifications",
+          "Sentiment analysis tracking",
+          "Competitive benchmarking",
+          "Monthly reputation reports"
+        ]
       }
     ],
     ctaTitle: "Start Building Your Review Reputation",

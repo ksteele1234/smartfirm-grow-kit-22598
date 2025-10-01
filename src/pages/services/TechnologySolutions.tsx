@@ -62,6 +62,16 @@ const TechnologySolutions = () => {
           "Compliance and regulatory requirements management",
           "Remote work enablement and collaboration tools"
         ]
+      },
+      {
+        title: "Training & Support",
+        description: "Ongoing support and training for your technology systems",
+        details: [
+          "Staff training and onboarding programs",
+          "Technical support and troubleshooting",
+          "System documentation and best practices",
+          "Continuous improvement and optimization"
+        ]
       }
     ],
     ctaTitle: "Transform Your Firm with Technology",

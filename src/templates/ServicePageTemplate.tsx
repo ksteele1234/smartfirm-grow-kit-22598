@@ -60,7 +60,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Benefits Section */}
-      <section className="pt-12 pb-12 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -74,7 +74,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <GeometricDivider variant="lines" />
           
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mt-6">
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
             {data.benefits.map((benefit, index) => (
               <StandardCard
                 key={index}
@@ -89,7 +89,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section */}
-      <section className="pt-12 pb-12 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
         <BackgroundPattern pattern="grid" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-8">
@@ -100,7 +100,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           
           <GeometricDivider variant="wave" />
           
-          <div className="grid lg:grid-cols-2 gap-8 mt-6">
+          <div className="grid lg:grid-cols-2 gap-8 mt-8">
             {data.features.map((feature, index) => (
               <StandardCard
                 key={index}

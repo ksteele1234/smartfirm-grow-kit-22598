@@ -62,6 +62,16 @@ const ExecutiveServices = () => {
           "Organizational development and culture",
           "Performance improvement initiatives"
         ]
+      },
+      {
+        title: "Interim Executive Leadership",
+        description: "Temporary executive coverage during transitions",
+        details: [
+          "Interim leadership during executive search",
+          "Project-based executive management",
+          "Crisis management and turnaround expertise",
+          "Transition planning and succession support"
+        ]
       }
     ],
     ctaTitle: "Access Executive-Level Expertise",

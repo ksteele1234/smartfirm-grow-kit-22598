@@ -10,14 +10,14 @@ export const GeometricDivider = ({
 }) => {
   const variants = {
     dots: (
-      <div className={cn("flex justify-center items-center space-x-2 py-8", className)}>
+      <div className={cn("flex justify-center items-center space-x-2 py-4", className)}>
         <div className="w-2 h-2 bg-primary rounded-full"></div>
         <div className="w-2 h-2 bg-teal rounded-full"></div>
         <div className="w-2 h-2 bg-primary rounded-full"></div>
       </div>
     ),
     lines: (
-      <div className={cn("flex items-center justify-center py-8", className)}>
+      <div className={cn("flex items-center justify-center py-4", className)}>
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/30 max-w-24"></div>
         <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-4">
           <div className="w-3 h-3 bg-primary rounded-full"></div>
@@ -26,14 +26,14 @@ export const GeometricDivider = ({
       </div>
     ),
     wave: (
-      <div className={cn("py-8 overflow-hidden", className)}>
+      <div className={cn("py-4 overflow-hidden", className)}>
         <svg viewBox="0 0 1200 120" className="w-full h-6">
           <path d="M0,60 Q300,10 600,60 T1200,60" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary/30"/>
         </svg>
       </div>
     ),
     zigzag: (
-      <div className={cn("py-8 overflow-hidden", className)}>
+      <div className={cn("py-4 overflow-hidden", className)}>
         <svg viewBox="0 0 1200 40" className="w-full h-6">
           <path d="M0,20 L50,5 L100,20 L150,5 L200,20 L250,5 L300,20 L350,5 L400,20 L450,5 L500,20 L550,5 L600,20 L650,5 L700,20 L750,5 L800,20 L850,5 L900,20 L950,5 L1000,20 L1050,5 L1100,20 L1150,5 L1200,20" 
                 stroke="currentColor" strokeWidth="2" fill="none" className="text-teal/40"/>

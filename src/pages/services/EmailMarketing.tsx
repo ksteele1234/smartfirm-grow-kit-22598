@@ -62,6 +62,16 @@ const EmailMarketing = () => {
           "Industry-specific communications",
           "Behavioral trigger campaigns"
         ]
+      },
+      {
+        title: "Analytics & Optimization",
+        description: "Track performance and continuously improve results",
+        details: [
+          "Open rate and click-through tracking",
+          "A/B testing for subject lines and content",
+          "Email deliverability optimization",
+          "Conversion tracking and ROI reporting"
+        ]
       }
     ],
     ctaTitle: "Start Nurturing Client Relationships",

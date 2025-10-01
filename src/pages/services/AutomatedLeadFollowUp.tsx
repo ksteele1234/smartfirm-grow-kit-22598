@@ -62,6 +62,16 @@ const AutomatedLeadFollowUp = () => {
           "Pipeline management automation",
           "Reporting and analytics integration"
         ]
+      },
+      {
+        title: "Performance Analytics",
+        description: "Measure and optimize your follow-up effectiveness",
+        details: [
+          "Conversion rate tracking by sequence",
+          "Response time and engagement metrics",
+          "Pipeline velocity analysis",
+          "ROI and attribution reporting"
+        ]
       }
     ],
     ctaTitle: "Ready to Automate Your Lead Follow-Up?",

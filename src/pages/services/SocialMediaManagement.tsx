@@ -62,6 +62,16 @@ const SocialMediaManagement = () => {
           "Lead generation through social interactions",
           "Professional compliance monitoring"
         ]
+      },
+      {
+        title: "Analytics & Performance Tracking",
+        description: "Measure and optimize your social media ROI",
+        details: [
+          "Engagement metrics and audience insights",
+          "Content performance analysis",
+          "Lead tracking and attribution",
+          "Monthly reporting and recommendations"
+        ]
       }
     ],
     ctaTitle: "Build Your Professional Social Media Presence",

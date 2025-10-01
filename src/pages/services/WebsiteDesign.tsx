@@ -62,6 +62,16 @@ const WebsiteDesign = () => {
           "SSL security certificates",
           "Search engine optimization"
         ]
+      },
+      {
+        title: "Content Management System",
+        description: "Easy-to-update website with full control",
+        details: [
+          "User-friendly content management",
+          "Blog and news updates capability",
+          "Service page customization",
+          "Analytics and performance tracking"
+        ]
       }
     ],
     ctaTitle: "Get a Website That Converts",

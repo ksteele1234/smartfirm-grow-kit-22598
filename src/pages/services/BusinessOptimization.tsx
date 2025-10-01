@@ -62,6 +62,16 @@ const BusinessOptimization = () => {
           "Growth planning and forecasting",
           "Risk assessment and mitigation strategies"
         ]
+      },
+      {
+        title: "Change Management & Implementation",
+        description: "Successfully implement improvements across your firm",
+        details: [
+          "Change management planning and execution",
+          "Team training and adoption programs",
+          "Implementation support and guidance",
+          "Performance tracking and adjustment"
+        ]
       }
     ],
     ctaTitle: "Optimize Your Firm's Performance",

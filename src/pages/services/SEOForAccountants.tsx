@@ -62,6 +62,16 @@ const SEOForAccountants = () => {
           "FAQ content creation",
           "Industry-specific resources"
         ]
+      },
+      {
+        title: "Link Building & Authority",
+        description: "Build domain authority through quality backlinks",
+        details: [
+          "Strategic link acquisition campaigns",
+          "Industry directory submissions",
+          "Guest posting opportunities",
+          "Digital PR and outreach"
+        ]
       }
     ],
     ctaTitle: "Ready to Dominate Local Search Results?",
