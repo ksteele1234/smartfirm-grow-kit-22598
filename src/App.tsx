@@ -78,7 +78,7 @@ const App = () => (
         <Route path="/resources" element={<Resources />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/success-stories" element={<SuccessStories />} />
+        <Route path="/case-studies" element={<SuccessStories />} />
         <Route path="/get-started" element={<GetStarted />} />
         
         {/* Solution Sub-pages */}
