@@ -57,6 +57,7 @@ import ClientLifetimeValueCalculator from "./pages/tools/ClientLifetimeValueCalc
 import LeadGenerationScorecard from "./pages/tools/LeadGenerationScorecard";
 import ModernFirmQuiz from "./pages/tools/ModernFirmQuiz";
 import GrowthPotentialScorecard from "./pages/tools/GrowthPotentialScorecard";
+import SEOAudit from "./pages/tools/SEOAudit";
 
 // Legal Pages
 import Privacy from "./pages/Privacy";
@@ -134,6 +135,7 @@ const App = () => (
         <Route path="/tools/lead-generation-scorecard" element={<LeadGenerationScorecard />} />
         <Route path="/tools/modern-firm-quiz" element={<ModernFirmQuiz />} />
         <Route path="/tools/growth-potential-scorecard" element={<GrowthPotentialScorecard />} />
+        <Route path="/tools/seo-audit" element={<SEOAudit />} />
         
         {/* Legal Pages */}
         <Route path="/privacy" element={<Privacy />} />
