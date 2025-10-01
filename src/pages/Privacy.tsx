@@ -1,8 +1,31 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 
 const Privacy = () => {
+  const faqs = [
+    {
+      question: "What personal information do you collect?",
+      answer: "We collect information such as name, email address, phone number, billing details, and business information when you register, purchase services, or communicate with us."
+    },
+    {
+      question: "How do you protect my data?",
+      answer: "We use secure encryption protocols for data storage and transmission, limit access to personal information, and conduct regular security audits."
+    },
+    {
+      question: "Can I request deletion of my data?",
+      answer: "Yes, you can request full account deletion by contacting us at contact@smartfirm.io. We will delete all associated data unless retention is required for legal reasons."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -10,11 +33,34 @@ const Privacy = () => {
         description="Learn how SmartFirm collects, uses, and protects your information. Updated to comply with Oregon Consumer Privacy Act (OCPA)."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Privacy Policy", url: "/privacy" }
+        ]}
+        faqs={faqs}
       />
       <Header />
       
+      {/* Breadcrumb */}
+      <div className="bg-background border-b pt-20">
+        <div className="container mx-auto px-6 py-4">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Privacy Policy</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-20">
+      <section className="bg-gradient-to-br from-primary to-teal py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
             Privacy Policy
@@ -35,7 +81,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">SmartFirm.io Privacy Policy</h2>
+                <p className="text-xl font-semibold text-primary mb-4">SmartFirm.io Privacy Policy</p>
                 <p>
                   This Privacy Policy has been updated to comply with the Oregon Consumer Privacy Act (OCPA), 
                   effective July 1, 2024. It outlines how SmartFirm ("we," "us," or "our") collects, uses, 
@@ -46,9 +92,9 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Information Collection</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Information Collection</p>
                 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Personal Information Collected</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">Personal Information Collected</p>
                 <p>We collect personal information when you:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Register an account</li>
@@ -65,7 +111,7 @@ const Privacy = () => {
                   <li>Support inquiries and user activity on our platform</li>
                 </ul>
 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Non-Personal Information</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">Non-Personal Information</p>
                 <p>We may also collect non-personal data such as:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Browser type and version</li>
@@ -76,7 +122,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Use of Information</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Use of Information</p>
                 <p>We use your information to:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Process and fulfill orders or subscriptions</li>
@@ -89,7 +135,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Protection of Information</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Protection of Information</p>
                 <p>
                   We take reasonable security measures to protect your personal data from unauthorized access, 
                   alteration, disclosure, or destruction. These include:
@@ -102,28 +148,28 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Sharing of Information</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Sharing of Information</p>
                 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">No Selling of Data</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">No Selling of Data</p>
                 <p>
                   We do not sell, trade, or rent your personal information to third parties for marketing purposes.
                 </p>
 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Trusted Third Parties</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">Trusted Third Parties</p>
                 <p>
                   We may share data with service providers who assist in operating our platform (e.g., payment 
                   processors, hosting providers) under strict confidentiality agreements. These third parties are 
                   prohibited from using your data for any purpose other than providing services to SmartFirm.
                 </p>
 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Third-Party Integrations</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">Third-Party Integrations</p>
                 <p>
                   Our platform integrates with services such as Stripe, Meta (Facebook/Instagram), Google, and 
                   GoHighLevel. Use of features powered by these tools is also governed by their individual terms 
                   and privacy policies. We encourage you to review their policies when using integrated services.
                 </p>
 
-                <h3 className="text-xl font-heading font-semibold text-primary mb-3 mt-6">Legal Compliance & Protection</h3>
+                <p className="text-lg font-medium text-primary mb-3 mt-6">Legal Compliance & Protection</p>
                 <p>
                   We may disclose information when required by law or to enforce our policies, protect SmartFirm's 
                   rights, or prevent fraud or security threats.
@@ -131,7 +177,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Cookies & Tracking Technologies</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Cookies & Tracking Technologies</p>
                 <p>
                   We use cookies and similar tracking technologies to enhance your experience, analyze traffic, 
                   and deliver personalized content. You may disable cookies in your browser settings; however, 
@@ -140,7 +186,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Transfers & Storage Locations</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Data Transfers & Storage Locations</p>
                 <p>
                   SmartFirm may store and process your information on servers located in the United States or 
                   other jurisdictions. By using our services, you consent to the transfer of your data to these locations.
@@ -148,7 +194,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Automated Decision-Making & Profiling</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Automated Decision-Making & Profiling</p>
                 <p>
                   We may use automated systems and AI to analyze behavior, score leads, send personalized content, 
                   or support customer service operations. You may request human intervention in decisions made 
@@ -157,7 +203,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Retention Policy</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Data Retention Policy</p>
                 <p>
                   We retain personal information for as long as necessary to provide our services, comply with 
                   legal obligations, resolve disputes, and enforce our agreements. After this period, your 
@@ -166,7 +212,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">User Account Deletion</h2>
+                <p className="text-xl font-semibold text-primary mb-4">User Account Deletion</p>
                 <p>
                   Users may request full account deletion by contacting us at contact@smartfirm.io. Once verified, 
                   we will delete all associated data unless retention is required for legal or operational reasons.
@@ -174,7 +220,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Data Breach Notification</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Data Breach Notification</p>
                 <p>
                   In the unlikely event of a data breach affecting your personal information, we will notify you 
                   in accordance with applicable laws and take immediate action to mitigate any potential impact.
@@ -182,7 +228,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Your Rights Under Oregon Law</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Your Rights Under Oregon Law</p>
                 <p>The OCPA grants Oregon residents the following rights regarding their personal data:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Right to Access:</strong> Request details of your personal data and a list of third parties it has been shared with</li>
@@ -198,7 +244,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Children's Data Protection</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Children's Data Protection</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>For children under 13: Parental or guardian consent is required for collection or processing of sensitive data</li>
                   <li>For ages 13–15: Opt-in consent is required for targeted advertising or profiling</li>
@@ -209,7 +255,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Third-Party Websites</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Third-Party Websites</p>
                 <p>
                   SmartFirm may contain links to third-party sites. We are not responsible for the privacy 
                   practices or content of those sites. Please review their policies before sharing your information.
@@ -217,7 +263,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Compliance with Laws</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Compliance with Laws</p>
                 <p>We may disclose personal information when required to:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Comply with applicable laws, regulations, or government requests</li>
@@ -227,7 +273,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Changes to This Privacy Policy</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Changes to This Privacy Policy</p>
                 <p>
                   We reserve the right to update this Privacy Policy at any time. Changes will be posted on 
                   this page with an updated effective date. Your continued use of SmartFirm services after 
@@ -236,7 +282,7 @@ const Privacy = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-primary mb-4">Contact Us</h2>
+                <p className="text-xl font-semibold text-primary mb-4">Contact Us</p>
                 <p>
                   If you have questions about this Privacy Policy or your rights, or if you'd like to exercise 
                   any data protection requests, contact us at:
@@ -249,6 +295,30 @@ const Privacy = () => {
                   the same address.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <details key={index} className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    {faq.question}
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </div>
