@@ -21,6 +21,8 @@ import {
 interface PageScore {
   url: string;
   pageType: string;
+  title: string;
+  metaDescription: string;
   score: number;
   grade: string;
   technicalScore: number;
@@ -195,6 +197,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     return {
       url,
       pageType,
+      title: '',
+      metaDescription: '',
       score: 0,
       grade: "F",
       technicalScore: 0,
@@ -228,9 +232,18 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
     const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
     const h1Elements = doc.querySelectorAll('h1');
-    const bodyText = doc.body?.textContent || '';
-    const wordCount = bodyText.trim().split(/\\s+/).filter(w => w.length > 0).length;
-    const first100Words = bodyText.trim().split(/\\s+/).slice(0, 100).join(' ');
+    
+    // Better body text extraction - exclude nav, header, footer, scripts
+    const mainContent = doc.querySelector('main') || doc.body;
+    let bodyText = '';
+    if (mainContent) {
+      const clone = mainContent.cloneNode(true) as HTMLElement;
+      // Remove navigation, scripts, styles
+      clone.querySelectorAll('nav, script, style, header, footer, [role="navigation"]').forEach(el => el.remove());
+      bodyText = clone.textContent || '';
+    }
+    const wordCount = bodyText.trim().split(/\s+/).filter(w => w.length > 2).length;
+    const first100Words = bodyText.trim().split(/\s+/).slice(0, 100).join(' ');
 
     // A) Technical & Indexability (25 pts)
     // Canonical present & self-referencing (6)
@@ -616,6 +629,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     return {
       url,
       pageType,
+      title,
+      metaDescription,
       score: totalScore,
       grade,
       technicalScore,
@@ -747,8 +762,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
         rows.push([
           page.url,
           page.pageType,
-          '', // current_title - would need to extract
-          '', // current_meta_description - would need to extract
+          page.title,
+          page.metaDescription,
           suggestion.issueType,
           suggestion.priority,
           suggestion.effort,
