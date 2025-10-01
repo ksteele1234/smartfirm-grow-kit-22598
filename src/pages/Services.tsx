@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
 const Services = () => {
   const serviceCategories = [{
     icon: <Zap className="h-8 w-8 text-primary" />,
@@ -43,12 +44,14 @@ Your Accounting Firm's Growth</h1>
               From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="default" size="lg">
-                Explore All Services
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button variant="default" size="lg" asChild>
+                <Link to="/services/all">
+                  Explore All Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                Book a Free Consultation
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/get-started">Book a Free Consultation</Link>
               </Button>
             </div>
           </div>

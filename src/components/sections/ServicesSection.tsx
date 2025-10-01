@@ -2,6 +2,7 @@ import { StandardCard } from "@/components/ui/standard-card";
 import { ArrowRight, Mail, Search, Star, Users, Zap, Globe, Phone, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const services = [
@@ -125,10 +126,10 @@ const ServicesSection = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
-                <a href="/services/all">
+                <Link to="/services/all">
                   <Eye className="mr-2 h-5 w-5" />
                   Explore All Services
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
