@@ -4,24 +4,24 @@ import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
 
 const Footer = () => {
   const services = [
-    "Automated Lead Follow-up",
-    "Client Review Generation",
-    "SEO for Accountants",
-    "Email Marketing",
-    "Social Media Management",
-    "Website Optimization"
+    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up" },
+    { name: "Client Review Generation", slug: "client-review-generation" },
+    { name: "SEO for Accountants", slug: "seo-for-accountants" },
+    { name: "Email Marketing", slug: "email-marketing" },
+    { name: "Social Media Management", slug: "social-media-management" },
+    { name: "Website Design", slug: "website-design" }
   ];
 
   const solutions = [
-    "Lead Generation",
-    "Firm Scaling", 
-    "Client Retention",
-    "Competitive Positioning"
+    { name: "Lead Generation", slug: "lead-generation" },
+    { name: "Scale Your Firm", slug: "scale-firm" }, 
+    { name: "Client Retention", slug: "client-retention" },
+    { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas" }
   ];
 
   const resources = [
-    "Blog Posts",
-    "Tools & Calculators"
+    { name: "Resources", slug: "/resources" },
+    { name: "Tools & Calculators", slug: "/tools" }
   ];
 
   const hiddenResources = [
@@ -106,12 +106,12 @@ const Footer = () => {
               <h4 className="font-heading font-semibold text-foreground mb-4">Services</h4>
               <ul className="space-y-3">
                 {services.map((service) => (
-                  <li key={service}>
+                  <li key={service.slug}>
                     <a 
-                      href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`/services/${service.slug}`}
                       className="text-text-secondary hover:text-primary transition-colors"
                     >
-                      {service}
+                      {service.name}
                     </a>
                   </li>
                 ))}
@@ -123,12 +123,12 @@ const Footer = () => {
               <h4 className="font-heading font-semibold text-foreground mb-4">Solutions</h4>
               <ul className="space-y-3">
                 {solutions.map((solution) => (
-                  <li key={solution}>
+                  <li key={solution.slug}>
                     <a 
-                      href={`/solutions/${solution.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={`/solutions/${solution.slug}`}
                       className="text-text-secondary hover:text-primary transition-colors"
                     >
-                      {solution}
+                      {solution.name}
                     </a>
                   </li>
                 ))}
@@ -140,12 +140,12 @@ const Footer = () => {
               <h4 className="font-heading font-semibold text-foreground mb-4">Resources</h4>
               <ul className="space-y-3">
                 {resources.map((resource) => (
-                  <li key={resource}>
+                  <li key={resource.slug}>
                     <a 
-                      href={resource === "Tools & Calculators" ? "/tools" : `/resources/${resource.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={resource.slug}
                       className="text-text-secondary hover:text-primary transition-colors"
                     >
-                      {resource}
+                      {resource.name}
                     </a>
                   </li>
                 ))}

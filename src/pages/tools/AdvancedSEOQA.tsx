@@ -135,7 +135,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
         resolve(result);
       };
       
-      // Timeout fallback
+      // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
         resolveAudit({
           url,
@@ -176,10 +176,10 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           passedChecks: 0,
           totalChecks: 30
         });
-      }, 5000);
+      }, 10000);
       
       iframe.onload = () => {
-        // Wait for React hydration
+        // Wait longer for React hydration on complex pages
         setTimeout(() => {
           try {
             const endTime = performance.now();
@@ -524,7 +524,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               totalChecks: 30
             });
           }
-        }, 1500); // Wait for React hydration
+        }, 3000); // Increased wait time for React hydration
       };
       
       iframe.onerror = () => {

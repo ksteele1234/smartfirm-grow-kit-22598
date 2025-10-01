@@ -125,7 +125,7 @@ const SEOAudit = () => {
         resolve(result);
       };
       
-      // Timeout fallback
+      // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
         resolveAudit({
           url,
@@ -148,10 +148,10 @@ const SEOAudit = () => {
           htmlSizeKB: 0,
           issues: ['Page load timeout']
         });
-      }, 5000);
+      }, 10000);
       
       iframe.onload = () => {
-        // Wait for React hydration
+        // Wait longer for React hydration on complex pages
         setTimeout(() => {
           try {
             const doc = iframe.contentDocument;
@@ -294,7 +294,7 @@ const SEOAudit = () => {
               issues: ['Failed to audit page']
             });
           }
-        }, 1500); // Wait for React hydration
+        }, 3000); // Increased wait time for React hydration
       };
       
       iframe.onerror = () => {

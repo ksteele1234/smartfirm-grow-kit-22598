@@ -122,10 +122,10 @@ const Header = () => {
   ];
 
   const industries = [
-    "Tax Preparation",
-    "Bookkeeping Services",
-    "Business Advisory",
-    "Audit & Assurance"
+    { name: "Tax Preparation", slug: "tax-preparation" },
+    { name: "Bookkeeping Services", slug: "bookkeeping-services" },
+    { name: "Business Advisory", slug: "business-advisory" },
+    { name: "Audit & Assurance", slug: "audit-assurance" }
   ];
 
   return (
@@ -259,16 +259,16 @@ const Header = () => {
                   <div className="grid gap-3 p-6 w-[400px] grid-cols-1">
                     {industries.map((industry) => (
                       <NavigationMenuLink
-                        key={industry}
-                        href={`/industries/${industry.toLowerCase().replace(/\s+/g, '-')}`}
+                        key={industry.slug}
+                        href={`/industries/${industry.slug}`}
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
-                        <div className="text-sm font-medium leading-none">{industry}</div>
+                        <div className="text-sm font-medium leading-none">{industry.name}</div>
                         <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {industry === "Tax Preparation" && "Specialized marketing for tax professionals"}
-                          {industry === "Bookkeeping Services" && "Growth strategies for bookkeepers"}
-                          {industry === "Business Advisory" && "Marketing for advisory services"}
-                          {industry === "Audit & Assurance" && "Professional services marketing"}
+                          {industry.name === "Tax Preparation" && "Specialized marketing for tax professionals"}
+                          {industry.name === "Bookkeeping Services" && "Growth strategies for bookkeepers"}
+                          {industry.name === "Business Advisory" && "Marketing for advisory services"}
+                          {industry.name === "Audit & Assurance" && "Professional services marketing"}
                         </p>
                       </NavigationMenuLink>
                     ))}
