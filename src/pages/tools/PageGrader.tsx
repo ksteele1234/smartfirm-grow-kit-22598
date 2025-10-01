@@ -958,10 +958,10 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
             </div>
           </div>
 
-          {!isGrading && results.length === 0 && (
+          {!isGrading && (
             <Button onClick={runGrading} size="lg" className="w-full">
               <Play className="mr-2 h-5 w-5" />
-              Start Page Grading
+              {results.length === 0 ? 'Start Page Grading' : 'Rerun Full Audit'}
             </Button>
           )}
         </CardContent>
