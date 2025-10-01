@@ -6,6 +6,7 @@ interface SEOProps {
   description?: string;
   image?: string;
   noindex?: boolean;
+  robots?: string; // Custom robots directive (e.g., "noindex,follow", "noindex,nofollow")
   // Template fields
   pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'default';
   serviceName?: string;
@@ -24,6 +25,7 @@ const SEO = ({
   description,
   image,
   noindex = true, // Pre-launch: noindex by default
+  robots, // Custom robots directive
   pageType = 'default',
   serviceName,
   audience,
@@ -126,8 +128,12 @@ const SEO = ({
     // Basic meta tags
     updateMetaTag('description', pageDescription);
     
-    // Robots meta tag (pre-launch: noindex, nofollow)
-    if (noindex) {
+    // Robots meta tag
+    if (robots) {
+      // Custom robots directive provided
+      updateMetaTag('robots', robots);
+    } else if (noindex) {
+      // Pre-launch: noindex, nofollow by default
       updateMetaTag('robots', 'noindex, nofollow');
     } else {
       // Remove noindex at go-live
@@ -261,7 +267,7 @@ const SEO = ({
       removeStructuredData('breadcrumb');
     }
     
-  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, primaryDomain, defaultImage]);
+  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, robots, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, primaryDomain, defaultImage]);
   
   return null;
 };

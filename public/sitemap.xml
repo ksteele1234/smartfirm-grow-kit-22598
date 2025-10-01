@@ -40,7 +40,7 @@
   </url>
   
   <url>
-    <loc>https://smartfirm.io/success-stories</loc>
+    <loc>https://smartfirm.io/case-studies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -289,5 +289,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- 
+    Excluded from sitemap (noindex pages):
+    - /404 (or any non-existent pages) - noindex,follow
+    - /500 - noindex,nofollow
+    - /thank-you - noindex,nofollow
+  -->
   
 </urlset>

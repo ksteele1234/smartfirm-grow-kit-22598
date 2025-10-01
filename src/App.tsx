@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import SuccessStories from "./pages/SuccessStories";
 import GetStarted from "./pages/GetStarted";
 import NotFound from "./pages/NotFound";
+import ServerError from "./pages/ServerError";
+import ThankYou from "./pages/ThankYou";
 
 // Solution Pages
 import LeadGeneration from "./pages/solutions/LeadGeneration";
@@ -138,6 +140,10 @@ const App = () => (
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/faq" element={<FAQ />} />
+        
+        {/* Utility Pages - Excluded from sitemap */}
+        <Route path="/500" element={<ServerError />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />

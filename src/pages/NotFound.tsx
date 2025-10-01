@@ -1,7 +1,8 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Home, Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Home, Search as SearchIcon } from "lucide-react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
@@ -10,17 +11,26 @@ import piggyBank from "@/assets/404-piggy-bank.png";
 
 const NotFound = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
   }, [location.pathname]);
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/resources?q=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO 
-        title="Error 404: Depreciated Asset | SmartFirm"
+        title="Error 404: Depreciated Asset"
         description="The page you're looking for couldn't be found. Return to SmartFirm's homepage to explore our marketing automation and technology solutions for accounting firms."
-        noindex={true}
+        robots="noindex,follow"
       />
       <Header />
       
@@ -49,6 +59,22 @@ const NotFound = () => {
             Time to reconcile your navigation!
           </p>
 
+          {/* Search Box */}
+          <div className="mb-8 max-w-md mx-auto">
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <Input
+                type="text"
+                placeholder="Search our site..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="flex-1"
+              />
+              <Button type="submit" size="lg">
+                <SearchIcon className="h-5 w-5" />
+              </Button>
+            </form>
+          </div>
+
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="w-full sm:w-auto">
@@ -60,7 +86,6 @@ const NotFound = () => {
             
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <a href="/contact">
-                <Search className="mr-2 h-5 w-5" />
                 Contact Support
               </a>
             </Button>
