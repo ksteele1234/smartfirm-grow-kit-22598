@@ -186,6 +186,16 @@ const SEO = ({
       }
     });
 
+    // WebPage metadata
+    updateStructuredData('webpage', {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": pageTitle,
+      "url": canonicalUrl,
+      "description": pageDescription,
+      "dateModified": dateModified || new Date().toISOString()
+    });
+
     // 2. Service page
     if (pageType === 'service' && serviceName) {
       updateStructuredData('service', {
@@ -233,8 +243,8 @@ const SEO = ({
       removeStructuredData('article');
     }
 
-    // 4. FAQ page
-    if (pageType === 'faq' && faqs && faqs.length > 0) {
+    // 4. FAQ section (include when FAQs are provided)
+    if (faqs && faqs.length > 0) {
       updateStructuredData('faq', {
         "@context": "https://schema.org",
         "@type": "FAQPage",

@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const Services = () => {
   const serviceCategories = [{
@@ -41,8 +42,28 @@ const Services = () => {
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" }
+        ]}
       />
       <Header />
+      <div className="bg-background-light border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Services</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
@@ -128,6 +149,21 @@ const Services = () => {
                     </Button>
                   </CardContent>
                 </Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Accounting firms choose SmartFirm for a unified growth system that blends marketing automation, integrated technology, and data-driven strategy. We reduce manual work, improve follow-up, and turn more visitors into booked consultations.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                You’ll get a clear roadmap, hands-on implementation, and ongoing optimization—so results improve over time without adding headcount. Implementation is guided and designed around busy seasons to minimize disruption.
+              </p>
             </div>
           </div>
         </section>
