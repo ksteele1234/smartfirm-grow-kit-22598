@@ -170,22 +170,32 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
             const loadTimeMs = Math.round(endTime - startTime);
             
             const doc = iframe.contentDocument;
-            if (!doc) {
+            if (!doc || !doc.body) {
+              console.warn(`⚠️ No document found for ${url}`);
               resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
               return;
+            }
+            
+            // Additional check - ensure content is actually rendered
+            const bodyText = doc.body.textContent || '';
+            if (bodyText.trim().length < 50) {
+              console.warn(`⚠️ Minimal content found for ${url} (${bodyText.trim().length} chars)`);
             }
             
             const score = calculatePageScore(doc, url, pageType, loadTimeMs);
             resolveGrade(score);
           } catch (error) {
-            console.error(`Error grading ${url}:`, error);
-            resolveGrade(createDefaultScore(url, pageType, 0));
+            console.error(`❌ Error grading ${url}:`, error);
+            const loadTimeMs = Math.round(Date.now() - startTime);
+            resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
           }
-        }, 3000);
+        }, 1000); // Wait 1s for content to fully render
       };
       
       iframe.onerror = () => {
-        resolveGrade(createDefaultScore(url, pageType, 0));
+        console.error(`❌ iframe error loading ${url}`);
+        const loadTimeMs = Math.round(Date.now() - startTime);
+        resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
       };
       
       document.body.appendChild(iframe);
@@ -233,24 +243,51 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
     const h1Elements = doc.querySelectorAll('h1');
     
-    // Better body text extraction - target main content areas
+    // Improved body text extraction - target main content areas more carefully
     const mainContent = doc.querySelector('main') || doc.body;
     let bodyText = '';
     if (mainContent) {
       const clone = mainContent.cloneNode(true) as HTMLElement;
-      // Remove non-content elements
-      clone.querySelectorAll('nav, script, style, header, footer, [role="navigation"], button, .btn, [class*="button"]').forEach(el => el.remove());
+      
+      // Remove non-content elements more selectively
+      const selectorsToRemove = [
+        'script', 
+        'style', 
+        'nav[role="navigation"]',
+        'header > nav',
+        '[role="navigation"]',
+        // Keep button text but remove icon-only buttons
+        'button[aria-label]:not(:has(text))',
+        '.sr-only',
+        '[aria-hidden="true"]'
+      ];
+      
+      selectorsToRemove.forEach(selector => {
+        clone.querySelectorAll(selector).forEach(el => el.remove());
+      });
+      
       bodyText = clone.textContent || '';
     }
     
-    // Clean and count words (filter out very short words and whitespace)
-    const words = bodyText.trim().split(/\s+/).filter(w => w.length > 2);
+    // Clean and count words more accurately
+    const cleanText = bodyText
+      .replace(/\s+/g, ' ') // normalize whitespace
+      .replace(/[^\w\s'-]/gi, ' ') // keep alphanumeric, hyphens, apostrophes
+      .trim();
+    
+    const words = cleanText.split(/\s+/).filter(w => w.length > 1); // include 2-letter words
     const wordCount = words.length;
     const first100Words = words.slice(0, 100).join(' ');
     
-    // Debug logging for low word counts
-    if (wordCount < 200) {
-      console.log(`⚠️ Low word count on ${url}: ${wordCount} words extracted`);
+    // More detailed debug logging
+    if (wordCount < 300) {
+      console.log(`⚠️ Low word count on ${url}:`, {
+        wordCount,
+        textLength: bodyText.length,
+        cleanTextLength: cleanText.length,
+        hasMain: !!doc.querySelector('main'),
+        firstWords: words.slice(0, 20).join(' ')
+      });
     }
 
     // A) Technical & Indexability (25 pts)
@@ -392,18 +429,33 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     else if (pageType === 'industry') minWordCount = 800;
     else if (pageType === 'tool') minWordCount = 400; // tools can be shorter
     else if (pageType === 'legal') minWordCount = 300; // legal pages can be shorter
-    else if (pageType === 'core' && url === '/') minWordCount = 500; // homepage
+    else if (pageType === 'core') {
+      if (url === '/') minWordCount = 500; // homepage
+      else if (url.includes('/contact') || url.includes('/get-started')) minWordCount = 400;
+      else minWordCount = 600;
+    }
     
     if (wordCount >= minWordCount) {
       contentScore += 7;
-    } else if (wordCount > 100) { // Only flag if significantly thin
+    } else if (wordCount > 150) { // Only flag if significantly thin (>150 words threshold)
+      const percentOfTarget = Math.round((wordCount / minWordCount) * 100);
       suggestions.push({
-        priority: pageType === 'tool' || pageType === 'legal' ? "P2" : "P1",
+        priority: (pageType === 'tool' || pageType === 'legal') ? "P2" : (percentOfTarget < 50 ? "P1" : "P2"),
+        effort: "L",
+        impact: percentOfTarget < 50 ? "high" : "medium",
+        issueType: "thin_content",
+        recommendation: `Expand content to meet minimum word count (current: ${wordCount}, target: ${minWordCount}, at ${percentOfTarget}%)`,
+        notes: percentOfTarget < 70 ? "Add sections covering: benefits, process, FAQs, case examples" : "Content is close to target, consider adding more detail"
+      });
+    } else if (wordCount <= 150) {
+      // Very thin content
+      suggestions.push({
+        priority: "P0",
         effort: "L",
         impact: "high",
-        issueType: "thin_content",
-        recommendation: `Expand content to meet minimum word count (current: ${wordCount}, target: ${minWordCount})`,
-        notes: "Add sections covering: benefits, process, FAQs, case examples"
+        issueType: "very_thin_content",
+        recommendation: `Critical: Page has minimal content (${wordCount} words). Add substantial content immediately.`,
+        notes: "This page may be misconfigured or content extraction failed. Check console logs."
       });
     }
 
