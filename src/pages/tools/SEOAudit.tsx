@@ -100,128 +100,230 @@ const SEOAudit = () => {
     "/faq",
   ];
 
-  const auditPage = async (url: string): Promise<PageAudit> => {
-    const fullUrl = `${window.location.origin}${url}`;
-    
-    try {
-      const response = await fetch(fullUrl);
-      const html = await response.text();
-      const htmlSizeKB = new Blob([html]).size / 1024;
+  const auditPageViaIframe = async (url: string): Promise<PageAudit> => {
+    return new Promise((resolve) => {
+      const iframe = document.createElement('iframe');
+      iframe.style.position = 'fixed';
+      iframe.style.left = '-9999px';
+      iframe.style.width = '1px';
+      iframe.style.height = '1px';
       
-      // Parse HTML
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
+      let timeoutId: NodeJS.Timeout;
+      let resolved = false;
       
-      // Extract data
-      const title = doc.querySelector('title')?.textContent || '';
-      const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
-      const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
-      const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
-      const ogImage = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+      const cleanup = () => {
+        if (timeoutId) clearTimeout(timeoutId);
+        if (iframe.parentNode) {
+          document.body.removeChild(iframe);
+        }
+      };
       
-      // H1 and H2
-      const h1Elements = doc.querySelectorAll('h1');
-      const h2Elements = doc.querySelectorAll('h2');
+      const resolveAudit = (result: PageAudit) => {
+        if (resolved) return;
+        resolved = true;
+        cleanup();
+        resolve(result);
+      };
       
-      // JSON-LD
-      const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
-      const jsonLDTypes: string[] = [];
-      jsonLDScripts.forEach(script => {
-        try {
-          const data = JSON.parse(script.textContent || '{}');
-          if (data['@type']) {
-            jsonLDTypes.push(data['@type']);
+      // Timeout fallback
+      timeoutId = setTimeout(() => {
+        resolveAudit({
+          url,
+          title: 'TIMEOUT',
+          titleLength: 0,
+          metaDescription: 'TIMEOUT',
+          metaDescriptionLength: 0,
+          hasH1: false,
+          h1Count: 0,
+          hasH2: false,
+          hasCanonical: false,
+          indexable: false,
+          robotsDirective: 'TIMEOUT',
+          hasOGImage: false,
+          hasJSONLD: false,
+          jsonLDTypes: [],
+          imagesMissingAlt: 0,
+          internalLinksCount: 0,
+          externalLinksCount: 0,
+          htmlSizeKB: 0,
+          issues: ['Page load timeout']
+        });
+      }, 5000);
+      
+      iframe.onload = () => {
+        // Wait for React hydration
+        setTimeout(() => {
+          try {
+            const doc = iframe.contentDocument;
+            if (!doc) {
+              resolveAudit({
+                url,
+                title: 'ERROR',
+                titleLength: 0,
+                metaDescription: 'ERROR',
+                metaDescriptionLength: 0,
+                hasH1: false,
+                h1Count: 0,
+                hasH2: false,
+                hasCanonical: false,
+                indexable: false,
+                robotsDirective: 'ERROR',
+                hasOGImage: false,
+                hasJSONLD: false,
+                jsonLDTypes: [],
+                imagesMissingAlt: 0,
+                internalLinksCount: 0,
+                externalLinksCount: 0,
+                htmlSizeKB: 0,
+                issues: ['Cannot access iframe document']
+              });
+              return;
+            }
+            
+            // Extract data from live DOM
+            const title = doc.querySelector('title')?.textContent || '';
+            const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+            const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
+            const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
+            const ogImage = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+            
+            // H1 and H2
+            const h1Elements = doc.querySelectorAll('h1');
+            const h2Elements = doc.querySelectorAll('h2');
+            
+            // JSON-LD
+            const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
+            const jsonLDTypes: string[] = [];
+            jsonLDScripts.forEach(script => {
+              try {
+                const data = JSON.parse(script.textContent || '{}');
+                if (data['@type']) {
+                  jsonLDTypes.push(data['@type']);
+                }
+              } catch (e) {
+                // Invalid JSON-LD
+              }
+            });
+            
+            // Images without alt
+            const images = doc.querySelectorAll('img');
+            let imagesMissingAlt = 0;
+            images.forEach(img => {
+              const alt = img.getAttribute('alt');
+              const role = img.getAttribute('role');
+              if (!alt && role !== 'presentation') {
+                imagesMissingAlt++;
+              }
+            });
+            
+            // Links
+            const allLinks = doc.querySelectorAll('a[href]');
+            let internalLinks = 0;
+            let externalLinks = 0;
+            
+            allLinks.forEach(link => {
+              const href = link.getAttribute('href') || '';
+              if (href.startsWith('/') || href.startsWith(window.location.origin)) {
+                internalLinks++;
+              } else if (href.startsWith('http')) {
+                externalLinks++;
+              }
+            });
+            
+            // HTML size
+            const htmlSize = doc.documentElement.outerHTML.length;
+            const htmlSizeKB = htmlSize / 1024;
+            
+            // Determine indexability
+            const isNoindex = robotsTag.toLowerCase().includes('noindex');
+            const indexable = !isNoindex;
+            
+            // Check for issues
+            const issues: string[] = [];
+            if (h1Elements.length > 1) issues.push('Multiple H1 tags');
+            if (h1Elements.length === 0) issues.push('Missing H1');
+            if (!canonical) issues.push('Missing canonical');
+            if (!metaDescription) issues.push('Missing meta description');
+            if (title.length > 60) issues.push('Title >60 chars');
+            if (metaDescription.length > 160) issues.push('Description >160 chars');
+            if (!ogImage) issues.push('Missing OG image');
+            if (jsonLDTypes.length === 0) issues.push('Missing JSON-LD');
+            
+            resolveAudit({
+              url,
+              title,
+              titleLength: title.length,
+              metaDescription,
+              metaDescriptionLength: metaDescription.length,
+              hasH1: h1Elements.length > 0,
+              h1Count: h1Elements.length,
+              hasH2: h2Elements.length > 0,
+              hasCanonical: !!canonical,
+              indexable,
+              robotsDirective: robotsTag || 'none',
+              hasOGImage: !!ogImage,
+              hasJSONLD: jsonLDTypes.length > 0,
+              jsonLDTypes,
+              imagesMissingAlt,
+              internalLinksCount: internalLinks,
+              externalLinksCount: externalLinks,
+              htmlSizeKB: Math.round(htmlSizeKB * 10) / 10,
+              issues
+            });
+          } catch (error) {
+            console.error(`Error auditing ${url}:`, error);
+            resolveAudit({
+              url,
+              title: 'ERROR',
+              titleLength: 0,
+              metaDescription: 'ERROR',
+              metaDescriptionLength: 0,
+              hasH1: false,
+              h1Count: 0,
+              hasH2: false,
+              hasCanonical: false,
+              indexable: false,
+              robotsDirective: 'ERROR',
+              hasOGImage: false,
+              hasJSONLD: false,
+              jsonLDTypes: [],
+              imagesMissingAlt: 0,
+              internalLinksCount: 0,
+              externalLinksCount: 0,
+              htmlSizeKB: 0,
+              issues: ['Failed to audit page']
+            });
           }
-        } catch (e) {
-          // Invalid JSON-LD
-        }
-      });
-      
-      // Images without alt
-      const images = doc.querySelectorAll('img');
-      let imagesMissingAlt = 0;
-      images.forEach(img => {
-        const alt = img.getAttribute('alt');
-        const role = img.getAttribute('role');
-        if (!alt && role !== 'presentation') {
-          imagesMissingAlt++;
-        }
-      });
-      
-      // Links
-      const allLinks = doc.querySelectorAll('a[href]');
-      let internalLinks = 0;
-      let externalLinks = 0;
-      
-      allLinks.forEach(link => {
-        const href = link.getAttribute('href') || '';
-        if (href.startsWith('/') || href.startsWith(window.location.origin)) {
-          internalLinks++;
-        } else if (href.startsWith('http')) {
-          externalLinks++;
-        }
-      });
-      
-      // Determine indexability
-      const isNoindex = robotsTag.toLowerCase().includes('noindex');
-      const indexable = !isNoindex;
-      
-      // Check for issues
-      const issues: string[] = [];
-      if (h1Elements.length > 1) issues.push('Multiple H1 tags');
-      if (h1Elements.length === 0) issues.push('Missing H1');
-      if (!canonical) issues.push('Missing canonical');
-      if (!metaDescription) issues.push('Missing meta description');
-      if (title.length > 60) issues.push('Title >60 chars');
-      if (metaDescription.length > 160) issues.push('Description >160 chars');
-      if (!ogImage) issues.push('Missing OG image');
-      if (jsonLDTypes.length === 0) issues.push('Missing JSON-LD');
-      
-      return {
-        url,
-        title,
-        titleLength: title.length,
-        metaDescription,
-        metaDescriptionLength: metaDescription.length,
-        hasH1: h1Elements.length > 0,
-        h1Count: h1Elements.length,
-        hasH2: h2Elements.length > 0,
-        hasCanonical: !!canonical,
-        indexable,
-        robotsDirective: robotsTag || 'none',
-        hasOGImage: !!ogImage,
-        hasJSONLD: jsonLDTypes.length > 0,
-        jsonLDTypes,
-        imagesMissingAlt,
-        internalLinksCount: internalLinks,
-        externalLinksCount: externalLinks,
-        htmlSizeKB: Math.round(htmlSizeKB * 10) / 10,
-        issues
+        }, 1500); // Wait for React hydration
       };
-    } catch (error) {
-      console.error(`Error auditing ${url}:`, error);
-      return {
-        url,
-        title: 'ERROR',
-        titleLength: 0,
-        metaDescription: 'ERROR',
-        metaDescriptionLength: 0,
-        hasH1: false,
-        h1Count: 0,
-        hasH2: false,
-        hasCanonical: false,
-        indexable: false,
-        robotsDirective: 'ERROR',
-        hasOGImage: false,
-        hasJSONLD: false,
-        jsonLDTypes: [],
-        imagesMissingAlt: 0,
-        internalLinksCount: 0,
-        externalLinksCount: 0,
-        htmlSizeKB: 0,
-        issues: ['Failed to fetch page']
+      
+      iframe.onerror = () => {
+        resolveAudit({
+          url,
+          title: 'ERROR',
+          titleLength: 0,
+          metaDescription: 'ERROR',
+          metaDescriptionLength: 0,
+          hasH1: false,
+          h1Count: 0,
+          hasH2: false,
+          hasCanonical: false,
+          indexable: false,
+          robotsDirective: 'ERROR',
+          hasOGImage: false,
+          hasJSONLD: false,
+          jsonLDTypes: [],
+          imagesMissingAlt: 0,
+          internalLinksCount: 0,
+          externalLinksCount: 0,
+          htmlSizeKB: 0,
+          issues: ['Failed to load page']
+        });
       };
-    }
+      
+      document.body.appendChild(iframe);
+      iframe.src = `${window.location.origin}${url}`;
+    });
   };
 
   const runAudit = async () => {
@@ -236,11 +338,11 @@ const SEOAudit = () => {
       setCurrentPage(route);
       setProgress(((i + 1) / routes.length) * 100);
       
-      const result = await auditPage(route);
+      const result = await auditPageViaIframe(route);
       auditResults.push(result);
       
       // Small delay to prevent overwhelming the browser
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 200));
     }
     
     setResults(auditResults);
@@ -328,7 +430,7 @@ const SEOAudit = () => {
               <Alert>
                 <Info className="h-4 w-4" />
                 <AlertDescription>
-                  This tool audits {routes.length} pages internally. No external crawlers are used. Results include title/meta analysis, heading structure, canonical tags, indexability, structured data, and link counts.
+                  This tool audits {routes.length} pages using live DOM scanning (SPA-aware). It waits for React hydration to capture the actual rendered content that search engines see.
                 </AlertDescription>
               </Alert>
 

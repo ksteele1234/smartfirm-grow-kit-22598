@@ -109,315 +109,469 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     return Math.max(0, Math.min(100, Math.round(score)));
   };
 
-  const auditPage = async (url: string, allResults: AdvancedPageAudit[]): Promise<AdvancedPageAudit> => {
-    const fullUrl = `${window.location.origin}${url}`;
-    const startTime = performance.now();
-    
-    try {
-      const response = await fetch(fullUrl);
-      const html = await response.text();
-      const endTime = performance.now();
-      const pageLoadTimeMs = Math.round(endTime - startTime);
+  const auditPageViaIframe = async (url: string, allResults: AdvancedPageAudit[]): Promise<AdvancedPageAudit> => {
+    return new Promise((resolve) => {
+      const iframe = document.createElement('iframe');
+      iframe.style.position = 'fixed';
+      iframe.style.left = '-9999px';
+      iframe.style.width = '1px';
+      iframe.style.height = '1px';
       
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
+      let timeoutId: NodeJS.Timeout;
+      let resolved = false;
+      const startTime = performance.now();
       
-      // Extract basic data
-      const title = doc.querySelector('title')?.textContent || '';
-      const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
-      const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
-      const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
-      const viewportMeta = doc.querySelector('meta[name="viewport"]')?.getAttribute('content') || '';
-      
-      // Get body text for analysis
-      const bodyText = doc.body?.textContent || '';
-      const first100Words = bodyText.trim().split(/\s+/).slice(0, 100).join(' ');
-      const wordCount = bodyText.trim().split(/\s+/).filter(w => w.length > 0).length;
-      
-      // Headings analysis
-      const h1Elements = doc.querySelectorAll('h1');
-      const h2Elements = doc.querySelectorAll('h2');
-      const h3Elements = doc.querySelectorAll('h3');
-      const h4Elements = doc.querySelectorAll('h4');
-      const h5Elements = doc.querySelectorAll('h5');
-      const h6Elements = doc.querySelectorAll('h6');
-      
-      // Check heading order
-      const headings = Array.from(doc.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-      let hasValidHeadingOrder = true;
-      let lastLevel = 0;
-      for (const heading of headings) {
-        const level = parseInt(heading.tagName.substring(1));
-        if (level > lastLevel + 1 && lastLevel !== 0) {
-          hasValidHeadingOrder = false;
-          break;
+      const cleanup = () => {
+        if (timeoutId) clearTimeout(timeoutId);
+        if (iframe.parentNode) {
+          document.body.removeChild(iframe);
         }
-        lastLevel = level;
-      }
-      
-      // Primary keyword detection (simplified - using first word of title)
-      const primaryKeyword = title.split(' ')[0].toLowerCase();
-      const primaryKeywordInTitle = title.toLowerCase().includes(primaryKeyword);
-      const primaryKeywordInH1 = h1Elements.length > 0 && Array.from(h1Elements).some(h => 
-        h.textContent?.toLowerCase().includes(primaryKeyword)
-      );
-      const primaryKeywordInFirst100Words = first100Words.toLowerCase().includes(primaryKeyword);
-      
-      // Readability
-      const readabilityScore = calculateReadabilityScore(bodyText);
-      
-      // Images analysis
-      const images = doc.querySelectorAll('img');
-      let imagesWithAlt = 0;
-      let descriptiveFilenames = 0;
-      images.forEach(img => {
-        const alt = img.getAttribute('alt');
-        const src = img.getAttribute('src') || '';
-        if (alt) imagesWithAlt++;
-        if (src && !src.includes('placeholder') && !src.match(/image\d+/)) {
-          descriptiveFilenames++;
-        }
-      });
-      const altTextCoverage = images.length > 0 ? Math.round((imagesWithAlt / images.length) * 100) : 100;
-      const descriptiveImageFilenames = images.length > 0 ? (descriptiveFilenames / images.length) >= 0.8 : true;
-      
-      // Links analysis
-      const allLinks = doc.querySelectorAll('a[href]');
-      let internalLinks = 0;
-      let externalLinks = 0;
-      let brokenInternalLinks = 0;
-      let brokenExternalLinks = 0;
-      let noFollowExternalLinks = 0;
-      let hasGenericAnchorText = false;
-      let hasHTTPOutboundLinks = false;
-      
-      const genericTexts = ['click here', 'read more', 'learn more', 'here', 'this', 'link'];
-      
-      for (const link of Array.from(allLinks)) {
-        const href = link.getAttribute('href') || '';
-        const text = link.textContent?.toLowerCase().trim() || '';
-        const rel = link.getAttribute('rel') || '';
-        
-        if (genericTexts.includes(text)) {
-          hasGenericAnchorText = true;
-        }
-        
-        if (href.startsWith('/') || href.startsWith(window.location.origin)) {
-          internalLinks++;
-          // Check if internal link is broken (simplified check)
-          if (!routes.includes(href.replace(window.location.origin, ''))) {
-            brokenInternalLinks++;
-          }
-        } else if (href.startsWith('http')) {
-          externalLinks++;
-          if (href.startsWith('http://')) {
-            hasHTTPOutboundLinks = true;
-          }
-          if (rel.includes('nofollow')) {
-            noFollowExternalLinks++;
-          }
-          // Broken external links check would require actual fetch - skipping for performance
-        }
-      }
-      
-      const outboundNoFollowPercent = externalLinks > 0 
-        ? Math.round((noFollowExternalLinks / externalLinks) * 100)
-        : 0;
-      
-      // Check if orphan page
-      const isOrphanPage = internalLinks === 0;
-      
-      // ARIA labels
-      const navElements = doc.querySelectorAll('nav');
-      const buttons = doc.querySelectorAll('button');
-      let ariaLabelsPresent = true;
-      navElements.forEach(nav => {
-        if (!nav.getAttribute('aria-label')) ariaLabelsPresent = false;
-      });
-      
-      // JSON-LD analysis
-      const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
-      let hasValidJSONLD = false;
-      let hasSchemasConflict = false;
-      const schemaTypes: string[] = [];
-      
-      jsonLDScripts.forEach(script => {
-        try {
-          const data = JSON.parse(script.textContent || '{}');
-          if (data['@type']) {
-            hasValidJSONLD = true;
-            schemaTypes.push(data['@type']);
-          }
-        } catch (e) {
-          // Invalid JSON-LD
-        }
-      });
-      
-      // Check for schema conflicts (multiple Organization schemas, etc.)
-      const typeCounts = schemaTypes.reduce((acc, type) => {
-        acc[type] = (acc[type] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>);
-      hasSchemasConflict = Object.values(typeCounts).some(count => count > 1);
-      
-      // Required schema fields check (simplified)
-      const hasRequiredSchemaFields = hasValidJSONLD;
-      
-      // Check for duplicate titles/descriptions
-      const hasDuplicateTitle = allResults.some(r => r.url !== url && doc.querySelector('title')?.textContent === title);
-      const hasDuplicateMetaDescription = allResults.some(r => r.url !== url && metaDescription === r.url);
-      
-      // Check for robots conflicts
-      const isNoindex = robotsTag.toLowerCase().includes('noindex');
-      const inSitemap = !url.includes('/404') && !url.includes('/500') && !url.includes('/thank-you');
-      const hasRobotsConflict = isNoindex && inSitemap;
-      
-      // Canonical check
-      const hasCanonicalSelfReference = canonical.includes(url) || canonical.endsWith(url);
-      
-      // Sitemap check
-      const missingFromSitemap = !inSitemap && !isNoindex;
-      
-      // HTTPS check
-      const isHTTPS = fullUrl.startsWith('https://');
-      
-      // Redirect chain (simplified - assume 0 for now since we're fetching directly)
-      const redirectChainLength = 0;
-      
-      // Duplicate URL check
-      const isDuplicate = false; // Would need URL normalization logic
-      
-      // Core Web Vitals approximation
-      const lcpApprox = pageLoadTimeMs * 1.5; // Rough estimate
-      const clsApprox = 0.05; // Assume good
-      
-      // Mobile responsive (check viewport meta)
-      const isMobileResponsive = !!viewportMeta;
-      const hasViewportMeta = !!viewportMeta;
-      
-      // Contrast ratio (simplified check)
-      const contrastRatio = "Pass"; // Would need actual color analysis
-      
-      // Build issues lists
-      const criticalIssues: string[] = [];
-      const warnings: string[] = [];
-      let passedChecks = 0;
-      const totalChecks = 30;
-      
-      // Critical checks
-      if (!isHTTPS) criticalIssues.push('Not HTTPS');
-      if (h1Elements.length === 0) criticalIssues.push('Missing H1');
-      if (h1Elements.length > 1) criticalIssues.push('Multiple H1s');
-      if (!metaDescription) criticalIssues.push('Missing meta description');
-      if (!hasCanonicalSelfReference) criticalIssues.push('Missing or incorrect canonical');
-      if (!hasValidJSONLD) criticalIssues.push('Missing JSON-LD');
-      if (isOrphanPage) criticalIssues.push('Orphan page (no internal links)');
-      if (!hasViewportMeta) criticalIssues.push('Missing viewport meta tag');
-      if (brokenInternalLinks > 0) criticalIssues.push(`${brokenInternalLinks} broken internal links`);
-      
-      // Warnings
-      if (!primaryKeywordInTitle) warnings.push('Primary keyword not in title');
-      if (!primaryKeywordInH1) warnings.push('Primary keyword not in H1');
-      if (!primaryKeywordInFirst100Words) warnings.push('Primary keyword not in first 100 words');
-      if (readabilityScore < 60) warnings.push(`Low readability score (${readabilityScore})`);
-      if (hasDuplicateTitle) warnings.push('Duplicate title tag');
-      if (hasDuplicateMetaDescription) warnings.push('Duplicate meta description');
-      if (!descriptiveImageFilenames) warnings.push('Non-descriptive image filenames');
-      if (hasGenericAnchorText) warnings.push('Generic anchor text used');
-      if (hasHTTPOutboundLinks) warnings.push('HTTP outbound links found');
-      if (hasSchemasConflict) warnings.push('Multiple schema types conflict');
-      if (hasRobotsConflict) warnings.push('Meta robots conflict with sitemap');
-      if (missingFromSitemap) warnings.push('Missing from sitemap');
-      if (!hasValidHeadingOrder) warnings.push('Invalid heading order');
-      if (!ariaLabelsPresent) warnings.push('Missing ARIA labels');
-      if (altTextCoverage < 90) warnings.push(`Low alt text coverage (${altTextCoverage}%)`);
-      if (!isMobileResponsive) warnings.push('Mobile responsive issues');
-      if (wordCount < 300) warnings.push(`Low word count (${wordCount})`);
-      
-      // Count passed checks
-      passedChecks = totalChecks - (criticalIssues.length + warnings.length);
-      
-      return {
-        url,
-        pageLoadTimeMs,
-        lcpApprox: Math.round(lcpApprox),
-        clsApprox,
-        isHTTPS,
-        redirectChainLength,
-        isDuplicate,
-        wordCount,
-        primaryKeywordInTitle,
-        primaryKeywordInH1,
-        primaryKeywordInFirst100Words,
-        readabilityScore,
-        hasDuplicateTitle,
-        hasDuplicateMetaDescription,
-        descriptiveImageFilenames,
-        isOrphanPage,
-        brokenInternalLinks,
-        hasGenericAnchorText,
-        brokenExternalLinks,
-        outboundNoFollowPercent,
-        hasHTTPOutboundLinks,
-        hasValidJSONLD,
-        hasSchemasConflict,
-        hasRequiredSchemaFields,
-        hasRobotsConflict,
-        hasCanonicalSelfReference,
-        missingFromSitemap,
-        hasValidHeadingOrder,
-        contrastRatio,
-        hasARIALabels: ariaLabelsPresent,
-        altTextCoverage,
-        hasViewportMeta: !!viewportMeta,
-        isMobileResponsive,
-        criticalIssues,
-        warnings,
-        passedChecks,
-        totalChecks
       };
-    } catch (error) {
-      console.error(`Error auditing ${url}:`, error);
-      return {
-        url,
-        pageLoadTimeMs: 0,
-        lcpApprox: 0,
-        clsApprox: 0,
-        isHTTPS: false,
-        redirectChainLength: 0,
-        isDuplicate: false,
-        wordCount: 0,
-        primaryKeywordInTitle: false,
-        primaryKeywordInH1: false,
-        primaryKeywordInFirst100Words: false,
-        readabilityScore: 0,
-        hasDuplicateTitle: false,
-        hasDuplicateMetaDescription: false,
-        descriptiveImageFilenames: false,
-        isOrphanPage: true,
-        brokenInternalLinks: 0,
-        hasGenericAnchorText: false,
-        brokenExternalLinks: 0,
-        outboundNoFollowPercent: 0,
-        hasHTTPOutboundLinks: false,
-        hasValidJSONLD: false,
-        hasSchemasConflict: false,
-        hasRequiredSchemaFields: false,
-        hasRobotsConflict: false,
-        hasCanonicalSelfReference: false,
-        missingFromSitemap: true,
-        hasValidHeadingOrder: false,
-        contrastRatio: "Fail",
-        hasARIALabels: false,
-        altTextCoverage: 0,
-        hasViewportMeta: false,
-        isMobileResponsive: false,
-        criticalIssues: ['Failed to fetch page'],
-        warnings: [],
-        passedChecks: 0,
-        totalChecks: 30
+      
+      const resolveAudit = (result: AdvancedPageAudit) => {
+        if (resolved) return;
+        resolved = true;
+        cleanup();
+        resolve(result);
       };
-    }
+      
+      // Timeout fallback
+      timeoutId = setTimeout(() => {
+        resolveAudit({
+          url,
+          pageLoadTimeMs: 0,
+          lcpApprox: 0,
+          clsApprox: 0,
+          isHTTPS: false,
+          redirectChainLength: 0,
+          isDuplicate: false,
+          wordCount: 0,
+          primaryKeywordInTitle: false,
+          primaryKeywordInH1: false,
+          primaryKeywordInFirst100Words: false,
+          readabilityScore: 0,
+          hasDuplicateTitle: false,
+          hasDuplicateMetaDescription: false,
+          descriptiveImageFilenames: false,
+          isOrphanPage: true,
+          brokenInternalLinks: 0,
+          hasGenericAnchorText: false,
+          brokenExternalLinks: 0,
+          outboundNoFollowPercent: 0,
+          hasHTTPOutboundLinks: false,
+          hasValidJSONLD: false,
+          hasSchemasConflict: false,
+          hasRequiredSchemaFields: false,
+          hasRobotsConflict: false,
+          hasCanonicalSelfReference: false,
+          missingFromSitemap: true,
+          hasValidHeadingOrder: false,
+          contrastRatio: "Fail",
+          hasARIALabels: false,
+          altTextCoverage: 0,
+          hasViewportMeta: false,
+          isMobileResponsive: false,
+          criticalIssues: ['Page load timeout'],
+          warnings: [],
+          passedChecks: 0,
+          totalChecks: 30
+        });
+      }, 5000);
+      
+      iframe.onload = () => {
+        // Wait for React hydration
+        setTimeout(() => {
+          try {
+            const endTime = performance.now();
+            const pageLoadTimeMs = Math.round(endTime - startTime);
+            
+            const doc = iframe.contentDocument;
+            if (!doc) {
+              resolveAudit({
+                url,
+                pageLoadTimeMs: 0,
+                lcpApprox: 0,
+                clsApprox: 0,
+                isHTTPS: false,
+                redirectChainLength: 0,
+                isDuplicate: false,
+                wordCount: 0,
+                primaryKeywordInTitle: false,
+                primaryKeywordInH1: false,
+                primaryKeywordInFirst100Words: false,
+                readabilityScore: 0,
+                hasDuplicateTitle: false,
+                hasDuplicateMetaDescription: false,
+                descriptiveImageFilenames: false,
+                isOrphanPage: true,
+                brokenInternalLinks: 0,
+                hasGenericAnchorText: false,
+                brokenExternalLinks: 0,
+                outboundNoFollowPercent: 0,
+                hasHTTPOutboundLinks: false,
+                hasValidJSONLD: false,
+                hasSchemasConflict: false,
+                hasRequiredSchemaFields: false,
+                hasRobotsConflict: false,
+                hasCanonicalSelfReference: false,
+                missingFromSitemap: true,
+                hasValidHeadingOrder: false,
+                contrastRatio: "Fail",
+                hasARIALabels: false,
+                altTextCoverage: 0,
+                hasViewportMeta: false,
+                isMobileResponsive: false,
+                criticalIssues: ['Cannot access iframe document'],
+                warnings: [],
+                passedChecks: 0,
+                totalChecks: 30
+              });
+              return;
+            }
+            
+            // Extract basic data
+            const title = doc.querySelector('title')?.textContent || '';
+            const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+            const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
+            const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
+            const viewportMeta = doc.querySelector('meta[name="viewport"]')?.getAttribute('content') || '';
+            
+            // Get body text for analysis
+            const bodyText = doc.body?.textContent || '';
+            const first100Words = bodyText.trim().split(/\s+/).slice(0, 100).join(' ');
+            const wordCount = bodyText.trim().split(/\s+/).filter(w => w.length > 0).length;
+            
+            // Headings analysis
+            const h1Elements = doc.querySelectorAll('h1');
+            const h2Elements = doc.querySelectorAll('h2');
+            const h3Elements = doc.querySelectorAll('h3');
+            const h4Elements = doc.querySelectorAll('h4');
+            const h5Elements = doc.querySelectorAll('h5');
+            const h6Elements = doc.querySelectorAll('h6');
+            
+            // Check heading order
+            const headings = Array.from(doc.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+            let hasValidHeadingOrder = true;
+            let lastLevel = 0;
+            for (const heading of headings) {
+              const level = parseInt(heading.tagName.substring(1));
+              if (level > lastLevel + 1 && lastLevel !== 0) {
+                hasValidHeadingOrder = false;
+                break;
+              }
+              lastLevel = level;
+            }
+            
+            // Primary keyword detection (simplified - using first word of title)
+            const primaryKeyword = title.split(' ')[0].toLowerCase();
+            const primaryKeywordInTitle = title.toLowerCase().includes(primaryKeyword);
+            const primaryKeywordInH1 = h1Elements.length > 0 && Array.from(h1Elements).some(h => 
+              h.textContent?.toLowerCase().includes(primaryKeyword)
+            );
+            const primaryKeywordInFirst100Words = first100Words.toLowerCase().includes(primaryKeyword);
+            
+            // Readability
+            const readabilityScore = calculateReadabilityScore(bodyText);
+            
+            // Images analysis
+            const images = doc.querySelectorAll('img');
+            let imagesWithAlt = 0;
+            let descriptiveFilenames = 0;
+            images.forEach(img => {
+              const alt = img.getAttribute('alt');
+              const src = img.getAttribute('src') || '';
+              if (alt) imagesWithAlt++;
+              if (src && !src.includes('placeholder') && !src.match(/image\d+/)) {
+                descriptiveFilenames++;
+              }
+            });
+            const altTextCoverage = images.length > 0 ? Math.round((imagesWithAlt / images.length) * 100) : 100;
+            const descriptiveImageFilenames = images.length > 0 ? (descriptiveFilenames / images.length) >= 0.8 : true;
+            
+            // Links analysis
+            const allLinks = doc.querySelectorAll('a[href]');
+            let internalLinks = 0;
+            let externalLinks = 0;
+            let brokenInternalLinks = 0;
+            let brokenExternalLinks = 0;
+            let noFollowExternalLinks = 0;
+            let hasGenericAnchorText = false;
+            let hasHTTPOutboundLinks = false;
+            
+            const genericTexts = ['click here', 'read more', 'learn more', 'here', 'this', 'link'];
+            
+            for (const link of Array.from(allLinks)) {
+              const href = link.getAttribute('href') || '';
+              const text = link.textContent?.toLowerCase().trim() || '';
+              const rel = link.getAttribute('rel') || '';
+              
+              if (genericTexts.includes(text)) {
+                hasGenericAnchorText = true;
+              }
+              
+              if (href.startsWith('/') || href.startsWith(window.location.origin)) {
+                internalLinks++;
+                if (!routes.includes(href.replace(window.location.origin, ''))) {
+                  brokenInternalLinks++;
+                }
+              } else if (href.startsWith('http')) {
+                externalLinks++;
+                if (href.startsWith('http://')) {
+                  hasHTTPOutboundLinks = true;
+                }
+                if (rel.includes('nofollow')) {
+                  noFollowExternalLinks++;
+                }
+              }
+            }
+            
+            const outboundNoFollowPercent = externalLinks > 0 
+              ? Math.round((noFollowExternalLinks / externalLinks) * 100)
+              : 0;
+            
+            // Check if orphan page
+            const isOrphanPage = internalLinks === 0;
+            
+            // ARIA labels
+            const navElements = doc.querySelectorAll('nav');
+            const buttons = doc.querySelectorAll('button');
+            let ariaLabelsPresent = true;
+            navElements.forEach(nav => {
+              if (!nav.getAttribute('aria-label')) ariaLabelsPresent = false;
+            });
+            
+            // JSON-LD analysis
+            const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
+            let hasValidJSONLD = false;
+            let hasSchemasConflict = false;
+            const schemaTypes: string[] = [];
+            
+            jsonLDScripts.forEach(script => {
+              try {
+                const data = JSON.parse(script.textContent || '{}');
+                if (data['@type']) {
+                  hasValidJSONLD = true;
+                  schemaTypes.push(data['@type']);
+                }
+              } catch (e) {
+                // Invalid JSON-LD
+              }
+            });
+            
+            // Check for schema conflicts
+            const typeCounts = schemaTypes.reduce((acc, type) => {
+              acc[type] = (acc[type] || 0) + 1;
+              return acc;
+            }, {} as Record<string, number>);
+            hasSchemasConflict = Object.values(typeCounts).some(count => count > 1);
+            
+            // Required schema fields check
+            const hasRequiredSchemaFields = hasValidJSONLD;
+            
+            // Check for duplicate titles/descriptions
+            const hasDuplicateTitle = allResults.some(r => r.url !== url && doc.querySelector('title')?.textContent === title);
+            const hasDuplicateMetaDescription = allResults.some(r => r.url !== url && metaDescription === r.url);
+            
+            // Check for robots conflicts
+            const isNoindex = robotsTag.toLowerCase().includes('noindex');
+            const inSitemap = !url.includes('/404') && !url.includes('/500') && !url.includes('/thank-you');
+            const hasRobotsConflict = isNoindex && inSitemap;
+            
+            // Canonical check
+            const hasCanonicalSelfReference = canonical.includes(url) || canonical.endsWith(url);
+            
+            // Sitemap check
+            const missingFromSitemap = !inSitemap && !isNoindex;
+            
+            // HTTPS check
+            const fullUrl = `${window.location.origin}${url}`;
+            const isHTTPS = fullUrl.startsWith('https://');
+            
+            // Redirect chain
+            const redirectChainLength = 0;
+            
+            // Duplicate URL check
+            const isDuplicate = false;
+            
+            // Core Web Vitals approximation
+            const lcpApprox = pageLoadTimeMs * 1.5;
+            const clsApprox = 0.05;
+            
+            // Mobile responsive
+            const isMobileResponsive = !!viewportMeta;
+            const hasViewportMeta = !!viewportMeta;
+            
+            // Contrast ratio
+            const contrastRatio = "Pass";
+            
+            // Build issues lists
+            const criticalIssues: string[] = [];
+            const warnings: string[] = [];
+            let passedChecks = 0;
+            const totalChecks = 30;
+            
+            // Critical checks
+            if (!isHTTPS) criticalIssues.push('Not HTTPS');
+            if (h1Elements.length === 0) criticalIssues.push('Missing H1');
+            if (h1Elements.length > 1) criticalIssues.push('Multiple H1s');
+            if (!metaDescription) criticalIssues.push('Missing meta description');
+            if (!hasCanonicalSelfReference) criticalIssues.push('Missing or incorrect canonical');
+            if (!hasValidJSONLD) criticalIssues.push('Missing JSON-LD');
+            if (isOrphanPage) criticalIssues.push('Orphan page (no internal links)');
+            if (!hasViewportMeta) criticalIssues.push('Missing viewport meta tag');
+            if (brokenInternalLinks > 0) criticalIssues.push(`${brokenInternalLinks} broken internal links`);
+            
+            // Warnings
+            if (!primaryKeywordInTitle) warnings.push('Primary keyword not in title');
+            if (!primaryKeywordInH1) warnings.push('Primary keyword not in H1');
+            if (!primaryKeywordInFirst100Words) warnings.push('Primary keyword not in first 100 words');
+            if (readabilityScore < 60) warnings.push(`Low readability score (${readabilityScore})`);
+            if (hasDuplicateTitle) warnings.push('Duplicate title tag');
+            if (hasDuplicateMetaDescription) warnings.push('Duplicate meta description');
+            if (!descriptiveImageFilenames) warnings.push('Non-descriptive image filenames');
+            if (hasGenericAnchorText) warnings.push('Generic anchor text used');
+            if (hasHTTPOutboundLinks) warnings.push('HTTP outbound links found');
+            if (hasSchemasConflict) warnings.push('Multiple schema types conflict');
+            if (hasRobotsConflict) warnings.push('Meta robots conflict with sitemap');
+            if (missingFromSitemap) warnings.push('Missing from sitemap');
+            if (!hasValidHeadingOrder) warnings.push('Invalid heading order');
+            if (!ariaLabelsPresent) warnings.push('Missing ARIA labels');
+            if (altTextCoverage < 90) warnings.push(`Low alt text coverage (${altTextCoverage}%)`);
+            if (!isMobileResponsive) warnings.push('Mobile responsive issues');
+            if (wordCount < 300) warnings.push(`Low word count (${wordCount})`);
+            
+            // Count passed checks
+            passedChecks = totalChecks - (criticalIssues.length + warnings.length);
+            
+            resolveAudit({
+              url,
+              pageLoadTimeMs,
+              lcpApprox: Math.round(lcpApprox),
+              clsApprox,
+              isHTTPS,
+              redirectChainLength,
+              isDuplicate,
+              wordCount,
+              primaryKeywordInTitle,
+              primaryKeywordInH1,
+              primaryKeywordInFirst100Words,
+              readabilityScore,
+              hasDuplicateTitle,
+              hasDuplicateMetaDescription,
+              descriptiveImageFilenames,
+              isOrphanPage,
+              brokenInternalLinks,
+              hasGenericAnchorText,
+              brokenExternalLinks,
+              outboundNoFollowPercent,
+              hasHTTPOutboundLinks,
+              hasValidJSONLD,
+              hasSchemasConflict,
+              hasRequiredSchemaFields,
+              hasRobotsConflict,
+              hasCanonicalSelfReference,
+              missingFromSitemap,
+              hasValidHeadingOrder,
+              contrastRatio,
+              hasARIALabels: ariaLabelsPresent,
+              altTextCoverage,
+              hasViewportMeta: !!viewportMeta,
+              isMobileResponsive,
+              criticalIssues,
+              warnings,
+              passedChecks,
+              totalChecks
+            });
+          } catch (error) {
+            console.error(`Error auditing ${url}:`, error);
+            resolveAudit({
+              url,
+              pageLoadTimeMs: 0,
+              lcpApprox: 0,
+              clsApprox: 0,
+              isHTTPS: false,
+              redirectChainLength: 0,
+              isDuplicate: false,
+              wordCount: 0,
+              primaryKeywordInTitle: false,
+              primaryKeywordInH1: false,
+              primaryKeywordInFirst100Words: false,
+              readabilityScore: 0,
+              hasDuplicateTitle: false,
+              hasDuplicateMetaDescription: false,
+              descriptiveImageFilenames: false,
+              isOrphanPage: true,
+              brokenInternalLinks: 0,
+              hasGenericAnchorText: false,
+              brokenExternalLinks: 0,
+              outboundNoFollowPercent: 0,
+              hasHTTPOutboundLinks: false,
+              hasValidJSONLD: false,
+              hasSchemasConflict: false,
+              hasRequiredSchemaFields: false,
+              hasRobotsConflict: false,
+              hasCanonicalSelfReference: false,
+              missingFromSitemap: true,
+              hasValidHeadingOrder: false,
+              contrastRatio: "Fail",
+              hasARIALabels: false,
+              altTextCoverage: 0,
+              hasViewportMeta: false,
+              isMobileResponsive: false,
+              criticalIssues: ['Failed to audit page'],
+              warnings: [],
+              passedChecks: 0,
+              totalChecks: 30
+            });
+          }
+        }, 1500); // Wait for React hydration
+      };
+      
+      iframe.onerror = () => {
+        resolveAudit({
+          url,
+          pageLoadTimeMs: 0,
+          lcpApprox: 0,
+          clsApprox: 0,
+          isHTTPS: false,
+          redirectChainLength: 0,
+          isDuplicate: false,
+          wordCount: 0,
+          primaryKeywordInTitle: false,
+          primaryKeywordInH1: false,
+          primaryKeywordInFirst100Words: false,
+          readabilityScore: 0,
+          hasDuplicateTitle: false,
+          hasDuplicateMetaDescription: false,
+          descriptiveImageFilenames: false,
+          isOrphanPage: true,
+          brokenInternalLinks: 0,
+          hasGenericAnchorText: false,
+          brokenExternalLinks: 0,
+          outboundNoFollowPercent: 0,
+          hasHTTPOutboundLinks: false,
+          hasValidJSONLD: false,
+          hasSchemasConflict: false,
+          hasRequiredSchemaFields: false,
+          hasRobotsConflict: false,
+          hasCanonicalSelfReference: false,
+          missingFromSitemap: true,
+          hasValidHeadingOrder: false,
+          contrastRatio: "Fail",
+          hasARIALabels: false,
+          altTextCoverage: 0,
+          hasViewportMeta: false,
+          isMobileResponsive: false,
+          criticalIssues: ['Failed to load page'],
+          warnings: [],
+          passedChecks: 0,
+          totalChecks: 30
+        });
+      };
+      
+      document.body.appendChild(iframe);
+      iframe.src = `${window.location.origin}${url}`;
+    });
   };
 
   const runAudit = async () => {
@@ -432,10 +586,10 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       setCurrentPage(route);
       setProgress(((i + 1) / routes.length) * 100);
       
-      const result = await auditPage(route, auditResults);
+      const result = await auditPageViaIframe(route, auditResults);
       auditResults.push(result);
       
-      await new Promise(resolve => setTimeout(resolve, 150));
+      await new Promise(resolve => setTimeout(resolve, 200));
     }
     
     setResults(auditResults);
