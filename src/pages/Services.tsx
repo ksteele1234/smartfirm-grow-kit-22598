@@ -36,16 +36,18 @@ const Services = () => {
   }];
   return <div className="min-h-screen bg-background">
       <SEO 
-        title="Services"
-        description="AI-powered services for accounting firms. From intelligent marketing automation to predictive business intelligence and strategic AI consulting."
+        title="Services | SmartFirm"
+        description="Marketing automation & technology solutions for accounting firms. Lead generation, client retention, and business optimization."
+        pageType="service"
+        serviceName="Marketing Automation & Technology Solutions"
+        noindex={false}
       />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">AI-Powered Services for 
-Your Accounting Firm's Growth</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">Marketing Automation Services for Accounting Firms</h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
               From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
             </p>

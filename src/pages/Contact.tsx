@@ -25,8 +25,10 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Contact Us"
-        description="Get in touch with SmartFirm to transform your accounting firm's marketing. Speak with experts who understand the unique challenges of accounting practices."
+        title="Contact Us | SmartFirm"
+        description="Transform your accounting firm's marketing. Speak with experts who understand the challenges of accounting practices."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       

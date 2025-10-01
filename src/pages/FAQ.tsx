@@ -146,9 +146,10 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Frequently Asked Questions"
-        description="Find answers to common questions about SmartFirm's marketing automation, technology solutions, and services for accounting firms."
+        title="Frequently Asked Questions | SmartFirm"
+        description="Common questions about SmartFirm's marketing automation, technology solutions, and services for accounting firms."
         pageType="faq"
+        noindex={false}
         faqs={allFAQs}
       />
       <Header />

@@ -79,8 +79,10 @@ const GetStarted = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Get Started"
-        description="Start your journey with SmartFirm. Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm."
+        title="Get Started | SmartFirm"
+        description="Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm with SmartFirm."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       

@@ -87,8 +87,10 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Industries We Serve"
-        description="AI-powered marketing and automation solutions tailored for solo CPAs, small firms, bookkeepers, tax preparation, and business advisory practices."
+        title="Industries We Serve | SmartFirm"
+        description="Marketing solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices."
+        pageType="industry"
+        noindex={false}
       />
       <Header />
       <main className="pt-20">
@@ -96,7 +98,7 @@ const Industries = () => {
         <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              AI-Powered Marketing & Automation for Your Accounting Niche
+              Marketing Solutions for Your Accounting Niche
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions 

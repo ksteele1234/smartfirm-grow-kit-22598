@@ -103,8 +103,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About Us"
-        description="SmartFirm empowers accounting firms with AI-powered marketing automation and technology solutions. Learn about our mission to help firms grow through intelligent automation."
+        title="About Us | SmartFirm"
+        description="SmartFirm empowers accounting firms with marketing automation and technology solutions. Our mission is to help firms grow."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       <main className="pt-20">

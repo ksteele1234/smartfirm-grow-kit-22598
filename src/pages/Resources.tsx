@@ -82,8 +82,10 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Resources"
-        description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert resources for CPA marketing and practice management."
+        title="Resources | SmartFirm"
+        description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert CPA marketing resources."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       <main className="pt-20">

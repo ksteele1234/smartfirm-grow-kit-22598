@@ -49,8 +49,10 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Solutions"
-        description="AI-powered solutions for accounting firms' biggest challenges. From client retention to competitive positioning and sustainable growth strategies."
+        title="Solutions | SmartFirm"
+        description="Growth solutions for accounting firms. Client retention, lead generation, and competitive strategies that drive results."
+        pageType="solution"
+        noindex={false}
       />
       <Header />
       <main className="pt-20">
@@ -60,7 +62,7 @@ const Solutions = () => {
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              AI-Driven Solutions for Your Biggest Accounting Firm Challenges
+              Solutions for Your Accounting Firm Challenges
             </h1>
             <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
               We understand the unique pressures of running an accounting firm. From competition to client expectations, 

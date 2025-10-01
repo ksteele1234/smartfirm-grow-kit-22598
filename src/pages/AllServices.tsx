@@ -86,8 +86,10 @@ const AllServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="All Services"
-        description="Complete suite of marketing automation, technology solutions, and business optimization services for accounting firms. From lead generation to client retention."
+        title="All Services | SmartFirm"
+        description="Complete suite of marketing, technology, and optimization services for accounting firms. Lead generation to client retention."
+        pageType="service"
+        noindex={false}
       />
       <Header />
       

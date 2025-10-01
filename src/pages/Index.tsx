@@ -12,8 +12,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="SmartFirm | Marketing and Automation for Finance Firms"
-        description="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth."
+        title="SmartFirm | Marketing & Automation for Finance Firms"
+        description="Marketing automation for accounting firms. Get faster client intake, better follow-up, and measurable growth with SmartFirm."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       <main>

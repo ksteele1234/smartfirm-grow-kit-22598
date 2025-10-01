@@ -130,8 +130,10 @@ const SuccessStories = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Success Stories"
-        description="Real results from accounting firms using SmartFirm's AI-powered automation. See how firms achieved significant growth and operational efficiency."
+        title="Success Stories | SmartFirm"
+        description="Real results from accounting firms using SmartFirm. See how firms achieved significant growth and operational efficiency."
+        pageType="default"
+        noindex={false}
       />
       <Header />
       
