@@ -10,6 +10,7 @@ import { Download, Play, AlertCircle, CheckCircle, Info, ArrowRight } from "luci
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AdvancedSEOQA from "./AdvancedSEOQA";
+import PageGrader from "./PageGrader";
 
 interface PageAudit {
   url: string;
@@ -34,7 +35,7 @@ interface PageAudit {
 }
 
 const SEOAudit = () => {
-  const [activeTab, setActiveTab] = useState<"basic" | "advanced">("basic");
+  const [activeTab, setActiveTab] = useState<"basic" | "advanced" | "grader">("basic");
   const [isAuditing, setIsAuditing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<PageAudit[]>([]);
@@ -420,10 +421,11 @@ const SEOAudit = () => {
             </p>
           </div>
 
-          <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "basic" | "advanced")} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
+          <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "basic" | "advanced" | "grader")} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
               <TabsTrigger value="basic">Basic SEO Audit</TabsTrigger>
               <TabsTrigger value="advanced">Advanced SEO QA</TabsTrigger>
+              <TabsTrigger value="grader">Page Grader</TabsTrigger>
             </TabsList>
 
             <TabsContent value="basic" className="space-y-8">
@@ -597,6 +599,10 @@ const SEOAudit = () => {
 
             <TabsContent value="advanced">
               <AdvancedSEOQA onBack={() => setActiveTab("basic")} />
+            </TabsContent>
+
+            <TabsContent value="grader">
+              <PageGrader onBack={() => setActiveTab("basic")} />
             </TabsContent>
           </Tabs>
         </div>
