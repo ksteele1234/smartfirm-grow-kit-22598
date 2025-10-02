@@ -50,7 +50,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       
       {/* Breadcrumbs */}
       <nav id="sf-breadcrumbs" className="bg-background-light/95 backdrop-blur-sm border-b pt-16" aria-label="Breadcrumb">
-        <div className="max-w-5xl mx-auto px-4 py-1.5">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
