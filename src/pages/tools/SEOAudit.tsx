@@ -43,7 +43,7 @@ const SEOAudit = () => {
   const [validationResults, setValidationResults] = useState<PageAudit[]>([]);
   const [currentPage, setCurrentPage] = useState("");
 
-  // All routes to audit (from App.tsx)
+  // All routes to audit (from App.tsx and sitemap.xml)
   const routes = [
     "/",
     "/services",
@@ -53,7 +53,7 @@ const SEOAudit = () => {
     "/resources",
     "/about",
     "/contact",
-    "/case-studies",
+    "/success-stories",
     "/get-started",
     "/solutions/i-need-more-leads",
     "/solutions/lead-generation",
@@ -64,14 +64,10 @@ const SEOAudit = () => {
     "/solutions/i-need-better-client-retention",
     "/solutions/retention-strategies",
     "/solutions/stop-losing-clients-to-tech-savvy-cpas",
-    "/solutions/compete-with-tech-savvy-cpas",
     "/solutions/get-more-referrals-without-asking",
-    "/solutions/increase-referrals",
     "/solutions/work-less-earn-more",
     "/solutions/grow-without-growing-pains",
-    "/solutions/sustainable-growth",
     "/solutions/protect-practice-and-future",
-    "/solutions/protect-your-practice",
     "/services/marketing-automation",
     "/services/technology-solutions",
     "/services/business-optimization",

@@ -65,19 +65,18 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
   const [results, setResults] = useState<AdvancedPageAudit[]>([]);
   const [currentPage, setCurrentPage] = useState("");
 
-  // Routes to audit
+  // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
     "/", "/services", "/services/all", "/solutions", "/industries", "/resources",
-    "/about", "/contact", "/case-studies", "/get-started", "/faq",
+    "/about", "/contact", "/success-stories", "/get-started", "/faq",
     "/solutions/i-need-more-leads", "/solutions/lead-generation",
     "/solutions/i-want-to-scale-my-firm", "/solutions/scale-firm",
     "/solutions/i'm-losing-clients-to-competitors", "/solutions/client-retention",
     "/solutions/i-need-better-client-retention", "/solutions/retention-strategies",
-    "/solutions/stop-losing-clients-to-tech-savvy-cpas", "/solutions/compete-with-tech-savvy-cpas",
-    "/solutions/get-more-referrals-without-asking", "/solutions/increase-referrals",
+    "/solutions/stop-losing-clients-to-tech-savvy-cpas",
+    "/solutions/get-more-referrals-without-asking",
     "/solutions/work-less-earn-more", "/solutions/grow-without-growing-pains",
-    "/solutions/sustainable-growth", "/solutions/protect-practice-and-future",
-    "/solutions/protect-your-practice", "/services/marketing-automation",
+    "/solutions/protect-practice-and-future", "/services/marketing-automation",
     "/services/technology-solutions", "/services/business-optimization",
     "/services/executive-services", "/services/automated-lead-follow-up",
     "/services/client-review-generation", "/services/seo-for-accountants",
