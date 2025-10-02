@@ -9,37 +9,37 @@ const ServicesSection = () => {
     {
       icon: Zap,
       title: "Automated Lead Follow-up",
-      description: "Convert inquiries into booked calls within 24–48 hours. Our intelligent follow-up sequences (email, SMS, and voicemail) integrate with QuickBooks, Xero, Karbon, and Canopy—so no lead slips through the cracks."
+      description: "Turn inquiries into booked calls fast. Our system sends emails, texts, and voicemails for you. Works with QuickBooks, Xero, Karbon, and Canopy."
     },
     {
       icon: Star,
       title: "Client Review Generation",
-      description: "Build credibility and outshine competitors with automated review requests. Firms using this system typically triple their 5-star reviews in 90 days, strengthening trust and client retention."
+      description: "Get more 5-star reviews. Our automated requests help firms triple their reviews in 90 days. Build trust and keep clients longer."
     },
     {
       icon: Search,
       title: "SEO for Accounting Firms", 
-      description: "Dominate local search and appear where high-value clients are looking. Our SEO for accountants improves rankings on Google Maps, local listings, and search results—bringing in qualified leads who are ready to buy."
+      description: "Show up when clients search. Rank higher on Google Maps and local search. Get more qualified leads ready to hire you."
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
-      description: "Stay top-of-mind with personalized nurture campaigns designed for CPAs and tax professionals. Clients report higher renewal rates and upsell opportunities when email automation keeps relationships warm year-round."
+      description: "Stay in touch with personalized email campaigns. Keep clients coming back. Boost renewals and sell more services."
     },
     {
       icon: Users,
       title: "Social Media Management",
-      description: "Establish thought leadership across LinkedIn, Facebook, and beyond with done-for-you branded content. Position your firm as the go-to authority while we manage scheduling, posting, and engagement."
+      description: "Build your brand on LinkedIn and Facebook. We create and post content for you. Become the expert your clients trust."
     },
     {
       icon: Globe,
       title: "Website Optimization",
-      description: "Turn visitors into clients with conversion-focused websites built for accounting firms. From secure client portals to mobile-friendly design, our sites are optimized for compliance, speed, and trust."
+      description: "Turn website visitors into clients. Get a fast, mobile-friendly site with secure client portals. Built for accounting firms."
     },
     {
       icon: Phone,
       title: "Marketing Automation",
-      description: "Streamline your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice while you focus on what you do best—accounting."
+      description: "Put your marketing on autopilot. Nurture leads and engage clients automatically. Grow your practice while you focus on accounting."
     }
   ];
 

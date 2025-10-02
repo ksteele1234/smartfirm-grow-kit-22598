@@ -8,28 +8,28 @@ const SolutionsSection = () => {
     {
       icon: Target,
       title: "I need more leads",
-      description: "Stop waiting for referrals. Our lead generation for accounting firms delivers qualified prospects ready to work with you.",
+      description: "Stop waiting for referrals. Get qualified prospects who are ready to work with you.",
       features: ["SEO for accountants", "PPC campaigns for CPAs", "Content marketing", "Local listing optimization"],
       link: "/solutions/lead-generation"
     },
     {
       icon: TrendingUp,
       title: "I want to scale my firm", 
-      description: "Break growth plateaus with systems that run without your constant involvement.",
+      description: "Break through growth limits. Get systems that work without your constant time and effort.",
       features: ["Automation systems", "Client onboarding workflows", "Referral programs", "Strategic planning"],
       link: "/solutions/scale-firm"
     },
     {
       icon: Shield,
       title: "I'm losing clients to competitors",
-      description: "Strengthen client relationships and position your firm as the obvious choice in your market.",
+      description: "Keep your clients happy. Position your firm as the clear choice in your market.",
       features: ["Competitive analysis", "Client retention campaigns", "Brand positioning", "Differentiation strategy"],
       link: "/solutions/client-retention"
     },
     {
       icon: Users,
       title: "I need better client retention",
-      description: "Keep your best clients engaged with proactive touchpoints and automated follow-ups.",
+      description: "Keep your best clients engaged with regular touchpoints and automated follow-ups.",
       features: ["Communication systems", "Review generation", "Upselling automation", "Satisfaction tracking"],
       link: "/solutions/retention-strategies"
     }
@@ -46,7 +46,7 @@ const SolutionsSection = () => {
             <span className="text-teal block">Common Growth Challenges</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Whether you need lead generation for your CPA firm or better client acquisition strategies, we've developed targeted marketing solutions for accounting practices at every stage.
+            Need leads? Want to scale? We have targeted solutions for accounting firms at every stage.
           </p>
         </div>
 

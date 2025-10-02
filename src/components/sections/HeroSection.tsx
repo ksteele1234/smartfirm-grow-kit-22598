@@ -66,8 +66,7 @@ const HeroSection = () => {
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">SmartFirm gives accountants a done-for-you growth system, so you can consistently attract and retain clients while focusing on client service. 
-No chasing leads, no juggling tools, no wasted time.</p>
+                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">We help you grow your firm with automated marketing. Get more clients. Keep them longer. Save time.</p>
               </div>
 
               {/* Trust Indicators */}

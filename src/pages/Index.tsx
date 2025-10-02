@@ -21,7 +21,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="SmartFirm | Marketing & Automation for Finance Firms"
-        description="Marketing automation for accounting firms. Get faster client intake, better follow-up, and measurable growth with SmartFirm."
+        description="Automated marketing for CPAs and accounting firms. Faster client intake, better follow-up, measurable growth."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}

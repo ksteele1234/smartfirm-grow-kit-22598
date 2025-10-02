@@ -8,19 +8,19 @@ const HowItWorksSection = () => {
       icon: Phone,
       number: "01",
       title: "Book a Call",
-      description: "Schedule a free 30-minute strategy session. We'll uncover your biggest opportunities for growth and highlight where firms like yours are losing leads."
+      description: "Book a free 30-minute call. We'll find your best growth opportunities and show where you're losing leads."
     },
     {
       icon: FileText,
       number: "02", 
       title: "Get a Plan",
-      description: "Receive a custom growth strategy with timelines, expected outcomes, and ROI projections—all aligned with your accounting tech stack (QuickBooks, Xero, Karbon, Canopy)."
+      description: "Get a custom plan with clear timelines and ROI projections. Works with QuickBooks, Xero, Karbon, and Canopy."
     },
     {
       icon: Rocket,
       number: "03",
       title: "Launch & Grow", 
-      description: "We implement and manage everything for you. Most firms see new client inquiries within 30 days and measurable improvements in retention by 90 days."
+      description: "We do everything for you. Get new inquiries within 30 days. See better retention by 90 days."
     }
   ];
 
@@ -35,7 +35,7 @@ const HowItWorksSection = () => {
             <span className="text-teal block">Effortless Growth</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Our proven 3-step process takes the guesswork out of marketing so you can focus on client service while we handle the heavy lifting.
+            Our simple 3-step process makes marketing easy. Focus on your clients while we handle the rest.
           </p>
         </div>
         
