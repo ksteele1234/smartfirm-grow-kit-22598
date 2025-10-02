@@ -193,7 +193,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
             const loadTimeMs = Math.round(Date.now() - startTime);
             resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
           }
-        }, 1500); // Wait 1.5s for content to fully render
+        }, 6000); // Wait for route hydration & SEO meta updates
       };
       
       iframe.onerror = () => {

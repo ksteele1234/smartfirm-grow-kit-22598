@@ -53,7 +53,7 @@ const SEOAudit = () => {
     "/resources",
     "/about",
     "/contact",
-    "/success-stories",
+    "/case-studies",
     "/get-started",
     "/solutions/i-need-more-leads",
     "/solutions/lead-generation",

@@ -68,7 +68,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
   // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
     "/", "/services", "/services/all", "/solutions", "/industries", "/resources",
-    "/about", "/contact", "/success-stories", "/get-started", "/faq",
+    "/about", "/contact", "/case-studies", "/get-started", "/faq",
     "/solutions/i-need-more-leads", "/solutions/lead-generation",
     "/solutions/i-want-to-scale-my-firm", "/solutions/scale-firm",
     "/solutions/i'm-losing-clients-to-competitors", "/solutions/client-retention",
@@ -540,7 +540,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               totalChecks: 30
             });
           }
-        }, 3000); // Increased wait time for React hydration
+        }, 6000); // Wait for route hydration & SEO meta updates
       };
       
       iframe.onerror = () => {
