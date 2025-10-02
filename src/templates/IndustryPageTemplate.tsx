@@ -150,7 +150,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                 </CardHeader>
                 <CardContent className="ml-11">
                   <div className="bg-primary/5 p-4 rounded-lg">
-                    <h4 className="font-semibold text-primary mb-2">Our Solution:</h4>
+                    <h3 className="font-semibold text-primary mb-2">Our Solution:</h3>
                     <p className="text-muted-foreground">{challenge.solution}</p>
                   </div>
                 </CardContent>

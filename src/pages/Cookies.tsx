@@ -77,7 +77,7 @@ const Cookies = () => {
           <div className="max-w-4xl mx-auto prose prose-lg">
             <div className="text-text-secondary space-y-8">
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">What Are Cookies</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">What Are Cookies</h2>
                 <p>
                   Cookies are small text files that are stored on your computer or mobile device when you 
                   visit our website. They help us provide you with a better experience by remembering your 
@@ -86,7 +86,7 @@ const Cookies = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">How We Use Cookies</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">How We Use Cookies</h2>
                 <p>We use cookies for the following purposes:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Essential cookies: Required for the website to function properly</li>
@@ -97,7 +97,7 @@ const Cookies = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Managing Cookies</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Managing Cookies</h2>
                 <p>
                   You can control cookies through your browser settings. However, disabling certain 
                   cookies may affect the functionality of our website. Most browsers allow you to:
@@ -112,7 +112,7 @@ const Cookies = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Third-Party Cookies</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Third-Party Cookies</h2>
                 <p>
                   Our website may contain links to third-party websites and services. These third parties 
                   may use their own cookies, which are not covered by our cookie policy. We recommend 
@@ -121,7 +121,7 @@ const Cookies = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Updates to This Policy</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Updates to This Policy</h2>
                 <p>
                   We may update this Cookie Policy from time to time. Any changes will be posted on this 
                   page with an updated revision date.
@@ -129,7 +129,7 @@ const Cookies = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Contact Us</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Contact Us</h2>
                 <p>
                   If you have any questions about our use of cookies, please contact us at:
                 </p>

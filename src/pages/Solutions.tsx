@@ -209,11 +209,11 @@ const Solutions = () => {
                 </CardHeader>
                 <CardContent className="space-y-8 px-6 md:px-10 pb-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="space-y-6">
-                      <h4 className="font-semibold text-primary flex items-center text-lg">
+                  <div className="space-y-6">
+                      <h3 className="font-semibold text-primary flex items-center text-lg">
                         <Users className="h-5 w-5 mr-2" />
                         Key Benefits:
-                      </h4>
+                      </h3>
                       <ul className="space-y-3 text-text-secondary">
                         <li className="flex items-start">
                           <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
@@ -235,10 +235,10 @@ const Solutions = () => {
                     </div>
                     
                     <div className="bg-gradient-to-br from-teal/10 to-primary/10 p-6 md:p-8 rounded-lg border border-border/30">
-                      <h4 className="font-semibold text-primary mb-6 flex items-center text-lg">
+                      <h3 className="font-semibold text-primary mb-6 flex items-center text-lg">
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Client Success Story:
-                      </h4>
+                      </h3>
                       <blockquote className="text-text-secondary italic mb-4 leading-relaxed">
                         "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a 
                         systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love 

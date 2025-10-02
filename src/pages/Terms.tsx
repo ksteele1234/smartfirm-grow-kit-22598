@@ -77,7 +77,7 @@ const Terms = () => {
           <div className="max-w-4xl mx-auto prose prose-lg">
             <div className="text-text-secondary space-y-8">
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Introduction & Acceptance</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Introduction & Acceptance</h2>
                 <p>
                   This Agreement governs the use of the software, tools, and services provided by SmartFirm 
                   ("we", "us", or "our"). By accessing or using our platform, you agree to these terms. If 
@@ -92,7 +92,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">License Grant & Scope</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">License Grant & Scope</h2>
                 <p>
                   We grant you a non-exclusive, non-transferable license to use our software and services 
                   under the terms of this Agreement, limited to the period of your subscription or purchase. 
@@ -106,7 +106,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Terms of Subscription & Payments</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Terms of Subscription & Payments</h2>
                 <p>
                   Subscription payments are automatically billed monthly via Stripe, in accordance with your 
                   selected subscription tier. By subscribing, you authorize SmartFirm to charge your payment 
@@ -124,7 +124,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">User Conduct & Legal Compliance</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">User Conduct & Legal Compliance</h2>
                 <p>
                   All users agree to comply with all applicable federal, state, and local laws and regulations 
                   while using the platform. Prohibited activities include, but are not limited to:
@@ -143,7 +143,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Data Privacy, Storage & Handling</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Data Privacy, Storage & Handling</h2>
                 <p>
                   SmartFirm stores and processes user data in compliance with the Oregon Consumer Privacy Act 
                   (OCPA) and industry best practices. Our platform operates in conjunction with GoHighLevel (GHL), 
@@ -164,7 +164,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Third-Party Integrations & Service Terms</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Third-Party Integrations & Service Terms</h2>
                 <p>SmartFirm integrates with several third-party services, including but not limited to:</p>
                 <ul className="list-disc pl-6 space-y-2 mt-4">
                   <li>Stripe (for billing and payments)</li>
@@ -185,7 +185,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Intellectual Property</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Intellectual Property</h2>
                 <p>
                   SmartFirm, including its software, content, design, logos, trademarks, and related materials, 
                   is protected under intellectual property laws and remains the exclusive property of SmartFirm 
@@ -194,7 +194,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Indemnification Obligations</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Indemnification Obligations</h2>
                 <p>
                   You agree to indemnify and hold SmartFirm harmless from any claims, damages, or losses 
                   resulting from your use of the platform, violation of this Agreement, or infringement of 
@@ -203,7 +203,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Termination</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Termination</h2>
                 <p>
                   We may terminate your license at any time without notice if you breach this Agreement. Upon 
                   termination, you must stop using our software and destroy any copies. Your obligations related 
@@ -212,7 +212,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Amendments to Agreement</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Amendments to Agreement</h2>
                 <p>
                   We may update this Agreement at any time. Changes become effective upon posting on our website. 
                   Continued use constitutes acceptance. We'll make reasonable efforts to notify users of major 
@@ -221,7 +221,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Restrictions on Use</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Restrictions on Use</h2>
                 <p>
                   You may not reverse engineer, decompile, or extract the source code. You may not use our 
                   platform to build competing products, violate laws, or infringe third-party rights.
@@ -229,7 +229,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Dispute Resolution and Arbitration</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Dispute Resolution and Arbitration</h2>
                 <p>
                   All disputes will be resolved via binding arbitration in Oregon under UTCR Chapter 13. The 
                   arbitrator must be a licensed Oregon attorney with at least five years of experience. 
@@ -238,7 +238,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Individual Claims Requirement</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Individual Claims Requirement</h2>
                 <p>
                   All disputes must be brought individually—not as part of a class action, representative, or 
                   collective proceeding.
@@ -246,7 +246,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Waiver of Jury Trial</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Waiver of Jury Trial</h2>
                 <p>
                   You waive the right to a jury trial for any disputes related to this Agreement, to the extent 
                   permitted by law.
@@ -254,7 +254,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Governing Law and Jurisdiction</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Governing Law and Jurisdiction</h2>
                 <p>
                   This Agreement is governed by the laws of the State of Oregon. Legal actions shall be filed 
                   in Lane County Circuit Court.
@@ -262,7 +262,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Force Majeure</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Force Majeure</h2>
                 <p>
                   Neither party is liable for delays caused by forces beyond their control, including but not 
                   limited to natural disasters, pandemics, or internet outages.
@@ -270,7 +270,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Disclaimer of Warranties</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Disclaimer of Warranties</h2>
                 <p>
                   The platform is provided "as is." We disclaim all implied warranties, including merchantability, 
                   fitness for a particular purpose, and non-infringement, to the extent permitted by law.
@@ -278,14 +278,14 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Severability</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Severability</h2>
                 <p>
                   If any part of this Agreement is found unenforceable, the rest remains in effect.
                 </p>
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Confidentiality</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Confidentiality</h2>
                 <p>
                   Users must protect any proprietary or sensitive business information shared through the 
                   platform, including client lists, source code, and marketing materials.
@@ -293,7 +293,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Educational Content Disclaimer</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Educational Content Disclaimer</h2>
                 <p>
                   Business and marketing content provided through the platform is for informational purposes 
                   only and does not constitute legal, financial, or tax advice. Users should consult a 
@@ -302,7 +302,7 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Refund Policy</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Refund Policy</h2>
                 <p>
                   All digital product sales are final. No refunds or exchanges are permitted, except where 
                   prohibited by law. Oregon consumer protection rights remain intact and are not waived by 
@@ -311,14 +311,14 @@ const Terms = () => {
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Entire Agreement</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Entire Agreement</h2>
                 <p>
                   This document constitutes the full and complete agreement between the user and SmartFirm.
                 </p>
               </div>
 
               <div>
-                <p className="text-xl font-semibold text-primary mb-4">Company Contact</p>
+                <h2 className="text-xl font-semibold text-primary mb-4">Company Contact</h2>
                 <p>
                   Steele Piper LLC<br />
                   dba SmartFirm<br />

@@ -167,7 +167,7 @@ const AllServices = () => {
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <p className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</h3>
               <ul className="list-disc pl-6 text-text-secondary space-y-2">
                 <li>Predictable pipeline with automation that follows up 24/7</li>
                 <li>Higher close rates from faster response and better nurturing</li>
@@ -175,7 +175,7 @@ const AllServices = () => {
               </ul>
             </div>
             <div>
-              <p className="text-xl font-semibold text-foreground mb-2">Operational Wins</p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">Operational Wins</h3>
               <ul className="list-disc pl-6 text-text-secondary space-y-2">
                 <li>Less tool-juggling with integrated systems that your team will use</li>
                 <li>Clear reporting and dashboards in plain English</li>
@@ -192,15 +192,15 @@ const AllServices = () => {
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <p className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</h3>
               <p className="text-text-secondary">We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.</p>
             </div>
             <div>
-              <p className="text-lg font-semibold text-foreground mb-2">2) Implementation</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">2) Implementation</h3>
               <p className="text-text-secondary">We configure automations, integrations, and content—done for you—to launch quickly.</p>
             </div>
             <div>
-              <p className="text-lg font-semibold text-foreground mb-2">3) Optimize & Scale</p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">3) Optimize & Scale</h3>
               <p className="text-text-secondary">We measure results, refine campaigns, and expand what works across services and offices.</p>
             </div>
           </div>

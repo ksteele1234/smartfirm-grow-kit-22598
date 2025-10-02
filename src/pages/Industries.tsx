@@ -266,10 +266,10 @@ const Industries = () => {
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary-teal flex items-center">
+                      <h3 className="font-semibold text-primary-teal flex items-center">
                         <Target className="h-5 w-5 mr-2" />
                         Key Opportunities:
-                      </h4>
+                      </h3>
                       <ul className="space-y-2 text-text-secondary">
                         <li className="flex items-start">
                           <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
@@ -291,10 +291,10 @@ const Industries = () => {
                     </div>
                     
                     <div className="bg-accent-light/30 p-6 rounded-lg">
-                      <h4 className="font-semibold text-primary-blue mb-3 flex items-center">
+                      <h3 className="font-semibold text-primary-blue mb-3 flex items-center">
                         <Calculator className="h-5 w-5 mr-2" />
                         Industry Insights:
-                      </h4>
+                      </h3>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
                           <span className="text-text-secondary">Revenue Growth Potential</span>

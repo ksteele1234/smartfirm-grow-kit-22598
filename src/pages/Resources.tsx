@@ -227,7 +227,7 @@ const Resources = () => {
                     </div>
                   </div>
                   <div className="p-10 lg:p-16 flex flex-col justify-center bg-background">
-                    <h4 className="font-semibold text-foreground mb-6 text-lg">What You'll Learn:</h4>
+                    <h3 className="font-semibold text-foreground mb-6 text-lg">What You'll Learn:</h3>
                     <ul className="space-y-4 text-muted-foreground mb-10 text-base">
                       <li className="flex items-start">
                         <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>

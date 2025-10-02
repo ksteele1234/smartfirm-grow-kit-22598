@@ -271,7 +271,7 @@ const About = () => {
                 
                 <div className="lg:col-span-2 space-y-6 text-text-secondary">
                   <div>
-                    <p className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</p>
+                    <h2 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</h2>
                     <p className="text-lg leading-relaxed">
                       Hi, I'm Katie Steele, founder of SmartFirm.
                     </p>
