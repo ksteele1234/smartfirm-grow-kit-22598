@@ -199,9 +199,9 @@ const LeadGenerationScorecard = () => {
           noindex={false}
         />
         <Header />
-        <main className="container mx-auto px-4 py-16">
+        <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-3xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
@@ -211,7 +211,7 @@ const LeadGenerationScorecard = () => {
                 <CardTitle className="text-3xl text-primary">Your Lead Generation Score</CardTitle>
                 <CardDescription>Are you getting enough leads for growth?</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
+              <CardContent className="space-y-12">
                 <div className="text-center">
                   <div className="text-6xl mb-4">{scoreCategory.emoji}</div>
                   <div className="text-5xl font-bold text-primary mb-2">{score.percentage}%</div>
@@ -302,9 +302,9 @@ const LeadGenerationScorecard = () => {
         noindex={false}
       />
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>

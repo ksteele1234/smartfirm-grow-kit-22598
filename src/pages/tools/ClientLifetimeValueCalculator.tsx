@@ -91,9 +91,9 @@ const ClientLifetimeValueCalculator = () => {
           noindex={false}
         />
         <Header />
-        <main className="container mx-auto px-4 py-16">
+        <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
@@ -103,7 +103,7 @@ const ClientLifetimeValueCalculator = () => {
                 <CardTitle className="text-3xl text-primary">Your Client Lifetime Value Analysis</CardTitle>
                 <CardDescription>Understanding the true value of your clients and the cost of losing them</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
+              <CardContent className="space-y-12">
                 <div className="text-center bg-primary/10 p-8 rounded-lg">
                   <h3 className="text-xl font-semibold mb-2">Client Lifetime Value</h3>
                   <div className="text-5xl font-bold text-primary">${clv.toLocaleString()}</div>
@@ -235,10 +235,10 @@ const ClientLifetimeValueCalculator = () => {
         description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
         noindex={false}
       />
-      <Header />
-      <main className="container mx-auto px-4 py-16">
+        <Header />
+      <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>

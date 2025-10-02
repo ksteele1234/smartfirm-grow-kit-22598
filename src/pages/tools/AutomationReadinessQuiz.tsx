@@ -132,9 +132,9 @@ const AutomationReadinessQuiz = () => {
           noindex={false}
         />
         <Header />
-        <main className="container mx-auto px-4 py-16">
+        <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-2xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
@@ -144,7 +144,7 @@ const AutomationReadinessQuiz = () => {
                 <CardTitle className="text-3xl text-primary">Your Automation Readiness Score</CardTitle>
                 <CardDescription>Here's how automation-ready your firm is</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8">
                 <div className="text-center">
                   <div className="text-6xl font-bold text-primary mb-2">{score}%</div>
                   <div className={`text-xl font-semibold ${scoreCategory.color}`}>
@@ -191,9 +191,9 @@ const AutomationReadinessQuiz = () => {
         noindex={false}
       />
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>

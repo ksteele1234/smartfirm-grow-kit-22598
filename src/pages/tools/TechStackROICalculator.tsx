@@ -156,9 +156,9 @@ const TechStackROICalculator = () => {
           noindex={false}
         />
         <Header />
-        <main className="container mx-auto px-4 py-16">
+        <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
@@ -168,7 +168,7 @@ const TechStackROICalculator = () => {
                 <CardTitle className="text-3xl text-primary">Your Tech Stack ROI Analysis</CardTitle>
                 <CardDescription>See how much you could save with automation and consolidation</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
+              <CardContent className="space-y-12">
                 <div className="grid md:grid-cols-2 gap-6">
                   <Card className="bg-red-50 border-red-200">
                     <CardHeader>
@@ -278,9 +278,9 @@ const TechStackROICalculator = () => {
         noindex={false}
       />
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
