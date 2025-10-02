@@ -182,7 +182,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                     {service.description}
                   </CardDescription>
                   <Button variant="outline" size="sm" asChild>
-                    <a href={service.link}>Learn More</a>
+                    <a href={service.link}>Explore {service.title}</a>
                   </Button>
                 </CardContent>
               </Card>
@@ -216,7 +216,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{study.result}</p>
                   <Button variant="outline" size="sm" asChild>
-                    <a href={study.link}>Read Full Story</a>
+                    <a href={study.link}>Read {study.client} Success Story</a>
                   </Button>
                 </CardContent>
               </Card>
