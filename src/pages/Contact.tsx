@@ -357,21 +357,6 @@ const Contact = () => {
             ]
           })}
         </script>
-        <script id="sf-entity-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "SmartFirm",
-            "telephone": "(541) 658-3789",
-            "email": "contact@smartfirm.io",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Eugene",
-              "addressRegion": "OR"
-            },
-            "url": window.location.origin
-          })}
-        </script>
       </section>
 
       </main>

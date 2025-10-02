@@ -159,7 +159,7 @@ const About = () => {
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Our Story: Empowering Accounting Firms to Thrive
+              About SmartFirm: Empowering Accounting Firms to Thrive
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">

@@ -38,28 +38,28 @@ const Industries = () => {
       icon: <User className="h-8 w-8 text-primary-blue" />,
       title: "Solo CPAs Like You",
       description: "The Solo CPA's Survival Guide, Solo Practice Optimization, Personal Productivity Solutions, Growth Without Complexity.",
-      link: "/industries/solo-cpas",
+      link: "/get-started",
       size: "Solo Practice"
     },
     {
       icon: <Users className="h-8 w-8 text-primary-teal" />,
       title: "Small Accounting Firms (2-10 employees)",
       description: "Small Firm Challenges, Team Collaboration Solutions, Workflow Standardization.",
-      link: "/industries/small-firms",
+      link: "/get-started",
       size: "2-10 Employees"
     },
     {
       icon: <Building className="h-8 w-8 text-primary-blue" />,
       title: "Mid-Sized Accounting Firms (11-50 employees)",
       description: "Growth & Scalability, Advanced Automation, Leadership & Management.",
-      link: "/industries/mid-sized-firms",
+      link: "/get-started",
       size: "11-50 Employees"
     },
     {
       icon: <Building2 className="h-8 w-8 text-primary-teal" />,
       title: "Large Accounting Firms (50+ employees)",
       description: "Enterprise Solutions, Strategic Partnerships, Innovation & Future-Proofing.",
-      link: "/industries/large-firms",
+      link: "/get-started",
       size: "50+ Employees"
     }
   ];
@@ -68,12 +68,12 @@ const Industries = () => {
     {
       icon: <Shield className="h-6 w-6 text-primary-blue" />,
       title: "Forensic Accounting",
-      link: "/industries/forensic-accounting"
+      link: "/get-started"
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-primary-teal" />,
       title: "Wealth Management",
-      link: "/industries/wealth-management"
+      link: "/get-started"
     },
     {
       icon: <FileText className="h-6 w-6 text-primary-blue" />,
@@ -129,7 +129,7 @@ const Industries = () => {
         <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Marketing Solutions for Your Accounting Niche
+              Marketing for Accountants: Solutions for Your Niche
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions 

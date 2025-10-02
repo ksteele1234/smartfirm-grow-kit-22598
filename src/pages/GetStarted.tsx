@@ -432,15 +432,6 @@ const GetStarted = () => {
             ]
           })}
         </script>
-        <script id="sf-entity-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "SmartFirm",
-            "url": window.location.origin,
-            "description": "Marketing automation and technology solutions for accounting firms"
-          })}
-        </script>
       </section>
 
       {/* Final CTA Section */}

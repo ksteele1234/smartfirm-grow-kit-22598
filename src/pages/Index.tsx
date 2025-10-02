@@ -48,6 +48,7 @@ const Index = () => {
       </div>
 
       <main>
+        <h1 className="sr-only">Marketing Automation for Accounting Firms</h1>
         <HeroSection />
         <ServicesSection />
         <HowItWorksSection />

@@ -32,7 +32,7 @@ const Resources = () => {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Guides & Whitepapers",
       description: "In-depth articles, e-books, and whitepapers on marketing, automation, and business growth.",
-      link: "/resources/guides"
+      link: "/get-started"
     },
     {
       icon: <Calculator className="h-8 w-8 text-teal" />,
@@ -44,19 +44,19 @@ const Resources = () => {
       icon: <FileText className="h-8 w-8 text-primary" />,
       title: "Blog",
       description: "Latest articles, industry news, and thought leadership posts.",
-      link: "/resources/blog"
+      link: "/get-started"
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-teal" />,
       title: "Case Studies",
       description: "Real-world examples of client success and transformation stories.",
-      link: "/resources/case-studies"
+      link: "/case-studies"
     },
     {
       icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
-      link: "/resources/webinars"
+      link: "/get-started"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-teal" />,
@@ -302,8 +302,8 @@ const Resources = () => {
 
             <div className="text-center">
               <Button variant="outline" asChild>
-                <a href="/resources/blog">
-                  View All Blog Posts
+                <a href="/get-started">
+                  Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
