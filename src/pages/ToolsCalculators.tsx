@@ -112,8 +112,13 @@ const ToolsCalculators = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Free Tools & Calculators for Accounting Firms
             </h1>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
+                Free tools & calculators for accounting firms: expert-designed assessment tools that help you measure efficiency, calculate ROI, and identify growth opportunities with data-driven insights.
+              </p>
+            </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Discover how free tools & calculators can transform your practice. Assess your firm's performance, identify growth opportunities, and make data-driven decisions with our expert-designed business intelligence tools tailored specifically for accounting professionals.
+              Get instant, personalized recommendations to improve your practice.
             </p>
           </div>
         </section>

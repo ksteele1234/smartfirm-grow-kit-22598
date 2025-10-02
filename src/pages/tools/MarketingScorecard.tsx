@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import ToolPageWrapper from "@/components/ToolPageWrapper";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -321,24 +322,22 @@ const MarketingScorecard = () => {
   const currentAnswer = answers[currentQ.id];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Marketing Scorecard | SmartFirm"
-        description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
-        noindex={false}
-      />
-      <Header />
-      <main className="pt-20">
-        <section className="section-padding">
-          <div className="container mx-auto max-w-2xl">
-            <div className="mb-8">
-              <Button variant="ghost" asChild className="mb-4">
-                <a href="/tools">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Tools
-                </a>
-              </Button>
-              <h1 className="text-3xl font-bold text-primary mb-4">Is Your Marketing Working?</h1>
+    <ToolPageWrapper
+      title="Marketing Scorecard | SmartFirm"
+      description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
+      pageTitle="Is Your Marketing Working?"
+      intro="Is your marketing working? Find out with our quick yes/no assessment that reveals gaps in your marketing strategy and provides personalized action plans tailored for accounting firms."
+    >
+      <section className="section-padding">
+        <div className="container mx-auto max-w-2xl">
+          <div className="mb-8">
+            <Button variant="ghost" asChild className="mb-4">
+              <a href="/tools">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Tools
+              </a>
+            </Button>
+            <h2 className="text-3xl font-bold text-primary mb-4">Answer These Questions</h2>
               <Progress value={progress} className="mb-4" />
               <p className="text-muted-foreground">
                 Question {currentQuestion + 1} of {questions.length} • {currentQ.category}
@@ -390,9 +389,7 @@ const MarketingScorecard = () => {
             </Card>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </ToolPageWrapper>
   );
 };
 
