@@ -463,17 +463,46 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     // Intro sets context + includes primary phrase in first 100 words (4)
     // Use H1 text as primary keyword if available, fallback to title
     const h1Text = h1Elements.length > 0 ? h1Elements[0].textContent?.trim() : '';
-    const primaryPhrase = (h1Text || title.split('|')[0].trim()).toLowerCase();
+    const rawPrimaryPhrase = h1Text || title.split('|')[0].trim();
     
-    if (first100Words.toLowerCase().includes(primaryPhrase.slice(0, 30))) {
+    // Normalize primary phrase: lowercase, remove punctuation, collapse whitespace
+    const primaryPhrase = rawPrimaryPhrase
+      .toLowerCase()
+      .replace(/[^\w\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    
+    // Check for dedicated keyword intro section first, fallback to first 150 words
+    const keywordIntroElement = doc.querySelector('#sf-keyword-intro');
+    const introText = keywordIntroElement 
+      ? keywordIntroElement.textContent?.toLowerCase() || ''
+      : first100Words.toLowerCase();
+    
+    // Normalize intro text same way
+    const normalizedIntro = introText
+      .replace(/[^\w\s]/g, ' ')
+      .replace(/\s+/g, ' ');
+    
+    // Extract significant tokens from primary phrase (skip common words)
+    const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'for', 'with', 'your', 'our'];
+    const primaryTokens = primaryPhrase
+      .split(' ')
+      .filter(token => token.length > 2 && !stopWords.includes(token));
+    
+    // Check if at least 50% of significant tokens appear in intro
+    const matchingTokens = primaryTokens.filter(token => normalizedIntro.includes(token));
+    const tokenMatchRatio = primaryTokens.length > 0 ? matchingTokens.length / primaryTokens.length : 0;
+    
+    if (tokenMatchRatio >= 0.5 || normalizedIntro.includes(primaryPhrase)) {
       contentScore += 4;
-    } else if (primaryPhrase.length > 10) { // Only suggest if we have a meaningful keyword
+    } else if (primaryPhrase.length > 10) {
       suggestions.push({
         priority: "P1",
         effort: "S",
         impact: "medium",
         issueType: "missing_keyword_intro",
-        recommendation: `Include primary keyword "${primaryPhrase}" in first 100 words`
+        recommendation: `Include primary keyword "${rawPrimaryPhrase}" in intro section (preferably in #sf-keyword-intro element)`,
+        notes: `Detected intro: "${introText.slice(0, 100)}..." | Primary phrase: "${primaryPhrase}" | Token match: ${matchingTokens.length}/${primaryTokens.length}`
       });
     }
 
