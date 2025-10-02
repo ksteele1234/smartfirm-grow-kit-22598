@@ -89,8 +89,8 @@ const ToolsCalculators = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
-        <div className="container mx-auto px-4 py-4">
+      <nav id="sf-breadcrumbs" className="bg-background border-b pt-20" aria-label="Breadcrumb">
+        <div className="max-w-5xl mx-auto px-4 py-2">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -103,30 +103,32 @@ const ToolsCalculators = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
 
       <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-muted">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Free Tools & Calculators for Accounting Firms
-            </h1>
-            <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-                Free tools & calculators for accounting firms: expert-designed assessment tools that help you measure efficiency, calculate ROI, and identify growth opportunities with data-driven insights.
+        <section className="py-12 md:py-16 bg-gradient-to-br from-background to-muted">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+                Free Tools & Calculators for Accounting Firms
+              </h1>
+              <div id="sf-keyword-intro">
+                <p className="text-lg md:text-xl text-muted-foreground mb-4">
+                  Free tools & calculators for accounting firms: expert-designed assessment tools that help you measure efficiency, calculate ROI, and identify growth opportunities with data-driven insights.
+                </p>
+              </div>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Get instant, personalized recommendations to improve your practice.
               </p>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Get instant, personalized recommendations to improve your practice.
-            </p>
           </div>
         </section>
 
         {/* Tools Grid */}
-        <section className="section-padding">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
               {tools.map((tool) => (
                 <Card key={tool.id} className="group hover:shadow-lg transition-all duration-300 border-border relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
@@ -170,63 +172,65 @@ const ToolsCalculators = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="section-padding bg-muted">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Why Use Our Assessment Tools?
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Get actionable insights that help you make informed decisions about your firm's growth strategy.
-              </p>
-            </div>
+        <section className="py-16 md:py-20 bg-muted/50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  Why Use Our Assessment Tools?
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Get actionable insights that help you make informed decisions about your firm's growth strategy.
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
-                  <Users className="h-8 w-8 text-primary" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Expert-Designed</h3>
+                  <p className="text-muted-foreground">
+                    Created by accounting industry experts who understand the unique challenges of growing a practice.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Expert-Designed</h3>
-                <p className="text-muted-foreground">
-                  Created by accounting industry experts who understand the unique challenges of growing a practice.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
-                  <BarChart3 className="h-8 w-8 text-teal" />
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
+                    <BarChart3 className="h-8 w-8 text-teal" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Data-Driven Insights</h3>
+                  <p className="text-muted-foreground">
+                    Get specific, actionable recommendations based on your responses and industry benchmarks.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Data-Driven Insights</h3>
-                <p className="text-muted-foreground">
-                  Get specific, actionable recommendations based on your responses and industry benchmarks.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
-                  <Clock className="h-8 w-8 text-secondary" />
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
+                    <Clock className="h-8 w-8 text-secondary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">Quick & Easy</h3>
+                  <p className="text-muted-foreground">
+                    Complete assessments in just minutes and get instant results with personalized recommendations.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Quick & Easy</h3>
-                <p className="text-muted-foreground">
-                  Complete assessments in just minutes and get instant results with personalized recommendations.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto px-4 text-center">
-            <Card className="max-w-2xl mx-auto border-primary/20 bg-gradient-to-br from-accent/30 to-accent/10">
-              <CardHeader>
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <Card className="max-w-3xl mx-auto border-primary/20 bg-gradient-to-br from-accent/30 to-accent/10">
+              <CardHeader className="text-center pb-6">
                 <CardTitle className="text-2xl md:text-3xl text-primary mb-4">
                   Ready to Optimize Your Firm?
                 </CardTitle>
-                <CardDescription className="text-muted-foreground text-lg">
+                <CardDescription className="text-muted-foreground text-base md:text-lg">
                   After completing our assessments, discover how SmartFirm can help you implement 
                   the strategies needed to achieve your growth goals.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-center pt-0">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
                   <a href="/get-started">
                     Get Your Free Strategy Session
@@ -240,12 +244,12 @@ const ToolsCalculators = () => {
 
         {/* FAQ Section */}
         <section className="py-16 md:py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-10 text-center">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <details className="group border border-border rounded-lg p-6 bg-background">
                   <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
                     How do these tools help my accounting firm?
