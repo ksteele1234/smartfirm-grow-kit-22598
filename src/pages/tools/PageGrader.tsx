@@ -62,8 +62,10 @@ interface PageGraderProps {
 
 const PageGrader = ({ onBack }: PageGraderProps) => {
   const [isGrading, setIsGrading] = useState(false);
+  const [isValidating, setIsValidating] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<PageScore[]>([]);
+  const [validationResults, setValidationResults] = useState<PageScore[]>([]);
   const [currentPage, setCurrentPage] = useState("");
   const [selectedPage, setSelectedPage] = useState<PageScore | null>(null);
   
@@ -841,6 +843,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     setIsGrading(true);
     setProgress(0);
     setResults([]);
+    setValidationResults([]);
     setSelectedPage(null);
     
     const gradingResults: PageScore[] = [];
@@ -859,6 +862,31 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     
     setResults(gradingResults);
     setIsGrading(false);
+    setCurrentPage("");
+  };
+
+  const runValidation = async () => {
+    setIsValidating(true);
+    setProgress(0);
+    setValidationResults([]);
+    setSelectedPage(null);
+    
+    const gradingResults: PageScore[] = [];
+    const routesToGrade = routes.filter(r => includeNoindex || !r.path.includes('/404'));
+    
+    for (let i = 0; i < routesToGrade.length; i++) {
+      const route = routesToGrade[i];
+      setCurrentPage(route.path);
+      setProgress(((i + 1) / routesToGrade.length) * 100);
+      
+      const result = await gradePageViaIframe(route.path, route.type);
+      gradingResults.push(result);
+      
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+    
+    setValidationResults(gradingResults);
+    setIsValidating(false);
     setCurrentPage("");
   };
 
@@ -955,6 +983,19 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       .slice(0, 10);
   })();
 
+  // Validation metrics
+  const validationOverallScore = validationResults.length > 0 
+    ? Math.round(validationResults.reduce((sum, r) => sum + r.score, 0) / validationResults.length) 
+    : 0;
+
+  const validationP0Count = validationResults.reduce((sum, r) => 
+    sum + r.suggestions.filter(s => s.priority === 'P0').length, 0
+  );
+
+  const initialP0Count = results.reduce((sum, r) => 
+    sum + r.suggestions.filter(s => s.priority === 'P0').length, 0
+  );
+
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between">
@@ -1019,13 +1060,15 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       </Card>
 
       {/* Progress */}
-      {isGrading && (
+      {(isGrading || isValidating) && (
         <Card>
           <CardContent className="pt-6">
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between text-sm mb-2">
-                  <span className="text-muted-foreground">Grading: {currentPage}</span>
+                  <span className="text-muted-foreground">
+                    {isValidating ? 'Validating' : 'Grading'}: {currentPage}
+                  </span>
                   <span className="font-semibold">{Math.round(progress)}%</span>
                 </div>
                 <Progress value={progress} />
@@ -1036,8 +1079,26 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       )}
 
       {/* Dashboard */}
-      {!isGrading && results.length > 0 && (
+      {!isGrading && !isValidating && results.length > 0 && (
         <>
+          <Alert className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
+            <Download className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+            <AlertDescription className="text-blue-900 dark:text-blue-100">
+              <strong>Next Step:</strong> Review suggestions below, implement fixes, then click "Validate Fixes" to verify improvements.
+            </AlertDescription>
+          </Alert>
+
+          <div className="flex gap-4">
+            <Button onClick={exportSuggestionsToCSV} size="lg" className="flex-1">
+              <Download className="mr-2 h-5 w-5" />
+              Export All Suggestions
+            </Button>
+            <Button onClick={runValidation} variant="default" size="lg" className="flex-1">
+              <RefreshCw className="mr-2 h-5 w-5" />
+              Validate Fixes
+            </Button>
+          </div>
+
           {/* Overall Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <Card>
@@ -1331,6 +1392,131 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
               </div>
             </CardContent>
           </Card>
+
+          {/* Validation Results */}
+          {validationResults.length > 0 && (
+            <Card className="border-2 border-green-200 dark:border-green-800">
+              <CardHeader className="bg-green-50 dark:bg-green-950">
+                <CardTitle className="flex items-center gap-2">
+                  <RefreshCw className="h-5 w-5 text-green-600 dark:text-green-400" />
+                  Validation Results - After Fixes
+                </CardTitle>
+                <CardDescription>
+                  Re-graded all pages to verify your improvements
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6 space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">New Overall Score</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                        {validationOverallScore}
+                      </div>
+                      {overallScore < validationOverallScore && (
+                        <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                          ↑ +{validationOverallScore - overallScore} points!
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Pages Re-graded</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-primary">
+                        {validationResults.length}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Remaining P0 Issues</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-orange-500">
+                        {validationP0Count}
+                      </div>
+                      {initialP0Count > validationP0Count && (
+                        <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                          ↓ {initialP0Count - validationP0Count} fixed!
+                        </p>
+                      )}
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Grade Distribution</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-sm space-y-1">
+                        <div>A: {validationResults.filter(r => r.grade === 'A').length}</div>
+                        <div>B: {validationResults.filter(r => r.grade === 'B').length}</div>
+                        <div>C: {validationResults.filter(r => r.grade === 'C').length}</div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {validationP0Count === 0 ? (
+                  <Alert className="bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800">
+                    <RefreshCw className="h-4 w-4 text-green-600 dark:text-green-400" />
+                    <AlertDescription className="text-green-900 dark:text-green-100">
+                      <strong>Excellent!</strong> All P0 critical issues have been resolved. Your pages are in great shape!
+                    </AlertDescription>
+                  </Alert>
+                ) : (
+                  <Alert className="bg-yellow-50 dark:bg-yellow-950 border-yellow-200 dark:border-yellow-800">
+                    <Download className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+                    <AlertDescription className="text-yellow-900 dark:text-yellow-100">
+                      <strong>{validationP0Count} P0 issues remaining.</strong> Review the updated suggestions below and continue fixing.
+                    </AlertDescription>
+                  </Alert>
+                )}
+
+                <div className="border rounded-lg overflow-hidden">
+                  <div className="bg-muted p-4">
+                    <h3 className="font-semibold">Top Improvements</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Pages with the biggest score increases
+                    </p>
+                  </div>
+                  <div className="divide-y max-h-96 overflow-y-auto">
+                    {validationResults
+                      .map((vPage, idx) => {
+                        const originalPage = results.find(r => r.url === vPage.url);
+                        const scoreDiff = originalPage ? vPage.score - originalPage.score : 0;
+                        return { ...vPage, scoreDiff, originalScore: originalPage?.score || 0 };
+                      })
+                      .filter(p => p.scoreDiff > 0)
+                      .sort((a, b) => b.scoreDiff - a.scoreDiff)
+                      .slice(0, 10)
+                      .map((page, index) => (
+                        <div key={index} className="p-4 hover:bg-muted/50">
+                          <div className="flex items-start justify-between mb-2">
+                            <div className="font-mono text-sm text-primary">
+                              {page.url}
+                            </div>
+                            <div className="flex gap-2">
+                              <Badge variant="outline">{page.originalScore} → {page.score}</Badge>
+                              <Badge variant="default" className="bg-green-600">
+                                +{page.scoreDiff}
+                              </Badge>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </>
       )}
     </div>
