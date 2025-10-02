@@ -37,8 +37,10 @@ interface PageAudit {
 const SEOAudit = () => {
   const [activeTab, setActiveTab] = useState<"basic" | "advanced" | "grader">("basic");
   const [isAuditing, setIsAuditing] = useState(false);
+  const [isValidating, setIsValidating] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<PageAudit[]>([]);
+  const [validationResults, setValidationResults] = useState<PageAudit[]>([]);
   const [currentPage, setCurrentPage] = useState("");
 
   // All routes to audit (from App.tsx)
@@ -331,6 +333,7 @@ const SEOAudit = () => {
     setIsAuditing(true);
     setProgress(0);
     setResults([]);
+    setValidationResults([]);
     
     const auditResults: PageAudit[] = [];
     
@@ -348,6 +351,30 @@ const SEOAudit = () => {
     
     setResults(auditResults);
     setIsAuditing(false);
+    setCurrentPage("");
+  };
+
+  const runValidation = async () => {
+    setIsValidating(true);
+    setProgress(0);
+    setValidationResults([]);
+    
+    const auditResults: PageAudit[] = [];
+    
+    for (let i = 0; i < routes.length; i++) {
+      const route = routes[i];
+      setCurrentPage(route);
+      setProgress(((i + 1) / routes.length) * 100);
+      
+      const result = await auditPageViaIframe(route);
+      auditResults.push(result);
+      
+      // Small delay to prevent overwhelming the browser
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+    
+    setValidationResults(auditResults);
+    setIsValidating(false);
     setCurrentPage("");
   };
 
@@ -400,6 +427,9 @@ const SEOAudit = () => {
 
   const totalIssues = results.reduce((sum, r) => sum + r.issues.length, 0);
   const pagesWithIssues = results.filter(r => r.issues.length > 0).length;
+  
+  const validationTotalIssues = validationResults.reduce((sum, r) => sum + r.issues.length, 0);
+  const validationPagesWithIssues = validationResults.filter(r => r.issues.length > 0).length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -482,7 +512,23 @@ const SEOAudit = () => {
                     </div>
                   )}
 
-                  {!isAuditing && results.length > 0 && (
+                  {isValidating && (
+                    <div className="space-y-4">
+                      <div>
+                        <div className="flex justify-between text-sm mb-2">
+                          <span className="text-muted-foreground">
+                            Validating: {currentPage}
+                          </span>
+                          <span className="font-semibold">
+                            {Math.round(progress)}%
+                          </span>
+                        </div>
+                        <Progress value={progress} />
+                      </div>
+                    </div>
+                  )}
+
+                  {!isAuditing && !isValidating && results.length > 0 && (
                     <div className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <Card>
@@ -519,13 +565,21 @@ const SEOAudit = () => {
                         </Card>
                       </div>
 
+                      <Alert className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
+                        <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                        <AlertDescription className="text-blue-900 dark:text-blue-100">
+                          <strong>Next Step:</strong> Review the issues above, fix them in your code, then click "Validate After Fixes" to verify your corrections.
+                        </AlertDescription>
+                      </Alert>
+
                       <div className="flex gap-4">
                         <Button onClick={exportToCSV} size="lg" className="flex-1">
                           <Download className="mr-2 h-5 w-5" />
-                          Export to CSV
+                          Export Issues to CSV
                         </Button>
-                        <Button onClick={runAudit} variant="outline" size="lg">
-                          Re-run Audit
+                        <Button onClick={runValidation} variant="default" size="lg" className="flex-1">
+                          <CheckCircle className="mr-2 h-5 w-5" />
+                          Validate After Fixes
                         </Button>
                       </div>
 
@@ -560,6 +614,107 @@ const SEOAudit = () => {
                           ))}
                         </div>
                       </div>
+
+                      {/* Validation Results */}
+                      {validationResults.length > 0 && (
+                        <Card className="border-2 border-green-200 dark:border-green-800">
+                          <CardHeader className="bg-green-50 dark:bg-green-950">
+                            <CardTitle className="flex items-center gap-2">
+                              <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
+                              Validation Results After Fixes
+                            </CardTitle>
+                            <CardDescription>
+                              Re-checked all pages to verify your corrections
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent className="pt-6">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                              <Card>
+                                <CardHeader className="pb-3">
+                                  <CardTitle className="text-sm">Pages Validated</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                  <div className="text-3xl font-bold text-primary">
+                                    {validationResults.length}
+                                  </div>
+                                </CardContent>
+                              </Card>
+
+                              <Card>
+                                <CardHeader className="pb-3">
+                                  <CardTitle className="text-sm">Remaining Issues</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                  <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                                    {validationTotalIssues}
+                                  </div>
+                                  {totalIssues > validationTotalIssues && (
+                                    <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                                      ↓ {totalIssues - validationTotalIssues} fixed!
+                                    </p>
+                                  )}
+                                </CardContent>
+                              </Card>
+
+                              <Card>
+                                <CardHeader className="pb-3">
+                                  <CardTitle className="text-sm">Pages Still With Issues</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                  <div className="text-3xl font-bold text-orange-500">
+                                    {validationPagesWithIssues}
+                                  </div>
+                                  {pagesWithIssues > validationPagesWithIssues && (
+                                    <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                                      ↓ {pagesWithIssues - validationPagesWithIssues} pages fixed!
+                                    </p>
+                                  )}
+                                </CardContent>
+                              </Card>
+                            </div>
+
+                            {validationTotalIssues === 0 ? (
+                              <Alert className="bg-green-50 dark:bg-green-950 border-green-200 dark:border-green-800">
+                                <CheckCircle className="h-4 w-4 text-green-600 dark:text-green-400" />
+                                <AlertDescription className="text-green-900 dark:text-green-100">
+                                  <strong>Perfect!</strong> All SEO issues have been resolved. All pages pass validation.
+                                </AlertDescription>
+                              </Alert>
+                            ) : (
+                              <div className="border rounded-lg overflow-hidden">
+                                <div className="bg-muted p-4">
+                                  <h3 className="font-semibold">Remaining Issues to Fix</h3>
+                                  <p className="text-sm text-muted-foreground">
+                                    Pages that still need attention
+                                  </p>
+                                </div>
+                                <div className="divide-y max-h-96 overflow-y-auto">
+                                  {validationResults.filter(r => r.issues.length > 0).map((result, index) => (
+                                    <div key={index} className="p-4 hover:bg-muted/50">
+                                      <div className="flex items-start justify-between mb-2">
+                                        <div className="font-mono text-sm text-primary">
+                                          {result.url}
+                                        </div>
+                                        <Badge variant={result.issues.length > 3 ? "destructive" : "secondary"}>
+                                          {result.issues.length} issues
+                                        </Badge>
+                                      </div>
+                                      <div className="space-y-1">
+                                        {result.issues.map((issue, i) => (
+                                          <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                            <AlertCircle className="h-3 w-3" />
+                                            {issue}
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                          </CardContent>
+                        </Card>
+                      )}
                     </div>
                   )}
                 </CardContent>
