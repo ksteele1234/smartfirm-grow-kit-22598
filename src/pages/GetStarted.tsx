@@ -151,7 +151,7 @@ const GetStarted = () => {
             Whether you're ready for comprehensive CPA marketing automation or just exploring digital marketing strategies for accounting practices, find the best way to connect with SmartFirm and begin your growth journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft max-w-6xl mx-auto">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
                 style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '500px'}}
