@@ -33,19 +33,6 @@ const Index = () => {
         ]}
       />
       <Header />
-      
-      {/* Breadcrumb */}
-      <div className="bg-background border-b">
-        <div className="container mx-auto px-4 py-4">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbPage>Home</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </div>
 
       <main>
         <HeroSection />
