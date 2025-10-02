@@ -31,7 +31,7 @@ const BusinessAdvisory = () => {
       {
         title: "Thought Leadership Development",
         description: "Establish yourself as a recognized expert in business strategy",
-        link: "/services/thought-leadership"
+        link: "/services/marketing-automation"
       },
       {
         title: "High-Value Client Attraction",
@@ -41,12 +41,12 @@ const BusinessAdvisory = () => {
       {
         title: "Content Marketing Strategy",
         description: "Educational content that demonstrates expertise and builds trust",
-        link: "/services/content-marketing"
+        link: "/services/email-marketing"
       },
       {
         title: "Speaking & Events",
         description: "Position yourself as an expert through speaking opportunities",
-        link: "/services/speaking-events"
+        link: "/services/social-media-management"
       }
     ],
     caseStudies: [
@@ -54,13 +54,13 @@ const BusinessAdvisory = () => {
         title: "Thought Leadership to $500K Practice",
         client: "Strategic Business Advisors",
         result: "Built advisory practice generating $500K annually through content marketing",
-        link: "/success-stories/strategic-advisors"
+        link: "/success-stories"
       },
       {
         title: "Premium Advisory Positioning",
         client: "Executive Financial Consulting",
         result: "Positioned as premium advisor, average engagement $25K",
-        link: "/success-stories/executive-consulting"
+        link: "/success-stories"
       }
     ],
     ctaTitle: "Build Your Advisory Practice",

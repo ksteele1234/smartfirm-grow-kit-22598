@@ -74,7 +74,7 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="default" size="lg" asChild>
-                <Link to="/services/all">
+                <Link to="/all-services">
                   Explore All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

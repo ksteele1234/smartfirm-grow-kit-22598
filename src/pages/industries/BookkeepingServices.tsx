@@ -36,7 +36,7 @@ const BookkeepingServices = () => {
       {
         title: "Value-Based Positioning",
         description: "Position your expertise above price competition",
-        link: "/services/value-positioning"
+        link: "/services/marketing-automation"
       },
       {
         title: "Recurring Revenue Optimization", 
@@ -54,13 +54,13 @@ const BookkeepingServices = () => {
         title: "200% Monthly Recurring Revenue Growth",
         client: "QuickBooks Certified Bookkeeper",
         result: "Built $25K MRR through systematic client acquisition",
-        link: "/success-stories/quickbooks-certified"
+        link: "/success-stories"
       },
       {
         title: "Premium Pricing Success",
         client: "Business Bookkeeping Solutions",
         result: "Increased rates 60% while improving client retention",
-        link: "/success-stories/premium-pricing"
+        link: "/success-stories"
       }
     ],
     ctaTitle: "Build Your Bookkeeping Empire",

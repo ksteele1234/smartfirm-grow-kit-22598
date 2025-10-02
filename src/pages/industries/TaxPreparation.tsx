@@ -31,12 +31,12 @@ const TaxPreparation = () => {
       {
         title: "Seasonal Marketing Campaigns",
         description: "Maximize visibility and client acquisition during peak tax season",
-        link: "/services/seasonal-marketing"
+        link: "/services/marketing-automation"
       },
       {
         title: "Year-Round Revenue Development",
         description: "Build additional services to generate consistent monthly income",
-        link: "/services/revenue-diversification"
+        link: "/services/business-optimization"
       },
       {
         title: "Local SEO Optimization",
@@ -46,7 +46,7 @@ const TaxPreparation = () => {
       {
         title: "Referral Program Management",
         description: "Systematic referral generation from satisfied clients",
-        link: "/services/referral-programs"
+        link: "/solutions/get-more-referrals"
       }
     ],
     caseStudies: [
@@ -54,13 +54,13 @@ const TaxPreparation = () => {
         title: "150% Revenue Increase During Tax Season",
         client: "Midwest Tax Services",
         result: "Generated 400+ new clients through targeted local marketing",
-        link: "/success-stories/midwest-tax-services"
+        link: "/success-stories"
       },
       {
         title: "Year-Round Revenue Streams",
         client: "Family Tax Partners",
         result: "Built bookkeeping services generating $8K monthly off-season",
-        link: "/success-stories/family-tax-partners"
+        link: "/success-stories"
       }
     ],
     ctaTitle: "Ready to Transform Your Tax Business?",
