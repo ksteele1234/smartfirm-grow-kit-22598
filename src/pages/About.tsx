@@ -161,9 +161,13 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Our Story: Empowering Accounting Firms to Thrive
             </h1>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
+                Our story centers on empowering accounting firms to thrive in an increasingly competitive digital landscape. 
+                We believe every practice—from solo CPAs to large enterprises—has untapped potential for extraordinary growth through intelligent automation and strategic marketing.
+              </p>
+            </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              At SmartFirm, we're dedicated to empowering accounting firms to thrive in today's competitive marketplace. 
-              We believe every practice—whether solo CPA, small firm, or large enterprise—has the potential for extraordinary growth through intelligent automation and strategic marketing. 
               Our mission is to provide the AI-driven tools, expert guidance, and proven systems to make that vision a reality.
             </p>
           </div>
@@ -267,7 +271,7 @@ const About = () => {
                 
                 <div className="lg:col-span-2 space-y-6 text-text-secondary">
                   <div>
-                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</h3>
+                    <p className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</p>
                     <p className="text-lg leading-relaxed">
                       Hi, I'm Katie Steele, founder of SmartFirm.
                     </p>

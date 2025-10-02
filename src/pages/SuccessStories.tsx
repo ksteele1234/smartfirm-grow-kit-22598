@@ -187,9 +187,11 @@ const SuccessStories = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Real Results, Real Growth: SmartFirm Success Stories
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Explore real results and real growth from accounting firms like yours. These SmartFirm success stories showcase how practices achieved significant growth and efficiency through our proven methodologies and dedicated support.
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Discover real results, real growth: SmartFirm success stories from accounting firms that transformed their practices. These case studies showcase how firms achieved significant growth and operational efficiency through our proven methodologies and dedicated support.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="white-outline-on-dark" size="hero">
               Read All Case Studies
