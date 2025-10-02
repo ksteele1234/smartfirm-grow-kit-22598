@@ -115,7 +115,7 @@ const GetStarted = () => {
       
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background border-b pt-20" aria-label="Breadcrumb">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 py-2">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
