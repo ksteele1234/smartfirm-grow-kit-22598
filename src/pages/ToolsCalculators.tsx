@@ -89,8 +89,8 @@ const ToolsCalculators = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <nav id="sf-breadcrumbs" className="bg-background border-b pt-20" aria-label="Breadcrumb">
-        <div className="max-w-5xl mx-auto px-4 py-2">
+      <nav id="sf-breadcrumbs" className="bg-background-light/95 backdrop-blur-sm border-b pt-16" aria-label="Breadcrumb">
+        <div className="max-w-5xl mx-auto px-4 py-1.5">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
