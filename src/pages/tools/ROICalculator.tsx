@@ -265,6 +265,11 @@ const ROICalculator = () => {
                 </a>
               </Button>
               <h1 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator</h1>
+              <p className="text-sm text-muted-foreground mt-2 text-center" data-sf="entities">
+                Built by SmartFirm for accounting firms. See our <a href="/services" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+                <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
+                <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
+              </p>
               <p className="text-muted-foreground">
                 Enter your current marketing metrics to calculate your return on investment and identify optimization opportunities.
               </p>

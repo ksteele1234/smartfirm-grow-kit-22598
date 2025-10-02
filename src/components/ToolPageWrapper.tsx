@@ -97,6 +97,11 @@ export const ToolPageWrapper = ({
       </script>
 
       <main className="py-8">
+        <section className="py-4">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary text-center">{pageTitle}</h1>
+          </div>
+        </section>
         {/* Keyword Intro Section */}
         {intro && (
           <section className="py-8 bg-gradient-to-br from-background to-muted/30">
