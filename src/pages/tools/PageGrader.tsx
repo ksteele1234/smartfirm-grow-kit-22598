@@ -162,12 +162,14 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       };
       
       timeoutId = setTimeout(() => {
+        console.warn(`⏱️ Timeout grading ${url}`);
         resolveGrade(createDefaultScore(url, pageType, 0));
-      }, 10000);
+      }, 15000);
       
       iframe.onload = () => {
         setTimeout(() => {
           try {
+            if (resolved) return; // Already resolved by timeout
             const endTime = performance.now();
             const loadTimeMs = Math.round(endTime - startTime);
             
@@ -200,8 +202,14 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
         resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
       };
       
-      document.body.appendChild(iframe);
-      iframe.src = `${window.location.origin}${url}`;
+      try {
+        document.body.appendChild(iframe);
+        iframe.src = `${window.location.origin}${url}`;
+      } catch (error) {
+        console.error(`❌ Error creating iframe for ${url}:`, error);
+        cleanup();
+        resolve(createDefaultScore(url, pageType, 0));
+      }
     });
   };
 
@@ -880,20 +888,37 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const gradingResults: PageScore[] = [];
     const routesToGrade = routes.filter(r => includeNoindex || !r.path.includes('/404'));
     
-    for (let i = 0; i < routesToGrade.length; i++) {
-      const route = routesToGrade[i];
-      setCurrentPage(route.path);
-      setProgress(((i + 1) / routesToGrade.length) * 100);
-      
-      const result = await gradePageViaIframe(route.path, route.type);
-      gradingResults.push(result);
-      
-      await new Promise(resolve => setTimeout(resolve, 200));
+    try {
+      for (let i = 0; i < routesToGrade.length; i++) {
+        // Check if still grading (user didn't cancel)
+        if (!isGrading && i > 0) {
+          console.log('Grading cancelled by user');
+          break;
+        }
+        
+        const route = routesToGrade[i];
+        setCurrentPage(route.path);
+        setProgress(((i + 1) / routesToGrade.length) * 100);
+        
+        try {
+          const result = await gradePageViaIframe(route.path, route.type);
+          gradingResults.push(result);
+        } catch (error) {
+          console.error(`Failed to grade ${route.path}:`, error);
+          // Add error result and continue
+          gradingResults.push(createDefaultScore(route.path, route.type, 0));
+        }
+        
+        // Small delay between pages
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    } catch (error) {
+      console.error('Grading process error:', error);
+    } finally {
+      setResults(gradingResults);
+      setIsGrading(false);
+      setCurrentPage("");
     }
-    
-    setResults(gradingResults);
-    setIsGrading(false);
-    setCurrentPage("");
   };
 
   const runValidation = async () => {
@@ -905,20 +930,37 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const gradingResults: PageScore[] = [];
     const routesToGrade = routes.filter(r => includeNoindex || !r.path.includes('/404'));
     
-    for (let i = 0; i < routesToGrade.length; i++) {
-      const route = routesToGrade[i];
-      setCurrentPage(route.path);
-      setProgress(((i + 1) / routesToGrade.length) * 100);
-      
-      const result = await gradePageViaIframe(route.path, route.type);
-      gradingResults.push(result);
-      
-      await new Promise(resolve => setTimeout(resolve, 200));
+    try {
+      for (let i = 0; i < routesToGrade.length; i++) {
+        // Check if still validating (user didn't cancel)
+        if (!isValidating && i > 0) {
+          console.log('Validation cancelled by user');
+          break;
+        }
+        
+        const route = routesToGrade[i];
+        setCurrentPage(route.path);
+        setProgress(((i + 1) / routesToGrade.length) * 100);
+        
+        try {
+          const result = await gradePageViaIframe(route.path, route.type);
+          gradingResults.push(result);
+        } catch (error) {
+          console.error(`Failed to validate ${route.path}:`, error);
+          // Add error result and continue
+          gradingResults.push(createDefaultScore(route.path, route.type, 0));
+        }
+        
+        // Small delay between pages
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    } catch (error) {
+      console.error('Validation process error:', error);
+    } finally {
+      setValidationResults(gradingResults);
+      setIsValidating(false);
+      setCurrentPage("");
     }
-    
-    setValidationResults(gradingResults);
-    setIsValidating(false);
-    setCurrentPage("");
   };
 
   const exportSuggestionsToCSV = () => {

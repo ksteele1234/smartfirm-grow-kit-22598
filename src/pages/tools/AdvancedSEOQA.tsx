@@ -137,6 +137,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       
       // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
+        console.warn(`⏱️ Timeout loading ${url}`);
         resolveAudit({
           url,
           pageLoadTimeMs: 0,
@@ -176,12 +177,13 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           passedChecks: 0,
           totalChecks: 30
         });
-      }, 10000);
+      }, 15000);
       
       iframe.onload = () => {
         // Wait longer for React hydration on complex pages
         setTimeout(() => {
           try {
+            if (resolved) return; // Already resolved by timeout
             const endTime = performance.now();
             const pageLoadTimeMs = Math.round(endTime - startTime);
             
@@ -543,6 +545,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       };
       
       iframe.onerror = () => {
+        console.error(`❌ iframe error loading ${url}`);
         resolveAudit({
           url,
           pageLoadTimeMs: 0,
@@ -584,8 +587,52 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
         });
       };
       
-      document.body.appendChild(iframe);
-      iframe.src = `${window.location.origin}${url}`;
+      try {
+        document.body.appendChild(iframe);
+        iframe.src = `${window.location.origin}${url}`;
+      } catch (error) {
+        console.error(`❌ Error creating iframe for ${url}:`, error);
+        cleanup();
+        resolve({
+          url,
+          pageLoadTimeMs: 0,
+          lcpApprox: 0,
+          clsApprox: 0,
+          isHTTPS: false,
+          redirectChainLength: 0,
+          isDuplicate: false,
+          wordCount: 0,
+          primaryKeywordInTitle: false,
+          primaryKeywordInH1: false,
+          primaryKeywordInFirst100Words: false,
+          readabilityScore: 0,
+          hasDuplicateTitle: false,
+          hasDuplicateMetaDescription: false,
+          descriptiveImageFilenames: false,
+          isOrphanPage: true,
+          brokenInternalLinks: 0,
+          hasGenericAnchorText: false,
+          brokenExternalLinks: 0,
+          outboundNoFollowPercent: 0,
+          hasHTTPOutboundLinks: false,
+          hasValidJSONLD: false,
+          hasSchemasConflict: false,
+          hasRequiredSchemaFields: false,
+          hasRobotsConflict: false,
+          hasCanonicalSelfReference: false,
+          missingFromSitemap: true,
+          hasValidHeadingOrder: false,
+          contrastRatio: "Fail",
+          hasARIALabels: false,
+          altTextCoverage: 0,
+          hasViewportMeta: false,
+          isMobileResponsive: false,
+          criticalIssues: ['Error creating iframe'],
+          warnings: [],
+          passedChecks: 0,
+          totalChecks: 30
+        });
+      }
     });
   };
 
@@ -596,20 +643,75 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     
     const auditResults: AdvancedPageAudit[] = [];
     
-    for (let i = 0; i < routes.length; i++) {
-      const route = routes[i];
-      setCurrentPage(route);
-      setProgress(((i + 1) / routes.length) * 100);
-      
-      const result = await auditPageViaIframe(route, auditResults);
-      auditResults.push(result);
-      
-      await new Promise(resolve => setTimeout(resolve, 200));
+    try {
+      for (let i = 0; i < routes.length; i++) {
+        // Check if still auditing (user didn't cancel)
+        if (!isAuditing && i > 0) {
+          console.log('Audit cancelled by user');
+          break;
+        }
+        
+        const route = routes[i];
+        setCurrentPage(route);
+        setProgress(((i + 1) / routes.length) * 100);
+        
+        try {
+          const result = await auditPageViaIframe(route, auditResults);
+          auditResults.push(result);
+        } catch (error) {
+          console.error(`Failed to audit ${route}:`, error);
+          // Add error result and continue
+          auditResults.push({
+            url: route,
+            pageLoadTimeMs: 0,
+            lcpApprox: 0,
+            clsApprox: 0,
+            isHTTPS: false,
+            redirectChainLength: 0,
+            isDuplicate: false,
+            wordCount: 0,
+            primaryKeywordInTitle: false,
+            primaryKeywordInH1: false,
+            primaryKeywordInFirst100Words: false,
+            readabilityScore: 0,
+            hasDuplicateTitle: false,
+            hasDuplicateMetaDescription: false,
+            descriptiveImageFilenames: false,
+            isOrphanPage: true,
+            brokenInternalLinks: 0,
+            hasGenericAnchorText: false,
+            brokenExternalLinks: 0,
+            outboundNoFollowPercent: 0,
+            hasHTTPOutboundLinks: false,
+            hasValidJSONLD: false,
+            hasSchemasConflict: false,
+            hasRequiredSchemaFields: false,
+            hasRobotsConflict: false,
+            hasCanonicalSelfReference: false,
+            missingFromSitemap: true,
+            hasValidHeadingOrder: false,
+            contrastRatio: "Fail",
+            hasARIALabels: false,
+            altTextCoverage: 0,
+            hasViewportMeta: false,
+            isMobileResponsive: false,
+            criticalIssues: ['Audit error: ' + (error instanceof Error ? error.message : 'Unknown error')],
+            warnings: [],
+            passedChecks: 0,
+            totalChecks: 30
+          });
+        }
+        
+        // Small delay between pages
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    } catch (error) {
+      console.error('Audit process error:', error);
+    } finally {
+      setResults(auditResults);
+      setIsAuditing(false);
+      setCurrentPage("");
     }
-    
-    setResults(auditResults);
-    setIsAuditing(false);
-    setCurrentPage("");
   };
 
   const exportToCSV = () => {

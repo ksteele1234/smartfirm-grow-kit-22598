@@ -130,6 +130,7 @@ const SEOAudit = () => {
       
       // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
+        console.warn(`⏱️ Timeout loading ${url}`);
         resolveAudit({
           url,
           title: 'TIMEOUT',
@@ -151,12 +152,13 @@ const SEOAudit = () => {
           htmlSizeKB: 0,
           issues: ['Page load timeout']
         });
-      }, 10000);
+      }, 15000);
       
       iframe.onload = () => {
         // Wait longer for React hydration on complex pages
         setTimeout(() => {
           try {
+            if (resolved) return; // Already resolved by timeout
             const doc = iframe.contentDocument;
             if (!doc) {
               resolveAudit({
@@ -324,8 +326,34 @@ const SEOAudit = () => {
         });
       };
       
-      document.body.appendChild(iframe);
-      iframe.src = `${window.location.origin}${url}`;
+      try {
+        document.body.appendChild(iframe);
+        iframe.src = `${window.location.origin}${url}`;
+      } catch (error) {
+        console.error(`❌ Error creating iframe for ${url}:`, error);
+        cleanup();
+        resolve({
+          url,
+          title: 'ERROR',
+          titleLength: 0,
+          metaDescription: 'ERROR',
+          metaDescriptionLength: 0,
+          hasH1: false,
+          h1Count: 0,
+          hasH2: false,
+          hasCanonical: false,
+          indexable: false,
+          robotsDirective: 'ERROR',
+          hasOGImage: false,
+          hasJSONLD: false,
+          jsonLDTypes: [],
+          imagesMissingAlt: 0,
+          internalLinksCount: 0,
+          externalLinksCount: 0,
+          htmlSizeKB: 0,
+          issues: ['Error creating iframe']
+        });
+      }
     });
   };
 
@@ -337,21 +365,57 @@ const SEOAudit = () => {
     
     const auditResults: PageAudit[] = [];
     
-    for (let i = 0; i < routes.length; i++) {
-      const route = routes[i];
-      setCurrentPage(route);
-      setProgress(((i + 1) / routes.length) * 100);
-      
-      const result = await auditPageViaIframe(route);
-      auditResults.push(result);
-      
-      // Small delay to prevent overwhelming the browser
-      await new Promise(resolve => setTimeout(resolve, 200));
+    try {
+      for (let i = 0; i < routes.length; i++) {
+        // Check if still auditing
+        if (!isAuditing && i > 0) {
+          console.log('Audit cancelled by user');
+          break;
+        }
+        
+        const route = routes[i];
+        setCurrentPage(route);
+        setProgress(((i + 1) / routes.length) * 100);
+        
+        try {
+          const result = await auditPageViaIframe(route);
+          auditResults.push(result);
+        } catch (error) {
+          console.error(`Failed to audit ${route}:`, error);
+          // Add error result and continue
+          auditResults.push({
+            url: route,
+            title: 'ERROR',
+            titleLength: 0,
+            metaDescription: 'ERROR',
+            metaDescriptionLength: 0,
+            hasH1: false,
+            h1Count: 0,
+            hasH2: false,
+            hasCanonical: false,
+            indexable: false,
+            robotsDirective: 'ERROR',
+            hasOGImage: false,
+            hasJSONLD: false,
+            jsonLDTypes: [],
+            imagesMissingAlt: 0,
+            internalLinksCount: 0,
+            externalLinksCount: 0,
+            htmlSizeKB: 0,
+            issues: ['Audit error: ' + (error instanceof Error ? error.message : 'Unknown error')]
+          });
+        }
+        
+        // Small delay to prevent overwhelming the browser
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    } catch (error) {
+      console.error('Audit process error:', error);
+    } finally {
+      setResults(auditResults);
+      setIsAuditing(false);
+      setCurrentPage("");
     }
-    
-    setResults(auditResults);
-    setIsAuditing(false);
-    setCurrentPage("");
   };
 
   const runValidation = async () => {
@@ -361,21 +425,57 @@ const SEOAudit = () => {
     
     const auditResults: PageAudit[] = [];
     
-    for (let i = 0; i < routes.length; i++) {
-      const route = routes[i];
-      setCurrentPage(route);
-      setProgress(((i + 1) / routes.length) * 100);
-      
-      const result = await auditPageViaIframe(route);
-      auditResults.push(result);
-      
-      // Small delay to prevent overwhelming the browser
-      await new Promise(resolve => setTimeout(resolve, 200));
+    try {
+      for (let i = 0; i < routes.length; i++) {
+        // Check if still validating
+        if (!isValidating && i > 0) {
+          console.log('Validation cancelled by user');
+          break;
+        }
+        
+        const route = routes[i];
+        setCurrentPage(route);
+        setProgress(((i + 1) / routes.length) * 100);
+        
+        try {
+          const result = await auditPageViaIframe(route);
+          auditResults.push(result);
+        } catch (error) {
+          console.error(`Failed to validate ${route}:`, error);
+          // Add error result and continue
+          auditResults.push({
+            url: route,
+            title: 'ERROR',
+            titleLength: 0,
+            metaDescription: 'ERROR',
+            metaDescriptionLength: 0,
+            hasH1: false,
+            h1Count: 0,
+            hasH2: false,
+            hasCanonical: false,
+            indexable: false,
+            robotsDirective: 'ERROR',
+            hasOGImage: false,
+            hasJSONLD: false,
+            jsonLDTypes: [],
+            imagesMissingAlt: 0,
+            internalLinksCount: 0,
+            externalLinksCount: 0,
+            htmlSizeKB: 0,
+            issues: ['Validation error: ' + (error instanceof Error ? error.message : 'Unknown error')]
+          });
+        }
+        
+        // Small delay to prevent overwhelming the browser
+        await new Promise(resolve => setTimeout(resolve, 300));
+      }
+    } catch (error) {
+      console.error('Validation process error:', error);
+    } finally {
+      setValidationResults(auditResults);
+      setIsValidating(false);
+      setCurrentPage("");
     }
-    
-    setValidationResults(auditResults);
-    setIsValidating(false);
-    setCurrentPage("");
   };
 
   const exportToCSV = () => {
