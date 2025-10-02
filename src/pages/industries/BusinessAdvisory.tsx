@@ -8,7 +8,7 @@ const BusinessAdvisory = () => {
     slug: "business-advisory",
     content: {},
     heroTitle: "Marketing Solutions for Business Advisory Services",
-    heroSubtitle: "Establish thought leadership and attract high-value clients seeking strategic business guidance and financial consulting expertise.",
+    heroSubtitle: "Marketing solutions for business advisory services that establish thought leadership and attract high-value clients seeking strategic business guidance and financial consulting expertise.",
     industryOverview: "Business advisory services command premium rates but require establishing deep trust and demonstrating expertise. Our marketing strategies help you position yourself as a trusted advisor and attract clients who value strategic guidance over commodity services.",
     challenges: [
       {

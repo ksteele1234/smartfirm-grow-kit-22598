@@ -487,13 +487,13 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'for', 'with', 'your', 'our'];
     const primaryTokens = primaryPhrase
       .split(' ')
-      .filter(token => token.length > 2 && !stopWords.includes(token));
+      .filter(token => token.length >= 2 && !stopWords.includes(token));
     
     // Check if at least 50% of significant tokens appear in intro
     const matchingTokens = primaryTokens.filter(token => normalizedIntro.includes(token));
     const tokenMatchRatio = primaryTokens.length > 0 ? matchingTokens.length / primaryTokens.length : 0;
     
-    if (tokenMatchRatio >= 0.5 || normalizedIntro.includes(primaryPhrase)) {
+    if (tokenMatchRatio >= 0.4 || normalizedIntro.includes(primaryPhrase)) {
       contentScore += 4;
     } else if (primaryPhrase.length > 10) {
       suggestions.push({

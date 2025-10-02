@@ -8,7 +8,7 @@ const ExecutiveServices = () => {
     slug: "executive-services",
     content: {},
     heroTitle: "Fractional Executive Services for Growing Firms",
-    heroSubtitle: "Access experienced CIO and CFO expertise without the full-time cost to accelerate your firm's growth and strategic initiatives.",
+    heroSubtitle: "Fractional executive services for growing firms that provide experienced CIO and CFO expertise without the full-time cost to accelerate your firm's growth and strategic initiatives.",
     heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
     benefits: [
       {

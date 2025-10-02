@@ -8,7 +8,7 @@ const MarketingAutomation = () => {
     slug: "marketing-automation",
     content: {},
     heroTitle: "Marketing Automation for Accounting Firms",
-    heroSubtitle: "Streamline your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice.",
+    heroSubtitle: "Marketing automation for accounting firms that streamlines your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice.",
     heroDescription: "Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.",
     benefits: [
       {

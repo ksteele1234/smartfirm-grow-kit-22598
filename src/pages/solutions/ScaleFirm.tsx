@@ -8,7 +8,7 @@ const ScaleFirm = () => {
     slug: "scale-firm",
     content: {},
     heroTitle: "Scale Your Accounting Firm Without the Overwhelm",
-    heroSubtitle: "Break through growth plateaus with systems and automation that work without your constant involvement. Build a firm that grows while you focus on high-value activities.",
+    heroSubtitle: "Scale your accounting firm without the overwhelm. Break through growth plateaus with systems and automation that work without your constant involvement. Build a firm that grows while you focus on high-value activities.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
     keyBenefits: [

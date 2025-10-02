@@ -9,7 +9,7 @@ const GetMoreReferrals = () => {
     metaDescription: "Generate more referrals automatically by turning happy clients into advocates, building trust before meetings, and staying top-of-mind year-round with automated systems.",
     content: {},
     heroTitle: "Get More Referrals Without Asking",
-    heroSubtitle: "Turn satisfied clients into active advocates with automated systems that generate referrals naturally",
+    heroSubtitle: "Get more referrals without asking. Turn satisfied clients into active advocates with automated systems that generate referrals naturally",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",
     keyBenefits: [

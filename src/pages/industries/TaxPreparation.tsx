@@ -8,7 +8,7 @@ const TaxPreparation = () => {
     slug: "tax-preparation",
     content: {},
     heroTitle: "Marketing Solutions for Tax Preparation Services",
-    heroSubtitle: "Attract more clients during tax season and build year-round revenue streams with marketing strategies designed specifically for tax preparers.",
+    heroSubtitle: "Marketing solutions for tax preparation services that attract more clients during tax season and build year-round revenue streams with strategies designed specifically for tax preparers.",
     industryOverview: "Tax preparation businesses face unique seasonal challenges - intense demand during tax season followed by slower summer months. Our marketing solutions help you maximize tax season revenue while building services that generate income year-round.",
     challenges: [
       {

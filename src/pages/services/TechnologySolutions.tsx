@@ -8,7 +8,7 @@ const TechnologySolutions = () => {
     slug: "technology-solutions",
     content: {},
     heroTitle: "Technology Solutions for Modern Accounting Firms",
-    heroSubtitle: "Optimize your tech stack and automate business processes to increase efficiency and reduce operational overhead.",
+    heroSubtitle: "Technology solutions for modern accounting firms that optimize your tech stack and automate business processes to increase efficiency and reduce operational overhead.",
     heroDescription: "Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.",
     benefits: [
       {

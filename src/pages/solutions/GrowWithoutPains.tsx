@@ -9,7 +9,7 @@ const GrowWithoutPains = () => {
     metaDescription: "Scale your accounting firm smoothly with systems that handle growth efficiently, avoiding the typical growing pains that overwhelm expanding practices.",
     content: {},
     heroTitle: "AI-Driven Growth Without the Growing Pains",
-    heroSubtitle: "Scale your firm smoothly with intelligent systems that handle growth efficiently using predictive analytics, avoiding overwhelm and maintaining quality through automation",
+    heroSubtitle: "AI-driven growth without the growing pains. Scale your firm smoothly with intelligent systems that handle growth efficiently using predictive analytics, avoiding overwhelm and maintaining quality through automation",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
     keyBenefits: [

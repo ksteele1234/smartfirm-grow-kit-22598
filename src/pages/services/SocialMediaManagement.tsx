@@ -8,7 +8,7 @@ const SocialMediaManagement = () => {
     slug: "social-media-management",
     content: {},
     heroTitle: "Social Media Management for CPAs",
-    heroSubtitle: "Establish thought leadership and build your brand across all major social platforms while staying compliant with professional standards.",
+    heroSubtitle: "Social media management for CPAs that helps you establish thought leadership and build your brand across all major social platforms while staying compliant with professional standards.",
     heroDescription: "Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.",
     benefits: [
       {
