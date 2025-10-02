@@ -30,8 +30,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
         pageType="industry"
         title={data.title}
         description={(data.heroSubtitle || data.industryOverview).substring(0, 155)}
@@ -47,7 +47,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       <Header />
       
       {/* Breadcrumbs */}
-      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+      <nav id="sf-breadcrumbs" className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto">
           <Breadcrumb>
             <BreadcrumbList>
@@ -65,7 +65,18 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${window.location.origin}/industries` },
+            { "@type": "ListItem", "position": 3, "name": data.title.replace(' | SmartFirm', ''), "item": window.location.href }
+          ]
+        })}
+      </script>
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-primary/10">
@@ -73,9 +84,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {data.heroTitle}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            {data.heroSubtitle}
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+              {data.heroSubtitle}
+            </p>
+          </div>
           <Button size="lg" className="group">
             Get Industry-Specific Solutions
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -93,8 +106,24 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
               {data.industryOverview}
             </p>
+            <p className="mt-4 text-muted-foreground text-center">
+              View <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA best practices</a>.
+            </p>
           </div>
         </div>
+        <script id="sf-entity-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": data.title,
+            "provider": {
+              "@type": "Organization",
+              "name": "SmartFirm",
+              "url": window.location.origin
+            },
+            "description": data.industryOverview
+          })}
+        </script>
       </section>
 
       {/* Challenges & Solutions Section */}
@@ -197,7 +226,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Frequently Asked Questions
@@ -211,6 +240,17 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             ))}
           </div>
         </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": defaultFAQs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
+          })}
+        </script>
       </section>
 
       {/* Final CTA Section */}

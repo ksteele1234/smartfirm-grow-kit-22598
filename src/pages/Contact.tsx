@@ -31,8 +31,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
         title="Contact Us | SmartFirm"
         description="Transform your accounting firm's marketing. Speak with experts who understand the challenges of accounting practices."
         pageType="default"
@@ -60,7 +60,7 @@ const Contact = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b">
+      <nav id="sf-breadcrumbs" className="bg-background border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-6 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -74,7 +74,17 @@ const Contact = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": window.location.href }
+          ]
+        })}
+      </script>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-24">
@@ -101,6 +111,9 @@ const Contact = () => {
                 </h2>
                 <p className="text-lg text-text-secondary mb-8">
                   Whether you're ready to get started or just have questions about our services, we're here to help. Our team specializes in marketing solutions designed specifically for accounting firms.
+                </p>
+                <p className="text-text-secondary">
+                  Read <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, view <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, or explore <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA resources</a>.
                 </p>
               </div>
 
@@ -281,7 +294,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section id="sf-faqs" className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
@@ -320,6 +333,44 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call to discuss your firm's specific needs and goals. Simply fill out our contact form or call us directly at (541) 658-3789." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the pricing structure?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote tailored to your needs." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer guarantees?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
+              }
+            ]
+          })}
+        </script>
+        <script id="sf-entity-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SmartFirm",
+            "telephone": "(541) 658-3789",
+            "email": "contact@smartfirm.io",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Eugene",
+              "addressRegion": "OR"
+            },
+            "url": window.location.origin
+          })}
+        </script>
       </section>
 
       <Footer />

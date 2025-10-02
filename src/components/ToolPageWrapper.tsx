@@ -48,8 +48,8 @@ export const ToolPageWrapper = ({
   faqs = defaultFAQs
 }: ToolPageWrapperProps) => {
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
         title={title}
         description={description}
         pageType="default"
@@ -65,7 +65,7 @@ export const ToolPageWrapper = ({
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
+      <nav id="sf-breadcrumbs" className="bg-background border-b pt-20" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -83,23 +83,36 @@ export const ToolPageWrapper = ({
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Free Tools & Calculators", "item": `${window.location.origin}/tools` },
+            { "@type": "ListItem", "position": 3, "name": pageTitle, "item": window.location.href }
+          ]
+        })}
+      </script>
 
       <main className="py-8">
         {/* Keyword Intro Section */}
         {intro && (
           <section className="py-8 bg-gradient-to-br from-background to-muted/30">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
+              <div id="sf-keyword-intro" className="max-w-4xl mx-auto text-center">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {intro}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
                   <span>Trusted by accounting professionals</span>
                   <span>•</span>
-                  <span>Recommended by <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA</a></span>
+                  <span>View our <a href="/services" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
                   <span>•</span>
-                  <span>Integrates with <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">QuickBooks</a></span>
+                  <span>Read <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a></span>
+                  <span>•</span>
+                  <span>Trusted by <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA members</a></span>
                 </div>
               </div>
             </div>
@@ -109,7 +122,7 @@ export const ToolPageWrapper = ({
         {children}
 
         {/* FAQ Section */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section id="sf-faqs" className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
@@ -130,6 +143,35 @@ export const ToolPageWrapper = ({
               </div>
             </div>
           </div>
+          <script id="sf-faq-jsonld" type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+              }))
+            })}
+          </script>
+          <script id="sf-entity-jsonld" type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": title,
+              "applicationCategory": "BusinessApplication",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "SmartFirm",
+                "url": typeof window !== 'undefined' ? window.location.origin : 'https://smartfirm.io'
+              }
+            })}
+          </script>
         </section>
       </main>
       

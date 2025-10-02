@@ -85,8 +85,8 @@ const GetStarted = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
         title="Get Started | SmartFirm"
         description="Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm with SmartFirm."
         pageType="default"
@@ -114,7 +114,7 @@ const GetStarted = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
+      <nav id="sf-breadcrumbs" className="bg-background border-b pt-20" aria-label="Breadcrumb">
         <div className="container mx-auto px-6 py-4">
           <Breadcrumb>
             <BreadcrumbList>
@@ -128,7 +128,17 @@ const GetStarted = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Get Started", "item": window.location.href }
+          ]
+        })}
+      </script>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-teal py-20 pb-16">
@@ -359,7 +369,7 @@ const GetStarted = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="sf-faqs" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
@@ -392,12 +402,44 @@ const GetStarted = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. Our solutions are backed by proven results from hundreds of accounting firms.
+                  We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction.
                 </p>
               </details>
             </div>
           </div>
         </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call to discuss your firm's specific needs and goals." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the pricing structure?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer guarantees?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
+              }
+            ]
+          })}
+        </script>
+        <script id="sf-entity-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "SmartFirm",
+            "url": window.location.origin,
+            "description": "Marketing automation and technology solutions for accounting firms"
+          })}
+        </script>
       </section>
 
       {/* Final CTA Section */}

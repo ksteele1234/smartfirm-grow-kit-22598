@@ -32,8 +32,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
         pageType="solution"
         title={data.title}
         description={(data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
@@ -49,7 +49,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       <Header />
       
       {/* Breadcrumbs */}
-      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
+      <nav id="sf-breadcrumbs" className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60" aria-label="Breadcrumb">
         <div className="max-w-7xl mx-auto">
           <Breadcrumb>
             <BreadcrumbList>
@@ -67,7 +67,18 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Solutions", "item": `${window.location.origin}/solutions` },
+            { "@type": "ListItem", "position": 3, "name": data.title.replace(' | SmartFirm', ''), "item": window.location.href }
+          ]
+        })}
+      </script>
       
       {/* Hero Section */}
       <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
@@ -77,9 +88,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
             {data.heroTitle}
           </h1>
-          <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
-            {data.heroSubtitle}
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
+              {data.heroSubtitle}
+            </p>
+          </div>
           <Button size="lg" variant="hero" className="group bg-gradient-to-r from-primary to-teal hover:from-primary/90 hover:to-teal/90 text-white" asChild>
             <a href="/get-started">
               Get Your Solution
@@ -107,12 +120,28 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               <p className="text-3xl font-bold text-teal mb-6">
                 Our Solution
               </p>
-              <p className="text-lg text-text-secondary leading-relaxed">
+            <p className="text-lg text-text-secondary leading-relaxed">
                 {data.solutionOverview}
+              </p>
+              <p className="mt-4 text-text-secondary">
+                Learn more about <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA guidance</a>.
               </p>
             </div>
           </div>
         </div>
+        <script id="sf-entity-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": data.title,
+            "provider": {
+              "@type": "Organization",
+              "name": "SmartFirm",
+              "url": window.location.origin
+            },
+            "description": data.solutionOverview
+          })}
+        </script>
       </section>
 
       {/* Key Benefits Section */}
@@ -207,7 +236,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Frequently Asked Questions
@@ -221,6 +250,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             ))}
           </div>
         </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": defaultFAQs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+            }))
+          })}
+        </script>
       </section>
 
       {/* Final CTA Section */}
