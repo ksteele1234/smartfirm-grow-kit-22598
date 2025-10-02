@@ -35,7 +35,7 @@ const Index = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
+      <div className="bg-background border-b">
         <div className="container mx-auto px-4 py-4">
           <Breadcrumb>
             <BreadcrumbList>
