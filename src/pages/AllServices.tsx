@@ -123,6 +123,7 @@ const AllServices = () => {
         </div>
       </div>
       
+      <main>
       {/* Hero Section */}
       <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
         <FloatingShapes variant="circles" />
@@ -145,7 +146,8 @@ const AllServices = () => {
         <div className="max-w-7xl mx-auto">
           <GeometricDivider variant="lines" />
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <h2 className="text-3xl font-heading font-bold text-primary mt-8">Explore Our Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {services.map((service, index) => (
               <StandardCard
                 key={index}
@@ -251,6 +253,8 @@ const AllServices = () => {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

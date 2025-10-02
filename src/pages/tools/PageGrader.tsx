@@ -191,7 +191,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
             const loadTimeMs = Math.round(Date.now() - startTime);
             resolveGrade(createDefaultScore(url, pageType, loadTimeMs));
           }
-        }, 1000); // Wait 1s for content to fully render
+        }, 1500); // Wait 1.5s for content to fully render
       };
       
       iframe.onerror = () => {
@@ -666,6 +666,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     // F) Brand, Accessibility & UX (10 pts)
     // Heading hierarchy valid (4)
     const headings = Array.from((mainContent || doc.body).querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    const headingSequence = headings.map(h => h.tagName.toUpperCase()).join(' \u2192 ');
     let hasValidHeadingOrder = true;
     let lastLevel = 0;
     
@@ -686,7 +687,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
         effort: "S",
         impact: "medium",
         issueType: "invalid_heading_hierarchy",
-        recommendation: "Fix heading hierarchy (no skipped levels)"
+        recommendation: "Fix heading hierarchy (no skipped levels)",
+        notes: `Headings detected: ${headingSequence}`
       });
     }
 
@@ -1358,6 +1360,12 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
                                             <pre className="text-xs bg-muted p-2 rounded overflow-x-auto">
                                               {suggestion.codeSnippet}
                                             </pre>
+                                          )}
+
+                                          {suggestion.notes && (
+                                            <div className="text-xs text-muted-foreground">
+                                              Notes: {suggestion.notes}
+                                            </div>
                                           )}
                                         </div>
                                       </div>

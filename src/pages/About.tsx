@@ -176,6 +176,9 @@ const About = () => {
         {/* Mission & Vision */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue">Mission & Vision</h2>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <Card className="border-light-border shadow-elegant">
                 <CardHeader className="text-center pb-6">

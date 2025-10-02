@@ -140,6 +140,7 @@ const GetStarted = () => {
         })}
       </script>
       
+      <main>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-teal py-20 pb-16">
         <div className="container mx-auto px-6 text-center">
@@ -479,6 +480,8 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

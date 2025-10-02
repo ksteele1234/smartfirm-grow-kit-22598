@@ -86,6 +86,7 @@ const Contact = () => {
         })}
       </script>
       
+      <main>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-24">
         <div className="container mx-auto px-6 text-center">
@@ -372,6 +373,8 @@ const Contact = () => {
           })}
         </script>
       </section>
+
+      </main>
 
       <Footer />
     </div>
