@@ -660,11 +660,21 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     ? Math.round(results.reduce((sum, r) => sum + (r.passedChecks / r.totalChecks * 100), 0) / results.length)
     : 0;
   
-  // Top issues
+  // Top issues - normalize similar issues to prevent duplicates
+  const normalizeIssue = (issue: string): string => {
+    // Remove numbers in parentheses: "Low readability score (0)" -> "Low readability score"
+    issue = issue.replace(/\s*\(\d+\)\s*$/, '');
+    // Remove leading numbers: "5 broken internal links" -> "broken internal links"
+    issue = issue.replace(/^\d+\s+/, '');
+    // Capitalize first letter for consistency
+    return issue.charAt(0).toUpperCase() + issue.slice(1);
+  };
+
   const allIssues: Record<string, number> = {};
   results.forEach(r => {
     [...r.criticalIssues, ...r.warnings].forEach(issue => {
-      allIssues[issue] = (allIssues[issue] || 0) + 1;
+      const normalized = normalizeIssue(issue);
+      allIssues[normalized] = (allIssues[normalized] || 0) + 1;
     });
   });
   const topIssues = Object.entries(allIssues)
