@@ -112,8 +112,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About Us | SmartFirm"
-        description="SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and technology solutions. Backed by 40+ years of experience, we deliver systems that save time, attract clients, and scale your firm."
+        title="About SmartFirm | Marketing Automation for Accountants"
+        description="Learn how SmartFirm empowers accountants, CPAs, bookkeepers, and tax preparers with marketing automation and technology solutions. Backed by 40+ years of experience, we help firms grow with confidence."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -160,11 +160,11 @@ const About = () => {
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              About SmartFirm: Helping Accounting Firms Grow with Confidence
+              About SmartFirm: Marketing Automation for Accountants
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
-                SmartFirm was built to help accountants, CPAs, bookkeepers, and tax preparers thrive in today's competitive digital landscape. Whether you're a solo CPA or a growing firm, we believe you have untapped potential for extraordinary growth through automation and modern marketing.
+                SmartFirm provides marketing automation for accountants, CPAs, bookkeepers, and tax preparers to help firms thrive in today's competitive digital landscape. Whether you're a solo CPA or a growing firm, we believe you have untapped potential for extraordinary growth through automation and modern marketing.
               </p>
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">

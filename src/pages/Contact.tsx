@@ -33,8 +33,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Contact SmartFirm: Marketing for Accountants Experts | SmartFirm"
-        description="Contact SmartFirm for marketing for accountants solutions that transform your firm. Speak with experts who understand accounting practice challenges."
+        title="Contact SmartFirm | Marketing for Accounting Firms"
+        description="Contact SmartFirm today to learn how we help accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and proven systems."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -99,11 +99,11 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-24">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
-            Contact SmartFirm: Marketing for Accountants
+            Contact SmartFirm for Marketing Automation for Accounting Firms
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Marketing for accountants starts here. Ready to modernize your firm's marketing and free up your time? Get in touch with a team that understands accounting workflows and client growth.
+              Reach out to SmartFirm for marketing automation and growth systems designed specifically for accounting firms, CPAs, bookkeepers, and tax preparers.
             </p>
           </div>
         </div>

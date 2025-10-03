@@ -95,8 +95,8 @@ const GetStarted = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Get Started with Marketing for Your Accounting Firm | SmartFirm"
-        description="Get started with marketing for your accounting firm through CPA marketing automation, free consultations, or quick-win programs designed for accounting practices."
+        title="Get Started with Marketing for Accounting Firms | SmartFirm"
+        description="Get started with SmartFirm's marketing automation for accountants, CPAs, bookkeepers, and tax preparers. Choose a free consultation or our 30-day Quick Start Program."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -157,7 +157,7 @@ const GetStarted = () => {
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
-              Marketing for your accounting firm starts here. Whether you're ready for comprehensive CPA marketing automation or just exploring digital strategies for accounting practices, SmartFirm makes it simple to connect and begin your growth journey.
+              Get started with SmartFirm's marketing automation for accountants, CPAs, bookkeepers, and tax preparers to build a foundation for growth. Whether you're ready for comprehensive solutions or just exploring digital strategies, SmartFirm makes it simple to connect and begin your journey.
             </p>
           </div>
         </div>
