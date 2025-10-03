@@ -9,37 +9,44 @@ const ServicesSection = () => {
     {
       icon: Zap,
       title: "Automated Lead Follow-up",
-      description: "Convert inquiries into clients with CPA-focused email & SMS automation."
+      description: "Convert inquiries into clients with CPA-focused email & SMS automation.",
+      link: "/services/automated-lead-follow-up"
     },
     {
       icon: Star,
       title: "Client Review Generation",
-      description: "Build trust and referrals with more 5-star reviews."
+      description: "Build trust and referrals with more 5-star reviews.",
+      link: "/services/client-review-generation"
     },
     {
       icon: Search,
       title: "SEO for Accounting Firms", 
-      description: "Dominate local search and attract high-quality clients."
+      description: "Dominate local search and attract high-quality clients.",
+      link: "/services/seo-for-accountants"
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
-      description: "Keep leads and clients engaged with personalized campaigns."
+      description: "Keep leads and clients engaged with personalized campaigns.",
+      link: "/services/email-marketing"
     },
     {
       icon: Users,
       title: "Social Media Management",
-      description: "Professional content that positions your firm as a trusted authority."
+      description: "Professional content that positions your firm as a trusted authority.",
+      link: "/services/social-media-management"
     },
     {
       icon: Globe,
       title: "Website Optimization",
-      description: "Modern, SEO-friendly websites for accountants that convert."
+      description: "Modern, SEO-friendly websites for accountants that convert.",
+      link: "/services/website-design"
     },
     {
       icon: Phone,
       title: "Marketing Automation",
-      description: "Save time and scale faster with automation tailored for accountants."
+      description: "Save time and scale faster with automation tailored for accountants.",
+      link: "/services/marketing-automation"
     }
   ];
 
@@ -73,6 +80,7 @@ const ServicesSection = () => {
                 title={service.title}
                 description={service.description}
                 variant={index === 1 ? "featured" : "default"}
+                href={service.link}
                 className="scale-feedback color-transition"
               />
             ))}
@@ -86,6 +94,7 @@ const ServicesSection = () => {
                 icon={service.icon}
                 title={service.title}
                 description={service.description}
+                href={service.link}
                 className="scale-feedback color-transition"
               />
             ))}
@@ -100,6 +109,7 @@ const ServicesSection = () => {
                 title={service.title}
                 description={service.description}
                 variant={index === 1 ? "popular" : "default"}
+                href={service.link}
                 className="scale-feedback color-transition"
               />
             ))}
