@@ -43,10 +43,10 @@ const Terms = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
-        <div className="container mx-auto px-6 py-4">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Home</BreadcrumbLink>
               </BreadcrumbItem>
@@ -57,7 +57,7 @@ const Terms = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-teal py-20">

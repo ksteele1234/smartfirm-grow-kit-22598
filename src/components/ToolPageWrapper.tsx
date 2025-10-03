@@ -65,7 +65,7 @@ export const ToolPageWrapper = ({
       <Header />
       
       {/* Breadcrumb */}
-      <nav id="sf-breadcrumbs" className="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
             <BreadcrumbList className="text-sm text-muted-foreground">

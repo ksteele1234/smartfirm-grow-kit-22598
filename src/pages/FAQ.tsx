@@ -168,10 +168,10 @@ const FAQ = () => {
       <Header />
       
       {/* Breadcrumb */}
-      <div className="bg-background border-b pt-20">
-        <div className="container mx-auto px-4 py-4">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Home</BreadcrumbLink>
               </BreadcrumbItem>
@@ -182,7 +182,7 @@ const FAQ = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
       
       <main>
         {/* Hero Section */}

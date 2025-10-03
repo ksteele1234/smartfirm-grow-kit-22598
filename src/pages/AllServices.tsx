@@ -103,10 +103,10 @@ const AllServices = () => {
       <Header />
       
       {/* Breadcrumbs */}
-      <div className="px-4 sm:px-6 lg:px-8 py-3 border-b border-border/50 bg-background-light/60">
-        <div className="max-w-7xl mx-auto">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Home</BreadcrumbLink>
               </BreadcrumbItem>
@@ -121,7 +121,7 @@ const AllServices = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
+      </nav>
       
       <main>
       {/* Hero Section */}

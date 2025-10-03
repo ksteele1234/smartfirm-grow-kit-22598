@@ -49,10 +49,10 @@ const Services = () => {
         ]}
       />
       <Header />
-      <div className="bg-background-light border-b border-border">
-        <div className="container mx-auto px-4 py-3">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
           <Breadcrumb>
-            <BreadcrumbList>
+            <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
                 <BreadcrumbLink href="/">Home</BreadcrumbLink>
               </BreadcrumbItem>
@@ -63,8 +63,8 @@ const Services = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </div>
-      </div>
-      <main className="pt-20">
+      </nav>
+      <main>
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
