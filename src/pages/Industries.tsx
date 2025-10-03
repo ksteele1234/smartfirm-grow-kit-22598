@@ -95,8 +95,8 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Industries We Serve | SmartFirm"
-        description="Marketing solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices."
+        title="Marketing for Accountants: Industry-Specific Solutions | SmartFirm"
+        description="Marketing for accountants including solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
         pageType="industry"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -131,10 +131,11 @@ const Industries = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Marketing for Accountants: Solutions for Your Niche
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions 
-              with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
+              </p>
+            </div>
           </div>
         </section>
 

@@ -90,8 +90,8 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Resources | SmartFirm"
-        description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert CPA marketing resources."
+        title="CPA Marketing Resources: Free Guides & Tools | SmartFirm"
+        description="CPA marketing resources including free guides, tools, calculators, and expert insights to help accounting professionals grow their firms with proven strategies."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -124,12 +124,13 @@ const Resources = () => {
         <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Grow Your Firm with Our Expert Resources
+              CPA Marketing Resources to Grow Your Firm
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-              Access a wealth of knowledge, tools, and insights designed to help accounting professionals thrive. 
-              From detailed guides to interactive calculators, we've got everything you need for growth.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
+                CPA marketing resources designed for accounting professionals include comprehensive guides, interactive calculators, and proven strategies to help your firm thrive and grow efficiently.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" variant="hero">
                 Explore All Resources

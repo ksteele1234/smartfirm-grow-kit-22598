@@ -37,8 +37,8 @@ const Services = () => {
   }];
   return <div className="min-h-screen bg-background">
       <SEO 
-        title="Services | SmartFirm"
-        description="Marketing automation & technology solutions for accounting firms. Lead generation, client retention, and business optimization."
+        title="Marketing Automation Services for Accounting Firms | SmartFirm"
+        description="Marketing automation services for accounting firms including lead generation, client retention, and business optimization that drive measurable growth."
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}
@@ -69,9 +69,11 @@ const Services = () => {
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">Marketing Automation Services for Accounting Firms</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-              From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
+                Marketing automation services for accounting firms include intelligent lead generation, AI-driven technology optimization, and data-driven expertise to scale your practice efficiently.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="default" size="lg" asChild>
                 <Link to="/all-services">

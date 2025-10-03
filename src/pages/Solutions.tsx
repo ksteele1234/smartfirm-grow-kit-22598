@@ -57,8 +57,8 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Solutions | SmartFirm"
-        description="Growth solutions for accounting firms. Client retention, lead generation, and competitive strategies that drive results."
+        title="Marketing Automation Solutions for Accounting Firms | SmartFirm"
+        description="Marketing automation solutions for accounting firms that drive client retention, lead generation, and competitive strategies with proven results."
         pageType="solution"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -93,12 +93,13 @@ const Solutions = () => {
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Solutions for Your Accounting Firm Challenges
+              Marketing Automation Solutions for Accounting Firm Challenges
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
-              We understand the unique pressures of running an accounting firm. From competition to client expectations, 
-              technology demands to growth challenges - SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
+                Marketing automation solutions designed specifically for accounting firms help you overcome competition, meet client expectations, and tackle technology demands. SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
+              </p>
+            </div>
           </div>
         </section>
 

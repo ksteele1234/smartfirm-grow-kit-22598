@@ -154,8 +154,8 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Frequently Asked Questions | SmartFirm"
-        description="Common questions about SmartFirm's marketing automation, technology solutions, and services for accounting firms."
+        title="Accounting Firm Marketing FAQ: Common Questions | SmartFirm"
+        description="Accounting firm marketing FAQ covering common questions about marketing automation, technology solutions, and services that help CPAs grow their practices."
         pageType="faq"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -189,11 +189,13 @@ const FAQ = () => {
         <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Frequently Asked Questions
+              Accounting Firm Marketing FAQ
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-              Get answers to common questions about marketing automation, technology solutions, and growth strategies for accounting firms. Whether you're working with <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA</a> standards or integrating with platforms like <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">QuickBooks</a>, we provide solutions designed specifically for CPAs and accounting professionals.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
+                Accounting firm marketing FAQ answers common questions about marketing automation, technology solutions, and growth strategies. Whether you're working with <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA</a> standards or integrating with platforms like <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">QuickBooks</a>, we provide solutions designed specifically for CPAs and accounting professionals.
+              </p>
+            </div>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">

@@ -43,12 +43,14 @@ const HeroSection = () => {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight">
-                  Predictable Growth for Accounting Firms{" "}
-                  <span className="block">Without Wasting Time on Marketing</span>
+                  Marketing Automation for Accounting Firms{" "}
+                  <span className="block">That Delivers Predictable Growth</span>
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation built for your profession. Generate more leads, retain clients longer, and free up time to focus on what matters.</p>
+                <div id="sf-keyword-intro">
+                  <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
+                </div>
               </div>
 
               {/* Trust Indicators */}
