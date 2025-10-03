@@ -74,50 +74,50 @@ const Header = () => {
   const solutions = [
     // Main Solutions
     { 
-      title: "Stop Losing Clients to Tech-Savvy CPAs", 
+      title: "Stay Ahead of Tech-Savvy CPAs", 
       href: "/solutions/stop-losing-clients-to-tech-savvy-cpas",
-      description: "Compete — and win — with cutting-edge automation and digital-first systems."
+      description: "Compete and win with accounting marketing automation, SEO, and digital-first systems tailored for firms like yours."
     },
     { 
       title: "Get More Referrals Without Asking", 
       href: "/solutions/get-more-referrals-without-asking",
-      description: "Turn client satisfaction into a steady stream of word-of-mouth growth."
+      description: "Transform satisfied clients into steady referrals with review generation and social media marketing for accountants."
     },
     { 
       title: "Work Less, Earn More", 
       href: "/solutions/work-less-earn-more",
-      description: "Boost profitability through automation that cuts busywork and overhead."
+      description: "Boost profitability through CPA marketing automation that cuts busywork and frees your team's time."
     },
     { 
       title: "Grow Without the Growing Pains", 
       href: "/solutions/grow-without-growing-pains",
-      description: "Scale smoothly with efficient systems that won't burn out your team."
+      description: "Scale your accounting firm with proven lead generation strategies and efficient tech automation."
     },
     { 
       title: "Protect Your Practice & Your Future", 
       href: "/solutions/protect-practice-and-future",
-      description: "Safeguard your firm with secure, future-ready strategies."
+      description: "Safeguard your firm with secure systems, SEO visibility, and future-ready marketing strategies."
     },
     // Specific Areas
     { 
       title: "I need more leads", 
       href: "/solutions/lead-generation",
-      description: "Consistently attract high-quality prospects who fit your ideal client profile."
+      description: "Generate qualified accounting firm leads with targeted SEO and digital advertising."
     },
     { 
       title: "I want to scale my firm", 
       href: "/solutions/scale-firm",
-      description: "Expand capacity and revenue without ballooning costs."
+      description: "Grow capacity and revenue using automation for accountants and CPAs without ballooning overhead."
     },
     { 
       title: "I need better client retention", 
       href: "/solutions/client-retention",
-      description: "Strengthen relationships to keep clients loyal and engaged year after year."
+      description: "Improve retention with email marketing, client review generation, and proactive engagement strategies."
     },
     { 
       title: "Advanced Client Retention Strategies", 
       href: "/solutions/retention-strategies",
-      description: "Proactive systems that protect your book from competitors and churn."
+      description: "Protect your book of business with CPA-focused marketing automation and loyalty systems."
     }
   ];
 
