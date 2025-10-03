@@ -126,9 +126,9 @@ const Industries = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
               Marketing for Accountants: Solutions for Your Niche
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
@@ -158,13 +158,13 @@ const Industries = () => {
         </section>
 
         {/* Firm Size Categories */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20 bg-background-light">
+          <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-blue text-center mb-12">
               How We Help
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {industryCategories.map((category, index) => (
                 <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border">
                   <CardHeader className="pb-4">
@@ -205,8 +205,8 @@ const Industries = () => {
         </section>
 
         {/* Specialized Niches */}
-        <section className="section-padding">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
                 Specialized Niches
@@ -246,8 +246,8 @@ const Industries = () => {
         </section>
 
         {/* Industry Spotlight */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20 bg-background-light">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-elegant border-light-border">
                 <CardHeader className="text-center pb-6">
