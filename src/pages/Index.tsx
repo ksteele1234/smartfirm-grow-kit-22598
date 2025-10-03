@@ -49,7 +49,7 @@ const Index = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">How do I get started?</summary>
@@ -80,7 +80,7 @@ const Index = () => {
         <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
                 Why Accounting Firms Choose SmartFirm
               </h2>
               <div className="space-y-4 text-lg text-text-secondary mb-8">
