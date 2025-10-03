@@ -1192,11 +1192,804 @@ If it's a good fit, we'll schedule a detailed consultation to explore how SmartF
 - ✅ Success Stories
 - ✅ Thank You
 
+---
+
+## Section 3: Service Pages
+
+### Service Page 1: Automated Lead Follow-Up
+**URL:** /services/automated-lead-follow-up  
+**Page Type:** Service Page  
+**Page Title:** Automated Lead Follow-Up for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Automated Lead Follow-Up for Accounting Firms
+
+**Hero Subtitle:**
+Automated lead follow-up for accounting firms so you never lose a prospect again, with intelligent sequences that convert leads into clients while you focus on serving existing customers.
+
+**Hero Description:**
+Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **24/7 Lead Nurturing**
+   - Description: Automated sequences work around the clock to nurture prospects
+
+2. **Increased Conversion Rates**
+   - Description: Convert 40% more leads with timely, relevant follow-up
+
+3. **Time Savings**
+   - Description: Save 15+ hours per week on manual follow-up activities
+
+4. **Personalized Messaging**
+   - Description: Tailored sequences based on lead source and interests
+
+#### Features Section
+
+**Feature 1: Multi-Channel Follow-Up**
+- **Description:** Email, SMS, and phone call sequences for maximum reach
+- **Details:**
+  - Email automation with personalized content
+  - SMS reminders for urgent follow-ups
+  - Automated phone call scheduling
+  - Social media engagement tracking
+
+**Feature 2: Lead Scoring & Qualification**
+- **Description:** Automatically identify and prioritize hot prospects
+- **Details:**
+  - Behavioral scoring based on website activity
+  - Engagement tracking across all touchpoints
+  - Lead qualification questionnaires
+  - Priority alerts for sales-ready leads
+
+**Feature 3: CRM Integration**
+- **Description:** Seamless integration with popular CRM systems
+- **Details:**
+  - Automatic lead data synchronization
+  - Activity logging and tracking
+  - Pipeline management automation
+  - Reporting and analytics integration
+
+**Feature 4: Performance Analytics**
+- **Description:** Measure and optimize your follow-up effectiveness
+- **Details:**
+  - Conversion rate tracking by sequence
+  - Response time and engagement metrics
+  - Pipeline velocity analysis
+  - ROI and attribution reporting
+
+#### CTA Section
+
+**Heading:**
+Ready to Automate Your Lead Follow-Up?
+
+**Description:**
+Let's set up automated sequences that convert more prospects into clients for your accounting firm.
+
+**Button:**
+Get Started
+
+---
+
+### Service Page 2: Business Optimization
+**URL:** /services/business-optimization  
+**Page Type:** Service Page  
+**Page Title:** Business Optimization for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Business Optimization for Accounting Firms
+
+**Hero Subtitle:**
+Business optimization for accounting firms that improves your firm's processes and performance with data-driven insights and executive dashboards.
+
+**Hero Description:**
+Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Process Improvement**
+   - Description: Identify and eliminate inefficiencies in your current workflows
+
+2. **Executive Dashboards**
+   - Description: Real-time insights into your firm's performance and key metrics
+
+3. **Performance Analytics**
+   - Description: Data-driven decision making with comprehensive business intelligence
+
+4. **Operational Excellence**
+   - Description: Achieve consistent, high-quality service delivery across your firm
+
+#### Features Section
+
+**Feature 1: Process Improvement**
+- **Description:** Systematic analysis and optimization of your business processes
+- **Details:**
+  - Workflow analysis and mapping
+  - Bottleneck identification and resolution
+  - Standard operating procedure development
+  - Performance measurement and optimization
+
+**Feature 2: Executive Dashboards**
+- **Description:** Real-time visibility into your firm's key performance indicators
+- **Details:**
+  - Custom dashboard development for leadership team
+  - Financial performance tracking and reporting
+  - Client satisfaction and retention metrics
+  - Team productivity and utilization analytics
+
+**Feature 3: Strategic Planning & Analytics**
+- **Description:** Data-driven insights to guide your firm's strategic decisions
+- **Details:**
+  - Business intelligence and predictive analytics
+  - Market analysis and competitive positioning
+  - Growth planning and forecasting
+  - Risk assessment and mitigation strategies
+
+**Feature 4: Change Management & Implementation**
+- **Description:** Successfully implement improvements across your firm
+- **Details:**
+  - Change management planning and execution
+  - Team training and adoption programs
+  - Implementation support and guidance
+  - Performance tracking and adjustment
+
+#### CTA Section
+
+**Heading:**
+Optimize Your Firm's Performance
+
+**Description:**
+Let's analyze your operations and implement improvements that drive measurable results.
+
+**Button:**
+Get Analysis
+
+---
+
+### Service Page 3: Client Review Generation
+**URL:** /services/client-review-generation  
+**Page Type:** Service Page  
+**Page Title:** Client Review Generation for CPAs  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Client Review Generation for CPAs
+
+**Hero Subtitle:**
+Build trust and credibility with automated systems that generate authentic 5-star reviews from satisfied clients, boosting your online reputation and attracting new business.
+
+**Hero Description:**
+Our review generation system helps accounting firms build a strong online reputation through systematic collection and management of client testimonials.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Enhanced Online Reputation**
+   - Description: Build a strong online presence with consistent positive reviews
+
+2. **Increased Trust & Credibility**
+   - Description: Prospects trust firms with strong review profiles 3x more
+
+3. **Automated Review Requests**
+   - Description: Systematic approach ensures no satisfied client is missed
+
+4. **Review Response Management**
+   - Description: Professional responses to all reviews maintain your reputation
+
+#### Features Section
+
+**Feature 1: Smart Review Request Timing**
+- **Description:** Request reviews at optimal moments for maximum response
+- **Details:**
+  - Post-project completion automation
+  - Client satisfaction trigger points
+  - Seasonal timing optimization
+  - Follow-up sequence management
+
+**Feature 2: Multi-Platform Management**
+- **Description:** Generate reviews across all major platforms
+- **Details:**
+  - Google Business Profile optimization
+  - Facebook and LinkedIn reviews
+  - Industry-specific platforms
+  - Unified review monitoring dashboard
+
+**Feature 3: Review Response Automation**
+- **Description:** Professional responses to maintain your reputation
+- **Details:**
+  - Template responses for common situations
+  - Escalation alerts for negative reviews
+  - Thank you message automation
+  - Review analysis and insights
+
+**Feature 4: Reputation Monitoring & Analytics**
+- **Description:** Track and analyze your online reputation performance
+- **Details:**
+  - Real-time review notifications
+  - Sentiment analysis tracking
+  - Competitive benchmarking
+  - Monthly reputation reports
+
+#### CTA Section
+
+**Heading:**
+Start Building Your Review Reputation
+
+**Description:**
+Discover how our automated review generation system can build trust and attract more clients to your accounting practice.
+
+**Button:**
+Get Started
+
+---
+
+### Service Page 4: Email Marketing
+**URL:** /services/email-marketing  
+**Page Type:** Service Page  
+**Page Title:** Email Marketing for CPAs  
+
+#### Hero Section
+
+**Main Heading (H1):**
+AI-Powered Email Marketing for CPAs
+
+**Hero Subtitle:**
+Nurture client relationships and stay top-of-mind with intelligent, predictive email marketing campaigns designed specifically for accounting practices.
+
+**Hero Description:**
+Our AI-driven email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through automated personalization and data-driven communication strategies.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Client Retention**
+   - Description: Keep clients engaged with regular valuable communication
+
+2. **Referral Generation**
+   - Description: Systematic referral requests that generate new business
+
+3. **Service Upselling**
+   - Description: Identify and promote additional service opportunities
+
+4. **Professional Communication**
+   - Description: Maintain professional standards while staying personal
+
+#### Features Section
+
+**Feature 1: Client Newsletter Campaigns**
+- **Description:** Regular newsletters that provide value and maintain relationships
+- **Details:**
+  - Monthly tax and business tips
+  - Regulatory updates and changes
+  - Seasonal reminders and deadlines
+  - Firm news and announcements
+
+**Feature 2: Automated Email Sequences**
+- **Description:** Triggered emails for key client lifecycle moments
+- **Details:**
+  - New client onboarding sequences
+  - Tax season preparation reminders
+  - Year-end planning communications
+  - Referral request automation
+
+**Feature 3: Segmentation & Personalization**
+- **Description:** Targeted messaging based on client type and needs
+- **Details:**
+  - Business vs. individual client segmentation
+  - Service-based content targeting
+  - Industry-specific communications
+  - Behavioral trigger campaigns
+
+**Feature 4: Analytics & Optimization**
+- **Description:** Track performance and continuously improve results
+- **Details:**
+  - Open rate and click-through tracking
+  - A/B testing for subject lines and content
+  - Email deliverability optimization
+  - Conversion tracking and ROI reporting
+
+#### CTA Section
+
+**Heading:**
+Start Nurturing Client Relationships
+
+**Description:**
+Discover how strategic email marketing can strengthen client relationships and drive business growth.
+
+**Button:**
+Get Started
+
+---
+
+### Service Page 5: Executive Services
+**URL:** /services/executive-services  
+**Page Type:** Service Page  
+**Page Title:** Executive Services for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Fractional Executive Services for Growing Firms
+
+**Hero Subtitle:**
+Fractional executive services for growing firms that provide experienced CIO and CFO expertise without the full-time cost to accelerate your firm's growth and strategic initiatives.
+
+**Hero Description:**
+Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Fractional CIO Services**
+   - Description: Strategic technology leadership and digital transformation guidance
+
+2. **Fractional CFO Services**
+   - Description: Financial strategy, planning, and performance optimization expertise
+
+3. **Cost-Effective Leadership**
+   - Description: Access C-level expertise without full-time executive compensation
+
+4. **Strategic Growth Planning**
+   - Description: Develop and execute strategic initiatives for sustainable growth
+
+#### Features Section
+
+**Feature 1: Fractional CIO Services**
+- **Description:** Technology strategy and digital transformation leadership
+- **Details:**
+  - Technology roadmap development and execution
+  - Digital transformation strategy and implementation
+  - Cybersecurity and risk management oversight
+  - Technology vendor evaluation and management
+
+**Feature 2: Fractional CFO Services**
+- **Description:** Financial leadership and strategic financial management
+- **Details:**
+  - Financial planning and analysis (FP&A)
+  - Cash flow management and forecasting
+  - Investment and growth strategy development
+  - Financial reporting and dashboard creation
+
+**Feature 3: Strategic Business Consulting**
+- **Description:** Executive-level guidance for critical business decisions
+- **Details:**
+  - Market expansion and growth strategy
+  - Mergers and acquisitions advisory
+  - Organizational development and culture
+  - Performance improvement initiatives
+
+**Feature 4: Interim Executive Leadership**
+- **Description:** Temporary executive coverage during transitions
+- **Details:**
+  - Interim leadership during executive search
+  - Project-based executive management
+  - Crisis management and turnaround expertise
+  - Transition planning and succession support
+
+#### CTA Section
+
+**Heading:**
+Access Executive-Level Expertise
+
+**Description:**
+Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.
+
+**Button:**
+Explore Services
+
+---
+
+### Service Page 6: Marketing Automation
+**URL:** /services/marketing-automation  
+**Page Type:** Service Page  
+**Page Title:** Marketing Automation for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Marketing Automation for Accounting Firms
+
+**Hero Subtitle:**
+Marketing automation for accounting firms that streamlines your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice.
+
+**Hero Description:**
+Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Automated Lead Nurturing**
+   - Description: Convert prospects into clients with intelligent email sequences and timely follow-ups
+
+2. **Client Engagement**
+   - Description: Keep existing clients informed and engaged with automated communications
+
+3. **Time Savings**
+   - Description: Reduce manual marketing tasks by 80% with intelligent automation
+
+4. **Scalable Growth**
+   - Description: Handle more leads and clients without increasing your workload
+
+#### Features Section
+
+**Feature 1: Lead Generation & Follow-up**
+- **Description:** Capture and nurture leads automatically with intelligent workflows
+- **Details:**
+  - Automated lead capture from multiple sources
+  - Intelligent follow-up sequences via email and SMS
+  - Lead scoring and qualification automation
+  - Integration with your CRM and practice management systems
+
+**Feature 2: Website & SEO Optimization**
+- **Description:** Optimize your online presence for maximum visibility and conversions
+- **Details:**
+  - SEO-optimized website design and content
+  - Local search optimization and Google My Business management
+  - Conversion rate optimization for higher lead generation
+  - Performance tracking and analytics reporting
+
+**Feature 3: Review & Reputation Management**
+- **Description:** Build a stellar online reputation with automated review generation
+- **Details:**
+  - Automated review request campaigns
+  - Reputation monitoring across multiple platforms
+  - Response management for online reviews
+  - Review showcase integration on your website
+
+**Feature 4: Analytics & Reporting**
+- **Description:** Know what works with clear attribution and ROI insights
+- **Details:**
+  - Campaign performance dashboards
+  - Conversion tracking across forms and calls
+  - A/B testing and optimization insights
+  - ROI and pipeline impact reporting
+
+#### CTA Section
+
+**Heading:**
+Ready to Automate Your Marketing?
+
+**Description:**
+Let's implement a marketing automation system that grows your firm while you focus on serving clients.
+
+**Button:**
+Get Started
+
+---
+
+### Service Page 7: SEO for Accountants
+**URL:** /services/seo-for-accountants  
+**Page Type:** Service Page  
+**Page Title:** SEO for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+AI-Optimized SEO for Accounting Firms
+
+**Hero Subtitle:**
+Dominate local search results with intelligent SEO strategies that attract high-value clients actively searching for CPA services and accounting expertise.
+
+**Hero Description:**
+Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Higher Google Rankings**
+   - Description: Achieve top 3 rankings for high-value accounting keywords
+
+2. **Local Market Dominance**
+   - Description: Dominate local search results in your service area
+
+3. **Qualified Traffic**
+   - Description: Attract prospects actively searching for accounting services
+
+4. **Long-Term Growth**
+   - Description: Build sustainable organic traffic that grows over time
+
+#### Features Section
+
+**Feature 1: Local SEO Optimization**
+- **Description:** Dominate local search results for accounting services
+- **Details:**
+  - Google Business Profile optimization
+  - Local citation building and management
+  - Review generation and management
+  - Local content creation and optimization
+
+**Feature 2: Technical SEO**
+- **Description:** Ensure your website meets all technical requirements
+- **Details:**
+  - Site speed optimization
+  - Mobile responsiveness improvements
+  - Schema markup implementation
+  - URL structure optimization
+
+**Feature 3: Content Strategy**
+- **Description:** Create valuable content that attracts and converts
+- **Details:**
+  - Keyword-optimized blog content
+  - Service page optimization
+  - FAQ content creation
+  - Industry-specific resources
+
+**Feature 4: Link Building & Authority**
+- **Description:** Build domain authority through quality backlinks
+- **Details:**
+  - Strategic link acquisition campaigns
+  - Industry directory submissions
+  - Guest posting opportunities
+  - Digital PR and outreach
+
+#### CTA Section
+
+**Heading:**
+Ready to Dominate Local Search Results?
+
+**Description:**
+Let's optimize your website to attract more qualified prospects from Google search.
+
+**Button:**
+Talk to Us
+
+---
+
+### Service Page 8: Social Media Management
+**URL:** /services/social-media-management  
+**Page Type:** Service Page  
+**Page Title:** Social Media Management for CPAs  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Social Media Management for CPAs
+
+**Hero Subtitle:**
+Social media management for CPAs that helps you establish thought leadership and build your brand across all major social platforms while staying compliant with professional standards.
+
+**Hero Description:**
+Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Professional Brand Building**
+   - Description: Establish thought leadership in your market area
+
+2. **Compliant Content**
+   - Description: All content meets professional accounting standards
+
+3. **Lead Generation**
+   - Description: Convert social media followers into prospects
+
+4. **Client Engagement**
+   - Description: Strengthen relationships with existing clients
+
+#### Features Section
+
+**Feature 1: Content Creation & Scheduling**
+- **Description:** Professional content that builds trust and authority
+- **Details:**
+  - Educational posts about tax and accounting topics
+  - Industry news and updates
+  - Client success stories (with permission)
+  - Seasonal tax reminders and tips
+
+**Feature 2: Multi-Platform Management**
+- **Description:** Maintain consistent presence across key platforms
+- **Details:**
+  - LinkedIn professional networking
+  - Facebook community engagement
+  - Twitter industry conversations
+  - YouTube educational content
+
+**Feature 3: Engagement & Community Building**
+- **Description:** Build relationships and generate leads through engagement
+- **Details:**
+  - Response management and monitoring
+  - Community participation and networking
+  - Lead generation through social interactions
+  - Professional compliance monitoring
+
+**Feature 4: Analytics & Performance Tracking**
+- **Description:** Measure and optimize your social media ROI
+- **Details:**
+  - Engagement metrics and audience insights
+  - Content performance analysis
+  - Lead tracking and attribution
+  - Monthly reporting and recommendations
+
+#### CTA Section
+
+**Heading:**
+Build Your Professional Social Media Presence
+
+**Description:**
+Let's establish your firm as a trusted authority on social media while generating new business opportunities.
+
+**Button:**
+Get Started
+
+---
+
+### Service Page 9: Technology Solutions
+**URL:** /services/technology-solutions  
+**Page Type:** Service Page  
+**Page Title:** Technology Solutions for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Technology Solutions for Modern Accounting Firms
+
+**Hero Subtitle:**
+Technology solutions for modern accounting firms that optimize your tech stack and automate business processes to increase efficiency and reduce operational overhead.
+
+**Hero Description:**
+Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Tech Stack Optimization**
+   - Description: Maximize efficiency with integrated technology solutions tailored to your firm
+
+2. **Process Automation**
+   - Description: Automate repetitive tasks and workflows to free up time for client work
+
+3. **Seamless Integrations**
+   - Description: Connect your existing tools for a unified, efficient workflow
+
+4. **Scalable Infrastructure**
+   - Description: Build systems that grow with your firm and support future expansion
+
+#### Features Section
+
+**Feature 1: Tech Stack Optimization**
+- **Description:** Audit and optimize your current technology stack for maximum efficiency
+- **Details:**
+  - Comprehensive technology audit and assessment
+  - Software recommendations based on your firm's needs
+  - Integration planning and implementation
+  - Cost-benefit analysis of technology investments
+
+**Feature 2: Business Process Automation**
+- **Description:** Streamline your operations with intelligent automation workflows
+- **Details:**
+  - Client onboarding automation
+  - Document management and workflow automation
+  - Automated reporting and analytics
+  - Communication and notification automation
+
+**Feature 3: Cloud Migration & Security**
+- **Description:** Secure, cloud-based solutions for modern accounting practices
+- **Details:**
+  - Cloud infrastructure setup and migration
+  - Data security and backup solutions
+  - Compliance and regulatory requirements management
+  - Remote work enablement and collaboration tools
+
+**Feature 4: Training & Support**
+- **Description:** Ongoing support and training for your technology systems
+- **Details:**
+  - Staff training and onboarding programs
+  - Technical support and troubleshooting
+  - System documentation and best practices
+  - Continuous improvement and optimization
+
+#### CTA Section
+
+**Heading:**
+Transform Your Firm with Technology
+
+**Description:**
+Let's optimize your technology stack and automate your processes for maximum efficiency and growth.
+
+**Button:**
+Schedule Consultation
+
+---
+
+### Service Page 10: Website Design
+**URL:** /services/website-design  
+**Page Type:** Service Page  
+**Page Title:** Website Design for Accounting Firms  
+
+#### Hero Section
+
+**Main Heading (H1):**
+Website Design for Accounting Firms
+
+**Hero Subtitle:**
+Convert more visitors into clients with high-performing websites designed specifically for accounting firms.
+
+**Hero Description:**
+Our website design service creates professional, conversion-optimized websites that establish credibility and generate leads for your accounting practice.
+
+#### Benefits Section
+
+**Benefit Cards:**
+
+1. **Professional Credibility**
+   - Description: Build trust with a website that reflects your expertise
+
+2. **Higher Conversions**
+   - Description: Turn website visitors into prospects and clients
+
+3. **Mobile Optimization**
+   - Description: Perfect experience on all devices and screen sizes
+
+4. **SEO Foundation**
+   - Description: Built with search engine optimization in mind
+
+#### Features Section
+
+**Feature 1: Conversion-Focused Design**
+- **Description:** Every element designed to convert visitors into leads
+- **Details:**
+  - Clear calls-to-action throughout the site
+  - Lead capture forms and contact optimization
+  - Trust signals and credibility indicators
+  - Service presentation and pricing clarity
+
+**Feature 2: Professional Branding**
+- **Description:** Establish your firm as a trusted authority
+- **Details:**
+  - Professional color schemes and typography
+  - Client testimonials and case studies
+  - Team photos and bios
+  - Certifications and awards display
+
+**Feature 3: Technical Excellence**
+- **Description:** Fast, secure, and search engine optimized
+- **Details:**
+  - Mobile-responsive design
+  - Fast loading speeds
+  - SSL security certificates
+  - Search engine optimization
+
+**Feature 4: Content Management System**
+- **Description:** Easy-to-update website with full control
+- **Details:**
+  - User-friendly content management
+  - Blog and news updates capability
+  - Service page customization
+  - Analytics and performance tracking
+
+#### CTA Section
+
+**Heading:**
+Get a Website That Converts
+
+**Description:**
+Let's design a professional website that establishes credibility and generates leads for your accounting firm.
+
+**Button:**
+View Portfolio
+
+---
+
 **Next sections available:**
-- Section 3: Service Pages (10 pages)
 - Section 4: Solution Pages (9 pages)
 - Section 5: Industry Pages (4 pages)
 - Section 6: Tool Pages (11 pages)
 - Section 7: Legal Pages (Privacy, Terms, Cookies)
 
-**Total Progress:** ~9 of 60+ pages complete
+**Total Progress:** ~19 of 60+ pages complete
