@@ -45,15 +45,23 @@ const Contact = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call to discuss your firm's specific needs and goals. Simply fill out our contact form or call us directly at (541) 658-3789."
+            answer: "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
           },
           {
             question: "What is the pricing structure?",
-            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote tailored to your needs."
+            answer: "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget."
           },
           {
             question: "Do you offer guarantees?",
-            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+            answer: "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them."
+          },
+          {
+            question: "How quickly can we launch?",
+            answer: "We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed."
+          },
+          {
+            question: "Do you only work with accounting firms?",
+            answer: "Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement."
           }
         ]}
       />
@@ -222,6 +230,94 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Why Choose SmartFirm Section */}
+      <section className="py-20 md:py-28 bg-background-light">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
+              Why Choose SmartFirm for Your Accounting Practice?
+            </h2>
+            <p className="text-lg text-text-secondary text-center mb-16">
+              When you contact SmartFirm, you're reaching out to a team that specializes in helping accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and modern systems. Here's what sets us apart:
+            </p>
+
+            <div className="space-y-8">
+              <Card className="shadow-card">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-heading font-semibold text-primary mb-3">
+                        Industry-Specific Expertise
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed">
+                        We focus on accounting firms, so we understand your compliance needs, workflows, and growth goals. Our solutions are built for CPAs, bookkeepers, and tax professionals, not generic small businesses, this gives us (and our customers) and edge over the competition.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-heading font-semibold text-primary mb-3">
+                        Experience You Can Trust
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed">
+                        With 40+ years of combined experience and 50+ companies supported across industries, we know what it takes to help firms implement systems that generate leads, improve client retention, and scale efficiently.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-heading font-semibold text-primary mb-3">
+                        Comprehensive Support
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed">
+                        From your first consultation to long-term optimization, you'll have a dedicated team guiding you every step of the way. We don't disappear after launch, we continuously refine and improve your systems to keep you growing.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-card">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <CheckCircle className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-heading font-semibold text-primary mb-3">
+                        Fast Implementation
+                      </h3>
+                      <p className="text-text-secondary leading-relaxed">
+                        We respect your time. Most systems are fully operational in under 30 days, and we work around busy tax seasons or reporting periods to minimize disruption to your practice.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="sf-faqs" className="py-20 bg-background">
         <div className="container mx-auto px-6">
@@ -236,7 +332,7 @@ const Contact = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  Book a free strategy call to discuss your firm's specific needs and goals. Simply fill out our contact form or call us directly at (541) 658-3789. We'll schedule a convenient time to understand your challenges and recommend the best path forward.
+                  Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice.
                 </p>
               </details>
 
@@ -246,7 +342,7 @@ const Contact = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  Pricing is customized based on your firm size and specific requirements. We offer packages for solo practitioners, small firms, and larger practices. Contact us for a detailed quote tailored to your needs and budget.
+                  Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget.
                 </p>
               </details>
 
@@ -256,7 +352,27 @@ const Contact = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. We track key performance indicators and make continuous optimizations to ensure you achieve your growth goals.
+                  We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  How quickly can we launch?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  Do you only work with accounting firms?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement.
                 </p>
               </details>
             </div>
@@ -270,17 +386,27 @@ const Contact = () => {
               {
                 "@type": "Question",
                 "name": "How do I get started?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call to discuss your firm's specific needs and goals. Simply fill out our contact form or call us directly at (541) 658-3789." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice." }
               },
               {
                 "@type": "Question",
                 "name": "What is the pricing structure?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote tailored to your needs." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget." }
               },
               {
                 "@type": "Question",
                 "name": "Do you offer guarantees?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
+                "acceptedAnswer": { "@type": "Answer", "text": "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them." }
+              },
+              {
+                "@type": "Question",
+                "name": "How quickly can we launch?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you only work with accounting firms?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement." }
               }
             ]
           })}
