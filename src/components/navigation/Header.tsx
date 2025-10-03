@@ -17,107 +17,107 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const services = [
-    // Top-tier Service Categories
+    // Main Service Categories
     { 
       title: "Marketing Automation", 
       href: "/services/marketing-automation",
-      description: "Complete marketing automation platform for accounting firms"
+      description: "All-in-one automation built to help accounting firms attract, nurture, and convert clients effortlessly."
     },
     { 
       title: "Technology Solutions", 
       href: "/services/technology-solutions",
-      description: "Tech stack optimization and business process automation"
+      description: "Streamline your firm with the right tech stack and smarter workflows."
     },
     { 
       title: "Business Optimization", 
       href: "/services/business-optimization",
-      description: "Process improvement and executive dashboards"
+      description: "Unlock efficiency with process improvements and real-time executive dashboards."
     },
     { 
       title: "Executive Services", 
       href: "/services/executive-services",
-      description: "Fractional CIO and CFO services for growing firms"
+      description: "On-demand CIO and CFO expertise to guide growth without full-time overhead."
     },
     // Individual Services
     { 
       title: "Automated Lead Follow-up", 
       href: "/services/automated-lead-follow-up",
-      description: "Convert more prospects with automated email sequences"
+      description: "Turn every inquiry into a client with timely, personalized email and text automation."
     },
     { 
       title: "Client Review Generation", 
       href: "/services/client-review-generation",
-      description: "Get more positive reviews and testimonials"
+      description: "Build trust and win referrals with more 5-star reviews from happy clients."
     },
     { 
       title: "SEO for Accountants", 
       href: "/services/seo-for-accountants",
-      description: "Rank higher in local search results"
+      description: "Dominate local search and bring in new clients who are ready to hire."
     },
     { 
       title: "Social Media Management", 
       href: "/services/social-media-management",
-      description: "Professional social media presence"
+      description: "Position your firm as a modern leader with consistent, professional social media."
     },
     { 
       title: "Email Marketing", 
       href: "/services/email-marketing",
-      description: "Nurture leads with targeted campaigns"
+      description: "Keep leads and clients engaged with targeted, value-driven campaigns."
     },
     { 
       title: "Website Design", 
       href: "/services/website-design",
-      description: "Modern, conversion-optimized websites"
+      description: "Modern websites that inspire trust and convert visitors into clients."
     }
   ];
 
   const solutions = [
-    // Main Solution Categories
+    // Main Solutions
     { 
       title: "Stop Losing Clients to Tech-Savvy CPAs", 
       href: "/solutions/stop-losing-clients-to-tech-savvy-cpas",
-      description: "Stay competitive with modern systems and automation"
+      description: "Compete — and win — with cutting-edge automation and digital-first systems."
     },
     { 
       title: "Get More Referrals Without Asking", 
       href: "/solutions/get-more-referrals-without-asking",
-      description: "Turn satisfied clients into active advocates"
+      description: "Turn client satisfaction into a steady stream of word-of-mouth growth."
     },
     { 
       title: "Work Less, Earn More", 
       href: "/solutions/work-less-earn-more",
-      description: "Maximize profitability through automation"
+      description: "Boost profitability through automation that cuts busywork and overhead."
     },
     { 
       title: "Grow Without the Growing Pains", 
       href: "/solutions/grow-without-growing-pains",
-      description: "Scale smoothly with efficient systems"
+      description: "Scale smoothly with efficient systems that won't burn out your team."
     },
     { 
       title: "Protect Your Practice & Your Future", 
       href: "/solutions/protect-practice-and-future",
-      description: "Safeguard against threats and future-proof your firm"
+      description: "Safeguard your firm with secure, future-ready strategies."
     },
-    // Specific Solution Areas
+    // Specific Areas
     { 
       title: "I need more leads", 
       href: "/solutions/lead-generation",
-      description: "Generate qualified prospects consistently"
+      description: "Consistently attract high-quality prospects who fit your ideal client profile."
     },
     { 
       title: "I want to scale my firm", 
       href: "/solutions/scale-firm",
-      description: "Grow without proportional overhead increase"
+      description: "Expand capacity and revenue without ballooning costs."
     },
     { 
       title: "I need better client retention", 
       href: "/solutions/client-retention",
-      description: "Keep clients engaged and loyal"
+      description: "Strengthen relationships to keep clients loyal and engaged year after year."
     },
     { 
       title: "Advanced Client Retention Strategies", 
       href: "/solutions/retention-strategies",
-      description: "Strengthen your competitive position"
+      description: "Proactive systems that protect your book from competitors and churn."
     }
   ];
 
@@ -265,10 +265,10 @@ const Header = () => {
                       >
                         <div className="text-sm font-medium leading-none">{industry.name}</div>
                         <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {industry.name === "Tax Preparation" && "Specialized marketing for tax professionals"}
-                          {industry.name === "Bookkeeping Services" && "Growth strategies for bookkeepers"}
-                          {industry.name === "Business Advisory" && "Marketing for advisory services"}
-                          {industry.name === "Audit & Assurance" && "Professional services marketing"}
+                          {industry.name === "Tax Preparation" && "Proven growth playbooks tailored for tax pros."}
+                          {industry.name === "Bookkeeping Services" && "Targeted marketing that helps bookkeepers stand out and scale."}
+                          {industry.name === "Business Advisory" && "Strategies to position advisors as indispensable partners, not just vendors."}
+                          {industry.name === "Audit & Assurance" && "Professional visibility campaigns built for trust-driven services."}
                         </p>
                       </NavigationMenuLink>
                     ))}
