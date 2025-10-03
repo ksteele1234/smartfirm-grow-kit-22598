@@ -84,7 +84,7 @@ const App = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-studies" element={<SuccessStories />} />
         <Route path="/get-started" element={<GetStarted />} />
-        <Route path="/quick-start-marketing-for-accounting-firms" element={<QuickStart />} />
+        <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
         
         {/* Solution Sub-pages */}
         <Route path="/solutions/i-need-more-leads" element={<LeadGeneration />} />

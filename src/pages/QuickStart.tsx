@@ -137,8 +137,8 @@ const QuickStart = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="SmartFirm 30-Day Quick Start Package | Marketing for Accounting Firms"
-        description="Launch your accounting firm's marketing in 30 days with SmartFirm's Quick Start Package. Includes website refresh, GBP optimization, CRM automations, review system, email marketing, and SEO foundation."
+        title="SmartFirm 30-Day Quick Start Package | Marketing Package for CPA Firms"
+        description="Launch your accounting firm's marketing in 30 days with SmartFirm's Quick Start Package. A complete marketing package for CPA firms, including website design, GBP optimization, CRM automations, review generation, email marketing, and SEO."
         pageType="service"
         serviceName="30-Day Quick Start Package"
         noindex={false}
@@ -146,7 +146,7 @@ const QuickStart = () => {
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Get Started", url: "/get-started" },
-          { name: "Quick Start Package", url: "/quick-start-marketing-for-accounting-firms" }
+          { name: "Quick Start Package", url: "/quick-start-marketing-for-cpa-firms" }
         ]}
         faqs={[
           {
@@ -198,19 +198,25 @@ const QuickStart = () => {
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Get Started with Marketing for Accounting Firms in Just 30 Days
+              Get Started with a Marketing Package for CPA Firms in Just 30 Days
             </h1>
             
             <div id="sf-keyword-intro">
               <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-10 leading-relaxed">
-                The SmartFirm Quick Start Package gives accountants, CPAs, bookkeepers, and tax preparers everything they need to launch modern marketing systems - fast.
+                The SmartFirm Quick Start Package gives accountants, CPAs, bookkeepers, and tax preparers everything they need to launch modern marketing systems — fast.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
+                <a href="/contact">
+                  Book My Free Consultation
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="group" asChild>
                 <a href="#pricing">
-                  Buy Now
+                  Get Started with Quick Start
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -226,7 +232,7 @@ const QuickStart = () => {
                 Why Choose the Quick Start?
               </h2>
               <p className="text-lg text-text-secondary leading-relaxed">
-                Your accounting firm doesn't need another complex tool—you need a system that works from day one. The SmartFirm 30-Day Quick Start Package is designed to give you a professional presence, automate your follow-up, and build client trust immediately.
+                Your accounting firm doesn't need another complex tool — you need a system that works from day one. The SmartFirm 30-Day Quick Start Package is the most effective marketing package for CPA firms that want fast results and a strong foundation.
               </p>
             </div>
           </div>
