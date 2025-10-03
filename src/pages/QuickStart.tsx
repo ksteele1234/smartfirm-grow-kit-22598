@@ -188,7 +188,7 @@ const QuickStart = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
+        <section className="relative py-[200px] bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
           <BackgroundPattern pattern="dots" className="opacity-20" />
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
@@ -209,8 +209,8 @@ const QuickStart = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
-                <a href="/get-started">
-                  Show Me the Quick Start Package
+                <a href="#pricing">
+                  Buy Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -219,7 +219,7 @@ const QuickStart = () => {
         </section>
 
         {/* Why Choose Section */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="py-[200px] bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
@@ -233,7 +233,7 @@ const QuickStart = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-[200px] bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -272,7 +272,7 @@ const QuickStart = () => {
         </section>
 
         {/* Outcomes Section */}
-        <section className="py-20 md:py-28 bg-background">
+        <section className="py-[200px] bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -304,7 +304,7 @@ const QuickStart = () => {
         </section>
 
         {/* Who This Is For Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-[200px] bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -333,7 +333,7 @@ const QuickStart = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 md:py-28 bg-background">
+        <section id="pricing" className="py-[200px] bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -341,112 +341,103 @@ const QuickStart = () => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Quick Start Package */}
+            <div className="max-w-2xl mx-auto">
               <Card className="border-2 border-primary shadow-lg relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-gradient-to-l from-primary to-teal text-white px-6 py-2 rounded-bl-lg">
-                  <span className="text-sm font-semibold">Popular Choice</span>
+                  <span className="text-sm font-semibold">Complete Package</span>
                 </div>
                 <CardHeader className="text-center pt-12 pb-6">
                   <CardTitle className="text-2xl text-primary mb-2">
                     30-Day Quick Start Package
                   </CardTitle>
                   <CardDescription className="text-text-secondary mb-6">
-                    Everything you need to launch modern marketing systems
+                    Everything you need to launch and grow your accounting firm's marketing
                   </CardDescription>
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-2">$4,499</div>
-                    <div className="text-sm text-text-light">One-time investment</div>
+                  <div className="text-center space-y-4">
+                    <div>
+                      <div className="text-5xl font-bold text-primary mb-2">$4,999</div>
+                      <div className="text-sm text-text-light">One-time setup fee</div>
+                    </div>
+                    <div className="text-2xl font-semibold text-primary">+</div>
+                    <div>
+                      <div className="text-5xl font-bold text-primary mb-2">$999</div>
+                      <div className="text-sm text-text-light">Per month (ongoing optimization)</div>
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Complete website refresh or launch</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Google Business Profile optimization</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">CRM setup with automation sequences</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Review generation system</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Email marketing foundation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Basic SEO kickstart</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">30 days of implementation support</span>
-                    </li>
-                  </ul>
+                  <div className="border-t pt-6">
+                    <h4 className="font-semibold text-primary mb-4">30-Day Quick Start Includes:</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Complete website refresh or launch</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Google Business Profile optimization</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">CRM setup with automation sequences</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Review generation system</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Email marketing foundation</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Basic SEO kickstart</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">30 days of implementation support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="border-t pt-6">
+                    <h4 className="font-semibold text-primary mb-4">Monthly Growth Program Includes:</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">SEO campaigns and optimization</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Website analytics tracking</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Marketing automation support</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Continuous system optimization</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Monthly performance reports</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Strategy consultation calls</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-text-secondary">Ongoing technical support</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
                   <Button size="lg" variant="hero" className="w-full group" asChild>
                     <a href="/get-started">
-                      Get Started with Quick Start
+                      Buy Now
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Monthly Growth Program */}
-              <Card className="border-border shadow-lg">
-                <CardHeader className="text-center pt-12 pb-6">
-                  <CardTitle className="text-2xl text-primary mb-2">
-                    Ongoing Monthly Growth Program
-                  </CardTitle>
-                  <CardDescription className="text-text-secondary mb-6">
-                    Continuous optimization and support after Quick Start
-                  </CardDescription>
-                  <div className="text-center">
-                    <div className="text-5xl font-bold text-primary mb-2">$999</div>
-                    <div className="text-sm text-text-light">Per month</div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">SEO campaigns and optimization</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Website analytics tracking</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Marketing automation support</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Continuous system optimization</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Monthly performance reports</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Strategy consultation calls</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-text-secondary">Ongoing technical support</span>
-                    </li>
-                  </ul>
-                  <Button size="lg" variant="outline" className="w-full" asChild>
-                    <a href="/get-started">
-                      Learn More
                     </a>
                   </Button>
                 </CardContent>
@@ -456,7 +447,7 @@ const QuickStart = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <section className="py-[200px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto px-4 text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
