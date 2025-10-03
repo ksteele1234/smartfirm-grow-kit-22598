@@ -8,29 +8,29 @@ const SolutionsSection = () => {
     {
       icon: Target,
       title: "I need more leads",
-      description: "Stop waiting for referrals. Get qualified prospects who are ready to work with you.",
-      features: ["SEO for accountants", "PPC campaigns for CPAs", "Content marketing", "Local listing optimization"],
+      description: "Stop waiting for referrals. Generate qualified accounting firm leads with SEO, PPC, and content marketing.",
+      features: ["SEO for accountants & CPAs", "Local listing optimization", "PPC campaigns", "Content marketing"],
       link: "/solutions/lead-generation"
     },
     {
       icon: TrendingUp,
       title: "I want to scale my firm", 
-      description: "Break through growth limits. Get systems that work without your constant time and effort.",
-      features: ["Automation systems", "Client onboarding workflows", "Referral programs", "Strategic planning"],
+      description: "Break growth limits with CPA marketing automation systems that run without your constant oversight.",
+      features: ["Automation workflows", "Client onboarding systems", "Referral programs", "Strategic planning"],
       link: "/solutions/scale-firm"
     },
     {
       icon: Shield,
-      title: "I'm losing clients to competitors",
-      description: "Keep your clients happy. Position your firm as the clear choice in your market.",
-      features: ["Competitive analysis", "Client retention campaigns", "Brand positioning", "Differentiation strategy"],
+      title: "Stop Losing Clients to Competitors",
+      description: "Keep clients loyal with retention campaigns and brand positioning that make your firm the obvious choice.",
+      features: ["Competitive analysis", "Client retention campaigns", "Differentiation strategies", "Brand positioning"],
       link: "/solutions/client-retention"
     },
     {
       icon: Users,
       title: "I need better client retention",
-      description: "Keep your best clients engaged with regular touchpoints and automated follow-ups.",
-      features: ["Communication systems", "Review generation", "Upselling automation", "Satisfaction tracking"],
+      description: "Strengthen relationships with automated follow-ups and proactive client engagement.",
+      features: ["Communication systems", "Automated review requests", "Upsell and cross-sell campaigns", "Satisfaction tracking"],
       link: "/solutions/retention-strategies"
     }
   ];
@@ -42,11 +42,11 @@ const SolutionsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Proven Solutions for
-            <span className="text-teal block">Common Growth Challenges</span>
+            Targeted Marketing Solutions for
+            <span className="text-teal block">Accountants, CPAs, and Bookkeepers</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Need leads? Want to scale? We have targeted solutions for accounting firms at every stage.
+            From lead generation to client retention, SmartFirm provides automation and SEO solutions designed for accounting firms at every stage.
           </p>
         </div>
 
@@ -148,7 +148,7 @@ const SolutionsSection = () => {
               Ready to See Results?
             </h3>
             <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-              Let's create a custom growth plan that addresses your specific challenges and goals.
+              Let's build a custom growth plan tailored to your firm's challenges and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
