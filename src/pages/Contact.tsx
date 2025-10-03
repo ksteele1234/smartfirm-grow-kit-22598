@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, CheckCircle, Users, Target, Zap } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -94,7 +94,7 @@ const Contact = () => {
             Contact SmartFirm
           </h1>
           <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your accounting firm's marketing? Get in touch with our team of experts who understand the unique challenges of accounting practices.
+            Ready to modernize your firm's marketing and free up your time? Get in touch with a team that understands accounting workflows and client growth.
           </p>
         </div>
       </section>
@@ -111,10 +111,10 @@ const Contact = () => {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-text-secondary mb-8">
-                  Whether you're ready to get started or just have questions about our services, we're here to help. Our team specializes in marketing solutions designed specifically for accounting firms.
+                  Whether you are ready to start or just have questions, we are here to help. Our solutions are built for accountants, CPAs, bookkeepers, and tax preparers.
                 </p>
                 <p className="text-text-secondary">
-                  Read <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, view <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, or explore <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA resources</a>.
+                  Read <a href="/success-stories" className="text-primary hover:underline">success stories</a>, review <a href="/services" className="text-primary hover:underline">our services</a>, or explore helpful resources for accounting firms.
                 </p>
               </div>
 
@@ -122,16 +122,16 @@ const Contact = () => {
               <div className="space-y-6">
                 <Card className="shadow-card">
                   <CardContent className="p-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
-                        <Phone className="h-6 w-6 text-primary" />
-                      </div>
-                     <div>
-                        <h3 className="font-heading font-semibold text-primary">Phone</h3>
-                        <p className="text-text-secondary">(541) 658-3789</p>
-                        <p className="text-sm text-text-light">Monday - Friday: 9 AM - 6 PM PST</p>
-                      </div>
-                    </div>
+                     <div className="flex items-center space-x-4">
+                       <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
+                         <Phone className="h-6 w-6 text-primary" />
+                       </div>
+                      <div>
+                         <h3 className="font-heading font-semibold text-primary">Phone</h3>
+                         <p className="text-text-secondary">(541) 658-3789</p>
+                         <p className="text-sm text-text-light">Monday–Friday: 9 AM–6 PM PT</p>
+                       </div>
+                     </div>
                   </CardContent>
                 </Card>
 
@@ -157,10 +157,10 @@ const Contact = () => {
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-heading font-semibold text-primary">Location</h3>
-                        <p className="text-text-secondary">Eugene, OR</p>
-                        <p className="text-sm text-text-light">Serving accounting firms nationwide</p>
-                      </div>
+                         <h3 className="font-heading font-semibold text-primary">Location</h3>
+                         <p className="text-text-secondary">Eugene, OR</p>
+                         <p className="text-sm text-text-light">Serving accounting firms across the United States.</p>
+                       </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -215,78 +215,6 @@ const Contact = () => {
                       title="Lovable Contact Us"  
                     />
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Contact SmartFirm Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
-              Why Choose SmartFirm for Your Accounting Practice?
-            </h2>
-            <p className="text-lg text-text-secondary mb-12 text-center">
-              When you contact SmartFirm, you're reaching out to a team that specializes exclusively in helping accounting firms grow. Here's what makes us different:
-            </p>
-            
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Industry-Specific Expertise</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-text-secondary">
-                    We work exclusively with accounting firms, so we understand your unique challenges, compliance requirements, and growth opportunities. Our solutions are tailored specifically for CPAs, bookkeepers, and tax professionals.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Proven Track Record</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-text-secondary">
-                    Our clients typically see 250% more qualified leads, save 15+ hours per week, and achieve positive ROI within 90 days. We have a proven process that delivers measurable results for accounting practices.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <CheckCircle className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Comprehensive Support</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-text-secondary">
-                    From initial consultation to ongoing optimization, we provide dedicated support at every step. You'll work with a team that's committed to your firm's long-term success and growth.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">Fast Implementation</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-text-secondary">
-                    We respect your busy schedule. Most systems are fully operational within 30 days, and we work around tax season or other peak periods to minimize disruption to your practice.
-                  </p>
                 </CardContent>
               </Card>
             </div>
