@@ -48,23 +48,31 @@ const GetStarted = () => {
     {
       icon: Calendar,
       title: "Free Consultation",
-      description: "Discuss your firm's unique challenges and goals with our experts. No obligation, just insights.",
-      benefits: ["Personalized strategy session", "Identify growth opportunities", "Custom roadmap", "No sales pressure"],
+      description: "A no-pressure strategy session to discuss your firm's unique challenges and goals. Walk away with insights you can use immediately.",
+      benefits: ["Personalized strategy session", "Identify growth opportunities", "Custom roadmap for your firm", "No sales pressure"],
       cta: "Book a Call",
       popular: true
     },
     {
       icon: Zap,
-      title: "Quick Start Options", 
-      description: "Explore our focused programs designed for immediate impact, like our 30-Day Quick Wins Program.",
-      benefits: ["Immediate results", "30-day implementation", "Proven strategies", "Fast ROI"],
-      cta: "View Quick Starts"
+      title: "Quick Start Program", 
+      description: "A focused 30-day program designed to give accounting firms fast, measurable wins and a strong marketing foundation.",
+      benefits: ["Immediate results", "30-day implementation", "Proven growth systems installed", "Fast ROI foundation"],
+      details: [
+        "Fresh, conversion-focused website (or optimization of existing site)",
+        "Google Business Profile setup & optimization for local visibility",
+        "CRM setup with automated lead capture & follow-up sequences",
+        "Review generation system to build trust",
+        "Email nurture campaigns for client retention",
+        "Basic SEO optimization to start attracting organic leads"
+      ],
+      cta: "View Quick Start"
     },
     {
       icon: Phone,
       title: "Contact Us Directly",
-      description: "Connect with our team via phone, email, or live chat for any inquiries.",
-      benefits: ["Instant answers", "Multiple contact methods", "Expert guidance", "Quick response"],
+      description: "Connect with our team by phone, email, or live chat for any inquiries.",
+      benefits: ["Instant answers", "Multiple contact options", "Expert guidance", "Quick response times"],
       cta: "Contact Us"
     }
   ];
@@ -73,7 +81,7 @@ const GetStarted = () => {
     {
       icon: BookOpen,
       title: "Client Support & Resources",
-      description: "Access our knowledge base, video tutorials, and client portal for ongoing support.",
+      description: "Already a client? Access our knowledge base, tutorials, and client portal for ongoing support.",
       cta: "Visit Support"
     },
     {
@@ -87,8 +95,8 @@ const GetStarted = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Get Started | SmartFirm"
-        description="Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm with SmartFirm."
+        title="Get Started with Marketing for Your Accounting Firm | SmartFirm"
+        description="Get started with marketing for your accounting firm through CPA marketing automation, free consultations, or quick-win programs designed for accounting practices."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -99,15 +107,15 @@ const GetStarted = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+            answer: "Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
           },
           {
             question: "What is the pricing structure?",
-            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
+            answer: "Pricing is customized by firm size, services, and objectives. We offer flexible packages and payment options. You'll receive transparent pricing during your consultation."
           },
           {
             question: "Do you offer guarantees?",
-            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+            answer: "We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
           }
         ]}
       />
@@ -147,9 +155,11 @@ const GetStarted = () => {
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
             Get Started with Marketing for Your Accounting Firm
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
-            Whether you're ready for comprehensive CPA marketing automation or just exploring digital marketing strategies for accounting practices, find the best way to connect with SmartFirm and begin your growth journey.
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
+              Marketing for your accounting firm starts here. Whether you're ready for comprehensive CPA marketing automation or just exploring digital strategies for accounting practices, SmartFirm makes it simple to connect and begin your growth journey.
+            </p>
+          </div>
         </div>
         <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -173,9 +183,7 @@ const GetStarted = () => {
             Ready to Take the Next Step?
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            We understand that every accounting firm is at a different stage of growth with unique needs and challenges. 
-            That's why we offer multiple pathways to get started with SmartFirm—from comprehensive consultations to 
-            quick-win programs and everything in between.
+            Every accounting firm is at a different stage of growth. That's why we offer multiple ways to get started, from free consultations to quick-win programs, all so you can move forward at your own pace.
           </p>
         </div>
       </section>
@@ -221,6 +229,20 @@ const GetStarted = () => {
                       </div>
                     ))}
                   </div>
+                  
+                  {option.details && option.details.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <h4 className="text-sm font-semibold text-primary mb-3">Includes:</h4>
+                      <ul className="space-y-2">
+                        {option.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start space-x-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal mt-1.5 flex-shrink-0" />
+                            <span className="text-xs text-text-secondary">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   <Button 
                     className="w-full group" 
@@ -291,8 +313,8 @@ const GetStarted = () => {
                 <div className="md:col-span-2">
                   <Quote className="w-12 h-12 text-primary mb-6" />
                   <blockquote className="text-xl text-text-primary mb-6 italic">
-                    "I was hesitant about working with a consulting firm, but SmartFirm's free consultation showed me exactly what I needed to grow. 
-                    Within three months, we had streamlined our processes and increased our client base by 50%. The best decision I made for my practice."
+                    "I was hesitant about working with a consulting firm, but SmartFirm's free consultation gave me clarity on exactly what I needed to grow. 
+                    Within a few months, we streamlined our processes and started seeing consistent client growth. The best decision I made for my practice."
                   </blockquote>
                   <div className="space-y-2">
                     <h4 className="font-heading font-semibold text-primary text-lg">
@@ -313,16 +335,16 @@ const GetStarted = () => {
                   <Target className="w-16 h-16 text-primary mx-auto mb-4" />
                   <div className="space-y-4">
                     <div>
-                      <div className="text-2xl font-heading font-bold text-primary">50%</div>
-                      <div className="text-sm text-text-secondary">Client Growth</div>
+                      <div className="text-2xl font-heading font-bold text-primary">Streamlined</div>
+                      <div className="text-sm text-text-secondary">Systems in Under 90 Days</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-heading font-bold text-primary">3 Months</div>
-                      <div className="text-sm text-text-secondary">To Results</div>
+                      <div className="text-2xl font-heading font-bold text-primary">Consistent</div>
+                      <div className="text-sm text-text-secondary">New Client Growth</div>
                     </div>
                     <div>
                       <div className="text-2xl font-heading font-bold text-primary">$0</div>
-                      <div className="text-sm text-text-secondary">Upfront Cost</div>
+                      <div className="text-sm text-text-secondary">Upfront Consultation Cost</div>
                     </div>
                   </div>
                 </div>
@@ -385,7 +407,7 @@ const GetStarted = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  Book a free strategy call to discuss your firm's specific needs and goals. We'll evaluate your current situation and provide customized recommendations for growth.
+                  Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan.
                 </p>
               </details>
 
@@ -405,7 +427,7 @@ const GetStarted = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction.
+                  We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days.
                 </p>
               </details>
             </div>
