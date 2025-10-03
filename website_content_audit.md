@@ -1993,3 +1993,665 @@ View Portfolio
 - Section 7: Legal Pages (Privacy, Terms, Cookies)
 
 **Total Progress:** ~19 of 60+ pages complete
+
+---
+
+## SECTION 4: INDUSTRY PAGES
+
+### 4.1 Audit & Assurance Services
+**File:** `src/pages/industries/AuditAssurance.tsx`
+
+#### H1: Marketing Solutions for Audit & Assurance Services
+
+#### Subtitle
+Build trust with organizations requiring audit services and establish your firm as the reliable choice for financial statement audits and assurance engagements.
+
+#### Industry Overview
+Audit and assurance services require the highest levels of trust and credibility. Our marketing strategies help you demonstrate competence, independence, and reliability to attract organizations that need professional audit services.
+
+#### Challenges Section
+
+**Challenge 1: Establishing Credibility & Trust**
+- **Description:** Audit clients need absolute confidence in your competence and independence
+- **Solution:** Professional positioning that emphasizes credentials, experience, and quality controls
+
+**Challenge 2: Regulatory Compliance**
+- **Description:** Marketing must comply with professional standards and regulations
+- **Solution:** Carefully crafted messaging that maintains professional standards
+
+**Challenge 3: Long-Term Relationship Building**
+- **Description:** Audit engagements are typically ongoing, multi-year relationships
+- **Solution:** Relationship marketing focused on trust, consistency, and exceptional service
+
+#### Services Section
+
+**Service 1: Professional Credibility Building**
+- **Description:** Establish your firm's reputation for excellence and reliability
+- **Link:** /services/website-design
+
+**Service 2: Industry Specialization Marketing**
+- **Description:** Position your expertise in specific industries or audit types
+- **Link:** /services/marketing-automation
+
+**Service 3: Referral Network Development**
+- **Description:** Build relationships with attorneys, banks, and other professional referral sources
+- **Link:** /solutions/get-more-referrals
+
+**Service 4: Proposal Process Optimization**
+- **Description:** Improve your success rate in competitive audit proposal situations
+- **Link:** /services/business-optimization
+
+#### Case Studies
+
+**Case Study 1: Regional Audit Market Leadership**
+- **Client:** Regional CPA Firm
+- **Result:** Became market leader for nonprofit audits in 3-state region
+- **Link:** /success-stories
+
+**Case Study 2: Specialized Industry Focus**
+- **Client:** Healthcare Audit Specialists
+- **Result:** Built $2M practice specializing in healthcare audits
+- **Link:** /success-stories
+
+#### CTA Section
+- **Title:** Strengthen Your Audit Practice
+- **Description:** Discover how to build trust, credibility, and a strong referral network for your audit practice.
+
+---
+
+### 4.2 Bookkeeping Services
+**File:** `src/pages/industries/BookkeepingServices.tsx`
+
+#### H1: Marketing Solutions for Bookkeeping Services
+
+#### Subtitle
+Build a consistent pipeline of small business clients and establish recurring revenue streams with marketing strategies tailored for bookkeeping professionals.
+
+#### Industry Overview
+Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.
+
+#### Challenges Section
+
+**Challenge 1: Price Competition with Software**
+- **Description:** Competing against DIY bookkeeping software and low-cost providers
+- **Solution:** Position the value of professional expertise, accuracy, and business insights
+
+**Challenge 2: Client Education on Value**
+- **Description:** Small business owners often don't understand the full value of professional bookkeeping
+- **Solution:** Content marketing that educates prospects on the true cost of bookkeeping mistakes
+
+**Challenge 3: Scaling Service Delivery**
+- **Description:** Balancing growth with maintaining quality and personal service
+- **Solution:** Systems and processes that allow growth while maintaining service standards
+
+#### Services Section
+
+**Service 1: Small Business Lead Generation**
+- **Description:** Target and attract growing small businesses that need bookkeeping services
+- **Link:** /solutions/lead-generation
+
+**Service 2: Value-Based Positioning**
+- **Description:** Position your expertise above price competition
+- **Link:** /services/marketing-automation
+
+**Service 3: Recurring Revenue Optimization**
+- **Description:** Maximize client lifetime value and reduce churn
+- **Link:** /solutions/retention-strategies
+
+**Service 4: Local Market Domination**
+- **Description:** Become the go-to bookkeeper in your local market
+- **Link:** /services/seo-for-accountants
+
+#### Case Studies
+
+**Case Study 1: 200% Monthly Recurring Revenue Growth**
+- **Client:** QuickBooks Certified Bookkeeper
+- **Result:** Built $25K MRR through systematic client acquisition
+- **Link:** /success-stories
+
+**Case Study 2: Premium Pricing Success**
+- **Client:** Business Bookkeeping Solutions
+- **Result:** Increased rates 60% while improving client retention
+- **Link:** /success-stories
+
+#### CTA Section
+- **Title:** Build Your Bookkeeping Empire
+- **Description:** Discover how to attract quality small business clients and build predictable recurring revenue.
+
+---
+
+### 4.3 Business Advisory Services
+**File:** `src/pages/industries/BusinessAdvisory.tsx`
+
+#### H1: Marketing Solutions for Business Advisory Services
+
+#### Subtitle
+Position your expertise as a strategic advisor and command premium fees for helping business owners make better decisions and achieve their goals.
+
+#### Industry Overview
+Business advisory services represent the evolution from compliance work to strategic partnership. Our marketing strategies help you transition from being seen as a cost center to becoming a trusted advisor who drives business growth and profitability.
+
+#### Challenges Section
+
+**Challenge 1: Moving Beyond Tax & Compliance**
+- **Description:** Clients often don't realize you offer strategic advisory services
+- **Solution:** Educational marketing that demonstrates your strategic capabilities and value
+
+**Challenge 2: Justifying Advisory Fees**
+- **Description:** Business owners question the value of advisory services vs. traditional accounting
+- **Solution:** ROI-focused positioning that connects advisory services to tangible business outcomes
+
+**Challenge 3: Differentiation in Crowded Market**
+- **Description:** Many firms claim to offer "business advisory" without clear differentiation
+- **Solution:** Specific methodologies, processes, and outcomes that set you apart
+
+#### Services Section
+
+**Service 1: Advisory Service Positioning**
+- **Description:** Position your advisory services as essential for business growth
+- **Link:** /services/marketing-automation
+
+**Service 2: High-Value Client Targeting**
+- **Description:** Attract businesses ready to invest in strategic guidance
+- **Link:** /solutions/lead-generation
+
+**Service 3: Thought Leadership Development**
+- **Description:** Establish yourself as the go-to expert in business strategy
+- **Link:** /services/website-design
+
+**Service 4: Service Packaging & Pricing**
+- **Description:** Create advisory packages that command premium fees
+- **Link:** /services/business-optimization
+
+#### Case Studies
+
+**Case Study 1: Transition to Advisory Model**
+- **Client:** Mid-Size Accounting Firm
+- **Result:** Increased revenue per client 3x through advisory services
+- **Link:** /success-stories
+
+**Case Study 2: Niche Advisory Specialization**
+- **Client:** Manufacturing Advisory Specialists
+- **Result:** Built $500K advisory practice in 18 months
+- **Link:** /success-stories
+
+#### CTA Section
+- **Title:** Transform Your Practice with Advisory Services
+- **Description:** Learn how to position, package, and market high-value business advisory services.
+
+---
+
+### 4.4 Tax Preparation Services
+**File:** `src/pages/industries/TaxPreparation.tsx`
+
+#### H1: Marketing Solutions for Tax Preparation Services
+
+#### Subtitle
+Build year-round client relationships and smooth revenue cycles with marketing strategies designed specifically for tax professionals.
+
+#### Industry Overview
+Tax preparation services face unique challenges with seasonal revenue cycles and client retention. Our marketing strategies help you maintain client engagement year-round, attract higher-value clients, and build recurring revenue beyond tax season.
+
+#### Challenges Section
+
+**Challenge 1: Seasonal Revenue Fluctuations**
+- **Description:** Most revenue concentrated in 3-4 months creates cash flow challenges
+- **Solution:** Year-round engagement strategies and expanded service offerings
+
+**Challenge 2: Price-Shopping During Tax Season**
+- **Description:** Clients compare tax prep fees without understanding value differences
+- **Solution:** Value-based positioning that emphasizes accuracy, expertise, and proactive planning
+
+**Challenge 3: Client Retention After Filing**
+- **Description:** Clients disappear after April 15th and return to competitors next year
+- **Solution:** Systematic follow-up and year-round value delivery
+
+#### Services Section
+
+**Service 1: Year-Round Client Engagement**
+- **Description:** Keep clients connected beyond tax season
+- **Link:** /services/marketing-automation
+
+**Service 2: Tax Planning Lead Generation**
+- **Description:** Attract clients for ongoing tax planning services
+- **Link:** /solutions/lead-generation
+
+**Service 3: Service Expansion Marketing**
+- **Description:** Introduce bookkeeping, advisory, and planning services
+- **Link:** /services/business-optimization
+
+**Service 4: Premium Client Acquisition**
+- **Description:** Target high-net-worth individuals and business owners
+- **Link:** /services/seo-for-accountants
+
+#### Case Studies
+
+**Case Study 1: Year-Round Revenue Transformation**
+- **Client:** Seasonal Tax Practice
+- **Result:** Achieved 60/40 revenue split (vs. previous 90/10) through expanded services
+- **Link:** /success-stories
+
+**Case Study 2: Premium Tax Services**
+- **Client:** High-Net-Worth Tax Specialists
+- **Result:** Tripled average client value through tax planning services
+- **Link:** /success-stories
+
+#### CTA Section
+- **Title:** Smooth Your Revenue and Grow Your Tax Practice
+- **Description:** Discover strategies to build year-round relationships and expand beyond seasonal tax prep.
+
+---
+
+## SECTION 5: TOOLS & CALCULATORS
+
+### 5.1 ROI Calculator
+**File:** `src/pages/tools/ROICalculator.tsx`
+
+#### Page Title
+Marketing ROI Calculator for Accounting Firms
+
+#### H1: Calculate Your Marketing ROI
+
+#### Description
+Discover the potential return on investment from your marketing efforts. This calculator helps accounting firms estimate the value of new clients and measure marketing effectiveness.
+
+#### Tool Features
+- Calculate client lifetime value
+- Estimate acquisition costs
+- Project ROI scenarios
+- Compare marketing channels
+- Export detailed reports
+
+#### Benefits Section
+- Data-driven marketing decisions
+- Justify marketing investment
+- Identify best-performing channels
+- Optimize budget allocation
+
+#### CTA
+- **Primary:** Get Your Custom ROI Analysis
+- **Link:** /get-started
+
+---
+
+### 5.2 Tech Stack ROI Calculator
+**File:** `src/pages/tools/TechStackROICalculator.tsx`
+
+#### Page Title
+Tech Stack ROI Calculator for Accounting Firms
+
+#### H1: Calculate Your Technology Investment ROI
+
+#### Description
+Evaluate the return on investment for your technology stack. See how automation and modern tools can improve efficiency and profitability.
+
+#### Tool Features
+- Current vs. optimized comparison
+- Time savings calculation
+- Cost-benefit analysis
+- Break-even timeline
+- Implementation roadmap
+
+#### Benefits Section
+- Justify technology investments
+- Identify efficiency gains
+- Calculate time savings
+- Plan implementation strategy
+
+#### CTA
+- **Primary:** Get a Custom Tech Stack Analysis
+- **Link:** /get-started
+
+---
+
+### 5.3 Client Lifetime Value Calculator
+**File:** `src/pages/tools/ClientLifetimeValueCalculator.tsx`
+
+#### Page Title
+Client Lifetime Value Calculator for CPAs
+
+#### H1: Calculate Your Client Lifetime Value
+
+#### Description
+Understand the true value of your clients over their entire relationship with your firm. Make better decisions about client acquisition costs and retention strategies.
+
+#### Tool Features
+- Average revenue per client
+- Retention rate analysis
+- Lifetime value projection
+- Acquisition cost comparison
+- Profitability metrics
+
+#### Benefits Section
+- Better pricing decisions
+- Informed acquisition spending
+- Retention strategy optimization
+- Resource allocation guidance
+
+#### CTA
+- **Primary:** Get a Custom Client Value Analysis
+- **Link:** /get-started
+
+---
+
+### 5.4 Marketing Scorecard
+**File:** `src/pages/tools/MarketingScorecard.tsx`
+
+#### Page Title
+Marketing Effectiveness Scorecard for Accounting Firms
+
+#### H1: Grade Your Marketing Effectiveness
+
+#### Description
+Get a comprehensive assessment of your current marketing strategy. Identify strengths, weaknesses, and opportunities for improvement.
+
+#### Assessment Categories
+- Online presence & branding
+- Lead generation systems
+- Client communication
+- Digital marketing
+- Content strategy
+- Conversion optimization
+
+#### Scoring System
+- Graded on A-F scale
+- Category-specific scores
+- Overall marketing grade
+- Prioritized recommendations
+
+#### CTA
+- **Primary:** Get Your Personalized Marketing Plan
+- **Link:** /get-started
+
+---
+
+### 5.5 Lead Generation Scorecard
+**File:** `src/pages/tools/LeadGenerationScorecard.tsx`
+
+#### Page Title
+Lead Generation Scorecard for CPAs
+
+#### H1: Evaluate Your Lead Generation System
+
+#### Description
+Assess the effectiveness of your lead generation efforts. Discover gaps in your funnel and opportunities to attract more qualified prospects.
+
+#### Assessment Areas
+- Traffic sources
+- Lead capture mechanisms
+- Lead quality
+- Follow-up processes
+- Conversion rates
+- Pipeline management
+
+#### Scoring & Results
+- Quantitative scoring
+- Benchmark comparisons
+- Gap analysis
+- Action plan recommendations
+
+#### CTA
+- **Primary:** Build a Better Lead Generation System
+- **Link:** /get-started
+
+---
+
+### 5.6 Growth Potential Scorecard
+**File:** `src/pages/tools/GrowthPotentialScorecard.tsx`
+
+#### Page Title
+Growth Potential Scorecard for Accounting Firms
+
+#### H1: Assess Your Growth Potential
+
+#### Description
+Evaluate your firm's readiness for growth. Identify the key factors that will enable or limit your ability to scale.
+
+#### Assessment Dimensions
+- Current capacity utilization
+- Service delivery efficiency
+- Team capabilities
+- Systems & processes
+- Market positioning
+- Financial health
+
+#### Output & Insights
+- Growth readiness score
+- Capacity analysis
+- Bottleneck identification
+- Growth strategy recommendations
+
+#### CTA
+- **Primary:** Create Your Custom Growth Plan
+- **Link:** /get-started
+
+---
+
+### 5.7 Automation Readiness Quiz
+**File:** `src/pages/tools/AutomationReadinessQuiz.tsx`
+
+#### Page Title
+Automation Readiness Quiz for Accounting Firms
+
+#### H1: Is Your Firm Ready for Automation?
+
+#### Description
+Discover which areas of your practice are ready for automation and where you'll see the biggest impact.
+
+#### Quiz Categories
+- Current technology usage
+- Process documentation
+- Team adoption readiness
+- Data organization
+- Budget availability
+- Pain point severity
+
+#### Results Delivered
+- Readiness score (0-100)
+- Priority automation areas
+- Implementation timeline
+- Expected ROI by area
+
+#### CTA
+- **Primary:** Get Your Custom Automation Roadmap
+- **Link:** /get-started
+
+---
+
+### 5.8 Efficiency Quiz
+**File:** `src/pages/tools/EfficiencyQuiz.tsx`
+
+#### Page Title
+Efficiency Assessment Quiz for CPAs
+
+#### H1: How Efficient Is Your Firm?
+
+#### Description
+Identify inefficiencies in your practice and discover opportunities to save time and increase profitability.
+
+#### Assessment Focus
+- Time tracking & billing
+- Client onboarding
+- Document management
+- Communication workflows
+- Reporting processes
+- Administrative tasks
+
+#### Quiz Outputs
+- Efficiency score
+- Time waste analysis
+- Process improvement priorities
+- Cost of inefficiency calculation
+
+#### CTA
+- **Primary:** Get Your Efficiency Improvement Plan
+- **Link:** /get-started
+
+---
+
+### 5.9 Modern Firm Quiz
+**File:** `src/pages/tools/ModernFirmQuiz.tsx`
+
+#### Page Title
+Modern Firm Assessment Quiz
+
+#### H1: How Modern Is Your Accounting Firm?
+
+#### Description
+Compare your firm to industry best practices and discover where you stand on the journey to becoming a modern, technology-enabled practice.
+
+#### Quiz Dimensions
+- Technology adoption
+- Cloud-based operations
+- Client experience
+- Remote work capabilities
+- Automation level
+- Digital marketing maturity
+
+#### Scoring & Feedback
+- Modernization score (1-10)
+- Category breakdowns
+- Peer benchmarking
+- Modernization roadmap
+
+#### CTA
+- **Primary:** Modernize Your Firm
+- **Link:** /get-started
+
+---
+
+### 5.10 SEO Audit Tool
+**File:** `src/pages/tools/SEOAudit.tsx`
+
+#### Page Title
+SEO Audit Tool for Accounting Firms
+
+#### H1: Free SEO Audit for Your Accounting Website
+
+#### Description
+Get a comprehensive analysis of your website's search engine optimization. Discover technical issues, content gaps, and ranking opportunities.
+
+#### Audit Components
+- Technical SEO check
+- On-page optimization
+- Content analysis
+- Backlink profile
+- Local SEO factors
+- Mobile responsiveness
+
+#### Report Includes
+- SEO health score
+- Issue prioritization
+- Fix recommendations
+- Opportunity analysis
+- Competitor comparison
+
+#### CTA
+- **Primary:** Get Your Full SEO Strategy
+- **Link:** /get-started
+
+---
+
+### 5.11 Page Grader
+**File:** `src/pages/tools/PageGrader.tsx`
+
+#### Page Title
+Website Page Grader for CPAs
+
+#### H1: Grade Your Website Pages
+
+#### Description
+Analyze individual pages on your website for effectiveness. Get specific recommendations to improve conversion rates and user experience.
+
+#### Grading Criteria
+- Page load speed
+- Mobile optimization
+- Content quality
+- Call-to-action clarity
+- Trust signals
+- SEO optimization
+
+#### Grader Output
+- Letter grade (A-F)
+- Category scores
+- Specific issues found
+- Prioritized fixes
+- Before/after projections
+
+#### CTA
+- **Primary:** Get a Professional Website Review
+- **Link:** /get-started
+
+---
+
+### 5.12 Advanced SEO Q&A Tool
+**File:** `src/pages/tools/AdvancedSEOQA.tsx`
+
+#### Page Title
+Advanced SEO Q&A for Accounting Firms
+
+#### H1: Get Expert SEO Answers
+
+#### Description
+Ask specific SEO questions and get expert answers tailored to accounting firms. Solve your search ranking challenges with professional guidance.
+
+#### Features
+- Industry-specific SEO advice
+- Technical question support
+- Strategy recommendations
+- Implementation guidance
+- Best practice sharing
+
+#### Question Categories
+- Technical SEO
+- Local search optimization
+- Content strategy
+- Link building
+- Keyword research
+- Algorithm updates
+
+#### CTA
+- **Primary:** Get Ongoing SEO Support
+- **Link:** /get-started
+
+---
+
+### 5.13 Workflow Bottleneck Finder
+**File:** `src/pages/tools/WorkflowBottleneckFinder.tsx`
+
+#### Page Title
+Workflow Bottleneck Finder for Accounting Firms
+
+#### H1: Find Your Workflow Bottlenecks
+
+#### Description
+Identify where work gets stuck in your firm. Discover the bottlenecks that are limiting your capacity and slowing down client delivery.
+
+#### Analysis Areas
+- Client onboarding
+- Tax preparation workflow
+- Monthly close process
+- Review & approval steps
+- Communication delays
+- Technology constraints
+
+#### Tool Outputs
+- Bottleneck identification
+- Impact quantification
+- Root cause analysis
+- Solution recommendations
+- Implementation priorities
+
+#### CTA
+- **Primary:** Optimize Your Workflows
+- **Link:** /get-started
+
+---
+
+**Section 5 Summary:**
+- 13 interactive tools & calculators documented
+- Each tool includes full page content, features, and CTAs
+- All tools designed to generate qualified leads
+- Tools cover marketing, technology, efficiency, and SEO topics
+
+**Total Progress:** ~32 of 60+ pages complete
