@@ -36,22 +36,22 @@ const About = () => {
     {
       icon: <Lightbulb className="h-8 w-8 text-primary-blue" />,
       title: "Innovation",
-      description: "We continuously evolve our solutions to stay ahead of industry trends and technology."
+      description: "We evolve our solutions to keep firms ahead of industry trends."
     },
     {
       icon: <Shield className="h-8 w-8 text-primary-teal" />,
       title: "Integrity",
-      description: "We build trust through transparency, honesty, and consistent delivery on our promises."
+      description: "We build trust through transparency, honesty, and consistency."
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
       title: "Client Success",
-      description: "Your growth is our success. We're committed to delivering measurable results for your firm."
+      description: "Your growth is our success. We measure ourselves by the results we deliver for your firm."
     },
     {
       icon: <Zap className="h-8 w-8 text-primary-teal" />,
       title: "Efficiency",
-      description: "We streamline processes and eliminate complexity to help you focus on what matters most."
+      description: "We simplify processes and reduce complexity so you can focus on clients, not tech."
     }
   ];
 
@@ -112,7 +112,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="About Us | SmartFirm"
-        description="SmartFirm empowers accounting firms with marketing automation and technology solutions. Our mission is to help firms grow."
+        description="SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and technology solutions. Backed by 40+ years of experience, we deliver systems that save time, attract clients, and scale your firm."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -159,16 +159,15 @@ const About = () => {
         <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              About SmartFirm: Empowering Accounting Firms to Thrive
+              About SmartFirm: Helping Accounting Firms Grow with Confidence
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
-                Our story centers on empowering accounting firms to thrive in an increasingly competitive digital landscape. 
-                We believe every practice—from solo CPAs to large enterprises—has untapped potential for extraordinary growth through intelligent automation and strategic marketing.
+                SmartFirm was built to help accountants, CPAs, bookkeepers, and tax preparers thrive in today's competitive digital landscape. Whether you're a solo CPA or a growing firm, we believe you have untapped potential for extraordinary growth through automation and modern marketing.
               </p>
             </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our mission is to provide the AI-driven tools, expert guidance, and proven systems to make that vision a reality.
+              Our mission is simple: give firms the tools, guidance, and systems they need to win more clients, keep them longer, and free up valuable time to focus on the work that matters most.
             </p>
           </div>
         </section>
@@ -189,8 +188,7 @@ const About = () => {
                     Our Mission
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To empower accounting firms with AI-powered marketing automation and intelligent technology solutions that drive predictive growth, 
-                    optimize operational efficiency through data-driven insights, and enhance client relationships using automated personalization while maintaining the personal touch that makes each practice unique.
+                    To empower accounting firms with marketing, automation and smart technology that drives consistent firm growth. We work to improve efficiency, and strengthen client relationships in every change we make. Every action focuses on keeping the personal touch that makes your practice unique.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -204,8 +202,7 @@ const About = () => {
                     Our Vision
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To be the leading AI-driven partner for accounting firms seeking to modernize their practices, scale intelligently with predictive analytics, and build lasting value through data-driven decision making. 
-                    We envision a future where artificial intelligence amplifies human expertise, delivering actionable insights and automated efficiency.
+                    To be the trusted partner for accounting firms, CPAs, and bookkeepers who want to modernize their practices, scale sustainably, and build long-term value. We see a future where automation and AI support accountants, not replace them, helping firms work smarter and grow faster.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -221,8 +218,7 @@ const About = () => {
                 Our Core Values
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                These values guide every decision we make and every solution we deliver. 
-                They're not just words on a wall—they're the foundation of how we work.
+                These values guide how we work with every client and every solution we deliver.
               </p>
             </div>
             
@@ -274,22 +270,18 @@ const About = () => {
                 
                 <div className="lg:col-span-2 space-y-6 text-text-secondary">
                   <div>
-                    <h2 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</h2>
+                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm:</h3>
                     <p className="text-lg leading-relaxed">
-                      Hi, I'm Katie Steele, founder of SmartFirm.
+                      I'm Katie Steele, founder of SmartFirm.
                     </p>
                   </div>
                   
                   <p className="text-lg leading-relaxed">
-                    I created SmartFirm because I saw firsthand how many accounting professionals were drowning in daily tasks, struggling to keep up with marketing, and missing out on business growth—not because they weren't good at what they do, but because they didn't have the right systems in place and most aren't career marketers.
+                    I started SmartFirm because I saw how many accountants and CPAs were drowning in daily tasks, struggling to keep up with marketing, and missing out on growth. This happens because they are great at what they do, but don't have the right systems in place. Most firm owners aren't career marketers, or IT people, and they shouldn't have to be.
                   </p>
                   
                   <p className="text-lg leading-relaxed">
-                    Before SmartFirm, I spent over 20 years leading business transformations across industries and countries helping companies streamline operations, implement smarter systems, and scale with confidence. From turning around struggling hospitality brands to guiding private equity investments and implementing Microsoft Dynamics 365 at enterprise scale, I've built a career helping businesses unlock their full potential.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Now I bring all of that to the work I do with accounting firms.
+                    Before SmartFirm, I spent 20+ years helping businesses transform. From turning around struggling hospitality brands, to guiding private equity investments, to implementing Microsoft Dynamics 365 at enterprise scale, I've built my career on helping companies unlock growth through smarter systems. Now, I bring that same expertise to accounting firms.
                   </p>
                 </div>
               </div>
@@ -297,12 +289,12 @@ const About = () => {
               <div className="space-y-8">
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works</CardTitle>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works:</CardTitle>
                     <CardDescription className="text-lg text-text-secondary space-y-4">
-                      <p>I don't just understand marketing — I understand business. I've helped companies:</p>
+                      <p>I don't just understand marketing, I understand business. Over the years, I've helped companies:</p>
                       <ul className="space-y-2 ml-6 list-disc">
-                        <li>Double revenue in less than a year</li>
-                        <li>Reduce manual workload with smart automation</li>
+                        <li>Double revenue in under 12 months</li>
+                        <li>Eliminate manual busywork with automation</li>
                         <li>Turn referrals into consistent, trackable growth</li>
                         <li>Build scalable systems that don't rely on guesswork</li>
                       </ul>
@@ -312,19 +304,19 @@ const About = () => {
 
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm</CardTitle>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm:</CardTitle>
                     <CardDescription className="text-lg text-text-secondary space-y-4">
                       <p>
-                        Most firm owners don't have the time, or desire, to become tech experts. I get it. You want more clients, more time, and more peace of mind. You don't need another software; you need a system that works for you. That's exactly what SmartFirm delivers.
+                        Most firm owners don't want to become tech experts, and you shouldn't have to. You want more clients, more time, and more peace of mind. You don't need another piece of software; you need a system that works for you.
                       </p>
                       <p>
-                        We set everything up: lead capture tools, review automation, voice and chat AI, appointment funnels, SEO boosters, and nurture campaigns so you don't have to touch the tech. Everything is designed to run in the background while you stay focused on serving your clients.
+                        That's exactly what SmartFirm delivers. We set up everything, lead capture tools, review automation, AI chat and voice response, appointment funnels, SEO boosters, and nurture campaigns, all so you don't have to touch the tech. Everything runs in the background while you focus on serving your clients.
                       </p>
                       <p>
-                        SmartFirm is the system I wish every accounting firm had years ago. It's simple, effective, and built to help you grow without burnout.
+                        SmartFirm is the system I wish every accounting firm had years ago: simple, effective, and built to help you grow without burnout.
                       </p>
                       <p className="font-semibold text-primary-blue pt-4">
-                        If you're ready to finally have your marketing handled and actually start seeing results, I'd love to show you how.
+                        If you're ready to have your marketing handled and start seeing results finally, I'd love to show you how.
                       </p>
                     </CardDescription>
                   </CardHeader>
