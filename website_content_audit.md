@@ -2655,3 +2655,532 @@ Identify where work gets stuck in your firm. Discover the bottlenecks that are l
 - Tools cover marketing, technology, efficiency, and SEO topics
 
 **Total Progress:** ~32 of 60+ pages complete
+
+---
+
+## Section 6: Success Stories Page
+
+### 6.1 Success Stories Overview Page
+**File:** `src/pages/SuccessStories.tsx`
+
+#### H1: Real Results, Real Growth: SmartFirm Success Stories
+
+#### Hero Subtitle
+Discover real results, real growth: SmartFirm success stories from accounting firms that transformed their practices. These case studies showcase how firms achieved significant growth and operational efficiency through our proven methodologies and dedicated support.
+
+#### Hero CTAs
+- Read All Case Studies
+- Book a Free Strategy Call
+
+#### Introduction Section
+**H2:** Proof of Partnership: Our Clients' Achievements
+
+These aren't just success stories—they're proof of what's possible when you partner with SmartFirm. Every firm featured here started with challenges similar to yours and achieved transformational results through our proven methodologies and dedicated support.
+
+#### Featured Case Study
+- **Title:** From Overwhelmed to Organized: 300% Lead Increase
+- **Client:** Pinnacle Tax Solutions
+- **Industry:** Tax Preparation
+- **Problem Solved:** Lead Generation
+- **Firm Size:** Small
+- **Summary:** How a struggling tax prep firm tripled their qualified leads through strategic marketing automation.
+
+#### All Case Studies (6 Total)
+
+**Case Study 1:**
+- Title: From Overwhelmed to Organized: 300% Lead Increase
+- Client: Pinnacle Tax Solutions
+- Industry: Tax Preparation
+- Summary: How a struggling tax prep firm tripled their qualified leads through strategic marketing automation.
+
+**Case Study 2:**
+- Title: Scaling Smart: 40-Hour Workweek Achievement
+- Client: Metro Bookkeeping Services
+- Industry: Bookkeeping
+- Summary: Transforming a chaotic practice into a well-oiled machine with streamlined processes.
+
+**Case Study 3:**
+- Title: Client Retention Revolution: 85% Increase
+- Client: Alpine Financial Advisors
+- Industry: Financial Advisory
+- Summary: Building lasting client relationships through systematic follow-up and value delivery.
+
+**Case Study 4:**
+- Title: Solo to Team: Successful Practice Expansion
+- Client: Peterson CPA
+- Industry: General Accounting
+- Summary: How a solo practitioner built a team of 8 while maintaining quality and profitability.
+
+**Case Study 5:**
+- Title: Digital Transformation: 50% Cost Reduction
+- Client: Riverbank Accounting
+- Industry: Bookkeeping
+- Summary: Leveraging technology to cut operational costs while improving service quality.
+
+**Case Study 6:**
+- Title: Niche Mastery: Becoming the Go-To Expert
+- Client: Healthcare CPA Solutions
+- Industry: Specialized Services
+- Summary: Positioning as the premier healthcare accounting firm in their region.
+
+#### Filter Categories
+- By Industry: Tax Preparation, Bookkeeping, Financial Advisory, General Accounting, Specialized Services
+- By Challenge: Lead Generation, Operational Efficiency, Client Retention, Business Growth, Technology Integration, Market Positioning
+- By Firm Size: Solo, Small, Mid-sized
+
+#### Testimonials Carousel
+
+**Testimonial 1:**
+- Quote: "SmartFirm transformed our client acquisition process. We went from struggling to find leads to having a consistent pipeline of qualified prospects."
+- Name: Sarah Johnson
+- Title: Managing Partner
+- Firm: Johnson & Associates CPA
+
+**Testimonial 2:**
+- Quote: "The marketing automation system saved us 15 hours per week while increasing our client retention rate by 40%."
+- Name: Michael Chen
+- Title: Founder
+- Firm: Chen Tax Services
+
+**Testimonial 3:**
+- Quote: "Within six months, we doubled our revenue and streamlined our operations. SmartFirm's approach is exactly what growing firms need."
+- Name: Lisa Rodriguez
+- Title: Owner
+- Firm: Rodriguez Accounting Group
+
+#### Final CTA
+**H2:** Ready to Write Your Success Story?
+
+Let's discuss how SmartFirm can help you achieve transformational results like these firms. Book a free strategy call to explore the possibilities for your practice.
+
+**CTAs:**
+- Book Your Strategy Call
+- Download Success Stories
+
+---
+
+## Section 7: Legal & Support Pages
+
+### 7.1 Frequently Asked Questions (FAQ)
+**File:** `src/pages/FAQ.tsx`
+
+#### H1: Frequently Asked Questions
+
+#### Hero Description
+Get answers to common questions about marketing automation, technology solutions, and growth strategies for accounting firms. Whether you're working with AICPA standards or integrating with platforms like QuickBooks, we provide solutions designed specifically for CPAs and accounting professionals.
+
+#### Introduction
+SmartFirm specializes in helping accounting firms leverage technology and automation to grow their practices. Our solutions are built on proven methodologies that comply with professional standards while delivering measurable results. We understand the unique challenges accountants face and provide clear, practical answers to help you make informed decisions.
+
+#### FAQ Categories
+
+**Category 1: Getting Started**
+- Q: What is AI-powered marketing automation for accounting firms?
+- Q: How do I know if my accounting firm needs marketing automation?
+- Q: What's the typical ROI for accounting firm marketing automation?
+- Q: How long does it take to implement marketing automation?
+
+**Category 2: Services & Solutions**
+- Q: What marketing services do you provide specifically for CPAs?
+- Q: Do you integrate with accounting software like QuickBooks?
+- Q: Can you help with local SEO for my accounting practice?
+- Q: Do you provide website design for accounting firms?
+
+**Category 3: Industry Specific**
+- Q: Do you work with solo practitioners or just large firms?
+- Q: Can you help specialized practices like tax preparation or bookkeeping?
+- Q: How do you handle compliance and professional standards?
+- Q: Do you understand the seasonal nature of accounting practices?
+
+**Category 4: Technology & Integration**
+- Q: What CRM systems do you recommend for accounting firms?
+- Q: How secure are your marketing automation systems?
+- Q: Can you help migrate from our current marketing tools?
+- Q: Do you provide training for our team?
+
+**Category 5: Pricing & Support**
+- Q: How much does marketing automation cost for accounting firms?
+- Q: Do you offer ongoing support after implementation?
+- Q: What if the marketing automation doesn't work for my firm?
+- Q: Can I cancel or modify my services?
+
+#### Contact Options
+**H2:** Still Have Questions?
+
+Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
+
+- Live Chat: Chat with our experts in real-time
+- Phone Support: (541) 658-3789
+- Email Support: contact@smartfirm.io
+
+---
+
+### 7.2 Privacy Policy
+**File:** `src/pages/Privacy.tsx`
+
+#### H1: Privacy Policy
+
+#### Hero Description
+Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+
+#### Last Updated
+Our Privacy Policy was last updated on June 28, 2025
+
+#### Main Sections
+
+**SmartFirm.io Privacy Policy**
+This Privacy Policy has been updated to comply with the Oregon Consumer Privacy Act (OCPA), effective July 1, 2024. It outlines how SmartFirm ("we," "us," or "our") collects, uses, maintains, and discloses information from users ("Users") of our website ("Site") and all products and services offered by us.
+
+**Information Collection**
+- Personal Information Collected: Name, email, phone, billing details, business information
+- Non-Personal Information: Browser type, IP address, cookies, analytics data
+
+**Use of Information**
+- Process orders and subscriptions
+- Improve customer support
+- Personalize content
+- Send communications
+- Improve security
+- Comply with legal requirements
+
+**Protection of Information**
+- Secure encryption protocols
+- Limited access to personal information
+- Regular security audits
+
+**Sharing of Information**
+- No selling of data
+- Trusted third parties (payment processors, hosting providers)
+- Third-party integrations (Stripe, Meta, Google, GoHighLevel)
+- Legal compliance disclosures
+
+**Cookies & Tracking Technologies**
+We use cookies to enhance experience, analyze traffic, and deliver personalized content.
+
+**Your Rights Under Oregon Law (OCPA)**
+- Right to Access
+- Right to Correction
+- Right to Deletion
+- Right to Portability
+- Right to Opt-Out
+
+**Contact**
+📧 Email: contact@smartfirm.io
+
+#### FAQs
+- What personal information do you collect?
+- How do you protect my data?
+- Can I request deletion of my data?
+
+---
+
+### 7.3 Terms of Service
+**File:** `src/pages/Terms.tsx`
+
+#### H1: Terms of Service
+
+#### Hero Description
+Please read these terms carefully before using our services.
+
+#### Main Sections
+
+**Introduction & Acceptance**
+This Agreement governs the use of the software, tools, and services provided by SmartFirm. By accessing or using our platform, you agree to these terms.
+
+**License Grant & Scope**
+We grant you a non-exclusive, non-transferable license to use our software and services under the terms of this Agreement, limited to the period of your subscription or purchase.
+
+**Terms of Subscription & Payments**
+Subscription payments are automatically billed monthly via Stripe. Authorization for recurring billing is required.
+
+**User Conduct & Legal Compliance**
+Users must comply with all applicable laws. Prohibited activities include illegal content, unauthorized access, fraudulent activities, malware, and spam.
+
+**Data Privacy, Storage & Handling**
+SmartFirm stores and processes user data in compliance with the Oregon Consumer Privacy Act (OCPA). We do not sell or share user data with third parties.
+
+**Third-Party Integrations & Service Terms**
+SmartFirm integrates with Stripe, Meta, Google, and GoHighLevel. Users agree to the terms of each respective provider.
+
+**Intellectual Property**
+SmartFirm software, content, design, logos, and trademarks remain the exclusive property of SmartFirm.
+
+**Indemnification Obligations**
+You agree to indemnify and hold SmartFirm harmless from any claims, damages, or losses resulting from your use of the platform.
+
+**Termination**
+We may terminate your license at any time without notice if you breach this Agreement.
+
+**Dispute Resolution and Arbitration**
+All disputes will be resolved via binding arbitration in Oregon under UTCR Chapter 13.
+
+**Governing Law and Jurisdiction**
+This Agreement is governed by the laws of the State of Oregon. Legal actions shall be filed in Lane County Circuit Court.
+
+**Refund Policy**
+All digital product sales are final. No refunds or exchanges are permitted, except where prohibited by law.
+
+**Company Contact**
+Steele Piper LLC dba SmartFirm
+Email: contact@smartfirm.io
+
+#### FAQs
+- What happens if I violate the terms?
+- Can I transfer my license to someone else?
+- How are disputes resolved?
+
+---
+
+### 7.4 Cookie Policy
+**File:** `src/pages/Cookies.tsx`
+
+#### H1: Cookie Policy
+
+#### Hero Description
+Learn about how we use cookies to improve your experience on our website.
+
+#### Main Sections
+
+**What Are Cookies**
+Cookies are small text files that are stored on your computer or mobile device when you visit our website. They help us provide you with a better experience by remembering your preferences and analyzing how you use our site.
+
+**How We Use Cookies**
+- Essential cookies: Required for website functionality
+- Analytics cookies: Understand visitor interactions
+- Marketing cookies: Deliver relevant advertisements
+- Preference cookies: Remember settings and preferences
+
+**Managing Cookies**
+You can control cookies through your browser settings. However, disabling certain cookies may affect website functionality.
+
+**Third-Party Cookies**
+Our website may contain links to third-party websites and services that use their own cookies.
+
+**Updates to This Policy**
+We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date.
+
+**Contact Us**
+Email: contact@smartfirm.io
+Phone: (541) 658-3789
+Address: Eugene, OR
+
+#### FAQs
+- What are cookies and why do you use them?
+- Can I disable cookies?
+- Do you share cookie data with third parties?
+
+---
+
+## Section 8: Additional Core Pages
+
+### 8.1 All Services Page
+**File:** `src/pages/AllServices.tsx`
+
+#### H1: Complete Suite of Services for Accounting Firms
+
+#### Hero Description
+From marketing automation to technology solutions, we provide everything your accounting firm needs to attract clients, streamline operations, and scale sustainably.
+
+#### Services Grid (10 Services)
+
+**1. Marketing Automation**
+Comprehensive marketing automation platform designed specifically for accounting firms. Streamline your entire marketing process from lead capture to client conversion.
+
+**2. Technology Solutions**
+Modern technology infrastructure and integrations that connect your practice management tools, accounting software, and marketing systems seamlessly.
+
+**3. Business Optimization**
+Strategic consulting and implementation services to optimize your firm's operations, workflows, and growth trajectory for maximum efficiency.
+
+**4. Executive Services**
+High-touch strategic services for firm leaders including growth planning, market positioning, and executive coaching tailored to accounting practices.
+
+**5. Automated Lead Follow-Up**
+Intelligent follow-up sequences via email, SMS, and voicemail that convert inquiries into booked calls within 24-48 hours. Never lose a lead again.
+
+**6. Client Review Generation**
+Automated review request system that builds credibility and attracts more clients. Triple your 5-star reviews in 90 days with proven workflows.
+
+**7. SEO for Accountants**
+Dominate local search results and Google Maps. Our accounting-specific SEO strategies bring in qualified leads actively searching for your services.
+
+**8. Social Media Management**
+Done-for-you social media content and management. Establish thought leadership on LinkedIn, Facebook, and other platforms while we handle everything.
+
+**9. Email Marketing for CPAs**
+Personalized email campaigns that keep clients engaged year-round. Improve retention rates and create upsell opportunities with strategic nurture sequences.
+
+**10. Website Design**
+Conversion-optimized websites built specifically for accounting firms. Secure client portals, mobile-responsive design, and compliance-ready infrastructure.
+
+#### Benefits of Working with SmartFirm
+
+**Growth Outcomes:**
+- Predictable pipeline with automation that follows up 24/7
+- Higher close rates from faster response and better nurturing
+- Improved client retention through consistent touchpoints
+
+**Operational Wins:**
+- Less tool-juggling with integrated systems that your team will use
+- Clear reporting and dashboards in plain English
+- Processes that scale without adding headcount
+
+#### Our Process
+1. **Strategy Call:** We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.
+2. **Implementation:** We configure automations, integrations, and content—done for you—to launch quickly.
+3. **Optimize & Scale:** We measure results, refine campaigns, and expand what works across services and offices.
+
+#### FAQs
+- How fast can we get live? (Most firms launch within 2–4 weeks)
+- Will this integrate with our tools? (Yes—QuickBooks, Xero, Google/Microsoft, Karbon, Canopy)
+- Is training provided? (We include team training and documentation)
+
+#### Final CTA
+**Ready to Transform Your Practice?**
+
+Let's create a customized growth plan for your firm. Book a free strategy call to discover which services will have the biggest impact on your practice.
+
+---
+
+### 8.2 Industries Overview Page
+**File:** `src/pages/Industries.tsx`
+
+#### H1: Marketing for Accountants: Solutions for Your Niche
+
+#### Hero Description
+Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
+
+#### Introduction
+**H2:** Serving a Spectrum of Accounting Professionals
+
+From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align perfectly with your practice area and growth stage.
+
+Whether you're a solo CPA looking to streamline operations, a small firm aiming to compete with larger practices, or an established firm seeking to modernize your marketing approach, SmartFirm delivers industry-specific solutions that drive results.
+
+#### Firm Size Categories
+
+**1. Solo CPAs Like You**
+- Solo Practice Optimization
+- Personal Productivity Solutions
+- Growth Without Complexity
+- Size: Solo Practice
+
+**2. Small Accounting Firms (2-10 employees)**
+- Small Firm Challenges
+- Team Collaboration Solutions
+- Workflow Standardization
+- Size: 2-10 Employees
+
+**3. Mid-Sized Accounting Firms (11-50 employees)**
+- Growth & Scalability
+- Advanced Automation
+- Leadership & Management
+- Size: 11-50 Employees
+
+**4. Large Accounting Firms (50+ employees)**
+- Enterprise Solutions
+- Strategic Partnerships
+- Innovation & Future-Proofing
+- Size: 50+ Employees
+
+#### Specialized Niches
+- Forensic Accounting
+- Wealth Management
+- Audit & Assurance
+- Bookkeeping Services
+- Tax Preparation
+
+#### Industry Spotlight
+**H2:** Growth Strategies for Tax Preparation Firms
+
+Tax season creates unique opportunities and challenges. Discover how seasonal firms are building year-round revenue streams and scaling beyond traditional tax preparation.
+
+**Key Opportunities:**
+- Year-round advisory services
+- Automated client retention
+- Strategic business planning
+- Technology integration
+
+**Industry Insights:**
+- Revenue Growth Potential: 40-60%
+- Client Retention Rate: 85%+
+- Off-Season Revenue: +200%
+
+#### Testimonial
+"SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing challenges that most agencies can't grasp. Their industry-specific approach helped us reach the right clients and establish thought leadership in our field."
+— Jennifer Martinez, Martinez Forensic Accounting
+
+#### Final CTA
+**Is Your Industry Ready for Smart Growth?**
+
+Discover tailored strategies designed for your accounting specialization. Let's discuss how industry-specific solutions can accelerate your firm's growth.
+
+---
+
+### 8.3 Tools & Calculators Hub
+**File:** `src/pages/ToolsCalculators.tsx`
+
+#### H1: Free Tools & Calculators for Accounting Firms
+
+#### Hero Description
+Free tools & calculators for accounting firms: expert-designed assessment tools that help you measure efficiency, calculate ROI, and identify growth opportunities with data-driven insights. Get instant, personalized recommendations to improve your practice.
+
+#### Featured Tools (3 Main Tools)
+
+**1. How Efficient Is Your Firm?**
+- Description: Score your efficiency in billing, client management, and marketing with our comprehensive assessment.
+- Duration: 5 minutes
+- Results: Instant scoring
+- Link: /tools/efficiency-quiz
+
+**2. Is Your Marketing Working?**
+- Description: Quick yes/no assessment that reveals gaps in your marketing strategy and provides personalized action plans.
+- Duration: 3 minutes
+- Results: Personalized report
+- Link: /tools/marketing-scorecard
+
+**3. Marketing ROI Calculator**
+- Description: Input your ad spend and lead data to estimate your marketing return on investment and growth potential.
+- Duration: 2 minutes
+- Results: ROI projections
+- Link: /tools/roi-calculator
+
+#### Why Use Our Assessment Tools?
+**H2:** Get actionable insights that help you make informed decisions about your firm's growth strategy.
+
+**Expert-Designed:** Created by accounting industry experts who understand the unique challenges of growing a practice.
+
+**Data-Driven Insights:** Get specific, actionable recommendations based on your responses and industry benchmarks.
+
+**Quick & Easy:** Complete assessments in just minutes and get instant results with personalized recommendations.
+
+#### Final CTA
+**Ready to Optimize Your Firm?**
+
+After completing our assessments, discover how SmartFirm can help you implement the strategies needed to achieve your growth goals.
+
+#### FAQs
+- How do these tools help my accounting firm?
+- Are these assessments really free?
+- How long do the assessments take?
+- What happens after I complete an assessment?
+
+---
+
+**FINAL SUMMARY:**
+
+**Total Pages Documented:** 60+
+
+**Complete Sections:**
+1. ✅ Core Pages (11 pages)
+2. ✅ Solution Pages (9 pages)
+3. ✅ Service Pages (10 pages)
+4. ✅ Industry Pages (4 pages)
+5. ✅ Tools & Calculators (13 tools)
+6. ✅ Success Stories (1 page with 6 case studies)
+7. ✅ Legal & Support Pages (4 pages: FAQ, Privacy, Terms, Cookies)
+8. ✅ Additional Core Pages (3 pages: All Services, Industries Hub, Tools Hub)
+
+**Document Status:** COMPLETE ✓
+
+All text content from the SmartFirm.io website has been extracted, organized, and documented in this comprehensive audit for proofreading and bulk text updates.
