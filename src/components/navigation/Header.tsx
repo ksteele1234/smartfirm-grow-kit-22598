@@ -122,10 +122,26 @@ const Header = () => {
   ];
 
   const industries = [
-    { name: "Tax Preparation", slug: "tax-preparation" },
-    { name: "Bookkeeping Services", slug: "bookkeeping-services" },
-    { name: "Business Advisory", slug: "business-advisory" },
-    { name: "Audit & Assurance", slug: "audit-assurance" }
+    { 
+      name: "Tax Preparation", 
+      slug: "tax-preparation",
+      description: "Specialized marketing and SEO for tax preparers to generate leads and grow during peak seasons and beyond."
+    },
+    { 
+      name: "Bookkeeping Services", 
+      slug: "bookkeeping-services",
+      description: "Proven digital marketing for bookkeepers that attracts clients, builds trust, and scales revenue."
+    },
+    { 
+      name: "Business Advisory", 
+      slug: "business-advisory",
+      description: "Marketing strategies for advisory firms that position you as the go-to growth partner for business clients."
+    },
+    { 
+      name: "Audit & Assurance", 
+      slug: "audit-assurance",
+      description: "SEO and visibility campaigns for CPAs and audit firms designed to build authority and long-term trust."
+    }
   ];
 
   return (
@@ -265,10 +281,7 @@ const Header = () => {
                       >
                         <div className="text-sm font-medium leading-none">{industry.name}</div>
                         <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {industry.name === "Tax Preparation" && "Proven growth playbooks tailored for tax pros."}
-                          {industry.name === "Bookkeeping Services" && "Targeted marketing that helps bookkeepers stand out and scale."}
-                          {industry.name === "Business Advisory" && "Strategies to position advisors as indispensable partners, not just vendors."}
-                          {industry.name === "Audit & Assurance" && "Professional visibility campaigns built for trust-driven services."}
+                          {industry.description}
                         </p>
                       </NavigationMenuLink>
                     ))}
