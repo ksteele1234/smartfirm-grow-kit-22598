@@ -21,53 +21,53 @@ const Header = () => {
     { 
       title: "Marketing Automation", 
       href: "/services/marketing-automation",
-      description: "All-in-one automation built to help accounting firms attract, nurture, and convert clients effortlessly."
+      description: "SmartFirm marketing automation for accountants, CPAs, and bookkeepers that attracts more leads and converts them into clients."
     },
     { 
       title: "Technology Solutions", 
       href: "/services/technology-solutions",
-      description: "Streamline your firm with the right tech stack and smarter workflows."
+      description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
     },
     { 
       title: "Business Optimization", 
       href: "/services/business-optimization",
-      description: "Unlock efficiency with process improvements and real-time executive dashboards."
+      description: "Drive firm growth with streamlined processes, KPI dashboards, and data-driven decisions."
     },
     { 
       title: "Executive Services", 
       href: "/services/executive-services",
-      description: "On-demand CIO and CFO expertise to guide growth without full-time overhead."
+      description: "Fractional CIO and CFO expertise tailored to accounting firms that want growth without full-time costs."
     },
     // Individual Services
     { 
       title: "Automated Lead Follow-up", 
       href: "/services/automated-lead-follow-up",
-      description: "Turn every inquiry into a client with timely, personalized email and text automation."
+      description: "Convert more leads with CPA-focused email and SMS automation that responds instantly."
     },
     { 
       title: "Client Review Generation", 
       href: "/services/client-review-generation",
-      description: "Build trust and win referrals with more 5-star reviews from happy clients."
+      description: "Boost your reputation with automated review requests that increase referrals and 5-star ratings."
     },
     { 
       title: "SEO for Accountants", 
       href: "/services/seo-for-accountants",
-      description: "Dominate local search and bring in new clients who are ready to hire."
+      description: "SEO for accounting firms and CPAs that improves local rankings and drives qualified leads."
     },
     { 
       title: "Social Media Management", 
       href: "/services/social-media-management",
-      description: "Position your firm as a modern leader with consistent, professional social media."
+      description: "Consistent, professional content that positions your firm as a trusted expert."
     },
     { 
       title: "Email Marketing", 
       href: "/services/email-marketing",
-      description: "Keep leads and clients engaged with targeted, value-driven campaigns."
+      description: "Targeted campaigns that nurture leads, improve client retention, and drive repeat business."
     },
     { 
       title: "Website Design", 
       href: "/services/website-design",
-      description: "Modern websites that inspire trust and convert visitors into clients."
+      description: "Modern, SEO-optimized websites for CPAs and accountants that convert visitors into clients."
     }
   ];
 
