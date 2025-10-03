@@ -9,37 +9,37 @@ const ServicesSection = () => {
     {
       icon: Zap,
       title: "Automated Lead Follow-up",
-      description: "Turn inquiries into booked calls fast. Our system sends emails, texts, and voicemails for you. Works with QuickBooks, Xero, Karbon, and Canopy."
+      description: "Convert inquiries into clients with CPA-focused email & SMS automation."
     },
     {
       icon: Star,
       title: "Client Review Generation",
-      description: "Get more 5-star reviews. Our automated requests help firms triple their reviews in 90 days. Build trust and keep clients longer."
+      description: "Build trust and referrals with more 5-star reviews."
     },
     {
       icon: Search,
       title: "SEO for Accounting Firms", 
-      description: "Show up when clients search. Rank higher on Google Maps and local search. Get more qualified leads ready to hire you."
+      description: "Dominate local search and attract high-quality clients."
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
-      description: "Stay in touch with personalized email campaigns. Keep clients coming back. Boost renewals and sell more services."
+      description: "Keep leads and clients engaged with personalized campaigns."
     },
     {
       icon: Users,
       title: "Social Media Management",
-      description: "Build your brand on LinkedIn and Facebook. We create and post content for you. Become the expert your clients trust."
+      description: "Professional content that positions your firm as a trusted authority."
     },
     {
       icon: Globe,
       title: "Website Optimization",
-      description: "Turn website visitors into clients. Get a fast, mobile-friendly site with secure client portals. Built for accounting firms."
+      description: "Modern, SEO-friendly websites for accountants that convert."
     },
     {
       icon: Phone,
       title: "Marketing Automation",
-      description: "Put your marketing on autopilot. Nurture leads and engage clients automatically. Grow your practice while you focus on accounting."
+      description: "Save time and scale faster with automation tailored for accountants."
     }
   ];
 
@@ -52,11 +52,11 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Complete Marketing Solutions for
-            <span className="text-teal block">Accounting Firms & CPAs</span>
+            Complete Marketing Solutions for 
+            <span className="text-teal block">Accountants, CPAs, and Bookkeepers</span>
           </h2>
           <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
-            Grow your practice with marketing automation designed specifically for accountants. From lead generation for accounting firms to client retention strategies, SmartFirm delivers a done-for-you system that consistently wins new clients, keeps them engaged, and frees up your time.
+            SmartFirm delivers marketing automation, SEO, and client growth strategies built specifically for accounting firms.
           </p>
         </div>
 
@@ -114,22 +114,19 @@ const ServicesSection = () => {
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to Transform Your Marketing?
             </h3>
-            <p className="text-text-secondary mb-8 max-w-2xl mx-auto">
-              Let's map out a growth plan built for your firm. With SmartFirm's done-for-you marketing automation, you'll get predictable growth, stronger client retention, and systems that scale with your firm.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
                 <a href="/get-started">
                   <Phone className="mr-2 h-5 w-5" />
-                  Book Your Free Strategy Call
+                  Book My Free Growth Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
-                <Link to="/services/all">
+                <a href="#how-it-works">
                   <Eye className="mr-2 h-5 w-5" />
-                  Explore All Services
-                </Link>
+                  Show Me How It Works
+                </a>
               </Button>
             </div>
           </div>

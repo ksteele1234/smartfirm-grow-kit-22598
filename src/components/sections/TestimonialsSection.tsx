@@ -10,27 +10,27 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Michael Chen",
-      firm: "TaxPro Services",
+      firm: "Business Leader",
       image: "/placeholder.svg",
-      content: "SmartFirm's automated follow-up saved us 20+ hours a week. Within three months, our client retention jumped to 95%, and we finally started collecting the 5-star reviews we deserved.",
+      content: "SmartFirm's automation saved us hours each week and helped us streamline client communication.",
       rating: 5,
-      results: "95% Client Retention"
+      results: "Hours Saved Weekly"
     },
     {
       name: "Sarah Williams",
-      firm: "CPA Consulting Group", 
+      firm: "Marketing Professional", 
       image: "/placeholder.svg",
-      content: "The ROI has been incredible. We're getting qualified leads consistently, and the automated systems run everything in the background while we focus on client work.",
+      content: "The team brought clarity to our marketing and helped us attract consistent leads.",
       rating: 5,
-      results: "3x Lead Generation"
+      results: "Consistent Lead Flow"
     },
     {
       name: "David Rodriguez",
-      firm: "Accounting Plus LLC",
+      firm: "Business Owner",
       image: "/placeholder.svg", 
-      content: "Their SEO work got us ranking #1 for 'CPA near me' in our area. We went from 2-3 new clients per month to 15+ qualified inquiries. Game changer for our practice.",
+      content: "We've seen measurable improvements in client retention with their systems.",
       rating: 5,
-      results: "500% Inquiry Increase"
+      results: "Improved Retention"
     }
   ];
 
@@ -58,12 +58,9 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Trusted by Growing
-            <span className="text-teal block">Accounting Firms</span>
+            Trusted by Business Leaders Across Industries — 
+            <span className="text-teal block">Now Serving Accounting Firms</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it—here's what firm owners are saying:
-          </p>
         </div>
 
         <GeometricDivider variant="dots" />

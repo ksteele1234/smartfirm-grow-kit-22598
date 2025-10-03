@@ -43,30 +43,12 @@ const HeroSection = () => {
               {/* Headline */}
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight">
-                  Predictable Growth for{" "}
-                  <span className="text-teal block">
-                    <AnimatePresence mode="wait">
-                      <motion.span key={currentIndex} initial={{
-                      opacity: 0,
-                      y: 20
-                    }} animate={{
-                      opacity: 1,
-                      y: 0
-                    }} exit={{
-                      opacity: 0,
-                      y: -20
-                    }} transition={{
-                      duration: 0.5
-                    }} className="inline-block">
-                        {rotatingWords[currentIndex]}
-                      </motion.span>
-                    </AnimatePresence>
-                  </span>
-                  <span className="block">Without the Marketing Headaches</span>
+                  Predictable Growth for Accounting Firms{" "}
+                  <span className="block">Without Wasting Time on Marketing</span>
                 </h1>
                 
                 {/* Subheadline */}
-                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">We help you grow your firm with automated marketing. Get more clients. Keep them longer. Save time.</p>
+                <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation built for your profession. Generate more leads, retain clients longer, and free up time to focus on what matters.</p>
               </div>
 
               {/* Trust Indicators */}
@@ -83,15 +65,15 @@ const HeroSection = () => {
             }}>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-teal rounded-full"></div>
-                  <span className="text-sm font-medium">500+ Firms Served</span>
+                  <span className="text-sm font-medium">40+ Years of Combined Business & Marketing Experience</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm font-medium">2.5x Average ROI</span>
+                  <span className="text-sm font-medium">50+ Companies Supported Across Industries</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-teal rounded-full"></div>
-                  <span className="text-sm font-medium">30 Day Results</span>
+                  <span className="text-sm font-medium">Your Firm Running in Under 30 Days</span>
                 </div>
               </motion.div>
 
@@ -117,7 +99,7 @@ const HeroSection = () => {
                 <Button variant="outline" size="lg" className="group" asChild>
                   <a href="#how-it-works">
                     <Play className="mr-2 h-5 w-5" />
-                    See How It Works
+                    Show Me the System
                   </a>
                 </Button>
               </motion.div>
@@ -133,7 +115,7 @@ const HeroSection = () => {
               ease: "easeInOut"
             }}>
                 <p className="text-sm text-muted-foreground mb-4 font-medium">
-                  Trusted by leading accounting firms nationwide
+                  Backed by Experience, Trusted by Firms Across Industries
                 </p>
                 <div className="flex items-center space-x-8 opacity-60">
                   <div className="text-muted-foreground font-semibold text-lg">CPA Firm A</div>

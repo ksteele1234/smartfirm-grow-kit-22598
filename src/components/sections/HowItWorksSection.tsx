@@ -8,19 +8,19 @@ const HowItWorksSection = () => {
       icon: Phone,
       number: "01",
       title: "Book a Call",
-      description: "Book a free 30-minute call. We'll find your best growth opportunities and show where you're losing leads."
+      description: "Tell us about your firm's growth goals."
     },
     {
       icon: FileText,
       number: "02", 
-      title: "Get a Plan",
-      description: "Get a custom plan with clear timelines and ROI projections. Works with QuickBooks, Xero, Karbon, and Canopy."
+      title: "Get a Custom Plan",
+      description: "We'll map out a tailored strategy for accountants, CPAs, or bookkeepers."
     },
     {
       icon: Rocket,
       number: "03",
       title: "Launch & Grow", 
-      description: "We do everything for you. Get new inquiries within 30 days. See better retention by 90 days."
+      description: "Implement automation, SEO, and marketing systems that drive predictable growth."
     }
   ];
 
@@ -31,12 +31,9 @@ const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Your Path to 
-            <span className="text-teal block">Effortless Growth</span>
+            Your Path to Growth with 
+            <span className="text-teal block">Marketing Automation for Accountants</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Our simple 3-step process makes marketing easy. Focus on your clients while we handle the rest.
-          </p>
         </div>
         
         <GeometricDivider variant="zigzag" />
@@ -91,21 +88,18 @@ const HowItWorksSection = () => {
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to Get Started?
             </h3>
-            <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
-              Join hundreds of accounting firms that have transformed their marketing with SmartFirm. Your growth journey starts with a simple conversation.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="hero" className="group" asChild>
                 <a href="/get-started">
                   <Rocket className="mr-2 h-5 w-5" />
-                  Start My Growth Plan
+                  Book My Free Growth Strategy Call
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="hero" className="group" asChild>
-                <a href="/services">
+                <a href="#how-it-works">
                   <Eye className="mr-2 h-5 w-5" />
-                  Learn More About the Process
+                  Show Me the System
                 </a>
               </Button>
             </div>
