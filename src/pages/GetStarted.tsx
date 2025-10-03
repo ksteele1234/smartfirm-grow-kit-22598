@@ -248,9 +248,12 @@ const GetStarted = () => {
                     className="w-full group" 
                     variant={option.popular ? "default" : "outline"}
                     size="lg"
+                    asChild
                   >
-                    {option.cta}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <a href={option.title === "Quick Start Program" ? "/quick-start-marketing-for-accounting-firms" : option.title === "Contact Us Directly" ? "/contact" : "/get-started"}>
+                      {option.cta}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
