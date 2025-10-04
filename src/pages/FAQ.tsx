@@ -147,7 +147,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Frequently Asked Questions | Marketing Automation for Accounting Firms"
-        description="Get answers to common questions about marketing automation, SEO, CRM integration, and growth strategies for accountants, CPAs, bookkeepers, and tax preparers."
+        description="Explore SmartFirm FAQs on SEO agency for accountants, PPC services for accounting firms, accounting firm reputation management service, and more."
         pageType="faq"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -185,7 +185,7 @@ const FAQ = () => {
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-                Get answers to common questions about marketing automation, technology solutions, and growth strategies for accounting firms. Whether you're working with AICPA standards or integrating with platforms like QuickBooks, SmartFirm provides solutions designed specifically for CPAs, bookkeepers, and tax professionals.
+                Get answers to common questions about marketing automation, SEO, PPC, and content marketing for accountants.
               </p>
             </div>
             
@@ -203,16 +203,6 @@ const FAQ = () => {
           </div>
         </section>
 
-        {/* Introduction Content */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-6 text-center">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                SmartFirm specializes in helping accounting firms use technology and automation to grow. Our solutions follow professional standards while delivering measurable results. We understand the unique challenges accountants face and provide clear, practical answers to help you make informed decisions.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* FAQ Content */}
         <section className="py-20 md:py-28 bg-muted/30">

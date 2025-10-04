@@ -39,7 +39,67 @@ const Index = () => {
       <Header />
 
       <main>
-        <HeroSection />
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-primary/10 via-background to-teal/10 py-20 md:py-28 overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+                Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+              </h1>
+              <div id="sf-keyword-intro">
+                <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
+                  SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
+                </p>
+              </div>
+              
+              {/* Trust Indicators */}
+              <div className="flex flex-wrap justify-center gap-6 mb-10 text-text-secondary">
+                <div className="flex items-center gap-2">
+                  <span className="text-teal text-xl">✓</span>
+                  <span>40+ years combined experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-teal text-xl">✓</span>
+                  <span>50+ businesses supported with scalable growth systems</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-teal text-xl">✓</span>
+                  <span>Backed by positive CPA marketing agency reviews and client results</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="hero" size="lg" className="group" asChild>
+                  <a href="/get-started">
+                    Book a Marketing Consultation for Your Accounting Firm
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" className="group" asChild>
+                  <a href="#how-it-works">
+                    <Play className="mr-2 h-5 w-5" />
+                    Show Me the System
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Preview Section */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Complete Accounting Firm Marketing Services
+              </h2>
+              <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+                From SEO and PPC services for accounting firms to review generation and website optimization, SmartFirm offers marketing packages for CPA firms that convert prospects into long-term clients.
+              </p>
+            </div>
+          </div>
+        </section>
+        
         <ServicesSection />
         <HowItWorksSection />
         <TestimonialsSection />
@@ -76,42 +136,21 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Why Choose SmartFirm Section */}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
-                Why Accounting Firms Choose SmartFirm
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                Ready to Grow Your Accounting Firm?
               </h2>
-              <div className="space-y-4 text-lg text-text-secondary mb-8">
-                <p className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl">✓</span>
-                  <span className="text-left">Built specifically for accountants, CPAs, bookkeepers, and tax preparers</span>
-                </p>
-                <p className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl">✓</span>
-                  <span className="text-left">40+ years of combined business and marketing optimization experience</span>
-                </p>
-                <p className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl">✓</span>
-                  <span className="text-left">Proven ability to help firms generate leads, retain clients, and scale efficiently</span>
-                </p>
-                <p className="flex items-start space-x-3">
-                  <span className="text-teal text-2xl">✓</span>
-                  <span className="text-left">Systems and automation up and running in under 30 days</span>
-                </p>
-              </div>
+              <p className="text-lg text-text-secondary mb-8">
+                Book a marketing consultation for your accounting firm today and see why SmartFirm is trusted as the best marketing agency for accountants.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="group" asChild>
                   <a href="/get-started">
-                    Book My Free Growth Strategy Call
+                    Book a Marketing Consultation for Your Accounting Firm
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="group" asChild>
-                  <a href="#how-it-works">
-                    <Play className="mr-2 h-5 w-5" />
-                    Show Me the System
                   </a>
                 </Button>
               </div>

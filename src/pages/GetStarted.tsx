@@ -48,7 +48,7 @@ const GetStarted = () => {
     {
       icon: Calendar,
       title: "Free Consultation",
-      description: "A no-pressure strategy session to discuss your firm's unique challenges and goals. Walk away with insights you can use immediately.",
+      description: "Discuss your firm's goals with an accountant marketing specialist and walk away with a clear roadmap — no obligation.",
       benefits: ["Personalized strategy session", "Identify growth opportunities", "Custom roadmap for your firm", "No sales pressure"],
       cta: "Book a Call",
       popular: true
@@ -56,7 +56,7 @@ const GetStarted = () => {
     {
       icon: Zap,
       title: "Quick Start Program", 
-      description: "A focused 30-day program designed to give accounting firms fast, measurable wins and a strong marketing foundation.",
+      description: "Launch fast with our 30-day package, including website refresh, GBP optimization, CRM automations, and an accounting firm lead generation service.",
       benefits: ["Immediate results", "30-day implementation", "Proven growth systems installed", "Fast ROI foundation"],
       details: [
         "Fresh, conversion-focused website (or optimization of existing site)",
@@ -71,7 +71,7 @@ const GetStarted = () => {
     {
       icon: Phone,
       title: "Contact Us Directly",
-      description: "Connect with our team by phone, email, or live chat for any inquiries.",
+      description: "Need answers about marketing packages for CPA firms or SEO strategy? Call or email us anytime.",
       benefits: ["Instant answers", "Multiple contact options", "Expert guidance", "Quick response times"],
       cta: "Contact Us"
     }
@@ -96,7 +96,7 @@ const GetStarted = () => {
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
         title="Get Started with Marketing for Accounting Firms | SmartFirm"
-        description="Get started with SmartFirm's marketing automation for accountants, CPAs, bookkeepers, and tax preparers. Choose a free consultation or our 30-day Quick Start Program."
+        description="Get started with SmartFirm's marketing packages for CPA firms. Choose a free consultation, Quick Start program, or contact us directly."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -157,7 +157,7 @@ const GetStarted = () => {
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
-              Get started with SmartFirm's marketing automation for accountants, CPAs, bookkeepers, and tax preparers to build a foundation for growth. Whether you're ready for comprehensive solutions or just exploring digital strategies, SmartFirm makes it simple to connect and begin your journey.
+              Whether you're exploring digital marketing for CPA firms or ready for automation, SmartFirm makes it simple to get started.
             </p>
           </div>
         </div>

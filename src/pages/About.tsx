@@ -113,7 +113,7 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="About SmartFirm | Marketing Automation for Accountants"
-        description="Learn how SmartFirm empowers accountants, CPAs, bookkeepers, and tax preparers with marketing automation and technology solutions. Backed by 40+ years of experience, we help firms grow with confidence."
+        description="Learn how SmartFirm empowers accountants, CPAs, bookkeepers, and tax preparers with marketing automation, SEO, and digital marketing for CPA firms."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -164,12 +164,9 @@ const About = () => {
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4">
-                SmartFirm provides marketing automation for accountants, CPAs, bookkeepers, and tax preparers to help firms thrive in today's competitive digital landscape. Whether you're a solo CPA or a growing firm, we believe you have untapped potential for extraordinary growth through automation and modern marketing.
+                SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation, SEO, and client growth systems to help firms thrive in a competitive market.
               </p>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Our mission is simple: give firms the tools, guidance, and systems they need to win more clients, keep them longer, and free up valuable time to focus on the work that matters most.
-            </p>
           </div>
         </section>
 
@@ -189,7 +186,7 @@ const About = () => {
                     Our Mission
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To empower accounting firms with marketing, automation and smart technology that drives consistent firm growth. We work to improve efficiency, and strengthen client relationships in every change we make. Every action focuses on keeping the personal touch that makes your practice unique.
+                    Our mission is to empower firms with digital marketing for CPA firms, from SEO to client retention. Firms hire SmartFirm when they want to work with an accountant marketing specialist who delivers measurable results.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -292,13 +289,7 @@ const About = () => {
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works:</CardTitle>
                     <CardDescription className="text-lg text-text-secondary space-y-4">
-                      <p>I don't just understand marketing, I understand business. Over the years, I've helped companies:</p>
-                      <ul className="space-y-2 ml-6 list-disc">
-                        <li>Double revenue in under 12 months</li>
-                        <li>Eliminate manual busywork with automation</li>
-                        <li>Turn referrals into consistent, trackable growth</li>
-                        <li>Build scalable systems that don't rely on guesswork</li>
-                      </ul>
+                      <p>I don't just understand marketing, I understand business. That's why SmartFirm has become the go-to accountant marketing specialist for firms ready to scale with proven systems instead of guesswork.</p>
                     </CardDescription>
                   </CardHeader>
                 </Card>

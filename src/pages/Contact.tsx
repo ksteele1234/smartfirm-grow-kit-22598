@@ -34,7 +34,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
         title="Contact SmartFirm | Marketing for Accounting Firms"
-        description="Contact SmartFirm today to learn how we help accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and proven systems."
+        description="Contact SmartFirm, a trusted CPA marketing agency, to learn about accounting firm marketing services pricing, consultations, and growth packages."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -99,11 +99,11 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-24">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
-            Contact SmartFirm for Marketing Automation for Accounting Firms
+            Contact SmartFirm for Marketing Automation for Accountants
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Reach out to SmartFirm for marketing automation and growth systems designed specifically for accounting firms, CPAs, bookkeepers, and tax preparers.
+              Ready to hire a marketing agency for accounting firms that understands compliance, deadlines, and growth? Contact SmartFirm today.
             </p>
           </div>
         </div>
@@ -121,10 +121,7 @@ const Contact = () => {
                   Get in Touch
                 </h2>
                 <p className="text-lg text-text-secondary mb-8">
-                  Whether you are ready to start or just have questions, we are here to help. Our solutions are built for accountants, CPAs, bookkeepers, and tax preparers.
-                </p>
-                <p className="text-text-secondary">
-                  Read <a href="/success-stories" className="text-primary hover:underline">success stories</a>, review <a href="/services" className="text-primary hover:underline">our services</a>, or explore helpful resources for accounting firms.
+                  Whether you're comparing accounting firm marketing services pricing or ready to launch a complete growth campaign, our team provides clarity, guidance, and results.
                 </p>
               </div>
 
