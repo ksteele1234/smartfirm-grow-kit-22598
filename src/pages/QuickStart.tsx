@@ -188,7 +188,7 @@ const QuickStart = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-[200px] bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
           <BackgroundPattern pattern="dots" className="opacity-20" />
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
@@ -225,7 +225,7 @@ const QuickStart = () => {
         </section>
 
         {/* Why Choose Section */}
-        <section className="py-[200px] bg-background">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
@@ -239,7 +239,7 @@ const QuickStart = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="py-[200px] bg-muted/30">
+        <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -278,7 +278,7 @@ const QuickStart = () => {
         </section>
 
         {/* Outcomes Section */}
-        <section className="py-[200px] bg-background">
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -310,7 +310,7 @@ const QuickStart = () => {
         </section>
 
         {/* Who This Is For Section */}
-        <section className="py-[200px] bg-muted/30">
+        <section className="py-16 md:py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -339,7 +339,7 @@ const QuickStart = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-[200px] bg-background">
+        <section id="pricing" className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -453,7 +453,7 @@ const QuickStart = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-[200px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto px-4 text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
