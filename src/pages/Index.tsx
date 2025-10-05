@@ -16,6 +16,7 @@ import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ArrowRight, Play } from "lucide-react";
 
 const Index = () => {
@@ -39,11 +40,11 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary/10 via-background to-teal/10 py-20 md:py-28 overflow-hidden">
+        {/* Hero Section with Aurora Effect */}
+        <AuroraBackground className="py-20 md:py-28">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Predictable Growth for Accounting Firms Without Wasting Time on Marketing
               </h1>
               <div id="sf-keyword-intro">
@@ -84,7 +85,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </AuroraBackground>
 
         {/* Services Preview Section */}
         <section className="py-16 md:py-20 bg-background">
