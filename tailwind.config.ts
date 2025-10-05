@@ -69,9 +69,6 @@ export default {
           foreground: "hsl(var(--teal-foreground))",
           light: "hsl(var(--light-teal))",
         },
-        // Professional Weight Colors
-        "dark-teal": "hsl(var(--dark-teal))",
-        "slate-navy": "hsl(var(--slate-navy))",
         "text-secondary": "hsl(var(--text-secondary))",
         "text-light": "hsl(var(--text-light))",
         "background-light": "hsl(var(--background-light))",

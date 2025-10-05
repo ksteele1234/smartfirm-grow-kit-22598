@@ -31,10 +31,6 @@ const buttonVariants = cva(
         // Destructive - red with white text
         destructive: "bg-red-600 text-white hover:bg-red-700 rounded-lg font-semibold",
         
-        // Professional dark variants
-        "dark-teal": "bg-dark-teal text-white hover:bg-dark-teal/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
-        "slate-navy": "bg-slate-navy text-white hover:bg-slate-navy/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
-        
         // Minimal variants for special cases
         ghost: "hover:bg-primary/10 hover:text-primary rounded-lg",
         link: "text-primary underline-offset-4 hover:underline font-medium",
