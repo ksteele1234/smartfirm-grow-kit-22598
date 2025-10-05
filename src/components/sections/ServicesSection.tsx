@@ -55,11 +55,10 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#0F172A] mb-6">
-            Complete Marketing Solutions for 
-            <span className="text-teal block">Accountants, CPAs, and Bookkeepers</span>
+            Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
           <p className="text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed mb-8">
-            SmartFirm delivers marketing automation, SEO, and client growth strategies built specifically for accounting firms.
+            From SEO and PPC services for accounting firms to review generation and website optimization. SmartFirm offers marketing packages for CPA firms that convert prospects into long-term clients.
           </p>
         </div>
 
