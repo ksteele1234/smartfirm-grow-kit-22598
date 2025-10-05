@@ -239,25 +239,25 @@ const QuickStart = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="py-16 md:py-20 bg-muted/30">
+        <section className="py-16 md:py-20 bg-dark-teal dark-bg">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What's Included in the 30-Day Quick Start Package
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto">
                 Six essential components to transform your accounting firm's marketing
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {packageIncludes.map((item, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-white/10 bg-white/5 backdrop-blur-sm">
                   <CardHeader className="text-center pb-4">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
-                      <item.icon className="h-8 w-8 text-primary" />
+                    <div className="mx-auto mb-4 p-4 rounded-lg bg-white/10 w-fit">
+                      <item.icon className="h-8 w-8 text-light-teal" />
                     </div>
-                    <CardTitle className="text-xl text-primary mb-4">
+                    <CardTitle className="text-xl text-white mb-4">
                       {item.title}
                     </CardTitle>
                   </CardHeader>
@@ -265,8 +265,8 @@ const QuickStart = () => {
                     <ul className="space-y-3">
                       {item.items.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-text-secondary">{feature}</span>
+                          <CheckCircle2 className="h-5 w-5 text-light-teal mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-white/80">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -339,10 +339,10 @@ const QuickStart = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-16 md:py-20 bg-background">
+        <section id="pricing" className="py-16 md:py-20 bg-slate-navy dark-bg">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Pricing
               </h2>
             </div>

@@ -15,6 +15,10 @@ All colors MUST be HSL converted from the official brand colors.
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
     --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
     
+    /* New Professional Weight Colors */
+    --dark-teal: 185 55% 16%; /* #123C41 - Deep Professional Teal */
+    --slate-navy: 222 47% 11%; /* #0F172A - Rich Navy Foundation */
+    
     /* Text Colors */
     --text-primary: 0 0% 20%; /* #333333 */
     --text-secondary: 0 0% 40%; /* #666666 */
