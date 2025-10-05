@@ -43,45 +43,100 @@ const Index = () => {
         {/* Hero Section with Aurora Effect */}
         <AuroraBackground className="py-20 md:py-28">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Predictable Growth for Accounting Firms Without Wasting Time on Marketing
-              </h1>
-              <div id="sf-keyword-intro">
-                <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
-                  SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
-                </p>
-              </div>
-              
-              {/* Trust Indicators */}
-              <div className="flex flex-wrap justify-center gap-6 mb-10 text-text-secondary">
-                <div className="flex items-center gap-2">
-                  <span className="text-teal text-xl">✓</span>
-                  <span>40+ years combined experience</span>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left: Headline, copy, CTAs */}
+              <div className="space-y-6 text-left">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-[hsl(var(--slate-navy))] max-w-2xl">
+                  Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+                </h1>
+                <div id="sf-keyword-intro">
+                  <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl">
+                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
+                  </p>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-teal text-xl">✓</span>
-                  <span>50+ businesses supported with scalable growth systems</span>
+
+                {/* Trust Indicators */}
+                <div className="flex flex-wrap gap-6 text-text-secondary">
+                  <div className="flex items-center gap-2">
+                    <span className="text-teal text-xl">✓</span>
+                    <span>40+ years combined experience</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-teal text-xl">✓</span>
+                    <span>50+ businesses supported with scalable growth systems</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-teal text-xl">✓</span>
+                    <span>Backed by positive CPA marketing agency reviews and client results</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-teal text-xl">✓</span>
-                  <span>Backed by positive CPA marketing agency reviews and client results</span>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="secondary" size="lg" className="group font-bold shadow-lg hover:shadow-xl" asChild>
+                    <a href="/get-started">
+                      Book a Marketing Consultation for Your Accounting Firm
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="group" asChild>
+                    <a href="#how-it-works">
+                      <Play className="mr-2 h-5 w-5" />
+                      Show Me the System
+                    </a>
+                  </Button>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg" className="group" asChild>
-                  <a href="/get-started">
-                    Book a Marketing Consultation for Your Accounting Firm
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="group" asChild>
-                  <a href="#how-it-works">
-                    <Play className="mr-2 h-5 w-5" />
-                    Show Me the System
-                  </a>
-                </Button>
+              {/* Right: Small visual mockup */}
+              <div className="hidden lg:block">
+                <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-border">
+                  {/* Mock header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-teal text-white font-bold grid place-items-center">A</div>
+                      <div>
+                        <div className="text-sm font-semibold text-foreground">Accounting Dashboard</div>
+                        <div className="text-xs text-muted-foreground">SmartFirm Analytics</div>
+                      </div>
+                    </div>
+                    <div className="flex space-x-1 opacity-70">
+                      <div className="w-3 h-3 rounded-full bg-red-400" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                      <div className="w-3 h-3 rounded-full bg-green-400" />
+                    </div>
+                  </div>
+
+                  {/* KPI cards */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-teal/10 to-teal/5 p-4 rounded-lg border border-teal/20">
+                      <div className="text-xs text-muted-foreground mb-1">New Leads</div>
+                      <div className="text-2xl font-bold text-teal">+147</div>
+                      <div className="text-xs text-green-600">↑ 32% this month</div>
+                    </div>
+                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 rounded-lg border border-primary/20">
+                      <div className="text-xs text-muted-foreground mb-1">Client Retention</div>
+                      <div className="text-2xl font-bold text-primary">94%</div>
+                      <div className="text-xs text-green-600">↑ 8% improvement</div>
+                    </div>
+                  </div>
+
+                  {/* Bars */}
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Jan</div>
+                      <div className="h-3 bg-gradient-to-r from-teal to-teal/60 rounded-full w-3/5" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Feb</div>
+                      <div className="h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full w-3/4" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Mar</div>
+                      <div className="h-3 bg-gradient-to-r from-teal to-primary rounded-full w-[90%]" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
