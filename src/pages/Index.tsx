@@ -79,7 +79,7 @@ const Index = () => {
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="lg" className="group" asChild>
+                  <Button variant="default" size="lg" className="group" asChild>
                     <a href="#how-it-works">
                       <Play className="mr-2 h-5 w-5" />
                       Show Me the System
