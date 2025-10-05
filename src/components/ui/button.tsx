@@ -16,6 +16,7 @@ const buttonVariants = cva(
         // High contrast teal variants  
         secondary: "bg-teal text-white hover:bg-teal/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
         "teal-bold": "bg-[#4D869C] text-white hover:bg-[#3d6b7d] shadow-lg hover:shadow-xl rounded-xl font-bold",
+        "dark-teal": "bg-[#123C41] text-white hover:bg-[#0d2a2d] shadow-lg hover:shadow-xl rounded-xl font-bold",
         
         // White with blue/teal outline variants
         outline: "border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white rounded-lg font-semibold",

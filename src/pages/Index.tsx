@@ -73,7 +73,7 @@ const Index = () => {
 
                 {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button variant="secondary" size="lg" className="group font-bold shadow-lg hover:shadow-xl" asChild>
+                  <Button variant="dark-teal" size="lg" className="group font-bold shadow-lg hover:shadow-xl" asChild>
                     <a href="/get-started">
                       Book a Marketing Consultation for Your Accounting Firm
                       <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

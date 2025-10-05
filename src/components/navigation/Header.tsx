@@ -316,7 +316,7 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="hero" size="default" asChild>
+            <Button variant="dark-teal" size="default" asChild>
               <a href="/get-started">Get Started</a>
             </Button>
           </div>
@@ -355,7 +355,7 @@ const Header = () => {
               <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact
               </a>
-              <Button variant="hero" size="default" className="w-full mt-4" asChild>
+              <Button variant="dark-teal" size="default" className="w-full mt-4" asChild>
                 <a href="/get-started">Get Started</a>
               </Button>
             </nav>
