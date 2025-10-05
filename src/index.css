@@ -14,6 +14,8 @@ All colors MUST be HSL converted from the official brand colors.
     --primary-teal: 193 35% 45%; /* #4D869C - Primary Teal */
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
     --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
+    --dark-teal: 185 55% 16%; /* #123C41 - Deep professional teal */
+    --slate-navy: 222 47% 11%; /* #0F172A - Rich navy foundation */
     
     /* Text Colors */
     --text-primary: 0 0% 20%; /* #333333 */
@@ -127,7 +129,8 @@ All colors MUST be HSL converted from the official brand colors.
   }
   
   h1 {
-    @apply text-4xl lg:text-5xl text-primary;
+    @apply text-4xl lg:text-5xl;
+    color: hsl(var(--primary-blue));
   }
   
   h2 {
