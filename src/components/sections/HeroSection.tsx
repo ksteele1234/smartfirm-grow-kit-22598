@@ -41,20 +41,20 @@ const HeroSection = () => {
             ease: "easeInOut"
           }}>
               {/* Headline */}
-              <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white leading-tight">
+              <div className="space-y-4 max-w-2xl">
+                <h1 className="text-5xl lg:text-7xl font-heading font-extrabold leading-tight" style={{ color: '#0F172A' }}>
                   Marketing Automation for Accounting Firms{" "}
                   <span className="block">That Delivers Predictable Growth</span>
                 </h1>
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-xl lg:text-2xl text-white/90 leading-relaxed font-body">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
+                  <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-body max-w-xl">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
                 </div>
               </div>
 
               {/* Trust Indicators */}
-              <motion.div className="flex items-center space-x-6 text-white/80" initial={{
+              <motion.div className="flex items-center space-x-6 text-muted-foreground" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -66,15 +66,15 @@ const HeroSection = () => {
               ease: "easeInOut"
             }}>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#7AB2B2] rounded-full"></div>
+                  <div className="w-2 h-2 bg-teal rounded-full"></div>
                   <span className="text-sm font-medium">40+ Years of Combined Business & Marketing Experience</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#4D869C] rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <span className="text-sm font-medium">50+ Companies Supported Across Industries</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#7AB2B2] rounded-full"></div>
+                  <div className="w-2 h-2 bg-teal rounded-full"></div>
                   <span className="text-sm font-medium">Your Firm Running in Under 30 Days</span>
                 </div>
               </motion.div>
@@ -116,18 +116,18 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <p className="text-sm text-white/70 mb-4 font-medium">
+                <p className="text-sm text-muted-foreground mb-4 font-medium">
                   Backed by Experience, Trusted by Firms Across Industries
                 </p>
                 <div className="flex items-center space-x-8 opacity-60">
-                  <div className="text-white/80 font-semibold text-lg">CPA Firm A</div>
-                  <div className="text-white/80 font-semibold text-lg">Accounting Plus</div>
-                  <div className="text-white/80 font-semibold text-lg">TaxPro Services</div>
+                  <div className="text-muted-foreground font-semibold text-lg">CPA Firm A</div>
+                  <div className="text-muted-foreground font-semibold text-lg">Accounting Plus</div>
+                  <div className="text-muted-foreground font-semibold text-lg">TaxPro Services</div>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Right Column - Visual Element */}
+            {/* Right Column - Dashboard Mockup */}
             <motion.div className="hidden lg:block relative" initial={{
             opacity: 0,
             x: 50
@@ -139,126 +139,127 @@ const HeroSection = () => {
             duration: 0.8,
             ease: "easeInOut"
           }}>
-              <div className="relative">
-                {/* Floating Cards */}
-                <motion.div className="absolute -top-8 -left-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-border/50 z-10" initial={{
-                opacity: 0,
-                y: -20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} transition={{
-                delay: 1.2,
-                duration: 0.6,
-                ease: "easeInOut"
-              }} whileHover={{
-                scale: 1.05,
-                transition: {
-                  duration: 0.2
-                }
-              }}>
+              <div className="relative bg-white rounded-2xl shadow-2xl p-6 border border-gray-200">
+                {/* Dashboard Header */}
+                <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-teal/20 rounded-lg flex items-center justify-center">
-                      <ArrowRight className="h-5 w-5 text-teal" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-teal flex items-center justify-center text-white font-bold">
+                      A
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-foreground">Lead Generation</div>
-                      <div className="text-xs text-muted-foreground">+240% increase</div>
+                      <div className="text-sm font-semibold text-gray-900">Accounting Dashboard</div>
+                      <div className="text-xs text-gray-500">SmartFirm Analytics</div>
                     </div>
                   </div>
-                </motion.div>
-                
-                <motion.div className="absolute -bottom-8 -right-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-border/50 z-10" initial={{
-                opacity: 0,
-                y: 20
+                  <div className="flex space-x-1">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                  </div>
+                </div>
+
+                {/* Key Metrics */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <motion.div className="bg-gradient-to-br from-teal/10 to-teal/5 p-4 rounded-lg border border-teal/20" initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  delay: 1.0,
+                  duration: 0.5
+                }}>
+                    <div className="text-xs text-gray-600 mb-1">New Leads</div>
+                    <div className="text-2xl font-bold text-teal">+147</div>
+                    <div className="text-xs text-green-600">↑ 32% this month</div>
+                  </motion.div>
+                  
+                  <motion.div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 rounded-lg border border-primary/20" initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} transition={{
+                  delay: 1.2,
+                  duration: 0.5
+                }}>
+                    <div className="text-xs text-gray-600 mb-1">Client Retention</div>
+                    <div className="text-2xl font-bold text-primary">94%</div>
+                    <div className="text-xs text-green-600">↑ 8% improvement</div>
+                  </motion.div>
+                </div>
+
+                {/* Chart Visualization */}
+                <motion.div className="space-y-3" initial={{
+                opacity: 0
               }} whileInView={{
-                opacity: 1,
-                y: 0
+                opacity: 1
               }} transition={{
                 delay: 1.4,
-                duration: 0.6,
-                ease: "easeInOut"
-              }} whileHover={{
-                scale: 1.05,
-                transition: {
-                  duration: 0.2
-                }
+                duration: 0.6
               }}>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Play className="h-5 w-5 text-primary" />
+                  <div className="text-xs font-semibold text-gray-700 mb-2">Pipeline Growth</div>
+                  <div className="space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-gray-500 w-12">Jan</div>
+                      <motion.div className="h-3 bg-gradient-to-r from-teal to-teal/60 rounded-full" initial={{
+                      width: 0
+                    }} whileInView={{
+                      width: "60%"
+                    }} transition={{
+                      delay: 1.6,
+                      duration: 0.8
+                    }} />
                     </div>
-                    <div>
-                      <div className="text-sm font-semibold text-foreground">Client Retention</div>
-                      <div className="text-xs text-muted-foreground">95% satisfaction</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-gray-500 w-12">Feb</div>
+                      <motion.div className="h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full" initial={{
+                      width: 0
+                    }} whileInView={{
+                      width: "75%"
+                    }} transition={{
+                      delay: 1.8,
+                      duration: 0.8
+                    }} />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xs text-gray-500 w-12">Mar</div>
+                      <motion.div className="h-3 bg-gradient-to-r from-teal to-primary rounded-full" initial={{
+                      width: 0
+                    }} whileInView={{
+                      width: "90%"
+                    }} transition={{
+                      delay: 2.0,
+                      duration: 0.8
+                    }} />
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Main Visual */}
-                <motion.div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 border border-white/30" initial={{
+                {/* Bottom Stats */}
+                <motion.div className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-gray-200" initial={{
                 opacity: 0,
-                scale: 0.9
+                y: 10
               }} whileInView={{
                 opacity: 1,
-                scale: 1
+                y: 0
               }} transition={{
-                delay: 1.0,
-                duration: 0.8,
-                ease: "easeInOut"
+                delay: 2.2,
+                duration: 0.5
               }}>
-                  <div className="space-y-4">
-                    <motion.div className="h-4 bg-primary/30 rounded-full w-3/4" initial={{
-                    width: 0
-                  }} whileInView={{
-                    width: "75%"
-                  }} transition={{
-                    delay: 1.6,
-                    duration: 0.8,
-                    ease: "easeInOut"
-                  }} />
-                    <motion.div className="h-4 bg-teal/30 rounded-full w-1/2" initial={{
-                    width: 0
-                  }} whileInView={{
-                    width: "50%"
-                  }} transition={{
-                    delay: 1.8,
-                    duration: 0.8,
-                    ease: "easeInOut"
-                  }} />
-                    <motion.div className="h-4 bg-secondary/30 rounded-full w-2/3" initial={{
-                    width: 0
-                  }} whileInView={{
-                    width: "66.67%"
-                  }} transition={{
-                    delay: 2.0,
-                    duration: 0.8,
-                    ease: "easeInOut"
-                  }} />
-                    <div className="grid grid-cols-2 gap-4 mt-8">
-                      <motion.div className="h-20 bg-white/40 backdrop-blur-sm rounded-lg shadow-sm border border-white/30" initial={{
-                      opacity: 0,
-                      y: 20
-                    }} whileInView={{
-                      opacity: 1,
-                      y: 0
-                    }} transition={{
-                      delay: 2.2,
-                      duration: 0.6,
-                      ease: "easeInOut"
-                    }} />
-                      <motion.div className="h-20 bg-white/40 backdrop-blur-sm rounded-lg shadow-sm border border-white/30" initial={{
-                      opacity: 0,
-                      y: 20
-                    }} whileInView={{
-                      opacity: 1,
-                      y: 0
-                    }} transition={{
-                      delay: 2.4,
-                      duration: 0.6,
-                      ease: "easeInOut"
-                    }} />
-                    </div>
+                  <div className="text-center">
+                    <div className="text-xs text-gray-500">Conversion</div>
+                    <div className="text-sm font-bold text-gray-900">23%</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-gray-500">Avg Deal</div>
+                    <div className="text-sm font-bold text-gray-900">$4.2K</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xs text-gray-500">ROI</div>
+                    <div className="text-sm font-bold text-green-600">340%</div>
                   </div>
                 </motion.div>
               </div>
