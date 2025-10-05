@@ -23,12 +23,6 @@ const ServicesSection = () => {
       link: "/services/seo-for-accountants"
     },
     {
-      icon: Mail,
-      title: "Email Marketing for CPAs",
-      description: "Keep leads and clients engaged with personalized campaigns.",
-      link: "/services/email-marketing"
-    },
-    {
       icon: Users,
       title: "Social Media Management",
       description: "Professional content that positions your firm as a trusted authority.",
@@ -88,9 +82,6 @@ const ServicesSection = () => {
             })}
           </div>
 
-          {/* Divider */}
-          <div className="relative h-px bg-gradient-to-r from-transparent via-[#7AB2B2]/30 to-transparent" />
-
           {/* Row 2 */}
           <div className="grid md:grid-cols-3 gap-6">
             {services.slice(3, 6).map((service, index) => {
@@ -98,33 +89,6 @@ const ServicesSection = () => {
               return (
                 <Link 
                   key={index + 3}
-                  to={service.link}
-                  className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
-                >
-                  <div className="mb-4">
-                    <Icon className="h-10 w-10 text-[#647FBC] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#6B7280] leading-relaxed">
-                    {service.description}
-                  </p>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Divider */}
-          <div className="relative h-px bg-gradient-to-r from-transparent via-[#7AB2B2]/30 to-transparent" />
-
-          {/* Row 3 - Remaining card(s) */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {services.slice(6).map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <Link 
-                  key={index + 6}
                   to={service.link}
                   className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
                 >

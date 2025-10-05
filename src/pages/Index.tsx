@@ -144,21 +144,12 @@ const Index = () => {
 
         {/* Services Preview Section */}
         <section className="py-16 md:py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Complete Accounting Firm Marketing Services
-              </h2>
-              <p className="text-lg text-[#1F2937] max-w-3xl mx-auto">
-                From SEO and PPC services for accounting firms to review generation and website optimization, SmartFirm offers marketing packages for CPA firms that convert prospects into long-term clients.
-              </p>
-            </div>
-          </div>
+...
         </section>
         
         <ServicesSection />
-        <HowItWorksSection />
         <TestimonialsSection />
+        <HowItWorksSection />
         <SolutionsSection />
 
         {/* Homepage FAQ Section */}
