@@ -50,13 +50,13 @@ const Index = () => {
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl">
+                  <p className="text-lg md:text-xl text-[#1F2937] leading-relaxed max-w-xl">
                     SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
                   </p>
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-wrap gap-6 text-text-secondary">
+                <div className="flex flex-wrap gap-6 text-[#1F2937]">
                   <div className="flex items-center gap-2">
                     <span className="text-teal text-xl">✓</span>
                     <span>40+ years combined experience</span>
@@ -110,12 +110,12 @@ const Index = () => {
                   {/* KPI cards */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-gradient-to-br from-teal/10 to-teal/5 p-4 rounded-lg border border-teal/20">
-                      <div className="text-xs text-muted-foreground mb-1">New Leads</div>
+                      <div className="text-xs text-[#1F2937] mb-1">New Leads</div>
                       <div className="text-2xl font-bold text-teal">+147</div>
                       <div className="text-xs text-green-600">↑ 32% this month</div>
                     </div>
                     <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 rounded-lg border border-primary/20">
-                      <div className="text-xs text-muted-foreground mb-1">Client Retention</div>
+                      <div className="text-xs text-[#1F2937] mb-1">Client Retention</div>
                       <div className="text-2xl font-bold text-primary">94%</div>
                       <div className="text-xs text-green-600">↑ 8% improvement</div>
                     </div>
@@ -124,15 +124,15 @@ const Index = () => {
                   {/* Bars */}
                   <div className="space-y-2">
                     <div className="flex items-center space-x-2">
-                      <div className="text-xs text-muted-foreground w-12">Jan</div>
+                      <div className="text-xs text-[#1F2937] w-12">Jan</div>
                       <div className="h-3 bg-gradient-to-r from-teal to-teal/60 rounded-full w-3/5" />
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="text-xs text-muted-foreground w-12">Feb</div>
+                      <div className="text-xs text-[#1F2937] w-12">Feb</div>
                       <div className="h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full w-3/4" />
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="text-xs text-muted-foreground w-12">Mar</div>
+                      <div className="text-xs text-[#1F2937] w-12">Mar</div>
                       <div className="h-3 bg-gradient-to-r from-teal to-primary rounded-full w-[90%]" />
                     </div>
                   </div>
@@ -149,7 +149,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Complete Accounting Firm Marketing Services
               </h2>
-              <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+              <p className="text-lg text-[#1F2937] max-w-3xl mx-auto">
                 From SEO and PPC services for accounting firms to review generation and website optimization, SmartFirm offers marketing packages for CPA firms that convert prospects into long-term clients.
               </p>
             </div>
@@ -169,23 +169,23 @@ const Index = () => {
               <div className="space-y-4">
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">How do I get started?</summary>
-                  <div className="text-muted-foreground mt-2">Book a free strategy call. We'll learn about your firm's goals and create a custom plan.</div>
+                  <div className="text-[#1F2937] mt-2">Book a free strategy call. We'll learn about your firm's goals and create a custom plan.</div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">What is the pricing structure?</summary>
-                  <div className="text-muted-foreground mt-2">Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter.</div>
+                  <div className="text-[#1F2937] mt-2">Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter.</div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">Do you offer guarantees?</summary>
-                  <div className="text-muted-foreground mt-2">We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals.</div>
+                  <div className="text-[#1F2937] mt-2">We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals.</div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">How fast can I launch?</summary>
-                  <div className="text-muted-foreground mt-2">We can have your marketing automation systems up and running in under 30 days.</div>
+                  <div className="text-[#1F2937] mt-2">We can have your marketing automation systems up and running in under 30 days.</div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">Do you work with firms outside of accounting?</summary>
-                  <div className="text-muted-foreground mt-2">Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers.</div>
+                  <div className="text-[#1F2937] mt-2">Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers.</div>
                 </details>
               </div>
             </div>
@@ -199,7 +199,7 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Ready to Grow Your Accounting Firm?
               </h2>
-              <p className="text-lg text-text-secondary mb-8">
+              <p className="text-lg text-[#1F2937] mb-8">
                 Book a marketing consultation for your accounting firm today and see why SmartFirm is trusted as the best marketing agency for accountants.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
