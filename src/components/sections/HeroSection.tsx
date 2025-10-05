@@ -42,19 +42,19 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight">
+                <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white leading-tight">
                   Marketing Automation for Accounting Firms{" "}
                   <span className="block">That Delivers Predictable Growth</span>
                 </h1>
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-body">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
+                  <p className="text-xl lg:text-2xl text-white/90 leading-relaxed font-body">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
                 </div>
               </div>
 
               {/* Trust Indicators */}
-              <motion.div className="flex items-center space-x-6 text-muted-foreground" initial={{
+              <motion.div className="flex items-center space-x-6 text-white/80" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -66,15 +66,15 @@ const HeroSection = () => {
               ease: "easeInOut"
             }}>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#7AB2B2] rounded-full"></div>
                   <span className="text-sm font-medium">40+ Years of Combined Business & Marketing Experience</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#4D869C] rounded-full"></div>
                   <span className="text-sm font-medium">50+ Companies Supported Across Industries</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full"></div>
+                  <div className="w-2 h-2 bg-[#7AB2B2] rounded-full"></div>
                   <span className="text-sm font-medium">Your Firm Running in Under 30 Days</span>
                 </div>
               </motion.div>
@@ -91,14 +91,14 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="hero" size="hero" className="group" asChild>
+                <Button variant="teal-bold" size="hero" className="group" asChild>
                   <a href="/get-started">
                     Book My Free Growth Strategy Call
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
                 
-                <Button variant="outline" size="lg" className="group" asChild>
+                <Button variant="white-outline-on-dark" size="lg" className="group" asChild>
                   <a href="#how-it-works">
                     <Play className="mr-2 h-5 w-5" />
                     Show Me the System
@@ -116,13 +116,13 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <p className="text-sm text-muted-foreground mb-4 font-medium">
+                <p className="text-sm text-white/70 mb-4 font-medium">
                   Backed by Experience, Trusted by Firms Across Industries
                 </p>
                 <div className="flex items-center space-x-8 opacity-60">
-                  <div className="text-muted-foreground font-semibold text-lg">CPA Firm A</div>
-                  <div className="text-muted-foreground font-semibold text-lg">Accounting Plus</div>
-                  <div className="text-muted-foreground font-semibold text-lg">TaxPro Services</div>
+                  <div className="text-white/80 font-semibold text-lg">CPA Firm A</div>
+                  <div className="text-white/80 font-semibold text-lg">Accounting Plus</div>
+                  <div className="text-white/80 font-semibold text-lg">TaxPro Services</div>
                 </div>
               </motion.div>
             </motion.div>
