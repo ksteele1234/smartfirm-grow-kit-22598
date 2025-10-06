@@ -22,7 +22,7 @@ import { ArrowRight, Play } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Marketing Automation for Accounting Firms | SmartFirm"
         description="Marketing automation for accounting firms and CPAs that delivers faster client intake, better follow-up, and measurable growth with proven strategies."
         pageType="default"
@@ -30,11 +30,29 @@ const Index = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[{ name: "Home", url: "/" }]}
         faqs={[
-          { question: "How do I get started?", answer: "Book a free strategy call. We'll learn about your firm's goals and create a custom plan." },
-          { question: "What is the pricing structure?", answer: "Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter." },
-          { question: "Do you offer guarantees?", answer: "We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals." },
-          { question: "How fast can I launch?", answer: "We can have your marketing automation systems up and running in under 30 days." },
-          { question: "Do you work with firms outside of accounting?", answer: "Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers." }
+          {
+            question: "How do I get started?",
+            answer: "Book a free strategy call. We'll learn about your firm's goals and create a custom plan.",
+          },
+          {
+            question: "What is the pricing structure?",
+            answer:
+              "Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter.",
+          },
+          {
+            question: "Do you offer guarantees?",
+            answer:
+              "We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals.",
+          },
+          {
+            question: "How fast can I launch?",
+            answer: "We can have your marketing automation systems up and running in under 30 days.",
+          },
+          {
+            question: "Do you work with firms outside of accounting?",
+            answer:
+              "Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers.",
+          },
         ]}
       />
       <Header />
@@ -46,12 +64,14 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
               <div className="space-y-6 text-left">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.55] text-[#1F2937] max-w-2xl">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.65] text-[#1F2937] max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 <div id="sf-keyword-intro">
                   <p className="text-lg md:text-xl text-[#1F2937] leading-relaxed max-w-xl">
-                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
+                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We
+                    deliver marketing automation, lead generation, and SEO services designed to get more accounting
+                    clients and keep them longer.
                   </p>
                 </div>
 
@@ -94,7 +114,9 @@ const Index = () => {
                   {/* Mock header */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-teal text-white font-bold grid place-items-center">A</div>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-teal text-white font-bold grid place-items-center">
+                        A
+                      </div>
                       <div>
                         <div className="text-sm font-semibold text-foreground">Accounting Dashboard</div>
                         <div className="text-xs text-muted-foreground">SmartFirm Analytics</div>
@@ -142,12 +164,16 @@ const Index = () => {
           </div>
           {/* Curved bottom edge */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-            <svg className="relative block w-full h-[80px] md:h-[110px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <svg
+              className="relative block w-full h-[80px] md:h-[110px]"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
               <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
             </svg>
           </div>
         </AuroraBackground>
-        
+
         <ServicesSection />
         <TestimonialsSection />
         <HowItWorksSection />
@@ -157,27 +183,46 @@ const Index = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
               <div className="space-y-4">
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">How do I get started?</summary>
-                  <div className="text-[#1F2937] mt-2">Book a free strategy call. We'll learn about your firm's goals and create a custom plan.</div>
+                  <div className="text-[#1F2937] mt-2">
+                    Book a free strategy call. We'll learn about your firm's goals and create a custom plan.
+                  </div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">What is the pricing structure?</summary>
-                  <div className="text-[#1F2937] mt-2">Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter.</div>
+                  <summary className="cursor-pointer font-medium text-foreground">
+                    What is the pricing structure?
+                  </summary>
+                  <div className="text-[#1F2937] mt-2">
+                    Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in
+                    their first quarter.
+                  </div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">Do you offer guarantees?</summary>
-                  <div className="text-[#1F2937] mt-2">We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals.</div>
+                  <div className="text-[#1F2937] mt-2">
+                    We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success
+                    metrics and provide ongoing support to make sure you meet your goals.
+                  </div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
                   <summary className="cursor-pointer font-medium text-foreground">How fast can I launch?</summary>
-                  <div className="text-[#1F2937] mt-2">We can have your marketing automation systems up and running in under 30 days.</div>
+                  <div className="text-[#1F2937] mt-2">
+                    We can have your marketing automation systems up and running in under 30 days.
+                  </div>
                 </details>
                 <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">Do you work with firms outside of accounting?</summary>
-                  <div className="text-[#1F2937] mt-2">Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers.</div>
+                  <summary className="cursor-pointer font-medium text-foreground">
+                    Do you work with firms outside of accounting?
+                  </summary>
+                  <div className="text-[#1F2937] mt-2">
+                    Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored
+                    to accounting firms, CPAs, bookkeepers, and tax preparers.
+                  </div>
                 </details>
               </div>
             </div>
@@ -188,11 +233,10 @@ const Index = () => {
         <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Ready to Grow Your Accounting Firm?
-              </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Ready to Grow Your Accounting Firm?</h2>
               <p className="text-lg text-[#1F2937] mb-8">
-                Book a marketing consultation for your accounting firm today and see why SmartFirm is trusted as the best marketing agency for accountants.
+                Book a marketing consultation for your accounting firm today and see why SmartFirm is trusted as the
+                best marketing agency for accountants.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="hero" size="lg" className="group" asChild>
