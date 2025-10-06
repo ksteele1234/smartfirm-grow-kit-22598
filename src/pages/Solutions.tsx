@@ -88,15 +88,26 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-teal/10 relative overflow-hidden">
-          <BackgroundPattern pattern="dots" className="opacity-20" />
-          <FloatingShapes variant="circles" className="opacity-30" />
-          <div className="container mx-auto px-4 text-center relative">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
+        <section className="relative py-20 md:py-28 bg-[#4D869C] overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <div
+              className="absolute -inset-[10px] pointer-events-none animate-aurora"
+              style={{
+                backgroundImage:
+                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
+                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+                animation: 'aurora 240s linear infinite',
+                opacity: 0.49,
+              }}
+            />
+          </div>
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
               Marketing Automation Solutions for Accounting Firm Challenges
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 Marketing automation solutions designed specifically for accounting firms help you overcome competition, meet client expectations, and tackle technology demands. SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
               </p>
             </div>
