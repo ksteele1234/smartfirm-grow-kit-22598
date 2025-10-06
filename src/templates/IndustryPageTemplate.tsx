@@ -79,17 +79,23 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-accent/20 to-primary/10">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+      <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-to-br from-[#91ADC8] via-[#7AB2B2] to-[#4D869C] overflow-hidden">
+        {/* Curved bottom edge */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          </svg>
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md">
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" className="group">
+          <Button size="lg" variant="secondary" className="group bg-white text-[#4D869C] hover:bg-white/90">
             Get Industry-Specific Solutions
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>

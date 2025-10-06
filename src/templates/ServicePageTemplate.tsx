@@ -83,32 +83,36 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
-        <FloatingShapes variant="circles" />
-        <BackgroundPattern pattern="dots" />
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#647FBC] via-[#4D869C] to-[#7AB2B2] overflow-hidden">
+        {/* Curved bottom edge */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
                 {data.heroTitle}
               </h1>
               <div id="sf-keyword-intro">
-                <p className="text-xl text-muted-foreground mb-6">
+                <p className="text-xl text-white/95 mb-6 drop-shadow-md">
                   {data.heroSubtitle}
                 </p>
               </div>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-white/90 mb-8 drop-shadow-md">
                 {data.heroDescription}
               </p>
-              <p className="text-muted-foreground mb-8">
-                Discover <a href="/solutions" data-sf="internal-add" className="text-primary hover:underline">our solutions</a>, read <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">client success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA resources</a>.
+              <p className="text-white/85 mb-8 drop-shadow-md">
+                Discover <a href="/solutions" data-sf="internal-add" className="text-white underline hover:text-white/80">our solutions</a>, read <a href="/case-studies" data-sf="internal-add" className="text-white underline hover:text-white/80">client success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-white/80">AICPA resources</a>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group">
+                <Button size="lg" variant="secondary" className="group bg-white text-[#647FBC] hover:bg-white/90">
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
                   Learn More
                 </Button>
               </div>
@@ -118,7 +122,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 <img 
                   src={data.heroImage} 
                   alt={data.heroTitle}
-                  className="rounded-lg shadow-lg"
+                  className="rounded-lg shadow-xl"
                 />
               </div>
             )}

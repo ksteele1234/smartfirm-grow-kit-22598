@@ -81,19 +81,23 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
-        <FloatingShapes variant="squares" />
-        <BackgroundPattern pattern="dots" className="opacity-30" />
-        <div className="max-w-7xl mx-auto text-center relative">
-          <h1 className="text-4xl lg:text-5xl font-bold text-primary mb-6">
+      <section className="relative py-24 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4D869C] via-[#7AB2B2] to-[#91ADC8] overflow-hidden">
+        {/* Curved bottom edge */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md">
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="hero" className="group bg-gradient-to-r from-primary to-teal hover:from-primary/90 hover:to-teal/90 text-white" asChild>
+          <Button size="lg" variant="secondary" className="group bg-white text-[#4D869C] hover:bg-white/90" asChild>
             <a href="/get-started">
               Get Your Solution
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
