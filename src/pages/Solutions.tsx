@@ -88,7 +88,7 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-[#4D869C] overflow-hidden">
+        <section className="relative py-20 md:py-28 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0">
             <div
               className="absolute -inset-[10px] pointer-events-none animate-aurora"
@@ -101,6 +101,12 @@ const Solutions = () => {
                 opacity: 0.49,
               }}
             />
+          </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
