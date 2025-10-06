@@ -58,20 +58,23 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero Section with Aurora Effect */}
-        <AuroraBackground className="relative py-16 md:py-20 pb-12 overflow-hidden">
+        {/* Hero Section with Aurora Effect (curved bottom + tighter handoff) */}
+        <AuroraBackground className="relative overflow-hidden pt-16 md:pt-20 pb-0 -mb-10 md:-mb-16">
+          {/* content */}
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
-              <div className="space-y-6 text-left">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.65] text-[#1F2937] max-w-2xl">
+              <div className="space-y-7 text-left">
+                {/* Increased line spacing */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.8] text-[#1F2937] max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
+
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-[#1F2937] leading-relaxed max-w-xl">
-                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We
-                    deliver marketing automation, lead generation, and SEO services designed to get more accounting
-                    clients and keep them longer.
+                  <p className="text-lg md:text-xl text-[#1F2937] leading-loose max-w-xl">
+                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers,
+                    and tax preparers. We deliver marketing automation, lead generation, and SEO
+                    services designed to get more accounting clients and keep them longer.
                   </p>
                 </div>
 
@@ -91,8 +94,8 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4">
+                {/* CTAs — forced above any overlays */}
+                <div className="flex flex-col sm:flex-row gap-4 relative z-20">
                   <Button variant="dark-teal" size="lg" className="group font-bold shadow-lg hover:shadow-xl" asChild>
                     <a href="/get-started">
                       Book a Marketing Consultation for Your Accounting Firm
@@ -162,16 +165,19 @@ const Index = () => {
               </div>
             </div>
           </div>
-          {/* Curved bottom edge */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-            <svg
-              className="relative block w-full h-[80px] md:h-[110px]"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
-            </svg>
-          </div>
+
+          {/* Curved bottom: a white wave that masks the gradient and removes the flat colored bar */}
+          <svg
+            className="absolute bottom-0 left-0 w-full h-[90px] md:h-[140px] text-white z-10"
+            viewBox="0 0 1440 140"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              fill="currentColor"
+              d="M0,96 C240,160 480,0 720,40 C960,80 1200,160 1440,96 L1440,140 L0,140 Z"
+            />
+          </svg>
         </AuroraBackground>
 
         <ServicesSection />
