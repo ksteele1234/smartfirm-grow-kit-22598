@@ -58,10 +58,10 @@ const TestimonialsSection = () => {
       <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6">
+          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 drop-shadow-lg">
             Trusted by Accounting Firms Nationwide
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg text-white/95 max-w-2xl mx-auto drop-shadow-md">
             See what firm owners are saying about their growth with SmartFirm
           </p>
         </div>
