@@ -41,12 +41,12 @@ const Index = () => {
 
       <main>
         {/* Hero Section with Aurora Effect */}
-        <AuroraBackground className="py-20 md:py-28">
+        <AuroraBackground className="relative py-16 md:py-20 pb-12 overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
               <div className="space-y-6 text-left">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.15] text-[#1F2937] max-w-2xl">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.22] text-[#1F2937] max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 <div id="sf-keyword-intro">
@@ -140,10 +140,16 @@ const Index = () => {
               </div>
             </div>
           </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[110px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+          </div>
         </AuroraBackground>
 
         {/* Services Preview Section */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="pt-6 md:pt-8 pb-16 md:pb-20 bg-background">
 ...
         </section>
         
