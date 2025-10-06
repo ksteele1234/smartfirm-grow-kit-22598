@@ -41,7 +41,7 @@ const Index = () => {
 
       <main>
         {/* Hero Section with Aurora Effect */}
-        <AuroraBackground className="relative py-16 md:py-20 pb-12 overflow-hidden">
+        <AuroraBackground className="relative py-16 md:py-20 pb-32 md:pb-40 overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
@@ -142,7 +142,7 @@ const Index = () => {
           </div>
           {/* Curved bottom edge */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-            <svg className="relative block w-full h-[80px] md:h-[110px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <svg className="relative block w-full h-[120px] md:h-[160px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
             </svg>
           </div>
