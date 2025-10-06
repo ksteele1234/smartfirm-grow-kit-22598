@@ -14,7 +14,13 @@ const HeroSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  return <AuroraBackground className="h-[100vh]">
+  return <AuroraBackground className="h-auto relative pb-32 md:pb-40 overflow-hidden">
+      {/* Curved bottom edge */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+        <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+        </svg>
+      </div>
       <motion.div initial={{
       opacity: 0.0,
       y: 40
@@ -25,8 +31,8 @@ const HeroSection = () => {
       delay: 0.3,
       duration: 0.8,
       ease: "easeInOut"
-    }} className="relative flex flex-col gap-4 items-center justify-center px-4 text-center">
-        <div className="container relative mx-auto px-4 lg:px-6 py-20">
+    }} className="relative flex flex-col gap-4 items-center justify-center px-4 text-center z-10">
+        <div className="container relative mx-auto px-4 lg:px-6 py-16 md:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
             <motion.div className="space-y-8" initial={{
@@ -42,7 +48,7 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-5xl lg:text-7xl font-heading font-extrabold leading-tight tracking-wide" style={{ color: '#0F172A' }}>
+                <h1 className="text-5xl lg:text-7xl font-heading font-extrabold leading-[1.15] tracking-wide" style={{ color: '#0F172A' }}>
                   Marketing Automation for Accounting Firms{" "}
                   <span className="block">That Delivers Predictable Growth</span>
                 </h1>
