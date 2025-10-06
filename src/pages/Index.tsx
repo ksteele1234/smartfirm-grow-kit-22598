@@ -46,7 +46,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
               <div className="space-y-6 text-left">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.22] text-[#1F2937] max-w-2xl">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.35] text-[#1F2937] max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 <div id="sf-keyword-intro">
@@ -147,11 +147,6 @@ const Index = () => {
             </svg>
           </div>
         </AuroraBackground>
-
-        {/* Services Preview Section */}
-        <section className="pt-6 md:pt-8 pb-16 md:pb-20 bg-background">
-...
-        </section>
         
         <ServicesSection />
         <TestimonialsSection />
