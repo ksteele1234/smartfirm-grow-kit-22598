@@ -58,23 +58,23 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero Section with Aurora Effect (curved bottom + tighter handoff) */}
-        <AuroraBackground className="relative overflow-hidden pt-16 md:pt-20 pb-0 -mb-10 md:-mb-16">
-          {/* content */}
-          <div className="container mx-auto px-4 relative z-10">
+        {/* HERO — aurora, proper line spacing, visible CTAs, curved bottom */}
+        <AuroraBackground className="relative overflow-hidden pt-16 md:pt-20 pb-0">
+          {/* CONTENT */}
+          <div className="container mx-auto px-4 relative z-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left: Headline, copy, CTAs */}
-              <div className="space-y-7 text-left">
-                {/* Increased line spacing */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.8] text-[#1F2937] max-w-2xl">
+              {/* LEFT: copy + CTAs */}
+              <div className="space-y-7 text-left relative z-30">
+                {/* Force line-height + tracking to beat any global h1 styles */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold !leading-[1.3] !tracking-normal text-[#1F2937] max-w-2xl break-words">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
 
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-[#1F2937] leading-loose max-w-xl">
-                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers,
-                    and tax preparers. We deliver marketing automation, lead generation, and SEO
-                    services designed to get more accounting clients and keep them longer.
+                  <p className="text-lg md:text-xl text-[#1F2937] !leading-[1.75] max-w-xl">
+                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver
+                    marketing automation, lead generation, and SEO services designed to get more accounting clients and keep
+                    them longer.
                   </p>
                 </div>
 
@@ -94,8 +94,8 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* CTAs — forced above any overlays */}
-                <div className="flex flex-col sm:flex-row gap-4 relative z-20">
+                {/* CTAs — keep above artwork/aurora */}
+                <div className="flex flex-col sm:flex-row gap-4 relative z-30">
                   <Button variant="dark-teal" size="lg" className="group font-bold shadow-lg hover:shadow-xl" asChild>
                     <a href="/get-started">
                       Book a Marketing Consultation for Your Accounting Firm
@@ -111,8 +111,8 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Right: Small visual mockup */}
-              <div className="hidden lg:block">
+              {/* RIGHT: dashboard/mockup — keep below CTAs */}
+              <div className="hidden lg:block relative z-10 pointer-events-none">
                 <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-border">
                   {/* Mock header */}
                   <div className="flex items-center justify-between mb-6">
@@ -166,9 +166,9 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Curved bottom: a white wave that masks the gradient and removes the flat colored bar */}
+          {/* CURVED BOTTOM — covers gradient edge; tighten gap to next section */}
           <svg
-            className="absolute bottom-0 left-0 w-full h-[90px] md:h-[140px] text-white z-10"
+            className="absolute bottom-0 left-0 w-full h-[90px] md:h-[140px] text-white z-40 pointer-events-none"
             viewBox="0 0 1440 140"
             preserveAspectRatio="none"
             aria-hidden="true"
@@ -180,7 +180,10 @@ const Index = () => {
           </svg>
         </AuroraBackground>
 
-        <ServicesSection />
+        {/* Pull the next section up to reduce space under the curve */}
+        <div className="-mt-10 md:-mt-16">
+          <ServicesSection />
+        </div>
         <TestimonialsSection />
         <HowItWorksSection />
         <SolutionsSection />
