@@ -19,7 +19,7 @@ export const CurvedSeparator = ({ className, variant = "primary" }: CurvedSepara
   };
 
   return (
-    <div className={cn("relative w-full", bgColors[variant], className)}>
+    <div className={cn("relative w-full -mb-1", className)}>
       <svg
         className="w-full h-12 md:h-16"
         viewBox="0 0 1440 60"
@@ -27,7 +27,7 @@ export const CurvedSeparator = ({ className, variant = "primary" }: CurvedSepara
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M0,0 L0,20 Q720,60 1440,20 L1440,0 Z"
+          d="M0,0 L720,60 L1440,0 Z"
           fill={fillColors[variant]}
         />
       </svg>
