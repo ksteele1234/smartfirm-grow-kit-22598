@@ -130,7 +130,7 @@ All colors MUST be HSL converted from the official brand colors.
   
   h1 {
     @apply text-4xl lg:text-5xl;
-    color: hsl(var(--primary-blue));
+    color: #002E4C;
   }
   
   h2 {
