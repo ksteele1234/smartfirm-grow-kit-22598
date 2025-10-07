@@ -40,93 +40,9 @@ const Index = () => {
       <Header />
 
       <main>
-        {/* Hero Section with Aurora Effect */}
-        <AuroraBackground className="py-20 md:py-28">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Left: Headline, copy, CTAs */}
-              <div className="space-y-6 text-left">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-[#002E4C] max-w-2xl">
-                  Predictable Growth for Accounting Firms Without Wasting Time on Marketing
-                </h1>
-                <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-[#1F2937] leading-relaxed max-w-xl">
-                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
-                  </p>
-                </div>
+        {/* Hero Section - Using dedicated component */}
+        <HeroSection />
 
-                {/* Trust Indicators & CTAs */}
-                <div className="flex flex-wrap gap-4 items-center mt-8">
-                  <Button variant="hero" size="lg" className="group" asChild>
-                    <a href="/get-started">
-                      Get Your Free Growth Plan
-                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="lg" className="group" asChild>
-                    <a href="#how-it-works">
-                      <Play className="mr-2 h-5 w-5" />
-                      See How It Works
-                    </a>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right: Small visual mockup */}
-              <div className="hidden lg:block">
-                <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 border border-border">
-                  {/* Mock header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-teal text-white font-bold grid place-items-center">A</div>
-                      <div>
-                        <div className="text-sm font-semibold text-foreground">Accounting Dashboard</div>
-                        <div className="text-xs text-muted-foreground">SmartFirm Analytics</div>
-                      </div>
-                    </div>
-                    <div className="flex space-x-1 opacity-70">
-                      <div className="w-3 h-3 rounded-full bg-red-400" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                      <div className="w-3 h-3 rounded-full bg-green-400" />
-                    </div>
-                  </div>
-
-                  {/* KPI cards */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gradient-to-br from-teal/10 to-teal/5 p-4 rounded-lg border border-teal/20">
-                      <div className="text-xs text-[#1F2937] mb-1">New Leads</div>
-                      <div className="text-2xl font-bold text-teal">+147</div>
-                      <div className="text-xs text-green-600">↑ 32% this month</div>
-                    </div>
-                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 p-4 rounded-lg border border-primary/20">
-                      <div className="text-xs text-[#1F2937] mb-1">Client Retention</div>
-                      <div className="text-2xl font-bold text-primary">94%</div>
-                      <div className="text-xs text-green-600">↑ 8% improvement</div>
-                    </div>
-                  </div>
-
-                  {/* Bars */}
-                  <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-[#1F2937] w-12">Jan</div>
-                      <div className="h-3 bg-gradient-to-r from-teal to-teal/60 rounded-full w-3/5" />
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-[#1F2937] w-12">Feb</div>
-                      <div className="h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full w-3/4" />
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-[#1F2937] w-12">Mar</div>
-                      <div className="h-3 bg-gradient-to-r from-teal to-primary rounded-full w-[90%]" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </AuroraBackground>
-
-        
         <ServicesSection />
         <TestimonialsSection />
         <HowItWorksSection />

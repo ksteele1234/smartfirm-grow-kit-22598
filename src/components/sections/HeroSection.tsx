@@ -49,14 +49,15 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold leading-tight tracking-wide" style={{ color: '#002E4C' }}>
-                  Marketing Automation for Accounting Firms{" "}
-                  <span className="block">That Delivers Predictable Growth</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-primary max-w-2xl">
+                  Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-body max-w-xl">Marketing automation for accounting firms designed by SmartFirm helps accountants, CPAs, bookkeepers, and tax preparers generate more leads, retain clients longer, and free up time to focus on what matters most.</p>
+                  <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-xl">
+                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
+                  </p>
                 </div>
               </div>
 
@@ -98,17 +99,17 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="teal-bold" size="hero" className="group" asChild>
+                <Button variant="hero" size="lg" className="group" asChild>
                   <a href="/get-started">
-                    Book My Free Growth Strategy Call
+                    Get Your Free Growth Plan
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
                 
-                <Button variant="white-outline-on-dark" size="lg" className="group" asChild>
+                <Button variant="outline" size="lg" className="group" asChild>
                   <a href="#how-it-works">
                     <Play className="mr-2 h-5 w-5" />
-                    Show Me the System
+                    See How It Works
                   </a>
                 </Button>
               </motion.div>
@@ -177,7 +178,7 @@ const HeroSection = () => {
                   delay: 1.0,
                   duration: 0.5
                 }}>
-                    <div className="text-xs text-gray-600 mb-1">New Leads</div>
+                    <div className="text-xs text-muted-foreground mb-1">New Leads</div>
                     <div className="text-2xl font-bold text-teal">+147</div>
                     <div className="text-xs text-green-600">↑ 32% this month</div>
                   </motion.div>
@@ -192,7 +193,7 @@ const HeroSection = () => {
                   delay: 1.2,
                   duration: 0.5
                 }}>
-                    <div className="text-xs text-gray-600 mb-1">Client Retention</div>
+                    <div className="text-xs text-muted-foreground mb-1">Client Retention</div>
                     <div className="text-2xl font-bold text-primary">94%</div>
                     <div className="text-xs text-green-600">↑ 8% improvement</div>
                   </motion.div>
@@ -209,8 +210,8 @@ const HeroSection = () => {
               }}>
                   <div className="text-xs font-semibold text-gray-700 mb-2">Pipeline Growth</div>
                   <div className="space-y-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-gray-500 w-12">Jan</div>
+                     <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Jan</div>
                       <motion.div className="h-3 bg-gradient-to-r from-teal to-teal/60 rounded-full" initial={{
                       width: 0
                     }} whileInView={{
@@ -220,8 +221,8 @@ const HeroSection = () => {
                       duration: 0.8
                     }} />
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-gray-500 w-12">Feb</div>
+                     <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Feb</div>
                       <motion.div className="h-3 bg-gradient-to-r from-primary to-primary/60 rounded-full" initial={{
                       width: 0
                     }} whileInView={{
@@ -231,8 +232,8 @@ const HeroSection = () => {
                       duration: 0.8
                     }} />
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="text-xs text-gray-500 w-12">Mar</div>
+                     <div className="flex items-center space-x-2">
+                      <div className="text-xs text-muted-foreground w-12">Mar</div>
                       <motion.div className="h-3 bg-gradient-to-r from-teal to-primary rounded-full" initial={{
                       width: 0
                     }} whileInView={{

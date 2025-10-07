@@ -129,8 +129,8 @@ All colors MUST be HSL converted from the official brand colors.
   }
   
   h1 {
-    @apply text-4xl lg:text-5xl;
-    color: #002E4C;
+    @apply text-4xl lg:text-5xl leading-[1.8];
+    color: hsl(var(--primary));
   }
   
   h2 {
