@@ -42,7 +42,7 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-5xl lg:text-7xl font-heading font-extrabold leading-tight tracking-wide" style={{ color: '#0F172A' }}>
+                <h1 className="text-4xl lg:text-6xl font-heading font-extrabold leading-tight tracking-wide" style={{ color: '#0F172A' }}>
                   Marketing Automation for Accounting Firms{" "}
                   <span className="block">That Delivers Predictable Growth</span>
                 </h1>
