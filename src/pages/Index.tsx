@@ -46,7 +46,7 @@ const Index = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline, copy, CTAs */}
               <div className="space-y-6 text-left">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-loose text-[#002E4C] max-w-2xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.5] text-[#002E4C] max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 <div id="sf-keyword-intro">
