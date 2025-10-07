@@ -14,7 +14,7 @@ const HeroSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  return <AuroraBackground className="h-[100vh] relative">
+  return <AuroraBackground className="min-h-[85vh] relative pb-0">
       {/* Curved bottom edge */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -33,7 +33,7 @@ const HeroSection = () => {
       duration: 0.8,
       ease: "easeInOut"
     }} className="relative flex flex-col gap-4 items-center justify-center px-4 text-center">
-        <div className="container relative mx-auto px-4 lg:px-6 py-20">
+        <div className="container relative mx-auto px-4 lg:px-6 py-12 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
             <motion.div className="space-y-8" initial={{
@@ -55,14 +55,14 @@ const HeroSection = () => {
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-xl">
+                  <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-medium">
                     SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
                   </p>
                 </div>
               </div>
 
               {/* Trust Indicators */}
-              <motion.div className="flex items-center space-x-6 text-muted-foreground" initial={{
+              <motion.div className="flex flex-wrap items-start gap-4 text-foreground" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
@@ -73,17 +73,17 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full"></div>
-                  <span className="text-sm font-medium">40+ Years of Combined Business & Marketing Experience</span>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-teal rounded-full mt-1.5 flex-shrink-0"></div>
+                  <span className="text-sm font-semibold">40+ Years Combined Experience</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm font-medium">50+ Companies Supported Across Industries</span>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
+                  <span className="text-sm font-semibold">50+ Companies Supported</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full"></div>
-                  <span className="text-sm font-medium">Your Firm Running in Under 30 Days</span>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-teal rounded-full mt-1.5 flex-shrink-0"></div>
+                  <span className="text-sm font-semibold">Up in 30 Days</span>
                 </div>
               </motion.div>
 
@@ -114,25 +114,7 @@ const HeroSection = () => {
                 </Button>
               </motion.div>
 
-              {/* Social Proof */}
-              <motion.div className="pt-8" initial={{
-              opacity: 0
-            }} whileInView={{
-              opacity: 1
-            }} transition={{
-              delay: 1.1,
-              duration: 0.6,
-              ease: "easeInOut"
-            }}>
-                <p className="text-sm text-muted-foreground mb-4 font-medium">
-                  Backed by Experience, Trusted by Firms Across Industries
-                </p>
-                <div className="flex items-center space-x-8 opacity-60">
-                  <div className="text-muted-foreground font-semibold text-lg">CPA Firm A</div>
-                  <div className="text-muted-foreground font-semibold text-lg">Accounting Plus</div>
-                  <div className="text-muted-foreground font-semibold text-lg">TaxPro Services</div>
-                </div>
-              </motion.div>
+              {/* Social Proof - Removed to reduce height */}
             </motion.div>
 
             {/* Right Column - Dashboard Mockup */}
