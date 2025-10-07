@@ -1,10 +1,40 @@
+# SmartFirm.io - Robots.txt Configuration
+# Allows all search engines to crawl the entire site
+
 User-agent: *
-Disallow: /
-# Remove Disallow: / and allow crawling at go-live
-# Keep these always blocked:
-Disallow: /admin
-Disallow: /api
-Disallow: /cart
-Disallow: /search
+Allow: /
+
+# Block utility pages from indexing (these have noindex meta tags too)
+Disallow: /404
+Disallow: /500
 Disallow: /thank-you
+
+# Sitemap location
 Sitemap: https://smartfirm.io/sitemap.xml
+
+# ============================================
+# HOW TO MODIFY THIS FILE
+# ============================================
+# 
+# To block specific pages or directories:
+# Add lines like: Disallow: /page-path
+# 
+# Examples:
+# Disallow: /admin          (blocks /admin and all subdirectories)
+# Disallow: /tools/         (blocks all tools pages)
+# Disallow: /draft-page     (blocks a specific page)
+#
+# To block specific search engines:
+# User-agent: Googlebot
+# Disallow: /private-section
+#
+# To allow everything for a specific bot:
+# User-agent: Googlebot
+# Allow: /
+#
+# Common user-agents:
+# - Googlebot (Google)
+# - Bingbot (Bing)
+# - Slurp (Yahoo)
+# - DuckDuckBot (DuckDuckGo)
+# - Baiduspider (Baidu)
