@@ -8,7 +8,7 @@ const RetentionStrategies = () => {
     slug: "retention-strategies",
     content: {},
     heroTitle: "Advanced Client Retention Strategies for CPAs",
-    heroSubtitle: "Keep your best clients happy and engaged with automated touchpoints, value-added services, and satisfaction tracking systems that ensure long-term loyalty.",
+    heroSubtitle: "Advanced client retention strategies for CPAs that keep your best clients happy and engaged with automated touchpoints, value-added services, and satisfaction tracking systems that ensure long-term loyalty.",
     problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
     solutionOverview: "Our advanced retention strategies include automated client communication systems, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value and loyalty.",
     keyBenefits: [

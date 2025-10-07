@@ -9,11 +9,14 @@ All colors MUST be HSL converted from the official brand colors.
 @layer base {
   :root {
     /* Official SmartFirm Brand Colors - Exact Match to Guidelines */
-    --primary-blue: 225 43% 56%; /* #647FBC - Primary Blue */
+    --primary-blue: 221 47% 62%; /* #647FBC - Soft Blue (Primary) */
     --secondary-blue: 218 34% 67%; /* #91ADC8 - Blue Grey */
     --primary-teal: 193 35% 45%; /* #4D869C - Primary Teal */
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
     --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
+    --dark-teal: 180 19% 31%; /* #405d5d - Deep professional teal */
+    --dark-blue: 220 23% 29%; /* #334260 - Deep professional blue */
+    
     
     /* Text Colors */
     --text-primary: 0 0% 20%; /* #333333 */
@@ -127,20 +130,11 @@ All colors MUST be HSL converted from the official brand colors.
   }
   
   h1 {
-    @apply text-4xl lg:text-5xl text-primary;
+    @apply text-4xl lg:text-5xl leading-[1.8] text-foreground;
   }
   
   h2 {
-    @apply text-3xl lg:text-4xl text-teal !important;
-  }
-  
-  /* Light green on dark backgrounds for better contrast */
-  .dark-bg h2,
-  [class*="bg-gradient-to-"] h2,
-  [class*="from-primary"] h2,
-  [class*="to-teal"] h2,
-  [class*="bg-primary"] h2 {
-    @apply text-light-teal !important;
+    @apply text-3xl lg:text-4xl text-foreground;
   }
   
   h3 {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import ToolPageWrapper from "@/components/ToolPageWrapper";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -249,24 +250,22 @@ const EfficiencyQuiz = () => {
   const currentAnswer = answers[currentQ.id];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Efficiency Quiz | SmartFirm"
-        description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
-        noindex={false}
-      />
-      <Header />
-      <main className="pt-20">
-        <section className="section-padding">
-          <div className="container mx-auto max-w-2xl">
-            <div className="mb-8">
-              <Button variant="ghost" asChild className="mb-4">
-                <a href="/tools">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Tools
-                </a>
-              </Button>
-              <h1 className="text-3xl font-bold text-primary mb-4">How Efficient Is Your Firm?</h1>
+    <ToolPageWrapper
+      title="Efficiency Quiz | SmartFirm"
+      description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
+      pageTitle="How Efficient Is Your Firm?"
+      intro="How efficient is your firm? Discover where your accounting practice can improve efficiency in billing, client management, and marketing with our expert-designed assessment tool trusted by accounting professionals nationwide."
+    >
+      <section className="section-padding">
+        <div className="container mx-auto max-w-2xl">
+          <div className="mb-8">
+            <Button variant="ghost" asChild className="mb-4">
+              <a href="/tools">
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Back to Tools
+              </a>
+            </Button>
+            <h2 className="text-3xl font-bold text-primary mb-4">Answer These Questions</h2>
               <Progress value={progress} className="mb-4" />
               <p className="text-muted-foreground">
                 Question {currentQuestion + 1} of {questions.length}
@@ -311,9 +310,7 @@ const EfficiencyQuiz = () => {
             </Card>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </ToolPageWrapper>
   );
 };
 

@@ -98,10 +98,9 @@ const ROICalculator = () => {
           noindex={false}
         />
         <Header />
-        <main className="pt-20">
-          <section className="section-padding">
+        <main className="container mx-auto px-4 py-16 pt-24">
             <div className="container mx-auto max-w-4xl">
-              <div className="text-center mb-8">
+              <div className="text-center mb-12">
                 <Calculator className="h-16 w-16 text-primary mx-auto mb-4" />
                 <h1 className="text-4xl font-bold text-primary mb-4">Your Marketing ROI Analysis</h1>
                 <p className="text-lg text-muted-foreground">
@@ -109,7 +108,7 @@ const ROICalculator = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-2xl">Monthly Performance</CardTitle>
@@ -175,7 +174,7 @@ const ROICalculator = () => {
                 </Card>
               </div>
 
-              <Card className="mb-8">
+              <Card className="mb-12">
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">ROI Assessment</CardTitle>
                   <p className={`text-lg font-medium ${getROIColor(results.lifetimeROI)}`}>
@@ -235,14 +234,13 @@ const ROICalculator = () => {
                 </CardContent>
               </Card>
 
-              <div className="mt-8 text-center">
+              <div className="mt-12 text-center">
                 <Button variant="outline" onClick={() => setShowResults(false)}>
                   <Calculator className="mr-2 h-4 w-4" />
                   Recalculate with Different Numbers
                 </Button>
               </div>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
@@ -257,10 +255,9 @@ const ROICalculator = () => {
         noindex={false}
       />
       <Header />
-      <main className="pt-20">
-        <section className="section-padding">
-          <div className="container mx-auto max-w-2xl">
-            <div className="mb-8">
+      <main className="container mx-auto px-4 py-16 pt-24">
+          <div className="max-w-2xl mx-auto">
+            <div className="mb-12">
               <Button variant="ghost" asChild className="mb-4">
                 <a href="/tools">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -268,6 +265,11 @@ const ROICalculator = () => {
                 </a>
               </Button>
               <h1 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator</h1>
+              <p className="text-sm text-muted-foreground mt-2 text-center" data-sf="entities">
+                Built by SmartFirm for accounting firms. See our <a href="/services" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+                <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
+                <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
+              </p>
               <p className="text-muted-foreground">
                 Enter your current marketing metrics to calculate your return on investment and identify optimization opportunities.
               </p>
@@ -361,7 +363,7 @@ const ROICalculator = () => {
               </CardContent>
             </Card>
 
-            <Card className="mt-8 bg-accent/50">
+            <Card className="mt-12 bg-accent/50">
               <CardHeader>
                 <CardTitle className="text-lg">How to Use This Calculator</CardTitle>
               </CardHeader>
@@ -384,8 +386,7 @@ const ROICalculator = () => {
               </CardContent>
             </Card>
           </div>
-        </section>
-      </main>
+        </main>
       <Footer />
     </div>
   );

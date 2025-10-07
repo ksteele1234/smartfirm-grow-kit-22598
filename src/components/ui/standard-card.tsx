@@ -74,7 +74,7 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
 
     if (href) {
       return (
-        <a href={href} className="block">
+        <a href={href} className="block cursor-pointer">
           {CardComponent}
         </a>
       );

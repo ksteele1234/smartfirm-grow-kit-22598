@@ -156,9 +156,9 @@ const TechStackROICalculator = () => {
           noindex={false}
         />
         <Header />
-        <main className="container mx-auto px-4 py-16">
+        <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
@@ -168,7 +168,7 @@ const TechStackROICalculator = () => {
                 <CardTitle className="text-3xl text-primary">Your Tech Stack ROI Analysis</CardTitle>
                 <CardDescription>See how much you could save with automation and consolidation</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-8">
+              <CardContent className="space-y-12">
                 <div className="grid md:grid-cols-2 gap-6">
                   <Card className="bg-red-50 border-red-200">
                     <CardHeader>
@@ -278,14 +278,19 @@ const TechStackROICalculator = () => {
         noindex={false}
       />
       <Header />
-      <main className="container mx-auto px-4 py-16">
+      <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-8">
+          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
           
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Tech Stack ROI Calculator</h1>
+          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+            Built by SmartFirm for accounting firms. See our <a href="/services" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
+            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
+          </p>
           
           <Card>
             <CardHeader>

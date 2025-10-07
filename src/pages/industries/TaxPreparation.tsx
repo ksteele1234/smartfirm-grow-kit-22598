@@ -8,7 +8,7 @@ const TaxPreparation = () => {
     slug: "tax-preparation",
     content: {},
     heroTitle: "Marketing Solutions for Tax Preparation Services",
-    heroSubtitle: "Attract more clients during tax season and build year-round revenue streams with marketing strategies designed specifically for tax preparers.",
+    heroSubtitle: "Marketing solutions for tax preparation services that attract more clients during tax season and build year-round revenue streams with strategies designed specifically for tax preparers.",
     industryOverview: "Tax preparation businesses face unique seasonal challenges - intense demand during tax season followed by slower summer months. Our marketing solutions help you maximize tax season revenue while building services that generate income year-round.",
     challenges: [
       {
@@ -31,12 +31,12 @@ const TaxPreparation = () => {
       {
         title: "Seasonal Marketing Campaigns",
         description: "Maximize visibility and client acquisition during peak tax season",
-        link: "/services/seasonal-marketing"
+        link: "/services/marketing-automation"
       },
       {
         title: "Year-Round Revenue Development",
         description: "Build additional services to generate consistent monthly income",
-        link: "/services/revenue-diversification"
+        link: "/services/business-optimization"
       },
       {
         title: "Local SEO Optimization",
@@ -46,7 +46,7 @@ const TaxPreparation = () => {
       {
         title: "Referral Program Management",
         description: "Systematic referral generation from satisfied clients",
-        link: "/services/referral-programs"
+        link: "/solutions/get-more-referrals"
       }
     ],
     caseStudies: [
@@ -54,13 +54,13 @@ const TaxPreparation = () => {
         title: "150% Revenue Increase During Tax Season",
         client: "Midwest Tax Services",
         result: "Generated 400+ new clients through targeted local marketing",
-        link: "/success-stories/midwest-tax-services"
+        link: "/success-stories"
       },
       {
         title: "Year-Round Revenue Streams",
         client: "Family Tax Partners",
         result: "Built bookkeeping services generating $8K monthly off-season",
-        link: "/success-stories/family-tax-partners"
+        link: "/success-stories"
       }
     ],
     ctaTitle: "Ready to Transform Your Tax Business?",

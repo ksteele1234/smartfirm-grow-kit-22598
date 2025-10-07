@@ -4,6 +4,14 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { 
   Calendar, 
   Zap, 
@@ -40,23 +48,31 @@ const GetStarted = () => {
     {
       icon: Calendar,
       title: "Free Consultation",
-      description: "Discuss your firm's unique challenges and goals with our experts. No obligation, just insights.",
-      benefits: ["Personalized strategy session", "Identify growth opportunities", "Custom roadmap", "No sales pressure"],
+      description: "Discuss your firm's goals with an accountant marketing specialist and walk away with a clear roadmap — no obligation.",
+      benefits: ["Personalized strategy session", "Identify growth opportunities", "Custom roadmap for your firm", "No sales pressure"],
       cta: "Book a Call",
       popular: true
     },
     {
       icon: Zap,
-      title: "Quick Start Options", 
-      description: "Explore our focused programs designed for immediate impact, like our 30-Day Quick Wins Program.",
-      benefits: ["Immediate results", "30-day implementation", "Proven strategies", "Fast ROI"],
-      cta: "View Quick Starts"
+      title: "Quick Start Program", 
+      description: "Launch fast with our 30-day package, including website refresh, GBP optimization, CRM automations, and an accounting firm lead generation service.",
+      benefits: ["Immediate results", "30-day implementation", "Proven growth systems installed", "Fast ROI foundation"],
+      details: [
+        "Fresh, conversion-focused website (or optimization of existing site)",
+        "Google Business Profile setup & optimization for local visibility",
+        "CRM setup with automated lead capture & follow-up sequences",
+        "Review generation system to build trust",
+        "Email nurture campaigns for client retention",
+        "Basic SEO optimization to start attracting organic leads"
+      ],
+      cta: "View Quick Start"
     },
     {
       icon: Phone,
       title: "Contact Us Directly",
-      description: "Connect with our team via phone, email, or live chat for any inquiries.",
-      benefits: ["Instant answers", "Multiple contact methods", "Expert guidance", "Quick response"],
+      description: "Need answers about marketing packages for CPA firms or SEO strategy? Call or email us anytime.",
+      benefits: ["Instant answers", "Multiple contact options", "Expert guidance", "Quick response times"],
       cta: "Contact Us"
     }
   ];
@@ -65,7 +81,7 @@ const GetStarted = () => {
     {
       icon: BookOpen,
       title: "Client Support & Resources",
-      description: "Access our knowledge base, video tutorials, and client portal for ongoing support.",
+      description: "Already a client? Access our knowledge base, tutorials, and client portal for ongoing support.",
       cta: "Visit Support"
     },
     {
@@ -77,29 +93,80 @@ const GetStarted = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Get Started | SmartFirm"
-        description="Book a strategy call, request a demo, or explore partnership opportunities to grow your accounting firm with SmartFirm."
+    <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
+      <SEO
+        title="Get Started with Marketing for Accounting Firms | SmartFirm"
+        description="Get started with SmartFirm's marketing packages for CPA firms. Choose a free consultation, Quick Start program, or contact us directly."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Get Started", url: "/get-started" }
+        ]}
+        faqs={[
+          {
+            question: "How do I get started?",
+            answer: "Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
+          },
+          {
+            question: "What is the pricing structure?",
+            answer: "Pricing is customized by firm size, services, and objectives. We offer flexible packages and payment options. You'll receive transparent pricing during your consultation."
+          },
+          {
+            question: "Do you offer guarantees?",
+            answer: "We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
+          }
+        ]}
       />
       <Header />
       
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Get Started</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Get Started", "item": window.location.href }
+          ]
+        })}
+      </script>
+      
+      <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal pt-32 pb-20">
+      <section className="bg-gradient-to-br from-primary to-teal py-20 pb-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
             Get Started with Marketing for Your Accounting Firm
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
-            Whether you're ready for comprehensive CPA marketing automation or just exploring digital marketing strategies for accounting practices, find the best way to connect with SmartFirm and begin your growth journey.
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
+              Whether you're exploring digital marketing for CPA firms or ready for automation, SmartFirm makes it simple to get started.
+            </p>
+          </div>
+        </div>
+        <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft w-full max-w-[1400px] mx-auto">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
-                style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '500px'}}
+                style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '600px'}}
                 scrolling="no" 
                 id="KLvW5plbvzaBvLcQYv7k_1759007988370"
                 title="Book Your Free Consultation"
@@ -116,9 +183,7 @@ const GetStarted = () => {
             Ready to Take the Next Step?
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto">
-            We understand that every accounting firm is at a different stage of growth with unique needs and challenges. 
-            That's why we offer multiple pathways to get started with SmartFirm—from comprehensive consultations to 
-            quick-win programs and everything in between.
+            Every accounting firm is at a different stage of growth. That's why we offer multiple ways to get started, from free consultations to quick-win programs, all so you can move forward at your own pace.
           </p>
         </div>
       </section>
@@ -165,13 +230,30 @@ const GetStarted = () => {
                     ))}
                   </div>
                   
+                  {option.details && option.details.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <h4 className="text-sm font-semibold text-primary mb-3">Includes:</h4>
+                      <ul className="space-y-2">
+                        {option.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start space-x-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-teal mt-1.5 flex-shrink-0" />
+                            <span className="text-xs text-text-secondary">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
                   <Button 
                     className="w-full group" 
                     variant={option.popular ? "default" : "outline"}
                     size="lg"
+                    asChild
                   >
-                    {option.cta}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <a href={option.title === "Quick Start Program" ? "/quick-start-marketing-for-cpa-firms" : option.title === "Contact Us Directly" ? "/contact" : "/get-started"}>
+                      {option.cta}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -234,8 +316,8 @@ const GetStarted = () => {
                 <div className="md:col-span-2">
                   <Quote className="w-12 h-12 text-primary mb-6" />
                   <blockquote className="text-xl text-text-primary mb-6 italic">
-                    "I was hesitant about working with a consulting firm, but SmartFirm's free consultation showed me exactly what I needed to grow. 
-                    Within three months, we had streamlined our processes and increased our client base by 50%. The best decision I made for my practice."
+                    "I was hesitant about working with a consulting firm, but SmartFirm's free consultation gave me clarity on exactly what I needed to grow. 
+                    Within a few months, we streamlined our processes and started seeing consistent client growth. The best decision I made for my practice."
                   </blockquote>
                   <div className="space-y-2">
                     <h4 className="font-heading font-semibold text-primary text-lg">
@@ -256,16 +338,16 @@ const GetStarted = () => {
                   <Target className="w-16 h-16 text-primary mx-auto mb-4" />
                   <div className="space-y-4">
                     <div>
-                      <div className="text-2xl font-heading font-bold text-primary">50%</div>
-                      <div className="text-sm text-text-secondary">Client Growth</div>
+                      <div className="text-2xl font-heading font-bold text-primary">Streamlined</div>
+                      <div className="text-sm text-text-secondary">Systems in Under 90 Days</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-heading font-bold text-primary">3 Months</div>
-                      <div className="text-sm text-text-secondary">To Results</div>
+                      <div className="text-2xl font-heading font-bold text-primary">Consistent</div>
+                      <div className="text-sm text-text-secondary">New Client Growth</div>
                     </div>
                     <div>
                       <div className="text-2xl font-heading font-bold text-primary">$0</div>
-                      <div className="text-sm text-text-secondary">Upfront Cost</div>
+                      <div className="text-sm text-text-secondary">Upfront Consultation Cost</div>
                     </div>
                   </div>
                 </div>
@@ -314,6 +396,71 @@ const GetStarted = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="sf-faqs" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
+              Common Questions About Getting Started
+            </h2>
+            <div className="space-y-6">
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  How do I get started?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  What is the pricing structure?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  Do you offer guarantees?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call to discuss your firm's specific needs and goals." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the pricing structure?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote." }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer guarantees?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
+              }
+            ]
+          })}
+        </script>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-br from-teal to-primary">
         <div className="container mx-auto px-6 text-center">
@@ -351,6 +498,8 @@ const GetStarted = () => {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

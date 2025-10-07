@@ -103,169 +103,156 @@ const SEO = ({
       element.href = href;
     };
 
-    // Add or update JSON-LD structured data
-    const updateStructuredData = (id: string, data: any) => {
-      let script = document.querySelector(`script[data-schema="${id}"]`);
+    // Add or update consolidated JSON-LD structured data
+    const updateConsolidatedStructuredData = () => {
+      const schemaId = 'consolidated-schema';
+      let script = document.querySelector(`script[data-schema="${schemaId}"]`);
       
       if (!script) {
         script = document.createElement('script');
         script.setAttribute('type', 'application/ld+json');
-        script.setAttribute('data-schema', id);
+        script.setAttribute('data-schema', schemaId);
         document.head.appendChild(script);
       }
-      
-      script.textContent = JSON.stringify(data);
-    };
 
-    // Remove structured data script
-    const removeStructuredData = (id: string) => {
-      const script = document.querySelector(`script[data-schema="${id}"]`);
-      if (script) {
-        script.remove();
-      }
-    };
-    
-    // Basic meta tags
-    updateMetaTag('description', pageDescription);
-    
-    // Robots meta tag
-    if (robots) {
-      // Custom robots directive provided
-      updateMetaTag('robots', robots);
-    } else if (noindex) {
-      // Pre-launch: noindex, nofollow by default
-      updateMetaTag('robots', 'noindex, nofollow');
-    } else {
-      // Remove noindex at go-live
-      const robotsMeta = document.querySelector('meta[name="robots"]');
-      if (robotsMeta) {
-        robotsMeta.remove();
-      }
-    }
-    
-    // Open Graph tags
-    updateMetaTag('og:type', 'website', true);
-    updateMetaTag('og:site_name', siteName, true);
-    updateMetaTag('og:title', pageTitle, true);
-    updateMetaTag('og:description', pageDescription, true);
-    updateMetaTag('og:image', pageImage.startsWith('http') ? pageImage : `https://${primaryDomain}${pageImage}`, true);
-    updateMetaTag('og:url', canonicalUrl, true);
-    
-    // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', pageTitle);
-    updateMetaTag('twitter:description', pageDescription);
-    updateMetaTag('twitter:image', pageImage.startsWith('http') ? pageImage : `https://${primaryDomain}${pageImage}`);
-    
-    // Canonical URL
-    updateLinkTag('canonical', canonicalUrl);
+      // Build graph array with all schemas
+      const graphItems: any[] = [];
 
-    // JSON-LD Structured Data
-    
-    // 1. Organization + Website (always present)
-    updateStructuredData('organization', {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SmartFirm",
-      "url": `https://${primaryDomain}`,
-      "logo": `https://${primaryDomain}${defaultImage}`,
-      "sameAs": [
-        // Add LinkedIn/YouTube URLs here when available
-      ]
-    });
-
-    updateStructuredData('website', {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "SmartFirm",
-      "url": `https://${primaryDomain}`,
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": `https://${primaryDomain}/resources?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      }
-    });
-
-    // 2. Service page
-    if (pageType === 'service' && serviceName) {
-      updateStructuredData('service', {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": serviceName,
-        "provider": {
-          "@type": "Organization",
-          "name": "SmartFirm"
+      // 1. Organization (always present)
+      graphItems.push({
+        "@type": "Organization",
+        "@id": `https://${primaryDomain}/#organization`,
+        "name": "SmartFirm",
+        "url": `https://${primaryDomain}`,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `https://${primaryDomain}${defaultImage}`
         },
-        "areaServed": {
-          "@type": "Country",
-          "name": "United States"
-        },
-        "description": pageDescription
+        "sameAs": [
+          // Add LinkedIn/YouTube URLs here when available
+        ]
       });
-    } else {
-      removeStructuredData('service');
-    }
 
-    // 3. Blog post / Article
-    if (pageType === 'blog' && topic) {
-      updateStructuredData('article', {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": topic,
-        "datePublished": datePublished || new Date().toISOString(),
-        "dateModified": dateModified || datePublished || new Date().toISOString(),
-        "author": {
-          "@type": "Organization",
-          "name": author || "SmartFirm Editorial"
-        },
+      // 2. Website (always present)
+      graphItems.push({
+        "@type": "WebSite",
+        "@id": `https://${primaryDomain}/#website`,
+        "name": "SmartFirm",
+        "url": `https://${primaryDomain}`,
         "publisher": {
-          "@type": "Organization",
-          "name": "SmartFirm",
-          "logo": {
-            "@type": "ImageObject",
-            "url": `https://${primaryDomain}${defaultImage}`
-          }
+          "@id": `https://${primaryDomain}/#organization`
         },
-        "image": `https://${primaryDomain}${pageImage}`,
-        "description": pageDescription
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": `https://${primaryDomain}/resources?q={search_term_string}`,
+          "query-input": "required name=search_term_string"
+        }
       });
-    } else {
-      removeStructuredData('article');
-    }
 
-    // 4. FAQ page
-    if (pageType === 'faq' && faqs && faqs.length > 0) {
-      updateStructuredData('faq', {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
+      // 3. WebPage (always present)
+      graphItems.push({
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "url": canonicalUrl,
+        "name": pageTitle,
+        "description": pageDescription,
+        "dateModified": dateModified || new Date().toISOString(),
+        "isPartOf": {
+          "@id": `https://${primaryDomain}/#website`
+        },
+        "about": {
+          "@id": `https://${primaryDomain}/#organization`
+        }
+      });
+
+      // 4. Service (for service pages)
+      if (pageType === 'service' && serviceName) {
+        graphItems.push({
+          "@type": "Service",
+          "@id": `${canonicalUrl}#service`,
+          "serviceType": serviceName,
+          "name": serviceName,
+          "provider": {
+            "@id": `https://${primaryDomain}/#organization`
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+          },
+          "description": pageDescription
+        });
+      }
+
+      // 5. Article (for blog pages)
+      if (pageType === 'blog' && topic) {
+        graphItems.push({
+          "@type": "Article",
+          "@id": `${canonicalUrl}#article`,
+          "headline": topic,
+          "datePublished": datePublished || new Date().toISOString(),
+          "dateModified": dateModified || datePublished || new Date().toISOString(),
+          "author": {
+            "@id": `https://${primaryDomain}/#organization`
+          },
+          "publisher": {
+            "@id": `https://${primaryDomain}/#organization`
+          },
+          "image": `https://${primaryDomain}${pageImage}`,
+          "description": pageDescription,
+          "mainEntityOfPage": {
+            "@id": `${canonicalUrl}#webpage`
           }
-        }))
-      });
-    } else {
-      removeStructuredData('faq');
-    }
+        });
+      }
 
-    // 5. Breadcrumb list
-    if (breadcrumbs && breadcrumbs.length > 0) {
-      updateStructuredData('breadcrumb', {
+      // 6. FAQPage (when FAQs provided)
+      if (faqs && faqs.length > 0) {
+        graphItems.push({
+          "@type": "FAQPage",
+          "@id": `${canonicalUrl}#faqpage`,
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        });
+      }
+
+      // 7. BreadcrumbList (when breadcrumbs provided)
+      if (breadcrumbs && breadcrumbs.length > 0) {
+        graphItems.push({
+          "@type": "BreadcrumbList",
+          "@id": `${canonicalUrl}#breadcrumb`,
+          "itemListElement": breadcrumbs.map((crumb, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": crumb.name,
+            "item": `https://${primaryDomain}${crumb.url}`
+          }))
+        });
+      }
+
+      // Create consolidated schema with @graph
+      const consolidatedSchema = {
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbs.map((crumb, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "name": crumb.name,
-          "item": `https://${primaryDomain}${crumb.url}`
-        }))
+        "@graph": graphItems
+      };
+
+      script.textContent = JSON.stringify(consolidatedSchema);
+
+      // Remove old individual schema scripts if they exist
+      ['organization', 'website', 'webpage', 'service', 'article', 'faq', 'breadcrumb'].forEach(id => {
+        const oldScript = document.querySelector(`script[data-schema="${id}"]`);
+        if (oldScript && oldScript !== script) {
+          oldScript.remove();
+        }
       });
-    } else {
-      removeStructuredData('breadcrumb');
-    }
+    };
+
+    updateConsolidatedStructuredData();
     
   }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, robots, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, primaryDomain, defaultImage]);
   

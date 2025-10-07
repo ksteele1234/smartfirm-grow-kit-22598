@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -49,30 +57,85 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Solutions | SmartFirm"
-        description="Growth solutions for accounting firms. Client retention, lead generation, and competitive strategies that drive results."
+        title="Marketing Automation Solutions for Accounting Firms | SmartFirm"
+        description="Marketing automation solutions for accounting firms that drive client retention, lead generation, and competitive strategies with proven results."
         pageType="solution"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Solutions", url: "/solutions" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Solutions</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-background to-teal/10 relative overflow-hidden">
-          <BackgroundPattern pattern="dots" className="opacity-20" />
-          <FloatingShapes variant="circles" className="opacity-30" />
-          <div className="container mx-auto px-4 text-center relative">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Solutions for Your Accounting Firm Challenges
+        <section className="relative py-20 md:py-28 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <div
+              className="absolute -inset-[10px] pointer-events-none animate-aurora"
+              style={{
+                backgroundImage:
+                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
+                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+                animation: 'aurora 240s linear infinite',
+                opacity: 0.49,
+              }}
+            />
+          </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+          </div>
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
+              Marketing Automation Solutions for Accounting Firm Challenges
             </h1>
-            <p className="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
-              We understand the unique pressures of running an accounting firm. From competition to client expectations, 
-              technology demands to growth challenges - SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+                Marketing automation solutions designed specifically for accounting firms help you overcome competition, meet client expectations, and tackle technology demands. SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Content */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Every accounting firm faces unique challenges in today's competitive marketplace. Whether you're struggling to attract new clients, retain existing ones, or scale your practice efficiently, SmartFirm provides targeted solutions designed specifically for accounting professionals.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our proven methodologies combine marketing automation, technology integration, and strategic guidance to help you overcome obstacles and achieve sustainable growth. We understand the accounting industry inside and out, ensuring our solutions align with your professional standards and business objectives.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Solution Categories */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-16">
               Common Pain Points We Address
@@ -164,11 +227,11 @@ const Solutions = () => {
                 </CardHeader>
                 <CardContent className="space-y-8 px-6 md:px-10 pb-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="space-y-6">
-                      <h4 className="font-semibold text-primary flex items-center text-lg">
+                  <div className="space-y-6">
+                      <h3 className="font-semibold text-primary flex items-center text-lg">
                         <Users className="h-5 w-5 mr-2" />
                         Key Benefits:
-                      </h4>
+                      </h3>
                       <ul className="space-y-3 text-text-secondary">
                         <li className="flex items-start">
                           <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
@@ -190,10 +253,10 @@ const Solutions = () => {
                     </div>
                     
                     <div className="bg-gradient-to-br from-teal/10 to-primary/10 p-6 md:p-8 rounded-lg border border-border/30">
-                      <h4 className="font-semibold text-primary mb-6 flex items-center text-lg">
+                      <h3 className="font-semibold text-primary mb-6 flex items-center text-lg">
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Client Success Story:
-                      </h4>
+                      </h3>
                       <blockquote className="text-text-secondary italic mb-4 leading-relaxed">
                         "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a 
                         systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love 

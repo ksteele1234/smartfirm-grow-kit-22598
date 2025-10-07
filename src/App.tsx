@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import SuccessStories from "./pages/SuccessStories";
 import GetStarted from "./pages/GetStarted";
+import QuickStart from "./pages/QuickStart";
 import NotFound from "./pages/NotFound";
 import ServerError from "./pages/ServerError";
 import ThankYou from "./pages/ThankYou";
@@ -77,12 +78,14 @@ const App = () => (
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/all" element={<AllServices />} />
+        <Route path="/all-services" element={<AllServices />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/case-studies" element={<SuccessStories />} />
         <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
         
         {/* Solution Sub-pages */}
         <Route path="/solutions/i-need-more-leads" element={<LeadGeneration />} />

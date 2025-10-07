@@ -1,36 +1,37 @@
 import { useState, useEffect } from "react";
-import { StandardCard } from "@/components/ui/standard-card";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GeometricDivider } from "@/components/ui/visual-accents";
+import graceImage from "@/assets/grace-mendez.png";
+import katieSteeleImage from "@/assets/katie-steele.png";
+import brianHellewellImage from "@/assets/brian-hellewell.png";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
-      name: "Michael Chen",
-      firm: "TaxPro Services",
-      image: "/placeholder.svg",
-      content: "SmartFirm's automated follow-up saved us 20+ hours a week. Within three months, our client retention jumped to 95%, and we finally started collecting the 5-star reviews we deserved.",
+      name: "Grace Mendez",
+      firm: "CPA Firm Owner",
+      image: graceImage,
+      content: "SmartFirm's automation saved us hours each week and helped us streamline client communication.",
       rating: 5,
-      results: "95% Client Retention"
+      logo: "CPA Firm A"
     },
     {
-      name: "Sarah Williams",
-      firm: "CPA Consulting Group", 
-      image: "/placeholder.svg",
-      content: "The ROI has been incredible. We're getting qualified leads consistently, and the automated systems run everything in the background while we focus on client work.",
+      name: "Katie Steele",
+      firm: "Accounting Practice Manager", 
+      image: katieSteeleImage,
+      content: "The team brought clarity to our marketing and helped us attract consistent leads.",
       rating: 5,
-      results: "3x Lead Generation"
+      logo: "TaxPro Services"
     },
     {
-      name: "David Rodriguez",
-      firm: "Accounting Plus LLC",
-      image: "/placeholder.svg", 
-      content: "Their SEO work got us ranking #1 for 'CPA near me' in our area. We went from 2-3 new clients per month to 15+ qualified inquiries. Game changer for our practice.",
+      name: "Brian Hellewell",
+      firm: "Tax Advisory Partner",
+      image: brianHellewellImage, 
+      content: "We've seen measurable improvements in client retention with their systems.",
       rating: 5,
-      results: "500% Inquiry Increase"
+      logo: "Business Advisory LLC"
     }
   ];
 
@@ -53,138 +54,125 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5 relative overflow-hidden">
-      <div className="container relative mx-auto px-4 lg:px-6">
+    <section className="relative py-16 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+      {/* Curved bottom edge */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+        <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+        </svg>
+      </div>
+      <div className="container relative mx-auto px-4 lg:px-6 z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Trusted by Growing
-            <span className="text-teal block">Accounting Firms</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 drop-shadow-lg">
+            Trusted by Accounting Firms Nationwide
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it—here's what firm owners are saying:
+          <p className="text-lg text-white/95 max-w-2xl mx-auto drop-shadow-md">
+            See what firm owners are saying about their growth with SmartFirm
           </p>
         </div>
 
-        <GeometricDivider variant="dots" />
+        {/* Client Logos in Grayscale */}
+        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 mb-12 opacity-40">
+          <div className="text-white font-semibold text-lg grayscale">CPA Firm A</div>
+          <div className="text-white font-semibold text-lg grayscale">Accounting Plus</div>
+          <div className="text-white font-semibold text-lg grayscale">TaxPro Services</div>
+          <div className="text-white font-semibold text-lg grayscale">Business Advisory LLC</div>
+          <div className="text-white font-semibold text-lg grayscale">Financial Partners</div>
+        </div>
 
-        {/* Featured Testimonial */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <StandardCard
-            icon={Quote}
-            title={currentTestimonial.results}
-            description=""
-            variant="featured"
-            className="relative"
-          >
-            <div className="space-y-6">
-              {/* Stars */}
-              <div className="flex justify-center space-x-1">
-                {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                ))}
+        {/* Featured Testimonial Carousel */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20 transition-all duration-500 ease-in-out">
+            <div className="space-y-8">
+              {/* Quote Icon */}
+              <div className="flex justify-center">
+                <Quote className="h-12 w-12 text-white/40" />
               </div>
 
               {/* Content */}
-              <blockquote className="text-xl lg:text-2xl text-text-primary leading-relaxed text-center max-w-3xl mx-auto">
+              <blockquote className="text-xl lg:text-2xl text-white leading-relaxed text-center max-w-3xl mx-auto">
                 "{currentTestimonial.content}"
               </blockquote>
 
-              {/* Author Info */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <img 
-                    src={currentTestimonial.image} 
-                    alt={currentTestimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
-                  />
-                  <div>
-                    <div className="font-semibold text-lg text-foreground">
+              {/* Author Info with Stars */}
+              <div className="flex flex-col items-center space-y-4">
+                <img 
+                  src={currentTestimonial.image} 
+                  alt={currentTestimonial.name}
+                  className="w-20 h-20 rounded-full object-cover border-3 border-white/30 shadow-lg"
+                />
+                <div className="text-center">
+                  <div className="flex items-center justify-center space-x-3 mb-2">
+                    <div className="font-semibold text-lg text-white">
                       {currentTestimonial.name}
                     </div>
-                    <div className="text-text-light">
-                      {currentTestimonial.firm}
+                    <div className="flex space-x-1">
+                      {[...Array(currentTestimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 fill-[#FAFDD6] text-[#FAFDD6]" />
+                      ))}
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex items-center space-x-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={prevTestimonial}
-                    className="w-10 h-10 p-0"
-                  >
-                    <ChevronLeft className="w-4 h-4" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={nextTestimonial}
-                    className="w-10 h-10 p-0"
-                  >
-                    <ChevronRight className="w-4 h-4" />
-                  </Button>
+                  <div className="text-white/80">
+                    {currentTestimonial.firm}
+                  </div>
                 </div>
               </div>
+
+              {/* Navigation */}
+              <div className="flex items-center justify-center space-x-4">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={prevTestimonial}
+                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-white/30"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </Button>
+                
+                {/* Carousel Indicators */}
+                <div className="flex space-x-2">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                        index === currentIndex 
+                          ? 'bg-white w-8' 
+                          : 'bg-white/40 hover:bg-white/60'
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={nextTestimonial}
+                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-white/30"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </Button>
+              </div>
             </div>
-          </StandardCard>
+          </div>
         </div>
 
-        {/* Carousel Indicators */}
-        <div className="flex justify-center space-x-2 mb-12">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 scale-feedback color-transition ${
-                index === currentIndex 
-                  ? 'bg-primary scale-125' 
-                  : 'bg-primary/30 hover:bg-primary/50'
-              }`}
-            />
-          ))}
-        </div>
-
-        {/* Results Overview */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <StandardCard
-            title="Client Satisfaction"
-            description="Average rating from accounting firms using SmartFirm's marketing automation systems."
-            className="text-center"
-          >
-            <div className="text-3xl font-heading font-bold text-primary">98%</div>
-          </StandardCard>
+        {/* Results Stats */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
+          <div className="text-center">
+            <div className="text-4xl font-heading font-bold text-white mb-2">98%</div>
+            <div className="text-white/90">Client Satisfaction</div>
+          </div>
           
-          <StandardCard
-            title="Lead Growth"
-            description="Average increase in qualified leads within 90 days of implementation."
-            variant="popular"
-            className="text-center"
-          >
-            <div className="text-3xl font-heading font-bold text-primary">250%</div>
-          </StandardCard>
+          <div className="text-center">
+            <div className="text-4xl font-heading font-bold text-white mb-2">250%</div>
+            <div className="text-white/90">Lead Growth</div>
+          </div>
           
-          <StandardCard
-            title="ROI Achievement"
-            description="Firms see positive ROI within the first quarter of working with SmartFirm."
-            className="text-center"
-          >
-            <div className="text-3xl font-heading font-bold text-primary">ROI+</div>
-          </StandardCard>
-        </div>
-
-        {/* Partner Logos */}
-        <div className="mt-16 pt-8 border-t border-border/50">
-          <p className="text-center text-text-light text-sm mb-8 font-medium">
-            Trusted by leading accounting firms nationwide
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-60">
-            <div className="text-text-light font-semibold text-lg">CPA Firm A</div>
-            <div className="text-text-light font-semibold text-lg">Accounting Plus</div>
-            <div className="text-text-light font-semibold text-lg">TaxPro Services</div>
-            <div className="text-text-light font-semibold text-lg">Business Advisory LLC</div>
-            <div className="text-text-light font-semibold text-lg">Financial Partners</div>
+          <div className="text-center">
+            <div className="text-4xl font-heading font-bold text-white mb-2">90 Days</div>
+            <div className="text-white/90">To Positive ROI</div>
           </div>
         </div>
       </div>

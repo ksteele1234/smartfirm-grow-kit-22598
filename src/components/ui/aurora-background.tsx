@@ -17,7 +17,7 @@ export const AuroraBackground = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col h-[100vh] items-center justify-center bg-background text-foreground",
+        "relative flex flex-col items-center justify-center bg-background text-foreground",
         className
       )}
       {...props}
@@ -28,14 +28,14 @@ export const AuroraBackground = ({
           className="absolute -inset-[10px] pointer-events-none animate-aurora"
           style={{
             backgroundImage:
-              'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%),\
-radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%),\
-radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%),\
-repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
-            backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+              'radial-gradient(50% 50% at 70% 20%, hsl(var(--light-teal) / 0.85), transparent 70%),\
+radial-gradient(45% 45% at 20% 70%, hsl(var(--primary-teal) / 0.75), transparent 70%),\
+radial-gradient(40% 40% at 85% 80%, hsl(var(--secondary-blue) / 0.7), transparent 70%),\
+repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.4) 0%, hsl(var(--primary-blue) / 0.4) 4%, hsl(var(--secondary-blue) / 0.35) 6%, hsl(var(--secondary-blue) / 0.35) 10%, hsl(var(--light-teal) / 0.3) 12%, hsl(var(--light-teal) / 0.3) 16%, hsl(var(--primary-teal) / 0.25) 18%, hsl(var(--primary-teal) / 0.25) 22%)',
+            backgroundSize: '150% 150%, 150% 150%, 150% 150%, 300%',
             backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
             animation: 'aurora 240s linear infinite',
-            opacity: 0.2,
+            opacity: 0.9,
           }}
         />
       </div>

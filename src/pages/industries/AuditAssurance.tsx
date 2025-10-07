@@ -31,22 +31,22 @@ const AuditAssurance = () => {
       {
         title: "Professional Credibility Building",
         description: "Establish your firm's reputation for excellence and reliability",
-        link: "/services/professional-branding"
+        link: "/services/website-design"
       },
       {
         title: "Industry Specialization Marketing",
         description: "Position your expertise in specific industries or audit types",
-        link: "/services/specialization-marketing"
+        link: "/services/marketing-automation"
       },
       {
         title: "Referral Network Development",
         description: "Build relationships with attorneys, banks, and other professional referral sources",
-        link: "/services/referral-programs"
+        link: "/solutions/get-more-referrals"
       },
       {
         title: "Proposal Process Optimization",
         description: "Improve your success rate in competitive audit proposal situations",
-        link: "/services/proposal-optimization"
+        link: "/services/business-optimization"
       }
     ],
     caseStudies: [
@@ -54,13 +54,13 @@ const AuditAssurance = () => {
         title: "Regional Audit Market Leadership",
         client: "Regional CPA Firm",
         result: "Became market leader for nonprofit audits in 3-state region",
-        link: "/success-stories/regional-audit-leader"
+        link: "/success-stories"
       },
       {
         title: "Specialized Industry Focus",
         client: "Healthcare Audit Specialists",
         result: "Built $2M practice specializing in healthcare audits",
-        link: "/success-stories/healthcare-specialists"
+        link: "/success-stories"
       }
     ],
     ctaTitle: "Strengthen Your Audit Practice",

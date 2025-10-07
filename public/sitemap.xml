@@ -63,6 +63,12 @@
     <priority>0.8</priority>
   </url>
   
+  <url>
+    <loc>https://smartfirm.io/quick-start-marketing-for-cpa-firms</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <!-- Service Pages -->
   <url>
     <loc>https://smartfirm.io/services/marketing-automation</loc>
@@ -179,6 +185,55 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Additional Solution URL Variations -->
+  <url>
+    <loc>https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/compete-with-tech-savvy-cpas</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/get-more-referrals-without-asking</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/increase-referrals</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/grow-without-growing-pains</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/sustainable-growth</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/protect-practice-and-future</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/protect-your-practice</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Industry Pages -->
   <url>
     <loc>https://smartfirm.io/industries/tax-preparation</loc>
@@ -205,6 +260,12 @@
   </url>
   
   <!-- Tools & Calculators -->
+  <url>
+    <loc>https://smartfirm.io/tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
   <url>
     <loc>https://smartfirm.io/tools/roi-calculator</loc>
     <changefreq>weekly</changefreq>

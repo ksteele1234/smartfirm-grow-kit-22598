@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,28 +38,28 @@ const Industries = () => {
       icon: <User className="h-8 w-8 text-primary-blue" />,
       title: "Solo CPAs Like You",
       description: "The Solo CPA's Survival Guide, Solo Practice Optimization, Personal Productivity Solutions, Growth Without Complexity.",
-      link: "/industries/solo-cpas",
+      link: "/get-started",
       size: "Solo Practice"
     },
     {
       icon: <Users className="h-8 w-8 text-primary-teal" />,
       title: "Small Accounting Firms (2-10 employees)",
       description: "Small Firm Challenges, Team Collaboration Solutions, Workflow Standardization.",
-      link: "/industries/small-firms",
+      link: "/get-started",
       size: "2-10 Employees"
     },
     {
       icon: <Building className="h-8 w-8 text-primary-blue" />,
       title: "Mid-Sized Accounting Firms (11-50 employees)",
       description: "Growth & Scalability, Advanced Automation, Leadership & Management.",
-      link: "/industries/mid-sized-firms",
+      link: "/get-started",
       size: "11-50 Employees"
     },
     {
       icon: <Building2 className="h-8 w-8 text-primary-teal" />,
       title: "Large Accounting Firms (50+ employees)",
       description: "Enterprise Solutions, Strategic Partnerships, Innovation & Future-Proofing.",
-      link: "/industries/large-firms",
+      link: "/get-started",
       size: "50+ Employees"
     }
   ];
@@ -60,12 +68,12 @@ const Industries = () => {
     {
       icon: <Shield className="h-6 w-6 text-primary-blue" />,
       title: "Forensic Accounting",
-      link: "/industries/forensic-accounting"
+      link: "/get-started"
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-primary-teal" />,
       title: "Wealth Management",
-      link: "/industries/wealth-management"
+      link: "/get-started"
     },
     {
       icon: <FileText className="h-6 w-6 text-primary-blue" />,
@@ -87,48 +95,96 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Industries We Serve | SmartFirm"
-        description="Marketing solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices."
+        title="Marketing for Accountants: Industry-Specific Solutions | SmartFirm"
+        description="Marketing for accountants including solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
         pageType="industry"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Industries", url: "/industries" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Industries</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Marketing Solutions for Your Accounting Niche
+        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <div
+              className="absolute -inset-[10px] pointer-events-none animate-aurora"
+              style={{
+                backgroundImage:
+                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
+                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+                animation: 'aurora 240s linear infinite',
+                opacity: 0.49,
+              }}
+            />
+          </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+          </div>
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+              Marketing for Accountants: Solutions for Your Niche
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Every accounting specialization has unique challenges and opportunities. SmartFirm delivers AI-driven, customized solutions 
-              with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+                Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Introduction */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              Serving a Spectrum of Accounting Professionals
-            </h2>
-            <p className="text-lg text-text-secondary max-w-4xl mx-auto">
-              From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
-              challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
-              perfectly with your practice area and growth stage.
-            </p>
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+                Serving a Spectrum of Accounting Professionals
+              </h2>
+              <p className="text-lg text-text-secondary text-center leading-relaxed">
+                From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
+                challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
+                perfectly with your practice area and growth stage.
+              </p>
+              <p className="text-lg text-text-secondary text-center leading-relaxed">
+                Whether you're a solo CPA looking to streamline operations, a small firm aiming to compete with larger practices, or an established firm seeking to modernize your marketing approach, SmartFirm delivers industry-specific solutions that drive results. We've helped hundreds of accounting professionals across all specializations achieve measurable growth through targeted strategies and proven methodologies.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Firm Size Categories */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20 bg-background-light">
+          <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-blue text-center mb-12">
               How We Help
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {industryCategories.map((category, index) => (
                 <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border">
                   <CardHeader className="pb-4">
@@ -169,8 +225,8 @@ const Industries = () => {
         </section>
 
         {/* Specialized Niches */}
-        <section className="section-padding">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
                 Specialized Niches
@@ -210,8 +266,8 @@ const Industries = () => {
         </section>
 
         {/* Industry Spotlight */}
-        <section className="section-padding bg-background-light">
-          <div className="container mx-auto">
+        <section className="py-16 md:py-20 bg-background-light">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-elegant border-light-border">
                 <CardHeader className="text-center pb-6">
@@ -230,10 +286,10 @@ const Industries = () => {
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-primary-teal flex items-center">
+                      <h3 className="font-semibold text-primary-teal flex items-center">
                         <Target className="h-5 w-5 mr-2" />
                         Key Opportunities:
-                      </h4>
+                      </h3>
                       <ul className="space-y-2 text-text-secondary">
                         <li className="flex items-start">
                           <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
@@ -255,10 +311,10 @@ const Industries = () => {
                     </div>
                     
                     <div className="bg-accent-light/30 p-6 rounded-lg">
-                      <h4 className="font-semibold text-primary-blue mb-3 flex items-center">
+                      <h3 className="font-semibold text-primary-blue mb-3 flex items-center">
                         <Calculator className="h-5 w-5 mr-2" />
                         Industry Insights:
-                      </h4>
+                      </h3>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
                           <span className="text-text-secondary">Revenue Growth Potential</span>

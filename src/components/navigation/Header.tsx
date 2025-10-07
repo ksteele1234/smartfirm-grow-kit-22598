@@ -17,115 +17,131 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const services = [
-    // Top-tier Service Categories
+    // Main Service Categories
     { 
       title: "Marketing Automation", 
       href: "/services/marketing-automation",
-      description: "Complete marketing automation platform for accounting firms"
+      description: "SmartFirm marketing automation for accountants, CPAs, and bookkeepers that attracts more leads and converts them into clients."
     },
     { 
       title: "Technology Solutions", 
       href: "/services/technology-solutions",
-      description: "Tech stack optimization and business process automation"
+      description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
     },
     { 
       title: "Business Optimization", 
       href: "/services/business-optimization",
-      description: "Process improvement and executive dashboards"
+      description: "Drive firm growth with streamlined processes, KPI dashboards, and data-driven decisions."
     },
     { 
       title: "Executive Services", 
       href: "/services/executive-services",
-      description: "Fractional CIO and CFO services for growing firms"
+      description: "Fractional CIO and CFO expertise tailored to accounting firms that want growth without full-time costs."
     },
     // Individual Services
     { 
       title: "Automated Lead Follow-up", 
       href: "/services/automated-lead-follow-up",
-      description: "Convert more prospects with automated email sequences"
+      description: "Convert more leads with CPA-focused email and SMS automation that responds instantly."
     },
     { 
       title: "Client Review Generation", 
       href: "/services/client-review-generation",
-      description: "Get more positive reviews and testimonials"
+      description: "Boost your reputation with automated review requests that increase referrals and 5-star ratings."
     },
     { 
       title: "SEO for Accountants", 
       href: "/services/seo-for-accountants",
-      description: "Rank higher in local search results"
+      description: "SEO for accounting firms and CPAs that improves local rankings and drives qualified leads."
     },
     { 
       title: "Social Media Management", 
       href: "/services/social-media-management",
-      description: "Professional social media presence"
+      description: "Consistent, professional content that positions your firm as a trusted expert."
     },
     { 
       title: "Email Marketing", 
       href: "/services/email-marketing",
-      description: "Nurture leads with targeted campaigns"
+      description: "Targeted campaigns that nurture leads, improve client retention, and drive repeat business."
     },
     { 
       title: "Website Design", 
       href: "/services/website-design",
-      description: "Modern, conversion-optimized websites"
+      description: "Modern, SEO-optimized websites for CPAs and accountants that convert visitors into clients."
     }
   ];
 
   const solutions = [
-    // Main Solution Categories
+    // Main Solutions
     { 
-      title: "Stop Losing Clients to Tech-Savvy CPAs", 
+      title: "Stay Ahead of Tech-Savvy CPAs", 
       href: "/solutions/stop-losing-clients-to-tech-savvy-cpas",
-      description: "Stay competitive with modern systems and automation"
+      description: "Compete and win with accounting marketing automation, SEO, and digital-first systems tailored for firms like yours."
     },
     { 
       title: "Get More Referrals Without Asking", 
       href: "/solutions/get-more-referrals-without-asking",
-      description: "Turn satisfied clients into active advocates"
+      description: "Transform satisfied clients into steady referrals with review generation and social media marketing for accountants."
     },
     { 
       title: "Work Less, Earn More", 
       href: "/solutions/work-less-earn-more",
-      description: "Maximize profitability through automation"
+      description: "Boost profitability through CPA marketing automation that cuts busywork and frees your team's time."
     },
     { 
       title: "Grow Without the Growing Pains", 
       href: "/solutions/grow-without-growing-pains",
-      description: "Scale smoothly with efficient systems"
+      description: "Scale your accounting firm with proven lead generation strategies and efficient tech automation."
     },
     { 
       title: "Protect Your Practice & Your Future", 
       href: "/solutions/protect-practice-and-future",
-      description: "Safeguard against threats and future-proof your firm"
+      description: "Safeguard your firm with secure systems, SEO visibility, and future-ready marketing strategies."
     },
-    // Specific Solution Areas
+    // Specific Areas
     { 
       title: "I need more leads", 
       href: "/solutions/lead-generation",
-      description: "Generate qualified prospects consistently"
+      description: "Generate qualified accounting firm leads with targeted SEO and digital advertising."
     },
     { 
       title: "I want to scale my firm", 
       href: "/solutions/scale-firm",
-      description: "Grow without proportional overhead increase"
+      description: "Grow capacity and revenue using automation for accountants and CPAs without ballooning overhead."
     },
     { 
       title: "I need better client retention", 
       href: "/solutions/client-retention",
-      description: "Keep clients engaged and loyal"
+      description: "Improve retention with email marketing, client review generation, and proactive engagement strategies."
     },
     { 
       title: "Advanced Client Retention Strategies", 
       href: "/solutions/retention-strategies",
-      description: "Strengthen your competitive position"
+      description: "Protect your book of business with CPA-focused marketing automation and loyalty systems."
     }
   ];
 
   const industries = [
-    { name: "Tax Preparation", slug: "tax-preparation" },
-    { name: "Bookkeeping Services", slug: "bookkeeping-services" },
-    { name: "Business Advisory", slug: "business-advisory" },
-    { name: "Audit & Assurance", slug: "audit-assurance" }
+    { 
+      name: "Tax Preparation", 
+      slug: "tax-preparation",
+      description: "Specialized marketing and SEO for tax preparers to generate leads and grow during peak seasons and beyond."
+    },
+    { 
+      name: "Bookkeeping Services", 
+      slug: "bookkeeping-services",
+      description: "Proven digital marketing for bookkeepers that attracts clients, builds trust, and scales revenue."
+    },
+    { 
+      name: "Business Advisory", 
+      slug: "business-advisory",
+      description: "Marketing strategies for advisory firms that position you as the go-to growth partner for business clients."
+    },
+    { 
+      name: "Audit & Assurance", 
+      slug: "audit-assurance",
+      description: "SEO and visibility campaigns for CPAs and audit firms designed to build authority and long-term trust."
+    }
   ];
 
   return (
@@ -138,10 +154,10 @@ const Header = () => {
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
-                width={150}
-                height={32}
+                width={200}
+                height={42}
                 priority
-                className="h-8 w-auto"
+                className="h-11 w-auto"
               />
             </a>
           </div>
@@ -265,10 +281,7 @@ const Header = () => {
                       >
                         <div className="text-sm font-medium leading-none">{industry.name}</div>
                         <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
-                          {industry.name === "Tax Preparation" && "Specialized marketing for tax professionals"}
-                          {industry.name === "Bookkeeping Services" && "Growth strategies for bookkeepers"}
-                          {industry.name === "Business Advisory" && "Marketing for advisory services"}
-                          {industry.name === "Audit & Assurance" && "Professional services marketing"}
+                          {industry.description}
                         </p>
                       </NavigationMenuLink>
                     ))}
@@ -303,7 +316,7 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="hero" size="default" asChild>
+            <Button variant="dark-teal" size="default" asChild>
               <a href="/get-started">Get Started</a>
             </Button>
           </div>
@@ -342,7 +355,7 @@ const Header = () => {
               <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
                 Contact
               </a>
-              <Button variant="hero" size="default" className="w-full mt-4" asChild>
+              <Button variant="dark-teal" size="default" className="w-full mt-4" asChild>
                 <a href="/get-started">Get Started</a>
               </Button>
             </nav>

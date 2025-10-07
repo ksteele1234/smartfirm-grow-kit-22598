@@ -3,6 +3,14 @@ import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/ui/optimized-image";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { 
   ArrowRight, 
   Target, 
@@ -28,22 +36,22 @@ const About = () => {
     {
       icon: <Lightbulb className="h-8 w-8 text-primary-blue" />,
       title: "Innovation",
-      description: "We continuously evolve our solutions to stay ahead of industry trends and technology."
+      description: "We evolve our solutions to keep firms ahead of industry trends."
     },
     {
       icon: <Shield className="h-8 w-8 text-primary-teal" />,
       title: "Integrity",
-      description: "We build trust through transparency, honesty, and consistent delivery on our promises."
+      description: "We build trust through transparency, honesty, and consistency."
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
       title: "Client Success",
-      description: "Your growth is our success. We're committed to delivering measurable results for your firm."
+      description: "Your growth is our success. We measure ourselves by the results we deliver for your firm."
     },
     {
       icon: <Zap className="h-8 w-8 text-primary-teal" />,
       title: "Efficiency",
-      description: "We streamline processes and eliminate complexity to help you focus on what matters most."
+      description: "We simplify processes and reduce complexity so you can focus on clients, not tech."
     }
   ];
 
@@ -51,28 +59,28 @@ const About = () => {
     {
       name: "Katie Steele",
       title: "Founder & CEO",
-      bio: "With over 20 years of experience leading business transformations across industries, Katie helps accounting firms unlock their full potential through smart systems and scalable growth strategies that work.",
+      bio: "With 20+ years leading business transformations, Katie helps accounting firms unlock growth through smart systems, clear strategy, and automation that scales without burnout.",
       image: katieSteeleImage,
       linkedin: "https://www.linkedin.com/in/katie-steele1/"
     },
     {
       name: "Brian Hellewell",
       title: "Technology Transformation Leader",
-      bio: "CPA and former SpaceX product manager, Brian helps accounting firms modernize with secure, scalable systems—driving efficiency, compliance, and growth through 20+ years of expertise in IT strategy, financial systems, and business optimization.",
+      bio: "CPA and former SpaceX product manager. Brian modernizes firms with secure, scalable systems that improve efficiency, compliance, and client experience. He brings 20+ years in Accounting, IT strategy, financial systems, and business optimization.",
       image: brianHellewellImage,
       linkedin: "https://www.linkedin.com/in/brian-hellewell/"
     },
     {
       name: "Grace Mendez",
       title: "Customer Service Manager",
-      bio: "Grace leads our customer service team, ensuring accounting firms receive exceptional support and guidance throughout their journey with SmartFirm.",
+      bio: "Grace leads client support and onboarding to ensure every firm gets responsive guidance, smooth implementation, and ongoing success with SmartFirm.",
       image: graceMendezImage,
       linkedin: "https://www.linkedin.com/in/mary-grace-mendez26/"
     },
     {
       name: "Yvonne Galicia",
       title: "Social Media Ads & Content Manager",
-      bio: "Yvonne creates compelling content and manages strategic ad campaigns that help accounting firms build their brand and reach their ideal clients.",
+      bio: "Yvonne creates professional content and manages targeted ad campaigns that help accounting firms build authority and reach ideal clients.",
       image: yvonneGaliciaImage,
       linkedin: "https://www.linkedin.com/in/yvonne-galicia-brandbloom/"
     }
@@ -80,52 +88,113 @@ const About = () => {
 
   const differentiators = [
     {
-      title: "Industry-Specific Expertise",
-      description: "We exclusively serve accounting firms, giving us deep understanding of your unique challenges, compliance requirements, and growth opportunities."
+      title: "Industry-Focused Expertise",
+      description: "We focus on accountants, CPAs, bookkeepers, and tax preparers, so our solutions fit your compliance needs, workflow, and growth goals."
     },
     {
       title: "Proven Implementation Process",
-      description: "Our systematic approach ensures smooth implementation with minimal disruption to your daily operations while maximizing results."
+      description: "A clear, step-by-step approach that launches fast and minimizes disruption while setting your systems up the right way."
     },
     {
-      title: "Ongoing Support & Optimization",
-      description: "We don't just set it and forget it. Our team continuously monitors, optimizes, and evolves your systems to ensure sustained growth."
+      title: "Ongoing Support and Optimization",
+      description: "We monitor, improve, and evolve your automation and marketing so results keep compounding over time."
     }
   ];
 
-  const milestones = [
-    { year: "2018", event: "SmartFirm founded with a mission to modernize accounting firm marketing" },
-    { year: "2020", event: "Reached 100+ accounting firms served across North America" },
-    { year: "2022", event: "Launched comprehensive automation platform with AI-powered features" },
-    { year: "2024", event: "Serving 500+ firms with $50M+ in additional revenue generated" }
+  const journeyMilestones = [
+    "Built SmartFirm to make modern marketing and automation accessible to professional service firms.",
+    "Supported 50+ companies across industries and refined our focus for accounting, CPA, bookkeeping, and tax practices.",
+    "Assembled 40+ years of combined experience across business transformation, financial systems, and marketing operations.",
+    "Introduced a complete toolkit for firms: lead capture, review generation, AI chat and voice response, appointment funnels, SEO boosters, and nurture campaigns.",
+    "Today we help accounting firms launch marketing automation in under 30 days and grow with confidence."
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About Us | SmartFirm"
-        description="SmartFirm empowers accounting firms with marketing automation and technology solutions. Our mission is to help firms grow."
+        title="About SmartFirm | Marketing Automation for Accountants"
+        description="Learn how SmartFirm empowers accountants, CPAs, bookkeepers, and tax preparers with marketing automation, SEO, and digital marketing for CPA firms."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "About Us", url: "/about" }
+        ]}
+        faqs={[
+          {
+            question: "How do I get started?",
+            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+          },
+          {
+            question: "What is the pricing structure?",
+            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
+          },
+          {
+            question: "Do you offer guarantees?",
+            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+          }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>About Us</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-background to-accent/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Our Story: Empowering Accounting Firms to Thrive
+        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <div
+              className="absolute -inset-[10px] pointer-events-none animate-aurora"
+              style={{
+                backgroundImage:
+                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
+                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+                animation: 'aurora 240s linear infinite',
+                opacity: 0.49,
+              }}
+            />
+          </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+          </div>
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+              About SmartFirm: Marketing Automation for Accountants
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We believe every accounting firm has the potential for extraordinary growth through AI-driven innovation. 
-              Our mission is to provide the intelligent tools, predictive expertise, and automated support to make that vision a reality.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed mb-4 drop-shadow-md">
+                SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation, SEO, and client growth systems to help firms thrive in a competitive market.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Mission & Vision */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue">Mission & Vision</h2>
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <Card className="border-light-border shadow-elegant">
                 <CardHeader className="text-center pb-6">
@@ -136,8 +205,7 @@ const About = () => {
                     Our Mission
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To empower accounting firms with AI-powered marketing automation and intelligent technology solutions that drive predictive growth, 
-                    optimize operational efficiency through data-driven insights, and enhance client relationships using automated personalization while maintaining the personal touch that makes each practice unique.
+                    Our mission is to empower firms with digital marketing for CPA firms, from SEO to client retention. Firms hire SmartFirm when they want to work with an accountant marketing specialist who delivers measurable results.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -151,8 +219,7 @@ const About = () => {
                     Our Vision
                   </CardTitle>
                   <CardDescription className="text-lg text-text-secondary leading-relaxed">
-                    To be the leading AI-driven partner for accounting firms seeking to modernize their practices, scale intelligently with predictive analytics, and build lasting value through data-driven decision making. 
-                    We envision a future where artificial intelligence amplifies human expertise, delivering actionable insights and automated efficiency.
+                    To be the trusted partner for accounting firms, CPAs, and bookkeepers who want to modernize their practices, scale sustainably, and build long-term value. We see a future where automation and AI support accountants, not replace them, helping firms work smarter and grow faster.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -168,8 +235,7 @@ const About = () => {
                 Our Core Values
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                These values guide every decision we make and every solution we deliver. 
-                They're not just words on a wall—they're the foundation of how we work.
+                These values guide how we work with every client and every solution we deliver.
               </p>
             </div>
             
@@ -221,22 +287,18 @@ const About = () => {
                 
                 <div className="lg:col-span-2 space-y-6 text-text-secondary">
                   <div>
-                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm</h3>
+                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm:</h3>
                     <p className="text-lg leading-relaxed">
-                      Hi, I'm Katie Steele, founder of SmartFirm.
+                      I'm Katie Steele, founder of SmartFirm.
                     </p>
                   </div>
                   
                   <p className="text-lg leading-relaxed">
-                    I created SmartFirm because I saw firsthand how many accounting professionals were drowning in daily tasks, struggling to keep up with marketing, and missing out on business growth—not because they weren't good at what they do, but because they didn't have the right systems in place and most aren't career marketers.
+                    I started SmartFirm because I saw how many accountants and CPAs were drowning in daily tasks, struggling to keep up with marketing, and missing out on growth. This happens because they are great at what they do, but don't have the right systems in place. Most firm owners aren't career marketers, or IT people, and they shouldn't have to be.
                   </p>
                   
                   <p className="text-lg leading-relaxed">
-                    Before SmartFirm, I spent over 20 years leading business transformations across industries and countries helping companies streamline operations, implement smarter systems, and scale with confidence. From turning around struggling hospitality brands to guiding private equity investments and implementing Microsoft Dynamics 365 at enterprise scale, I've built a career helping businesses unlock their full potential.
-                  </p>
-                  
-                  <p className="text-lg leading-relaxed">
-                    Now I bring all of that to the work I do with accounting firms.
+                    Before SmartFirm, I spent 20+ years helping businesses transform. From turning around struggling hospitality brands, to guiding private equity investments, to implementing Microsoft Dynamics 365 at enterprise scale, I've built my career on helping companies unlock growth through smarter systems. Now, I bring that same expertise to accounting firms.
                   </p>
                 </div>
               </div>
@@ -244,34 +306,28 @@ const About = () => {
               <div className="space-y-8">
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works</CardTitle>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works:</CardTitle>
                     <CardDescription className="text-lg text-text-secondary space-y-4">
-                      <p>I don't just understand marketing — I understand business. I've helped companies:</p>
-                      <ul className="space-y-2 ml-6 list-disc">
-                        <li>Double revenue in less than a year</li>
-                        <li>Reduce manual workload with smart automation</li>
-                        <li>Turn referrals into consistent, trackable growth</li>
-                        <li>Build scalable systems that don't rely on guesswork</li>
-                      </ul>
+                      <p>I don't just understand marketing, I understand business. That's why SmartFirm has become the go-to accountant marketing specialist for firms ready to scale with proven systems instead of guesswork.</p>
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm</CardTitle>
+                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm:</CardTitle>
                     <CardDescription className="text-lg text-text-secondary space-y-4">
                       <p>
-                        Most firm owners don't have the time, or desire, to become tech experts. I get it. You want more clients, more time, and more peace of mind. You don't need another software; you need a system that works for you. That's exactly what SmartFirm delivers.
+                        Most firm owners don't want to become tech experts, and you shouldn't have to. You want more clients, more time, and more peace of mind. You don't need another piece of software; you need a system that works for you.
                       </p>
                       <p>
-                        We set everything up: lead capture tools, review automation, voice and chat AI, appointment funnels, SEO boosters, and nurture campaigns so you don't have to touch the tech. Everything is designed to run in the background while you stay focused on serving your clients.
+                        That's exactly what SmartFirm delivers. We set up everything, lead capture tools, review automation, AI chat and voice response, appointment funnels, SEO boosters, and nurture campaigns, all so you don't have to touch the tech. Everything runs in the background while you focus on serving your clients.
                       </p>
                       <p>
-                        SmartFirm is the system I wish every accounting firm had years ago. It's simple, effective, and built to help you grow without burnout.
+                        SmartFirm is the system I wish every accounting firm had years ago: simple, effective, and built to help you grow without burnout.
                       </p>
                       <p className="font-semibold text-primary-blue pt-4">
-                        If you're ready to finally have your marketing handled and actually start seeing results, I'd love to show you how.
+                        If you're ready to have your marketing handled and start seeing results finally, I'd love to show you how.
                       </p>
                     </CardDescription>
                   </CardHeader>
@@ -289,7 +345,7 @@ const About = () => {
                 Meet the Experts Behind Your Growth
               </h2>
               <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-                Our team combines deep accounting industry knowledge with cutting-edge marketing and technology expertise.
+                Our team blends accounting knowledge with modern marketing and technology so your firm can grow with confidence.
               </p>
             </div>
             
@@ -339,16 +395,13 @@ const About = () => {
           </div>
         </section>
 
-        {/* Why Choose SmartFirm */}
+        {/* What Makes SmartFirm Different */}
         <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
-                Why Choose SmartFirm?
+                What Makes SmartFirm Different
               </h2>
-              <h3 className="text-xl md:text-2xl font-semibold text-primary-teal mb-6">
-                What Makes Us Different
-              </h3>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -371,27 +424,99 @@ const About = () => {
           </div>
         </section>
 
-        {/* Testimonial */}
+        {/* Our Journey */}
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
-                <Award className="h-12 w-12 text-primary-teal mx-auto mb-6" />
-                <blockquote className="text-xl text-text-primary italic mb-6">
-                  "Working with SmartFirm has been transformative for our practice. Their team doesn't just implement solutions—they become 
-                  true partners in our growth. Their dedication to our success and deep understanding of accounting firms sets them apart 
-                  from every other agency we've worked with."
-                </blockquote>
-                <cite className="text-text-secondary">
-                  — Robert Kim, Managing Partner, Kim & Associates CPA
-                </cite>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+                Our Journey
+              </h2>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-6">
+                {journeyMilestones.map((milestone, index) => (
+                  <Card key={index} className="border-light-border shadow-elegant">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-teal/20 flex items-center justify-center">
+                          <CheckCircle className="h-5 w-5 text-primary-teal" />
+                        </div>
+                        <p className="text-lg text-text-secondary leading-relaxed flex-1">
+                          {milestone}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 md:py-28 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    How do I get started?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    Book a free strategy call. We will learn about your goals and create a custom plan for your firm.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    What is your pricing structure?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    Pricing is customized based on firm size, services, and objectives. We will provide a clear proposal after the strategy call.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    Do you offer guarantees?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    We do not promise one-size-fits-all outcomes. We align on measurable success metrics and provide ongoing support to help you reach them.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    How fast can we launch?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    We can have your core marketing automation up and running in under 30 days.
+                  </p>
+                </details>
+
+                <details className="group border border-border rounded-lg p-6 bg-background">
+                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                    Do you work with firms outside of accounting?
+                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                  </summary>
+                  <p className="mt-4 text-text-secondary leading-relaxed">
+                    Our focus is accounting, CPA, bookkeeping, and tax practices. Our team has supported 50+ companies across industries, and we apply that experience to build systems that fit accounting workflows.
+                  </p>
+                </details>
               </div>
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-primary-blue to-primary-teal text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary to-teal text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares

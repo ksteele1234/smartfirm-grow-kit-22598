@@ -9,7 +9,7 @@ const ProtectPractice = () => {
     metaDescription: "Safeguard your accounting practice against threats, ensure business continuity, and future-proof your firm with comprehensive protection strategies.",
     content: {},
     heroTitle: "Protect Your Practice & Your Future",
-    heroSubtitle: "Safeguard your firm against threats and future-proof your business with comprehensive protection strategies",
+    heroSubtitle: "Protect your practice & your future with comprehensive strategies that safeguard your firm against threats and ensure business continuity.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
     keyBenefits: [

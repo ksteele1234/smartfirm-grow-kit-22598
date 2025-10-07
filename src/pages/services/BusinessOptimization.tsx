@@ -8,7 +8,7 @@ const BusinessOptimization = () => {
     slug: "business-optimization",
     content: {},
     heroTitle: "Business Optimization for Accounting Firms",
-    heroSubtitle: "Improve your firm's processes and performance with data-driven insights and executive dashboards.",
+    heroSubtitle: "Business optimization for accounting firms that improves your firm's processes and performance with data-driven insights and executive dashboards.",
     heroDescription: "Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.",
     benefits: [
       {

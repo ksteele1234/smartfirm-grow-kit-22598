@@ -5,6 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { 
   TrendingUp, 
   Users, 
@@ -134,18 +142,56 @@ const SuccessStories = () => {
         description="Real results from accounting firms using SmartFirm. See how firms achieved significant growth and operational efficiency."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Success Stories", url: "/case-studies" }
+        ]}
+        faqs={[
+          {
+            question: "How do I get started?",
+            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+          },
+          {
+            question: "What is the pricing structure?",
+            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
+          },
+          {
+            question: "Do you offer guarantees?",
+            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
+          }
+        ]}
       />
       <Header />
       
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Success Stories</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      
       {/* Hero Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-primary to-teal">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-teal">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Real Results, Real Growth: SmartFirm Success Stories
           </h1>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Explore how accounting firms like yours have achieved significant growth and efficiency with SmartFirm's tailored solutions.
-          </p>
+          <div id="sf-keyword-intro">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Discover real results, real growth: SmartFirm success stories from accounting firms that transformed their practices. These case studies showcase how firms achieved significant growth and operational efficiency through our proven methodologies and dedicated support.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="white-outline-on-dark" size="hero">
               Read All Case Studies
@@ -185,10 +231,10 @@ const SuccessStories = () => {
             <Card className="max-w-4xl mx-auto shadow-card">
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-heading font-bold text-primary mb-4">
+                <div>
+                    <p className="text-2xl font-heading font-bold text-primary mb-4">
                       {featuredCaseStudy.title}
-                    </h3>
+                    </p>
                     <p className="text-text-secondary mb-6">
                       {featuredCaseStudy.summary}
                     </p>
@@ -448,6 +494,48 @@ const SuccessStories = () => {
             <Calendar className="w-5 h-5 mr-2" />
             Book Your Free Strategy Call
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  How do I get started?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  Book a free strategy call to discuss your firm's specific needs and goals. We'll evaluate your current situation and recommend the best path forward based on these success stories.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  What is the pricing structure?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote.
+                </p>
+              </details>
+
+              <details className="group border border-border rounded-lg p-6 bg-background">
+                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                  Do you offer guarantees?
+                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p className="mt-4 text-text-secondary leading-relaxed">
+                  We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. These success stories demonstrate our commitment to delivering measurable results.
+                </p>
+              </details>
+            </div>
+          </div>
         </div>
       </section>
 

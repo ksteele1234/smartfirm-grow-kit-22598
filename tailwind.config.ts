@@ -63,6 +63,9 @@ export default {
         "primary-teal": "hsl(var(--primary-teal))",
         "light-teal": "hsl(var(--light-teal))",
         "accent-light": "hsl(var(--accent-light))",
+        "dark-teal": "hsl(var(--dark-teal))",
+        "dark-blue": "hsl(var(--dark-blue))",
+        "slate-navy": "hsl(var(--slate-navy))",
         "light-border": "hsl(220 13% 91%)",
         teal: {
           DEFAULT: "hsl(var(--teal))",

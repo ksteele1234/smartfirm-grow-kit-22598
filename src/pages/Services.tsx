@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const Services = () => {
   const serviceCategories = [{
@@ -34,31 +35,74 @@ const Services = () => {
     description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
     link: "/services/packages"
   }];
-  return <div className="min-h-screen bg-background">
+  
+  return (
+    <div className="min-h-screen bg-background">
       <SEO 
-        title="Services | SmartFirm"
-        description="Marketing automation & technology solutions for accounting firms. Lead generation, client retention, and business optimization."
+        title="Marketing Automation Services for Accounting Firms | SmartFirm"
+        description="Marketing automation services for accounting firms including lead generation, client retention, and business optimization that drive measurable growth."
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/services" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Services</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-background to-accent/10">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">Marketing Automation Services for Accounting Firms</h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
-              From intelligent marketing automation to AI-driven technology optimization, SmartFirm provides the predictive tools and data-driven expertise you need to scale efficiently.
-            </p>
+        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <div
+              className="absolute -inset-[10px] pointer-events-none animate-aurora"
+              style={{
+                backgroundImage:
+                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
+                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
+                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
+                animation: 'aurora 240s linear infinite',
+                opacity: 0.49,
+              }}
+            />
+          </div>
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            </svg>
+          </div>
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">Marketing Automation Services for Accounting Firms</h1>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
+                Marketing automation services for accounting firms include intelligent lead generation, AI-driven technology optimization, and data-driven expertise to scale your practice efficiently.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="default" size="lg" asChild>
-                <Link to="/services/all">
+                <Link to="/all-services">
                   Explore All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild className="bg-white/10 text-white border-white/20 hover:bg-white/20">
                 <Link to="/get-started">Book a Free Consultation</Link>
               </Button>
             </div>
@@ -128,6 +172,21 @@ const Services = () => {
                     </Button>
                   </CardContent>
                 </Card>)}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Accounting firms choose SmartFirm for a unified growth system that blends marketing automation, integrated technology, and data-driven strategy. We reduce manual work, improve follow-up, and turn more visitors into booked consultations.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                You’ll get a clear roadmap, hands-on implementation, and ongoing optimization—so results improve over time without adding headcount. Implementation is guided and designed around busy seasons to minimize disruption.
+              </p>
             </div>
           </div>
         </section>
@@ -328,6 +387,8 @@ const Services = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Services;

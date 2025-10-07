@@ -8,7 +8,7 @@ const AutomatedLeadFollowUp = () => {
     slug: "automated-lead-follow-up",
     content: {},
     heroTitle: "Automated Lead Follow-Up for Accounting Firms",
-    heroSubtitle: "Never lose a prospect again with intelligent follow-up sequences that convert leads into clients while you focus on serving existing customers.",
+    heroSubtitle: "Automated lead follow-up for accounting firms so you never lose a prospect again, with intelligent sequences that convert leads into clients while you focus on serving existing customers.",
     heroDescription: "Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.",
     benefits: [
       {

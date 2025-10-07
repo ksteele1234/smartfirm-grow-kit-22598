@@ -1,5 +1,13 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +32,7 @@ const Resources = () => {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Guides & Whitepapers",
       description: "In-depth articles, e-books, and whitepapers on marketing, automation, and business growth.",
-      link: "/resources/guides"
+      link: "/get-started"
     },
     {
       icon: <Calculator className="h-8 w-8 text-teal" />,
@@ -36,19 +44,19 @@ const Resources = () => {
       icon: <FileText className="h-8 w-8 text-primary" />,
       title: "Blog",
       description: "Latest articles, industry news, and thought leadership posts.",
-      link: "/resources/blog"
+      link: "/get-started"
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-teal" />,
       title: "Case Studies",
       description: "Real-world examples of client success and transformation stories.",
-      link: "/resources/case-studies"
+      link: "/case-studies"
     },
     {
       icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
-      link: "/resources/webinars"
+      link: "/get-started"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-teal" />,
@@ -82,23 +90,47 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Resources | SmartFirm"
-        description="Free guides, tools, calculators, and insights to help accounting professionals grow their firms. Expert CPA marketing resources."
+        title="CPA Marketing Resources: Free Guides & Tools | SmartFirm"
+        description="CPA marketing resources including free guides, tools, calculators, and expert insights to help accounting professionals grow their firms with proven strategies."
         pageType="default"
         noindex={false}
+        dateModified={new Date().toISOString()}
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Resources", url: "/resources" }
+        ]}
       />
       <Header />
-      <main className="pt-20">
+      
+      {/* Breadcrumb */}
+      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+        <div className="container mx-auto px-4 lg:px-6 py-1.5">
+          <Breadcrumb>
+            <BreadcrumbList className="text-sm text-muted-foreground">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Resources</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </nav>
+      
+      <main>
         {/* Hero Section */}
-        <section className="py-24 md:py-32 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
-              Grow Your Firm with Our Expert Resources
+              CPA Marketing Resources to Grow Your Firm
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-              Access a wealth of knowledge, tools, and insights designed to help accounting professionals thrive. 
-              From detailed guides to interactive calculators, we've got everything you need for growth.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
+                CPA marketing resources designed for accounting professionals include comprehensive guides, interactive calculators, and proven strategies to help your firm thrive and grow efficiently.
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button size="lg" variant="hero">
                 Explore All Resources
@@ -113,16 +145,21 @@ const Resources = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-20 md:py-28">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              Your Hub for Accounting Firm Success
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies. 
-              Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations, 
-              our expert-curated content provides the guidance you need to succeed.
-            </p>
+        <section className="py-16 md:py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
+                Your Hub for Accounting Firm Success
+              </h2>
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
+                SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies. 
+                Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations, 
+                our expert-curated content provides the guidance you need to succeed.
+              </p>
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
+                We've compiled years of experience working with accounting firms into comprehensive guides, interactive tools, and case studies that deliver real-world results. From ROI calculators to SEO audits, marketing scorecards to workflow templates, every resource is designed to help you make informed decisions and take action toward growth.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -191,7 +228,7 @@ const Resources = () => {
                     </div>
                   </div>
                   <div className="p-10 lg:p-16 flex flex-col justify-center bg-background">
-                    <h4 className="font-semibold text-foreground mb-6 text-lg">What You'll Learn:</h4>
+                    <h3 className="font-semibold text-foreground mb-6 text-lg">What You'll Learn:</h3>
                     <ul className="space-y-4 text-muted-foreground mb-10 text-base">
                       <li className="flex items-start">
                         <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
@@ -266,8 +303,8 @@ const Resources = () => {
 
             <div className="text-center">
               <Button variant="outline" asChild>
-                <a href="/resources/blog">
-                  View All Blog Posts
+                <a href="/get-started">
+                  Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
