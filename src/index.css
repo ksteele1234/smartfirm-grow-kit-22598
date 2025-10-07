@@ -9,7 +9,7 @@ All colors MUST be HSL converted from the official brand colors.
 @layer base {
   :root {
     /* Official SmartFirm Brand Colors - Exact Match to Guidelines */
-    --primary-blue: 221 30% 33%; /* #3A4A6C - Primary Blue */
+    --primary-blue: 221 47% 62%; /* #647FBC - Soft Blue (Primary) */
     --secondary-blue: 218 34% 67%; /* #91ADC8 - Blue Grey */
     --primary-teal: 193 35% 45%; /* #4D869C - Primary Teal */
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
