@@ -16,32 +16,39 @@ export const AuroraBackground = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col items-center justify-center bg-white text-foreground overflow-hidden",
+        "relative flex flex-col items-center justify-center bg-background text-foreground overflow-hidden",
         className
       )}
       {...props}
     >
       {/* Aurora effect layers with movement */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+      <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-accent/5 to-transparent" />
         <div
-          className="absolute top-0 -left-40 w-[1200px] h-[1200px] rounded-full opacity-80 blur-[120px]"
+          className="absolute -top-[20%] -left-[10%] w-[1200px] h-[1200px] rounded-full opacity-90 blur-[160px] mix-blend-normal"
           style={{
-            background: "radial-gradient(circle, hsl(var(--teal)) 0%, transparent 50%)",
+            background:
+              "radial-gradient(40% 40% at 50% 50%, hsl(var(--primary) / 0.85) 0%, transparent 70%)",
             animation: "float1 12s ease-in-out infinite",
+            willChange: "transform",
           }}
         />
         <div
-          className="absolute -top-20 -right-40 w-[1000px] h-[1000px] rounded-full opacity-70 blur-[100px]"
+          className="absolute -top-[10%] -right-[15%] w-[1100px] h-[1100px] rounded-full opacity-80 blur-[150px] mix-blend-normal"
           style={{
-            background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 50%)",
-            animation: "float2 10s ease-in-out infinite 2s",
+            background:
+              "radial-gradient(45% 45% at 50% 50%, hsl(var(--accent) / 0.8) 0%, transparent 70%)",
+            animation: "float2 10s ease-in-out infinite 1.5s",
+            willChange: "transform",
           }}
         />
         <div
-          className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[1100px] h-[1100px] rounded-full opacity-60 blur-[110px]"
+          className="absolute -bottom-[15%] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full opacity-75 blur-[160px] mix-blend-normal"
           style={{
-            background: "radial-gradient(circle, hsl(var(--accent)) 0%, transparent 50%)",
-            animation: "float3 15s ease-in-out infinite 4s",
+            background:
+              "radial-gradient(42% 42% at 50% 50%, hsl(var(--secondary) / 0.75) 0%, transparent 70%)",
+            animation: "float3 16s ease-in-out infinite 3s",
+            willChange: "transform",
           }}
         />
       </div>
