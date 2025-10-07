@@ -35,7 +35,9 @@ const Services = () => {
     description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
     link: "/services/packages"
   }];
-  return <div className="min-h-screen bg-background">
+  
+  return (
+    <div className="min-h-screen bg-background">
       <SEO 
         title="Marketing Automation Services for Accounting Firms | SmartFirm"
         description="Marketing automation services for accounting firms including lead generation, client retention, and business optimization that drive measurable growth."
@@ -385,6 +387,8 @@ const Services = () => {
         </section>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Services;
