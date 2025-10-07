@@ -55,9 +55,20 @@ const Index = () => {
                   </p>
                 </div>
 
-                {/* Trust Indicators */}
-                <div className="flex flex-wrap gap-6 text-[#1F2937]">
-...
+                {/* Trust Indicators & CTAs */}
+                <div className="flex flex-wrap gap-4 items-center mt-8">
+                  <Button variant="hero" size="lg" className="group" asChild>
+                    <a href="/get-started">
+                      Get Your Free Growth Plan
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="lg" className="group" asChild>
+                    <a href="#how-it-works">
+                      <Play className="mr-2 h-5 w-5" />
+                      See How It Works
+                    </a>
+                  </Button>
                 </div>
               </div>
 
@@ -115,10 +126,6 @@ const Index = () => {
           </div>
         </AuroraBackground>
 
-        {/* Services Preview Section */}
-        <section className="py-16 md:py-20 bg-background">
-...
-        </section>
         
         <ServicesSection />
         <TestimonialsSection />
