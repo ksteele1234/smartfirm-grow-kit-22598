@@ -49,7 +49,7 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-gray-900 max-w-2xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-dark-blue max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 
@@ -99,7 +99,7 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="hero" size="lg" className="group bg-[#2D5F4F] hover:bg-[#234A3C] text-white" asChild>
+                <Button variant="hero" size="lg" className="group bg-dark-teal hover:bg-dark-teal/90 text-white" asChild>
                   <a href="/get-started">
                     Get Your Free Growth Plan
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
