@@ -169,14 +169,14 @@ const Header = () => {
                 <NavigationMenuLink href="/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
                 )}>
-                  Home
+                  HOME
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
                   <a href="/services" className="flex items-center">
-                    Services
+                    SERVICES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -222,7 +222,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
                   <a href="/solutions" className="flex items-center">
-                    Solutions
+                    SOLUTIONS
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -268,7 +268,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
                   <a href="/industries" className="flex items-center">
-                    Industries
+                    INDUSTRIES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -293,7 +293,7 @@ const Header = () => {
                 <NavigationMenuLink href="/case-studies" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
                 )}>
-                  Case Studies
+                  CASE STUDIES
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -301,7 +301,7 @@ const Header = () => {
                 <NavigationMenuLink href="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
                 )}>
-                  About Us
+                  ABOUT US
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -309,7 +309,7 @@ const Header = () => {
                 <NavigationMenuLink href="/contact" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
                 )}>
-                  Contact
+                  CONTACT
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -317,7 +317,7 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center space-x-4">
             <Button variant="dark-teal" size="default" asChild>
-              <a href="/get-started">Get Started</a>
+              <a href="/get-started">GET STARTED</a>
             </Button>
           </div>
 
@@ -335,28 +335,28 @@ const Header = () => {
           <div className="lg:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
-                Home
+                HOME
               </a>
               <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
-                Services
+                SERVICES
               </a>
               <a href="/solutions" className="text-foreground hover:text-primary transition-colors font-medium">
-                Solutions
+                SOLUTIONS
               </a>
               <a href="/industries" className="text-foreground hover:text-primary transition-colors font-medium">
-                Industries
+                INDUSTRIES
               </a>
               <a href="/case-studies" className="text-foreground hover:text-primary transition-colors font-medium hidden">
-                Case Studies
+                CASE STUDIES
               </a>
               <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
-                About Us
+                ABOUT US
               </a>
               <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
-                Contact
+                CONTACT
               </a>
               <Button variant="dark-teal" size="default" className="w-full mt-4" asChild>
-                <a href="/get-started">Get Started</a>
+                <a href="/get-started">GET STARTED</a>
               </Button>
             </nav>
           </div>
