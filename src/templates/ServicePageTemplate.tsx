@@ -6,6 +6,7 @@ import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -160,7 +161,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/10 relative overflow-hidden">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#7AB2B2] relative overflow-hidden">
+        <CurvedSeparator variant="light-teal" className="mb-12" />
         <BackgroundPattern pattern="grid" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-8">
@@ -198,7 +200,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
+        <CurvedSeparator variant="primary" className="mb-12" />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Frequently Asked Questions

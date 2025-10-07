@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -232,7 +233,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
+        <CurvedSeparator variant="primary" className="mb-12" />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Frequently Asked Questions

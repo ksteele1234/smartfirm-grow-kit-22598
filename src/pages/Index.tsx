@@ -17,6 +17,7 @@ import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { ArrowRight, Play } from "lucide-react";
 
 const Index = () => {
@@ -49,7 +50,8 @@ const Index = () => {
         <SolutionsSection />
 
         {/* Homepage FAQ Section */}
-        <section className="py-12 md:py-16">
+        <section className="py-12 md:py-16 bg-[#4D869C]">
+          <CurvedSeparator variant="teal" className="mb-12" />
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>

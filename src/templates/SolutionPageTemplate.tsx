@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -210,7 +211,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-secondary/5 to-background">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#7AB2B2]">
+        <CurvedSeparator variant="light-teal" className="mb-12" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-primary mb-4">
@@ -240,7 +242,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
+        <CurvedSeparator variant="primary" className="mb-12" />
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-primary mb-8 text-center">
             Frequently Asked Questions
