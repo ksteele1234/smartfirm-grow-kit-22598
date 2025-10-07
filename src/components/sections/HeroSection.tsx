@@ -49,7 +49,7 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-primary max-w-2xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-gray-900 max-w-2xl">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 
