@@ -48,7 +48,7 @@ const ServicesSection = () => {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#0F172A] mb-6">
+          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#002E4C] mb-6">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
           <p className="text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed mb-8">
@@ -71,7 +71,7 @@ const ServicesSection = () => {
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-[#647FBC] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-3">
+                  <h3 className="text-xl font-bold text-[#002E4C] mb-3">
                     {service.title}
                   </h3>
                   <p className="text-[#6B7280] leading-relaxed">
@@ -95,7 +95,7 @@ const ServicesSection = () => {
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-[#647FBC] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold text-[#0F172A] mb-3">
+                  <h3 className="text-xl font-bold text-[#002E4C] mb-3">
                     {service.title}
                   </h3>
                   <p className="text-[#6B7280] leading-relaxed">
@@ -110,7 +110,7 @@ const ServicesSection = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-primary/5 to-teal/5 rounded-2xl p-8 lg:p-12 border border-border/50">
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-[#0F172A] mb-4">
+            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-[#002E4C] mb-4">
               Ready to Transform Your Marketing?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
