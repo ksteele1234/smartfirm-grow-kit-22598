@@ -14,7 +14,14 @@ const HeroSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  return <AuroraBackground className="h-[100vh]">
+  return <AuroraBackground className="h-[100vh] relative">
+      {/* Curved bottom edge */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+        <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="white"/>
+        </svg>
+      </div>
+      
       <motion.div initial={{
       opacity: 0.0,
       y: 40
