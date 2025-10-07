@@ -69,7 +69,7 @@ const ServicesSection = () => {
                   className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
                 >
                   <div className="mb-4">
-                    <Icon className="h-10 w-10 text-[#647FBC] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                    <Icon className="h-10 w-10 text-[#3A4A6C] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-[#002E4C] mb-3">
                     {service.title}
@@ -93,7 +93,7 @@ const ServicesSection = () => {
                   className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
                 >
                   <div className="mb-4">
-                    <Icon className="h-10 w-10 text-[#647FBC] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                    <Icon className="h-10 w-10 text-[#3A4A6C] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-[#002E4C] mb-3">
                     {service.title}

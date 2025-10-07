@@ -83,7 +83,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#647FBC] via-[#4D869C] to-[#7AB2B2] overflow-hidden">
+      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#3A4A6C] via-[#4D869C] to-[#7AB2B2] overflow-hidden">
         {/* Curved bottom edge */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
           <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -108,7 +108,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 Discover <a href="/solutions" data-sf="internal-add" className="text-white underline hover:text-white/80">our solutions</a>, read <a href="/case-studies" data-sf="internal-add" className="text-white underline hover:text-white/80">client success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-white/80">AICPA resources</a>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" className="group bg-white text-[#647FBC] hover:bg-white/90">
+                <Button size="lg" variant="secondary" className="group bg-white text-[#3A4A6C] hover:bg-white/90">
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
