@@ -35,7 +35,7 @@ repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.4) 0%, hsl(var(--p
             backgroundSize: '150% 150%, 150% 150%, 150% 150%, 300%',
             backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
             animation: 'aurora 240s linear infinite',
-            opacity: 0.7,
+            opacity: 0.9,
           }}
         />
       </div>
