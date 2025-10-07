@@ -52,6 +52,86 @@ const ToolsCalculators = () => {
       results: "ROI projections",
       link: "/tools/roi-calculator", 
       color: "from-secondary to-blue-grey"
+    },
+    {
+      id: "automation-readiness-quiz",
+      title: "Automation Readiness Quiz",
+      description: "Assess your firm's readiness for automation and discover which processes you can streamline today.",
+      icon: <CheckCircle className="h-8 w-8 text-primary" />,
+      duration: "4 minutes",
+      results: "Readiness score",
+      link: "/tools/automation-readiness-quiz",
+      color: "from-primary to-secondary"
+    },
+    {
+      id: "workflow-bottleneck-finder",
+      title: "Workflow Bottleneck Finder",
+      description: "Identify inefficiencies in your firm's workflows and get recommendations to eliminate bottlenecks.",
+      icon: <BarChart3 className="h-8 w-8 text-teal" />,
+      duration: "5 minutes",
+      results: "Bottleneck analysis",
+      link: "/tools/workflow-bottleneck-finder",
+      color: "from-teal to-light-teal"
+    },
+    {
+      id: "tech-stack-roi-calculator",
+      title: "Tech Stack ROI Calculator",
+      description: "Calculate the return on investment for your current technology stack and discover optimization opportunities.",
+      icon: <Calculator className="h-8 w-8 text-secondary" />,
+      duration: "3 minutes",
+      results: "ROI analysis",
+      link: "/tools/tech-stack-roi-calculator",
+      color: "from-secondary to-blue-grey"
+    },
+    {
+      id: "client-lifetime-value-calculator",
+      title: "Client Lifetime Value Calculator",
+      description: "Estimate the lifetime value of your clients and understand the true cost of client churn.",
+      icon: <Users className="h-8 w-8 text-primary" />,
+      duration: "3 minutes",
+      results: "CLV metrics",
+      link: "/tools/client-lifetime-value-calculator",
+      color: "from-primary to-secondary"
+    },
+    {
+      id: "lead-generation-scorecard",
+      title: "Lead Generation Scorecard",
+      description: "Evaluate your lead generation effectiveness and get actionable recommendations to improve conversions.",
+      icon: <TrendingUp className="h-8 w-8 text-teal" />,
+      duration: "4 minutes",
+      results: "Lead gen score",
+      link: "/tools/lead-generation-scorecard",
+      color: "from-teal to-light-teal"
+    },
+    {
+      id: "modern-firm-quiz",
+      title: "Modern Firm Quiz",
+      description: "Discover how modern your accounting firm is in technology, marketing, and operations.",
+      icon: <CheckCircle className="h-8 w-8 text-secondary" />,
+      duration: "5 minutes",
+      results: "Modernization score",
+      link: "/tools/modern-firm-quiz",
+      color: "from-secondary to-blue-grey"
+    },
+    {
+      id: "growth-potential-scorecard",
+      title: "Growth Potential Scorecard",
+      description: "Input your firm's data to benchmark performance and uncover untapped growth opportunities.",
+      icon: <BarChart3 className="h-8 w-8 text-primary" />,
+      duration: "4 minutes",
+      results: "Growth analysis",
+      link: "/tools/growth-potential-scorecard",
+      color: "from-primary to-secondary"
+    },
+    {
+      id: "seo-audit",
+      title: "SEO Audit Tool",
+      description: "Analyze your website's SEO performance and get expert recommendations to improve search rankings.",
+      icon: <TrendingUp className="h-8 w-8 text-teal" />,
+      duration: "2 minutes",
+      results: "SEO report",
+      link: "/tools/seo-audit",
+      color: "from-teal to-light-teal"
     }
   ];
 
