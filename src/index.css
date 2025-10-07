@@ -129,21 +129,11 @@ All colors MUST be HSL converted from the official brand colors.
   }
   
   h1 {
-    @apply text-4xl lg:text-5xl leading-[1.8];
-    color: hsl(var(--primary));
+    @apply text-4xl lg:text-5xl leading-[1.8] text-foreground;
   }
   
   h2 {
-    @apply text-3xl lg:text-4xl text-teal !important;
-  }
-  
-  /* Light green on dark backgrounds for better contrast */
-  .dark-bg h2,
-  [class*="bg-gradient-to-"] h2,
-  [class*="from-primary"] h2,
-  [class*="to-teal"] h2,
-  [class*="bg-primary"] h2 {
-    @apply text-light-teal !important;
+    @apply text-3xl lg:text-4xl text-foreground;
   }
   
   h3 {
