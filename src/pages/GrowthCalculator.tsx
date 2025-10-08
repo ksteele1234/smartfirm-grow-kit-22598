@@ -90,47 +90,47 @@ const GrowthCalculator = () => {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-16 bg-gradient-to-b from-[#7fa3d4] to-[#647FBC]">
+      <section className="py-16 bg-gradient-to-r from-[#91ADC8] to-[#FAFDD6]">
         <div className="container mx-auto px-4 lg:px-6">
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-12">
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
-              <div className="flex justify-center">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
-                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <div className="bg-[#FAFDD6] border-2 border-[#4D869C] p-6 space-y-4">
+              <div className="flex items-start gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                  <circle cx="12" cy="12" r="11" fill="transparent" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="#4D869C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+                <p className="text-[#4D869C] font-medium text-left">
+                  Client workload keeps increasing, but growth doesn't.
+                </p>
               </div>
-              <p className="text-gray-800 font-medium">
-                Client workload keeps increasing but growth doesn't
-              </p>
             </div>
 
-            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
-              <div className="flex justify-center">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
-                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <div className="bg-[#FAFDD6] border-2 border-[#4D869C] p-6 space-y-4">
+              <div className="flex items-start gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                  <circle cx="12" cy="12" r="11" fill="transparent" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="#4D869C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+                <p className="text-[#4D869C] font-medium text-left">
+                  Marketing feels overwhelming and eats up time you don't have.
+                </p>
               </div>
-              <p className="text-gray-800 font-medium">
-                Marketing feels overwhelming and eats up time you don't have
-              </p>
             </div>
 
-            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
-              <div className="flex justify-center">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
-                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            <div className="bg-[#FAFDD6] border-2 border-[#4D869C] p-6 space-y-4">
+              <div className="flex items-start gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                  <circle cx="12" cy="12" r="11" fill="transparent" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="#4D869C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
+                <p className="text-[#4D869C] font-medium text-left">
+                  Without a system, firms plateau and miss out on predictable revenue.
+                </p>
               </div>
-              <p className="text-gray-800 font-medium">
-                Without a system, times plateau and miss out on predictable revenue
-              </p>
             </div>
           </div>
         </div>
