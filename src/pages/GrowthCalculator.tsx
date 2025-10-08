@@ -61,17 +61,17 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Right Column - Form */}
-            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-lg">
+            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-lg min-h-[631px]">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/O0M07sNaXcLcLWu3AJDA"
                 style={{
                   width: "100%",
-                  height: "100%",
+                  height: "631px",
                   border: "none",
                   borderRadius: "4px",
                 }}
                 id="inline-O0M07sNaXcLcLWu3AJDA"
-                data-layout="{'id':'INLINE'}"
+                data-layout='{"id":"INLINE"}'
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
                 data-activation-type="alwaysActivated"
@@ -90,34 +90,43 @@ const GrowthCalculator = () => {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-16 bg-primary">
+      <section className="py-16 bg-gradient-to-b from-[#7fa3d4] to-[#647FBC]">
         <div className="container mx-auto px-4 lg:px-6">
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-12">
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-lg p-6 text-center space-y-4">
+            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
               <div className="flex justify-center">
-                <CheckmarkIcon variant="blue-border" className="w-12 h-12" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <p className="text-gray-800 font-medium">
                 Client workload keeps increasing but growth doesn't
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 text-center space-y-4">
+            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
               <div className="flex justify-center">
-                <CheckmarkIcon variant="blue-border" className="w-12 h-12" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <p className="text-gray-800 font-medium">
                 Marketing feels overwhelming and eats up time you don't have
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-6 text-center space-y-4">
+            <div className="bg-[#FAFDD6] rounded-lg p-6 text-center space-y-4">
               <div className="flex justify-center">
-                <CheckmarkIcon variant="blue-border" className="w-12 h-12" />
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="15" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                  <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
               <p className="text-gray-800 font-medium">
                 Without a system, times plateau and miss out on predictable revenue
@@ -128,7 +137,7 @@ const GrowthCalculator = () => {
       </section>
 
       {/* CALCULATOR DESCRIPTION SECTION */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#e8f5e9]">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
@@ -138,21 +147,30 @@ const GrowthCalculator = () => {
               </h2>
               
               <p className="text-lg text-gray-700">
-                You already know your time is limited. This calculator gives you instant clarity on your growth potential using your numbers, not vague theory. In under a minute, you'll see exactly how much revenue you're missing and what it's worth to fix it.
+                You already know your time is limited. <span className="font-bold">This calculator gives you instant clarity on your growth potential using your numbers, not vague theory.</span> In under a minute, you'll see exactly <span className="font-bold">how much revenue you're missing and what it's worth to fix it.</span>
               </p>
 
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <CheckmarkIcon variant="solid" className="flex-shrink-0 mt-1" />
-                  <span className="text-gray-800 font-medium">100% free and instant</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
+                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-gray-800 font-medium"><span className="font-bold">100% free</span> and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckmarkIcon variant="solid" className="flex-shrink-0 mt-1" />
-                  <span className="text-gray-800 font-medium">Personalized to your firm</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
+                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-gray-800 font-medium"><span className="font-bold">Personalized</span> to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckmarkIcon variant="solid" className="flex-shrink-0 mt-1" />
-                  <span className="text-gray-800 font-medium">Built by marketing experts who understand accountants</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
+                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span className="text-gray-800 font-medium">Built by <span className="font-bold">marketing experts who understand accountants</span></span>
                 </div>
               </div>
 
