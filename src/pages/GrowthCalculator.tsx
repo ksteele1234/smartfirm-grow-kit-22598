@@ -45,7 +45,7 @@ const GrowthCalculator = () => {
 
   const benefits = [
     "See exactly where your firm stands vs. industry benchmarks",
-    "Identify your biggest growth opportunities in 2 minutes",
+    "Identify your biggest growth opportunities in 60 seconds",
     "Get a personalized roadmap to scale your practice"
   ];
 
@@ -70,7 +70,7 @@ const GrowthCalculator = () => {
     <>
       <SEO 
         title="Free Growth Calculator for Accounting Firms"
-        description="Discover your firm's growth potential. Free calculator shows you exactly where you stand vs. industry benchmarks. Get your personalized growth score in 2 minutes."
+        description="Discover your firm's growth potential. Free calculator shows you exactly where you stand vs. industry benchmarks. Get your personalized growth score in 60 seconds."
         noindex={false}
       />
       
@@ -80,33 +80,28 @@ const GrowthCalculator = () => {
         {/* Hero Section with Form */}
         <section className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-              {/* Left Column - Headline */}
-              <div className="lg:pt-8">
-                <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-                  Discover Your Firm's True Growth Potential
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8">
-                  Take our free 2-minute assessment and get a personalized growth score that reveals exactly where your accounting firm stands—and how to scale faster.
-                </p>
-                <div className="flex flex-col gap-3 mb-8">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  ✓ No credit card required &nbsp;•&nbsp; ✓ Results in 60 seconds &nbsp;•&nbsp; ✓ 100% Free
-                </p>
+            <div className="max-w-3xl mx-auto text-center">
+              {/* Chart Graphic */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src="/src/assets/revenue-growth-chart.png" 
+                  alt="Revenue Growth Chart" 
+                  className="w-64 h-auto"
+                />
               </div>
-
-              {/* Right Column - Embedded Form */}
-              <div id="calculator-form" className="bg-white rounded-lg shadow-xl p-6 lg:sticky lg:top-24">
-                <h3 className="font-heading text-2xl font-bold text-primary mb-4 text-center">
-                  Get Your Free Growth Score
-                </h3>
+              
+              {/* Headline */}
+              <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+                How Much Revenue Is Your Firm Leaving on the Table?
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-xl text-muted-foreground mb-12">
+                In just 60 seconds, discover how many new clients you could add this year with the right marketing system.
+              </p>
+              
+              {/* Embedded Form */}
+              <div id="calculator-form" className="bg-white rounded-lg shadow-xl p-6 max-w-2xl mx-auto">
                 <div className="rounded-lg overflow-hidden">
                   <iframe
                     src="https://api.leadconnectorhq.com/widget/form/SiWJkhgszdob40Rkfcs2"
@@ -172,7 +167,7 @@ const GrowthCalculator = () => {
                 What If You Could See Exactly Where Your Firm Stands?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Our Growth Calculator compares your firm against industry benchmarks and reveals your hidden opportunities. In just 2 minutes, you'll understand:
+                Our Growth Calculator compares your firm against industry benchmarks and reveals your hidden opportunities. In just 60 seconds, you'll understand:
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -254,7 +249,7 @@ const GrowthCalculator = () => {
                 Ready to Unlock Your Firm's Growth Potential?
               </h2>
               <p className="text-xl mb-8 text-white/90">
-                Take the free 2-minute assessment and get your personalized growth score + action plan.
+                Take the free 60-second assessment and get your personalized growth score + action plan.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
