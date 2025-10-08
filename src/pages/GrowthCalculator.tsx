@@ -91,7 +91,7 @@ const GrowthCalculator = () => {
 
       {/* PROBLEM SECTION */}
       <section className="py-8" style={{
-        background: 'linear-gradient(to right, #6B8FB8 0%, #7AA0C5 50%, #8BA8C8 100%)'
+        background: 'linear-gradient(to bottom, #6B8FB8 0%, #7AA0C5 50%, #8BA8C8 100%)'
       }}>
         <div className="container mx-auto px-4 lg:px-6">
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-8">
