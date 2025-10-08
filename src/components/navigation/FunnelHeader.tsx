@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+import smartFirmLogo from "@/assets/smartfirm-logo-full.png";
 
 export const FunnelHeader = () => {
   return (
@@ -9,18 +9,18 @@ export const FunnelHeader = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/src/assets/smartfirm-logo.svg" 
+              src={smartFirmLogo} 
               alt="SmartFirm.io" 
-              className="h-8 w-auto"
+              className="h-10 w-auto"
             />
           </Link>
           
           <a 
-            href="tel:15416583789" 
+            href="mailto:contact@smartfirm.io" 
             className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
           >
-            <Phone className="h-5 w-5" />
-            <span className="font-semibold text-lg">1-541-658-3789</span>
+            <Mail className="h-5 w-5" />
+            <span className="font-semibold text-lg">contact@smartfirm.io</span>
           </a>
         </div>
       </div>

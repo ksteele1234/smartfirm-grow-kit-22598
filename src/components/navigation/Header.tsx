@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/ui/optimized-image";
-import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
+import smartFirmLogo from "@/assets/smartfirm-logo-full.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
