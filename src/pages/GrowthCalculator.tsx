@@ -90,14 +90,14 @@ const GrowthCalculator = () => {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-16 bg-gradient-to-r from-[#6B8FB8] to-[#8BA8C8]">
+      <section className="py-8 bg-gradient-to-r from-[#6B8FB8] to-[#8BA8C8]">
         <div className="container mx-auto px-4 lg:px-6">
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-8">
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-[#FAFDD6] p-4">
+            <div className="bg-[#FAFDD6] p-3">
               <div className="flex items-start gap-3">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
@@ -109,7 +109,7 @@ const GrowthCalculator = () => {
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] p-4">
+            <div className="bg-[#FAFDD6] p-3">
               <div className="flex items-start gap-3">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
@@ -121,7 +121,7 @@ const GrowthCalculator = () => {
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] p-4">
+            <div className="bg-[#FAFDD6] p-3">
               <div className="flex items-start gap-3">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
