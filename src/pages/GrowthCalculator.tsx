@@ -90,44 +90,46 @@ const GrowthCalculator = () => {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-8 bg-gradient-to-r from-[#6B8FB8] to-[#8BA8C8]">
+      <section className="py-8" style={{
+        background: 'linear-gradient(to right, #6B8FB8 0%, #7AA0C5 50%, #8BA8C8 100%)'
+      }}>
         <div className="container mx-auto px-4 lg:px-6">
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-8">
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-[#FAFDD6] p-3">
-              <div className="flex items-start gap-3">
+            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+              <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-left">
+                <p className="text-[#4D869C] font-medium text-sm leading-tight">
                   Client workload keeps increasing, but growth doesn't.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] p-3">
-              <div className="flex items-start gap-3">
+            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+              <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-left">
+                <p className="text-[#4D869C] font-medium text-sm leading-tight">
                   Marketing feels overwhelming and eats up time you don't have.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] p-3">
-              <div className="flex items-start gap-3">
+            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+              <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
                   <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-left">
+                <p className="text-[#4D869C] font-medium text-sm leading-tight">
                   Without a system, firms plateau and miss out on predictable revenue.
                 </p>
               </div>
