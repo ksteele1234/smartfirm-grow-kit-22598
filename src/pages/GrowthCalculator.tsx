@@ -139,7 +139,7 @@ const GrowthCalculator = () => {
       </section>
 
       {/* CALCULATOR DESCRIPTION SECTION */}
-      <section className="py-16 bg-[#e8f5e9]">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
@@ -155,21 +155,21 @@ const GrowthCalculator = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800 font-medium"><span className="font-bold">100% free</span> and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800 font-medium"><span className="font-bold">Personalized</span> to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="9" fill="#7AB2B2" stroke="#4D869C" strokeWidth="2"/>
+                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800 font-medium">Built by <span className="font-bold">marketing experts who understand accountants</span></span>
@@ -179,7 +179,7 @@ const GrowthCalculator = () => {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
+                className="bg-[#7B8FC7] hover:bg-[#7B8FC7]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
               >
                 Calculate My Growth Potential
               </Button>
