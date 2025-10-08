@@ -61,16 +61,16 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Right Column - Form */}
-            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-lg min-h-[631px]">
+            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-lg min-h-[493px]">
               <iframe
-                src="https://api.leadconnectorhq.com/widget/form/O0M07sNaXcLcLWu3AJDA"
+                src="https://api.leadconnectorhq.com/widget/form/SiWJkhgszdob40Rkfcs2"
                 style={{
                   width: "100%",
-                  height: "631px",
+                  height: "100%",
                   border: "none",
-                  borderRadius: "4px",
+                  borderRadius: "3px",
                 }}
-                id="inline-O0M07sNaXcLcLWu3AJDA"
+                id="inline-SiWJkhgszdob40Rkfcs2"
                 data-layout='{"id":"INLINE"}'
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
@@ -78,11 +78,11 @@ const GrowthCalculator = () => {
                 data-activation-value=""
                 data-deactivation-type="neverDeactivate"
                 data-deactivation-value=""
-                data-form-name="Growth Calculator Funnel"
-                data-height="631"
-                data-layout-iframe-id="inline-O0M07sNaXcLcLWu3AJDA"
-                data-form-id="O0M07sNaXcLcLWu3AJDA"
-                title="Growth Calculator Funnel"
+                data-form-name="Calculator"
+                data-height="493"
+                data-layout-iframe-id="inline-SiWJkhgszdob40Rkfcs2"
+                data-form-id="SiWJkhgszdob40Rkfcs2"
+                title="Calculator"
               />
             </div>
           </div>
@@ -144,12 +144,16 @@ const GrowthCalculator = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-primary leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#4D869C] leading-tight">
                 A Calculator Built for Accountants Who Want Growth Without Guesswork
               </h2>
               
               <p className="text-lg text-gray-700">
-                You already know your time is limited. <span className="font-bold">This calculator gives you instant clarity on your growth potential using your numbers, not vague theory.</span> In under a minute, you'll see exactly <span className="font-bold">how much revenue you're missing and what it's worth to fix it.</span>
+                You already know your time is limited. This calculator gives you instant clarity on your growth potential using your numbers, not vague theory.
+              </p>
+              
+              <p className="text-lg text-gray-700">
+                In under a minute, you'll see exactly <span className="font-bold">how much revenue you're missing</span> and <span className="font-bold">what it would take to fix it</span>.
               </p>
 
               <div className="space-y-3">
@@ -158,21 +162,21 @@ const GrowthCalculator = () => {
                     <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-gray-800 font-medium"><span className="font-bold">100% free</span> and instant</span>
+                  <span className="text-gray-800">100% free and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
                     <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-gray-800 font-medium"><span className="font-bold">Personalized</span> to your firm</span>
+                  <span className="text-gray-800">Personalized to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
                     <circle cx="10" cy="10" r="10" fill="#4D869C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span className="text-gray-800 font-medium">Built by <span className="font-bold">marketing experts who understand accountants</span></span>
+                  <span className="text-gray-800">Built by marketing experts who understand accountants</span>
                 </div>
               </div>
 
