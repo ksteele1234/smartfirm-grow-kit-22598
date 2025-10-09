@@ -137,15 +137,21 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- Solution Pages -->
   <url>
-    <loc>https://smartfirm.io/solutions/stop-losing-clients</loc>
+    <loc>https://smartfirm.io/services/content-marketing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/solutions/lead-generation</loc>
+    <loc>https://smartfirm.io/services/online-reputation-management</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Solution Pages -->
+  <url>
+    <loc>https://smartfirm.io/solutions/stop-losing-clients</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

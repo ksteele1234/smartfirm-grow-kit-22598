@@ -83,6 +83,18 @@ const AllServices = () => {
       title: "Website Design",
       description: "Conversion-optimized websites built specifically for accounting firms. Secure client portals, mobile-responsive design, and compliance-ready infrastructure.",
       href: "/services/website-design"
+    },
+    {
+      icon: Mail,
+      title: "Content Marketing",
+      description: "Strategic content that positions your firm as the expert. Blog posts, guides, and resources that attract ideal clients and establish thought leadership.",
+      href: "/services/content-marketing"
+    },
+    {
+      icon: Star,
+      title: "Online Reputation Management",
+      description: "Protect and elevate your firm's online reputation. Monitor reviews, respond professionally, and build a 5-star presence that attracts more clients.",
+      href: "/services/online-reputation-management"
     }
   ];
 

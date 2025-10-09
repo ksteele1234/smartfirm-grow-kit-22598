@@ -18,7 +18,6 @@ import ServerError from "./pages/ServerError";
 import ThankYou from "./pages/ThankYou";
 
 // Solution Pages
-import LeadGeneration from "./pages/solutions/LeadGeneration";
 import ScaleFirm from "./pages/solutions/ScaleFirm";
 import ClientRetention from "./pages/solutions/ClientRetention";
 import RetentionStrategies from "./pages/solutions/RetentionStrategies";
@@ -39,6 +38,8 @@ import MarketingAutomation from "./pages/services/MarketingAutomation";
 import TechnologySolutions from "./pages/services/TechnologySolutions";
 import BusinessOptimization from "./pages/services/BusinessOptimization";
 import ExecutiveServices from "./pages/services/ExecutiveServices";
+import ContentMarketing from "./pages/services/ContentMarketing";
+import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
 
 // Industry Pages
 import TaxPreparation from "./pages/industries/TaxPreparation";
@@ -89,8 +90,6 @@ const App = () => (
         <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
         
         {/* Solution Sub-pages */}
-        <Route path="/solutions/i-need-more-leads" element={<LeadGeneration />} />
-        <Route path="/solutions/lead-generation" element={<LeadGeneration />} />
         <Route path="/solutions/i-want-to-scale-my-firm" element={<ScaleFirm />} />
         <Route path="/solutions/scale-firm" element={<ScaleFirm />} />
         <Route path="/solutions/i'm-losing-clients-to-competitors" element={<ClientRetention />} />
@@ -120,6 +119,8 @@ const App = () => (
         <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
         <Route path="/services/email-marketing" element={<EmailMarketing />} />
         <Route path="/services/website-design" element={<WebsiteDesign />} />
+        <Route path="/services/content-marketing" element={<ContentMarketing />} />
+        <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
         
         {/* Industry Sub-pages */}
         <Route path="/industries/tax-preparation" element={<TaxPreparation />} />

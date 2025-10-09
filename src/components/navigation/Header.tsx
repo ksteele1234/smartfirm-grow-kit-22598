@@ -68,6 +68,16 @@ const Header = () => {
       title: "Website Design", 
       href: "/services/website-design",
       description: "Modern, SEO-optimized websites for CPAs and accountants that convert visitors into clients."
+    },
+    { 
+      title: "Content Marketing", 
+      href: "/services/content-marketing",
+      description: "Strategic content that establishes thought leadership and attracts ideal clients through education."
+    },
+    { 
+      title: "Online Reputation Management", 
+      href: "/services/online-reputation-management",
+      description: "Monitor, protect, and elevate your firm's online reputation with automated review generation."
     }
   ];
 
