@@ -151,12 +151,6 @@
   
   <!-- Solution Pages -->
   <url>
-    <loc>https://smartfirm.io/solutions/stop-losing-clients</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>https://smartfirm.io/solutions/client-retention</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -175,38 +169,13 @@
   </url>
   
   <url>
-    <loc>https://smartfirm.io/solutions/get-more-referrals</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/solutions/grow-without-pains</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>https://smartfirm.io/solutions/retention-strategies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/solutions/protect-practice</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Additional Solution URL Variations -->
-  <url>
     <loc>https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/solutions/compete-with-tech-savvy-cpas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -218,31 +187,13 @@
   </url>
   
   <url>
-    <loc>https://smartfirm.io/solutions/increase-referrals</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>https://smartfirm.io/solutions/grow-without-growing-pains</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/solutions/sustainable-growth</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>https://smartfirm.io/solutions/protect-practice-and-future</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/solutions/protect-your-practice</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -335,6 +286,24 @@
   
   <url>
     <loc>https://smartfirm.io/tools/modern-firm-quiz</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/tools/seo-audit</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/tools/page-grader</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/tools/advanced-seo-qa</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
