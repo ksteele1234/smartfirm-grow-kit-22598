@@ -312,14 +312,6 @@ const GrowthCalculator = () => {
               </Button>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="flex justify-center lg:justify-start">
-              <img 
-                src={womanBlazer} 
-                alt="Professional businesswoman"
-                className="w-full max-w-md h-auto"
-              />
-            </div>
           </div>
         </div>
       </section>
