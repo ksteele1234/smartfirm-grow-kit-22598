@@ -11,6 +11,7 @@ import danPhoto from "@/assets/testimonial-dan.png";
 import joannaPhoto from "@/assets/testimonial-joanna.png";
 import jennPhoto from "@/assets/testimonial-jenn.png";
 import womanBlazer from "@/assets/woman-blazer.png";
+import womanPointingBlazer from "@/assets/woman-pointing-blazer.png";
 
 const GrowthCalculator = () => {
   useEffect(() => {
@@ -298,8 +299,8 @@ const GrowthCalculator = () => {
                 {/* Left - Woman Image */}
                 <div className="flex justify-center lg:justify-start">
                   <img 
-                    src={womanBlazer} 
-                    alt="Professional businesswoman"
+                    src={womanPointingBlazer} 
+                    alt="Professional businesswoman pointing"
                     className="w-64 lg:w-full h-auto"
                   />
                 </div>
