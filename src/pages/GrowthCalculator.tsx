@@ -192,8 +192,8 @@ const GrowthCalculator = () => {
             {/* Right Column - Image */}
             <div>
               <img 
-                src={womanBlazer} 
-                alt="Professional businesswoman"
+                src={meetingPhoto} 
+                alt="Business professionals in a meeting discussing growth strategies"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
