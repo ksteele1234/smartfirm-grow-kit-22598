@@ -110,11 +110,6 @@ const Header = () => {
     },
     // Specific Areas
     { 
-      title: "I need more leads", 
-      href: "/solutions/lead-generation",
-      description: "Generate qualified accounting firm leads with targeted SEO and digital advertising."
-    },
-    { 
       title: "I want to scale my firm", 
       href: "/solutions/scale-firm",
       description: "Grow capacity and revenue using automation for accountants and CPAs without ballooning overhead."

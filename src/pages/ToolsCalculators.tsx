@@ -132,6 +132,26 @@ const ToolsCalculators = () => {
       results: "SEO report",
       link: "/tools/seo-audit",
       color: "from-teal to-light-teal"
+    },
+    {
+      id: "page-grader",
+      title: "Page Grader",
+      description: "Get a comprehensive grade for any page on your website with actionable SEO and performance insights.",
+      icon: <BarChart3 className="h-8 w-8 text-secondary" />,
+      duration: "1 minute",
+      results: "Page grade",
+      link: "/tools/page-grader",
+      color: "from-secondary to-blue-grey"
+    },
+    {
+      id: "advanced-seo-qa",
+      title: "Advanced SEO Q&A",
+      description: "Run a complete technical SEO audit across your entire site with detailed quality assurance reports.",
+      icon: <CheckCircle className="h-8 w-8 text-primary" />,
+      duration: "3 minutes",
+      results: "Full site audit",
+      link: "/tools/advanced-seo-qa",
+      color: "from-primary to-secondary"
     }
   ];
 

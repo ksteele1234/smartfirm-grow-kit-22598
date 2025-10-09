@@ -56,7 +56,7 @@ interface AdvancedPageAudit {
 }
 
 interface AdvancedSEOQAProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {

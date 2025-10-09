@@ -57,7 +57,7 @@ interface Suggestion {
 }
 
 interface PageGraderProps {
-  onBack: () => void;
+  onBack?: () => void;
 }
 
 const PageGrader = ({ onBack }: PageGraderProps) => {
