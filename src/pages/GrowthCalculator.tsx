@@ -48,20 +48,20 @@ const GrowthCalculator = () => {
               <img 
                 src={revenueChart} 
                 alt="Revenue growth chart showing upward trend"
-                className="w-72 h-auto"
+                className="w-64 h-auto"
               />
               
-              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#4D869C] leading-tight">
                 How Much Revenue Is Your Firm Leaving on the Table?
               </h1>
               
               <p className="text-lg text-gray-700">
-                In just <span className="font-semibold text-primary">60 seconds</span>, discover how many new clients you could add this year with the <span className="font-semibold text-primary">right marketing system</span>.
+                In just <span className="font-semibold text-[#4D869C]">60 seconds</span>, discover how many new clients you could add this year with the <span className="font-semibold text-[#4D869C]">right marketing system</span>.
               </p>
             </div>
 
             {/* Right Column - Form */}
-            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-lg min-h-[493px]">
+            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-md min-h-[493px]">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/SiWJkhgszdob40Rkfcs2"
                 style={{
@@ -210,18 +210,18 @@ const GrowthCalculator = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Testimonial 1 - Dan */}
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="bg-primary p-6">
-                <p className="text-white text-sm leading-relaxed">
-                  "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
-                </p>
-              </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-3">
+            <div className="rounded-lg overflow-hidden shadow-md">
+              <div className="bg-[#7B8FC7] p-8 relative">
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
-                  className="w-20 h-20 rounded-full mx-auto object-cover"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
                 />
+                <p className="text-white text-sm leading-relaxed pt-16">
+                  "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
+                </p>
+              </div>
+              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
                   <p className="text-sm text-gray-600">CPA, Managing Partner</p>
@@ -235,18 +235,18 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 2 - Joanna */}
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="bg-primary p-6">
-                <p className="text-white text-sm leading-relaxed">
-                  "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
-                </p>
-              </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-3">
+            <div className="rounded-lg overflow-hidden shadow-md">
+              <div className="bg-[#7B8FC7] p-8 relative">
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
-                  className="w-20 h-20 rounded-full mx-auto object-cover"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
                 />
+                <p className="text-white text-sm leading-relaxed pt-16">
+                  "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
+                </p>
+              </div>
+              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
                   <p className="text-sm text-gray-600">Registered Agent</p>
@@ -260,18 +260,18 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 3 - Jenn S. */}
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <div className="bg-primary p-6">
-                <p className="text-white text-sm leading-relaxed">
-                  "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
-                </p>
-              </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-3">
+            <div className="rounded-lg overflow-hidden shadow-md">
+              <div className="bg-[#7B8FC7] p-8 relative">
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
-                  className="w-20 h-20 rounded-full mx-auto object-cover"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
                 />
+                <p className="text-white text-sm leading-relaxed pt-16">
+                  "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
+                </p>
+              </div>
+              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
                   <p className="text-sm text-gray-600">Bookkeeper</p>
@@ -301,7 +301,7 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Right Column - CTA Box */}
-            <div className="bg-primary rounded-2xl p-10 space-y-6">
+            <div className="bg-[#7B8FC7] rounded-2xl p-10 space-y-6">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white leading-tight">
                 Stop Guessing. Start Growing
               </h2>
@@ -313,7 +313,7 @@ const GrowthCalculator = () => {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-[#4D869C] hover:bg-[#4D869C]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
+                className="bg-[#FAFDD6] hover:bg-[#FAFDD6]/90 text-[#4D869C] px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
               >
                 Calculate My Growth Potential
               </Button>
