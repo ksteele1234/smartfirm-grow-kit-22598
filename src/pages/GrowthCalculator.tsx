@@ -210,17 +210,17 @@ const GrowthCalculator = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Testimonial 1 - Dan */}
-            <div className="rounded-lg overflow-hidden shadow-md relative">
+            <div className="rounded-lg overflow-hidden shadow-md">
               <div className="bg-[#7B8FC7] p-8">
-                <p className="text-white text-sm leading-relaxed pt-16">
+                <p className="text-[#FAFDD6] text-sm leading-relaxed">
                   "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
@@ -235,17 +235,17 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 2 - Joanna */}
-            <div className="rounded-lg overflow-hidden shadow-md relative">
+            <div className="rounded-lg overflow-hidden shadow-md">
               <div className="bg-[#7B8FC7] p-8">
-                <p className="text-white text-sm leading-relaxed pt-16">
+                <p className="text-[#FAFDD6] text-sm leading-relaxed">
                   "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
@@ -260,17 +260,17 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 3 - Jenn S. */}
-            <div className="rounded-lg overflow-hidden shadow-md relative">
+            <div className="rounded-lg overflow-hidden shadow-md">
               <div className="bg-[#7B8FC7] p-8">
-                <p className="text-white text-sm leading-relaxed pt-16">
+                <p className="text-[#FAFDD6] text-sm leading-relaxed">
                   "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
@@ -291,32 +291,34 @@ const GrowthCalculator = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left Column - Image */}
-            <div className="flex justify-center lg:justify-end">
-              <img 
-                src={womanBlazer} 
-                alt="Professional businesswoman"
-                className="w-full max-w-md h-auto"
-              />
-            </div>
-
-            {/* Right Column - CTA Box */}
-            <div className="bg-[#7B8FC7] rounded-2xl p-10 space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white leading-tight">
+            {/* Left Column - CTA Box */}
+            <div className="rounded-2xl p-10 space-y-6" style={{
+              background: 'linear-gradient(to right, #7B8FC7, #91ADC8)'
+            }}>
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] leading-tight">
                 Stop Guessing. Start Growing
               </h2>
               
-              <p className="text-lg text-white">
+              <p className="text-lg text-[#FAFDD6]">
                 Find out your growth potential today it only takes <span className="font-semibold">60 seconds</span>.
               </p>
 
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-[#FAFDD6] hover:bg-[#FAFDD6]/90 text-[#4D869C] px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
+                className="bg-[#91ADC8] hover:bg-[#91ADC8]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
               >
                 Calculate My Growth Potential
               </Button>
+            </div>
+
+            {/* Right Column - Image */}
+            <div className="flex justify-center lg:justify-start">
+              <img 
+                src={womanBlazer} 
+                alt="Professional businesswoman"
+                className="w-full max-w-md h-auto"
+              />
             </div>
           </div>
         </div>
