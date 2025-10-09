@@ -289,43 +289,49 @@ const GrowthCalculator = () => {
       </section>
 
       {/* BOTTOM CTA SECTION - Woman in Blazer */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 lg:px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="rounded-2xl p-10 lg:p-12 space-y-6" style={{
-              background: 'linear-gradient(to right, #7B8FC7, #91ADC8)'
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto flex justify-center">
+          <div className="relative w-full max-w-[730px]">
+            {/* Woman image - positioned absolutely to extend beyond gradient box */}
+            <div className="absolute left-0 -top-20 md:-top-24 z-10 w-[240px] md:w-[260px]">
+              <img 
+                src={womanPointingBlazer}
+                alt="Professional accountant pointing at growth calculator"
+                className="w-full h-auto"
+              />
+            </div>
+            
+            {/* Gradient box with content */}
+            <div className="relative h-[155px] rounded-xl overflow-hidden" style={{
+              background: 'linear-gradient(to right, #91ADC8 0%, #91ADC8 40%, #647FBC 100%)'
             }}>
-              <div className="grid lg:grid-cols-[300px_1fr] gap-8 items-center">
-                {/* Left - Woman Image */}
-                <div className="flex justify-center lg:justify-start">
-                  <img 
-                    src={womanPointingBlazer} 
-                    alt="Professional businesswoman pointing"
-                    className="w-64 lg:w-full h-auto"
-                  />
-                </div>
-
-                {/* Right - CTA Content */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] leading-tight">
+              <div className="absolute inset-0 flex items-center" style={{
+                paddingLeft: '290px',
+                paddingRight: '45px'
+              }}>
+                <div className="space-y-3">
+                  <h2 className="font-heading font-bold text-white leading-tight" style={{
+                    fontSize: '34px',
+                    lineHeight: '1.15'
+                  }}>
                     Stop Guessing. Start Growing
                   </h2>
-                  
-                  <p className="text-lg text-[#FAFDD6]">
-                    Find out your growth potential today it only takes <span className="font-semibold">60 seconds</span>.
+                  <p className="text-white text-[15px] font-normal leading-snug">
+                    Find out your growth potential today – it only takes 60 seconds
                   </p>
-
                   <Button 
                     onClick={scrollToForm}
-                    size="lg"
-                    className="bg-[#91ADC8] hover:bg-[#91ADC8]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
+                    className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg shadow-md hover:opacity-90 transition-opacity"
+                    style={{
+                      backgroundColor: '#4D869C',
+                      width: '210px'
+                    }}
                   >
                     Calculate My Growth Potential
                   </Button>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
