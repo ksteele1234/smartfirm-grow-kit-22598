@@ -291,27 +291,29 @@ const GrowthCalculator = () => {
       {/* BOTTOM CTA SECTION - Woman in Blazer */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="rounded-2xl p-10 lg:p-12 space-y-6" style={{
-              background: 'linear-gradient(to right, #7B8FC7, #91ADC8)'
+          <div className="max-w-7xl mx-auto relative">
+            <div className="rounded-2xl p-10 lg:p-12 overflow-visible" style={{
+              background: 'linear-gradient(to right, #7B8FC7, #91ADC8)',
+              height: '2.5in'
             }}>
-              <div className="grid lg:grid-cols-[300px_1fr] gap-8 items-center">
-                {/* Left - Woman Image */}
-                <div className="flex justify-center lg:justify-start">
+              <div className="grid lg:grid-cols-[300px_1fr] gap-8 items-end h-full">
+                {/* Left - Woman Image - Overflowing */}
+                <div className="flex justify-center lg:justify-start relative" style={{ marginBottom: '-4rem' }}>
                   <img 
                     src={womanPointingBlazer} 
                     alt="Professional businesswoman pointing"
-                    className="w-64 lg:w-full h-auto"
+                    className="w-64 lg:w-full h-auto relative"
+                    style={{ transform: 'translateY(-25%)' }}
                   />
                 </div>
 
                 {/* Right - CTA Content */}
-                <div className="space-y-6">
-                  <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] leading-tight">
+                <div className="space-y-4 pb-4">
+                  <h2 className="text-2xl lg:text-3xl font-heading font-bold text-[#FAFDD6] leading-tight">
                     Stop Guessing. Start Growing
                   </h2>
                   
-                  <p className="text-lg text-[#FAFDD6]">
+                  <p className="text-base text-[#FAFDD6]">
                     Find out your growth potential today it only takes <span className="font-semibold">60 seconds</span>.
                   </p>
 
