@@ -59,7 +59,7 @@ const HowItWorksSection = () => {
                     <h3 className="text-2xl font-heading font-bold text-primary mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-text-secondary leading-relaxed max-w-md mx-auto lg:mx-0">
+                    <p className={`text-text-secondary leading-relaxed max-w-md mx-auto ${isEven ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
                       {step.description}
                     </p>
                   </div>
