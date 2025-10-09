@@ -109,12 +109,16 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 Discover <a href="/solutions" data-sf="internal-add" className="text-white underline hover:text-white/80">our solutions</a>, read <a href="/case-studies" data-sf="internal-add" className="text-white underline hover:text-white/80">client success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-white/80">AICPA resources</a>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" className="group bg-white text-[#3A4A6C] hover:bg-white/90">
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <Button size="lg" variant="secondary" className="group bg-white text-[#3A4A6C] hover:bg-white/90" asChild>
+                  <a href="/get-started">
+                    Get Started Today
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20">
-                  Learn More
+                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20" asChild>
+                  <a href="/services">
+                    Learn More
+                  </a>
                 </Button>
               </div>
             </div>
