@@ -210,18 +210,18 @@ const GrowthCalculator = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Testimonial 1 - Dan */}
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[#7B8FC7] p-8 relative">
-                <img 
-                  src={danPhoto} 
-                  alt="Dan, CPA Managing Partner"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
-                />
+            <div className="rounded-lg overflow-hidden shadow-md relative">
+              <div className="bg-[#7B8FC7] p-8">
                 <p className="text-white text-sm leading-relaxed pt-16">
                   "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
                 </p>
               </div>
               <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+                <img 
+                  src={danPhoto} 
+                  alt="Dan, CPA Managing Partner"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                />
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
                   <p className="text-sm text-gray-600">CPA, Managing Partner</p>
@@ -235,18 +235,18 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 2 - Joanna */}
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[#7B8FC7] p-8 relative">
-                <img 
-                  src={joannaPhoto} 
-                  alt="Joanna, Registered Agent"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
-                />
+            <div className="rounded-lg overflow-hidden shadow-md relative">
+              <div className="bg-[#7B8FC7] p-8">
                 <p className="text-white text-sm leading-relaxed pt-16">
                   "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
                 </p>
               </div>
               <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+                <img 
+                  src={joannaPhoto} 
+                  alt="Joanna, Registered Agent"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                />
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
                   <p className="text-sm text-gray-600">Registered Agent</p>
@@ -260,18 +260,18 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 3 - Jenn S. */}
-            <div className="rounded-lg overflow-hidden shadow-md">
-              <div className="bg-[#7B8FC7] p-8 relative">
-                <img 
-                  src={jennPhoto} 
-                  alt="Jenn S., Bookkeeper"
-                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md -mt-14 absolute left-1/2 -translate-x-1/2"
-                />
+            <div className="rounded-lg overflow-hidden shadow-md relative">
+              <div className="bg-[#7B8FC7] p-8">
                 <p className="text-white text-sm leading-relaxed pt-16">
                   "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
                 </p>
               </div>
               <div className="bg-[#FAFDD6] p-6 pt-16 text-center space-y-4">
+                <img 
+                  src={jennPhoto} 
+                  alt="Jenn S., Bookkeeper"
+                  className="w-28 h-28 rounded-full mx-auto object-cover border-4 border-white shadow-md absolute -top-14 left-1/2 -translate-x-1/2"
+                />
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
                   <p className="text-sm text-gray-600">Bookkeeper</p>
