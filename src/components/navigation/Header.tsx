@@ -154,10 +154,10 @@ const Header = () => {
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
-                width={200}
-                height={42}
+                width={300}
+                height={63}
                 priority
-                className="h-11 w-auto"
+                className="h-[66px] w-auto"
               />
             </a>
           </div>

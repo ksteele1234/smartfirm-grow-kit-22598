@@ -11,7 +11,7 @@ export const FunnelHeader = () => {
             <img 
               src={smartFirmLogo} 
               alt="SmartFirm.io" 
-              className="h-10 w-auto"
+              className="h-[60px] w-auto"
             />
           </Link>
           

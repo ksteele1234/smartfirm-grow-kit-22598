@@ -44,9 +44,9 @@ const Footer = () => {
                   <OptimizedImage 
                     src={smartFirmLogo} 
                     alt="SmartFirm - Marketing and Automation for Accounting Firms"
-                    width={150}
-                    height={32}
-                    className="h-8 w-auto"
+                    width={300}
+                    height={64}
+                    className="h-16 w-auto"
                   />
                 </a>
                 <p className="text-text-secondary leading-relaxed max-w-md">
