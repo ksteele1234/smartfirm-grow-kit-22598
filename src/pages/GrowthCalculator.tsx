@@ -290,26 +290,39 @@ const GrowthCalculator = () => {
       {/* BOTTOM CTA SECTION - Woman in Blazer */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Left Column - CTA Box */}
-            <div className="rounded-2xl p-10 space-y-6" style={{
+          <div className="max-w-7xl mx-auto">
+            <div className="rounded-2xl p-10 lg:p-12 space-y-6" style={{
               background: 'linear-gradient(to right, #7B8FC7, #91ADC8)'
             }}>
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] leading-tight">
-                Stop Guessing. Start Growing
-              </h2>
-              
-              <p className="text-lg text-[#FAFDD6]">
-                Find out your growth potential today it only takes <span className="font-semibold">60 seconds</span>.
-              </p>
+              <div className="grid lg:grid-cols-[300px_1fr] gap-8 items-center">
+                {/* Left - Woman Image */}
+                <div className="flex justify-center lg:justify-start">
+                  <img 
+                    src={womanBlazer} 
+                    alt="Professional businesswoman"
+                    className="w-64 lg:w-full h-auto"
+                  />
+                </div>
 
-              <Button 
-                onClick={scrollToForm}
-                size="lg"
-                className="bg-[#91ADC8] hover:bg-[#91ADC8]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
-              >
-                Calculate My Growth Potential
-              </Button>
+                {/* Right - CTA Content */}
+                <div className="space-y-6">
+                  <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] leading-tight">
+                    Stop Guessing. Start Growing
+                  </h2>
+                  
+                  <p className="text-lg text-[#FAFDD6]">
+                    Find out your growth potential today it only takes <span className="font-semibold">60 seconds</span>.
+                  </p>
+
+                  <Button 
+                    onClick={scrollToForm}
+                    size="lg"
+                    className="bg-[#91ADC8] hover:bg-[#91ADC8]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg w-full lg:w-auto"
+                  >
+                    Calculate My Growth Potential
+                  </Button>
+                </div>
+              </div>
             </div>
 
           </div>
