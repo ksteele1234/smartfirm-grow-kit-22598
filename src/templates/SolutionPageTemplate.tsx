@@ -4,9 +4,7 @@ import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SolutionPageData } from "@/types/cms";
-import { CheckCircle, ArrowRight, TrendingUp } from "lucide-react";
-import { GeometricDivider, FloatingShapes, BackgroundPattern, AccentLine } from "@/components/ui/visual-accents";
-import { CurvedSeparator } from "@/components/ui/curved-separator";
+import { CheckCircle2, ArrowRight, Target } from "lucide-react";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -162,16 +160,20 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           
           {/* Dynamic grid based on number of benefits */}
           <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2 lg:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
-            {data.keyBenefits.map((benefit, index) => (
+            {data.keyBenefits.map((benefit, index) => {
+              const icons = [CheckCircle2, Target, CheckCircle2];
+              const IconComponent = icons[index % icons.length];
+              return (
               <StandardCard
                 key={index}
-                icon={TrendingUp}
+                icon={IconComponent}
                 title={benefit.title}
                 description={benefit.description}
                 variant="default"
                 className="bg-background space-y-6"
               />
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
@@ -265,11 +267,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
-        <FloatingShapes variant="circles" className="opacity-20" />
-        <div className="max-w-4xl mx-auto text-center relative">
-          <h2 className="text-3xl font-bold mb-6 text-white">{data.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-10 text-white/90 leading-relaxed">{data.ctaDescription}</p>
+      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <div className="max-w-[800px] mx-auto text-center relative space-y-6">
+          <h2 className="text-[32px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button size="lg" variant="white-on-dark" className="group font-semibold">
               Book a Strategy Call

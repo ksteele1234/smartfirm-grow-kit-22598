@@ -25,12 +25,12 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
     href,
     ...props 
   }, ref) => {
-    const baseCardClasses = "shadow-card hover:shadow-soft transition-all duration-300 group border border-border/50";
+    const baseCardClasses = "border border-[#E5E7EB] rounded-xl transition-all duration-300 group cursor-pointer hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]";
     
     const variantClasses = {
       default: "",
       popular: "ring-2 ring-primary relative",
-      featured: "bg-gradient-to-br from-background to-teal/5"
+      featured: ""
     };
 
     const CardComponent = (
@@ -49,22 +49,19 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
           </div>
         )}
         
-        <CardHeader className="text-center pb-4">
+        <CardHeader className="text-center pb-6 p-5 md:p-6">
           {Icon && (
-            <div className={cn(
-              "w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center group-hover:from-primary/20 group-hover:to-teal/20 transition-all duration-300",
-              iconBgColor
-            )}>
-              <Icon className="h-8 w-8 text-primary" />
+            <div className="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+              <Icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
             </div>
           )}
-          <CardTitle className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
+          <CardTitle className="text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
             {title}
           </CardTitle>
         </CardHeader>
         
-        <CardContent className="space-y-4">
-          <CardDescription className="text-text-secondary leading-relaxed text-center">
+        <CardContent className="space-y-6 p-5 md:p-6 pt-0">
+          <CardDescription className="text-base text-text-primary leading-relaxed text-center max-w-[65ch] mx-auto">
             {description}
           </CardDescription>
           {children}
