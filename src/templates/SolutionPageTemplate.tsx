@@ -108,27 +108,26 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-r from-background to-secondary/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-14 md:py-20 px-8 md:px-[72px] relative bg-background">
+        <div className="max-w-[1200px] mx-auto">
           {/* Asymmetrical layout with accent line */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <p className="text-3xl font-bold text-primary mb-6">
+          <div className="grid lg:grid-cols-2 gap-x-16 gap-y-14 items-start">
+            <div className="relative space-y-6">
+              <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
                 The Challenge
-              </p>
-              <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+              </h2>
+              <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
                 {data.problemStatement}
               </p>
             </div>
-            <div className="relative lg:ml-8">
-              <AccentLine orientation="vertical" className="absolute -left-4 top-0 h-full hidden lg:block" />
-              <p className="text-3xl font-bold text-teal mb-6">
+            <div className="relative space-y-6">
+              <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
                 Our Solution
-              </p>
-            <p className="text-lg text-text-secondary leading-relaxed">
+              </h2>
+              <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
                 {data.solutionOverview}
               </p>
-              <p className="mt-4 text-text-secondary">
+              <p className="text-sm md:text-base text-text-secondary">
                 Learn more about <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA guidance</a>.
               </p>
             </div>
@@ -150,30 +149,27 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal/5 to-primary/5 relative overflow-hidden">
-        <BackgroundPattern pattern="dots" className="opacity-20" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-4">
+      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background-light relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto relative">
+          <div className="text-center mb-14 space-y-6">
+            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
               Key Benefits
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
               See how our solution transforms your practice
             </p>
           </div>
           
-          <GeometricDivider variant="zigzag" />
-          
           {/* Dynamic grid based on number of benefits */}
-          <div className={`grid gap-8 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2 lg:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+          <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2 lg:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.keyBenefits.map((benefit, index) => (
               <StandardCard
                 key={index}
                 icon={TrendingUp}
                 title={benefit.title}
                 description={benefit.description}
-                variant={index === 1 ? "popular" : index === 2 ? "featured" : "default"}
-                className="bg-gradient-to-br from-background to-primary/5"
+                variant="default"
+                className="bg-background space-y-6"
               />
             ))}
           </div>
@@ -181,27 +177,27 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-4">
+      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-14 space-y-6">
+            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
               How It Works
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
               Our proven process gets you results quickly
             </p>
           </div>
           {/* Dynamic grid based on number of steps */}
-          <div className={`grid gap-8 ${data.howItWorks.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+          <div className={`grid gap-6 ${data.howItWorks.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.howItWorks.map((step, index) => (
               <StandardCard
                 key={index}
                 title={step.title}
                 description={step.description}
-                variant={index === Math.floor(data.howItWorks.length / 2) ? "featured" : "default"}
-                className="text-center"
+                variant="default"
+                className="text-center bg-background space-y-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-lg">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                   {step.step}
                 </div>
               </StandardCard>
@@ -211,28 +207,27 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#7AB2B2]">
-        <CurvedSeparator variant="light-teal" className="mb-12" />
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-4">
+      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background-light">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-14 space-y-6">
+            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
               Proven Results
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
               Real outcomes from real clients
             </p>
           </div>
           {/* Dynamic grid based on number of results */}
-          <div className={`grid gap-8 ${data.results.length === 3 ? 'md:grid-cols-1 lg:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-4'}`}>
+          <div className={`grid gap-6 ${data.results.length === 3 ? 'md:grid-cols-1 lg:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-4'}`}>
             {data.results.map((result, index) => (
               <StandardCard
                 key={index}
                 title={result.metric}
                 description={result.description}
-                variant={index === 1 ? "popular" : "default"}
-                className="text-center bg-gradient-to-br from-background to-teal/5"
+                variant="default"
+                className="text-center bg-background space-y-6"
               >
-                <div className="text-4xl font-bold text-gradient bg-gradient-to-r from-primary to-teal bg-clip-text text-transparent mb-2">
+                <div className="text-4xl font-bold text-primary mb-6">
                   {result.value}
                 </div>
               </StandardCard>
@@ -242,17 +237,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
-        <CurvedSeparator variant="primary" className="mb-12" />
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+      <section id="sf-faqs" className="py-14 md:py-20 px-8 md:px-[72px] bg-background">
+        <div className="max-w-[800px] mx-auto">
+          <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary mb-14 text-center leading-tight">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {defaultFAQs.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-4 bg-background">
-                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
-                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+              <details key={index} className="border border-border rounded-lg p-6 bg-background">
+                <summary className="cursor-pointer font-semibold text-base md:text-lg text-foreground">{faq.question}</summary>
+                <div className="text-text-secondary text-base mt-6 leading-relaxed max-w-[65ch]">{faq.answer}</div>
               </details>
             ))}
           </div>
