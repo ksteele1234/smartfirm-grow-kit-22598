@@ -4,7 +4,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { SolutionPageData } from "@/types/cms";
-import { CheckCircle2, ArrowRight, Target } from "lucide-react";
+import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight } from "lucide-react";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -107,7 +107,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg" asChild>
+          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg px-10" asChild>
             <a href="/get-started" aria-label="Get started with your custom solution">
               See How This Works for You
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -175,7 +175,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           {/* Dynamic grid based on number of benefits */}
           <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.keyBenefits.map((benefit, index) => {
-              const icons = [CheckCircle2, Target, CheckCircle2];
+              const icons = [TrendingUp, Shield, Zap, Users, BarChart, Clock];
               const IconComponent = icons[index % icons.length];
               return (
               <StandardCard
@@ -297,7 +297,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
           <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-            <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg w-full sm:w-auto" asChild>
+            <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg w-full sm:w-auto px-10" asChild>
               <a href="/get-started" aria-label="Book your strategy call now">
                 Book Your Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
