@@ -192,17 +192,19 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           {/* Dynamic grid based on number of steps */}
           <div className={`grid gap-6 ${data.howItWorks.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.howItWorks.map((step, index) => (
-              <StandardCard
-                key={index}
-                title={step.title}
-                description={step.description}
-                variant="default"
-                className="text-center bg-background space-y-6"
-              >
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                  {step.step}
+              <div key={index} className="border border-[#E5E7EB] rounded-xl bg-background transition-all duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] cursor-pointer group">
+                <div className="p-5 md:p-6 space-y-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                    {step.step}
+                  </div>
+                  <h3 className="text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-base text-text-primary leading-relaxed max-w-[65ch] mx-auto">
+                    {step.description}
+                  </p>
                 </div>
-              </StandardCard>
+              </div>
             ))}
           </div>
         </div>
