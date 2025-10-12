@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { SolutionPageData } from "@/types/cms";
 import { CheckCircle2, ArrowRight, Target } from "lucide-react";
 import { 
@@ -15,6 +15,17 @@ interface SolutionPageTemplateProps {
 }
 
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
+  const [showStickyFAB, setShowStickyFAB] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      setShowStickyFAB(scrollPercentage > 30);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const defaultFAQs = [
     {
       question: "How quickly will I see results?",
@@ -96,37 +107,40 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-[#4D869C] hover:bg-white/90" asChild>
-            <a href="/get-started">
-              Get Your Solution
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg" asChild>
+            <a href="/get-started" aria-label="Get started with your custom solution">
+              See How This Works for You
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </Button>
+          <a href="/case-studies" className="text-white/90 hover:text-white underline underline-offset-4 text-base font-medium mt-4 inline-block transition-colors">
+            View Success Stories
+          </a>
         </div>
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="py-14 md:py-20 px-8 md:px-[72px] relative bg-background">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] relative bg-background">
         <div className="max-w-[1200px] mx-auto">
           {/* Asymmetrical layout with accent line */}
-          <div className="grid lg:grid-cols-2 gap-x-16 gap-y-14 items-start">
-            <div className="relative space-y-6">
-              <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
+          <div className="grid lg:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-10 md:gap-y-14 items-start">
+            <div className="relative space-y-4 md:space-y-6">
+              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
                 The Challenge
               </h2>
               <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
                 {data.problemStatement}
               </p>
             </div>
-            <div className="relative space-y-6">
-              <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
+            <div className="relative space-y-4 md:space-y-6">
+              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
                 Our Solution
               </h2>
               <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
                 {data.solutionOverview}
               </p>
               <p className="text-sm md:text-base text-text-secondary">
-                Learn more about <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA guidance</a>.
+                Learn more about <a href="/services" data-sf="internal-add" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">AICPA guidance</a>.
               </p>
             </div>
           </div>
@@ -147,19 +161,19 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background-light relative overflow-hidden">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background-light relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
-          <div className="text-center mb-14 space-y-6">
-            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
+          <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
               Key Benefits
             </h2>
             <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
-              See how our solution transforms your practice
+              See how our solution transforms your practice<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
             </p>
           </div>
           
           {/* Dynamic grid based on number of benefits */}
-          <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2 lg:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+          <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.keyBenefits.map((benefit, index) => {
               const icons = [CheckCircle2, Target, CheckCircle2];
               const IconComponent = icons[index % icons.length];
@@ -179,10 +193,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-14 space-y-6">
-            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
+          <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
               How It Works
             </h2>
             <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
@@ -193,11 +207,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <div className={`grid gap-6 ${data.howItWorks.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.howItWorks.map((step, index) => (
               <div key={index} className="border border-[#E5E7EB] rounded-xl bg-background transition-all duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] cursor-pointer group">
-                <div className="p-5 md:p-6 space-y-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto shadow-lg">
+                <div className="p-4 md:p-6 space-y-4 md:space-y-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-teal text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto shadow-lg" aria-label={`Step ${step.step}`}>
                     {step.step}
                   </div>
-                  <h3 className="text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                  <h3 className="text-[20px] md:text-2xl font-heading font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
                     {step.title}
                   </h3>
                   <p className="text-base text-text-primary leading-relaxed max-w-[65ch] mx-auto">
@@ -211,14 +225,14 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-background-light">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background-light">
         <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-14 space-y-6">
-            <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary leading-tight">
+          <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
               Proven Results
             </h2>
             <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
-              Real outcomes from real clients
+              Real outcomes from real clients<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
             </p>
           </div>
           {/* Dynamic grid based on number of results */}
@@ -229,28 +243,37 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 title={result.metric}
                 description={result.description}
                 variant="default"
-                className="text-center bg-background space-y-6"
+                className="text-center bg-background space-y-4 md:space-y-6"
               >
-                <div className="text-4xl font-bold text-primary mb-6">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
                   {result.value}
                 </div>
               </StandardCard>
             ))}
           </div>
+          
+          {/* Proof Methodology */}
+          <div id="proof-methodology" className="mt-10 md:mt-16 p-4 md:p-6 bg-background border border-border rounded-lg">
+            <p className="text-sm text-text-secondary leading-relaxed">
+              <sup>1</sup> Results based on aggregated client data from firms implementing our solutions over a 12-month period. Individual results may vary based on firm size, market conditions, and implementation quality.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-14 md:py-20 px-8 md:px-[72px] bg-background">
+      <section id="sf-faqs" className="py-10 md:py-20 px-4 md:px-[72px] bg-background">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[32px] md:text-4xl font-heading font-bold text-primary mb-14 text-center leading-tight">
+          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {defaultFAQs.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-6 bg-background">
-                <summary className="cursor-pointer font-semibold text-base md:text-lg text-foreground">{faq.question}</summary>
-                <div className="text-text-secondary text-base mt-6 leading-relaxed max-w-[65ch]">{faq.answer}</div>
+              <details key={index} className="border border-border rounded-lg p-4 md:p-6 bg-background group focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2" aria-expanded="false">
+                <summary className="cursor-pointer font-semibold text-base md:text-lg text-foreground list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+                  {faq.question}
+                </summary>
+                <div className="text-text-secondary text-base mt-4 md:mt-6 leading-relaxed max-w-[65ch]">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -269,18 +292,35 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-14 md:py-20 px-8 md:px-[72px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
-        <div className="max-w-[800px] mx-auto text-center relative space-y-6">
-          <h2 className="text-[32px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
-          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" variant="white-on-dark" className="group font-semibold">
-              Book a Strategy Call
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      <section className="py-12 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <div className="max-w-[800px] mx-auto text-center relative space-y-6 md:space-y-8">
+          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
+          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+            <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg w-full sm:w-auto" asChild>
+              <a href="/get-started" aria-label="Book your strategy call now">
+                Book Your Strategy Call
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </a>
             </Button>
+            <a href="/case-studies" className="text-white hover:text-white/80 underline underline-offset-4 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded">
+              View Case Studies
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      {showStickyFAB && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border shadow-lg p-4 animate-fade-in">
+          <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-white font-semibold" asChild>
+            <a href="/get-started" aria-label="Get started now">
+              Get Started Now
+              <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+            </a>
+          </Button>
+        </div>
+      )}
       <Footer />
     </div>
   );
