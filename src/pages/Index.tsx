@@ -11,7 +11,7 @@ import {
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
@@ -46,7 +46,7 @@ const Index = () => {
         <HeroSection />
 
         <CompleteMarketingSolutions />
-        <TestimonialsSection />
+        <SkepticismCallout />
         <HowItWorksSection />
         <SolutionsSection />
 
