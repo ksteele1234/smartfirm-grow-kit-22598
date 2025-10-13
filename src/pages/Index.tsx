@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
@@ -55,7 +54,6 @@ const Index = () => {
         <FounderStory />
         <WhatMakesUsDifferent />
         <SetupExpectationCallout />
-        <HowItWorksSection />
         <SolutionsSection />
 
         {/* Homepage FAQ Section */}
