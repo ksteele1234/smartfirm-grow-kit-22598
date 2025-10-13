@@ -40,6 +40,7 @@ import BusinessOptimization from "./pages/services/BusinessOptimization";
 import ExecutiveServices from "./pages/services/ExecutiveServices";
 import ContentMarketing from "./pages/services/ContentMarketing";
 import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
+import StrategyIntegration from "./pages/services/StrategyIntegration";
 
 // Industry Pages
 import TaxPreparation from "./pages/industries/TaxPreparation";
@@ -123,6 +124,7 @@ const App = () => (
         <Route path="/services/website-design" element={<WebsiteDesign />} />
         <Route path="/services/content-marketing" element={<ContentMarketing />} />
         <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
+        <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
         
         {/* Industry Sub-pages */}
         <Route path="/industries/tax-preparation" element={<TaxPreparation />} />

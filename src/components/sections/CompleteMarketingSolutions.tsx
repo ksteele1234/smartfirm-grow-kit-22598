@@ -1,4 +1,5 @@
 import { MapPin, Star, Monitor, TrendingUp, Mail, Settings, BarChart3, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
@@ -27,7 +28,10 @@ export const CompleteMarketingSolutions = () => {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 md:gap-8 sm:gap-6">
           {/* Featured Card 1 */}
-          <div className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#7AB2B2] rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] hover:border-[#91ADC8] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98]" tabIndex={0}>
+          <Link 
+            to="/services/seo-for-accountants" 
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#7AB2B2] rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] hover:border-[#91ADC8] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98] block"
+          >
             <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
@@ -45,10 +49,13 @@ export const CompleteMarketingSolutions = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Featured Card 2 */}
-          <div className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#7AB2B2] rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] hover:border-[#91ADC8] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98]" tabIndex={0}>
+          <Link 
+            to="/services/website-design" 
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#7AB2B2] rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.12)] hover:border-[#91ADC8] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98] block"
+          >
             <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
@@ -66,10 +73,13 @@ export const CompleteMarketingSolutions = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Supporting Card 3 */}
-          <div className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98]" tabIndex={0}>
+          <Link 
+            to="/services/client-review-generation" 
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98] block"
+          >
             <div className="flex flex-col gap-3">
               <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
                 <Star className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
@@ -83,10 +93,13 @@ export const CompleteMarketingSolutions = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Supporting Card 4 */}
-          <div className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98]" tabIndex={0}>
+          <Link 
+            to="/services/email-marketing" 
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98] block"
+          >
             <div className="flex flex-col gap-3">
               <div className="relative w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
                 <Mail className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
@@ -101,10 +114,13 @@ export const CompleteMarketingSolutions = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Supporting Card 5 */}
-          <div className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98]" tabIndex={0}>
+          <Link 
+            to="/services/technology-solutions" 
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-8 md:p-6 sm:p-5 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:border-[#7AB2B2] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 active:sm:scale-[0.98] block"
+          >
             <div className="flex flex-col gap-3">
               <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
                 <BarChart3 className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
@@ -118,10 +134,13 @@ export const CompleteMarketingSolutions = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Foundation Card 6 */}
-          <div className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 py-8 px-12 md:py-6 md:px-10 bg-[#F7FAFC] border border-dashed border-[#7AB2B2] rounded-xl focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2" tabIndex={0}>
+          <Link 
+            to="/services/strategy-integration" 
+            className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 py-8 px-12 md:py-6 md:px-10 bg-[#F7FAFC] border border-dashed border-[#7AB2B2] rounded-xl focus:outline-none focus:ring-3 focus:ring-[#7AB2B2] focus:ring-offset-2 transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:bg-[#F0F8F8] block"
+          >
             <div className="flex-shrink-0 w-[64px] h-[64px] md:w-[56px] md:h-[56px] sm:w-[52px] sm:h-[52px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
               <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-[#7AB2B2]" aria-hidden="true" />
             </div>
@@ -136,7 +155,7 @@ export const CompleteMarketingSolutions = () => {
                 2-hour deep dive into your firm, ideal clients, and competitive landscape. Then we build everything to work together seamlessly—not a disconnected tech mess.
               </p>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
