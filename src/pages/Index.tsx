@@ -16,6 +16,7 @@ import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarketingSolutions";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { ArrowRight, Play } from "lucide-react";
@@ -44,7 +45,7 @@ const Index = () => {
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 
-        <ServicesSection />
+        <CompleteMarketingSolutions />
         <TestimonialsSection />
         <HowItWorksSection />
         <SolutionsSection />
