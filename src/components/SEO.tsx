@@ -24,7 +24,7 @@ const SEO = ({
   title, 
   description,
   image,
-  noindex = true, // Pre-launch: noindex by default
+  noindex = false, // Site is live: allow indexing by default
   robots, // Custom robots directive
   pageType = 'default',
   serviceName,
