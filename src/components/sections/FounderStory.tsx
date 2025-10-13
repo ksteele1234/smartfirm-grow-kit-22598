@@ -1,0 +1,144 @@
+import { CheckCircle2 } from "lucide-react";
+import katieSteeleImage from "@/assets/katie-steele.png";
+import brianHellewellImage from "@/assets/brian-hellewell.png";
+
+const FounderStory = () => {
+  const whyCPAsOnly = [
+    "We speak your language—utilization, realization, busy season",
+    "We know the difference between $500 tax clients and $5K advisory retainers",
+    "We understand compliance deadlines don't pause for marketing",
+    "We specialize in technology integration with accounting tools and systems",
+  ];
+
+  const founders = [
+    {
+      name: "Katie Steele",
+      title: "Founder & CEO, CPA",
+      image: katieSteeleImage,
+    },
+    {
+      name: "Brian Hellewell",
+      title: "Technology Transformation Leader, CPA",
+      image: brianHellewellImage,
+    },
+  ];
+
+  return (
+    <section className="w-full py-20 bg-white">
+      <div className="container mx-auto px-6 max-w-[1100px]">
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-16 md:gap-10">
+          {/* LEFT COLUMN: Founder Story */}
+          <div className="lg:col-span-6">
+            {/* Headline */}
+            <h2
+              className="text-[28px] lg:text-[28px] md:text-[26px] sm:text-2xl font-bold mb-5"
+              style={{
+                color: '#1A202C',
+                lineHeight: '1.3',
+              }}
+            >
+              Built By People Who Understand Your Business
+            </h2>
+
+            {/* Body Text */}
+            <p
+              className="text-[17px] md:text-base font-normal mb-8"
+              style={{
+                color: '#2D3748',
+                lineHeight: '1.7',
+              }}
+            >
+              SmartFirm was founded by Katie Steele, CPA, and Brian Hellewell, who brings 20+ years of experience in IT strategy, financial systems, and business optimization. Katie has spent over two decades transforming businesses—from turning around struggling hospitality brands to implementing enterprise-scale systems. Brian, a CPA and former SpaceX product manager, specializes in modernizing accounting firms with secure, scalable technology that integrates seamlessly with accounting tools.
+            </p>
+            
+            <p
+              className="text-[17px] md:text-base font-normal mb-8"
+              style={{
+                color: '#2D3748',
+                lineHeight: '1.7',
+              }}
+            >
+              Unlike agencies that dabble in every industry, we only work with accounting firms. We understand your metrics, your seasonality, and what it takes to scale from $400K to $1M+ without burning out your team.
+            </p>
+
+            {/* Founder Photos */}
+            <div className="flex flex-row gap-4 mt-8">
+              {founders.map((founder, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <img
+                    src={founder.image}
+                    alt={`${founder.name} headshot`}
+                    className="w-20 h-20 rounded-full object-cover"
+                    style={{
+                      border: '3px solid #FAFDD6',
+                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+                    }}
+                  />
+                  <div
+                    className="text-base font-semibold mt-2 text-center"
+                    style={{ color: '#1A202C' }}
+                  >
+                    {founder.name}
+                  </div>
+                  <div
+                    className="text-sm font-normal mt-1 text-center"
+                    style={{ color: '#718096' }}
+                  >
+                    {founder.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: Why Accounting Firms Only Box */}
+          <div className="lg:col-span-4 self-start">
+            <div
+              className="rounded-xl p-8"
+              style={{
+                backgroundColor: '#FAFDD6',
+                border: '2px solid #4D869C',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
+              }}
+            >
+              {/* Headline */}
+              <h3
+                className="text-xl font-bold mb-5"
+                style={{ color: '#1A202C' }}
+              >
+                Why We Work Exclusively With CPAs
+              </h3>
+
+              {/* List */}
+              <div className="flex flex-col gap-4">
+                {whyCPAsOnly.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3"
+                  >
+                    <CheckCircle2
+                      className="w-5 h-5 flex-shrink-0 mt-0.5"
+                      style={{ color: '#4D869C' }}
+                      aria-hidden="true"
+                    />
+                    <span
+                      className="text-base font-medium"
+                      style={{
+                        color: '#2D3748',
+                        lineHeight: '1.5',
+                      }}
+                    >
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FounderStory;

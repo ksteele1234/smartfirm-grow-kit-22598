@@ -13,6 +13,7 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
+import FounderStory from "@/components/sections/FounderStory";
 import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
@@ -49,6 +50,7 @@ const Index = () => {
         <CompleteMarketingSolutions />
         <SkepticismCallout />
         <StatsGrid />
+        <FounderStory />
         <HowItWorksSection />
         <SolutionsSection />
 

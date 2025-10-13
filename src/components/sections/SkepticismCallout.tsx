@@ -22,8 +22,8 @@ const SkepticismCallout = () => {
         <div
           className="rounded-xl p-12 md:p-8 sm:p-6 border-l-[3px]"
           style={{
-            backgroundColor: '#F0F9F9',
-            borderLeftColor: '#14B8A6',
+            backgroundColor: '#FAFDD6',
+            borderLeftColor: '#4D869C',
             boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)',
           }}
         >
@@ -60,7 +60,7 @@ const SkepticismCallout = () => {
                 >
                   <Icon
                     className="w-6 h-6 flex-shrink-0"
-                    style={{ color: '#14B8A6' }}
+                    style={{ color: '#4D869C' }}
                     aria-hidden="true"
                   />
                   <span
