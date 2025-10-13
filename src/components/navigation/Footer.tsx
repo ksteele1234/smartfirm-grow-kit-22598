@@ -152,6 +152,12 @@ const Footer = () => {
               </ul>
               <div className="mt-6">
                 <a 
+                  href="/quick-start-marketing-for-cpa-firms" 
+                  className="block text-text-secondary hover:text-primary transition-colors mb-2"
+                >
+                  Quick Start Package
+                </a>
+                <a 
                   href="/about" 
                   className="block text-text-secondary hover:text-primary transition-colors mb-2"
                 >
