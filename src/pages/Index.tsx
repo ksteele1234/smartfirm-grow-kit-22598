@@ -14,6 +14,7 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
+import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
 import SolutionsSection from "@/components/sections/SolutionsSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
@@ -51,6 +52,7 @@ const Index = () => {
         <SkepticismCallout />
         <StatsGrid />
         <FounderStory />
+        <WhatMakesUsDifferent />
         <HowItWorksSection />
         <SolutionsSection />
 
