@@ -107,7 +107,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg px-10" asChild>
+          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg px-2.5 mr-3" asChild>
             <a href="/get-started" aria-label="Get started with your custom solution">
               See How This Works for You
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
