@@ -11,7 +11,7 @@ import danPhoto from "@/assets/testimonial-dan.jpg";
 import joannaPhoto from "@/assets/testimonial-joanna.jpg";
 import jennPhoto from "@/assets/testimonial-jenn.jpg";
 import womanBlazer from "@/assets/woman-blazer.png";
-import womanPointingBlazer from "@/assets/woman-pointing-blazer.png";
+import womanPointingBlazer from "@/assets/woman-pointing-blazer.svg";
 
 const GrowthCalculator = () => {
   useEffect(() => {
