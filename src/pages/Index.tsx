@@ -15,7 +15,7 @@ import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
 import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
 import SetupExpectationCallout from "@/components/sections/SetupExpectationCallout";
-import SolutionsSection from "@/components/sections/SolutionsSection";
+
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -55,7 +55,6 @@ const Index = () => {
         <FounderStory />
         <WhatMakesUsDifferent />
         <SetupExpectationCallout />
-        <SolutionsSection />
 
         {/* Homepage FAQ Section */}
         <section className="py-12 md:py-16 bg-[#4D869C]">
