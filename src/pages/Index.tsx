@@ -17,6 +17,7 @@ import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
 import SetupExpectationCallout from "@/components/sections/SetupExpectationCallout";
 import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
+import HomepageFAQSection from "@/components/sections/HomepageFAQSection";
 
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -36,11 +37,17 @@ const Index = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[{ name: "Home", url: "/" }]}
         faqs={[
-          { question: "How do I get started?", answer: "Book a free strategy call. We'll learn about your firm's goals and create a custom plan." },
-          { question: "What is the pricing structure?", answer: "Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter." },
-          { question: "Do you offer guarantees?", answer: "We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals." },
-          { question: "How fast can I launch?", answer: "We can have your marketing automation systems up and running in under 30 days." },
-          { question: "Do you work with firms outside of accounting?", answer: "Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers." }
+          { question: "How is this different from other marketing agencies?", answer: "We only work with accounting firms: no restaurants, dentists, or tech startups. Our founder is a CPA who understands busy season, utilization rates, and the difference between $500 tax clients and $5K advisory retainers. We don't offer generic 'brand awareness' tactics. We build marketing infrastructure: websites that convert, Google profiles that rank, review systems that build trust, and dashboards that prove ROI." },
+          { question: "How much time will my team need to invest?", answer: "During the initial 30-day setup, expect to invest 4-6 hours total across a few strategy sessions where we nail down your positioning, ideal clients, and messaging. We handle all the technical execution: website build, GBP optimization, system integrations. After launch, your team invests approximately 2 hours per month for performance reviews and content approval." },
+          { question: "What kind of clients will we attract?", answer: "We target CFO-level decision makers and business owners looking for $5K-$15K advisory relationships, not $500 tax-only clients. Our strategies position you as a trusted advisor through thought leadership content, strategic SEO targeting high-value services, and referral partner programs with attorneys and financial advisors." },
+          { question: "We've tried marketing before and got mixed results. Why will this work?", answer: "Most DIY marketing fails because firms lack the infrastructure. Random LinkedIn posts don't work without a website that converts visitors. Google ads waste money if your Business Profile isn't optimized. Email campaigns flop without proper tracking. We build the foundation first (website, local SEO, review systems, analytics) then layer on tactics." },
+          { question: "How quickly will we see results?", answer: "The first thing we set up is your analytics and tracking (if you don't have them already), so you can see improvements from day 1. Your website and Google Business Profile optimization are complete within 14 days. The full Quick Start Package, including review systems, email automation, and tracking dashboards, is live within 30 days." },
+          { question: "How do you prove what's working?", answer: "You get a real-time dashboard tracking website traffic, lead sources, Google rankings, review count, and cost-per-lead. Monthly reports show exactly where leads came from (Google search, referrals, direct traffic) and which marketing activities drove results." },
+          { question: "What's the total investment?", answer: "The Quick Start Package is $6,999 one-time setup (early adopter pricing, regular $9,999) plus $999/month for ongoing management, optimization, and support. This includes everything: website, Google Business Profile, review system, email automation, performance tracking, and monthly reports. No hidden fees. Cancel anytime after the initial 30-day setup." },
+          { question: "Can we cancel if it's not working?", answer: "Absolutely. After the initial 30-day setup period, you can cancel anytime with 30 days notice. We don't lock you into long-term contracts because we earn your business every month by delivering results." },
+          { question: "Do you understand the accounting industry?", answer: "Yes. SmartFirm was founded by a CPA and a business turnaround specialist with 20+ years of experience. We've lived the reality of accounting firms: tax season chaos, managing utilization and realization rates, the challenge of shifting from compliance work to high-value advisory services." },
+          { question: "What if we're in busy season?", answer: "We work around your schedule. If you're slammed during tax season (January-April), we can delay the setup start date or spread strategy sessions across several weeks. The technical work happens on our end regardless of your availability. Once systems are live, they run 24/7 whether you're buried in extensions or enjoying a slower summer." },
+          { question: "What happens after the 30-day setup?", answer: "Your marketing infrastructure continues working on autopilot. We handle ongoing technical optimization: monitoring Google rankings, managing review responses, maintaining system integrations, and tracking performance. You receive monthly reports showing what's working and where we're focusing efforts." }
         ]}
       />
       <Header />
@@ -57,40 +64,7 @@ const Index = () => {
         <FounderStory />
         <WhatMakesUsDifferent />
         <SetupExpectationCallout />
-
-        {/* Homepage FAQ Section */}
-        <section className="py-12 md:py-16 bg-[#4D869C]">
-          <CurvedSeparator variant="teal" className="mb-12" />
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">How do I get started?</summary>
-                  <div className="text-[#1F2937] mt-2">Book a free strategy call. We'll learn about your firm's goals and create a custom plan.</div>
-                </details>
-                <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">What is the pricing structure?</summary>
-                  <div className="text-[#1F2937] mt-2">Pricing is customized based on your firm size, services, and goals. Most firms see positive ROI in their first quarter.</div>
-                </details>
-                <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">Do you offer guarantees?</summary>
-                  <div className="text-[#1F2937] mt-2">We don't believe in one-size-fits-all guarantees. Instead, we align with you on measurable success metrics and provide ongoing support to make sure you meet your goals.</div>
-                </details>
-                <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">How fast can I launch?</summary>
-                  <div className="text-[#1F2937] mt-2">We can have your marketing automation systems up and running in under 30 days.</div>
-                </details>
-                <details className="border border-border rounded-lg p-4 bg-background-light/40">
-                  <summary className="cursor-pointer font-medium text-foreground">Do you work with firms outside of accounting?</summary>
-                  <div className="text-[#1F2937] mt-2">Yes, we've supported 50+ companies across industries, but our focus is delivering solutions tailored to accounting firms, CPAs, bookkeepers, and tax preparers.</div>
-                </details>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        
+        <HomepageFAQSection />
       </main>
       <FinalCTASection />
       <Footer />
