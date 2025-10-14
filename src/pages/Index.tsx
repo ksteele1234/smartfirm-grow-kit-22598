@@ -15,6 +15,7 @@ import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
 import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
 import SetupExpectationCallout from "@/components/sections/SetupExpectationCallout";
+import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
 
 
 import SEO from "@/components/SEO";
@@ -50,6 +51,7 @@ const Index = () => {
 
         <CompleteMarketingSolutions />
         <SkepticismCallout />
+        <FirmComparisonSection />
         <ReadyToTransformSection />
         <StatsGrid />
         <FounderStory />
