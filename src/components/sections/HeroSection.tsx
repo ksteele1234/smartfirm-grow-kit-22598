@@ -105,13 +105,6 @@ const HeroSection = () => {
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </Button>
-                
-                <Button variant="outline" size="lg" className="group" asChild>
-                  <a href="#how-it-works">
-                    <Play className="mr-2 h-5 w-5" />
-                    See How It Works
-                  </a>
-                </Button>
               </motion.div>
 
               {/* Social Proof - Removed to reduce height */}

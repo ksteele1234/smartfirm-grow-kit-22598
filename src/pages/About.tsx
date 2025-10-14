@@ -25,10 +25,10 @@ import {
   Linkedin,
   CheckCircle
 } from "lucide-react";
-import katieSteeleImage from "@/assets/katie-steele.png";
-import brianHellewellImage from "@/assets/brian-hellewell.png";
-import graceMendezImage from "@/assets/grace-mendez.png";
-import yvonneGaliciaImage from "@/assets/yvonne-galicia.png";
+import katieSteeleImage from "@/assets/katie-steele.jpg";
+import brianHellewellImage from "@/assets/brian-hellewell.jpg";
+import graceMendezImage from "@/assets/grace-mendez.jpg";
+import yvonneGaliciaImage from "@/assets/yvonne-galicia.jpg";
 import SEO from "@/components/SEO";
 
 const About = () => {

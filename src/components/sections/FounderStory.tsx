@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-import katieSteeleImage from "@/assets/katie-steele.png";
-import brianHellewellImage from "@/assets/brian-hellewell.png";
+import katieSteeleImage from "@/assets/katie-steele.jpg";
+import brianHellewellImage from "@/assets/brian-hellewell.jpg";
 
 const FounderStory = () => {
   const whyCPAsOnly = [
