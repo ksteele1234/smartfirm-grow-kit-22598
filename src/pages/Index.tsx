@@ -90,28 +90,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-teal/5 to-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Ready to Grow Your Accounting Firm?
-              </h2>
-              <p className="text-lg text-[#1F2937] mb-8">
-                Book a marketing consultation for your accounting firm today and see why SmartFirm is trusted as the best marketing agency for accountants.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="lg" className="group" asChild>
-                  <a href="/get-started">
-                    Book a Marketing Consultation for Your Accounting Firm
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         
       </main>
       <Footer />
