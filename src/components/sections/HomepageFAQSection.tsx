@@ -86,9 +86,11 @@ const HomepageFAQSection = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pt-3 pb-4">
-                <p className="text-[16px] lg:text-[17px] font-normal text-[#333333] leading-relaxed">
-                  {faq.answer}
-                </p>
+                <div className="max-w-[800px]">
+                  <p className="text-[16px] lg:text-[17px] font-normal text-[#333333] leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}

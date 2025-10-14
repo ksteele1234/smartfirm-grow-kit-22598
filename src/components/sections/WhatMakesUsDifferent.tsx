@@ -58,17 +58,17 @@ const WhatMakesUsDifferent = () => {
                 </div>
 
                 {/* Headline */}
-                <h3 className="text-[22px] font-bold text-[#334260] mb-4">
+                <h3 className="text-[22px] font-bold text-[#334260] mb-4 text-left">
                   {pillar.headline}
                 </h3>
 
                 {/* Description */}
-                <p className="text-base font-normal text-[#333333] leading-relaxed flex-grow">
+                <p className="text-base font-normal text-[#333333] leading-relaxed flex-grow text-left">
                   {pillar.description}
                 </p>
 
                 {/* Key Benefit */}
-                <p className="text-[15px] font-semibold text-[#4D869C] mt-4">
+                <p className="text-[15px] font-semibold text-[#4D869C] mt-4 text-left">
                   {pillar.keyBenefit}
                 </p>
               </div>
