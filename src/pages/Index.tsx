@@ -16,7 +16,7 @@ import FounderStory from "@/components/sections/FounderStory";
 import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
 import SetupExpectationCallout from "@/components/sections/SetupExpectationCallout";
 import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
-
+import FinalCTASection from "@/components/sections/FinalCTASection";
 
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
@@ -92,6 +92,7 @@ const Index = () => {
 
         
       </main>
+      <FinalCTASection />
       <Footer />
     </div>
   );

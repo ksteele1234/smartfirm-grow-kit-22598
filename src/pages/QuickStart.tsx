@@ -361,7 +361,7 @@ const QuickStart = () => {
                   </CardDescription>
                   <div className="text-center space-y-4">
                     <div>
-                      <div className="text-5xl font-bold text-primary mb-2">$4,999</div>
+                      <div className="text-5xl font-bold text-primary mb-2">$6,999</div>
                       <div className="text-sm text-text-light">One-time setup fee</div>
                     </div>
                     <div className="text-2xl font-semibold text-primary">+</div>
@@ -448,6 +448,14 @@ const QuickStart = () => {
                   </Button>
                 </CardContent>
               </Card>
+              
+              {/* Urgency Note */}
+              <div className="max-w-[600px] mx-auto mt-8 text-center">
+                <p className="text-[15px] font-semibold text-teal leading-relaxed flex items-center justify-center gap-2">
+                  <Zap className="h-4 w-4 flex-shrink-0" />
+                  <span>Early adopter pricing limited to the next 10 firms. Lock in your rate before we increase to $9,999.</span>
+                </p>
+              </div>
             </div>
           </div>
         </section>
