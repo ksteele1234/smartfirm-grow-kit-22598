@@ -40,7 +40,7 @@ const FirmComparisonSection = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0">
             {/* Left Column - Stuck at $400K-$600K */}
-            <div className="bg-[#F8F9FA] border-2 border-[#E2E8F0] rounded-xl lg:rounded-r-none p-8 lg:p-10">
+            <div className="bg-white border-2 border-[#E2E8F0] rounded-xl lg:rounded-r-none p-8 lg:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] hover:shadow-[0_6px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
               <div className="mb-6">
                 <XCircle className="w-12 h-12 mb-4 text-[#718096]" />
                 <h3 className="text-[24px] lg:text-[28px] font-bold text-[#334260]">
@@ -61,7 +61,7 @@ const FirmComparisonSection = () => {
             </div>
 
             {/* Right Column - Scaling to $1M+ */}
-            <div className="bg-white border-2 border-[#4D869C] rounded-xl lg:rounded-l-none p-8 lg:p-10 shadow-[0_8px_24px_rgba(77,134,156,0.12)]">
+            <div className="bg-white border-[3px] border-[#4D869C] rounded-xl lg:rounded-l-none p-8 lg:p-10 shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(77,134,156,0.15)] transition-all duration-300">
               <div className="mb-6">
                 <TrendingUp className="w-12 h-12 mb-4 text-[#4D869C]" />
                 <h3 className="text-[24px] lg:text-[28px] font-bold text-[#4D869C]">

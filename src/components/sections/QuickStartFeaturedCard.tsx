@@ -16,7 +16,7 @@ const QuickStartFeaturedCard = () => {
   ];
 
   return (
-    <div className="relative bg-white border-[3px] border-[#4D869C] rounded-xl p-6 md:p-8 lg:p-12 shadow-[0_8px_32px_rgba(0,0,0,0.15)] border-white/20 self-start">
+    <div className="relative bg-white border-[3px] border-[#4D869C] rounded-xl p-6 md:p-8 lg:p-12 shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(77,134,156,0.15)] transition-all duration-300 self-start">
       {/* "Start Here" Badge - Top Right */}
       <div className="absolute -top-3 right-6 bg-[#4D869C] text-white text-sm font-bold px-4 py-2 rounded-full shadow-[0_4px_12px_rgba(77,134,156,0.3)] z-10">
         Start Here

@@ -12,7 +12,7 @@ const GrowthAddOnsCard = () => {
   ];
 
   return (
-    <div className="bg-white border-2 border-white/20 rounded-xl p-6 md:p-8 lg:p-10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] self-start">
+    <div className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all duration-300 self-start">
       {/* Icon Section */}
       <div className="flex justify-center mb-6">
         <div className="w-20 h-20 rounded-full bg-[rgba(145,173,200,0.15)] flex items-center justify-center">

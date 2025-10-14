@@ -20,10 +20,7 @@ const SkepticismCallout = () => {
     <section className="py-8 bg-transparent">
       <div className="container mx-auto px-6 max-w-[1000px]">
         <div
-          className="rounded-xl p-12 md:p-8 sm:p-6 border-l-[3px] bg-white shadow-md"
-          style={{
-            borderLeftColor: '#4D869C',
-          }}
+          className="rounded-xl p-10 md:p-8 sm:p-6 border-2 border-[#E2E8F0] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all duration-300"
         >
           {/* Headline */}
           <h2

@@ -94,12 +94,7 @@ const FounderStory = () => {
           {/* RIGHT COLUMN: Why Accounting Firms Only Box */}
           <div className="lg:col-span-4 self-start">
             <div
-              className="rounded-xl p-8"
-              style={{
-                backgroundColor: '#FAFDD6',
-                border: '2px solid #4D869C',
-                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
-              }}
+              className="rounded-xl p-8 bg-white border-2 border-[#4D869C] shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(77,134,156,0.15)] transition-all duration-300"
             >
               {/* Headline */}
               <h3
