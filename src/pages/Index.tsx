@@ -9,7 +9,7 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import HeroSection from "@/components/sections/HeroSection";
-import QuickStartFeaturedCard from "@/components/sections/QuickStartFeaturedCard";
+import ReadyToTransformSection from "@/components/sections/ReadyToTransformSection";
 import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
@@ -50,7 +50,7 @@ const Index = () => {
 
         <CompleteMarketingSolutions />
         <SkepticismCallout />
-        <QuickStartFeaturedCard />
+        <ReadyToTransformSection />
         <StatsGrid />
         <FounderStory />
         <WhatMakesUsDifferent />
