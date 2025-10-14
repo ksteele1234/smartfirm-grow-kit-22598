@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
-    <section className="py-20 bg-[#7AB2B2]/[0.12]">
+    <section className="pt-20 pb-20 -mt-[80px] md:-mt-[120px] bg-[#7AB2B2]/[0.12]">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-12">
