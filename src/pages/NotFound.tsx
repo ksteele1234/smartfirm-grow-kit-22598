@@ -7,7 +7,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
 import OptimizedImage from "@/components/ui/optimized-image";
-import piggyBank from "@/assets/404-piggy-bank.png";
+import piggyBank from "@/assets/404-piggy-bank.jpg";
 
 const NotFound = () => {
   const location = useLocation();
