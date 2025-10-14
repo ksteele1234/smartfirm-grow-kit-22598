@@ -14,7 +14,7 @@ const HeroSection = () => {
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-  return <AuroraBackground className="relative pb-0 bg-[#7AB2B2]/[0.12]">
+  return <AuroraBackground className="relative pb-0 bg-[hsl(var(--light-teal)/0.12)]">
       {/* Curved bottom edge - positioned at absolute bottom */}
       <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
