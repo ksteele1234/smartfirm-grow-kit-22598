@@ -18,7 +18,7 @@ const HeroSection = () => {
       {/* Curved bottom edge - positioned at absolute bottom */}
       <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="white"/>
+          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="hsl(var(--light-teal) / 0.12)"/>
         </svg>
       </div>
       
@@ -33,7 +33,7 @@ const HeroSection = () => {
       duration: 0.8,
       ease: "easeInOut"
     }} className="relative flex flex-col gap-4 items-center justify-center px-4 text-center">
-        <div className="container relative mx-auto px-4 lg:px-6 py-16 md:py-24 pb-32 md:pb-40">
+        <div className="container relative mx-auto px-4 lg:px-6 py-16 md:py-24 pb-16 md:pb-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
             <motion.div className="space-y-8" initial={{
