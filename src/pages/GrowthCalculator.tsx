@@ -8,7 +8,7 @@ import { Star } from "lucide-react";
 import revenueChart from "@/assets/revenue-growth-chart.png";
 import meetingPhoto from "@/assets/meeting-photo.png";
 import danPhoto from "@/assets/testimonial-dan.jpg";
-import joannaPhoto from "@/assets/testimonial-joanna.png";
+import joannaPhoto from "@/assets/testimonial-joanna.jpg";
 import jennPhoto from "@/assets/testimonial-jenn.jpg";
 import womanBlazer from "@/assets/woman-blazer.png";
 import womanPointingBlazer from "@/assets/woman-pointing-blazer.png";
@@ -221,7 +221,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
-                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
@@ -246,7 +246,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
-                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
@@ -271,7 +271,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
-                  className="w-32 h-32 mx-auto object-cover border-4 border-white shadow-md"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
