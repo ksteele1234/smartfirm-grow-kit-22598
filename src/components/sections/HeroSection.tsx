@@ -88,7 +88,7 @@ const HeroSection = () => {
               </motion.div>
 
               {/* CTA Buttons */}
-              <motion.div className="flex flex-col sm:flex-row gap-4" initial={{
+              <motion.div className="flex justify-center" initial={{
               opacity: 0,
               y: 20
             }} whileInView={{
