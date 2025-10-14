@@ -7,9 +7,9 @@ import { CheckmarkIcon } from "@/components/ui/checkmark-icon";
 import { Star } from "lucide-react";
 import revenueChart from "@/assets/revenue-growth-chart.png";
 import meetingPhoto from "@/assets/meeting-photo.png";
-import danPhoto from "@/assets/testimonial-dan.png";
+import danPhoto from "@/assets/testimonial-dan.jpg";
 import joannaPhoto from "@/assets/testimonial-joanna.png";
-import jennPhoto from "@/assets/testimonial-jenn.png";
+import jennPhoto from "@/assets/testimonial-jenn.jpg";
 import womanBlazer from "@/assets/woman-blazer.png";
 import womanPointingBlazer from "@/assets/woman-pointing-blazer.png";
 
