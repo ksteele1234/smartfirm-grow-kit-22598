@@ -16,9 +16,9 @@ const HeroSection = () => {
   }, []);
   return <AuroraBackground className="relative pb-0 bg-[hsl(var(--light-teal)/0.12)]">
       {/* Curved bottom edge - positioned at absolute bottom */}
-      <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
+      <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20 drop-shadow-[0_4px_6px_rgba(77,134,156,0.15)]">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="hsl(var(--light-teal) / 0.12)"/>
+          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="#91ADC8"/>
         </svg>
       </div>
       
