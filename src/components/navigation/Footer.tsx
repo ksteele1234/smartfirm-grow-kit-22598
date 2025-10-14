@@ -26,7 +26,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-[#F8F9FA] border-t border-[#E2E8F0]">
+    <footer className="bg-[#91ADC8]/[0.08] border-t border-[#E2E8F0]">
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Main Footer Content */}
         <div className="pt-[60px] pb-10">

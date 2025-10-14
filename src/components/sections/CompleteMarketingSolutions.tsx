@@ -3,18 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
-    <section className="relative py-20 md:py-16 sm:py-12 overflow-hidden bg-white">
-      {/* Background Elements */}
-      <div className="absolute top-[-100px] right-[-200px] w-[600px] h-[600px] rounded-full bg-[#7AB2B2] opacity-[0.08] pointer-events-none" />
-      <div className="absolute top-[15%] left-[8%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[35%] right-[12%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[60%] left-[5%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[25%] right-[25%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[75%] left-[18%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[50%] right-[6%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-      <div className="absolute top-[85%] left-[40%] w-2 h-2 rounded-full bg-[#7AB2B2] opacity-[0.12]" />
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-[#7AB2B2]/[0.12]">
+      <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-12">
           <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">

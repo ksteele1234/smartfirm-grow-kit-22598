@@ -17,14 +17,12 @@ const SkepticismCallout = () => {
   ];
 
   return (
-    <section className="w-full mt-20 mb-16">
+    <section className="py-8 bg-transparent">
       <div className="container mx-auto px-6 max-w-[1000px]">
         <div
-          className="rounded-xl p-12 md:p-8 sm:p-6 border-l-[3px]"
+          className="rounded-xl p-12 md:p-8 sm:p-6 border-l-[3px] bg-white shadow-md"
           style={{
-            backgroundColor: '#FAFDD6',
             borderLeftColor: '#4D869C',
-            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.04)',
           }}
         >
           {/* Headline */}

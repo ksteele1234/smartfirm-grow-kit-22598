@@ -1,20 +1,11 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage,
-} from "@/components/ui/breadcrumb";
 import HeroSection from "@/components/sections/HeroSection";
 import ReadyToTransformSection from "@/components/sections/ReadyToTransformSection";
 import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
 import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
-import SetupExpectationCallout from "@/components/sections/SetupExpectationCallout";
 import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import HomepageFAQSection from "@/components/sections/HomepageFAQSection";
@@ -56,17 +47,33 @@ const Index = () => {
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 
+        {/* Section 2: Complete Marketing Solutions - Background B (Soft Teal) */}
         <CompleteMarketingSolutions />
-        <SkepticismCallout />
-        <FirmComparisonSection />
-        <ReadyToTransformSection />
-        <StatsGrid />
-        <FounderStory />
+
+        {/* Section 3: Unified Credibility Section - Background A (White) */}
+        <section className="py-20 bg-white">
+          <SkepticismCallout />
+          <StatsGrid />
+          <FounderStory />
+        </section>
+
+        {/* Section 4: What Makes Us Different - Background C (Soft Blue) */}
         <WhatMakesUsDifferent />
-        <SetupExpectationCallout />
+
+        {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
+        <ReadyToTransformSection />
+
+        {/* Section 6: Firm Comparison - Background A (White) */}
+        <FirmComparisonSection />
+
+        {/* Section 7: Final CTA - Exception (Primary Blue Gradient) */}
+        <FinalCTASection />
+
+        {/* Section 8: FAQ - Background B (Soft Teal) */}
         <HomepageFAQSection />
       </main>
-      <FinalCTASection />
+      
+      {/* Section 9: Footer - Background C (Soft Blue) */}
       <Footer />
     </div>
   );

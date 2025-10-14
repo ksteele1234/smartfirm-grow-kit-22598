@@ -24,7 +24,7 @@ const FounderStory = () => {
   ];
 
   return (
-    <section className="w-full py-20 bg-white">
+    <section className="py-8 bg-transparent">
       <div className="container mx-auto px-6 max-w-[1100px]">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-16 md:gap-10">
           {/* LEFT COLUMN: Founder Story */}

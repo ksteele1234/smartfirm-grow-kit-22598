@@ -27,7 +27,7 @@ const StatsGrid = () => {
   ];
 
   return (
-    <section className="w-full py-[60px] bg-white border-t border-b border-[#E2E8F0]">
+    <section className="py-8 bg-transparent border-t border-b border-[#E2E8F0]">
       <div className="container mx-auto px-6 max-w-[1200px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {stats.map((stat, index) => (

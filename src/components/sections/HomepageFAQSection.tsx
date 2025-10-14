@@ -57,7 +57,7 @@ const HomepageFAQSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#7AB2B2]/[0.12]">
       <div className="container mx-auto px-6 max-w-[900px]">
         {/* Section Header */}
         <div className="text-center mb-16">
