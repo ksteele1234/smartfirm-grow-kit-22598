@@ -20,29 +20,6 @@ const FinalCTASection = () => {
 
       <div className="container relative mx-auto px-4 lg:px-6">
         <div className="max-w-4xl mx-auto text-center text-white">
-          {/* Main Headline */}
-          <div className="space-y-6 mb-12">
-            <h2 className="text-4xl lg:text-6xl font-heading font-bold leading-tight text-light-teal">
-              Why Firms Choose
-              <span className="block text-white">SmartFirm</span>
-            </h2>
-          </div>
-
-          {/* Value Props */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="flex items-center justify-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">Cloud-Native & Secure</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">100% Client Satisfaction Rate</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-accent-light flex-shrink-0" />
-              <span className="text-white/90">Results in 30 Days or Less</span>
-            </div>
-          </div>
 
           {/* Alternative Contact */}
           <div className="border-t border-white/20 pt-12 mt-12">
