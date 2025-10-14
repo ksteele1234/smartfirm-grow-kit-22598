@@ -7,7 +7,7 @@ const FinalCTASection = () => {
     {
       icon: Building2,
       headline: "40+ Companies Already Building",
-      description: "Join accounting firms from coast to coast who chose to stop guessing and start growing systematically."
+      description: "Between us, we have supported over 40 companies in their growth and automation efforts."
     },
     {
       icon: ShieldCheck,
@@ -107,7 +107,7 @@ const FinalCTASection = () => {
           <div className="max-w-[600px] mx-auto mt-6 text-center">
             <p className="text-[15px] font-semibold text-[hsl(67,95%,90%)] leading-relaxed flex items-center justify-center gap-2">
               <Zap className="h-4 w-4 flex-shrink-0" />
-              <span>Early adopter pricing limited to the next 10 firms. Lock in your rate before we increase to $9,999.</span>
+              <span>Early adopter pricing is limited to the next 4 firms. Lock in your rate before we increase to $9,999.</span>
             </p>
           </div>
         </div>
