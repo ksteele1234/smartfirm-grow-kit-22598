@@ -11,14 +11,14 @@ const HeroSection = () => {
         preserveAspectRatio="none"
       >
         <defs>
-          <linearGradient id="wave1grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="wave1grad" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#1e3a52" />
             <stop offset="50%" stopColor="#2a4a62" />
             <stop offset="100%" stopColor="#1e3a52" />
           </linearGradient>
         </defs>
         <path 
-          d="M 0,700 Q 180,600 360,620 T 720,580 Q 900,560 1080,600 T 1440,700 L 1440,700 L 0,700 Z"
+          d="M 0,700 C 200,600 400,650 600,620 C 800,590 1000,640 1200,620 C 1320,610 1380,650 1440,700 L 1440,700 L 0,700 Z"
           fill="url(#wave1grad)"
         />
       </svg>
@@ -30,14 +30,14 @@ const HeroSection = () => {
         preserveAspectRatio="none"
       >
         <defs>
-          <linearGradient id="wave2grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="wave2grad" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#2d5a7b" />
             <stop offset="50%" stopColor="#356382" />
             <stop offset="100%" stopColor="#3d6a8f" />
           </linearGradient>
         </defs>
         <path 
-          d="M 0,700 Q 120,620 240,640 T 480,610 Q 600,590 720,620 T 960,600 Q 1080,580 1200,610 T 1440,700 L 1440,700 L 0,700 Z"
+          d="M 0,700 C 180,630 380,620 580,650 C 780,680 980,630 1180,660 C 1300,680 1380,650 1440,700 L 1440,700 L 0,700 Z"
           fill="url(#wave2grad)"
         />
       </svg>
@@ -50,14 +50,14 @@ const HeroSection = () => {
         style={{ filter: 'drop-shadow(0 10px 40px rgba(45, 212, 191, 0.3))' }}
       >
         <defs>
-          <linearGradient id="wave3grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="wave3grad" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#2dd4bf" />
             <stop offset="50%" stopColor="#20c5b3" />
             <stop offset="100%" stopColor="#14b8a6" />
           </linearGradient>
         </defs>
         <path 
-          d="M 0,0 Q 120,140 240,120 T 480,160 Q 600,180 720,140 T 960,120 Q 1080,100 1200,140 T 1440,0 L 1440,0 L 0,0 Z"
+          d="M 0,0 C 200,100 400,60 600,90 C 800,120 1000,70 1200,100 C 1320,110 1380,60 1440,0 L 1440,0 L 0,0 Z"
           fill="url(#wave3grad)"
         />
       </svg>
@@ -70,23 +70,26 @@ const HeroSection = () => {
         style={{ filter: 'drop-shadow(0 10px 50px rgba(94, 234, 212, 0.4))' }}
       >
         <defs>
-          <linearGradient id="wave4grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="wave4grad" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#5eead4" />
             <stop offset="50%" stopColor="#6ce9d6" />
             <stop offset="100%" stopColor="#7dd3fc" />
           </linearGradient>
         </defs>
         <path 
-          d="M 480,0 Q 600,120 720,100 T 960,140 Q 1080,160 1200,120 T 1440,0 L 1440,0 L 480,0 Z"
+          d="M 576,0 C 700,140 850,120 1000,80 C 1150,40 1300,100 1440,0 L 1440,0 L 576,0 Z"
           fill="url(#wave4grad)"
         />
       </svg>
 
       {/* Orbital Circle System - Part 3 Implementation */}
       <svg 
-        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block animate-[spin_20s_linear_infinite]"
+        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
         viewBox="0 0 400 400"
-        style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))' }}
+        style={{ 
+          filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))',
+          animation: 'spin 20s linear infinite'
+        }}
       >
         {/* Three Concentric Circles */}
         <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
