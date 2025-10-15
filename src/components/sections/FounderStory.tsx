@@ -94,7 +94,7 @@ const FounderStory = () => {
           {/* RIGHT COLUMN: Why Accounting Firms Only Box */}
           <div className="lg:col-span-4 self-start">
             <div
-              className="rounded-xl p-8 bg-white border-2 border-[#4D869C] shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(77,134,156,0.15)] transition-all duration-300"
+              className="rounded-xl p-8 bg-white border-2 border-[#0F4C5C] shadow-[0_8px_24px_rgba(15,76,92,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(15,76,92,0.15)] transition-all duration-300"
             >
               {/* Headline */}
               <h3
@@ -113,7 +113,7 @@ const FounderStory = () => {
                   >
                     <CheckCircle2
                       className="w-5 h-5 flex-shrink-0 mt-0.5"
-                      style={{ color: '#4D869C' }}
+                      style={{ color: '#0F4C5C' }}
                       aria-hidden="true"
                     />
                     <span

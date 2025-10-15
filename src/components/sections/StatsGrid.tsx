@@ -43,7 +43,7 @@ const StatsGrid = () => {
               {/* The Number */}
               <div
                 className="text-[56px] sm:text-[64px] lg:text-[72px] font-bold leading-none mb-3"
-                style={{ color: '#4D869C' }}
+                style={{ color: '#0F4C5C' }}
               >
                 {stat.number}
               </div>

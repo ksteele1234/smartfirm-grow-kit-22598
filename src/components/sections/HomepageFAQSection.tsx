@@ -79,7 +79,7 @@ const HomepageFAQSection = () => {
             >
               <AccordionTrigger className="text-left hover:no-underline py-4">
                 <div className="flex items-center gap-3">
-                  <HelpCircle className="h-5 w-5 text-[#4D869C] flex-shrink-0" />
+                  <HelpCircle className="h-5 w-5 text-[#0F4C5C] flex-shrink-0" />
                   <span className="text-[20px] lg:text-[22px] font-bold text-[#334260] leading-snug">
                     {faq.question}
                   </span>
@@ -97,9 +97,9 @@ const HomepageFAQSection = () => {
         </Accordion>
 
         {/* Bottom CTA Section */}
-        <div className="mt-16 bg-[#F8F9FA] border-2 border-[#4D869C] rounded-xl p-8 md:p-12 text-center">
-          <div className="w-20 h-20 bg-[#4D869C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
-            <MessageSquare className="h-12 w-12 text-[#4D869C]" />
+        <div className="mt-16 bg-[#F8F9FA] border-2 border-[#0F4C5C] rounded-xl p-8 md:p-12 text-center">
+          <div className="w-20 h-20 bg-[#0F4C5C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
+            <MessageSquare className="h-12 w-12 text-[#0F4C5C]" />
           </div>
           
           <h3 className="text-2xl font-bold text-[#334260] mb-3">
@@ -112,7 +112,7 @@ const HomepageFAQSection = () => {
           
           <Button
             asChild
-            className="bg-[#4D869C] hover:bg-[#405D5D] text-white text-lg font-bold py-4 px-8 rounded-lg shadow-[0_4px_12px_rgba(77,134,156,0.25)] hover:-translate-y-0.5 transition-all"
+            className="bg-[#0F4C5C] hover:bg-[#405D5D] text-white text-lg font-bold py-4 px-8 rounded-lg shadow-[0_4px_12px_rgba(15,76,92,0.25)] hover:-translate-y-0.5 transition-all"
           >
             <Link to="/get-started">
               Book Your Free Strategy Call →

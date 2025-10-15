@@ -91,7 +91,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative py-24 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4D869C] via-[#7AB2B2] to-[#91ADC8] overflow-hidden">
+      <section className="relative py-24 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0F4C5C] via-[#7AB2B2] to-[#91ADC8] overflow-hidden">
         {/* Curved bottom edge */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
           <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">

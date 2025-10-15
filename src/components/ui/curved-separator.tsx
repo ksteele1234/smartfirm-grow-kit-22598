@@ -8,13 +8,13 @@ interface CurvedSeparatorProps {
 export const CurvedSeparator = ({ className, variant = "primary" }: CurvedSeparatorProps) => {
   const bgColors = {
     primary: "bg-[#647FBC]",
-    teal: "bg-[#4D869C]",
+    teal: "bg-[#0F4C5C]",
     "light-teal": "bg-[#7AB2B2]",
   };
 
   const fillColors = {
     primary: "#647FBC",
-    teal: "#4D869C",
+    teal: "#0F4C5C",
     "light-teal": "#7AB2B2",
   };
 

@@ -80,7 +80,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-to-br from-[#91ADC8] via-[#7AB2B2] to-[#4D869C] overflow-hidden">
+      <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-to-br from-[#91ADC8] via-[#7AB2B2] to-[#0F4C5C] overflow-hidden">
         {/* Curved bottom edge */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
           <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -96,7 +96,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-[#4D869C] hover:bg-white/90">
+          <Button size="lg" variant="secondary" className="group bg-white text-[#0F4C5C] hover:bg-white/90">
             Get Industry-Specific Solutions
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>

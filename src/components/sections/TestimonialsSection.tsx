@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative py-16 pb-32 md:pb-40 bg-[#4D869C] overflow-hidden">
+    <section className="relative py-16 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
       {/* Curved bottom edge */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">

@@ -25,7 +25,7 @@ const FirmComparisonSection = () => {
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <div className="text-sm font-semibold text-[#4D869C] uppercase tracking-wider mb-3">
+          <div className="text-sm font-semibold text-[#0F4C5C] uppercase tracking-wider mb-3">
             The $1M Question
           </div>
           <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#334260] leading-tight max-w-[900px] mx-auto mb-4 font-heading">
@@ -61,10 +61,10 @@ const FirmComparisonSection = () => {
             </div>
 
             {/* Right Column - Scaling to $1M+ */}
-            <div className="bg-white border-[3px] border-[#4D869C] rounded-xl lg:rounded-l-none p-8 lg:p-10 shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(77,134,156,0.15)] transition-all duration-300">
+            <div className="bg-white border-[3px] border-[#0F4C5C] rounded-xl lg:rounded-l-none p-8 lg:p-10 shadow-[0_8px_24px_rgba(15,76,92,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(15,76,92,0.15)] transition-all duration-300">
               <div className="flex items-start gap-3 mb-6">
-                <TrendingUp className="w-10 h-10 flex-shrink-0 text-[#4D869C] mt-1" />
-                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#4D869C] text-left">
+                <TrendingUp className="w-10 h-10 flex-shrink-0 text-[#0F4C5C] mt-1" />
+                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#0F4C5C] text-left">
                   Firms Scaling to $1M+
                 </h3>
               </div>

@@ -51,12 +51,12 @@ const GrowthCalculator = () => {
                 className="w-64 h-auto"
               />
               
-              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#4D869C] leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#0F4C5C] leading-tight">
                 How Much Revenue Is Your Firm Leaving on the Table?
               </h1>
               
               <p className="text-lg text-gray-700">
-                In just <span className="font-semibold text-[#4D869C]">60 seconds</span>, discover how many new clients you could add this year with the <span className="font-semibold text-[#4D869C]">right marketing system</span>.
+                In just <span className="font-semibold text-[#0F4C5C]">60 seconds</span>, discover how many new clients you could add this year with the <span className="font-semibold text-[#0F4C5C]">right marketing system</span>.
               </p>
             </div>
 
@@ -102,10 +102,10 @@ const GrowthCalculator = () => {
             <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
+                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-sm leading-tight">
+                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
                   Client workload keeps increasing, but growth doesn't.
                 </p>
               </div>
@@ -114,10 +114,10 @@ const GrowthCalculator = () => {
             <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
+                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-sm leading-tight">
+                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
                   Marketing feels overwhelming and eats up time you don't have.
                 </p>
               </div>
@@ -126,10 +126,10 @@ const GrowthCalculator = () => {
             <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#4D869C" stroke="#4D869C" strokeWidth="2"/>
+                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
                   <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#4D869C] font-medium text-sm leading-tight">
+                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
                   Without a system, firms plateau and miss out on predictable revenue.
                 </p>
               </div>
@@ -144,7 +144,7 @@ const GrowthCalculator = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#4D869C] leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#0F4C5C] leading-tight">
                 A Calculator Built for Accountants Who Want Growth Without Guesswork
               </h2>
               
@@ -159,21 +159,21 @@ const GrowthCalculator = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
+                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">100% free and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
+                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">Personalized to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#4D869C"/>
+                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">Built by marketing experts who understand accountants</span>
@@ -322,7 +322,7 @@ const GrowthCalculator = () => {
                     onClick={scrollToForm}
                     className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg shadow-md hover:opacity-90 transition-opacity"
                     style={{
-                      backgroundColor: '#4D869C',
+                      backgroundColor: '#0F4C5C',
                       width: '210px'
                     }}
                   >

@@ -48,12 +48,12 @@ const WhatMakesUsDifferent = () => {
             return (
               <div
                 key={index}
-                className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] flex flex-col"
+                className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] flex flex-col"
               >
                 {/* Icon Container */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-[72px] h-[72px] rounded-full bg-[rgba(122,178,178,0.2)] border-2 border-[#4D869C] flex items-center justify-center">
-                    <Icon className="w-9 h-9 text-[#4D869C]" aria-hidden="true" />
+                  <div className="w-[72px] h-[72px] rounded-full bg-[rgba(122,178,178,0.2)] border-2 border-[#0F4C5C] flex items-center justify-center">
+                    <Icon className="w-9 h-9 text-[#0F4C5C]" aria-hidden="true" />
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@ const WhatMakesUsDifferent = () => {
                 </p>
 
                 {/* Key Benefit */}
-                <p className="text-[15px] font-semibold text-[#4D869C] mt-4 text-left">
+                <p className="text-[15px] font-semibold text-[#0F4C5C] mt-4 text-left">
                   {pillar.keyBenefit}
                 </p>
               </div>

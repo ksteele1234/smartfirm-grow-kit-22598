@@ -16,19 +16,19 @@ const QuickStartFeaturedCard = () => {
   ];
 
   return (
-    <div className="relative bg-white border-[3px] border-[#4D869C] rounded-xl p-6 md:p-8 lg:p-12 shadow-[0_8px_24px_rgba(77,134,156,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(77,134,156,0.15)] transition-all duration-300 self-start">
+    <div className="relative bg-white border-[3px] border-[#0F4C5C] rounded-xl p-6 md:p-8 lg:p-12 shadow-[0_8px_24px_rgba(15,76,92,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] transition-all duration-300 self-start">
       {/* "Start Here" Badge - Top Right */}
-      <div className="absolute -top-3 right-6 bg-[#4D869C] text-white text-sm font-bold px-4 py-2 rounded-full shadow-[0_4px_12px_rgba(77,134,156,0.3)] z-10">
+      <div className="absolute -top-3 right-6 bg-[#0F4C5C] text-white text-sm font-bold px-4 py-2 rounded-full shadow-[0_4px_12px_rgba(15,76,92,0.3)] z-10">
         Start Here
       </div>
 
       {/* Early Adopter Badge */}
-      <div className="inline-block bg-[#FAFDD6] text-[#405D5D] text-xs font-semibold px-3 py-1.5 border border-[#4D869C] rounded mb-6">
+      <div className="inline-block bg-[#FAFDD6] text-[#405D5D] text-xs font-semibold px-3 py-1.5 border border-[#0F4C5C] rounded mb-6">
         Early Adopter Pricing
       </div>
 
       {/* Package Label */}
-      <div className="text-sm font-semibold text-[#4D869C] uppercase tracking-wide mb-3">
+      <div className="text-sm font-semibold text-[#0F4C5C] uppercase tracking-wide mb-3">
         30-Day Quick Start Package
       </div>
 
@@ -71,7 +71,7 @@ const QuickStartFeaturedCard = () => {
         <div className="flex flex-col gap-2">
           {includedItems.map((item, index) => (
             <div key={index} className="flex items-center gap-2.5">
-              <Check className="w-[18px] h-[18px] text-[#4D869C] flex-shrink-0" />
+              <Check className="w-[18px] h-[18px] text-[#0F4C5C] flex-shrink-0" />
               <span className="text-[15px] text-[#333333] leading-[1.4]">
                 {item}
               </span>
@@ -84,7 +84,7 @@ const QuickStartFeaturedCard = () => {
       <div className="flex flex-col gap-4">
         <Button 
           asChild
-          className="w-full bg-[#4D869C] hover:bg-[#405D5D] text-white text-lg font-bold py-4 px-8 rounded-lg shadow-[0_4px_12px_rgba(77,134,156,0.25)] transition-all hover:-translate-y-0.5"
+          className="w-full bg-[#0F4C5C] hover:bg-[#405D5D] text-white text-lg font-bold py-4 px-8 rounded-lg shadow-[0_4px_12px_rgba(15,76,92,0.25)] transition-all hover:-translate-y-0.5"
         >
           <Link to="/quick-start-marketing-for-cpa-firms">
             Start Your Quick Start
@@ -96,7 +96,7 @@ const QuickStartFeaturedCard = () => {
           <DialogTrigger asChild>
             <Button 
               variant="outline"
-              className="w-full bg-white hover:bg-[#F8F9FA] text-[#4D869C] border-2 border-[#4D869C] text-base font-semibold py-3.5 px-8 rounded-lg transition-colors"
+              className="w-full bg-white hover:bg-[#F8F9FA] text-[#0F4C5C] border-2 border-[#0F4C5C] text-base font-semibold py-3.5 px-8 rounded-lg transition-colors"
             >
               Book Free Strategy Call
             </Button>
