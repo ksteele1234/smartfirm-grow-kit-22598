@@ -25,7 +25,7 @@ import {
   Linkedin,
   CheckCircle
 } from "lucide-react";
-import katieSteeleImage from "@/assets/katie-steele.jpg";
+import katieSteeleImage from "@/assets/katie-steele.webp";
 import brianHellewellImage from "@/assets/brian-hellewell.webp";
 import graceMendezImage from "@/assets/grace-mendez.webp";
 import yvonneGaliciaImage from "@/assets/yvonne-galicia.webp";

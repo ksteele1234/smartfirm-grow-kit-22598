@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import katieSteeleImage from "@/assets/katie-steele.jpg";
+import katieSteeleImage from "@/assets/katie-steele.webp";
 import brianHellewellImage from "@/assets/brian-hellewell.jpg";
 
 const FounderStory = () => {
