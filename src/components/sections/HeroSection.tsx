@@ -5,13 +5,51 @@ const HeroSection = () => {
   return (
     <section 
       className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, #5eead4 0%, #14b8a6 30%, #2a5a70 60%, #0a2440 100%)'
-      }}
+      style={{ background: '#0a2440' }}
     >
+      {/* WAVE 1 - Bottom Foundation (Dark Blue) */}
+      <svg 
+        className="absolute bottom-0 left-0 w-full h-[50%] z-[1]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+      >
+        <path 
+          d="M 0,700 C 360,620 720,660 1080,620 C 1200,610 1320,640 1440,700 L 1440,700 L 0,700 Z"
+          fill="#1a4055"
+        />
+      </svg>
+
+      {/* WAVE 2 - Middle Layer (Medium Blue) */}
+      <svg 
+        className="absolute bottom-0 left-0 w-full h-[40%] z-[2]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+        style={{ mixBlendMode: 'multiply' }}
+      >
+        <path 
+          d="M 0,700 C 360,600 720,640 1080,600 C 1200,590 1320,620 1440,700 L 1440,700 L 0,700 Z"
+          fill="#2563eb"
+          opacity="0.8"
+        />
+      </svg>
+
+      {/* WAVE 3 - Top-Right Bright Accent (Cyan) */}
+      <svg 
+        className="absolute top-0 right-0 w-full h-[45%] z-[3]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+        style={{ mixBlendMode: 'screen' }}
+      >
+        <path 
+          d="M 576,0 C 720,120 900,100 1080,80 C 1200,70 1320,100 1440,0 L 1440,0 L 576,0 Z"
+          fill="#5eead4"
+          opacity="0.75"
+        />
+      </svg>
+
       {/* Simple Wave Divider at Bottom */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[100px] z-[1]"
+        className="absolute bottom-0 left-0 w-full h-[100px] z-[4]"
         viewBox="0 0 1440 100" 
         preserveAspectRatio="none"
       >
