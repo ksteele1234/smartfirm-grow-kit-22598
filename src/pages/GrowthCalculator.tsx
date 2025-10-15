@@ -5,7 +5,7 @@ import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
 import { CheckmarkIcon } from "@/components/ui/checkmark-icon";
 import { Star } from "lucide-react";
-import revenueChart from "@/assets/revenue-growth-chart.png";
+import revenueChart from "@/assets/revenue-growth-chart.svg";
 import meetingPhoto from "@/assets/meeting-photo.webp";
 import danPhoto from "@/assets/testimonial-dan.webp";
 import joannaPhoto from "@/assets/testimonial-joanna.webp";
