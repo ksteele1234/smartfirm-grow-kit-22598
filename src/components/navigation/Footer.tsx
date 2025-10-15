@@ -70,19 +70,19 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="flex flex-row gap-3">
-                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Youtube className="h-5 w-5" />
                 </a>
-                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
@@ -91,7 +91,7 @@ const Footer = () => {
             {/* Services Column */}
             <div>
               <h4 className="text-[16px] font-bold text-[#334260] mb-4">Services</h4>
-              <p className="text-[13px] font-medium text-[#999999] italic mb-3">What We Do</p>
+              <p className="text-[13px] font-medium text-[#666666] italic mb-3">What We Do</p>
               <ul className="space-y-[10px]">
                 {services.map((service) => (
                   <li key={service.slug}>
@@ -109,7 +109,7 @@ const Footer = () => {
             {/* Solutions Column */}
             <div>
               <h4 className="text-[16px] font-bold text-[#334260] mb-4">Solutions</h4>
-              <p className="text-[13px] font-medium text-[#999999] italic mb-3">Outcomes You Get</p>
+              <p className="text-[13px] font-medium text-[#666666] italic mb-3">Outcomes You Get</p>
               <ul className="space-y-[10px]">
                 {solutions.map((solution) => (
                   <li key={solution.slug}>
@@ -170,19 +170,19 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="pt-6 mt-10 border-t border-[#E2E8F0]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
-            <div className="text-[14px] font-normal text-[#999999]">
+            <div className="text-[14px] font-normal text-[#666666]">
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-6 text-[14px]">
-              <a href="/privacy" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
+              <a href="/privacy" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
                 Privacy Policy
               </a>
-              <span className="text-[#999999]">|</span>
-              <a href="/terms" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
+              <span className="text-[#666666]">|</span>
+              <a href="/terms" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
                 Terms of Service
               </a>
-              <span className="text-[#999999]">|</span>
-              <a href="/cookies" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
+              <span className="text-[#666666]">|</span>
+              <a href="/cookies" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
                 Cookie Policy
               </a>
             </div>

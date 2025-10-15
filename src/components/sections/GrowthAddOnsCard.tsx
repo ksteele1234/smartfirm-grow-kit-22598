@@ -57,7 +57,7 @@ const GrowthAddOnsCard = () => {
           </Link>
         </Button>
         
-        <p className="text-sm text-[#999999] text-center mt-3">
+        <p className="text-sm text-[#666666] text-center mt-3">
           Not sure what you need?{" "}
           <Link 
             to="/get-started" 

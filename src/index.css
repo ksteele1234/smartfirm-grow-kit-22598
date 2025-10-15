@@ -21,7 +21,7 @@ All colors MUST be HSL converted from the official brand colors.
     /* Text Colors */
     --text-primary: 0 0% 20%; /* #333333 */
     --text-secondary: 0 0% 40%; /* #666666 */
-    --text-light: 0 0% 60%; /* #999999 */
+    --text-light: 0 0% 40%; /* #666666 - Updated for WCAG AA compliance (was #999999) */
     
     /* Background Colors */
     --background-white: 0 0% 100%; /* #FFFFFF */

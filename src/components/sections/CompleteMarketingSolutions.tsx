@@ -23,7 +23,7 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
-            <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            <span className="absolute top-4 right-4 bg-[#0F4C5C] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
@@ -48,7 +48,7 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
-            <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            <span className="absolute top-4 right-4 bg-[#0F4C5C] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
@@ -141,7 +141,7 @@ export const CompleteMarketingSolutions = () => {
               <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-[#7AB2B2]" aria-hidden="true" />
             </div>
             <div className="flex-1">
-              <span className="inline-block text-xs text-[#718096] font-semibold uppercase tracking-[0.5px] mb-2">
+              <span className="inline-block text-xs text-[#666666] font-semibold uppercase tracking-[0.5px] mb-2">
                 INCLUDED IN ONBOARDING
               </span>
               <h3 className="text-xl md:text-lg font-bold text-[#647FBC] mb-2">

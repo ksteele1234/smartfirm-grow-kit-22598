@@ -60,7 +60,7 @@ const SkepticismCallout = () => {
                   />
                   <span
                     className="text-[15px] font-medium"
-                    style={{ color: '#718096' }}
+                    style={{ color: '#666666' }}
                   >
                     {feature.text}
                   </span>

@@ -52,7 +52,7 @@ const StatsGrid = () => {
               {stat.unit && (
                 <div
                   className="text-2xl font-normal -mt-2"
-                  style={{ color: '#718096' }}
+                  style={{ color: '#666666' }}
                 >
                   {stat.unit}
                 </div>
@@ -69,7 +69,7 @@ const StatsGrid = () => {
               {/* The Context */}
               <div
                 className="text-sm font-normal italic leading-[1.4] mt-2"
-                style={{ color: '#718096' }}
+                style={{ color: '#666666' }}
               >
                 {stat.context}
               </div>

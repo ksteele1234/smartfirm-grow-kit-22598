@@ -330,6 +330,8 @@ const Header = () => {
           <button
             className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Open navigation menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
