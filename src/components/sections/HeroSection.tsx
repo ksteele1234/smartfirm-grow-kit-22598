@@ -3,86 +3,38 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[500px] md:min-h-[600px] py-20 md:py-[120px] overflow-hidden">
-      {/* Base Layer - Dark Navy Blue */}
-      <div className="absolute inset-0 bg-[#0a2440] z-0" />
-
-      {/* WAVE 1 - Bottom Blue Foundation (Mid blue gradient) */}
+    <section className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden bg-[#0a1929]">
+      {/* WAVE 1 - Darkest Bottom Foundation */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[65%] z-[1]" 
-        viewBox="0 0 1440 650" 
+        className="absolute bottom-0 left-0 w-full h-[70%] z-[1]" 
+        viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
-        <defs>
-          <linearGradient id="wave1grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#2a5a8a" />
-            <stop offset="100%" stopColor="#3d7ab8" />
-          </linearGradient>
-        </defs>
         <path 
-          d="M-100,650 C200,480 450,400 700,450 C950,500 1200,520 1540,460 L1540,650 L-100,650 Z"
-          fill="url(#wave1grad)"
+          d="M 0,700 C 360,520 720,480 1080,550 C 1200,580 1320,650 1440,700 L 1440,700 L 0,700 Z"
+          fill="#1e3a52"
         />
       </svg>
 
-      {/* WAVE 2 - Blue-Teal Blend (Transition Layer with multiply blend) */}
+      {/* WAVE 2 - Mid-Dark with Gradient */}
       <svg 
-        className="absolute bottom-0 right-0 w-full h-[60%] z-[2] mix-blend-multiply" 
-        viewBox="0 0 1440 600" 
+        className="absolute bottom-0 left-0 w-full h-[65%] z-[2] opacity-95" 
+        viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <defs>
-          <linearGradient id="wave2grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1e5570" />
-            <stop offset="100%" stopColor="#2a7a8a" />
+          <linearGradient id="wave2grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2d5a7b" />
+            <stop offset="100%" stopColor="#3d6a8f" />
           </linearGradient>
         </defs>
         <path 
-          d="M1540,600 C1200,420 850,360 550,410 C300,450 100,480 -100,420 L-100,600 L1540,600 Z"
+          d="M 0,700 C 300,580 600,520 900,580 C 1100,620 1280,680 1440,700 L 1440,700 L 0,700 Z"
           fill="url(#wave2grad)"
         />
       </svg>
 
-      {/* WAVE 3 - Bright Teal Accent (THE ENERGY WAVE with screen blend) */}
-      <svg 
-        className="absolute top-0 left-0 w-full h-[50%] z-[3] mix-blend-screen" 
-        viewBox="0 0 1440 500" 
-        preserveAspectRatio="none"
-        style={{ filter: 'drop-shadow(0 0 30px rgba(45, 212, 191, 0.4))' }}
-      >
-        <defs>
-          <linearGradient id="wave3grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#14b8a6" />
-            <stop offset="100%" stopColor="#2dd4bf" />
-          </linearGradient>
-        </defs>
-        <path 
-          d="M-100,0 C150,140 500,200 800,160 C1100,120 1350,80 1540,120 L1540,0 L-100,0 Z"
-          fill="url(#wave3grad)"
-          fillOpacity="0.8"
-        />
-      </svg>
-
-      {/* WAVE 4 - Cyan to Light Blue Accent (Top Highlight with lighten blend) */}
-      <svg 
-        className="absolute top-0 right-0 w-full h-[45%] z-[4] mix-blend-lighten" 
-        viewBox="0 0 1440 450" 
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient id="wave4grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#5eead4" />
-            <stop offset="100%" stopColor="#7dd3fc" />
-          </linearGradient>
-        </defs>
-        <path 
-          d="M1540,0 C1300,100 1050,140 750,110 C500,80 250,50 -100,80 L-100,0 L1540,0 Z"
-          fill="url(#wave4grad)"
-          fillOpacity="0.6"
-        />
-      </svg>
-
-      {/* Orbital Circle System - Right Side (Energy tech aesthetic) */}
+      {/* Orbital Circle System - Keeping for now (will refine in Part 3) */}
       <div className="absolute top-1/4 right-[10%] w-[360px] h-[360px] z-[5] hidden lg:block">
         {/* Outer circle with dots - 60s rotation */}
         <svg 
