@@ -128,17 +128,6 @@ const Industries = () => {
         {/* Hero Section */}
         <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div
-              className="absolute -inset-[10px] pointer-events-none animate-aurora"
-              style={{
-                backgroundImage:
-                  'radial-gradient(60% 60% at 70% 20%, hsl(var(--light-teal) / 0.95), transparent 62%), radial-gradient(55% 55% at 20% 70%, hsl(var(--primary-teal) / 0.9), transparent 62%), radial-gradient(45% 45% at 85% 80%, hsl(var(--accent-light) / 0.95), transparent 62%), repeating-linear-gradient(110deg, hsl(var(--primary-blue) / 0.95) 0%, hsl(var(--primary-blue) / 0.95) 4%, hsl(var(--secondary-blue) / 0.92) 6%, hsl(var(--secondary-blue) / 0.92) 10%, hsl(var(--primary-teal) / 0.9) 12%, hsl(var(--primary-teal) / 0.9) 16%, hsl(var(--accent-light) / 0.88) 18%, hsl(var(--accent-light) / 0.88) 22%)',
-                backgroundSize: '160% 160%, 160% 160%, 160% 160%, 400%',
-                backgroundPosition: '50% 50%, 50% 50%, 50% 50%, 50% 50%',
-                animation: 'aurora 240s linear infinite',
-                opacity: 0.49,
-              }}
-            />
           </div>
           {/* Curved bottom edge */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
