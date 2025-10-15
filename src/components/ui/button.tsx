@@ -9,33 +9,28 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // High contrast blue variants
-        default: "bg-primary text-white hover:bg-primary/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
-        hero: "bg-primary text-white hover:bg-primary/90 shadow-soft hover:shadow-lg rounded-xl font-semibold",
+        // Primary CTA - Coral (for "Book Call", "Get Started")
+        default: "bg-gradient-coral text-white hover:opacity-90 shadow-md hover:shadow-glow-coral rounded-lg font-semibold transition-all",
+        coral: "bg-gradient-coral text-white hover:opacity-90 shadow-md hover:shadow-glow-coral rounded-lg font-semibold transition-all",
         
-        // High contrast teal variants  
-        secondary: "bg-teal text-white hover:bg-teal/90 shadow-card hover:shadow-soft rounded-lg font-semibold",
-        "teal-bold": "bg-[#0F4C5C] text-white hover:bg-[#3d6b7d] shadow-lg hover:shadow-xl rounded-xl font-bold",
-        "dark-teal": "bg-[#0F4C5C] text-white hover:bg-[#0d3d4a] shadow-lg hover:shadow-xl rounded-xl font-bold",
+        // Secondary - Vibrant Teal
+        "vibrant-teal": "bg-gradient-vibrant-teal text-white hover:opacity-90 shadow-md hover:shadow-teal-md rounded-lg font-semibold transition-all",
         
-        // White with blue/teal outline variants
-        outline: "border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white rounded-lg font-semibold",
-        "outline-teal": "border-2 border-teal text-teal bg-white hover:bg-teal hover:text-white rounded-lg font-semibold",
+        // Outline variants
+        "outline-coral": "border-2 border-coral text-coral bg-white hover:bg-coral hover:text-white rounded-lg font-semibold transition-all",
+        outline: "border-2 border-vibrant-teal text-vibrant-teal bg-white hover:bg-vibrant-teal hover:text-white rounded-lg font-semibold transition-all",
         
-        // Gradient variants with white text
-        "gradient-primary": "bg-gradient-to-r from-primary to-teal text-white hover:from-primary/90 hover:to-teal/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
-        "gradient-reverse": "bg-gradient-to-r from-teal to-primary text-white hover:from-teal/90 hover:to-primary/90 shadow-soft hover:shadow-lg rounded-lg font-semibold",
+        // Ghost and link
+        ghost: "hover:bg-slate-100 text-slate-900 rounded-lg transition-all",
+        link: "text-vibrant-teal underline-offset-4 hover:underline font-medium",
         
-        // White on dark backgrounds
-        "white-on-dark": "bg-white text-primary hover:bg-white/90 shadow-soft rounded-lg font-semibold",
-        "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary rounded-lg font-semibold",
-        
-        // Destructive - red with white text
+        // Legacy variants for backward compatibility
+        secondary: "bg-gradient-vibrant-teal text-white hover:opacity-90 rounded-lg font-semibold",
         destructive: "bg-red-600 text-white hover:bg-red-700 rounded-lg font-semibold",
-        
-        // Minimal variants for special cases
-        ghost: "hover:bg-primary/10 hover:text-primary rounded-lg",
-        link: "text-primary underline-offset-4 hover:underline font-medium",
+        hero: "bg-gradient-coral text-white hover:opacity-90 shadow-md hover:shadow-glow-coral rounded-xl font-semibold transition-all",
+        "dark-teal": "bg-deep-teal text-white hover:bg-deep-teal-end shadow-lg hover:shadow-xl rounded-xl font-bold transition-all",
+        "white-on-dark": "bg-white text-vibrant-teal hover:bg-white/90 shadow-md rounded-lg font-semibold transition-all",
+        "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-vibrant-teal rounded-lg font-semibold transition-all",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm",

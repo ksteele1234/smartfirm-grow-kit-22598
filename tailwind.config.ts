@@ -10,9 +10,16 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: '1.5rem',
+        sm: '2rem',
+        lg: '3rem',
+      },
       screens: {
-        "2xl": "1400px",
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1200px',
       },
     },
     extend: {
@@ -85,6 +92,38 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // New color system
+        'deep-teal': {
+          start: '#0a2e2e',
+          end: '#134444',
+          DEFAULT: '#0a2e2e',
+        },
+        'muted-blue': {
+          start: '#243b55',
+          end: '#4a7ba7',
+          DEFAULT: '#243b55',
+        },
+        'vibrant-teal': {
+          start: '#14b8a6',
+          end: '#2dd4bf',
+          DEFAULT: '#14b8a6',
+        },
+        'bright-cyan': '#5eead4',
+        coral: {
+          start: '#fb7185',
+          end: '#f43f5e',
+          DEFAULT: '#fb7185',
+        },
+        gold: {
+          start: '#fbbf24',
+          end: '#f59e0b',
+          DEFAULT: '#fbbf24',
+        },
+        slate: {
+          50: '#f8fafc',
+          600: '#475569',
+          900: '#0f172a',
+        },
       },
       fontFamily: {
         heading: ['var(--font-heading)'],
@@ -94,6 +133,24 @@ export default {
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'card': 'var(--shadow-card)',
+        'sm': 'var(--shadow-sm)',
+        'md': 'var(--shadow-md)',
+        'lg': 'var(--shadow-lg)',
+        'xl': 'var(--shadow-xl)',
+        'teal-sm': 'var(--shadow-teal-sm)',
+        'teal-md': 'var(--shadow-teal-md)',
+        'teal-lg': 'var(--shadow-teal-lg)',
+        'glow-teal': 'var(--glow-teal)',
+        'glow-coral': 'var(--glow-coral)',
+        'glow-cyan': 'var(--glow-cyan)',
+        'glow-gold': 'var(--glow-gold)',
+      },
+      backgroundImage: {
+        'gradient-deep-teal': 'linear-gradient(135deg, #0a2e2e, #134444)',
+        'gradient-muted-blue': 'linear-gradient(135deg, #243b55, #4a7ba7)',
+        'gradient-vibrant-teal': 'linear-gradient(135deg, #14b8a6, #2dd4bf)',
+        'gradient-coral': 'linear-gradient(135deg, #fb7185, #f43f5e)',
+        'gradient-gold': 'linear-gradient(135deg, #fbbf24, #f59e0b)',
       },
       borderRadius: {
         lg: "var(--radius)",
