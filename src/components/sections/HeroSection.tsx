@@ -3,94 +3,26 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden bg-gradient-to-b from-[#0a1929] via-[#0d2137] to-[#0a1929]">
-      {/* WAVE 1 - Darkest Bottom Foundation (Multiple Waves) */}
+    <section 
+      className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #5eead4 0%, #14b8a6 30%, #2a5a70 60%, #0a2440 100%)'
+      }}
+    >
+      {/* Simple Wave Divider at Bottom */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[63%] md:h-[70%] z-[1] opacity-90"
-        viewBox="0 0 1440 700" 
+        className="absolute bottom-0 left-0 w-full h-[100px] z-[1]"
+        viewBox="0 0 1440 100" 
         preserveAspectRatio="none"
       >
-        <defs>
-          <linearGradient id="wave1grad" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#1e3a52" />
-            <stop offset="50%" stopColor="#2a4a62" />
-            <stop offset="100%" stopColor="#1e3a52" />
-          </linearGradient>
-        </defs>
         <path 
-          d="M 0,700 C 200,600 400,650 600,620 C 800,590 1000,640 1200,620 C 1320,610 1380,650 1440,700 L 1440,700 L 0,700 Z"
-          fill="#1a4055"
-          opacity="1"
-        />
-      </svg>
-
-      {/* WAVE 2 - Mid-Dark with Gradient (Wavy Pattern) */}
-      <svg 
-        className="absolute bottom-0 left-0 w-full h-[59%] md:h-[65%] z-[2] opacity-100 hidden md:block"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient id="wave2grad" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#2d5a7b" />
-            <stop offset="50%" stopColor="#356382" />
-            <stop offset="100%" stopColor="#3d6a8f" />
-          </linearGradient>
-        </defs>
-        <path 
-          d="M 0,700 C 180,630 380,620 580,650 C 780,680 980,630 1180,660 C 1300,680 1380,650 1440,700 L 1440,700 L 0,700 Z"
+          d="M 0,50 C 360,20 720,80 1080,50 C 1200,40 1320,30 1440,50 L 1440,100 L 0,100 Z"
           fill="#2a5a70"
-          opacity="0.95"
+          opacity="0.4"
         />
       </svg>
 
-      {/* WAVE 3 - Mid-Bright Teal (Multiple Wavy Peaks from Top) */}
-      <svg 
-        className="absolute top-0 left-0 w-full h-[50%] md:h-[55%] z-[3] opacity-95 mix-blend-screen"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-        style={{ filter: 'drop-shadow(0 10px 40px rgba(45, 212, 191, 0.3))' }}
-      >
-        <defs>
-          <linearGradient id="wave3grad" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#2dd4bf" />
-            <stop offset="50%" stopColor="#20c5b3" />
-            <stop offset="100%" stopColor="#14b8a6" />
-          </linearGradient>
-        </defs>
-        <path 
-          d="M 0,0 C 200,100 400,60 600,90 C 800,120 1000,70 1200,100 C 1320,110 1380,60 1440,0 L 1440,0 L 0,0 Z"
-          fill="#14b8a6"
-          opacity="0.85"
-          filter="drop-shadow(0 10px 40px rgba(20, 184, 166, 0.5))"
-          style={{ mixBlendMode: 'screen' }}
-        />
-      </svg>
-
-      {/* WAVE 4 - Brightest Cyan Accent (Wavy Bright Layer) ⭐ */}
-      <svg 
-        className="absolute top-0 right-0 w-full h-[41%] md:h-[45%] z-[4] opacity-85 mix-blend-screen"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-        style={{ filter: 'drop-shadow(0 10px 50px rgba(94, 234, 212, 0.4))' }}
-      >
-        <defs>
-          <linearGradient id="wave4grad" x1="0%" y1="50%" x2="100%" y2="50%">
-            <stop offset="0%" stopColor="#5eead4" />
-            <stop offset="50%" stopColor="#6ce9d6" />
-            <stop offset="100%" stopColor="#7dd3fc" />
-          </linearGradient>
-        </defs>
-        <path 
-          d="M 576,0 C 700,140 850,120 1000,80 C 1150,40 1300,100 1440,0 L 1440,0 L 576,0 Z"
-          fill="#5eead4"
-          opacity="0.75"
-          filter="drop-shadow(0 15px 50px rgba(94, 234, 212, 0.6))"
-          style={{ mixBlendMode: 'lighten' }}
-        />
-      </svg>
-
-      {/* Orbital Circle System - Part 3 Implementation */}
+      {/* Orbital Circle System */}
       <svg 
         className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
         viewBox="0 0 400 400"
