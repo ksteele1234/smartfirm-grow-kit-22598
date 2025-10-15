@@ -26,9 +26,9 @@ import {
   CheckCircle
 } from "lucide-react";
 import katieSteeleImage from "@/assets/katie-steele.jpg";
-import brianHellewellImage from "@/assets/brian-hellewell.jpg";
-import graceMendezImage from "@/assets/grace-mendez.jpg";
-import yvonneGaliciaImage from "@/assets/yvonne-galicia.jpg";
+import brianHellewellImage from "@/assets/brian-hellewell.webp";
+import graceMendezImage from "@/assets/grace-mendez.webp";
+import yvonneGaliciaImage from "@/assets/yvonne-galicia.webp";
 import SEO from "@/components/SEO";
 
 const About = () => {

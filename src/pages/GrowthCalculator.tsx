@@ -5,13 +5,13 @@ import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
 import { CheckmarkIcon } from "@/components/ui/checkmark-icon";
 import { Star } from "lucide-react";
-import accountingDashboard from "@/assets/accounting-dashboard.webp";
+import revenueChart from "@/assets/revenue-growth-chart.png";
 import meetingPhoto from "@/assets/meeting-photo.webp";
 import danPhoto from "@/assets/testimonial-dan.webp";
 import joannaPhoto from "@/assets/testimonial-joanna.webp";
-import jennPhoto from "@/assets/testimonial-jenn.jpg";
+import jennPhoto from "@/assets/testimonial-jenn.webp";
 import womanBlazer from "@/assets/woman-blazer.png";
-import womanPointingBlazer from "@/assets/woman-pointing-blazer.svg";
+import womanPointingBlazer from "@/assets/woman-pointing-blazer.webp";
 
 const GrowthCalculator = () => {
   useEffect(() => {
@@ -47,9 +47,9 @@ const GrowthCalculator = () => {
             {/* Left Column - Content */}
             <div className="space-y-6">
               <img 
-                src={accountingDashboard} 
-                alt="Accounting dashboard showing analytics and metrics for accounting firms"
-                className="w-full h-auto rounded-lg shadow-lg"
+                src={revenueChart} 
+                alt="Revenue growth chart showing upward trend"
+                className="w-64 h-auto"
               />
               
               <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#4D869C] leading-tight">

@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
 import OptimizedImage from "@/components/ui/optimized-image";
-import smartFirmLogo from "@/assets/smartfirm-logo-gradient.svg";
+import smartFirmLogo from "@/assets/smartfirm-logo-gradient.webp";
 
 const Footer = () => {
   const services = [
