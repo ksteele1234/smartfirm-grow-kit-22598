@@ -2,9 +2,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.jpg";
 
+// Add keyframes for circle rotations
+const styles = `
+  @keyframes rotateClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes rotateCounterClockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+`;
+
 const HeroSection = () => {
   return (
-    <section 
+    <>
+      <style>{styles}</style>
+      <section
       className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
       style={{ 
         backgroundImage: `url(${heroWaveBackground})`,
@@ -18,14 +32,19 @@ const HeroSection = () => {
         className="absolute left-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
         viewBox="0 0 400 400"
         style={{ 
-          filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))',
-          animation: 'spin 20s linear infinite'
+          filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))'
         }}
       >
-        {/* Three Concentric Circles */}
-        <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
-        <circle cx="200" cy="200" r="140" stroke="#2dd4bf" strokeWidth="1.5" fill="none" opacity="0.4" />
-        <circle cx="200" cy="200" r="180" stroke="#2dd4bf" strokeWidth="1" fill="none" opacity="0.3" />
+        {/* Three Concentric Circles - Each rotates in different direction */}
+        <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 30s linear infinite' }}>
+          <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
+        </g>
+        <g style={{ transformOrigin: 'center', animation: 'rotateCounterClockwise 40s linear infinite' }}>
+          <circle cx="200" cy="200" r="140" stroke="#2dd4bf" strokeWidth="1.5" fill="none" opacity="0.4" />
+        </g>
+        <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 50s linear infinite' }}>
+          <circle cx="200" cy="200" r="180" stroke="#2dd4bf" strokeWidth="1" fill="none" opacity="0.3" />
+        </g>
         
         {/* 24 Dots - Circle 1 (r=100) at 45° intervals */}
         <circle cx="300" cy="200" r="3" fill="#5eead4" opacity="0.6" />
@@ -65,8 +84,8 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="order-2 lg:order-1 space-y-8">
             
-            {/* Headline with Gradient */}
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight bg-gradient-to-r from-white via-teal-200 to-teal-400 bg-clip-text text-transparent mb-6">
+            {/* Headline - Solid White */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white mb-6">
               Predictable Growth for Accounting Firms Without Wasting Time on Marketing
             </h1>
 
@@ -178,7 +197,8 @@ const HeroSection = () => {
           />
         </svg>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
