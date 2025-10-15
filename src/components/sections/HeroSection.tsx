@@ -4,45 +4,51 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-[500px] md:min-h-[600px] py-20 md:py-[120px] overflow-hidden">
-      {/* Base Layer - Mid-Dark Teal */}
-      <div className="absolute inset-0 bg-[#0d3d3d] z-0" />
+      {/* Base Layer - Dark Navy Blue */}
+      <div className="absolute inset-0 bg-[#0a2440] z-0" />
 
-      {/* WAVE 1 - Bottom Dark Foundation (Darkest teal, organic S-curve) */}
+      {/* WAVE 1 - Bottom Blue Foundation (Mid blue gradient) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[60%] z-[1]" 
-        viewBox="0 0 1440 600" 
+        className="absolute bottom-0 left-0 w-full h-[65%] z-[1]" 
+        viewBox="0 0 1440 650" 
         preserveAspectRatio="none"
       >
+        <defs>
+          <linearGradient id="wave1grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#2a5a8a" />
+            <stop offset="100%" stopColor="#3d7ab8" />
+          </linearGradient>
+        </defs>
         <path 
-          d="M-100,600 C200,450 400,380 650,420 C900,460 1200,480 1540,420 L1540,600 L-100,600 Z"
-          fill="#1a5c5c"
+          d="M-100,650 C200,480 450,400 700,450 C950,500 1200,520 1540,460 L1540,650 L-100,650 Z"
+          fill="url(#wave1grad)"
         />
       </svg>
 
-      {/* WAVE 2 - Middle Turquoise Layer (Overlaps Wave 1, opposite flow) */}
+      {/* WAVE 2 - Blue-Teal Blend (Transition Layer with multiply blend) */}
       <svg 
-        className="absolute bottom-0 right-0 w-full h-[50%] z-[2]" 
-        viewBox="0 0 1440 500" 
+        className="absolute bottom-0 right-0 w-full h-[60%] z-[2] mix-blend-multiply" 
+        viewBox="0 0 1440 600" 
         preserveAspectRatio="none"
       >
         <defs>
           <linearGradient id="wave2grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#2a7a7a" />
-            <stop offset="100%" stopColor="#3d9999" />
+            <stop offset="0%" stopColor="#1e5570" />
+            <stop offset="100%" stopColor="#2a7a8a" />
           </linearGradient>
         </defs>
         <path 
-          d="M1540,500 C1200,380 900,340 600,390 C350,430 150,460 -100,400 L-100,500 L1540,500 Z"
+          d="M1540,600 C1200,420 850,360 550,410 C300,450 100,480 -100,420 L-100,600 L1540,600 Z"
           fill="url(#wave2grad)"
         />
       </svg>
 
-      {/* WAVE 3 - Top Accent Wave (THE ENERGY WAVE - bright teal with glow) */}
+      {/* WAVE 3 - Bright Teal Accent (THE ENERGY WAVE with screen blend) */}
       <svg 
-        className="absolute top-0 right-0 w-full h-[40%] z-[3] mix-blend-screen" 
-        viewBox="0 0 1440 400" 
+        className="absolute top-0 left-0 w-full h-[50%] z-[3] mix-blend-screen" 
+        viewBox="0 0 1440 500" 
         preserveAspectRatio="none"
-        style={{ filter: 'drop-shadow(0 0 40px rgba(45, 212, 191, 0.3))' }}
+        style={{ filter: 'drop-shadow(0 0 30px rgba(45, 212, 191, 0.4))' }}
       >
         <defs>
           <linearGradient id="wave3grad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,25 +57,28 @@ const HeroSection = () => {
           </linearGradient>
         </defs>
         <path 
-          d="M1540,0 C1300,120 1000,180 700,140 C450,100 200,60 -100,100 L-100,0 L1540,0 Z"
+          d="M-100,0 C150,140 500,200 800,160 C1100,120 1350,80 1540,120 L1540,0 L-100,0 Z"
           fill="url(#wave3grad)"
-          fillOpacity="0.7"
+          fillOpacity="0.8"
         />
       </svg>
 
-      {/* WAVE 4 - Edge Glow Highlight (Luminous cyan stroke along Wave 3's edge) */}
+      {/* WAVE 4 - Cyan to Light Blue Accent (Top Highlight with lighten blend) */}
       <svg 
-        className="absolute top-[38%] right-0 w-full h-[5%] z-[4]" 
-        viewBox="0 0 1440 50" 
+        className="absolute top-0 right-0 w-full h-[45%] z-[4] mix-blend-lighten" 
+        viewBox="0 0 1440 450" 
         preserveAspectRatio="none"
       >
+        <defs>
+          <linearGradient id="wave4grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#5eead4" />
+            <stop offset="100%" stopColor="#7dd3fc" />
+          </linearGradient>
+        </defs>
         <path 
-          d="M1540,25 C1300,5 1000,0 700,10 C450,18 200,22 -100,15"
-          stroke="#5eead4"
-          strokeWidth="30"
-          fill="none"
-          opacity="0.3"
-          strokeLinecap="round"
+          d="M1540,0 C1300,100 1050,140 750,110 C500,80 250,50 -100,80 L-100,0 L1540,0 Z"
+          fill="url(#wave4grad)"
+          fillOpacity="0.6"
         />
       </svg>
 
