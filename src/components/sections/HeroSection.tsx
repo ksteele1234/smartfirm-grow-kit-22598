@@ -5,51 +5,63 @@ const HeroSection = () => {
   return (
     <section 
       className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
-      style={{ background: '#0a2440' }}
+      style={{ background: '#0a1f35' }}
     >
-      {/* WAVE 1 - Bottom Foundation (Dark Blue) */}
+      {/* WAVE 1 - Bottom-Left Area (Dark Blue) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[50%] z-[1]"
+        className="absolute bottom-0 left-0 w-full h-[60%] z-[1]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 0,700 C 360,620 720,660 1080,620 C 1200,610 1320,640 1440,700 L 1440,700 L 0,700 Z"
-          fill="#1a4055"
+          d="M 0,700 L 0,400 C 200,300 400,350 600,320 C 750,300 850,360 864,400 L 864,700 Z"
+          fill="#1e4a6b"
+          opacity="1"
         />
       </svg>
 
-      {/* WAVE 2 - Middle Layer (Medium Blue) */}
+      {/* WAVE 2 - Bottom-Right Area (Medium Blue) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[40%] z-[2]"
+        className="absolute bottom-0 right-0 w-full h-[60%] z-[2]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
-        style={{ mixBlendMode: 'multiply' }}
       >
         <path 
-          d="M 0,700 C 360,600 720,640 1080,600 C 1200,590 1320,620 1440,700 L 1440,700 L 0,700 Z"
-          fill="#2563eb"
-          opacity="0.8"
+          d="M 576,700 L 576,350 C 750,280 950,320 1150,300 C 1280,290 1360,340 1440,380 L 1440,700 Z"
+          fill="#2a5d7f"
+          opacity="0.9"
         />
       </svg>
 
-      {/* WAVE 3 - Top-Right Bright Accent (Cyan) */}
+      {/* WAVE 3 - Top-Left Area (Bright Teal) */}
       <svg 
-        className="absolute top-0 right-0 w-full h-[45%] z-[3]"
+        className="absolute top-0 left-0 w-full h-[50%] z-[3]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
-        style={{ mixBlendMode: 'screen' }}
       >
         <path 
-          d="M 576,0 C 720,120 900,100 1080,80 C 1200,70 1320,100 1440,0 L 1440,0 L 576,0 Z"
+          d="M 0,0 L 0,300 C 200,400 400,350 600,380 C 680,390 710,350 720,300 L 720,0 Z"
+          fill="#14b8a6"
+          opacity="0.85"
+        />
+      </svg>
+
+      {/* WAVE 4 - Top-Right Area (BRIGHT Cyan) */}
+      <svg 
+        className="absolute top-0 right-0 w-full h-[60%] z-[4]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+      >
+        <path 
+          d="M 576,0 L 576,400 C 750,320 950,280 1150,300 C 1280,310 1360,260 1440,220 L 1440,0 Z"
           fill="#5eead4"
-          opacity="0.75"
+          opacity="0.8"
         />
       </svg>
 
       {/* Simple Wave Divider at Bottom */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[100px] z-[4]"
+        className="absolute bottom-0 left-0 w-full h-[100px] z-[5]"
         viewBox="0 0 1440 100" 
         preserveAspectRatio="none"
       >
