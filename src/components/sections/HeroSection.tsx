@@ -7,61 +7,73 @@ const HeroSection = () => {
       className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
       style={{ background: '#0a1f35' }}
     >
-      {/* WAVE 1 - Bottom-Left Area (Dark Blue) */}
+      {/* Scattered Background Dots */}
+      <svg className="absolute inset-0 w-full h-full z-[1]" viewBox="0 0 1440 700">
+        <circle cx="120" cy="150" r="2" fill="#5eead4" opacity="0.3" />
+        <circle cx="890" cy="220" r="2" fill="#5eead4" opacity="0.4" />
+        <circle cx="340" cy="480" r="2" fill="#4db8a6" opacity="0.3" />
+        <circle cx="1150" cy="380" r="2" fill="#4db8a6" opacity="0.4" />
+        <circle cx="620" cy="570" r="2" fill="#2563a8" opacity="0.3" />
+        <circle cx="280" cy="340" r="2" fill="#5eead4" opacity="0.3" />
+        <circle cx="1050" cy="520" r="2" fill="#4db8a6" opacity="0.3" />
+        <circle cx="450" cy="190" r="2" fill="#5eead4" opacity="0.4" />
+      </svg>
+
+      {/* WAVE 1 - Bottom Layer (Darkest Navy) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[60%] z-[1]"
+        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 0,700 L 0,400 C 200,300 400,350 600,320 C 750,300 850,360 864,400 L 864,700 Z"
-          fill="#1e4a6b"
+          d="M 0,700 L 0,500 C 360,480 720,460 1080,480 C 1200,485 1320,490 1440,500 L 1440,700 Z"
+          fill="#1a3d5c"
           opacity="1"
         />
       </svg>
 
-      {/* WAVE 2 - Bottom-Right Area (Medium Blue) */}
+      {/* WAVE 2 - Lower-Middle Layer (Deep Blue) */}
       <svg 
-        className="absolute bottom-0 right-0 w-full h-[60%] z-[2]"
+        className="absolute bottom-0 left-0 w-full h-[65%] z-[3]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 576,700 L 576,350 C 750,280 950,320 1150,300 C 1280,290 1360,340 1440,380 L 1440,700 Z"
-          fill="#2a5d7f"
-          opacity="0.9"
-        />
-      </svg>
-
-      {/* WAVE 3 - Top-Left Area (Bright Teal) */}
-      <svg 
-        className="absolute top-0 left-0 w-full h-[50%] z-[3]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 0,0 L 0,300 C 200,400 400,350 600,380 C 680,390 710,350 720,300 L 720,0 Z"
-          fill="#14b8a6"
+          d="M 0,700 L 0,450 C 360,420 720,400 1080,420 C 1200,425 1320,435 1440,450 L 1440,700 Z"
+          fill="#2563a8"
           opacity="0.85"
         />
       </svg>
 
-      {/* WAVE 4 - Top-Right Area (BRIGHT Cyan) */}
+      {/* WAVE 3 - Upper-Middle Layer (Medium Teal) */}
       <svg 
-        className="absolute top-0 right-0 w-full h-[60%] z-[4]"
+        className="absolute bottom-0 left-0 w-full h-[55%] z-[4]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 576,0 L 576,400 C 750,320 950,280 1150,300 C 1280,310 1360,260 1440,220 L 1440,0 Z"
-          fill="#5eead4"
-          opacity="0.8"
+          d="M 0,700 L 0,380 C 360,340 720,320 1080,340 C 1200,350 1320,365 1440,380 L 1440,700 Z"
+          fill="#4db8a6"
+          opacity="0.75"
+        />
+      </svg>
+
+      {/* WAVE 4 - Top Layer (Brightest Cyan) */}
+      <svg 
+        className="absolute bottom-0 left-0 w-full h-[45%] z-[5]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+      >
+        <path 
+          d="M 0,700 L 0,280 C 360,220 720,200 1080,220 C 1200,230 1320,250 1440,280 L 1440,700 Z"
+          fill="#7dd3c0"
+          opacity="0.65"
         />
       </svg>
 
       {/* Simple Wave Divider at Bottom */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[100px] z-[5]"
+        className="absolute bottom-0 left-0 w-full h-[100px] z-[6]"
         viewBox="0 0 1440 100" 
         preserveAspectRatio="none"
       >
@@ -74,7 +86,7 @@ const HeroSection = () => {
 
       {/* Orbital Circle System */}
       <svg 
-        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
+        className="absolute left-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
         viewBox="0 0 400 400"
         style={{ 
           filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))',
