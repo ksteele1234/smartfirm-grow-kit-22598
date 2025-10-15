@@ -324,8 +324,8 @@ const Header = () => {
             <Button 
               size="default" 
               asChild
-              className="bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold"
-              style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
+              className="bg-gradient-to-r from-[#fb7185] to-[#f43f5e] hover:from-[#f87171] hover:to-[#ef4444] text-white font-semibold"
+              style={{ boxShadow: '0 4px 20px rgba(251, 113, 133, 0.4)' }}
             >
               <a href="/get-started">GET STARTED</a>
             </Button>
@@ -369,9 +369,9 @@ const Header = () => {
               </a>
               <Button 
                 size="default" 
-                className="w-full mt-4 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
+                className="w-full mt-4 bg-gradient-to-r from-[#fb7185] to-[#f43f5e] hover:from-[#f87171] hover:to-[#ef4444] text-white font-semibold" 
                 asChild
-                style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
+                style={{ boxShadow: '0 4px 20px rgba(251, 113, 133, 0.4)' }}
               >
                 <a href="/get-started">GET STARTED</a>
               </Button>

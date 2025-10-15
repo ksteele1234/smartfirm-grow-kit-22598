@@ -79,13 +79,13 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] max-w-2xl bg-gradient-to-r from-white via-[#5eead4] to-[#99f6e4] bg-clip-text text-transparent">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] max-w-2xl bg-gradient-to-r from-white via-[#99f6e4] to-[#5eead4] bg-clip-text text-transparent">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl leading-relaxed max-w-xl font-medium text-white" style={{ opacity: 0.6 }}>
+                  <p className="text-lg md:text-xl leading-relaxed max-w-xl font-medium text-white" style={{ opacity: 0.7 }}>
                     SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
                   </p>
                 </div>
@@ -104,15 +104,15 @@ const HeroSection = () => {
               ease: "easeInOut"
             }}>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
+                  <div className="w-2 h-2 bg-[#fbbf24] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(251, 191, 36, 0.6)' }}></div>
                   <span className="text-sm font-semibold">40+ Years Combined Experience</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
+                  <div className="w-2 h-2 bg-[#fbbf24] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(251, 191, 36, 0.6)' }}></div>
                   <span className="text-sm font-semibold">50+ Companies Supported</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
+                  <div className="w-2 h-2 bg-[#fbbf24] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(251, 191, 36, 0.6)' }}></div>
                   <span className="text-sm font-semibold">Up in 30 Days</span>
                 </div>
               </motion.div>
@@ -131,9 +131,9 @@ const HeroSection = () => {
             }}>
                 <Button 
                   size="lg" 
-                  className="group bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
+                  className="group bg-gradient-to-r from-[#fb7185] to-[#f43f5e] hover:from-[#f87171] hover:to-[#ef4444] text-white font-semibold transition-all hover:-translate-y-0.5" 
                   asChild
-                  style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
+                  style={{ boxShadow: '0 4px 24px rgba(251, 113, 133, 0.5)' }}
                 >
                   <a href="/get-started">
                     Get Your Free Growth Plan

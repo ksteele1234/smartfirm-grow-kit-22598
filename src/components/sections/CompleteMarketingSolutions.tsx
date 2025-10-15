@@ -21,16 +21,18 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/seo-for-accountants" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#14b8a6] rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-xl hover:border-[#0d9488] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
-            style={{ boxShadow: '0 4px 16px rgba(20, 184, 166, 0.1)' }}
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-2xl transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:border-[#14b8a6] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            style={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)' }}
+            onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 8px 24px rgba(20, 184, 166, 0.08)'}
+            onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.06)'}
           >
             <span className="absolute top-4 right-4 bg-[#14b8a6] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#14b8a6] to-[#0d9488] flex items-center justify-center">
+              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#14b8a6] to-[#0d9488] flex items-center justify-center shadow-md">
                 <MapPin className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
-                <Star className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
+                <Star className="absolute top-1 right-1 w-4 h-4 text-[#fbbf24]" aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-slate-900 mb-3">
@@ -47,16 +49,18 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/website-design" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#14b8a6] rounded-xl shadow-lg transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-xl hover:border-[#0d9488] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
-            style={{ boxShadow: '0 4px 16px rgba(20, 184, 166, 0.1)' }}
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-2xl transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:border-[#fb7185] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#fb7185] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            style={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)' }}
+            onMouseEnter={(e) => e.currentTarget.style.boxShadow = '0 8px 24px rgba(251, 113, 133, 0.08)'}
+            onMouseLeave={(e) => e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.06)'}
           >
-            <span className="absolute top-4 right-4 bg-[#14b8a6] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            <span className="absolute top-4 right-4 bg-[#fb7185] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#14b8a6] to-[#0d9488] flex items-center justify-center">
+              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#fb7185] to-[#f43f5e] flex items-center justify-center shadow-md">
                 <Monitor className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
-                <TrendingUp className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
+                <TrendingUp className="absolute top-1 right-1 w-4 h-4 text-[#fbbf24]" aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-slate-900 mb-3">
@@ -76,8 +80,8 @@ export const CompleteMarketingSolutions = () => {
             className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:border-[#14b8a6] hover:translate-y-[-4px] hover:shadow-lg cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
-              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-gradient-to-br from-[#99f6e4] to-[#5eead4] flex items-center justify-center">
-                <Star className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#0a2e2e]" aria-hidden="true" />
+              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#14b8a6] flex items-center justify-center shadow-md">
+                <Star className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-white" aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-xl md:text-lg sm:text-base font-bold text-slate-900 mb-2.5">
@@ -97,9 +101,9 @@ export const CompleteMarketingSolutions = () => {
             className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:border-[#14b8a6] hover:translate-y-[-4px] hover:shadow-lg cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
-              <div className="relative w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-gradient-to-br from-[#99f6e4] to-[#5eead4] flex items-center justify-center">
-                <Mail className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#0a2e2e]" aria-hidden="true" />
-                <Settings className="absolute bottom-0 right-0 w-3.5 h-3.5 text-[#0a2e2e]" aria-hidden="true" />
+              <div className="relative w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#14b8a6] flex items-center justify-center shadow-md">
+                <Mail className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-white" aria-hidden="true" />
+                <Settings className="absolute bottom-0 right-0 w-3.5 h-3.5 text-white" aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-xl md:text-lg sm:text-base font-bold text-slate-900 mb-2.5">
@@ -119,8 +123,8 @@ export const CompleteMarketingSolutions = () => {
             className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:border-[#14b8a6] hover:translate-y-[-4px] hover:shadow-lg cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
-              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-gradient-to-br from-[#99f6e4] to-[#5eead4] flex items-center justify-center">
-                <BarChart3 className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#0a2e2e]" aria-hidden="true" />
+              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#14b8a6] flex items-center justify-center shadow-md">
+                <BarChart3 className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-white" aria-hidden="true" />
               </div>
               <div>
                 <h3 className="text-xl md:text-lg sm:text-base font-bold text-slate-900 mb-2.5">
@@ -139,8 +143,8 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 p-10 md:p-8 sm:p-6 bg-white border-2 border-slate-200 rounded-xl shadow-md focus:outline-none focus:ring-3 focus:ring-[#14b8a6] focus:ring-offset-2 transition-all duration-300 ease-in-out hover:border-[#14b8a6] hover:translate-y-[-4px] hover:shadow-lg block"
           >
-            <div className="flex-shrink-0 w-[64px] h-[64px] md:w-[56px] md:h-[56px] sm:w-[52px] sm:h-[52px] rounded-full bg-gradient-to-br from-[#99f6e4] to-[#5eead4] flex items-center justify-center">
-              <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-[#0a2e2e]" aria-hidden="true" />
+            <div className="flex-shrink-0 w-[64px] h-[64px] md:w-[56px] md:h-[56px] sm:w-[52px] sm:h-[52px] rounded-full bg-[#14b8a6] flex items-center justify-center shadow-md">
+              <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
             </div>
             <div className="flex-1">
               <span className="inline-block text-xs text-slate-500 font-semibold uppercase tracking-[0.5px] mb-2">
