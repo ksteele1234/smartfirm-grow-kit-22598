@@ -35,46 +35,44 @@ const HeroSection = () => {
           filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))'
         }}
       >
-        {/* Three Concentric Circles - Each rotates in different direction */}
+        {/* Circle 1 (r=100) - Rotates Clockwise with Dots */}
         <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 30s linear infinite' }}>
           <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
+          <circle cx="300" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="270.71" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="300" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="129.29" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="100" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="129.29" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="100" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="270.71" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
         </g>
+        
+        {/* Circle 2 (r=140) - Rotates Counter-Clockwise with Dots */}
         <g style={{ transformOrigin: 'center', animation: 'rotateCounterClockwise 40s linear infinite' }}>
           <circle cx="200" cy="200" r="140" stroke="#2dd4bf" strokeWidth="1.5" fill="none" opacity="0.4" />
+          <circle cx="340" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="298.99" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="340" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="101.01" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="60" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="101.01" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="60" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="298.99" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
         </g>
+        
+        {/* Circle 3 (r=180) - Rotates Clockwise with Dots */}
         <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 50s linear infinite' }}>
           <circle cx="200" cy="200" r="180" stroke="#2dd4bf" strokeWidth="1" fill="none" opacity="0.3" />
+          <circle cx="380" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="327.28" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="380" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="72.72" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="20" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="72.72" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="200" cy="20" r="3" fill="#5eead4" opacity="0.6" />
+          <circle cx="327.28" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
         </g>
-        
-        {/* 24 Dots - Circle 1 (r=100) at 45° intervals */}
-        <circle cx="300" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="270.71" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="300" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="129.29" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="100" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="129.29" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="100" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="270.71" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
-        
-        {/* 24 Dots - Circle 2 (r=140) at 45° intervals */}
-        <circle cx="340" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="298.99" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="340" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="101.01" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="60" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="101.01" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="60" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="298.99" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
-        
-        {/* 24 Dots - Circle 3 (r=180) at 45° intervals */}
-        <circle cx="380" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="327.28" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="380" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="72.72" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="20" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="72.72" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="200" cy="20" r="3" fill="#5eead4" opacity="0.6" />
-        <circle cx="327.28" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
       </svg>
 
       {/* Content Container */}
