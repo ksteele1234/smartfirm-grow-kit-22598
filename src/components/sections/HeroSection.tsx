@@ -19,55 +19,56 @@ const HeroSection = () => {
         <circle cx="450" cy="190" r="2" fill="#5eead4" opacity="0.4" />
       </svg>
 
-      {/* WAVE 1 - Bottom Layer (Darkest Navy) */}
+      {/* LEFT-TO-RIGHT FLOWING SHAPES (Light → Dark) */}
+      {/* Shape A - Leftmost (Bright Cyan) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[2]"
+        className="absolute inset-0 w-full h-full z-[2]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 0,700 L 0,500 C 360,480 720,460 1080,480 C 1200,485 1320,490 1440,500 L 1440,700 Z"
-          fill="#1a3d5c"
-          opacity="1"
+          d="M 0,0 L 420,0 C 340,120 340,260 420,380 L 420,700 L 0,700 Z"
+          fill="#7dd3c0"
+          opacity="0.8"
         />
       </svg>
 
-      {/* WAVE 2 - Lower-Middle Layer (Deep Blue) */}
+      {/* Shape B - Left-Center (Teal) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[65%] z-[3]"
+        className="absolute inset-0 w-full h-full z-[3]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 0,700 L 0,450 C 360,420 720,400 1080,420 C 1200,425 1320,435 1440,450 L 1440,700 Z"
-          fill="#2563a8"
-          opacity="0.85"
-        />
-      </svg>
-
-      {/* WAVE 3 - Upper-Middle Layer (Medium Teal) */}
-      <svg 
-        className="absolute bottom-0 left-0 w-full h-[55%] z-[4]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 0,700 L 0,380 C 360,340 720,320 1080,340 C 1200,350 1320,365 1440,380 L 1440,700 Z"
+          d="M 180,0 L 780,0 C 700,160 700,320 780,480 L 780,700 L 180,700 Z"
           fill="#4db8a6"
           opacity="0.75"
         />
       </svg>
 
-      {/* WAVE 4 - Top Layer (Brightest Cyan) */}
+      {/* Shape C - Center-Right (Deep Blue) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[45%] z-[5]"
+        className="absolute inset-0 w-full h-full z-[4]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <path 
-          d="M 0,700 L 0,280 C 360,220 720,200 1080,220 C 1200,230 1320,250 1440,280 L 1440,700 Z"
-          fill="#7dd3c0"
-          opacity="0.65"
+          d="M 600,0 L 1160,0 C 1120,180 1120,360 1160,540 L 1160,700 L 600,700 Z"
+          fill="#2563a8"
+          opacity="0.85"
+        />
+      </svg>
+
+      {/* Shape D - Rightmost (Darkest Navy) */}
+      <svg 
+        className="absolute inset-0 w-full h-full z-[5]"
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+      >
+        <path 
+          d="M 1000,0 L 1440,0 L 1440,700 L 1000,700 C 1040,520 1040,180 1000,0 Z"
+          fill="#1a3d5c"
+          opacity="1"
         />
       </svg>
 
