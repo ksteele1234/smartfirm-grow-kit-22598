@@ -90,7 +90,7 @@ const Footer = () => {
 
             {/* Services Column */}
             <div>
-              <h4 className="text-[16px] font-bold text-[#334260] mb-4">Services</h4>
+              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Services</h3>
               <p className="text-[13px] font-medium text-[#666666] italic mb-3">What We Do</p>
               <ul className="space-y-[10px]">
                 {services.map((service) => (
@@ -108,7 +108,7 @@ const Footer = () => {
 
             {/* Solutions Column */}
             <div>
-              <h4 className="text-[16px] font-bold text-[#334260] mb-4">Solutions</h4>
+              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Solutions</h3>
               <p className="text-[13px] font-medium text-[#666666] italic mb-3">Outcomes You Get</p>
               <ul className="space-y-[10px]">
                 {solutions.map((solution) => (
@@ -126,7 +126,7 @@ const Footer = () => {
 
             {/* Resources Column */}
             <div>
-              <h4 className="text-[16px] font-bold text-[#334260] mb-4">Resources</h4>
+              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Resources</h3>
               <ul className="space-y-[10px]">
                 {resources.map((resource) => (
                   <li key={resource.slug}>
