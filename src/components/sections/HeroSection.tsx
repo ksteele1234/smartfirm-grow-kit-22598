@@ -101,7 +101,7 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="hero" size="lg" className="group bg-dark-teal hover:bg-dark-teal/90 text-white" asChild>
+                <Button variant="hero" size="lg" className="group bg-[#0F4C5C] hover:bg-[#0d3d4a] text-white" asChild>
                   <a href="/get-started">
                     Get Your Free Growth Plan
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

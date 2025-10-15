@@ -14,7 +14,7 @@ All colors MUST be HSL converted from the official brand colors.
     --primary-teal: 190 72% 21%; /* #0F4C5C - Primary Teal */
     --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
     --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
-    --dark-teal: 180 19% 31%; /* #405d5d - Deep professional teal */
+    --dark-teal: 190 72% 21%; /* #0F4C5C - Same as primary teal for consistency */
     --dark-blue: 220 23% 29%; /* #334260 - Deep professional blue */
     
     
