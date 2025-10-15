@@ -17,12 +17,12 @@ export default {
     },
     extend: {
       colors: {
-        // Aurora Background Colors - Using exact palette
-        "aurora-1": "#647FBC",
-        "aurora-2": "#647FBC", 
-        "aurora-3": "#647FBC",
-        "aurora-4": "#7AB2B2",
-        "aurora-5": "#FAFDD6",
+        // Aurora Background Colors - Deep Teal Gradient System
+        "aurora-1": "#14b8a6",  // Vibrant teal
+        "aurora-2": "#2dd4bf",  // Vibrant teal light
+        "aurora-3": "#5eead4",  // Bright teal
+        "aurora-4": "#99f6e4",  // Bright teal light
+        "aurora-5": "#0a2e2e",  // Deep teal
         
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -71,7 +71,11 @@ export default {
           DEFAULT: "hsl(var(--teal))",
           foreground: "hsl(var(--teal-foreground))",
           light: "hsl(var(--light-teal))",
+          vibrant: "hsl(var(--vibrant-teal))",
+          bright: "hsl(var(--bright-teal))",
         },
+        coral: "hsl(var(--coral-pop))",
+        gold: "hsl(var(--gold-pop))",
         "text-secondary": "hsl(var(--text-secondary))",
         "text-light": "hsl(var(--text-light))",
         "background-light": "hsl(var(--background-light))",
@@ -94,6 +98,13 @@ export default {
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'card': 'var(--shadow-card)',
+        'glow': 'var(--shadow-glow)',
+      },
+      backgroundImage: {
+        'gradient-deep-teal': 'linear-gradient(180deg, hsl(var(--deep-teal-start)) 0%, hsl(var(--deep-teal-end)) 100%)',
+        'gradient-mid-teal': 'linear-gradient(180deg, hsl(var(--mid-teal-start)) 0%, hsl(var(--mid-teal-end)) 100%)',
+        'gradient-vibrant': 'linear-gradient(135deg, hsl(var(--vibrant-teal)) 0%, hsl(var(--vibrant-teal-light)) 100%)',
+        'gradient-bright': 'linear-gradient(135deg, hsl(var(--bright-teal)) 0%, hsl(var(--bright-teal-light)) 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",

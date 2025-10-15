@@ -150,7 +150,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background-light/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <header className="bg-gradient-deep-teal backdrop-blur-sm border-b border-teal-vibrant/20 sticky top-0 z-50 shadow-glow">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -172,48 +172,48 @@ const Header = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
                 )}>
                   HOME
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
                   <a href="/services" className="flex items-center">
                     SERVICES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-background border border-border shadow-lg z-50">
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow z-50">
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Main Service Categories</h4>
+                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Main Service Categories</h4>
                       <div className="grid gap-2">
                         {services.slice(0, 4).map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
                           >
-                            <div className="text-sm font-medium leading-none">{service.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                            <div className="text-sm font-medium leading-none text-white">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
                               {service.description}
                             </p>
                           </NavigationMenuLink>
                         ))}
                       </div>
                     </div>
-                    <div className="border-t pt-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Individual Services</h4>
+                    <div className="border-t border-teal-vibrant/30 pt-4">
+                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Individual Services</h4>
                       <div className="grid gap-2">
                         {services.slice(4).map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
                           >
-                            <div className="text-sm font-medium leading-none">{service.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                            <div className="text-sm font-medium leading-none text-white">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
                               {service.description}
                             </p>
                           </NavigationMenuLink>
@@ -225,41 +225,41 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
                   <a href="/solutions" className="flex items-center">
                     SOLUTIONS
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1">
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow">
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Main Solutions</h4>
+                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Main Solutions</h4>
                       <div className="grid gap-2">
                         {solutions.slice(0, 5).map((solution) => (
                           <NavigationMenuLink
                             key={solution.title}
                             href={solution.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
                           >
-                            <div className="text-sm font-medium leading-none">{solution.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                            <div className="text-sm font-medium leading-none text-white">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
                               {solution.description}
                             </p>
                           </NavigationMenuLink>
                         ))}
                       </div>
                     </div>
-                    <div className="border-t pt-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Specific Areas</h4>
+                    <div className="border-t border-teal-vibrant/30 pt-4">
+                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Specific Areas</h4>
                       <div className="grid gap-2">
                         {solutions.slice(5).map((solution) => (
                           <NavigationMenuLink
                             key={solution.title}
                             href={solution.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
                           >
-                            <div className="text-sm font-medium leading-none">{solution.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                            <div className="text-sm font-medium leading-none text-white">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
                               {solution.description}
                             </p>
                           </NavigationMenuLink>
@@ -271,21 +271,21 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
                   <a href="/industries" className="flex items-center">
                     INDUSTRIES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[400px] grid-cols-1">
+                  <div className="grid gap-3 p-6 w-[400px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow">
                     {industries.map((industry) => (
                       <NavigationMenuLink
                         key={industry.slug}
                         href={`/industries/${industry.slug}`}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
                       >
-                        <div className="text-sm font-medium leading-none">{industry.name}</div>
-                        <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                        <div className="text-sm font-medium leading-none text-white">{industry.name}</div>
+                        <p className="line-clamp-2 text-xs leading-snug text-white/70">
                           {industry.description}
                         </p>
                       </NavigationMenuLink>
@@ -304,7 +304,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
                 )}>
                   ABOUT US
                 </NavigationMenuLink>
@@ -312,7 +312,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
                 )}>
                   CONTACT
                 </NavigationMenuLink>
@@ -321,14 +321,14 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="dark-teal" size="default" asChild>
+            <Button variant="coral" size="default" asChild>
               <a href="/get-started">GET STARTED</a>
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden"
+            className="lg:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
@@ -339,30 +339,30 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 border-t border-teal-vibrant/30">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 HOME
               </a>
-              <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/services" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 SERVICES
               </a>
-              <a href="/solutions" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/solutions" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/industries" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 INDUSTRIES
               </a>
-              <a href="/case-studies" className="text-foreground hover:text-primary transition-colors font-medium hidden">
+              <a href="/case-studies" className="text-white hover:text-teal-vibrant transition-colors font-medium hidden">
                 CASE STUDIES
               </a>
-              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/about" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 ABOUT US
               </a>
-              <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/contact" className="text-white hover:text-teal-vibrant transition-colors font-medium">
                 CONTACT
               </a>
-              <Button variant="dark-teal" size="default" className="w-full mt-4" asChild>
+              <Button variant="coral" size="default" className="w-full mt-4" asChild>
                 <a href="/get-started">GET STARTED</a>
               </Button>
             </nav>
