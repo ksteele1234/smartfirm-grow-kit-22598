@@ -1,34 +1,34 @@
 import { useState, useEffect } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import graceImage from "@/assets/grace-mendez.png";
-import katieSteeleImage from "@/assets/katie-steele.png";
-import brianHellewellImage from "@/assets/brian-hellewell.png";
+import danImage from "@/assets/testimonial-dan.webp";
+import joannaImage from "@/assets/testimonial-joanna.webp";
+import jennImage from "@/assets/testimonial-jenn.webp";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
-      name: "Grace Mendez",
+      name: "Dan",
       firm: "CPA Firm Owner",
-      image: graceImage,
+      image: danImage,
       content: "SmartFirm's automation saved us hours each week and helped us streamline client communication.",
       rating: 5,
       logo: "CPA Firm A"
     },
     {
-      name: "Katie Steele",
+      name: "Joanna",
       firm: "Accounting Practice Manager", 
-      image: katieSteeleImage,
+      image: joannaImage,
       content: "The team brought clarity to our marketing and helped us attract consistent leads.",
       rating: 5,
       logo: "TaxPro Services"
     },
     {
-      name: "Brian Hellewell",
+      name: "Jenn",
       firm: "Tax Advisory Partner",
-      image: brianHellewellImage, 
+      image: jennImage, 
       content: "We've seen measurable improvements in client retention with their systems.",
       rating: 5,
       logo: "Business Advisory LLC"
