@@ -51,38 +51,38 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-[10px]">
-                  <Phone className="h-[18px] w-[18px] text-[#4D869C]" />
-                  <a href="tel:+15416583789" className="text-[15px] font-medium text-[#333333] hover:text-[#4D869C] transition-colors">
+                  <Phone className="h-[18px] w-[18px] text-[#0F4C5C]" />
+                  <a href="tel:+15416583789" className="text-[15px] font-medium text-[#333333] hover:text-[#0F4C5C] transition-colors">
                     (541) 658-3789
                   </a>
                 </div>
                 <div className="flex items-center gap-[10px]">
-                  <Mail className="h-[18px] w-[18px] text-[#4D869C]" />
-                  <a href="mailto:contact@smartfirm.io" className="text-[15px] font-medium text-[#333333] hover:text-[#4D869C] transition-colors">
+                  <Mail className="h-[18px] w-[18px] text-[#0F4C5C]" />
+                  <a href="mailto:contact@smartfirm.io" className="text-[15px] font-medium text-[#333333] hover:text-[#0F4C5C] transition-colors">
                     contact@smartfirm.io
                   </a>
                 </div>
                 <div className="flex items-center gap-[10px]">
-                  <MapPin className="h-[18px] w-[18px] text-[#4D869C]" />
+                  <MapPin className="h-[18px] w-[18px] text-[#0F4C5C]" />
                   <span className="text-[15px] font-medium text-[#333333]">Eugene, OR</span>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="flex flex-row gap-3">
-                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#4D869C] hover:text-[#4D869C] transition-all duration-300">
+                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#4D869C] hover:text-[#4D869C] transition-all duration-300">
+                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#4D869C] hover:text-[#4D869C] transition-all duration-300">
+                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#4D869C] hover:text-[#4D869C] transition-all duration-300">
+                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Youtube className="h-5 w-5" />
                 </a>
-                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#4D869C] hover:text-[#4D869C] transition-all duration-300">
+                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
@@ -97,7 +97,7 @@ const Footer = () => {
                   <li key={service.slug}>
                     <a 
                       href={`/services/${service.slug}`}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                     >
                       {service.name}
                     </a>
@@ -115,7 +115,7 @@ const Footer = () => {
                   <li key={solution.slug}>
                     <a 
                       href={`/solutions/${solution.slug}`}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                     >
                       {solution.name}
                     </a>
@@ -132,7 +132,7 @@ const Footer = () => {
                   <li key={resource.slug}>
                     <a 
                       href={resource.slug}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                     >
                       {resource.name}
                     </a>
@@ -141,7 +141,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="/quick-start-marketing-for-cpa-firms" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                   >
                     Quick Start Package
                   </a>
@@ -149,7 +149,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="/about" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                   >
                     About Us
                   </a>
@@ -157,7 +157,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="/contact" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#4D869C] hover:underline transition-colors duration-200"
+                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
                   >
                     Contact Us
                   </a>
@@ -174,15 +174,15 @@ const Footer = () => {
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-6 text-[14px]">
-              <a href="/privacy" className="text-[#999999] hover:text-[#4D869C] transition-colors">
+              <a href="/privacy" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
                 Privacy Policy
               </a>
               <span className="text-[#999999]">|</span>
-              <a href="/terms" className="text-[#999999] hover:text-[#4D869C] transition-colors">
+              <a href="/terms" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
                 Terms of Service
               </a>
               <span className="text-[#999999]">|</span>
-              <a href="/cookies" className="text-[#999999] hover:text-[#4D869C] transition-colors">
+              <a href="/cookies" className="text-[#999999] hover:text-[#0F4C5C] transition-colors">
                 Cookie Policy
               </a>
             </div>

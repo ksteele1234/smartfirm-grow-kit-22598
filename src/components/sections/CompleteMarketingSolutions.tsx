@@ -21,13 +21,13 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/seo-for-accountants" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#4D869C] rounded-xl shadow-[0_8px_24px_rgba(77,134,156,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(77,134,156,0.15)] hover:border-[#4D869C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#4D869C] flex items-center justify-center">
+              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#0F4C5C] flex items-center justify-center">
                 <MapPin className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
                 <Star className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
               </div>
@@ -46,13 +46,13 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/website-design" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#4D869C] rounded-xl shadow-[0_8px_24px_rgba(77,134,156,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(77,134,156,0.15)] hover:border-[#4D869C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <span className="absolute top-4 right-4 bg-[#7AB2B2] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               Core Service
             </span>
             <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#4D869C] flex items-center justify-center">
+              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#0F4C5C] flex items-center justify-center">
                 <Monitor className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
                 <TrendingUp className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
               </div>
@@ -71,7 +71,7 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/client-review-generation" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
               <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
@@ -92,7 +92,7 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/email-marketing" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
               <div className="relative w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
@@ -114,7 +114,7 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/technology-solutions" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 active:sm:scale-[0.98] block"
+            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
           >
             <div className="flex flex-col gap-3">
               <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
@@ -135,7 +135,7 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/strategy-integration" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] focus:outline-none focus:ring-3 focus:ring-[#4D869C] focus:ring-offset-2 transition-all duration-300 ease-in-out hover:border-[#4D869C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] block"
+            className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] block"
           >
             <div className="flex-shrink-0 w-[64px] h-[64px] md:w-[56px] md:h-[56px] sm:w-[52px] sm:h-[52px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
               <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-[#7AB2B2]" aria-hidden="true" />
