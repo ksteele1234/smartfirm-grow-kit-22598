@@ -110,50 +110,58 @@ const HeroSection = () => {
           {/* Right Column - Glassmorphism Metric Cards */}
           <div className="order-1 lg:order-2 relative space-y-6">
             
-            {/* Card 1: Revenue Growth */}
+            {/* Card 1: +147 New Leads - Top Left */}
             <div 
               className="animate-float" 
               style={{ animationDelay: '0s' }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
-                <p className="text-teal-300 text-sm font-medium mb-2">Average Revenue Growth</p>
-                <p className="text-[#fbbf24] text-4xl font-bold mb-1">+47%</p>
-                <p className="text-white/70 text-xs">Within first 12 months</p>
+              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                  147
+                </p>
+                <p className="text-sm text-white/70 font-medium mb-2">New Leads</p>
+                <p className="text-xs text-[#2dd4bf]">+32% this month</p>
               </div>
             </div>
 
-            {/* Card 2: Client Acquisition */}
+            {/* Card 2: 94% Client Retention - Middle Right (offset) */}
             <div 
               className="animate-float ml-0 lg:ml-8" 
-              style={{ animationDelay: '0.5s' }}
-            >
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
-                <p className="text-teal-300 text-sm font-medium mb-2">New Clients Per Month</p>
-                <p className="text-[#fbbf24] text-4xl font-bold mb-1">12-18</p>
-                <p className="text-white/70 text-xs">Consistent qualified leads</p>
-              </div>
-            </div>
-
-            {/* Card 3: Time Saved */}
-            <div 
-              className="animate-float" 
               style={{ animationDelay: '1s' }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
-                <p className="text-teal-300 text-sm font-medium mb-2">Time Saved on Marketing</p>
-                <p className="text-[#fbbf24] text-4xl font-bold mb-1">15+ hrs</p>
-                <p className="text-white/70 text-xs">Per week automated</p>
+              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                  94%
+                </p>
+                <p className="text-sm text-white/70 font-medium mb-2">Client Retention</p>
+                <p className="text-xs text-[#2dd4bf]">+8% improvement</p>
               </div>
             </div>
 
-            {/* Card 4: Client Retention (smaller) */}
+            {/* Card 3: $4.2K Avg Deal - Bottom Left */}
             <div 
-              className="animate-float ml-0 lg:ml-4" 
+              className="animate-float" 
+              style={{ animationDelay: '2s' }}
+            >
+              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                  $4.2K
+                </p>
+                <p className="text-sm text-white/70 font-medium mb-2">Avg Deal Value</p>
+                <p className="text-xs text-[#2dd4bf]">Per new client</p>
+              </div>
+            </div>
+
+            {/* Card 4: 340% ROI - Bottom Right (smaller, hidden on mobile) */}
+            <div 
+              className="hidden lg:block animate-float lg:ml-4" 
               style={{ animationDelay: '1.5s' }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.1)]">
-                <p className="text-teal-300 text-xs font-medium mb-1">Client Retention Rate</p>
-                <p className="text-[#fbbf24] text-2xl font-bold">94%</p>
+              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-xl p-4 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+                <p className="text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                  340%
+                </p>
+                <p className="text-xs text-white/70 font-medium">ROI</p>
               </div>
             </div>
 
