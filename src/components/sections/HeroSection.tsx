@@ -34,6 +34,44 @@ const HeroSection = () => {
         />
       </svg>
 
+      {/* WAVE 3 - Mid-Bright Teal (Valley Wave from Top) */}
+      <svg 
+        className="absolute top-0 left-0 w-full h-[55%] z-[3] opacity-90 mix-blend-screen" 
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+        style={{ filter: 'drop-shadow(0 10px 40px rgba(45, 212, 191, 0.3))' }}
+      >
+        <defs>
+          <linearGradient id="wave3grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#2dd4bf" />
+            <stop offset="100%" stopColor="#14b8a6" />
+          </linearGradient>
+        </defs>
+        <path 
+          d="M 0,0 C 360,180 720,220 1080,160 C 1200,120 1320,60 1440,0 L 1440,0 L 0,0 Z"
+          fill="url(#wave3grad)"
+        />
+      </svg>
+
+      {/* WAVE 4 - Brightest Cyan Accent (Right Side Signature Element) ⭐ */}
+      <svg 
+        className="absolute top-0 right-0 w-full h-[45%] z-[4] opacity-75 mix-blend-lighten" 
+        viewBox="0 0 1440 700" 
+        preserveAspectRatio="none"
+        style={{ filter: 'drop-shadow(0 10px 50px rgba(94, 234, 212, 0.4))' }}
+      >
+        <defs>
+          <linearGradient id="wave4grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#5eead4" />
+            <stop offset="100%" stopColor="#7dd3fc" />
+          </linearGradient>
+        </defs>
+        <path 
+          d="M 576,0 C 720,280 900,300 1080,220 C 1200,160 1320,80 1440,0 L 1440,0 L 576,0 Z"
+          fill="url(#wave4grad)"
+        />
+      </svg>
+
       {/* Orbital Circle System - Keeping for now (will refine in Part 3) */}
       <div className="absolute top-1/4 right-[10%] w-[360px] h-[360px] z-[5] hidden lg:block">
         {/* Outer circle with dots - 60s rotation */}
