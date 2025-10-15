@@ -8,68 +8,56 @@ All colors MUST be HSL converted from the official brand colors.
 
 @layer base {
   :root {
-    /* Deep Teal Gradient System */
-    --deep-teal-start: 180 60% 11%;     /* #0a2e2e - Deep ocean teal */
-    --deep-teal-end: 180 50% 16%;       /* #134444 - Slightly lighter deep teal */
-    --mid-teal-start: 180 52% 23%;      /* #1a5555 - Mid range teal */
-    --mid-teal-end: 180 45% 30%;        /* #2a7070 - Lighter mid teal */
-    --vibrant-teal: 174 74% 56%;        /* #14b8a6 - Bright teal accent (Tailwind teal-500) */
-    --vibrant-teal-light: 173 80% 62%; /* #2dd4bf - Lighter vibrant (Tailwind teal-400) */
-    --bright-teal: 173 58% 77%;         /* #5eead4 - Bright highlight (Tailwind teal-300) */
-    --bright-teal-light: 172 66% 85%;   /* #99f6e4 - Lightest highlight (Tailwind teal-200) */
-    --coral-pop: 351 95% 71%;           /* #fb7185 - Coral/rose accent */
-    --gold-pop: 43 96% 56%;             /* #fbbf24 - Gold accent */
+    /* Official SmartFirm Brand Colors - Exact Match to Guidelines */
+    --primary-blue: 221 47% 62%; /* #647FBC - Soft Blue (Primary) */
+    --secondary-blue: 218 34% 67%; /* #91ADC8 - Blue Grey */
+    --primary-teal: 190 72% 21%; /* #0F4C5C - Primary Teal */
+    --light-teal: 180 28% 60%; /* #7AB2B2 - Light Teal */
+    --accent-light: 64 89% 92%; /* #FAFDD6 - Accent Light */
+    --dark-teal: 190 72% 21%; /* #0F4C5C - Same as primary teal for consistency */
+    --dark-blue: 220 23% 29%; /* #334260 - Deep professional blue */
     
-    /* Legacy brand colors for compatibility */
-    --primary-blue: 213 43% 56%;
-    --secondary-blue: 206 36% 68%;
-    --primary-teal: 191 35% 45%;
-    --light-teal: 180 29% 60%;
-    --dark-teal: 180 60% 11%;           /* Updated to match deep teal */
-    --accent-light: 61 93% 91%;
-    --dark-blue: 213 50% 30%;
     
-    /* Text Colors - White/teal theme */
-    --text-primary: 0 0% 100%;          /* White */
-    --text-secondary: 0 0% 80%;         /* Light grey for body text */
-    --text-light: 0 0% 60%;             /* Dimmer text */
-    --text-teal: 173 58% 77%;           /* Bright teal for highlights */
+    /* Text Colors */
+    --text-primary: 0 0% 20%; /* #333333 */
+    --text-secondary: 0 0% 40%; /* #666666 */
+    --text-light: 0 0% 40%; /* #666666 - Updated for WCAG AA compliance (was #999999) */
     
     /* Background Colors */
-    --background-white: 180 60% 11%;    /* Deep teal (was white) */
-    --background-light: 180 52% 23%;    /* Mid teal for sections */
+    --background-white: 0 0% 100%; /* #FFFFFF */
+    --background-light: 210 17% 98%; /* #F8F9FA */
     
     /* Semantic Design System Tokens */
-    --background: var(--deep-teal-start);
+    --background: var(--background-white);
     --foreground: var(--text-primary);
     
-    --card: var(--deep-teal-end);
+    --card: var(--background-white);
     --card-foreground: var(--text-primary);
     
-    --popover: var(--deep-teal-end);
+    --popover: var(--background-white);
     --popover-foreground: var(--text-primary);
     
-    --primary: var(--vibrant-teal);
+    --primary: var(--primary-blue);
     --primary-foreground: 0 0% 100%;
     
-    --secondary: var(--bright-teal);
-    --secondary-foreground: var(--deep-teal-start);
+    --secondary: var(--secondary-blue);
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: var(--mid-teal-end);
-    --muted-foreground: var(--text-secondary);
+    --muted: var(--background-light);
+    --muted-foreground: var(--text-light);
     
-    --accent: var(--vibrant-teal-light);
-    --accent-foreground: 0 0% 100%;
+    --accent: var(--accent-light);
+    --accent-foreground: var(--text-primary);
     
-    --teal: var(--vibrant-teal);
+    --teal: var(--primary-teal);
     --teal-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: var(--background-white);
     
-    --border: var(--mid-teal-end);
-    --input: var(--deep-teal-end);
-    --ring: var(--vibrant-teal);
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: var(--primary-blue);
     
     --radius: 0.5rem;
     
@@ -77,11 +65,10 @@ All colors MUST be HSL converted from the official brand colors.
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'DM Sans', sans-serif;
     
-    /* Shadows - Teal glow theme */
-    --shadow-soft: 0 4px 20px rgba(20, 184, 166, 0.15);
-    --shadow-card: 0 2px 12px rgba(20, 184, 166, 0.1);
-    --shadow-elegant: 0 10px 30px rgba(20, 184, 166, 0.2);
-    --shadow-glow: 0 0 30px rgba(20, 184, 166, 0.2);
+    /* Shadows */
+    --shadow-soft: 0 4px 12px hsl(var(--primary-blue) / 0.1);
+    --shadow-card: 0 2px 8px hsl(var(--primary-blue) / 0.08);
+    --shadow-elegant: 0 10px 30px hsl(var(--primary-blue) / 0.15);
     
     /* Spacing */
     --section-padding: 5rem; /* 80px */
@@ -135,8 +122,6 @@ All colors MUST be HSL converted from the official brand colors.
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    background: linear-gradient(180deg, hsl(var(--deep-teal-start)) 0%, hsl(var(--deep-teal-end)) 100%);
-    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {

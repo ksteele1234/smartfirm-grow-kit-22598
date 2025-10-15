@@ -30,10 +30,6 @@ const buttonVariants = cva(
         "white-on-dark": "bg-white text-primary hover:bg-white/90 shadow-soft rounded-lg font-semibold",
         "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary rounded-lg font-semibold",
         
-        // Accent variants - coral and gold
-        coral: "bg-coral text-white hover:bg-coral/90 shadow-soft hover:shadow-glow rounded-lg font-semibold",
-        gold: "bg-gold text-white hover:bg-gold/90 shadow-soft hover:shadow-glow rounded-lg font-semibold",
-        
         // Destructive - red with white text
         destructive: "bg-red-600 text-white hover:bg-red-700 rounded-lg font-semibold",
         
