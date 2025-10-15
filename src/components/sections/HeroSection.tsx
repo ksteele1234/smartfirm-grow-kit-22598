@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroWaveBackground from "@/assets/hero-wave-background.jpg";
+import heroWaveBackground from "@/assets/hero-wave-background.webp";
 
 // Add keyframes for circle rotations
 const styles = `
