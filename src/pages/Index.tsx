@@ -23,6 +23,7 @@ const Index = () => {
       <SEO 
         title="Marketing Automation for Accounting Firms | SmartFirm"
         description="Marketing automation for accounting firms and CPAs that delivers faster client intake, better follow-up, and measurable growth with proven strategies."
+        image="/assets/og-default.webp"
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
