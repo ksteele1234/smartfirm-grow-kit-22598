@@ -17,7 +17,8 @@ const HeroSection = () => {
           className="absolute inset-0" 
           style={{ 
             background: '#134444',
-            clipPath: 'ellipse(120% 40% at 0% 100%)'
+            clipPath: 'ellipse(120% 40% at 0% 100%)',
+            opacity: 0.8
           }}
         />
         
@@ -26,7 +27,8 @@ const HeroSection = () => {
           className="absolute inset-0" 
           style={{ 
             background: '#1a5555',
-            clipPath: 'ellipse(110% 35% at 100% 100%)'
+            clipPath: 'ellipse(110% 35% at 100% 100%)',
+            opacity: 0.6
           }}
         />
         
@@ -36,29 +38,17 @@ const HeroSection = () => {
           style={{ 
             background: '#14b8a6',
             clipPath: 'ellipse(80% 25% at 100% 0%)',
-            opacity: 0.6
+            opacity: 0.18
           }}
         />
         
-        {/* Orbital circles */}
-        <div 
-          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full border-2 border-[#5eead4]"
-          style={{ opacity: 0.3 }}
-        />
-        <div 
-          className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full border-2 border-[#99f6e4]"
-          style={{ opacity: 0.3 }}
-        />
-        <div 
-          className="absolute bottom-1/4 left-1/4 w-32 h-32 rounded-full border-2 border-[#5eead4]"
-          style={{ opacity: 0.3 }}
-        />
+        {/* Subtle orbital circles - removed for cleaner look */}
       </div>
       
       {/* Curved bottom edge */}
       <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="#2563eb"/>
+          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="#ffffff"/>
         </svg>
       </div>
       
@@ -114,15 +104,15 @@ const HeroSection = () => {
               ease: "easeInOut"
             }}>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-teal-vibrant rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
                   <span className="text-sm font-semibold">40+ Years Combined Experience</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-teal-bright rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
                   <span className="text-sm font-semibold">50+ Companies Supported</span>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-teal-vibrant rounded-full mt-1.5 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#5eead4] rounded-full mt-1.5 flex-shrink-0" style={{ boxShadow: '0 0 8px rgba(94, 234, 212, 0.6)' }}></div>
                   <span className="text-sm font-semibold">Up in 30 Days</span>
                 </div>
               </motion.div>
@@ -143,7 +133,7 @@ const HeroSection = () => {
                   size="lg" 
                   className="group bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
                   asChild
-                  style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+                  style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
                 >
                   <a href="/get-started">
                     Get Your Free Growth Plan

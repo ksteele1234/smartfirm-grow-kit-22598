@@ -150,12 +150,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-[#0a2e2e]/80 backdrop-blur-sm border-b border-teal-vibrant/20 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center" style={{ filter: 'drop-shadow(0 0 20px rgba(45, 212, 191, 0.3))' }}>
+            <a href="/" className="flex items-center">
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
@@ -172,48 +172,48 @@ const Header = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   HOME
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] data-[state=open]:text-[#14b8a6]">
                   <a href="/services" className="flex items-center">
                     SERVICES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow z-50">
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-white border border-slate-200 shadow-lg z-50">
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Main Service Categories</h4>
+                      <h4 className="text-sm font-semibold text-[#14b8a6] mb-2">Main Service Categories</h4>
                       <div className="grid gap-2">
                         {services.slice(0, 4).map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
                           >
-                            <div className="text-sm font-medium leading-none text-white">{service.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
+                            <div className="text-sm font-medium leading-none text-slate-900">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-slate-600">
                               {service.description}
                             </p>
                           </NavigationMenuLink>
                         ))}
                       </div>
                     </div>
-                    <div className="border-t border-teal-vibrant/30 pt-4">
-                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Individual Services</h4>
+                    <div className="border-t border-slate-200 pt-4">
+                      <h4 className="text-sm font-semibold text-[#14b8a6] mb-2">Individual Services</h4>
                       <div className="grid gap-2">
                         {services.slice(4).map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
                           >
-                            <div className="text-sm font-medium leading-none text-white">{service.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
+                            <div className="text-sm font-medium leading-none text-slate-900">{service.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-slate-600">
                               {service.description}
                             </p>
                           </NavigationMenuLink>
@@ -225,41 +225,41 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] data-[state=open]:text-[#14b8a6]">
                   <a href="/solutions" className="flex items-center">
                     SOLUTIONS
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow">
+                  <div className="grid gap-3 p-6 w-[600px] grid-cols-1 bg-white border border-slate-200 shadow-lg">
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Main Solutions</h4>
+                      <h4 className="text-sm font-semibold text-[#14b8a6] mb-2">Main Solutions</h4>
                       <div className="grid gap-2">
                         {solutions.slice(0, 5).map((solution) => (
                           <NavigationMenuLink
                             key={solution.title}
                             href={solution.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
                           >
-                            <div className="text-sm font-medium leading-none text-white">{solution.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
+                            <div className="text-sm font-medium leading-none text-slate-900">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-slate-600">
                               {solution.description}
                             </p>
                           </NavigationMenuLink>
                         ))}
                       </div>
                     </div>
-                    <div className="border-t border-teal-vibrant/30 pt-4">
-                      <h4 className="text-sm font-semibold text-teal-vibrant mb-2">Specific Areas</h4>
+                    <div className="border-t border-slate-200 pt-4">
+                      <h4 className="text-sm font-semibold text-[#14b8a6] mb-2">Specific Areas</h4>
                       <div className="grid gap-2">
                         {solutions.slice(5).map((solution) => (
                           <NavigationMenuLink
                             key={solution.title}
                             href={solution.href}
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
                           >
-                            <div className="text-sm font-medium leading-none text-white">{solution.title}</div>
-                            <p className="line-clamp-2 text-xs leading-snug text-white/70">
+                            <div className="text-sm font-medium leading-none text-slate-900">{solution.title}</div>
+                            <p className="line-clamp-2 text-xs leading-snug text-slate-600">
                               {solution.description}
                             </p>
                           </NavigationMenuLink>
@@ -271,21 +271,21 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] data-[state=open]:text-[#14b8a6]">
                   <a href="/industries" className="flex items-center">
                     INDUSTRIES
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[400px] grid-cols-1 bg-gradient-mid-teal border border-teal-vibrant/30 shadow-glow">
+                  <div className="grid gap-3 p-6 w-[400px] grid-cols-1 bg-white border border-slate-200 shadow-lg">
                     {industries.map((industry) => (
                       <NavigationMenuLink
                         key={industry.slug}
                         href={`/industries/${industry.slug}`}
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal-vibrant/20 hover:text-white focus:bg-teal-vibrant/20 focus:text-white"
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
                       >
-                        <div className="text-sm font-medium leading-none text-white">{industry.name}</div>
-                        <p className="line-clamp-2 text-xs leading-snug text-white/70">
+                        <div className="text-sm font-medium leading-none text-slate-900">{industry.name}</div>
+                        <p className="line-clamp-2 text-xs leading-snug text-slate-600">
                           {industry.description}
                         </p>
                       </NavigationMenuLink>
@@ -304,7 +304,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   ABOUT US
                 </NavigationMenuLink>
@@ -312,7 +312,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   CONTACT
                 </NavigationMenuLink>
@@ -325,7 +325,7 @@ const Header = () => {
               size="default" 
               asChild
               className="bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold"
-              style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+              style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
             >
               <a href="/get-started">GET STARTED</a>
             </Button>
@@ -333,7 +333,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-slate-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Open navigation menu"
             aria-expanded={isMenuOpen}
@@ -344,34 +344,34 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-teal-vibrant/30">
+          <div className="lg:hidden py-4 border-t border-slate-200">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 HOME
               </a>
-              <a href="/services" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/services" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 SERVICES
               </a>
-              <a href="/solutions" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/solutions" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/industries" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 INDUSTRIES
               </a>
-              <a href="/case-studies" className="text-white hover:text-[#2dd4bf] transition-colors font-medium hidden">
+              <a href="/case-studies" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium hidden">
                 CASE STUDIES
               </a>
-              <a href="/about" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/about" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 ABOUT US
               </a>
-              <a href="/contact" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
+              <a href="/contact" className="text-slate-700 hover:text-[#14b8a6] transition-colors font-medium">
                 CONTACT
               </a>
               <Button 
                 size="default" 
                 className="w-full mt-4 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
                 asChild
-                style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+                style={{ boxShadow: '0 0 12px rgba(20, 184, 166, 0.3)' }}
               >
                 <a href="/get-started">GET STARTED</a>
               </Button>
