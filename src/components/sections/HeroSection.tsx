@@ -3,22 +3,29 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden bg-[#0a1929]">
-      {/* WAVE 1 - Darkest Bottom Foundation */}
+    <section className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden bg-gradient-to-b from-[#0a1929] via-[#0d2137] to-[#0a1929]">
+      {/* WAVE 1 - Darkest Bottom Foundation (Multiple Waves) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[63%] md:h-[70%] z-[1]"
+        className="absolute bottom-0 left-0 w-full h-[63%] md:h-[70%] z-[1] opacity-90"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
+        <defs>
+          <linearGradient id="wave1grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#1e3a52" />
+            <stop offset="50%" stopColor="#2a4a62" />
+            <stop offset="100%" stopColor="#1e3a52" />
+          </linearGradient>
+        </defs>
         <path 
-          d="M 0,700 C 360,520 720,480 1080,550 C 1200,580 1320,650 1440,700 L 1440,700 L 0,700 Z"
-          fill="#1e3a52"
+          d="M 0,700 Q 180,600 360,620 T 720,580 Q 900,560 1080,600 T 1440,700 L 1440,700 L 0,700 Z"
+          fill="url(#wave1grad)"
         />
       </svg>
 
-      {/* WAVE 2 - Mid-Dark with Gradient */}
+      {/* WAVE 2 - Mid-Dark with Gradient (Wavy Pattern) */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[59%] md:h-[65%] z-[2] opacity-95 hidden md:block" 
+        className="absolute bottom-0 left-0 w-full h-[59%] md:h-[65%] z-[2] opacity-100 hidden md:block"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
@@ -30,14 +37,14 @@ const HeroSection = () => {
           </linearGradient>
         </defs>
         <path 
-          d="M 0,700 C 300,580 600,520 900,580 C 1100,620 1280,680 1440,700 L 1440,700 L 0,700 Z"
+          d="M 0,700 Q 120,620 240,640 T 480,610 Q 600,590 720,620 T 960,600 Q 1080,580 1200,610 T 1440,700 L 1440,700 L 0,700 Z"
           fill="url(#wave2grad)"
         />
       </svg>
 
-      {/* WAVE 3 - Mid-Bright Teal (Valley Wave from Top) */}
+      {/* WAVE 3 - Mid-Bright Teal (Multiple Wavy Peaks from Top) */}
       <svg 
-        className="absolute top-0 left-0 w-full h-[50%] md:h-[55%] z-[3] opacity-90 mix-blend-screen" 
+        className="absolute top-0 left-0 w-full h-[50%] md:h-[55%] z-[3] opacity-95 mix-blend-screen"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
         style={{ filter: 'drop-shadow(0 10px 40px rgba(45, 212, 191, 0.3))' }}
@@ -50,14 +57,14 @@ const HeroSection = () => {
           </linearGradient>
         </defs>
         <path 
-          d="M 0,0 C 360,180 720,220 1080,160 C 1200,120 1320,60 1440,0 L 1440,0 L 0,0 Z"
+          d="M 0,0 Q 120,140 240,120 T 480,160 Q 600,180 720,140 T 960,120 Q 1080,100 1200,140 T 1440,0 L 1440,0 L 0,0 Z"
           fill="url(#wave3grad)"
         />
       </svg>
 
-      {/* WAVE 4 - Brightest Cyan Accent (Right Side Signature Element) ⭐ */}
+      {/* WAVE 4 - Brightest Cyan Accent (Wavy Bright Layer) ⭐ */}
       <svg 
-        className="absolute top-0 right-0 w-full h-[41%] md:h-[45%] z-[4] opacity-75 mix-blend-lighten" 
+        className="absolute top-0 right-0 w-full h-[41%] md:h-[45%] z-[4] opacity-85 mix-blend-screen"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
         style={{ filter: 'drop-shadow(0 10px 50px rgba(94, 234, 212, 0.4))' }}
@@ -70,14 +77,14 @@ const HeroSection = () => {
           </linearGradient>
         </defs>
         <path 
-          d="M 576,0 C 720,280 900,300 1080,220 C 1200,160 1320,80 1440,0 L 1440,0 L 576,0 Z"
+          d="M 480,0 Q 600,120 720,100 T 960,140 Q 1080,160 1200,120 T 1440,0 L 1440,0 L 480,0 Z"
           fill="url(#wave4grad)"
         />
       </svg>
 
       {/* Orbital Circle System - Part 3 Implementation */}
       <svg 
-        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block animate-[spin_60s_linear_infinite]" 
+        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block animate-[spin_20s_linear_infinite]"
         viewBox="0 0 400 400"
         style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))' }}
       >
