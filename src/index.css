@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Float animation for hero metric cards */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-12px); 
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}
+
 /* SmartFirm.io Design System - Official Brand Guidelines
 All colors MUST be HSL converted from the official brand colors.
 */

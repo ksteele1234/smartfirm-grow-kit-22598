@@ -1,138 +1,182 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
-import accountingDashboard from "@/assets/accounting-dashboard.webp";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const rotatingWords = ["Accounting Firms", "Bookkeepers", "Tax Preparers", "CPAs", "Accountants"];
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % rotatingWords.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-  return <AuroraBackground className="relative pb-0 bg-[hsl(var(--light-teal)/0.12)]">
-      {/* Curved bottom edge - positioned at absolute bottom */}
+  return (
+    <section className="relative min-h-[500px] md:min-h-[600px] py-20 md:py-[120px] overflow-hidden">
+      {/* Base Layer - Solid Deep Teal */}
+      <div className="absolute inset-0 bg-[#0a2e2e] z-0" />
+
+      {/* Wave Layer 2 - Large wave from bottom-left (#134444) - ~40% height */}
+      <svg 
+        className="absolute bottom-0 left-0 w-full h-[40%] z-[1]" 
+        preserveAspectRatio="none" 
+        viewBox="0 0 1200 400"
+      >
+        <path 
+          d="M0,400 C300,350 500,320 700,340 C900,360 1100,350 1200,320 L1200,400 Z" 
+          fill="#134444"
+        />
+      </svg>
+
+      {/* Wave Layer 3 - Mid wave from bottom-right (#1a5555) - ~35% height */}
+      <svg 
+        className="absolute bottom-0 right-0 w-full h-[35%] z-[2]" 
+        preserveAspectRatio="none" 
+        viewBox="0 0 1200 350"
+      >
+        <path 
+          d="M0,250 C200,280 400,300 600,280 C800,260 1000,240 1200,260 L1200,350 L0,350 Z" 
+          fill="#1a5555"
+        />
+      </svg>
+
+      {/* Wave Layer 4 - Accent wave from top-right (#14b8a6 at 15% opacity) - ~25% height - Desktop only */}
+      <svg 
+        className="hidden md:block absolute top-0 right-0 w-full h-[25%] z-[3]" 
+        preserveAspectRatio="none" 
+        viewBox="0 0 1200 250"
+      >
+        <path 
+          d="M1200,0 C900,50 700,80 500,60 C300,40 100,20 0,40 L0,0 Z" 
+          fill="#14b8a6" 
+          fillOpacity="0.15"
+        />
+      </svg>
+
+      {/* Orbital Circle 1 - Top Right */}
+      <svg 
+        className="absolute top-20 right-10 w-32 h-32 z-[2] opacity-20 hidden lg:block" 
+        viewBox="0 0 100 100"
+      >
+        <circle cx="50" cy="50" r="40" stroke="#2dd4bf" strokeWidth="1" fill="none" />
+        <circle cx="50" cy="50" r="30" stroke="#2dd4bf" strokeWidth="1" fill="none" />
+        <circle cx="50" cy="50" r="20" stroke="#2dd4bf" strokeWidth="1" fill="none" />
+      </svg>
+
+      {/* Orbital Circle 2 - Bottom Left */}
+      <svg 
+        className="absolute bottom-40 left-10 w-24 h-24 z-[1] opacity-20 hidden lg:block" 
+        viewBox="0 0 100 100"
+      >
+        <circle cx="50" cy="50" r="35" stroke="#2dd4bf" strokeWidth="1" fill="none" />
+        <circle cx="50" cy="50" r="25" stroke="#2dd4bf" strokeWidth="1" fill="none" />
+      </svg>
+
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
+          
+          {/* Left Column - Content */}
+          <div className="order-2 lg:order-1 space-y-8">
+            
+            {/* Headline with Gradient */}
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight bg-gradient-to-r from-white via-teal-200 to-teal-400 bg-clip-text text-transparent mb-6">
+              Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+            </h1>
+
+            {/* Subheadline */}
+            <div id="sf-keyword-intro">
+              <p className="text-xl text-white/70 leading-relaxed max-w-[600px] mb-8">
+                SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
+              </p>
+            </div>
+
+            {/* Trust Badges with Gold Bullets */}
+            <div className="flex flex-wrap items-center gap-4 mb-10">
+              <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#fbbf24]" />
+              <span className="text-white text-sm font-medium">50+ Companies Supported</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-[#fbbf24]" />
+              <span className="text-white text-sm font-medium">Up in 30 Days</span>
+            </div>
+
+            {/* CTA Button - Enhanced Coral */}
+            <div className="flex justify-start">
+              <Button 
+                variant="coral" 
+                size="lg"
+                className="px-10 py-4 text-lg font-bold rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.5)] hover:-translate-y-0.5 hover:shadow-[0_6px_32px_rgba(251,113,133,0.6)] transition-all duration-300 w-full sm:w-auto"
+                asChild
+              >
+                <a href="/get-started" className="inline-flex items-center justify-center gap-2">
+                  Get Your Free Growth Plan
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Right Column - Glassmorphism Metric Cards */}
+          <div className="order-1 lg:order-2 relative space-y-6">
+            
+            {/* Card 1: Revenue Growth */}
+            <div 
+              className="animate-float" 
+              style={{ animationDelay: '0s' }}
+            >
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
+                <p className="text-teal-300 text-sm font-medium mb-2">Average Revenue Growth</p>
+                <p className="text-[#fbbf24] text-4xl font-bold mb-1">+47%</p>
+                <p className="text-white/70 text-xs">Within first 12 months</p>
+              </div>
+            </div>
+
+            {/* Card 2: Client Acquisition */}
+            <div 
+              className="animate-float ml-0 lg:ml-8" 
+              style={{ animationDelay: '0.5s' }}
+            >
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
+                <p className="text-teal-300 text-sm font-medium mb-2">New Clients Per Month</p>
+                <p className="text-[#fbbf24] text-4xl font-bold mb-1">12-18</p>
+                <p className="text-white/70 text-xs">Consistent qualified leads</p>
+              </div>
+            </div>
+
+            {/* Card 3: Time Saved */}
+            <div 
+              className="animate-float" 
+              style={{ animationDelay: '1s' }}
+            >
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.15)]">
+                <p className="text-teal-300 text-sm font-medium mb-2">Time Saved on Marketing</p>
+                <p className="text-[#fbbf24] text-4xl font-bold mb-1">15+ hrs</p>
+                <p className="text-white/70 text-xs">Per week automated</p>
+              </div>
+            </div>
+
+            {/* Card 4: Client Retention (smaller) */}
+            <div 
+              className="animate-float ml-0 lg:ml-4" 
+              style={{ animationDelay: '1.5s' }}
+            >
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-[0_8px_32px_rgba(20,184,166,0.1)]">
+                <p className="text-teal-300 text-xs font-medium mb-1">Client Retention Rate</p>
+                <p className="text-[#fbbf24] text-2xl font-bold">94%</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* Bottom Curved Divider */}
       <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
-        <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="#EEF7F6"/>
+        <svg 
+          className="relative block w-full h-[80px] md:h-[120px]" 
+          viewBox="0 0 1200 120" 
+          preserveAspectRatio="none"
+        >
+          <path 
+            d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
+            fill="#ffffff"
+          />
         </svg>
       </div>
-      
-      <motion.div initial={{
-      opacity: 0.0,
-      y: 40
-    }} whileInView={{
-      opacity: 1,
-      y: 0
-    }} transition={{
-      delay: 0.3,
-      duration: 0.8,
-      ease: "easeInOut"
-    }} className="relative flex flex-col gap-4 items-center justify-center px-4 text-center">
-        <div className="container relative mx-auto px-4 lg:px-6 py-16 md:py-24 pb-16 md:pb-24">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <motion.div className="space-y-8" initial={{
-            opacity: 0,
-            x: -50
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            delay: 0.5,
-            duration: 0.8,
-            ease: "easeInOut"
-          }}>
-              {/* Headline */}
-              <div className="space-y-4 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-dark-blue max-w-2xl">
-                  Predictable Growth for Accounting Firms Without Wasting Time on Marketing
-                </h1>
-                
-                {/* Subheadline */}
-                <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-medium">
-                    SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
-                  </p>
-                </div>
-              </div>
-
-              {/* Trust Indicators */}
-              <motion.div className="flex flex-wrap items-start gap-4 text-foreground" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: 0.7,
-              duration: 0.6,
-              ease: "easeInOut"
-            }}>
-                <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full mt-1.5 flex-shrink-0"></div>
-                  <span className="text-sm font-semibold">40+ Years Combined Experience</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div>
-                  <span className="text-sm font-semibold">50+ Companies Supported</span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <div className="w-2 h-2 bg-teal rounded-full mt-1.5 flex-shrink-0"></div>
-                  <span className="text-sm font-semibold">Up in 30 Days</span>
-                </div>
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div className="flex justify-center" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} transition={{
-              delay: 0.9,
-              duration: 0.6,
-              ease: "easeInOut"
-            }}>
-                <Button variant="hero" size="lg" className="group bg-[#0F4C5C] hover:bg-[#0d3d4a] text-white" asChild>
-                  <a href="/get-started">
-                    Get Your Free Growth Plan
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-              </motion.div>
-
-              {/* Social Proof - Removed to reduce height */}
-            </motion.div>
-
-            {/* Right Column - Dashboard Mockup */}
-            <motion.div className="hidden lg:block relative" initial={{
-            opacity: 0,
-            x: 50
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} transition={{
-            delay: 0.7,
-            duration: 0.8,
-            ease: "easeInOut"
-          }}>
-              <img 
-                src={accountingDashboard} 
-                alt="Accounting dashboard showing lead generation and client retention metrics for accounting firms"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
-    </AuroraBackground>;
+    </section>
+  );
 };
+
 export default HeroSection;
