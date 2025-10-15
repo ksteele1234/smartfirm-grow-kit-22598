@@ -97,7 +97,7 @@ const Contact = () => {
       <main>
       {/* Hero Section */}
       <section className="relative bg-[#0F4C5C] pt-32 pb-24 pb-32 md:pb-40 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div
             className="absolute -inset-[10px] pointer-events-none animate-aurora"
             style={{
