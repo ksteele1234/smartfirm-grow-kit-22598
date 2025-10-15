@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden bg-[#0a1929]">
       {/* WAVE 1 - Darkest Bottom Foundation */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[70%] z-[1]" 
+        className="absolute bottom-0 left-0 w-full h-[63%] md:h-[70%] z-[1]"
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
@@ -18,13 +18,14 @@ const HeroSection = () => {
 
       {/* WAVE 2 - Mid-Dark with Gradient */}
       <svg 
-        className="absolute bottom-0 left-0 w-full h-[65%] z-[2] opacity-95" 
+        className="absolute bottom-0 left-0 w-full h-[59%] md:h-[65%] z-[2] opacity-95 hidden md:block" 
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
       >
         <defs>
           <linearGradient id="wave2grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#2d5a7b" />
+            <stop offset="50%" stopColor="#356382" />
             <stop offset="100%" stopColor="#3d6a8f" />
           </linearGradient>
         </defs>
@@ -36,7 +37,7 @@ const HeroSection = () => {
 
       {/* WAVE 3 - Mid-Bright Teal (Valley Wave from Top) */}
       <svg 
-        className="absolute top-0 left-0 w-full h-[55%] z-[3] opacity-90 mix-blend-screen" 
+        className="absolute top-0 left-0 w-full h-[50%] md:h-[55%] z-[3] opacity-90 mix-blend-screen" 
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
         style={{ filter: 'drop-shadow(0 10px 40px rgba(45, 212, 191, 0.3))' }}
@@ -44,6 +45,7 @@ const HeroSection = () => {
         <defs>
           <linearGradient id="wave3grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#2dd4bf" />
+            <stop offset="50%" stopColor="#20c5b3" />
             <stop offset="100%" stopColor="#14b8a6" />
           </linearGradient>
         </defs>
@@ -55,7 +57,7 @@ const HeroSection = () => {
 
       {/* WAVE 4 - Brightest Cyan Accent (Right Side Signature Element) ⭐ */}
       <svg 
-        className="absolute top-0 right-0 w-full h-[45%] z-[4] opacity-75 mix-blend-lighten" 
+        className="absolute top-0 right-0 w-full h-[41%] md:h-[45%] z-[4] opacity-75 mix-blend-lighten" 
         viewBox="0 0 1440 700" 
         preserveAspectRatio="none"
         style={{ filter: 'drop-shadow(0 10px 50px rgba(94, 234, 212, 0.4))' }}
@@ -63,6 +65,7 @@ const HeroSection = () => {
         <defs>
           <linearGradient id="wave4grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#5eead4" />
+            <stop offset="50%" stopColor="#6ce9d6" />
             <stop offset="100%" stopColor="#7dd3fc" />
           </linearGradient>
         </defs>
@@ -72,34 +75,47 @@ const HeroSection = () => {
         />
       </svg>
 
-      {/* Orbital Circle System - Keeping for now (will refine in Part 3) */}
-      <div className="absolute top-1/4 right-[10%] w-[360px] h-[360px] z-[5] hidden lg:block">
-        {/* Outer circle with dots - 60s rotation */}
-        <svg 
-          className="absolute inset-0 animate-[spin_60s_linear_infinite]" 
-          viewBox="0 0 360 360"
-        >
-          <circle cx="180" cy="180" r="180" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.4" />
-          {/* Dots on outer circle */}
-          <circle cx="180" cy="0" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="360" cy="180" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="180" cy="360" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="0" cy="180" r="4" fill="#2dd4bf" opacity="0.6" />
-        </svg>
+      {/* Orbital Circle System - Part 3 Implementation */}
+      <svg 
+        className="absolute right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block animate-[spin_60s_linear_infinite]" 
+        viewBox="0 0 400 400"
+        style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))' }}
+      >
+        {/* Three Concentric Circles */}
+        <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
+        <circle cx="200" cy="200" r="140" stroke="#2dd4bf" strokeWidth="1.5" fill="none" opacity="0.4" />
+        <circle cx="200" cy="200" r="180" stroke="#2dd4bf" strokeWidth="1" fill="none" opacity="0.3" />
         
-        {/* Inner circle with dots - 90s reverse rotation */}
-        <svg 
-          className="absolute inset-0 animate-[spin_90s_linear_infinite] [animation-direction:reverse]" 
-          viewBox="0 0 360 360"
-        >
-          <circle cx="180" cy="180" r="120" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.4" />
-          {/* Dots on inner circle */}
-          <circle cx="180" cy="60" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="300" cy="180" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="180" cy="300" r="4" fill="#2dd4bf" opacity="0.6" />
-          <circle cx="60" cy="180" r="4" fill="#2dd4bf" opacity="0.6" />
-        </svg>
-      </div>
+        {/* 24 Dots - Circle 1 (r=100) at 45° intervals */}
+        <circle cx="300" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="270.71" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="300" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="129.29" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="100" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="129.29" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="100" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="270.71" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
+        
+        {/* 24 Dots - Circle 2 (r=140) at 45° intervals */}
+        <circle cx="340" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="298.99" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="340" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="101.01" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="60" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="101.01" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="60" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="298.99" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
+        
+        {/* 24 Dots - Circle 3 (r=180) at 45° intervals */}
+        <circle cx="380" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="327.28" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="380" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="72.72" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="20" cy="200" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="72.72" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="200" cy="20" r="3" fill="#5eead4" opacity="0.6" />
+        <circle cx="327.28" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
+      </svg>
 
       {/* Content Container */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12">
