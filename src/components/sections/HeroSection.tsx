@@ -19,7 +19,8 @@ const HeroSection = () => {
         </defs>
         <path 
           d="M 0,700 C 200,600 400,650 600,620 C 800,590 1000,640 1200,620 C 1320,610 1380,650 1440,700 L 1440,700 L 0,700 Z"
-          fill="url(#wave1grad)"
+          fill="#1a4055"
+          opacity="1"
         />
       </svg>
 
@@ -38,7 +39,8 @@ const HeroSection = () => {
         </defs>
         <path 
           d="M 0,700 C 180,630 380,620 580,650 C 780,680 980,630 1180,660 C 1300,680 1380,650 1440,700 L 1440,700 L 0,700 Z"
-          fill="url(#wave2grad)"
+          fill="#2a5a70"
+          opacity="0.95"
         />
       </svg>
 
@@ -58,7 +60,10 @@ const HeroSection = () => {
         </defs>
         <path 
           d="M 0,0 C 200,100 400,60 600,90 C 800,120 1000,70 1200,100 C 1320,110 1380,60 1440,0 L 1440,0 L 0,0 Z"
-          fill="url(#wave3grad)"
+          fill="#14b8a6"
+          opacity="0.85"
+          filter="drop-shadow(0 10px 40px rgba(20, 184, 166, 0.5))"
+          style={{ mixBlendMode: 'screen' }}
         />
       </svg>
 
@@ -78,7 +83,10 @@ const HeroSection = () => {
         </defs>
         <path 
           d="M 576,0 C 700,140 850,120 1000,80 C 1150,40 1300,100 1440,0 L 1440,0 L 576,0 Z"
-          fill="url(#wave4grad)"
+          fill="#5eead4"
+          opacity="0.75"
+          filter="drop-shadow(0 15px 50px rgba(94, 234, 212, 0.6))"
+          style={{ mixBlendMode: 'lighten' }}
         />
       </svg>
 
