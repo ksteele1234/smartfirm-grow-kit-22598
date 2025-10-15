@@ -7,11 +7,58 @@ import accountingDashboard from "@/assets/accounting-dashboard.webp";
 
 const HeroSection = () => {
   return (
-    <section className="relative pb-0 bg-gradient-deep-teal overflow-hidden">
+    <section className="relative pb-0 overflow-hidden" style={{ background: '#0a2e2e' }}>
+      {/* Layered wave backgrounds */}
+      <div className="absolute inset-0 z-0">
+        {/* Base layer already set with inline style */}
+        
+        {/* Large wave from bottom-left - #134444 */}
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: '#134444',
+            clipPath: 'ellipse(120% 40% at 0% 100%)'
+          }}
+        />
+        
+        {/* Second wave from bottom-right - #1a5555 */}
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: '#1a5555',
+            clipPath: 'ellipse(110% 35% at 100% 100%)'
+          }}
+        />
+        
+        {/* Accent wave from top-right - #14b8a6 */}
+        <div 
+          className="absolute inset-0" 
+          style={{ 
+            background: '#14b8a6',
+            clipPath: 'ellipse(80% 25% at 100% 0%)',
+            opacity: 0.6
+          }}
+        />
+        
+        {/* Orbital circles */}
+        <div 
+          className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full border-2 border-[#5eead4]"
+          style={{ opacity: 0.3 }}
+        />
+        <div 
+          className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full border-2 border-[#99f6e4]"
+          style={{ opacity: 0.3 }}
+        />
+        <div 
+          className="absolute bottom-1/4 left-1/4 w-32 h-32 rounded-full border-2 border-[#5eead4]"
+          style={{ opacity: 0.3 }}
+        />
+      </div>
+      
       {/* Curved bottom edge */}
       <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="hsl(var(--mid-teal-start))"/>
+          <path d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" fill="#2563eb"/>
         </svg>
       </div>
       
@@ -42,13 +89,13 @@ const HeroSection = () => {
           }}>
               {/* Headline */}
               <div className="space-y-4 max-w-2xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] text-white max-w-2xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.8] max-w-2xl bg-gradient-to-r from-white via-[#5eead4] to-[#99f6e4] bg-clip-text text-transparent">
                   Predictable Growth for Accounting Firms Without Wasting Time on Marketing
                 </h1>
                 
                 {/* Subheadline */}
                 <div id="sf-keyword-intro">
-                  <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl font-medium">
+                  <p className="text-lg md:text-xl leading-relaxed max-w-xl font-medium text-white" style={{ opacity: 0.6 }}>
                     SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
                   </p>
                 </div>
@@ -92,7 +139,12 @@ const HeroSection = () => {
               duration: 0.6,
               ease: "easeInOut"
             }}>
-                <Button variant="coral" size="lg" className="group shadow-glow" asChild>
+                <Button 
+                  size="lg" 
+                  className="group bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
+                  asChild
+                  style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+                >
                   <a href="/get-started">
                     Get Your Free Growth Plan
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

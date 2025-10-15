@@ -150,12 +150,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-gradient-deep-teal backdrop-blur-sm border-b border-teal-vibrant/20 sticky top-0 z-50 shadow-glow">
+    <header className="bg-[#0a2e2e]/80 backdrop-blur-sm border-b border-teal-vibrant/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <a href="/" className="flex items-center" style={{ filter: 'drop-shadow(0 0 20px rgba(45, 212, 191, 0.3))' }}>
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
@@ -172,14 +172,14 @@ const Header = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
                 )}>
                   HOME
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
                   <a href="/services" className="flex items-center">
                     SERVICES
                   </a>
@@ -225,7 +225,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
                   <a href="/solutions" className="flex items-center">
                     SOLUTIONS
                   </a>
@@ -271,7 +271,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant data-[state=open]:text-teal-vibrant">
+                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] data-[state=open]:text-[#2dd4bf]">
                   <a href="/industries" className="flex items-center">
                     INDUSTRIES
                   </a>
@@ -304,7 +304,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
                 )}>
                   ABOUT US
                 </NavigationMenuLink>
@@ -312,7 +312,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-teal-vibrant focus:text-teal-vibrant focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium text-white transition-colors hover:text-[#2dd4bf] focus:text-[#2dd4bf] focus:outline-none"
                 )}>
                   CONTACT
                 </NavigationMenuLink>
@@ -321,7 +321,12 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="coral" size="default" asChild>
+            <Button 
+              size="default" 
+              asChild
+              className="bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold"
+              style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+            >
               <a href="/get-started">GET STARTED</a>
             </Button>
           </div>
@@ -341,28 +346,33 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-teal-vibrant/30">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 HOME
               </a>
-              <a href="/services" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/services" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 SERVICES
               </a>
-              <a href="/solutions" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/solutions" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/industries" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 INDUSTRIES
               </a>
-              <a href="/case-studies" className="text-white hover:text-teal-vibrant transition-colors font-medium hidden">
+              <a href="/case-studies" className="text-white hover:text-[#2dd4bf] transition-colors font-medium hidden">
                 CASE STUDIES
               </a>
-              <a href="/about" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/about" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 ABOUT US
               </a>
-              <a href="/contact" className="text-white hover:text-teal-vibrant transition-colors font-medium">
+              <a href="/contact" className="text-white hover:text-[#2dd4bf] transition-colors font-medium">
                 CONTACT
               </a>
-              <Button variant="coral" size="default" className="w-full mt-4" asChild>
+              <Button 
+                size="default" 
+                className="w-full mt-4 bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] hover:from-[#0d9488] hover:to-[#14b8a6] text-white font-semibold" 
+                asChild
+                style={{ boxShadow: '0 0 24px rgba(45, 212, 191, 0.6)' }}
+              >
                 <a href="/get-started">GET STARTED</a>
               </Button>
             </nav>

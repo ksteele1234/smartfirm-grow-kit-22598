@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
-    <section className="py-20 bg-[#7AB2B2]/[0.12]">
+    <section className="py-20 bg-gradient-to-b from-[#2563eb] to-[#3b82f6]">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-12">
-          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">
+          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-white mb-4">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
-          <p className="text-xl md:text-lg sm:text-base text-[#4A5568] leading-relaxed max-w-[800px] mx-auto">
+          <p className="text-xl md:text-lg sm:text-base text-white leading-relaxed max-w-[800px] mx-auto" style={{ opacity: 0.8 }}>
             The foundational marketing infrastructure most firms don't have—or have set up wrong. We build it right, make it work together, and automate it.
           </p>
         </div>
