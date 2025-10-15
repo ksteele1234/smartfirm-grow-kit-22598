@@ -26,7 +26,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-[#91ADC8]/[0.08] border-t border-[#E2E8F0]">
+    <footer className="bg-white border-t border-[#E2E8F0]">
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Main Footer Content */}
         <div className="pt-[60px] pb-10">
@@ -70,19 +70,19 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="flex flex-row gap-3">
-                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Linkedin className="h-5 w-5" />
                 </a>
-                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Youtube className="h-5 w-5" />
                 </a>
-                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-10 h-10 bg-white border border-[#E2E8F0] rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
+                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
