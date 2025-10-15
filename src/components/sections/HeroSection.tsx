@@ -1,92 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroWaveBackground from "@/assets/hero-wave-background.jpg";
 
 const HeroSection = () => {
   return (
     <section 
       className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
-      style={{ background: '#0a1f35' }}
+      style={{ 
+        backgroundImage: `url(${heroWaveBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      {/* Scattered Background Dots */}
-      <svg className="absolute inset-0 w-full h-full z-[1]" viewBox="0 0 1440 700">
-        <circle cx="120" cy="150" r="2" fill="#5eead4" opacity="0.3" />
-        <circle cx="890" cy="220" r="2" fill="#5eead4" opacity="0.4" />
-        <circle cx="340" cy="480" r="2" fill="#4db8a6" opacity="0.3" />
-        <circle cx="1150" cy="380" r="2" fill="#4db8a6" opacity="0.4" />
-        <circle cx="620" cy="570" r="2" fill="#2563a8" opacity="0.3" />
-        <circle cx="280" cy="340" r="2" fill="#5eead4" opacity="0.3" />
-        <circle cx="1050" cy="520" r="2" fill="#4db8a6" opacity="0.3" />
-        <circle cx="450" cy="190" r="2" fill="#5eead4" opacity="0.4" />
-      </svg>
-
-      {/* LEFT-TO-RIGHT FLOWING SHAPES (Light → Dark) */}
-      {/* Shape A - Leftmost (Bright Cyan) */}
-      <svg 
-        className="absolute inset-0 w-full h-full z-[2]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 0,0 L 420,0 C 340,120 340,260 420,380 L 420,700 L 0,700 Z"
-          fill="#7dd3c0"
-          opacity="0.8"
-        />
-      </svg>
-
-      {/* Shape B - Left-Center (Teal) */}
-      <svg 
-        className="absolute inset-0 w-full h-full z-[3]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 180,0 L 780,0 C 700,160 700,320 780,480 L 780,700 L 180,700 Z"
-          fill="#4db8a6"
-          opacity="0.75"
-        />
-      </svg>
-
-      {/* Shape C - Center-Right (Deep Blue) */}
-      <svg 
-        className="absolute inset-0 w-full h-full z-[4]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 600,0 L 1160,0 C 1120,180 1120,360 1160,540 L 1160,700 L 600,700 Z"
-          fill="#2563a8"
-          opacity="0.85"
-        />
-      </svg>
-
-      {/* Shape D - Rightmost (Darkest Navy) */}
-      <svg 
-        className="absolute inset-0 w-full h-full z-[5]"
-        viewBox="0 0 1440 700" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 1000,0 L 1440,0 L 1440,700 L 1000,700 C 1040,520 1040,180 1000,0 Z"
-          fill="#1a3d5c"
-          opacity="1"
-        />
-      </svg>
-
-      {/* Simple Wave Divider at Bottom */}
-      <svg 
-        className="absolute bottom-0 left-0 w-full h-[100px] z-[6]"
-        viewBox="0 0 1440 100" 
-        preserveAspectRatio="none"
-      >
-        <path 
-          d="M 0,50 C 360,20 720,80 1080,50 C 1200,40 1320,30 1440,50 L 1440,100 L 0,100 Z"
-          fill="#2a5a70"
-          opacity="0.4"
-        />
-      </svg>
-
       {/* Orbital Circle System */}
-      <svg 
+      <svg
         className="absolute left-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] z-[6] hidden lg:block"
         viewBox="0 0 400 400"
         style={{ 
