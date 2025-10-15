@@ -10,7 +10,6 @@ import meetingPhoto from "@/assets/meeting-photo.webp";
 import danPhoto from "@/assets/testimonial-dan.webp";
 import joannaPhoto from "@/assets/testimonial-joanna.webp";
 import jennPhoto from "@/assets/testimonial-jenn.webp";
-import womanBlazer from "@/assets/woman-blazer.png";
 import womanPointingBlazer from "@/assets/woman-pointing-blazer.webp";
 
 const GrowthCalculator = () => {
