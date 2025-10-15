@@ -4,49 +4,91 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-[500px] md:min-h-[600px] py-20 md:py-[120px] overflow-hidden">
-      {/* Base Layer - Solid Deep Teal */}
-      <div className="absolute inset-0 bg-[#0a2e2e] z-0" />
+      {/* Base Layer - Lighter Vibrant Teal-Blue */}
+      <div className="absolute inset-0 bg-[#1a4d5c] z-0" />
 
-      {/* Wave Layer 2 - Large wave from bottom-left (#134444) - ~40% height */}
+      {/* Wave Layer 2 - Large wave from bottom-left (gradient #1a5c5c → #2a7575) - ~40% height */}
       <svg 
         className="absolute bottom-0 left-0 w-full h-[40%] z-[1]" 
         preserveAspectRatio="none" 
         viewBox="0 0 1200 400"
       >
+        <defs>
+          <linearGradient id="wave1Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#1a5c5c" />
+            <stop offset="100%" stopColor="#2a7575" />
+          </linearGradient>
+        </defs>
         <path 
           d="M0,400 C300,350 500,320 700,340 C900,360 1100,350 1200,320 L1200,400 Z" 
-          fill="#134444"
+          fill="url(#wave1Gradient)"
         />
       </svg>
 
-      {/* Wave Layer 3 - Mid wave from bottom-right (#1a5555) - ~35% height */}
+      {/* Wave Layer 3 - Mid wave from bottom-right (gradient #2a7a7a → #3d9999) - ~35% height */}
       <svg 
         className="absolute bottom-0 right-0 w-full h-[35%] z-[2]" 
         preserveAspectRatio="none" 
         viewBox="0 0 1200 350"
       >
+        <defs>
+          <linearGradient id="wave2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#2a7a7a" />
+            <stop offset="100%" stopColor="#3d9999" />
+          </linearGradient>
+        </defs>
         <path 
           d="M0,250 C200,280 400,300 600,280 C800,260 1000,240 1200,260 L1200,350 L0,350 Z" 
-          fill="#1a5555"
+          fill="url(#wave2Gradient)"
         />
       </svg>
 
-      {/* Wave Layer 4 - Accent wave from top-right (#14b8a6 at 15% opacity) - ~25% height - Desktop only */}
+      {/* Wave Layer 4 - Accent wave from top-right (gradient #14b8a6 → #2dd4bf at 60% opacity) - ~25% height - Desktop only */}
       <svg 
         className="hidden md:block absolute top-0 right-0 w-full h-[25%] z-[3]" 
         preserveAspectRatio="none" 
         viewBox="0 0 1200 250"
       >
+        <defs>
+          <linearGradient id="wave3Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#14b8a6" />
+            <stop offset="100%" stopColor="#2dd4bf" />
+          </linearGradient>
+        </defs>
         <path 
           d="M1200,0 C900,50 700,80 500,60 C300,40 100,20 0,40 L0,0 Z" 
-          fill="#14b8a6" 
-          fillOpacity="0.15"
+          fill="url(#wave3Gradient)" 
+          fillOpacity="0.6"
         />
       </svg>
 
-      {/* Orbital Circle 1 - Top Right */}
+      {/* Cyan Glow Layer - Luminous edge effect where waves overlap */}
       <svg 
-        className="absolute top-20 right-10 w-32 h-32 z-[2] opacity-20 hidden lg:block" 
+        className="absolute bottom-[35%] left-0 w-full h-[10%] z-[2]" 
+        preserveAspectRatio="none" 
+        viewBox="0 0 1200 100"
+      >
+        <defs>
+          <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#5eead4" stopOpacity="0" />
+            <stop offset="50%" stopColor="#5eead4" stopOpacity="0.4" />
+            <stop offset="100%" stopColor="#5eead4" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="600" cy="50" rx="800" ry="50" fill="url(#glowGradient)" />
+      </svg>
+
+      {/* Radial gradient overlay for overall brightness boost */}
+      <div 
+        className="absolute inset-0 z-[4] pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle at 50% 50%, transparent 0%, rgba(20, 184, 166, 0.1) 100%)'
+        }}
+      />
+
+      {/* Orbital Circle 1 - Top Right (brighter at 40% opacity) */}
+      <svg 
+        className="absolute top-20 right-10 w-32 h-32 z-[2] opacity-40 hidden lg:block" 
         viewBox="0 0 100 100"
       >
         <circle cx="50" cy="50" r="40" stroke="#2dd4bf" strokeWidth="1" fill="none" />
@@ -54,9 +96,9 @@ const HeroSection = () => {
         <circle cx="50" cy="50" r="20" stroke="#2dd4bf" strokeWidth="1" fill="none" />
       </svg>
 
-      {/* Orbital Circle 2 - Bottom Left */}
+      {/* Orbital Circle 2 - Bottom Left (brighter at 40% opacity) */}
       <svg 
-        className="absolute bottom-40 left-10 w-24 h-24 z-[1] opacity-20 hidden lg:block" 
+        className="absolute bottom-40 left-10 w-24 h-24 z-[1] opacity-40 hidden lg:block" 
         viewBox="0 0 100 100"
       >
         <circle cx="50" cy="50" r="35" stroke="#2dd4bf" strokeWidth="1" fill="none" />
