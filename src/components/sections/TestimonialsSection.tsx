@@ -3,7 +3,7 @@ import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import danImage from "@/assets/testimonial-dan.webp";
 import joannaImage from "@/assets/testimonial-joanna.webp";
-import jennImage from "@/assets/testimonial-jenn.webp";
+import jennImage from "@/assets/testimonial-jenn.jpg";
 
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
