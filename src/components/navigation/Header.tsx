@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/ui/optimized-image";
@@ -15,6 +15,17 @@ import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Track scroll position for header effects
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const services = [
     // Main Service Categories
@@ -150,9 +161,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-background-light/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16">
+    <header className={cn(
+      "bg-white sticky top-0 z-50 transition-all duration-200",
+      "h-[72px] border-b",
+      isScrolled 
+        ? "backdrop-blur-lg shadow-[0_2px_12px_rgba(0,0,0,0.08)] border-slate-200" 
+        : "border-slate-200"
+    )}>
+      <div className="container mx-auto px-6 lg:px-12 h-full">
+        <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
@@ -172,14 +189,21 @@ const Header = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   HOME
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className={cn(
+                  "h-10 w-max bg-transparent px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
+                  "data-[state=open]:text-[#14b8a6]"
+                )}>
                   <a href="/services" className="flex items-center">
                     SERVICES
                   </a>
@@ -225,7 +249,12 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className={cn(
+                  "h-10 w-max bg-transparent px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
+                  "data-[state=open]:text-[#14b8a6]"
+                )}>
                   <a href="/solutions" className="flex items-center">
                     SOLUTIONS
                   </a>
@@ -271,7 +300,12 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="h-10 w-max bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary data-[state=open]:text-primary">
+                <NavigationMenuTrigger className={cn(
+                  "h-10 w-max bg-transparent px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
+                  "data-[state=open]:text-[#14b8a6]"
+                )}>
                   <a href="/industries" className="flex items-center">
                     INDUSTRIES
                   </a>
@@ -304,7 +338,9 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   ABOUT US
                 </NavigationMenuLink>
@@ -312,7 +348,9 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
+                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
                 )}>
                   CONTACT
                 </NavigationMenuLink>
@@ -321,7 +359,12 @@ const Header = () => {
           </NavigationMenu>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="dark-teal" size="default" asChild>
+            <Button 
+              variant="coral" 
+              size="default" 
+              asChild
+              className="uppercase text-sm font-bold tracking-wide px-6 py-2.5"
+            >
               <a href="/get-started">GET STARTED</a>
             </Button>
           </div>
@@ -341,28 +384,30 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 HOME
               </a>
-              <a href="/services" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/services" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 SERVICES
               </a>
-              <a href="/solutions" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/solutions" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/industries" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 INDUSTRIES
               </a>
-              <a href="/case-studies" className="text-foreground hover:text-primary transition-colors font-medium hidden">
-                CASE STUDIES
-              </a>
-              <a href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/about" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 ABOUT US
               </a>
-              <a href="/contact" className="text-foreground hover:text-primary transition-colors font-medium">
+              <a href="/contact" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 CONTACT
               </a>
-              <Button variant="dark-teal" size="default" className="w-full mt-4" asChild>
+              <Button 
+                variant="coral" 
+                size="default" 
+                className="w-full mt-4 uppercase text-sm font-bold tracking-wide" 
+                asChild
+              >
                 <a href="/get-started">GET STARTED</a>
               </Button>
             </nav>
