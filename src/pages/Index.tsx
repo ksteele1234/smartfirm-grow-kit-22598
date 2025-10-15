@@ -16,26 +16,9 @@ import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarket
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { CurvedSeparator } from "@/components/ui/curved-separator";
 import { ArrowRight, Play } from "lucide-react";
-import TealColorPreview from "@/components/TealColorPreview";
-import { useState } from "react";
 
 const Index = () => {
-  const [showColorPreview, setShowColorPreview] = useState(true);
-
   return (
-    <>
-      {showColorPreview && <TealColorPreview onClose={() => setShowColorPreview(false)} />}
-      
-      {/* Floating preview trigger button */}
-      {!showColorPreview && (
-        <button
-          onClick={() => setShowColorPreview(true)}
-          className="fixed bottom-6 right-6 z-40 px-4 py-2 bg-gray-900 text-white rounded-lg font-semibold shadow-lg hover:bg-gray-800 transition-all text-sm"
-        >
-          🎨 View Color Preview
-        </button>
-      )}
-    
     <div className="min-h-screen bg-background">
       <SEO 
         title="Marketing Automation for Accounting Firms | SmartFirm"
@@ -94,7 +77,6 @@ const Index = () => {
       {/* Section 9: Footer - Background C (Soft Blue) */}
       <Footer />
     </div>
-    </>
   );
 };
 
