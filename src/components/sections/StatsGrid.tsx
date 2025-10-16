@@ -1,11 +1,11 @@
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 
 const StatsGrid = () => {
-  // Counter animations (trigger on scroll)
-  const stat1 = useCounterAnimation(73, { isPercentage: true, duration: 2000 });
-  const stat2 = useCounterAnimation(40, { isPercentage: true, duration: 2000 });
-  const stat3 = useCounterAnimation(14, { duration: 2000 });
-  const stat4 = useCounterAnimation(2, { duration: 2000 });
+  // Counter animations (trigger on load or scroll)
+  const stat1 = useCounterAnimation(73, { isPercentage: true, duration: 2000, triggerOnLoad: true });
+  const stat2 = useCounterAnimation(40, { isPercentage: true, duration: 2000, triggerOnLoad: true });
+  const stat3 = useCounterAnimation(14, { duration: 2000, triggerOnLoad: true });
+  const stat4 = useCounterAnimation(2, { duration: 2000, triggerOnLoad: true });
 
   const stats = [
     {
