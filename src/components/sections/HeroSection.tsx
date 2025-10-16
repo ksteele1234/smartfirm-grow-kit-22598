@@ -90,24 +90,59 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Floating Dots Tech Overlay */}
-      <div className="absolute inset-0 z-[1] pointer-events-none hidden lg:block">
-        {/* Bottom-right cluster (more visible in dark area) */}
-        <div className="absolute right-[15%] bottom-[25%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-20" style={{ boxShadow: '0 0 4px rgba(20, 184, 166, 0.3)' }} />
-        <div className="absolute right-[22%] bottom-[32%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-15" />
-        <div className="absolute right-[18%] bottom-[38%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-25" style={{ boxShadow: '0 0 4px rgba(20, 184, 166, 0.3)' }} />
-        <div className="absolute right-[10%] bottom-[28%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-18" />
+      {/* Digital Network Overlay - Dots & Connection Lines */}
+      <svg 
+        className="absolute inset-0 w-full h-full z-[1] pointer-events-none hidden lg:block"
+        viewBox="0 0 1200 700"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        {/* Connection Lines - 10 lines connecting nearby dots */}
+        <line x1="120" y1="180" x2="280" y2="210" stroke="#ffffff" strokeWidth="1" opacity="0.18" />
+        <line x1="280" y1="210" x2="450" y2="160" stroke="#ffffff" strokeWidth="1" opacity="0.15" />
+        <line x1="450" y1="160" x2="620" y2="140" stroke="#ffffff" strokeWidth="1" opacity="0.17" />
+        <line x1="850" y1="250" x2="980" y2="320" stroke="#ffffff" strokeWidth="1" opacity="0.16" />
+        <line x1="980" y1="320" x2="1050" y2="450" stroke="#ffffff" strokeWidth="1" opacity="0.19" />
+        <line x1="180" y1="420" x2="340" y2="480" stroke="#ffffff" strokeWidth="1" opacity="0.15" />
+        <line x1="550" y1="500" x2="720" y2="520" stroke="#ffffff" strokeWidth="1" opacity="0.18" />
+        <line x1="720" y1="520" x2="890" y2="580" stroke="#ffffff" strokeWidth="1" opacity="0.17" />
+        <line x1="350" y1="90" x2="520" y2="110" stroke="#ffffff" strokeWidth="1" opacity="0.16" />
+        <line x1="780" y1="180" x2="920" y2="140" stroke="#ffffff" strokeWidth="1" opacity="0.20" />
         
-        {/* Top-right cluster */}
-        <div className="absolute right-[12%] top-[15%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-20" />
-        <div className="absolute right-[20%] top-[22%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-15" style={{ boxShadow: '0 0 4px rgba(94, 234, 212, 0.3)' }} />
-        <div className="absolute right-[8%] top-[28%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-22" />
+        {/* Digital Dots - 28 white dots scattered throughout */}
+        {/* Top section */}
+        <circle cx="120" cy="180" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="280" cy="210" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="350" cy="90" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="450" cy="160" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="520" cy="110" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="620" cy="140" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="780" cy="180" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="850" cy="250" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="920" cy="140" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="1050" cy="200" r="2" fill="#ffffff" opacity="0.4" />
         
-        {/* Left side cluster */}
-        <div className="absolute left-[8%] top-[35%] w-1 h-1 rounded-full bg-[#5eead4] opacity-15" />
-        <div className="absolute left-[12%] top-[45%] w-1.5 h-1.5 rounded-full bg-[#14b8a6] opacity-18" />
-        <div className="absolute left-[15%] bottom-[40%] w-1 h-1 rounded-full bg-[#5eead4] opacity-20" style={{ boxShadow: '0 0 4px rgba(94, 234, 212, 0.3)' }} />
-      </div>
+        {/* Middle section */}
+        <circle cx="80" cy="320" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="180" cy="420" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="340" cy="480" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="480" cy="380" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="650" cy="350" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="980" cy="320" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="1120" cy="380" r="2" fill="#ffffff" opacity="0.4" />
+        
+        {/* Bottom section */}
+        <circle cx="150" cy="550" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="280" cy="610" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="420" cy="580" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="550" cy="500" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="680" cy="630" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="720" cy="520" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="890" cy="580" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="950" cy="640" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="1050" cy="450" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="1100" cy="560" r="2" fill="#ffffff" opacity="0.4" />
+        <circle cx="1150" cy="620" r="2" fill="#ffffff" opacity="0.4" />
+      </svg>
 
       {/* Orbital Circle System */}
       <svg
