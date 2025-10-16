@@ -26,163 +26,155 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-white border-t border-[#E2E8F0]">
+    <footer className="bg-[#0a2e2e] pt-20 pb-8">
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Main Footer Content */}
-        <div className="pt-[60px] pb-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[35%_20%_20%_25%] gap-6 md:gap-8 lg:gap-12">
-            {/* Company Info Column */}
-            <div>
-              <div className="mb-5">
-                <a href="/" className="flex items-center mb-5">
-                  <OptimizedImage 
-                    src={smartFirmLogo} 
-                    alt="SmartFirm - Marketing and Automation for Accounting Firms"
-                    width={300}
-                    height={64}
-                    className="h-16 w-auto max-w-[160px]"
-                  />
-                </a>
-                <p className="text-[15px] font-normal text-[#666666] leading-relaxed mb-6">
-                  Marketing and automation solutions designed specifically for ambitious accounting firms seeking consistent growth and operational excellence.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+          {/* Column 1 - Logo & About */}
+          <div>
+            <a href="/" className="inline-block mb-5">
+              <OptimizedImage 
+                src={smartFirmLogo} 
+                alt="SmartFirm - Marketing and Automation for Accounting Firms"
+                width={300}
+                height={64}
+                className="h-16 w-auto max-w-[160px]"
+              />
+            </a>
+            <p className="text-sm text-white/70 leading-[1.6]">
+              Marketing and automation solutions designed specifically for ambitious accounting firms seeking consistent growth and operational excellence.
+            </p>
+          </div>
 
-              {/* Contact Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center gap-[10px]">
-                  <Phone className="h-[18px] w-[18px] text-[#0F4C5C]" />
-                  <a href="tel:+15416583789" className="text-[15px] font-medium text-[#333333] hover:text-[#0F4C5C] transition-colors">
-                    (541) 658-3789
+          {/* Column 2 - Services */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service.slug}>
+                  <a 
+                    href={`/services/${service.slug}`}
+                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  >
+                    {service.name}
                   </a>
-                </div>
-                <div className="flex items-center gap-[10px]">
-                  <Mail className="h-[18px] w-[18px] text-[#0F4C5C]" />
-                  <a href="mailto:contact@smartfirm.io" className="text-[15px] font-medium text-[#333333] hover:text-[#0F4C5C] transition-colors">
-                    contact@smartfirm.io
-                  </a>
-                </div>
-                <div className="flex items-center gap-[10px]">
-                  <MapPin className="h-[18px] w-[18px] text-[#0F4C5C]" />
-                  <span className="text-[15px] font-medium text-[#333333]">Eugene, OR</span>
-                </div>
-              </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              {/* Social Links */}
-              <div className="flex flex-row gap-3">
-                <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
-                  <Facebook className="h-5 w-5" />
+          {/* Column 3 - Solutions & Resources */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Solutions</h3>
+            <ul className="space-y-3 mb-8">
+              {solutions.map((solution) => (
+                <li key={solution.slug}>
+                  <a 
+                    href={`/solutions/${solution.slug}`}
+                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  >
+                    {solution.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Resources</h3>
+            <ul className="space-y-3">
+              {resources.map((resource) => (
+                <li key={resource.slug}>
+                  <a 
+                    href={resource.slug}
+                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  >
+                    {resource.name}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a 
+                  href="/quick-start-marketing-for-cpa-firms" 
+                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                >
+                  Quick Start Package
                 </a>
-                <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
-                  <Twitter className="h-5 w-5" />
+              </li>
+              <li>
+                <a 
+                  href="/about" 
+                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                >
+                  About Us
                 </a>
-                <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
-                  <Linkedin className="h-5 w-5" />
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 - Contact */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-2">
+                <Phone className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
+                <a href="tel:+15416583789" className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200">
+                  (541) 658-3789
                 </a>
-                <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
-                  <Youtube className="h-5 w-5" />
+              </div>
+              <div className="flex items-start gap-2">
+                <Mail className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
+                <a href="mailto:contact@smartfirm.io" className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200">
+                  contact@smartfirm.io
                 </a>
-                <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-10 h-10 bg-[#91ADC8]/15 border border-[#91ADC8]/30 rounded-lg flex items-center justify-center text-[#666666] hover:border-[#0F4C5C] hover:text-[#0F4C5C] transition-all duration-300">
-                  <Instagram className="h-5 w-5" />
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-white/70">Eugene, OR</span>
+              </div>
+              <div>
+                <a 
+                  href="/contact" 
+                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                >
+                  Contact Us
                 </a>
               </div>
             </div>
 
-            {/* Services Column */}
-            <div>
-              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Services</h3>
-              <p className="text-[13px] font-medium text-[#666666] italic mb-3">What We Do</p>
-              <ul className="space-y-[10px]">
-                {services.map((service) => (
-                  <li key={service.slug}>
-                    <a 
-                      href={`/services/${service.slug}`}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                    >
-                      {service.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Solutions Column */}
-            <div>
-              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Solutions</h3>
-              <p className="text-[13px] font-medium text-[#666666] italic mb-3">Outcomes You Get</p>
-              <ul className="space-y-[10px]">
-                {solutions.map((solution) => (
-                  <li key={solution.slug}>
-                    <a 
-                      href={`/solutions/${solution.slug}`}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                    >
-                      {solution.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources Column */}
-            <div>
-              <h3 className="text-[16px] font-bold text-[#334260] mb-4">Resources</h3>
-              <ul className="space-y-[10px]">
-                {resources.map((resource) => (
-                  <li key={resource.slug}>
-                    <a 
-                      href={resource.slug}
-                      className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                    >
-                      {resource.name}
-                    </a>
-                  </li>
-                ))}
-                <li>
-                  <a 
-                    href="/quick-start-marketing-for-cpa-firms" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                  >
-                    Quick Start Package
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="/about" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="/contact" 
-                    className="text-[15px] font-normal text-[#666666] leading-relaxed hover:text-[#0F4C5C] hover:underline transition-colors duration-200"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
+            {/* Social Links */}
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+                <Youtube className="h-4 w-4" />
+              </a>
+              <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+                <Instagram className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="pt-6 mt-10 border-t border-[#E2E8F0]">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-0">
-            <div className="text-[14px] font-normal text-[#666666]">
+        {/* Bottom Bar */}
+        <div className="pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
+            <div className="text-xs text-white/50">
               © 2025 SmartFirm.io. All rights reserved.
             </div>
-            <div className="flex gap-6 text-[14px]">
-              <a href="/privacy" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
+            <div className="flex gap-6 text-xs text-white/50">
+              <a href="/privacy" className="hover:text-[#2dd4bf] transition-colors duration-200">
                 Privacy Policy
               </a>
-              <span className="text-[#666666]">|</span>
-              <a href="/terms" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
+              <a href="/terms" className="hover:text-[#2dd4bf] transition-colors duration-200">
                 Terms of Service
               </a>
-              <span className="text-[#666666]">|</span>
-              <a href="/cookies" className="text-[#666666] hover:text-[#0F4C5C] transition-colors">
+              <a href="/cookies" className="hover:text-[#2dd4bf] transition-colors duration-200">
                 Cookie Policy
               </a>
             </div>
