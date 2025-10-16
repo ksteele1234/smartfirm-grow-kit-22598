@@ -6,7 +6,7 @@ const ReadyToTransformSection = () => {
   return (
     <section className="relative py-20 bg-gradient-to-br from-[#0a2e2e] to-[#134444] overflow-hidden">
       {/* Orbital Circle System - 2 circles rotating opposite directions */}
-      <svg className="absolute right-[10%] top-[15%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-15">
+      <svg className="absolute right-[10%] top-[15%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-50">
         {/* Circle 1: Clockwise rotation */}
         <g style={{ transformOrigin: 'center' }} className="animate-rotate-clockwise">
           <circle cx="200" cy="200" r="120" stroke="#fb7185" strokeWidth="2" fill="none" />

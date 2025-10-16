@@ -341,7 +341,7 @@ const QuickStart = () => {
         {/* Pricing Section */}
         <section id="pricing" className="relative py-[120px] md:py-[100px] bg-gradient-to-br from-[#0a2e2e] to-[#134444] overflow-hidden">
           {/* Orbital Circle System - 2 circles rotating opposite directions */}
-          <svg className="absolute right-[15%] top-[20%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-15">
+          <svg className="absolute right-[15%] top-[20%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-50">
             {/* Circle 1: Clockwise rotation */}
             <g style={{ transformOrigin: 'center' }} className="animate-rotate-clockwise">
               <circle cx="200" cy="200" r="120" stroke="#fb7185" strokeWidth="2" fill="none" />
@@ -378,17 +378,39 @@ const QuickStart = () => {
             
             <div className="max-w-[500px] mx-auto">
               <div className="relative bg-white/[0.08] backdrop-blur-[20px] border border-white/15 rounded-[24px] p-12 shadow-[0_0_48px_rgba(45,212,191,0.3),0_12px_48px_rgba(0,0,0,0.4)]">
+                {/* Early Adopter Badge */}
+                <div className="inline-block bg-[#FAFDD6] text-[#405D5D] text-xs font-semibold px-3 py-1.5 border border-[#0F4C5C] rounded mb-6">
+                  Early Adopter Pricing
+                </div>
+
                 {/* Badge - Gold gradient */}
-                <div className="inline-block bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] px-4 py-2 rounded-xl text-sm font-bold text-white mb-6">
+                <div className="inline-block bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] px-4 py-2 rounded-xl text-sm font-bold text-white mb-6 ml-2">
                   Start Here
                 </div>
                 
-                {/* Price Display - $999/month PROMINENTLY */}
+                {/* Price Display */}
                 <div className="mb-8">
-                  <div className="text-7xl md:text-8xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-2 animate-subtle-pulse">
-                    $999
+                  {/* Setup Fee */}
+                  <div className="mb-4">
+                    <div className="text-sm text-white/60 line-through mb-1">
+                      Regular: $9,999
+                    </div>
+                    <div className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                      $6,999
+                    </div>
+                    <div className="text-base text-white/70">One-time setup</div>
                   </div>
-                  <div className="text-lg text-white/70">per month</div>
+
+                  {/* Plus Sign */}
+                  <div className="text-3xl font-bold text-white/50 text-center my-3">+</div>
+
+                  {/* Monthly Fee */}
+                  <div>
+                    <div className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1 animate-subtle-pulse">
+                      $999
+                    </div>
+                    <div className="text-base text-white/70">per month</div>
+                  </div>
                 </div>
                 
                 {/* Features List with Teal Checkmarks + Glow */}
