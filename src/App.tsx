@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Services from "./pages/Services";
@@ -78,7 +79,8 @@ const App = () => (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <Toaster />
       <BrowserRouter>
-      <Routes>
+        <ScrollToTop />
+        <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/services" element={<Services />} />
@@ -163,8 +165,8 @@ const App = () => (
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   </QueryClientProvider>
 );
