@@ -2,10 +2,9 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ReadyToTransformSection from "@/components/sections/ReadyToTransformSection";
-import SkepticismCallout from "@/components/sections/SkepticismCallout";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
-import WhatMakesUsDifferent from "@/components/sections/WhatMakesUsDifferent";
+import WhySmartFirmIsDifferent from "@/components/sections/WhySmartFirmIsDifferent";
 import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
 import FinalCTASection from "@/components/sections/FinalCTASection";
 import HomepageFAQSection from "@/components/sections/HomepageFAQSection";
@@ -53,13 +52,12 @@ const Index = () => {
 
         {/* Section 3: Unified Credibility Section - Background A (White) */}
         <section className="py-20 bg-white">
-          <SkepticismCallout />
           <StatsGrid />
           <FounderStory />
         </section>
 
-        {/* Section 4: What Makes Us Different - Background C (Soft Blue) */}
-        <WhatMakesUsDifferent />
+        {/* Section 4: Why SmartFirm is Different - Background A (White) */}
+        <WhySmartFirmIsDifferent />
 
         {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
         <ReadyToTransformSection />
