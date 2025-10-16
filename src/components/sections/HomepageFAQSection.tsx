@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-import { MessageSquare, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const HomepageFAQSection = () => {
@@ -118,33 +116,6 @@ const HomepageFAQSection = () => {
           })}
         </div>
 
-        {/* Bottom CTA Section */}
-        <div className="mt-16 bg-[#F8F9FA] border-2 border-[#0F4C5C] rounded-xl p-8 md:p-12 text-center">
-          <div className="w-20 h-20 bg-[#0F4C5C]/10 rounded-full flex items-center justify-center mx-auto mb-5">
-            <MessageSquare className="h-12 w-12 text-[#0F4C5C]" />
-          </div>
-          
-          <h3 className="text-2xl font-bold text-[#243b55] mb-3">
-            Still Have Questions?
-          </h3>
-          
-          <p className="text-[17px] font-normal text-[#1e293b] leading-relaxed mb-6 max-w-[600px] mx-auto">
-            Book a free 30-minute strategy call. We'll answer your questions and help you determine if the Quick Start Package is right for your firm.
-          </p>
-          
-          <Button
-            asChild
-            className="bg-[#0F4C5C] hover:bg-[#405D5D] text-white text-lg font-bold py-4 px-8 rounded-lg shadow-[0_4px_12px_rgba(15,76,92,0.25)] hover:-translate-y-0.5 transition-all"
-          >
-            <Link to="/get-started">
-              Book Your Free Strategy Call →
-            </Link>
-          </Button>
-          
-          <p className="text-sm text-[#666666] mt-3">
-            No pitch. No pressure. Just honest answers.
-          </p>
-        </div>
       </div>
     </section>
   );
