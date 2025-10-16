@@ -21,7 +21,7 @@ const FirmComparisonSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-[100px] bg-white">
+    <section className="py-20 lg:py-[100px] bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
