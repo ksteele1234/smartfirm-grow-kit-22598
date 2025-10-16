@@ -29,11 +29,11 @@ const HeroSection = () => {
     >
       {/* Orbital Circle System */}
       <svg
-        className="absolute right-[12%] top-[45%] w-[400px] h-[400px] z-[1] hidden lg:block"
+        className="absolute right-[10%] top-[35%] w-[400px] h-[400px] z-[2] hidden lg:block"
         viewBox="0 0 400 400"
         style={{ 
-          filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.4))',
-          opacity: 0.25
+          filter: 'drop-shadow(0 0 8px rgba(45, 212, 191, 0.4))',
+          opacity: 0.5
         }}
       >
         {/* Circle 1 (r=100) - Rotates Clockwise with Dots */}
