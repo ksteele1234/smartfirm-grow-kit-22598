@@ -47,14 +47,14 @@ const Index = () => {
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 
-        {/* Section 2: Complete Marketing Solutions - Background B (Soft Teal) */}
-        <CompleteMarketingSolutions />
-
-        {/* Section 3: Unified Credibility Section - Background A (White) */}
+        {/* Section 2: Unified Credibility Section - Background A (White) */}
         <section className="py-20 bg-white">
           <StatsGrid />
           <FounderStory />
         </section>
+
+        {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
+        <CompleteMarketingSolutions />
 
         {/* Section 4: Why SmartFirm is Different - Background A (White) */}
         <WhySmartFirmIsDifferent />
