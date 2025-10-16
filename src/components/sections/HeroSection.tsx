@@ -90,162 +90,6 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Ambient Background Dots - Strategic Placement */}
-      <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none hidden lg:block">
-        {/* Dot 1 - Outline */}
-        <div 
-          className="absolute"
-          style={{ left: '20%', top: '15%' }}
-        >
-          <div 
-            className="rounded-full border border-white"
-            style={{ 
-              width: '5px', 
-              height: '5px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 2 - Solid */}
-        <div 
-          className="absolute"
-          style={{ left: '45%', top: '12%' }}
-        >
-          <div 
-            className="rounded-full bg-white"
-            style={{ 
-              width: '3px', 
-              height: '3px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 3 - Outline */}
-        <div 
-          className="absolute"
-          style={{ right: '15%', top: '18%' }}
-        >
-          <div 
-            className="rounded-full border border-white"
-            style={{ 
-              width: '5px', 
-              height: '5px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 4 - Solid */}
-        <div 
-          className="absolute"
-          style={{ left: '8%', top: '45%' }}
-        >
-          <div 
-            className="rounded-full bg-white"
-            style={{ 
-              width: '3px', 
-              height: '3px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 5 - Outline */}
-        <div 
-          className="absolute"
-          style={{ left: '65%', top: '50%' }}
-        >
-          <div 
-            className="rounded-full border border-white"
-            style={{ 
-              width: '5px', 
-              height: '5px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 6 - Solid */}
-        <div 
-          className="absolute"
-          style={{ right: '10%', top: '55%' }}
-        >
-          <div 
-            className="rounded-full bg-white"
-            style={{ 
-              width: '3px', 
-              height: '3px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 7 - Outline */}
-        <div 
-          className="absolute"
-          style={{ left: '35%', top: '75%' }}
-        >
-          <div 
-            className="rounded-full border border-white"
-            style={{ 
-              width: '5px', 
-              height: '5px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 8 - Solid */}
-        <div 
-          className="absolute"
-          style={{ left: '55%', top: '80%' }}
-        >
-          <div 
-            className="rounded-full bg-white"
-            style={{ 
-              width: '3px', 
-              height: '3px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Dot 9 - Outline */}
-        <div 
-          className="absolute"
-          style={{ left: '75%', top: '85%' }}
-        >
-          <div 
-            className="rounded-full border border-white"
-            style={{ 
-              width: '5px', 
-              height: '5px',
-              opacity: 0.3
-            }}
-          />
-        </div>
-
-        {/* Connection Lines */}
-        <svg 
-          className="absolute inset-0 w-full h-full"
-          style={{ opacity: 0.15 }}
-        >
-          {/* LINE 1: Dot 2 (45%, 12%) → Dot 5 (65%, 50%) */}
-          <line x1="45%" y1="12%" x2="65%" y2="50%" stroke="white" strokeWidth="1" />
-          
-          {/* LINE 2: Dot 4 (8%, 45%) → Dot 5 (65%, 50%) */}
-          <line x1="8%" y1="45%" x2="65%" y2="50%" stroke="white" strokeWidth="1" />
-          
-          {/* LINE 3: Dot 5 (65%, 50%) → Dot 6 (90%, 55%) - calculated from right:10% */}
-          <line x1="65%" y1="50%" x2="90%" y2="55%" stroke="white" strokeWidth="1" />
-          
-          {/* LINE 4: Dot 7 (35%, 75%) → Dot 8 (55%, 80%) */}
-          <line x1="35%" y1="75%" x2="55%" y2="80%" stroke="white" strokeWidth="1" />
-        </svg>
-      </div>
-
       {/* Orbital Circle System */}
       <svg
         className="absolute right-[10%] top-[35%] w-[400px] h-[400px] z-[2] hidden lg:block"
@@ -347,7 +191,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up" 
               style={{ animationDelay: '0s' }}
             >
-              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   147
                 </p>
@@ -361,7 +205,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8" 
               style={{ animationDelay: '1s' }}
             >
-              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   94%
                 </p>
@@ -375,7 +219,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-2" 
               style={{ animationDelay: '2s' }}
             >
-              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   $4.2K
                 </p>
@@ -389,7 +233,7 @@ const HeroSection = () => {
               className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4" 
               style={{ animationDelay: '1.5s' }}
             >
-              <div className="stat-card backdrop-blur-[10px] rounded-xl p-4 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.25)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
+              <div className="stat-card backdrop-blur-[10px] rounded-xl p-4 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.25)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   340%
                 </p>
