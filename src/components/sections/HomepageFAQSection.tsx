@@ -60,7 +60,7 @@ const HomepageFAQSection = () => {
   ];
 
   return (
-    <section className="py-[100px] md:py-[80px] bg-white">
+    <section className="py-[100px] md:py-[80px] bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">

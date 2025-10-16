@@ -85,7 +85,7 @@ const Index = () => {
         <HomepageFAQSection />
 
         {/* Wave 6: FAQ → Final CTA (white → blue) */}
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" id="wave-6" />
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" id="wave-6" />
 
         {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
         <FinalCTASection />
