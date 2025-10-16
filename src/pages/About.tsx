@@ -66,7 +66,7 @@ const About = () => {
     {
       name: "Brian Hellewell",
       title: "Technology Transformation Leader",
-      bio: "CPA and former SpaceX product manager. Brian modernizes firms with secure, scalable systems that improve efficiency, compliance, and client experience. He brings 20+ years in Accounting, IT strategy, financial systems, and business optimization.",
+      bio: "Former SpaceX product manager. Brian modernizes firms with secure, scalable systems that improve efficiency, compliance, and client experience. He brings 20+ years in Accounting, IT strategy, financial systems, and business optimization.",
       image: brianHellewellImage,
       linkedin: "https://www.linkedin.com/in/brian-hellewell/"
     },

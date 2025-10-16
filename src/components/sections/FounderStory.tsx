@@ -13,12 +13,12 @@ const FounderStory = () => {
   const founders = [
     {
       name: "Katie Steele",
-      title: "Founder & CEO, CPA",
+      title: "Founder & CEO",
       image: katieSteeleImage,
     },
     {
       name: "Brian Hellewell",
-      title: "Technology Transformation Leader, CPA",
+      title: "Technology Transformation Leader",
       image: brianHellewellImage,
     },
   ];
@@ -48,7 +48,7 @@ const FounderStory = () => {
                 lineHeight: '1.7',
               }}
             >
-              SmartFirm was founded by Katie Steele, CPA, and Brian Hellewell, who brings 20+ years of experience in IT strategy, financial systems, and business optimization. Katie has spent over two decades transforming businesses—from turning around struggling hospitality brands to implementing enterprise-scale systems. Brian, a CPA and former SpaceX product manager, specializes in modernizing accounting firms with secure, scalable technology that integrates seamlessly with accounting tools.
+              SmartFirm was founded by Katie Steele and Brian Hellewell, who brings 20+ years of experience in IT strategy, financial systems, and business optimization. Katie has spent over two decades transforming businesses—from turning around struggling hospitality brands to implementing enterprise-scale systems. Brian, a former SpaceX product manager, specializes in modernizing accounting firms with secure, scalable technology that integrates seamlessly with accounting tools.
             </p>
             
             <p
