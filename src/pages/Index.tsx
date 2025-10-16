@@ -65,11 +65,11 @@ const Index = () => {
         {/* Section 6: Firm Comparison - Background A (White) */}
         <FirmComparisonSection />
 
-        {/* Section 7: Final CTA - Exception (Primary Blue Gradient) */}
-        <FinalCTASection />
-
-        {/* Section 8: FAQ - Background B (Soft Teal) */}
+        {/* Section 7: FAQ - Background B (Soft Teal) */}
         <HomepageFAQSection />
+
+        {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
+        <FinalCTASection />
       </main>
       
       {/* Section 9: Footer - Background C (Soft Blue) */}
