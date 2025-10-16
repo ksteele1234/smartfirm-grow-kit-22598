@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
-    <section className="relative py-20 md:py-[100px] bg-gradient-to-b from-[#243b55] to-[#4a7ba7]">
+    <section className="relative pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-gradient-to-b from-[#243b55] to-[#4a7ba7]">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Heading */}
         <div className="text-center mb-16">

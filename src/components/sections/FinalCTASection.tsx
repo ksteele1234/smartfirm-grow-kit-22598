@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const FinalCTASection = () => {
   return (
-    <section className="relative pt-20 md:pt-[100px] lg:pt-[120px] pb-20 md:pb-[100px] lg:pb-[120px] px-6 bg-gradient-to-b from-[#243b55] to-[#4a7ba7] overflow-hidden">
+    <section className="relative pt-2.5 pb-2.5 md:pt-5 md:pb-5 px-6 bg-gradient-to-b from-[#243b55] to-[#4a7ba7] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 

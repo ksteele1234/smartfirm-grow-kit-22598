@@ -47,7 +47,7 @@ const WhySmartFirmIsDifferent = () => {
   ];
 
   return (
-    <section className="py-20 md:py-[100px] bg-white">
+    <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white">
       <div className="container mx-auto px-6 max-w-[1200px]">
         
         {/* Section Header */}
