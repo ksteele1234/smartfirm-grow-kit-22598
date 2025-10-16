@@ -12,6 +12,10 @@ const styles = `
     from { transform: rotate(0deg); }
     to { transform: rotate(-360deg); }
   }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
   @keyframes gentlePulse {
     0%, 100% { 
       transform: scale(1); 
@@ -38,6 +42,9 @@ const styles = `
   }
   
   @media (prefers-reduced-motion: no-preference) {
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
     .animate-gentle-pulse {
       animation: gentlePulse 2s ease-in-out infinite;
     }
