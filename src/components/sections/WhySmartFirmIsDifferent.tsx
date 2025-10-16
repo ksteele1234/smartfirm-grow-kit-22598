@@ -1,6 +1,11 @@
 import { Building2, Settings, Target, Calendar, TrendingUp, Users, CheckCircle } from "lucide-react";
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeInUpVariants } from '@/lib/animationVariants';
 
 const WhySmartFirmIsDifferent = () => {
+  const heading = useScrollAnimation();
+  
   const differentiators = [
     {
       icon: Building2,
@@ -51,23 +56,34 @@ const WhySmartFirmIsDifferent = () => {
       <div className="container mx-auto px-6 max-w-[1200px]">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          ref={heading.ref}
+          initial="hidden"
+          animate={heading.isInView ? "visible" : "hidden"}
+          variants={fadeInUpVariants}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
             Why SmartFirm is Different
           </h2>
           <p className="text-xl text-[#475569] max-w-[700px] mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
-        </div>
+        </motion.div>
 
         {/* 6-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {differentiators.map((item, index) => {
             const Icon = item.icon;
+            const delay = Math.min(index * 0.1, 0.4);
             return (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white border border-[#e2e8f0] rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(20,184,166,0.08)]"
+                initial="hidden"
+                animate={heading.isInView ? "visible" : "hidden"}
+                variants={fadeInUpVariants}
+                transition={{ delay }}
+                className="bg-white border border-[#e2e8f0] rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(20,184,166,0.15)]"
               >
                 {/* Icon */}
                 <Icon 
@@ -93,7 +109,7 @@ const WhySmartFirmIsDifferent = () => {
                     {item.keyBenefit}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

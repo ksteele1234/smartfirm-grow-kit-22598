@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
+import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -97,6 +98,12 @@ const styles = `
 `;
 
 const HeroSection = () => {
+  // Counter animations (trigger on page load)
+  const leads = useCounterAnimation(147, { triggerOnLoad: true, duration: 2000 });
+  const retention = useCounterAnimation(94, { triggerOnLoad: true, duration: 2000, isPercentage: true });
+  const avgDeal = useCounterAnimation(4.2, { triggerOnLoad: true, duration: 2000, isDollar: true, decimals: 1 });
+  const roi = useCounterAnimation(340, { triggerOnLoad: true, duration: 2000, isPercentage: true });
+
   return (
     <>
       <style>{styles}</style>
@@ -228,7 +235,7 @@ const HeroSection = () => {
             >
               <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
-                  147
+                  {leads.count}
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">New Leads</p>
                 <p className="text-xs text-[#2dd4bf]">+32% this month</p>
@@ -242,7 +249,7 @@ const HeroSection = () => {
             >
               <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
-                  94%
+                  {retention.count}
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">Client Retention</p>
                 <p className="text-xs text-[#2dd4bf]">+8% improvement</p>
@@ -256,7 +263,7 @@ const HeroSection = () => {
             >
               <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
-                  $4.2K
+                  {avgDeal.count}
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">Avg Deal Value</p>
                 <p className="text-xs text-[#2dd4bf]">Per new client</p>
@@ -270,7 +277,7 @@ const HeroSection = () => {
             >
               <div className="stat-card backdrop-blur-[10px] rounded-xl p-4 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.25)]" style={{ background: 'rgba(255, 255, 255, 0.35)' }}>
                 <p className="stat-number text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
-                  340%
+                  {roi.count}
                 </p>
                 <p className="text-xs text-white/70 font-medium">ROI</p>
               </div>

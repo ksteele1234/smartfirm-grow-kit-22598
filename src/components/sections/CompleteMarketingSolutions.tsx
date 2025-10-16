@@ -1,22 +1,39 @@
 import { Search, Globe, Star, Mail, BarChart3, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeInUpVariants } from '@/lib/animationVariants';
 
 export const CompleteMarketingSolutions = () => {
+  const heading = useScrollAnimation();
+
   return (
     <section className="relative pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-gradient-to-b from-[#243b55] to-[#4a7ba7]">
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Heading */}
-        <div className="text-center mb-16">
+        <motion.div 
+          ref={heading.ref}
+          initial="hidden"
+          animate={heading.isInView ? "visible" : "hidden"}
+          variants={fadeInUpVariants}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-white max-w-[800px] mx-auto mb-4">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
           <p className="text-lg text-white/70 max-w-[700px] mx-auto mb-12">
             The foundational marketing infrastructure every accounting firm needs to attract, convert, and retain high-value clients.
           </p>
-        </div>
+        </motion.div>
 
         {/* Foundation Setup Card - Full Width at Top */}
-        <div className="mb-8">
+        <motion.div 
+          initial="hidden"
+          animate={heading.isInView ? "visible" : "hidden"}
+          variants={fadeInUpVariants}
+          transition={{ delay: 0 }}
+          className="mb-8"
+        >
           <Link 
             to="/services/strategy-integration" 
             onClick={() => window.scrollTo(0, 0)}
@@ -39,12 +56,18 @@ export const CompleteMarketingSolutions = () => {
               Every SmartFirm client starts here: intake call, competitive research, calendar + CRM setup, your first automated workflow live in 7-10 days.
             </p>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Two Core Services Side-by-Side */}
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* SEO Card */}
-          <Link 
+          <motion.div
+            initial="hidden"
+            animate={heading.isInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            transition={{ delay: 0.1 }}
+          >
+            <Link
             to="/services/seo-for-accountants" 
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
@@ -66,9 +89,16 @@ export const CompleteMarketingSolutions = () => {
               Local SEO, Google Business Profile optimization, and directory listings so prospects searching "CPA near me" find YOU first.
             </p>
           </Link>
+          </motion.div>
 
           {/* Website Card */}
-          <Link 
+          <motion.div
+            initial="hidden"
+            animate={heading.isInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            transition={{ delay: 0.2 }}
+          >
+            <Link
             to="/services/website-design" 
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
@@ -90,12 +120,19 @@ export const CompleteMarketingSolutions = () => {
               Professional website with contact forms, booking, and analytics—so you know exactly where your leads come from.
             </p>
           </Link>
+          </motion.div>
         </div>
 
         {/* Three Supporting Services - 3 Column Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Review Generation Card */}
-          <Link 
+          <motion.div
+            initial="hidden"
+            animate={heading.isInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            transition={{ delay: 0.3 }}
+          >
+            <Link
             to="/services/client-review-generation" 
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
@@ -113,9 +150,16 @@ export const CompleteMarketingSolutions = () => {
               Set-and-forget review requests that build your reputation while you focus on client work.
             </p>
           </Link>
+          </motion.div>
 
           {/* Email/SMS Card */}
-          <Link 
+          <motion.div
+            initial="hidden"
+            animate={heading.isInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            transition={{ delay: 0.4 }}
+          >
+            <Link
             to="/services/email-marketing" 
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
@@ -133,9 +177,16 @@ export const CompleteMarketingSolutions = () => {
               Nurture sequences, appointment reminders, and follow-ups that keep clients engaged without manual effort.
             </p>
           </Link>
+          </motion.div>
 
           {/* Analytics Card */}
-          <Link 
+          <motion.div
+            initial="hidden"
+            animate={heading.isInView ? "visible" : "hidden"}
+            variants={fadeInUpVariants}
+            transition={{ delay: 0.4 }}
+          >
+            <Link
             to="/services/technology-solutions" 
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
@@ -153,6 +204,7 @@ export const CompleteMarketingSolutions = () => {
               Real-time dashboards showing leads, conversions, and ROI—marketing that actually proves its value.
             </p>
           </Link>
+          </motion.div>
         </div>
       </div>
     </section>

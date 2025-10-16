@@ -1,8 +1,12 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeInUpVariants } from '@/lib/animationVariants';
 
 const HomepageFAQSection = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
+  const heading = useScrollAnimation();
 
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
@@ -63,23 +67,34 @@ const HomepageFAQSection = () => {
     <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          ref={heading.ref}
+          initial="hidden"
+          animate={heading.isInView ? "visible" : "hidden"}
+          variants={fadeInUpVariants}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
             Questions? We Have Answers.
           </h2>
           <p className="text-lg text-[#334155] max-w-3xl mx-auto">
             Everything you need to know about building your marketing foundation with SmartFirm
           </p>
-        </div>
+        </motion.div>
 
         {/* FAQ Accordion */}
         <div className="max-w-[800px] mx-auto space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openItems.includes(index);
+            const delay = Math.min(index * 0.05, 0.2);
             
             return (
-              <div
+              <motion.div
                 key={index}
+                initial="hidden"
+                animate={heading.isInView ? "visible" : "hidden"}
+                variants={fadeInUpVariants}
+                transition={{ delay }}
                 className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
               >
                 {/* Question (Clickable) */}
@@ -111,7 +126,7 @@ const HomepageFAQSection = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

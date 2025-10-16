@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { fadeInUpVariants } from '@/lib/animationVariants';
 
 const FinalCTASection = () => {
+  const content = useScrollAnimation();
+
   return (
     <section className="relative pt-2.5 pb-2.5 md:pt-5 md:pb-5 px-6 bg-gradient-to-b from-[#243b55] to-[#4a7ba7] overflow-hidden">
       {/* Background Pattern */}
@@ -16,7 +21,13 @@ const FinalCTASection = () => {
       </div>
 
       <div className="container relative mx-auto max-w-[700px]">
-        <div className="mx-auto text-center">
+        <motion.div 
+          ref={content.ref}
+          initial="hidden"
+          animate={content.isInView ? "visible" : "hidden"}
+          variants={fadeInUpVariants}
+          className="mx-auto text-center"
+        >
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">
             Are You Serious About Scaling to $1M?
@@ -32,7 +43,10 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="px-12 py-5 text-xl font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white hover:translate-y-[-2px] shadow-[0_8px_32px_rgba(251,113,133,0.6)] hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl"
+              className="px-12 py-5 text-xl font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white hover:translate-y-[-2px] shadow-[0_8px_32px_rgba(251,113,133,0.6)] hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
+              style={{
+                animation: 'gentlePulse 2s ease-in-out infinite'
+              }}
             >
               <Link to="/get-started">
                 Book Your Free Strategy Call
@@ -44,8 +58,21 @@ const FinalCTASection = () => {
           <p className="text-sm text-white/60 text-center">
             No commitment required • 30-minute consultation
           </p>
-        </div>
+        </motion.div>
       </div>
+
+      <style>{`
+        @keyframes gentlePulse {
+          0%, 100% { 
+            transform: scale(1); 
+            box-shadow: 0 8px 32px rgba(251, 113, 133, 0.6); 
+          }
+          50% { 
+            transform: scale(1.02); 
+            box-shadow: 0 12px 40px rgba(251, 113, 133, 0.7); 
+          }
+        }
+      `}</style>
     </section>
   );
 };

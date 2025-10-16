@@ -1,4 +1,12 @@
+import { useCounterAnimation } from "@/hooks/useCounterAnimation";
+
 const StatsGrid = () => {
+  // Counter animations (trigger on scroll)
+  const stat1 = useCounterAnimation(73, { isPercentage: true, duration: 2000 });
+  const stat2 = useCounterAnimation(40, { isPercentage: true, duration: 2000 });
+  const stat3 = useCounterAnimation(14, { duration: 2000 });
+  const stat4 = useCounterAnimation(2, { duration: 2000 });
+
   const stats = [
     {
       number: "73%",
@@ -26,8 +34,10 @@ const StatsGrid = () => {
     },
   ];
 
+  const counters = [stat1, stat2, stat3, stat4];
+
   return (
-    <section className="pt-6 pb-8 md:pt-8 md:pb-8 bg-white">
+    <section className="pt-6 pb-8 md:pt-8 md:pb-8 bg-white" ref={stat1.ref || undefined}>
       <div className="container mx-auto px-6 md:px-12 max-w-[1200px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
@@ -52,7 +62,7 @@ const StatsGrid = () => {
                   fontWeight: 800
                 }}
               >
-                {stat.number}
+                {counters[index].count}
               </div>
 
               {/* The Unit (for stats 3 & 4 only) */}
