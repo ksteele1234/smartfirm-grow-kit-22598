@@ -83,14 +83,41 @@ const styles = `
   .stat-number {
     text-shadow: 0 2px 4px rgba(251, 191, 36, 0.3);
   }
+  
+  /* Clip-path for wave-shaped hero bottom */
+  .hero-wave-clip {
+    clip-path: url(#hero-wave-desktop);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-wave-clip {
+      clip-path: url(#hero-wave-mobile);
+    }
+  }
 `;
 
 const HeroSection = () => {
   return (
     <>
       <style>{styles}</style>
+      
+      {/* Hidden SVG for clip-path definitions */}
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          {/* Desktop clip-path (120px wave) */}
+          <clipPath id="hero-wave-desktop" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 L1,0 L1,0.92 Q0.75,1 0.5,0.92 T0,0.92 Z" />
+          </clipPath>
+          
+          {/* Mobile clip-path (80px wave) */}
+          <clipPath id="hero-wave-mobile" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 L1,0 L1,0.88 Q0.75,1 0.5,0.88 T0,0.88 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      
       <section
-      className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden"
+      className="relative min-h-[600px] md:min-h-[700px] py-[120px] overflow-hidden hero-wave-clip"
       style={{ 
         backgroundImage: `url(${heroWaveBackground})`,
         backgroundSize: 'cover',
@@ -252,20 +279,6 @@ const HeroSection = () => {
           </div>
 
         </div>
-      </div>
-
-      {/* Bottom Curved Divider */}
-      <div className="absolute -bottom-1 left-0 w-full overflow-hidden leading-[0] z-20">
-        <svg 
-          className="relative block w-full h-[80px] md:h-[120px]" 
-          viewBox="0 0 1200 120" 
-          preserveAspectRatio="none"
-        >
-          <path 
-            d="M0,0 C300,120 900,120 1200,0 L1200,120 L0,120 Z" 
-            fill="#ffffff"
-          />
-        </svg>
       </div>
       </section>
     </>
