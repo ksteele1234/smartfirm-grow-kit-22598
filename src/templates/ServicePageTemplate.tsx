@@ -6,7 +6,7 @@ import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
-import { CurvedSeparator } from "@/components/ui/curved-separator";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -84,13 +84,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#3A4A6C] via-[#0F4C5C] to-[#7AB2B2] overflow-hidden">
-        {/* Curved bottom edge */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
-          </svg>
-        </div>
+      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -134,15 +128,17 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Key Benefits
             </h2>
-            <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+            <p className="text-lg text-[#334155] max-w-3xl mx-auto">
               Discover how this service transforms your accounting firm
             </p>
           </div>
@@ -163,14 +159,15 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#7AB2B2] relative overflow-hidden">
-        <CurvedSeparator variant="light-teal" className="mb-12" />
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
         <BackgroundPattern pattern="grid" />
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Features & Capabilities
             </h2>
           </div>
@@ -190,8 +187,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                     <ul className="space-y-2">
                       {feature.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-sm text-text-secondary">{detail}</span>
+                          <CheckCircle className="h-4 w-4 text-[#14b8a6] mt-1 flex-shrink-0" />
+                          <span className="text-sm text-white/80">{detail}</span>
                         </li>
                       ))}
                     </ul>
@@ -202,19 +199,20 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
-        <CurvedSeparator variant="primary" className="mb-12" />
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+          <h2 className="text-3xl font-bold text-[#0a2e2e] mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {defaultFAQs.map((faq, index) => (
               <details key={index} className="border border-border rounded-lg p-4 bg-background">
-                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
-                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+                <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
+                <div className="text-[#334155] mt-2">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -244,11 +242,13 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           })}
         </script>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* CTA Section */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
+      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-light-teal">{data.ctaTitle}</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">{data.ctaTitle}</h2>
           <p className="text-xl opacity-90 mb-8 text-white/90">{data.ctaDescription}</p>
           <Button 
             size="lg" 

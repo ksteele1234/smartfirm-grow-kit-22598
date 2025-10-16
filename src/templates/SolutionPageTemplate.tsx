@@ -3,6 +3,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { SolutionPageData } from "@/types/cms";
 import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight } from "lucide-react";
 import { 
@@ -91,13 +92,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative py-24 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0F4C5C] via-[#7AB2B2] to-[#91ADC8] overflow-hidden">
-        {/* Curved bottom edge */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
-          </svg>
-        </div>
+      <section className="relative py-24 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
@@ -118,29 +113,31 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </a>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Problem & Solution Section */}
-      <section className="py-10 md:py-20 px-4 md:px-[72px] relative bg-background">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] relative bg-white">
         <div className="max-w-[1200px] mx-auto">
           {/* Asymmetrical layout with accent line */}
           <div className="grid lg:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-10 md:gap-y-14 items-start">
             <div className="relative space-y-4 md:space-y-6">
-              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
+              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
                 The Challenge
               </h2>
-              <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
+              <p className="text-base md:text-lg text-[#1e293b] leading-relaxed max-w-[65ch]">
                 {data.problemStatement}
               </p>
             </div>
             <div className="relative space-y-4 md:space-y-6">
-              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
+              <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
                 Our Solution
               </h2>
-              <p className="text-base md:text-lg text-text-primary leading-relaxed max-w-[65ch]">
+              <p className="text-base md:text-lg text-[#1e293b] leading-relaxed max-w-[65ch]">
                 {data.solutionOverview}
               </p>
-              <p className="text-sm md:text-base text-text-secondary">
-                Learn more about <a href="/services" data-sf="internal-add" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">AICPA guidance</a>.
+              <p className="text-sm md:text-base text-[#334155]">
+                Learn more about <a href="/services" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">success stories</a>, or read <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6] hover:text-[#2dd4bf] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">AICPA guidance</a>.
               </p>
             </div>
           </div>
@@ -159,15 +156,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           })}
         </script>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Key Benefits Section */}
-      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background-light relative overflow-hidden">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
               Key Benefits
             </h2>
-            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
+            <p className="text-base md:text-lg text-white/80 max-w-[65ch] mx-auto">
               See how our solution transforms your practice<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
             </p>
           </div>
@@ -191,15 +190,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* How It Works Section */}
-      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
               How It Works
             </h2>
-            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
+            <p className="text-base md:text-lg text-[#334155] max-w-[65ch] mx-auto">
               Our proven process gets you results quickly
             </p>
           </div>
@@ -225,13 +226,13 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-background-light">
+      <section className="py-10 md:py-20 px-4 md:px-[72px] bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary leading-tight">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
               Proven Results
             </h2>
-            <p className="text-base md:text-lg text-text-secondary max-w-[65ch] mx-auto">
+            <p className="text-base md:text-lg text-[#334155] max-w-[65ch] mx-auto">
               Real outcomes from real clients<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
             </p>
           </div>
@@ -262,9 +263,9 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-10 md:py-20 px-4 md:px-[72px] bg-background">
+      <section id="sf-faqs" className="py-10 md:py-20 px-4 md:px-[72px] bg-white">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-primary mb-10 md:mb-14 text-center leading-tight">
+          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4 md:space-y-6">
@@ -290,9 +291,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           })}
         </script>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Final CTA Section */}
-      <section className="py-12 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white relative overflow-hidden">
         <div className="max-w-[800px] mx-auto text-center relative space-y-6 md:space-y-8">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
           <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>

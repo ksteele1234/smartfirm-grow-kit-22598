@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
-import { CurvedSeparator } from "@/components/ui/curved-separator";
+import { WaveDivider } from "@/components/ui/wave-divider";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -80,13 +80,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-to-br from-[#91ADC8] via-[#7AB2B2] to-[#0F4C5C] overflow-hidden">
-        {/* Curved bottom edge */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
-          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
-          </svg>
-        </div>
+      <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
@@ -96,25 +90,27 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-[#0F4C5C] hover:bg-white/90">
+          <Button size="lg" variant="secondary" className="group bg-white text-[#243b55] hover:bg-white/90">
             Get Industry-Specific Solutions
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Industry Overview Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
               Industry Overview
             </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-lg text-[#334155] max-w-4xl mx-auto">
               {data.industryOverview}
             </p>
-            <p className="mt-4 text-muted-foreground text-center">
-              View <a href="/services" data-sf="internal-add" className="text-primary hover:underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA best practices</a>.
+            <p className="mt-4 text-[#334155] text-center">
+              View <a href="/services" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">AICPA best practices</a>.
             </p>
           </div>
         </div>
@@ -132,12 +128,14 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           })}
         </script>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#f8fafc" direction="up" className="-mt-px" />
 
       {/* Challenges & Solutions Section */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-16 md:py-20 bg-[#f8fafc]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Common Challenges & Our Solutions
             </h2>
           </div>
@@ -156,8 +154,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="ml-11">
-                  <div className="bg-primary/5 p-4 rounded-lg">
-                    <h3 className="font-semibold text-primary mb-2">Our Solution:</h3>
+                  <div className="bg-[#14b8a6]/5 p-4 rounded-lg">
+                    <h3 className="font-semibold text-[#14b8a6] mb-2">Our Solution:</h3>
                     <p className="text-muted-foreground">{challenge.solution}</p>
                   </div>
                 </CardContent>
@@ -166,12 +164,14 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#f8fafc" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Services Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Specialized Services
             </h2>
           </div>
@@ -197,12 +197,14 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#ffffff" toColor="#f8fafc" direction="up" className="-mt-px" />
 
       {/* Case Studies Section */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-16 md:py-20 bg-[#f8fafc]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Success Stories
             </h2>
           </div>
@@ -231,19 +233,20 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      <WaveDivider fromColor="#f8fafc" toColor="#243b55" direction="down" className="-mt-px" />
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-[#647FBC]">
-        <CurvedSeparator variant="primary" className="mb-12" />
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {defaultFAQs.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-4 bg-background">
-                <summary className="cursor-pointer font-medium text-foreground">{faq.question}</summary>
-                <div className="text-muted-foreground mt-2">{faq.answer}</div>
+              <details key={index} className="border border-white/20 rounded-lg p-4 bg-white">
+                <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
+                <div className="text-[#334155] mt-2">{faq.answer}</div>
               </details>
             ))}
           </div>
@@ -260,12 +263,14 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           })}
         </script>
       </section>
+      
+      <WaveDivider fromColor="#4a7ba7" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Final CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-accent text-accent-foreground">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">{data.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-8">{data.ctaDescription}</p>
+          <h2 className="text-3xl font-bold text-white mb-4">{data.ctaTitle}</h2>
+          <p className="text-xl text-white/90 mb-8">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="default" className="group">
               Schedule a Consultation
