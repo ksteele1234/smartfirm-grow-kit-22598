@@ -117,7 +117,7 @@ const HeroSection = () => {
       </svg>
       
       <section
-      className="relative min-h-[600px] md:min-h-[700px] pt-[120px] pb-0 overflow-hidden hero-wave-clip"
+      className="relative min-h-[600px] md:min-h-[700px] pt-[120px] pb-16 md:pb-24 overflow-hidden hero-wave-clip"
       style={{
         backgroundImage: `url(${heroWaveBackground})`,
         backgroundSize: 'cover',
