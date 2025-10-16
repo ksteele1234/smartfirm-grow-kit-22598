@@ -1,156 +1,157 @@
-import { MapPin, Star, Monitor, TrendingUp, Mail, Settings, BarChart3, Rocket } from 'lucide-react';
+import { Search, Globe, Star, Mail, BarChart3, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const CompleteMarketingSolutions = () => {
   return (
-    <section className="py-20 bg-[#7AB2B2]/[0.12]">
+    <section className="relative py-20 md:py-[100px] bg-gradient-to-b from-[#243b55] to-[#4a7ba7]">
       <div className="container mx-auto px-4 max-w-[1200px]">
-        {/* Section Header */}
-        <div className="text-center mb-16 md:mb-12">
-          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#0a2e2e] mb-4">
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white max-w-[800px] mx-auto mb-4">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
-          <p className="text-xl md:text-lg sm:text-base text-[#1e293b] leading-relaxed max-w-[800px] mx-auto">
-            The foundational marketing infrastructure most firms don't have—or have set up wrong. We build it right, make it work together, and automate it.
+          <p className="text-lg text-white/70 max-w-[700px] mx-auto mb-12">
+            The foundational marketing infrastructure every accounting firm needs to attract, convert, and retain high-value clients.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 md:gap-8 sm:gap-6">
-          {/* Featured Card 1 */}
-          <Link 
-            to="/services/seo-for-accountants" 
-            onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
-          >
-            <span className="absolute top-4 right-4 bg-[#0F4C5C] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              Core Service
-            </span>
-            <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#0F4C5C] flex items-center justify-center">
-                <MapPin className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
-                <Star className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#243b55] mb-3">
-                  Get Found By Local Clients
-                </h3>
-                <p className="text-[17px] md:text-base sm:text-[15px] text-[#1e293b] leading-relaxed">
-                  Complete GBP optimization and local SEO so you rank when prospects search 'CPA near me' or 'tax accountant [your city]'. Most firms leave this money on the table.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* Featured Card 2 */}
-          <Link 
-            to="/services/website-design" 
-            onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-3 group relative min-h-[340px] md:min-h-[320px] sm:min-h-[300px] p-10 md:p-8 sm:p-6 bg-white border-[3px] border-[#0F4C5C] rounded-xl shadow-[0_8px_24px_rgba(15,76,92,0.12)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(15,76,92,0.15)] hover:border-[#0F4C5C] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
-          >
-            <span className="absolute top-4 right-4 bg-[#0F4C5C] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              Core Service
-            </span>
-            <div className="flex flex-col gap-4">
-              <div className="relative w-[72px] h-[72px] md:w-[60px] md:h-[60px] sm:w-[56px] sm:h-[56px] rounded-full bg-gradient-to-br from-[#7AB2B2] to-[#0F4C5C] flex items-center justify-center">
-                <Monitor className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-white" aria-hidden="true" />
-                <TrendingUp className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#243b55] mb-3">
-                  Website That Converts + Full Tracking
-                </h3>
-                <p className="text-[17px] md:text-base sm:text-[15px] text-[#1e293b] leading-relaxed">
-                  Clean, professional site built to convert visitors to calls—plus analytics that show exactly where leads come from. No more guessing what's working.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* Supporting Card 3 */}
-          <Link 
-            to="/services/client-review-generation" 
-            onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
-          >
-            <div className="flex flex-col gap-3">
-              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
-                <Star className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
-                  Automated Review Generation
-                </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
-                  Systematic follow-up that gets more 5-star reviews from happy clients. Builds trust and improves local search rankings.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* Supporting Card 4 */}
-          <Link 
-            to="/services/email-marketing" 
-            onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
-          >
-            <div className="flex flex-col gap-3">
-              <div className="relative w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
-                <Mail className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
-                <Settings className="absolute bottom-0 right-0 w-3.5 h-3.5 text-[#7AB2B2]" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
-                  Professional Email & SMS Workflows
-                </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
-                  Automated appointment reminders, follow-ups, and client nurture sequences. Stay top-of-mind without lifting a finger.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* Supporting Card 5 */}
-          <Link 
-            to="/services/technology-solutions" 
-            onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-2 group min-h-[300px] md:min-h-[280px] sm:min-h-[260px] p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] cursor-pointer focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 active:sm:scale-[0.98] block"
-          >
-            <div className="flex flex-col gap-3">
-              <div className="w-[56px] h-[56px] md:w-[48px] md:h-[48px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
-                <BarChart3 className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
-                  Your Marketing Command Center
-                </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
-                  Real-time dashboard showing website traffic, lead sources, review stats, and ROI. Finally know what's driving growth.
-                </p>
-              </div>
-            </div>
-          </Link>
-
-          {/* Foundation Card 6 */}
+        {/* Foundation Setup Card - Full Width at Top */}
+        <div className="mb-8">
           <Link 
             to="/services/strategy-integration" 
             onClick={() => window.scrollTo(0, 0)}
-            className="lg:col-span-6 flex flex-col sm:flex-row items-start gap-8 sm:gap-6 p-10 md:p-8 sm:p-6 bg-white border-2 border-[#E2E8F0] rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.06)] focus:outline-none focus:ring-3 focus:ring-[#0F4C5C] focus:ring-offset-2 transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] block"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
           >
-            <div className="flex-shrink-0 w-[64px] h-[64px] md:w-[56px] md:h-[56px] sm:w-[52px] sm:h-[52px] rounded-full bg-[#E6F7F7] flex items-center justify-center">
-              <Rocket className="w-8 h-8 md:w-7 md:h-7 sm:w-6 sm:h-6 text-[#7AB2B2]" aria-hidden="true" />
-            </div>
-            <div className="flex-1">
-              <span className="inline-block text-xs text-[#666666] font-semibold uppercase tracking-[0.5px] mb-2">
-                INCLUDED IN ONBOARDING
-              </span>
-              <h3 className="text-xl md:text-lg font-bold text-[#243b55] mb-2">
-                Foundation Setup: Strategy + Integration
-              </h3>
-              <p className="text-base md:text-[15px] text-[#1e293b] leading-relaxed">
-                2-hour deep dive into your firm, ideal clients, and competitive landscape. Then we build everything to work together seamlessly—not a disconnected tech mess.
-              </p>
-            </div>
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+              Core Service
+            </span>
+            
+            <Settings 
+              className="w-12 h-12 text-[#14b8a6] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Foundation Setup: Strategy + Integration
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Every SmartFirm client starts here: intake call, competitive research, calendar + CRM setup, your first automated workflow live in 7-10 days.
+            </p>
+          </Link>
+        </div>
+
+        {/* Two Core Services Side-by-Side */}
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* SEO Card */}
+          <Link 
+            to="/services/seo-for-accountants" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+          >
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+              Core Service
+            </span>
+            
+            <Search 
+              className="w-12 h-12 text-[#2dd4bf] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Get Found By Local Clients
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Local SEO, Google Business Profile optimization, and directory listings so prospects searching "CPA near me" find YOU first.
+            </p>
+          </Link>
+
+          {/* Website Card */}
+          <Link 
+            to="/services/website-design" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+          >
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+              Core Service
+            </span>
+            
+            <Globe 
+              className="w-12 h-12 text-[#14b8a6] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Website That Converts + Full Tracking
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Professional website with contact forms, booking, and analytics—so you know exactly where your leads come from.
+            </p>
+          </Link>
+        </div>
+
+        {/* Three Supporting Services - 3 Column Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Review Generation Card */}
+          <Link 
+            to="/services/client-review-generation" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+          >
+            <Star 
+              className="w-12 h-12 text-[#2dd4bf] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Automated Review Generation
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Set-and-forget review requests that build your reputation while you focus on client work.
+            </p>
+          </Link>
+
+          {/* Email/SMS Card */}
+          <Link 
+            to="/services/email-marketing" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+          >
+            <Mail 
+              className="w-12 h-12 text-[#14b8a6] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Professional Email & SMS Workflows
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Nurture sequences, appointment reminders, and follow-ups that keep clients engaged without manual effort.
+            </p>
+          </Link>
+
+          {/* Analytics Card */}
+          <Link 
+            to="/services/technology-solutions" 
+            onClick={() => window.scrollTo(0, 0)}
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+          >
+            <BarChart3 
+              className="w-12 h-12 text-[#2dd4bf] mb-5" 
+              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+            />
+            
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Your Marketing Command Center
+            </h3>
+            
+            <p className="text-base text-white/80 leading-relaxed">
+              Real-time dashboards showing leads, conversions, and ROI—marketing that actually proves its value.
+            </p>
           </Link>
         </div>
       </div>
