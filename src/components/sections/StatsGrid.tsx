@@ -54,11 +54,10 @@ const StatsGrid = () => {
                 e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
               }}
             >
-              {/* The Number with Gold Gradient */}
+              {/* The Number - Teal Design System */}
               <div
-                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 text-[#0a2e2e]"
                 style={{ 
-                  textShadow: '0 2px 4px rgba(251, 191, 36, 0.2)',
                   fontWeight: 800
                 }}
               >
@@ -67,18 +66,18 @@ const StatsGrid = () => {
 
               {/* The Unit (for stats 3 & 4 only) */}
               {stat.unit && (
-                <div className="text-xl font-medium text-slate-600 -mt-1 mb-3">
+                <div className="text-xl font-medium text-[#334155] -mt-1 mb-3">
                   {stat.unit}
                 </div>
               )}
 
               {/* The Label */}
-              <div className="text-base font-medium text-slate-600 leading-relaxed">
+              <div className="text-base font-medium text-[#1e293b] leading-relaxed">
                 {stat.label}
               </div>
 
               {/* The Context */}
-              <div className="text-sm font-normal italic text-slate-500 leading-relaxed mt-2">
+              <div className="text-sm font-normal italic text-[#334155] leading-relaxed mt-2">
                 {stat.context}
               </div>
             </div>
