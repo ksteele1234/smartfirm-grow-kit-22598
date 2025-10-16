@@ -48,50 +48,50 @@ const Index = () => {
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 
-        {/* Wave 0: Hero → Stats (teal → white) */}
-        <WaveDivider fromColor="#134444" toColor="#ffffff" direction="down" id="wave-hero-stats" />
-
         {/* Section 2: Unified Credibility Section - Background A (White) */}
-        <section className="py-20 bg-white overflow-hidden">
+        <section className="py-20 bg-white">
           <StatsGrid />
           <FounderStory />
         </section>
 
         {/* Wave 1: Stats → Complete Marketing Solutions (white → blue) */}
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" id="wave-stats-features" />
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" id="wave-1" />
 
         {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
         <CompleteMarketingSolutions />
 
         {/* Wave 2: Complete Marketing Solutions → Why SmartFirm (blue → white) */}
-        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" id="wave-features-why" />
+        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="up" id="wave-2" />
 
         {/* Section 4: Why SmartFirm is Different - Background A (White) */}
         <WhySmartFirmIsDifferent />
 
         {/* Wave 3: Why SmartFirm → Ready to Transform (white → dark teal) */}
-        <WaveDivider fromColor="#ffffff" toColor="#0a2e2e" direction="up" id="wave-why-pricing" />
+        <WaveDivider fromColor="#ffffff" toColor="#0a2e2e" direction="down" id="wave-3" />
 
         {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
         <ReadyToTransformSection />
 
         {/* Wave 4: Ready to Transform → Firm Comparison (light teal → white) */}
-        <WaveDivider fromColor="#134444" toColor="#ffffff" direction="down" id="wave-pricing-comparison" />
+        <WaveDivider fromColor="#134444" toColor="#ffffff" direction="up" id="wave-4" />
 
         {/* Section 6: Firm Comparison - Background A (White) */}
         <FirmComparisonSection />
 
-        {/* Section 7: FAQ - Background A (White) */}
+        {/* Wave 5: Firm Comparison → FAQ (white → white, visual break) */}
+        <WaveDivider fromColor="#ffffff" toColor="#ffffff" direction="down" id="wave-5" />
+
+        {/* Section 7: FAQ - Background B (Soft Teal) */}
         <HomepageFAQSection />
 
-        {/* Wave 5: FAQ → Final CTA (white → blue) */}
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" id="wave-faq-cta" />
+        {/* Wave 6: FAQ → Final CTA (white → blue) */}
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" id="wave-6" />
 
         {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
         <FinalCTASection />
 
-        {/* Wave 6: Final CTA → Footer (blue → deep teal) */}
-        <WaveDivider fromColor="#4a7ba7" toColor="#0a2e2e" direction="down" id="wave-cta-footer" />
+        {/* Wave 7: Final CTA → Footer (blue → deep teal) */}
+        <WaveDivider fromColor="#4a7ba7" toColor="#0a2e2e" direction="down" id="wave-7" />
       </main>
       
       {/* Section 9: Footer - Background C (Soft Blue) */}
