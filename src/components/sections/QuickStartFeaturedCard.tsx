@@ -33,7 +33,7 @@ const QuickStartFeaturedCard = () => {
       </div>
 
       {/* Headline */}
-      <h3 className="text-2xl lg:text-[28px] font-bold text-[#334260] leading-[1.3] mb-4 font-heading">
+      <h3 className="text-2xl lg:text-[28px] font-bold text-[#243b55] leading-[1.3] mb-4 font-heading">
         Everything You Need to Launch Your Marketing in 30 Days
       </h3>
 
@@ -48,14 +48,14 @@ const QuickStartFeaturedCard = () => {
           Typical Value: $12,000+
         </div>
         <div className="flex items-baseline gap-3 mb-2">
-          <div className="text-[40px] lg:text-[48px] font-bold text-[#647FBC] leading-none">
+          <div className="text-[40px] lg:text-[48px] font-bold text-[#0F4C5C] leading-none">
             $6,999
           </div>
           <div className="text-base font-medium text-[#666666]">
             One-time setup
           </div>
         </div>
-        <div className="text-2xl font-semibold text-[#334260] mt-2 mb-1">
+        <div className="text-2xl font-semibold text-[#243b55] mt-2 mb-1">
           + $999/month
         </div>
         <div className="text-sm text-[#666666]">
@@ -65,7 +65,7 @@ const QuickStartFeaturedCard = () => {
 
       {/* What's Included */}
       <div className="mb-6">
-        <h4 className="text-base font-bold text-[#334260] mb-3">
+        <h4 className="text-base font-bold text-[#14b8a6] mb-3">
           What's Included:
         </h4>
         <div className="flex flex-col gap-2">

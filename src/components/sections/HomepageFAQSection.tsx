@@ -61,10 +61,10 @@ const HomepageFAQSection = () => {
       <div className="container mx-auto px-6 max-w-[900px]">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#334260] mb-4">
+          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#0a2e2e] mb-4">
             Questions? We Have Answers.
           </h2>
-          <p className="text-[18px] lg:text-[20px] font-normal text-[#666666] leading-relaxed max-w-[800px] mx-auto">
+          <p className="text-[18px] lg:text-[20px] font-normal text-[#1e293b] leading-relaxed max-w-[800px] mx-auto">
             Everything you need to know about building your marketing foundation with SmartFirm
           </p>
         </div>
@@ -80,14 +80,14 @@ const HomepageFAQSection = () => {
               <AccordionTrigger className="text-left hover:no-underline py-4">
                 <div className="flex items-center gap-3">
                   <HelpCircle className="h-5 w-5 text-[#0F4C5C] flex-shrink-0" />
-                  <span className="text-[20px] lg:text-[22px] font-bold text-[#334260] leading-snug">
+                  <span className="text-[20px] lg:text-[22px] font-bold text-[#243b55] leading-snug">
                     {faq.question}
                   </span>
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pt-3 pb-4">
                 <div className="max-w-[800px]">
-                  <p className="text-[16px] lg:text-[17px] font-normal text-[#333333] leading-relaxed">
+                  <p className="text-[16px] lg:text-[17px] font-normal text-[#1e293b] leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -102,11 +102,11 @@ const HomepageFAQSection = () => {
             <MessageSquare className="h-12 w-12 text-[#0F4C5C]" />
           </div>
           
-          <h3 className="text-2xl font-bold text-[#334260] mb-3">
+          <h3 className="text-2xl font-bold text-[#243b55] mb-3">
             Still Have Questions?
           </h3>
           
-          <p className="text-[17px] font-normal text-[#333333] leading-relaxed mb-6 max-w-[600px] mx-auto">
+          <p className="text-[17px] font-normal text-[#1e293b] leading-relaxed mb-6 max-w-[600px] mx-auto">
             Book a free 30-minute strategy call. We'll answer your questions and help you determine if the Quick Start Package is right for your firm.
           </p>
           

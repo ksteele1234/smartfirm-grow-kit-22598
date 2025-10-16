@@ -28,10 +28,10 @@ const FirmComparisonSection = () => {
           <div className="text-sm font-semibold text-[#0F4C5C] uppercase tracking-wider mb-3">
             The $1M Question
           </div>
-          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#334260] leading-tight max-w-[900px] mx-auto mb-4 font-heading">
+          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#0a2e2e] leading-tight max-w-[900px] mx-auto mb-4 font-heading">
             What Separates Firms Stuck at $400K from Those Scaling to $1M?
           </h2>
-          <p className="text-[18px] lg:text-[20px] text-[#666666] leading-relaxed max-w-[800px] mx-auto mb-12 lg:mb-16">
+          <p className="text-[18px] lg:text-[20px] text-[#1e293b] leading-relaxed max-w-[800px] mx-auto mb-12 lg:mb-16">
             It's not about working harder. It's about having the right marketing infrastructure.
           </p>
         </div>
@@ -43,7 +43,7 @@ const FirmComparisonSection = () => {
             <div className="bg-white border-2 border-[#E2E8F0] rounded-xl lg:rounded-r-none p-8 lg:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] hover:shadow-[0_6px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
               <div className="flex items-start gap-3 mb-6">
                 <XCircle className="w-10 h-10 flex-shrink-0 text-[#666666] mt-1" />
-                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#334260] text-left">
+                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#243b55] text-left">
                   Firms Stuck at $400K-$600K
                 </h3>
               </div>

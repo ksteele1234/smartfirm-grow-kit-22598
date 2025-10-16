@@ -7,10 +7,10 @@ export const CompleteMarketingSolutions = () => {
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-12">
-          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">
+          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#0a2e2e] mb-4">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
-          <p className="text-xl md:text-lg sm:text-base text-[#4A5568] leading-relaxed max-w-[800px] mx-auto">
+          <p className="text-xl md:text-lg sm:text-base text-[#1e293b] leading-relaxed max-w-[800px] mx-auto">
             The foundational marketing infrastructure most firms don't have—or have set up wrong. We build it right, make it work together, and automate it.
           </p>
         </div>
@@ -32,10 +32,10 @@ export const CompleteMarketingSolutions = () => {
                 <Star className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#647FBC] mb-3">
+                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#243b55] mb-3">
                   Get Found By Local Clients
                 </h3>
-                <p className="text-[17px] md:text-base sm:text-[15px] text-[#4A5568] leading-relaxed">
+                <p className="text-[17px] md:text-base sm:text-[15px] text-[#1e293b] leading-relaxed">
                   Complete GBP optimization and local SEO so you rank when prospects search 'CPA near me' or 'tax accountant [your city]'. Most firms leave this money on the table.
                 </p>
               </div>
@@ -57,10 +57,10 @@ export const CompleteMarketingSolutions = () => {
                 <TrendingUp className="absolute top-1 right-1 w-4 h-4 text-white" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#647FBC] mb-3">
+                <h3 className="text-2xl md:text-xl sm:text-lg font-bold text-[#243b55] mb-3">
                   Website That Converts + Full Tracking
                 </h3>
-                <p className="text-[17px] md:text-base sm:text-[15px] text-[#4A5568] leading-relaxed">
+                <p className="text-[17px] md:text-base sm:text-[15px] text-[#1e293b] leading-relaxed">
                   Clean, professional site built to convert visitors to calls—plus analytics that show exactly where leads come from. No more guessing what's working.
                 </p>
               </div>
@@ -78,10 +78,10 @@ export const CompleteMarketingSolutions = () => {
                 <Star className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#647FBC] mb-2.5">
+                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
                   Automated Review Generation
                 </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#4A5568] leading-relaxed">
+                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
                   Systematic follow-up that gets more 5-star reviews from happy clients. Builds trust and improves local search rankings.
                 </p>
               </div>
@@ -100,10 +100,10 @@ export const CompleteMarketingSolutions = () => {
                 <Settings className="absolute bottom-0 right-0 w-3.5 h-3.5 text-[#7AB2B2]" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#647FBC] mb-2.5">
+                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
                   Professional Email & SMS Workflows
                 </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#4A5568] leading-relaxed">
+                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
                   Automated appointment reminders, follow-ups, and client nurture sequences. Stay top-of-mind without lifting a finger.
                 </p>
               </div>
@@ -121,10 +121,10 @@ export const CompleteMarketingSolutions = () => {
                 <BarChart3 className="w-7 h-7 md:w-6 md:h-6 sm:w-5 sm:h-5 text-[#7AB2B2]" aria-hidden="true" />
               </div>
               <div>
-                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#647FBC] mb-2.5">
+                <h3 className="text-xl md:text-lg sm:text-base font-bold text-[#243b55] mb-2.5">
                   Your Marketing Command Center
                 </h3>
-                <p className="text-base md:text-[15px] sm:text-sm text-[#4A5568] leading-relaxed">
+                <p className="text-base md:text-[15px] sm:text-sm text-[#1e293b] leading-relaxed">
                   Real-time dashboard showing website traffic, lead sources, review stats, and ROI. Finally know what's driving growth.
                 </p>
               </div>
@@ -144,10 +144,10 @@ export const CompleteMarketingSolutions = () => {
               <span className="inline-block text-xs text-[#666666] font-semibold uppercase tracking-[0.5px] mb-2">
                 INCLUDED IN ONBOARDING
               </span>
-              <h3 className="text-xl md:text-lg font-bold text-[#647FBC] mb-2">
+              <h3 className="text-xl md:text-lg font-bold text-[#243b55] mb-2">
                 Foundation Setup: Strategy + Integration
               </h3>
-              <p className="text-base md:text-[15px] text-[#4A5568] leading-relaxed">
+              <p className="text-base md:text-[15px] text-[#1e293b] leading-relaxed">
                 2-hour deep dive into your firm, ideal clients, and competitive landscape. Then we build everything to work together seamlessly—not a disconnected tech mess.
               </p>
             </div>
