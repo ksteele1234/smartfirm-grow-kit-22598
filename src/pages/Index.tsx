@@ -67,13 +67,13 @@ const Index = () => {
         <WhySmartFirmIsDifferent />
 
         {/* Wave 3: Why SmartFirm → Ready to Transform (white → dark teal) */}
-        <WaveDivider fromColor="#ffffff" toColor="#0a2e2e" direction="down" id="wave-3" />
+        <WaveDivider fromColor="#ffffff" toColor="#0c3535" direction="down" id="wave-3" />
 
         {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
         <ReadyToTransformSection />
 
         {/* Wave 4: Ready to Transform → Firm Comparison (light teal → white) */}
-        <WaveDivider fromColor="#134444" toColor="#ffffff" direction="up" id="wave-4" />
+        <WaveDivider fromColor="#103d3d" toColor="#ffffff" direction="up" id="wave-4" />
 
         {/* Section 6: Firm Comparison - Background A (White) */}
         <FirmComparisonSection />
