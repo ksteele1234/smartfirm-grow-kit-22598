@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
 
-// Add keyframes for circle rotations
+// Add keyframes for circle rotations and animations
 const styles = `
   @keyframes rotateClockwise {
     from { transform: rotate(0deg); }
@@ -11,6 +11,69 @@ const styles = `
   @keyframes rotateCounterClockwise {
     from { transform: rotate(0deg); }
     to { transform: rotate(-360deg); }
+  }
+  @keyframes gentlePulse {
+    0%, 100% { 
+      transform: scale(1); 
+      box-shadow: 0 4px 24px rgba(251, 113, 133, 0.5); 
+    }
+    50% { 
+      transform: scale(1.02); 
+      box-shadow: 0 6px 32px rgba(251, 113, 133, 0.6); 
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-gentle-pulse {
+      animation: gentlePulse 2s ease-in-out infinite;
+    }
+    .animate-fade-in {
+      animation: fadeIn 500ms ease-out forwards;
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 600ms ease-out forwards;
+    }
+    .animate-fade-in-up-delay-1 {
+      animation: fadeInUp 600ms ease-out 100ms forwards;
+      opacity: 0;
+    }
+    .animate-fade-in-up-delay-2 {
+      animation: fadeInUp 600ms ease-out 200ms forwards;
+      opacity: 0;
+    }
+    .animate-fade-in-up-delay-3 {
+      animation: fadeInUp 600ms ease-out 300ms forwards;
+      opacity: 0;
+    }
+    .animate-subhead {
+      animation: fadeInUp 600ms ease-out 200ms forwards;
+      opacity: 0;
+    }
+  }
+  
+  .stat-card {
+    transition: all 300ms ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+  
+  .stat-number {
+    text-shadow: 0 2px 4px rgba(251, 191, 36, 0.3);
   }
 `;
 
@@ -27,6 +90,25 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Floating Dots Tech Overlay */}
+      <div className="absolute inset-0 z-[1] pointer-events-none hidden lg:block">
+        {/* Bottom-right cluster (more visible in dark area) */}
+        <div className="absolute right-[15%] bottom-[25%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-20" style={{ boxShadow: '0 0 4px rgba(20, 184, 166, 0.3)' }} />
+        <div className="absolute right-[22%] bottom-[32%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-15" />
+        <div className="absolute right-[18%] bottom-[38%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-25" style={{ boxShadow: '0 0 4px rgba(20, 184, 166, 0.3)' }} />
+        <div className="absolute right-[10%] bottom-[28%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-18" />
+        
+        {/* Top-right cluster */}
+        <div className="absolute right-[12%] top-[15%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-20" />
+        <div className="absolute right-[20%] top-[22%] w-1.5 h-1.5 rounded-full bg-[#5eead4] opacity-15" style={{ boxShadow: '0 0 4px rgba(94, 234, 212, 0.3)' }} />
+        <div className="absolute right-[8%] top-[28%] w-1 h-1 rounded-full bg-[#14b8a6] opacity-22" />
+        
+        {/* Left side cluster */}
+        <div className="absolute left-[8%] top-[35%] w-1 h-1 rounded-full bg-[#5eead4] opacity-15" />
+        <div className="absolute left-[12%] top-[45%] w-1.5 h-1.5 rounded-full bg-[#14b8a6] opacity-18" />
+        <div className="absolute left-[15%] bottom-[40%] w-1 h-1 rounded-full bg-[#5eead4] opacity-20" style={{ boxShadow: '0 0 4px rgba(94, 234, 212, 0.3)' }} />
+      </div>
+
       {/* Orbital Circle System */}
       <svg
         className="absolute right-[10%] top-[35%] w-[400px] h-[400px] z-[2] hidden lg:block"
@@ -84,12 +166,12 @@ const HeroSection = () => {
           <div className="order-2 lg:order-1 space-y-8">
             
             {/* Headline - Solid White */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
               Predictable Growth for Accounting Firms Without Wasting Time on Marketing
             </h1>
 
             {/* Subheadline */}
-            <div id="sf-keyword-intro">
+            <div id="sf-keyword-intro" className="animate-subhead">
               <p className="text-xl text-white/70 leading-relaxed max-w-[600px] mb-8">
                 SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
               </p>
@@ -109,7 +191,7 @@ const HeroSection = () => {
               <Button 
                 variant="coral" 
                 size="lg"
-                className="px-10 py-4 text-lg font-bold rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.5)] hover:-translate-y-0.5 hover:shadow-[0_6px_32px_rgba(251,113,133,0.6)] transition-all duration-300 w-full sm:w-auto"
+                className="px-10 py-4 text-lg font-bold rounded-xl animate-gentle-pulse hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
                 <a href="/get-started" className="inline-flex items-center justify-center gap-2">
@@ -125,11 +207,11 @@ const HeroSection = () => {
             
             {/* Card 1: +147 New Leads - Top Left */}
             <div 
-              className="animate-float" 
+              className="animate-float animate-fade-in-up" 
               style={{ animationDelay: '0s' }}
             >
-              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   147
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">New Leads</p>
@@ -139,11 +221,11 @@ const HeroSection = () => {
 
             {/* Card 2: 94% Client Retention - Middle Right (offset) */}
             <div 
-              className="animate-float ml-0 lg:ml-8" 
+              className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8" 
               style={{ animationDelay: '1s' }}
             >
-              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   94%
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">Client Retention</p>
@@ -153,11 +235,11 @@ const HeroSection = () => {
 
             {/* Card 3: $4.2K Avg Deal - Bottom Left */}
             <div 
-              className="animate-float" 
+              className="animate-float animate-fade-in-up-delay-2" 
               style={{ animationDelay: '2s' }}
             >
-              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-                <p className="text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+                <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   $4.2K
                 </p>
                 <p className="text-sm text-white/70 font-medium mb-2">Avg Deal Value</p>
@@ -167,11 +249,11 @@ const HeroSection = () => {
 
             {/* Card 4: 340% ROI - Bottom Right (smaller, hidden on mobile) */}
             <div 
-              className="hidden lg:block animate-float lg:ml-4" 
+              className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4" 
               style={{ animationDelay: '1.5s' }}
             >
-              <div className="bg-white/[0.08] backdrop-blur-[20px] rounded-xl p-4 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
-                <p className="text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-xl p-4 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+                <p className="stat-number text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   340%
                 </p>
                 <p className="text-xs text-white/70 font-medium">ROI</p>
