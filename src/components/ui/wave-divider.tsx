@@ -22,7 +22,6 @@ export const WaveDivider = ({
   const upPath = "M0,50 Q360,20 720,50 T1440,50 L1440,0 L0,0 Z";
   
   const pathData = direction === "down" ? downPath : upPath;
-  const gradientId = `wave-gradient-${id}`;
 
   return (
     <div className={cn("w-full -mt-1 -mb-1 leading-[0]", className)} style={{ backgroundColor: direction === "down" ? fromColor : toColor }}>
@@ -32,13 +31,7 @@ export const WaveDivider = ({
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <defs>
-          <linearGradient id={gradientId} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor={fromColor} />
-            <stop offset="100%" stopColor={toColor} />
-          </linearGradient>
-        </defs>
-        <path fill={`url(#${gradientId})`} d={pathData} />
+        <path fill={fromColor} d={pathData} />
       </svg>
     </div>
   );
