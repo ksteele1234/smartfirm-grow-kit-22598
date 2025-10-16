@@ -1,4 +1,4 @@
-import { Building2, BarChart3, Settings, Target, Calendar, TrendingUp, Users, CheckCircle } from "lucide-react";
+import { Building2, Settings, Target, Calendar, TrendingUp, Users, CheckCircle } from "lucide-react";
 
 const WhySmartFirmIsDifferent = () => {
   const differentiators = [
@@ -10,15 +10,8 @@ const WhySmartFirmIsDifferent = () => {
       keyBenefit: "We speak your language"
     },
     {
-      icon: BarChart3,
-      iconColor: "#fb7185", // CORAL - emphasis on top differentiator
-      headline: "Transparent ROI Tracking",
-      description: "Monthly dashboard showing website traffic, lead sources, cost-per-lead, and revenue attribution. No vague 'brand awareness' metrics—just clear numbers tied to growth.",
-      keyBenefit: "Know exactly what's working"
-    },
-    {
       icon: Settings,
-      iconColor: "#14b8a6", // TEAL
+      iconColor: "#fb7185", // CORAL - emphasis on execution
       headline: "Done-For-You Execution",
       description: "We build your marketing infrastructure together during setup, then run everything for you. After onboarding, your team invests ~2 hours monthly while we handle the rest.",
       keyBenefit: "Reclaim your time for billable work"
@@ -67,7 +60,7 @@ const WhySmartFirmIsDifferent = () => {
           </p>
         </div>
 
-        {/* 7-Card Grid */}
+        {/* 6-Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {differentiators.map((item, index) => {
             const Icon = item.icon;
