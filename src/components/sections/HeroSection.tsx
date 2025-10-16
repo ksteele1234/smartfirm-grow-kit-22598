@@ -70,6 +70,7 @@ const styles = `
   }
   .stat-card:hover {
     transform: translateY(-4px) rotate(-1deg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   }
   
   .stat-number {
