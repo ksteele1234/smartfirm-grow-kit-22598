@@ -25,7 +25,7 @@ export const WaveDivider = ({
   const gradientId = `wave-gradient-${id}`;
 
   return (
-    <div className={cn("w-full -mt-1 -mb-1 leading-[0]", className)}>
+    <div className={cn("w-full -mt-1 -mb-1 leading-[0]", className)} style={{ backgroundColor: fromColor }}>
       <svg 
         className="block w-full h-[60px] md:h-[100px]"
         viewBox="0 0 1440 100" 
