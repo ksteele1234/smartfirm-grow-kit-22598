@@ -149,6 +149,12 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://smartfirm.io/services/strategy-integration</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Solution Pages -->
   <url>
     <loc>https://smartfirm.io/solutions/client-retention</loc>
