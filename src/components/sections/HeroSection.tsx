@@ -90,59 +90,161 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Digital Network Overlay - Dots & Connection Lines */}
-      <svg 
-        className="absolute inset-0 w-full h-full z-[1] pointer-events-none hidden lg:block"
-        viewBox="0 0 1200 700"
-        preserveAspectRatio="xMidYMid slice"
-      >
-        {/* Connection Lines - 10 lines connecting nearby dots */}
-        <line x1="120" y1="180" x2="280" y2="210" stroke="#ffffff" strokeWidth="1" opacity="0.18" />
-        <line x1="280" y1="210" x2="450" y2="160" stroke="#ffffff" strokeWidth="1" opacity="0.15" />
-        <line x1="450" y1="160" x2="620" y2="140" stroke="#ffffff" strokeWidth="1" opacity="0.17" />
-        <line x1="850" y1="250" x2="980" y2="320" stroke="#ffffff" strokeWidth="1" opacity="0.16" />
-        <line x1="980" y1="320" x2="1050" y2="450" stroke="#ffffff" strokeWidth="1" opacity="0.19" />
-        <line x1="180" y1="420" x2="340" y2="480" stroke="#ffffff" strokeWidth="1" opacity="0.15" />
-        <line x1="550" y1="500" x2="720" y2="520" stroke="#ffffff" strokeWidth="1" opacity="0.18" />
-        <line x1="720" y1="520" x2="890" y2="580" stroke="#ffffff" strokeWidth="1" opacity="0.17" />
-        <line x1="350" y1="90" x2="520" y2="110" stroke="#ffffff" strokeWidth="1" opacity="0.16" />
-        <line x1="780" y1="180" x2="920" y2="140" stroke="#ffffff" strokeWidth="1" opacity="0.20" />
-        
-        {/* Digital Dots - 28 white dots scattered throughout */}
-        {/* Top section */}
-        <circle cx="120" cy="180" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="280" cy="210" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="350" cy="90" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="450" cy="160" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="520" cy="110" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="620" cy="140" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="780" cy="180" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="850" cy="250" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="920" cy="140" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="1050" cy="200" r="2" fill="#ffffff" opacity="0.4" />
-        
-        {/* Middle section */}
-        <circle cx="80" cy="320" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="180" cy="420" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="340" cy="480" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="480" cy="380" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="650" cy="350" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="980" cy="320" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="1120" cy="380" r="2" fill="#ffffff" opacity="0.4" />
-        
-        {/* Bottom section */}
-        <circle cx="150" cy="550" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="280" cy="610" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="420" cy="580" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="550" cy="500" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="680" cy="630" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="720" cy="520" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="890" cy="580" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="950" cy="640" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="1050" cy="450" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="1100" cy="560" r="2" fill="#ffffff" opacity="0.4" />
-        <circle cx="1150" cy="620" r="2" fill="#ffffff" opacity="0.4" />
-      </svg>
+      {/* Ambient Background Dots - Strategic Placement */}
+      <div className="absolute inset-0 w-full h-full z-[1] pointer-events-none hidden lg:block">
+        {/* Dot 1 - Outline */}
+        <div 
+          className="absolute"
+          style={{ left: '20%', top: '15%' }}
+        >
+          <div 
+            className="rounded-full border border-white"
+            style={{ 
+              width: '5px', 
+              height: '5px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 2 - Solid */}
+        <div 
+          className="absolute"
+          style={{ left: '45%', top: '12%' }}
+        >
+          <div 
+            className="rounded-full bg-white"
+            style={{ 
+              width: '3px', 
+              height: '3px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 3 - Outline */}
+        <div 
+          className="absolute"
+          style={{ right: '15%', top: '18%' }}
+        >
+          <div 
+            className="rounded-full border border-white"
+            style={{ 
+              width: '5px', 
+              height: '5px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 4 - Solid */}
+        <div 
+          className="absolute"
+          style={{ left: '8%', top: '45%' }}
+        >
+          <div 
+            className="rounded-full bg-white"
+            style={{ 
+              width: '3px', 
+              height: '3px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 5 - Outline */}
+        <div 
+          className="absolute"
+          style={{ left: '65%', top: '50%' }}
+        >
+          <div 
+            className="rounded-full border border-white"
+            style={{ 
+              width: '5px', 
+              height: '5px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 6 - Solid */}
+        <div 
+          className="absolute"
+          style={{ right: '10%', top: '55%' }}
+        >
+          <div 
+            className="rounded-full bg-white"
+            style={{ 
+              width: '3px', 
+              height: '3px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 7 - Outline */}
+        <div 
+          className="absolute"
+          style={{ left: '35%', top: '75%' }}
+        >
+          <div 
+            className="rounded-full border border-white"
+            style={{ 
+              width: '5px', 
+              height: '5px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 8 - Solid */}
+        <div 
+          className="absolute"
+          style={{ left: '55%', top: '80%' }}
+        >
+          <div 
+            className="rounded-full bg-white"
+            style={{ 
+              width: '3px', 
+              height: '3px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Dot 9 - Outline */}
+        <div 
+          className="absolute"
+          style={{ left: '75%', top: '85%' }}
+        >
+          <div 
+            className="rounded-full border border-white"
+            style={{ 
+              width: '5px', 
+              height: '5px',
+              opacity: 0.3
+            }}
+          />
+        </div>
+
+        {/* Connection Lines */}
+        <svg 
+          className="absolute inset-0 w-full h-full"
+          style={{ opacity: 0.15 }}
+        >
+          {/* LINE 1: Dot 2 (45%, 12%) → Dot 5 (65%, 50%) */}
+          <line x1="45%" y1="12%" x2="65%" y2="50%" stroke="white" strokeWidth="1" />
+          
+          {/* LINE 2: Dot 4 (8%, 45%) → Dot 5 (65%, 50%) */}
+          <line x1="8%" y1="45%" x2="65%" y2="50%" stroke="white" strokeWidth="1" />
+          
+          {/* LINE 3: Dot 5 (65%, 50%) → Dot 6 (90%, 55%) - calculated from right:10% */}
+          <line x1="65%" y1="50%" x2="90%" y2="55%" stroke="white" strokeWidth="1" />
+          
+          {/* LINE 4: Dot 7 (35%, 75%) → Dot 8 (55%, 80%) */}
+          <line x1="35%" y1="75%" x2="55%" y2="80%" stroke="white" strokeWidth="1" />
+        </svg>
+      </div>
 
       {/* Orbital Circle System */}
       <svg
@@ -245,7 +347,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up" 
               style={{ animationDelay: '0s' }}
             >
-              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   147
                 </p>
@@ -259,7 +361,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8" 
               style={{ animationDelay: '1s' }}
             >
-              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   94%
                 </p>
@@ -273,7 +375,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-2" 
               style={{ animationDelay: '2s' }}
             >
-              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-2xl p-5 lg:p-6 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <div className="stat-card backdrop-blur-[10px] rounded-2xl p-5 lg:p-6 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.3)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
                 <p className="stat-number text-4xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   $4.2K
                 </p>
@@ -287,7 +389,7 @@ const HeroSection = () => {
               className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4" 
               style={{ animationDelay: '1.5s' }}
             >
-              <div className="stat-card bg-white/[0.08] backdrop-blur-[20px] rounded-xl p-4 border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+              <div className="stat-card backdrop-blur-[10px] rounded-xl p-4 border border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.25)]" style={{ background: 'rgba(255, 255, 255, 0.5)' }}>
                 <p className="stat-number text-2xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
                   340%
                 </p>
