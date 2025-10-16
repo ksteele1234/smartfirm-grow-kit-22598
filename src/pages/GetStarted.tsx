@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
@@ -24,11 +24,13 @@ import {
   Quote,
   Star,
   Clock,
-  Target
+  Target,
+  ChevronDown
 } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const GetStarted = () => {
+  const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
   useEffect(() => {
     // Load the booking script
     const script = document.createElement('script');
@@ -397,43 +399,63 @@ const GetStarted = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="sf-faqs" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
+      <section id="sf-faqs" className="py-[100px] md:py-[80px] bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
               Common Questions About Getting Started
             </h2>
-            <div className="space-y-6">
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  How do I get started?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  What is the pricing structure?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  Do you offer guarantees?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days.
-                </p>
-              </details>
-            </div>
+          </div>
+          
+          <div className="max-w-[800px] mx-auto space-y-4">
+            {[
+              {
+                question: "How do I get started?",
+                answer: "Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
+              },
+              {
+                question: "What is the pricing structure?",
+                answer: "Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote."
+              },
+              {
+                question: "Do you offer guarantees?",
+                answer: "We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
+              }
+            ].map((faq, index) => {
+              const isOpen = openFaqItem === index;
+              
+              return (
+                <div
+                  key={index}
+                  className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                >
+                  <button
+                    onClick={() => setOpenFaqItem(isOpen ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
+                  >
+                    <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
+                      {faq.question}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-6">
+                      <p className="text-base text-[#1e293b] leading-[1.7]">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         <script id="sf-faq-jsonld" type="application/ld+json">

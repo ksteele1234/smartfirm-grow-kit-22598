@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { HelpCircle, MessageSquare } from "lucide-react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const HomepageFAQSection = () => {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const faqs = [
     {
       question: "How is this different from other marketing agencies?",
@@ -57,44 +62,61 @@ const HomepageFAQSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#7AB2B2]/[0.12]">
-      <div className="container mx-auto px-6 max-w-[900px]">
+    <section className="py-[100px] md:py-[80px] bg-white">
+      <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#0a2e2e] mb-4">
+          <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
             Questions? We Have Answers.
           </h2>
-          <p className="text-[18px] lg:text-[20px] font-normal text-[#1e293b] leading-relaxed max-w-[800px] mx-auto">
+          <p className="text-lg text-[#334155] max-w-3xl mx-auto">
             Everything you need to know about building your marketing foundation with SmartFirm
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`faq-${index}`}
-              className="border border-gray-200 rounded-lg px-6 bg-white"
-            >
-              <AccordionTrigger className="text-left hover:no-underline py-4">
-                <div className="flex items-center gap-3">
-                  <HelpCircle className="h-5 w-5 text-[#0F4C5C] flex-shrink-0" />
-                  <span className="text-[20px] lg:text-[22px] font-bold text-[#243b55] leading-snug">
+        <div className="max-w-[800px] mx-auto space-y-4">
+          {faqs.map((faq, index) => {
+            const isOpen = openItems.includes(index);
+            
+            return (
+              <div
+                key={index}
+                className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+              >
+                {/* Question (Clickable) */}
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
+                >
+                  <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
                     {faq.question}
                   </span>
+                  
+                  {/* Chevron Icon */}
+                  <ChevronDown 
+                    className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Answer (Expandable) */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p className="text-base text-[#1e293b] leading-[1.7]">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
-              </AccordionTrigger>
-              <AccordionContent className="pt-3 pb-4">
-                <div className="max-w-[800px]">
-                  <p className="text-[16px] lg:text-[17px] font-normal text-[#1e293b] leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+              </div>
+            );
+          })}
+        </div>
 
         {/* Bottom CTA Section */}
         <div className="mt-16 bg-[#F8F9FA] border-2 border-[#0F4C5C] rounded-xl p-8 md:p-12 text-center">

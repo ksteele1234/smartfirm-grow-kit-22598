@@ -9,27 +9,32 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { 
   ArrowRight,
   Search,
-  HelpCircle,
   MessageSquare,
   Phone,
-  Mail
+  Mail,
+  ChevronDown
 } from "lucide-react";
 import { useState } from "react";
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [openItems, setOpenItems] = useState<{[key: string]: number[]}>({});
+
+  const toggleItem = (categoryIndex: number, itemIndex: number) => {
+    const key = `cat-${categoryIndex}`;
+    setOpenItems(prev => ({
+      ...prev,
+      [key]: prev[key]?.includes(itemIndex)
+        ? prev[key].filter(i => i !== itemIndex)
+        : [...(prev[key] || []), itemIndex]
+    }));
+  };
 
   const faqCategories = [
     {
@@ -254,42 +259,67 @@ const FAQ = () => {
 
 
         {/* FAQ Content */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-[100px] md:py-[80px] bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-[800px] mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-16">
-                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 flex items-center">
-                    <HelpCircle className="h-6 w-6 mr-3" />
+                  <h2 className="text-3xl font-bold text-[#0a2e2e] mb-8">
                     {category.category}
                   </h2>
                   
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {category.questions.map((faq, index) => (
-                      <AccordionItem
-                        key={index}
-                        value={`${categoryIndex}-${index}`}
-                        className="border border-border rounded-lg px-6 bg-background"
-                      >
-                        <AccordionTrigger className="text-left text-sm">
-                          {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground leading-relaxed">
-                          {faq.answer}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
+                  <div className="space-y-4">
+                    {category.questions.map((faq, index) => {
+                      const isOpen = openItems[`cat-${categoryIndex}`]?.includes(index);
+                      
+                      return (
+                        <div
+                          key={index}
+                          className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                        >
+                          {/* Question (Clickable) */}
+                          <button
+                            onClick={() => toggleItem(categoryIndex, index)}
+                            className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
+                          >
+                            <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
+                              {faq.question}
+                            </span>
+                            
+                            {/* Chevron Icon */}
+                            <ChevronDown 
+                              className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                                isOpen ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </button>
+
+                          {/* Answer (Expandable) */}
+                          <div
+                            className={`overflow-hidden transition-all duration-300 ${
+                              isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                            }`}
+                          >
+                            <div className="px-6 pb-6">
+                              <p className="text-base text-[#1e293b] leading-[1.7]">
+                                {faq.answer}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
 
               {filteredFAQs.length === 0 && searchTerm && (
                 <div className="text-center py-16">
-                  <HelpCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <MessageSquare className="h-16 w-16 text-[#334155] mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-[#0a2e2e] mb-2">
                     No matching questions found
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-[#334155] mb-6">
                     Try adjusting your search terms or browse the categories above.
                   </p>
                   <Button
@@ -305,67 +335,55 @@ const FAQ = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-20 md:py-28 bg-[#f8fafc]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-8">
                 Still Have Questions?
               </h2>
-              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+              <p className="text-lg text-[#334155] mb-10 leading-relaxed">
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
               
               <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <Card className="text-center p-6">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <MessageSquare className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">Live Chat</CardTitle>
-                    <CardDescription>
-                      Chat with our experts in real-time
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full">
-                      Start Chat
-                    </Button>
-                  </CardContent>
-                </Card>
+                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MessageSquare className="h-6 w-6 text-[#14b8a6]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Live Chat</h3>
+                  <p className="text-sm text-[#334155] mb-4">
+                    Chat with our experts in real-time
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    Start Chat
+                  </Button>
+                </div>
 
-                <Card className="text-center p-6">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">Phone Support</CardTitle>
-                    <CardDescription>
-                      Speak directly with our team
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full" asChild>
-                      <a href="tel:5416583789">(541) 658-3789</a>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Phone className="h-6 w-6 text-[#14b8a6]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Phone Support</h3>
+                  <p className="text-sm text-[#334155] mb-4">
+                    Speak directly with our team
+                  </p>
+                  <Button variant="outline" className="w-full" asChild>
+                    <a href="tel:5416583789">(541) 658-3789</a>
+                  </Button>
+                </div>
 
-                <Card className="text-center p-6">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">Email Support</CardTitle>
-                    <CardDescription>
-                      Get detailed answers via email
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full" asChild>
-                      <a href="mailto:contact@smartfirm.io">Send Email</a>
-                    </Button>
-                  </CardContent>
-                </Card>
+                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Mail className="h-6 w-6 text-[#14b8a6]" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Email Support</h3>
+                  <p className="text-sm text-[#334155] mb-4">
+                    Get detailed answers via email
+                  </p>
+                  <Button variant="outline" className="w-full" asChild>
+                    <a href="mailto:contact@smartfirm.io">Send Email</a>
+                  </Button>
+                </div>
               </div>
 
               <Button size="lg" variant="hero" asChild>

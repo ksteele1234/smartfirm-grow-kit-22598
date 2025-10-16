@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, ChevronDown } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -14,6 +14,8 @@ import {
 import SEO from "@/components/SEO";
 
 const Contact = () => {
+  const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
+  
   useEffect(() => {
     // Load the form script
     const script = document.createElement('script');
@@ -326,63 +328,71 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="sf-faqs" className="py-20 bg-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">
+      <section id="sf-faqs" className="py-[100px] md:py-[80px] bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-6">
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  How do I get started?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  What is the pricing structure?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  Do you offer guarantees?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  How quickly can we launch?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed.
-                </p>
-              </details>
-
-              <details className="group border border-border rounded-lg p-6 bg-background">
-                <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  Do you only work with accounting firms?
-                  <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
-                  Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement.
-                </p>
-              </details>
-            </div>
+          </div>
+          
+          <div className="max-w-[800px] mx-auto space-y-4">
+            {[
+              {
+                question: "How do I get started?",
+                answer: "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
+              },
+              {
+                question: "What is the pricing structure?",
+                answer: "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget."
+              },
+              {
+                question: "Do you offer guarantees?",
+                answer: "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them."
+              },
+              {
+                question: "How quickly can we launch?",
+                answer: "We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed."
+              },
+              {
+                question: "Do you only work with accounting firms?",
+                answer: "Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement."
+              }
+            ].map((faq, index) => {
+              const isOpen = openFaqItem === index;
+              
+              return (
+                <div
+                  key={index}
+                  className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                >
+                  <button
+                    onClick={() => setOpenFaqItem(isOpen ? null : index)}
+                    className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
+                  >
+                    <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
+                      {faq.question}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-6">
+                      <p className="text-base text-[#1e293b] leading-[1.7]">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         <script id="sf-faq-jsonld" type="application/ld+json">
