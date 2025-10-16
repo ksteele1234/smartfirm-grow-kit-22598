@@ -17,9 +17,9 @@ const QuickStartFeaturedCard = () => {
 
   return (
     <div className="relative bg-white/[0.08] backdrop-blur-[20px] border border-white/15 rounded-[24px] p-12 shadow-[0_0_48px_rgba(45,212,191,0.3),0_12px_48px_rgba(0,0,0,0.4)] transition-all duration-300 self-start">
-      {/* Early Adopter Badge */}
-      <div className="inline-block bg-[#FAFDD6] text-[#405D5D] text-xs font-semibold px-3 py-1.5 border border-[#0F4C5C] rounded mb-6">
-        Early Adopter Pricing
+      {/* Early Adopter Badge - Coral */}
+      <div className="inline-block bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
+        Early Adopter Pricing*
       </div>
 
       {/* Badge - Gold gradient */}
@@ -42,28 +42,28 @@ const QuickStartFeaturedCard = () => {
         Build your marketing foundation with a professional website, Google Business Profile optimization, review system, and automated client communications—all set up and working in 30 days.
       </p>
 
-      {/* Price Display */}
+      {/* Price Display - $999 on top */}
       <div className="mb-6">
-        {/* Setup Fee */}
+        {/* Monthly Fee - Prominent */}
         <div className="mb-4">
-          <div className="text-sm text-white/60 line-through mb-1">
-            Regular: $9,999
-          </div>
-          <div className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
-            $6,999
-          </div>
-          <div className="text-base text-white/70">One-time setup</div>
-        </div>
-
-        {/* Plus Sign */}
-        <div className="text-3xl font-bold text-white/50 text-center my-3">+</div>
-
-        {/* Monthly Fee */}
-        <div>
           <div className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1 animate-subtle-pulse">
             $999
           </div>
           <div className="text-base text-white/70">per month</div>
+        </div>
+
+        {/* Plus Sign */}
+        <div className="text-2xl font-bold text-white/40 text-center my-3">+</div>
+
+        {/* Setup Fee - Smaller */}
+        <div>
+          <div className="text-xs text-white/50 line-through mb-1">
+            Regular: $9,999
+          </div>
+          <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+            $6,999
+          </div>
+          <div className="text-sm text-white/60">One-time setup</div>
         </div>
       </div>
 
@@ -116,6 +116,11 @@ const QuickStartFeaturedCard = () => {
             />
           </DialogContent>
         </Dialog>
+
+        {/* Urgency Note */}
+        <p className="text-xs text-white/60 text-center mt-2">
+          *for the next 3 firms only
+        </p>
       </div>
     </div>
   );
