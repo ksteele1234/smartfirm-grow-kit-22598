@@ -195,6 +195,18 @@ export default {
         "magnetic": {
           "0%": { transform: "translate(0, 0)" },
           "100%": { transform: "translate(var(--mouse-x, 0), var(--mouse-y, 0))" }
+        },
+        "rotateClockwise": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" }
+        },
+        "rotateCounterClockwise": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" }
+        },
+        "subtlePulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.02)" }
         }
       },
       animation: {
@@ -203,7 +215,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "scale-hover": "scale-hover 0.2s ease-out",
-        "magnetic": "magnetic 0.15s ease-out"
+        "magnetic": "magnetic 0.15s ease-out",
+        "rotate-clockwise": "rotateClockwise 30s linear infinite",
+        "rotate-counter": "rotateCounterClockwise 40s linear infinite",
+        "subtle-pulse": "subtlePulse 2s ease-in-out infinite"
       },
     },
   },
