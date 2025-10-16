@@ -32,7 +32,7 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="px-12 py-5 text-xl font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white hover:translate-y-[-2px] shadow-[0_8px_32px_rgba(251,113,133,0.6)] hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-[pulse_2s_ease-in-out_infinite]"
+              className="px-12 py-5 text-xl font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white hover:translate-y-[-2px] shadow-[0_8px_32px_rgba(251,113,133,0.6)] hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl"
             >
               <Link to="/get-started">
                 Book Your Free Strategy Call
