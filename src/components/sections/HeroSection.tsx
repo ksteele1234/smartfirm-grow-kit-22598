@@ -155,7 +155,7 @@ const HeroSection = () => {
           <div className="order-2 lg:order-1 space-y-8">
             
             {/* Headline - Solid White */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
               Predictable Growth for Accounting Firms Without Wasting Time on Marketing
             </h1>
 
