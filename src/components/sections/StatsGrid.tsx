@@ -27,56 +27,86 @@ const StatsGrid = () => {
   ];
 
   return (
-    <section className="py-8 bg-transparent border-t border-b border-[#E2E8F0]">
-      <div className="container mx-auto px-6 max-w-[1200px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+    <section className="py-20 md:py-[80px] bg-white">
+      <div className="container mx-auto px-6 md:px-12 max-w-[1200px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`text-center py-6 px-4 ${
-                // Border-right logic: show on desktop except last item, on tablet except even items
-                index < 3 ? 'lg:border-r lg:border-[#E2E8F0]' : ''
-              } ${
-                index % 2 === 0 && index < 3 ? 'sm:border-r sm:border-[#E2E8F0] lg:border-r' : ''
-              }`}
+              className="stat-card-transform bg-white border border-slate-200 rounded-2xl p-10 md:p-12 text-center transition-all duration-300 hover:-translate-y-1"
+              style={{
+                boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(20, 184, 166, 0.08)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+              }}
             >
-              {/* The Number */}
+              {/* The Number with Gold Gradient */}
               <div
-                className="text-[56px] sm:text-[64px] lg:text-[72px] font-bold leading-none mb-3"
-                style={{ color: '#0F4C5C' }}
+                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+                style={{ 
+                  textShadow: '0 2px 4px rgba(251, 191, 36, 0.2)',
+                  fontWeight: 800
+                }}
               >
                 {stat.number}
               </div>
 
               {/* The Unit (for stats 3 & 4 only) */}
               {stat.unit && (
-                <div
-                  className="text-2xl font-normal -mt-2"
-                  style={{ color: '#666666' }}
-                >
+                <div className="text-xl font-medium text-slate-600 -mt-1 mb-3">
                   {stat.unit}
                 </div>
               )}
 
               {/* The Label */}
-              <div
-                className="text-base sm:text-[15px] lg:text-base font-semibold leading-[1.4] max-w-[220px] mx-auto mt-3"
-                style={{ color: '#1A202C' }}
-              >
+              <div className="text-base font-medium text-slate-600 leading-relaxed">
                 {stat.label}
               </div>
 
               {/* The Context */}
-              <div
-                className="text-sm font-normal italic leading-[1.4] mt-2"
-                style={{ color: '#666666' }}
-              >
+              <div className="text-sm font-normal italic text-slate-500 leading-relaxed mt-2">
                 {stat.context}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style>{`
+        @media (prefers-reduced-motion: no-preference) {
+          .stat-card-transform {
+            animation: fadeInUp 600ms ease-out forwards;
+            opacity: 0;
+          }
+          .stat-card-transform:nth-child(1) {
+            animation-delay: 100ms;
+          }
+          .stat-card-transform:nth-child(2) {
+            animation-delay: 200ms;
+          }
+          .stat-card-transform:nth-child(3) {
+            animation-delay: 300ms;
+          }
+          .stat-card-transform:nth-child(4) {
+            animation-delay: 400ms;
+          }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -161,7 +161,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
-              <p className="text-xl text-white/70 leading-relaxed max-w-[600px] mb-8">
+              <p className="text-xl leading-relaxed max-w-[600px] mb-8 font-medium" style={{ color: 'rgba(255, 255, 255, 0.9)', textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>
                 SmartFirm is the best marketing agency for accountants, CPAs, bookkeepers, and tax preparers. We deliver marketing automation, lead generation, and SEO services designed to get more accounting clients and keep them longer.
               </p>
             </div>
