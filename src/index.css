@@ -340,3 +340,42 @@ All colors MUST be HSL converted from the official brand colors.
     @apply bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent;
   }
 }
+
+/* ============================================
+   WAVE CLIP-PATH SYSTEM
+   ============================================ */
+
+/* Desktop waves (120px height) */
+@media (min-width: 769px) {
+  .wave-bottom {
+    clip-path: url(#wave-bottom-desktop);
+    padding-bottom: 120px;
+  }
+  
+  .wave-top {
+    clip-path: url(#wave-top-desktop);
+    padding-top: 120px;
+  }
+}
+
+/* Mobile waves (80px height) */
+@media (max-width: 768px) {
+  .wave-bottom {
+    clip-path: url(#wave-bottom-mobile);
+    padding-bottom: 80px;
+  }
+  
+  .wave-top {
+    clip-path: url(#wave-top-mobile);
+    padding-top: 80px;
+  }
+}
+
+/* Eliminate sub-pixel gaps */
+.wave-bottom {
+  margin-bottom: -1px;
+}
+
+.wave-top {
+  margin-top: -1px;
+}

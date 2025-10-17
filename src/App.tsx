@@ -78,6 +78,31 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <Toaster />
+      {/* Global wave clip-path definitions */}
+      <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }} aria-hidden="true">
+        <defs>
+          {/* BOTTOM WAVE - Desktop (120px height) */}
+          <clipPath id="wave-bottom-desktop" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 L1,0 L1,0.92 Q0.75,1 0.5,0.92 T0,0.92 Z" />
+          </clipPath>
+          
+          {/* BOTTOM WAVE - Mobile (80px height) */}
+          <clipPath id="wave-bottom-mobile" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 L1,0 L1,0.88 Q0.75,1 0.5,0.88 T0,0.88 Z" />
+          </clipPath>
+          
+          {/* TOP WAVE - Desktop (120px height) */}
+          <clipPath id="wave-top-desktop" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.08 Q0.25,0 0.5,0.08 T1,0.08 L1,1 L0,1 Z" />
+          </clipPath>
+          
+          {/* TOP WAVE - Mobile (80px height) */}
+          <clipPath id="wave-top-mobile" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.12 Q0.25,0 0.5,0.12 T1,0.12 L1,1 L0,1 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
