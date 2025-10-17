@@ -8,7 +8,7 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
-import { WaveDivider } from "@/components/ui/wave-divider";
+
 
 interface IndustryPageTemplateProps {
   data: IndustryPageData;
@@ -82,10 +82,9 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative py-16 md:py-20 pb-32 md:pb-40 overflow-hidden"
+          className="relative pt-32 pb-20 overflow-hidden wave-bottom"
           style={{
-            background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)',
-            paddingBottom: '20px'
+            background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
           }}
         >
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -104,11 +103,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         </div>
       </section>
 
-      {/* Wave: Hero → Content (navy → white) */}
-      <WaveDivider fromColor="#002d5c" toColor="#ffffff" direction="down" />
-
       {/* Industry Overview Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
@@ -138,7 +134,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="py-16 md:py-20 bg-[#f8fafc]">
+      <section className="py-16 md:py-20 bg-[#f8fafc] wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -172,7 +168,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -203,7 +199,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-16 md:py-20 bg-[#f8fafc]">
+      <section className="py-16 md:py-20 bg-[#f8fafc] wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -237,7 +233,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
+      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] wave-bottom">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
@@ -264,16 +260,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         </script>
       </section>
 
-      {/* Wave: Before Final CTA (white → dark navy) */}
-      <WaveDivider fromColor="#ffffff" toColor="#00133d" direction="up" />
-
       {/* Final CTA Section */}
       <section 
-        className="py-16 px-4 sm:px-6 lg:px-8 text-white"
+        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
         style={{
-          background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)',
-          paddingTop: '20px',
-          paddingBottom: '32px'
+          background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
         }}
       >
         <div className="max-w-4xl mx-auto text-center">
@@ -290,9 +281,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
-
-      {/* Wave: After Final CTA (navy → white) */}
-      <WaveDivider fromColor="#002d5c" toColor="#ffffff" direction="down" />
       </main>
       
       <Footer />
