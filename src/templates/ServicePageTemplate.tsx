@@ -338,7 +338,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Wave: Hero (blue) → Benefits (white) */}
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
+        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
+      </div>
 
       {/* Benefits Section - White Background */}
       <section className="pt-5 pb-10 md:pt-5 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
@@ -449,9 +451,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
-      {/* Wave: Features (white) → Final CTA (blue) */}
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
-
       {/* FAQs Section - White Background (Moved before Final CTA) */}
       <section id="sf-faqs" className="pt-16 pb-16 md:pt-16 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -521,7 +520,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Wave: FAQ (white) → Final CTA (blue) */}
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
+      </div>
 
       {/* Final CTA Section - Blue Gradient Background */}
       <section className="pt-5 pb-0 md:pt-5 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
@@ -566,9 +567,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
-      {/* Wave: Final CTA (blue) → Footer (white) */}
-      <div className="w-full" style={{ marginTop: 0, marginBottom: 0 }}>
-        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
+      {/* Wave: Final CTA (blue) → Footer (dark teal) */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
+        <WaveDivider fromColor="#4a7ba7" toColor="#0a2e2e" direction="down" />
       </div>
 
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
