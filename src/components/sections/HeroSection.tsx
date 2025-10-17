@@ -128,11 +128,16 @@ const HeroSection = () => {
       
       <section
       className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip"
+      style={{
+        backgroundImage: `url(${heroWaveBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
-      {/* Video Background Layer */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 0 }}>
-        {/* Video for Desktop (100% opacity on video itself, using overlay for darkening) */}
-        {!isMobile && (
+      {/* Video Layer - Desktop Only */}
+      {!isMobile && (
+        <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 0 }}>
           <video
             autoPlay
             loop
@@ -141,37 +146,22 @@ const HeroSection = () => {
             preload="auto"
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 1 }}
+            style={{ opacity: 0.2 }}
             poster="/images/hero-poster.jpg"
           >
             <source src="/videos/hero-background.mp4" type="video/mp4" />
           </video>
-        )}
-        
-        {/* Mobile Fallback - Original Background Image */}
-        {isMobile && (
-          <div 
-            className="absolute inset-0"
-            style={{ 
-              backgroundImage: `url(${heroWaveBackground})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-        )}
-        
-        {/* Dark overlay for readability (desktop video only) */}
-        {!isMobile && (
+          
+          {/* Dark overlay for readability */}
           <div 
             className="absolute inset-0" 
             style={{ 
-              background: 'rgba(0, 0, 0, 0.3)',
+              background: 'rgba(0, 0, 0, 0.4)',
               zIndex: 1
             }}
           />
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
