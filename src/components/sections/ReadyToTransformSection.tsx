@@ -7,7 +7,7 @@ const ReadyToTransformSection = () => {
     <section className="relative pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-gradient-to-br from-[#0a2e2e] to-[#134444] overflow-hidden">
       {/* Orbital Circle System - 3 circles rotating in lower right corner */}
       <svg 
-        className="absolute w-[400px] h-[400px] z-[1] hidden lg:block opacity-50"
+        className="absolute w-[400px] h-[400px] z-[1] hidden lg:block opacity-75"
         style={{ right: 'calc(8% + 120px)', bottom: 'calc(8% - 80px)' }}
       >
         {/* Circle 1 (r=100): Clockwise rotation, 30s */}
