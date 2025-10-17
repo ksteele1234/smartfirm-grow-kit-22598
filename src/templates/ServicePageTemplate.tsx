@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
+import { WaveDivider } from "@/components/ui/wave-divider";
 
 const heroStyles = `
   @keyframes rotateClockwise {
@@ -117,8 +118,15 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       />
       <Header />
       
+      <main>
       {/* Hero Section - Blue Gradient Background */}
-      <section className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-visible">
+      <section 
+        className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-visible"
+        style={{
+          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)',
+          paddingBottom: '20px'
+        }}
+      >
         <style>{heroStyles}</style>
         
         {/* Breadcrumbs */}
@@ -336,6 +344,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
+      {/* Wave: Hero → Benefits (blue → white) */}
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
+
       {/* Benefits Section - White Background */}
       <section className="pt-5 pb-10 md:pt-5 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="max-w-7xl mx-auto">
@@ -513,8 +524,18 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </script>
       </section>
 
+      {/* Wave: Before Final CTA (white → blue) */}
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
+
       {/* Final CTA Section - Blue Gradient Background */}
-      <section className="pt-0 pb-0 md:pt-0 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
+      <section 
+        className="pt-0 pb-0 md:pt-0 md:pb-0 px-4 sm:px-6 lg:px-8 text-white overflow-visible mb-0"
+        style={{
+          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)',
+          paddingTop: '20px',
+          paddingBottom: '32px'
+        }}
+      >
         <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
@@ -555,6 +576,10 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </motion.div>
         </div>
       </section>
+
+      {/* Wave: After Final CTA (blue → white) */}
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
+      </main>
 
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
         {JSON.stringify({

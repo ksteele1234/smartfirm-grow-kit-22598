@@ -9,6 +9,7 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+import { WaveDivider } from "@/components/ui/wave-divider";
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
@@ -112,6 +113,9 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </a>
         </div>
       </section>
+
+      {/* Wave: Hero → Content (teal → white) */}
+      <WaveDivider fromColor="#2d8a99" toColor="#ffffff" direction="down" />
 
       {/* Problem & Solution Section */}
       <section className="py-10 md:py-20 px-4 md:px-[72px] relative bg-white">
@@ -285,8 +289,18 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         </script>
       </section>
 
+      {/* Wave: Before Final CTA (white → dark teal) */}
+      <WaveDivider fromColor="#ffffff" toColor="#165c6c" direction="up" />
+
       {/* Final CTA Section */}
-      <section className="py-12 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white relative overflow-hidden">
+      <section 
+        className="py-12 md:py-20 px-4 md:px-[72px] text-white relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg, #165c6c 0%, #2d8a99 100%)',
+          paddingTop: '20px',
+          paddingBottom: '32px'
+        }}
+      >
         <div className="max-w-[800px] mx-auto text-center relative space-y-6 md:space-y-8">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
           <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
@@ -303,6 +317,9 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
         </div>
       </section>
+
+      {/* Wave: After Final CTA (teal → white) */}
+      <WaveDivider fromColor="#2d8a99" toColor="#ffffff" direction="down" />
 
       {/* Sticky Mobile CTA */}
       {showStickyFAB && (
