@@ -144,40 +144,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </nav>
         
         <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[500px] pt-8">
-          {/* Video Background Layer */}
-          <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 0 }}>
-            {typeof window !== 'undefined' && window.innerWidth >= 768 ? (
-              <>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  style={{ opacity: 0.15 }}
-                >
-                  <source src="/videos/hero-background.mp4" type="video/mp4" />
-                </video>
-                
-                {/* Dark overlay for better text readability */}
-                <div 
-                  className="absolute inset-0" 
-                  style={{ 
-                    background: 'linear-gradient(135deg, rgba(36, 59, 85, 0.85) 0%, rgba(74, 123, 167, 0.85) 100%)' 
-                  }}
-                />
-              </>
-            ) : (
-              <div 
-                className="absolute inset-0" 
-                style={{ 
-                  background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)' 
-                }} 
-              />
-            )}
-          </div>
-          
           {/* Hero Content - Centered */}
           <div className="hero-content relative z-10 text-center max-w-[800px] px-4">
             <motion.h1 
@@ -232,7 +198,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
           
           {/* Hero Graphics - Orbital Circles */}
-          <div className="hero-graphics absolute inset-0 z-[2] pointer-events-none">
+          <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
             {/* Glass Bubble with Settings Icon */}
             <div 
               className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] bg-white/8 backdrop-blur-[20px] border border-white/12 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] z-[15]"
