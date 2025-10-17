@@ -521,11 +521,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
 
       {/* Wave: FAQ (white) → Final CTA (blue) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" />
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
       </div>
 
       {/* Final CTA Section - Blue Gradient Background */}
-      <section className="pt-5 pb-0 md:pt-5 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
+      <section className="pt-0 pb-0 md:pt-0 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
         <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
