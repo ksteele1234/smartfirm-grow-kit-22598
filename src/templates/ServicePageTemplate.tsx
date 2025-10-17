@@ -176,7 +176,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
             {/* Glass Bubble with Settings Icon */}
             <div 
-              className="absolute top-10 left-10 w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] bg-white/8 backdrop-blur-[20px] border border-white/12 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] z-[15]"
+              className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] bg-white/8 backdrop-blur-[20px] border border-white/12 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] z-[15]"
               style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
             >
               <Settings className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-[#14b8a6]" style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} />
@@ -187,7 +187,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Outer Circle (400px) - Clockwise */}
               <div 
                 className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
-                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateClockwise 60s linear infinite' }}
+                style={{ transform: 'translate(calc(-50% + 500px), -50%)', animation: 'rotateClockwise 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 200px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
@@ -202,7 +202,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Middle Circle (250px) - Counter-clockwise */}
               <div 
                 className="absolute top-1/2 left-1/2 w-[250px] h-[250px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
-                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateCounterClockwise 60s linear infinite' }}
+                style={{ transform: 'translate(calc(-50% + 500px), -50%)', animation: 'rotateCounterClockwise 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.1s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
@@ -217,7 +217,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Inner Circle (100px) - Clockwise */}
               <div 
                 className="absolute top-1/2 left-1/2 w-[100px] h-[100px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
-                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateClockwise 60s linear infinite' }}
+                style={{ transform: 'translate(calc(-50% + 500px), -50%)', animation: 'rotateClockwise 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.15s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.35s' }} />
@@ -235,7 +235,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Outer Circle (280px) - Clockwise */}
               <div 
                 className="absolute w-[280px] h-[280px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
-                style={{ bottom: '70px', right: '-120px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
+                style={{ bottom: '270px', right: '-120px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 140px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
@@ -248,7 +248,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Middle Circle (210px) - Counter-clockwise */}
               <div 
                 className="absolute w-[210px] h-[210px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
-                style={{ bottom: '105px', right: '-85px', animation: 'rotateCounterClockwiseBottomRight 60s linear infinite' }}
+                style={{ bottom: '305px', right: '-85px', animation: 'rotateCounterClockwiseBottomRight 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 105px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
@@ -261,7 +261,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Inner Circle (140px) - Clockwise */}
               <div 
                 className="absolute w-[140px] h-[140px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
-                style={{ bottom: '140px', right: '-50px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
+                style={{ bottom: '340px', right: '-50px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 70px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
@@ -275,7 +275,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Outer Circle (260px) - Clockwise */}
               <div 
                 className="absolute w-[260px] h-[260px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
-                style={{ top: '-290px', left: '-80px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
+                style={{ top: '-140px', left: '-80px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 130px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
@@ -288,7 +288,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Middle Circle (190px) - Counter-clockwise */}
               <div 
                 className="absolute w-[190px] h-[190px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
-                style={{ top: '-255px', left: '-45px', animation: 'rotateCounterClockwiseUpperLeft 60s linear infinite' }}
+                style={{ top: '-105px', left: '-45px', animation: 'rotateCounterClockwiseUpperLeft 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 95px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
@@ -301,7 +301,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               {/* Inner Circle (120px) - Clockwise */}
               <div 
                 className="absolute w-[120px] h-[120px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
-                style={{ top: '-220px', left: '-10px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
+                style={{ top: '-70px', left: '-10px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
               >
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 60px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 60px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
@@ -324,7 +324,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         })}
       </script>
       
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
+      <WaveDivider fromColor="#243b55" toColor="#4a7ba7" direction="down" useGradient={true} className="-mt-px" />
 
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
