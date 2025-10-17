@@ -3,7 +3,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServicePageData } from "@/types/cms";
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight, Settings } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
 import { WaveDivider } from "@/components/ui/wave-divider";
@@ -11,6 +11,72 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+
+const heroStyles = `
+  @keyframes rotateClockwise {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  @keyframes rotateClockwiseBottomRight {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes rotateClockwiseUpperLeft {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(-360deg); }
+  }
+  
+  @keyframes rotateCounterClockwiseBottomRight {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+  
+  @keyframes rotateCounterClockwiseUpperLeft {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+  
+  @keyframes bubble-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  @keyframes pulse-dot {
+    0%, 100% { 
+      transform: scale(1); 
+      opacity: 0.6; 
+    }
+    50% { 
+      transform: scale(1.5); 
+      opacity: 1; 
+    }
+  }
+  
+  @keyframes pulse-button {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .orbital-circle-set-1 { transform: scale(0.7) translate(-71.4%, -71.4%); }
+    .orbital-circle-set-2 { transform: scale(0.7); }
+    .orbital-circle-set-3 { transform: scale(0.7); }
+  }
+`;
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
@@ -51,26 +117,201 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       />
       <Header />
       
-      {/* Breadcrumbs */}
-      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
-        <div className="container mx-auto px-4 lg:px-6 py-1.5">
-          <Breadcrumb>
-            <BreadcrumbList className="text-sm text-muted-foreground">
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/services">Services</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', '')}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+      {/* Hero Section with Breadcrumbs */}
+      <section className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
+        <style>{heroStyles}</style>
+        
+        {/* Breadcrumbs - Subtle */}
+        <nav id="sf-breadcrumbs" className="absolute top-0 left-0 right-0 pt-4 z-20" aria-label="Breadcrumb">
+          <div className="max-w-[1400px] mx-auto px-4">
+            <Breadcrumb>
+              <BreadcrumbList className="text-xs text-white/60">
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/" className="hover:text-white/80">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-white/40" />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/services" className="hover:text-white/80">Services</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="text-white/40" />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="text-white/60">{data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', '')}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+        </nav>
+        
+        <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[500px] pt-8">
+          {/* Hero Content - Centered */}
+          <div className="hero-content relative z-10 text-center max-w-[800px] px-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-[Poppins]">
+              {data.heroTitle}
+            </h1>
+            
+            <div id="sf-keyword-intro">
+              <p className="text-lg md:text-xl text-white/90 leading-[1.7] mb-8">
+                {data.heroSubtitle}
+              </p>
+            </div>
+            
+            <p className="text-lg md:text-xl text-white/90 leading-[1.7] mb-8">
+              {data.heroDescription}
+            </p>
+            
+            <Button 
+              size="lg"
+              className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] transition-all duration-200"
+              style={{ animation: 'pulse-button 2s ease-in-out infinite' }}
+              asChild
+            >
+              <a href="/get-started">
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+          </div>
+          
+          {/* Hero Graphics - Behind content */}
+          <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
+            {/* Glass Bubble with Settings Icon */}
+            <div 
+              className="absolute top-10 left-10 w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] bg-white/8 backdrop-blur-[20px] border border-white/12 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] z-[15]"
+              style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
+            >
+              <Settings className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-[#14b8a6]" style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} />
+            </div>
+            
+            {/* SET 1: CENTER/MAIN - ALL TEAL */}
+            <div className="orbital-circle-set-1">
+              {/* Outer Circle (400px) - Clockwise */}
+              <div 
+                className="absolute top-1/2 left-1/2 w-[400px] h-[400px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateClockwise 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 200px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 200px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
+              </div>
+              
+              {/* Middle Circle (250px) - Counter-clockwise */}
+              <div 
+                className="absolute top-1/2 left-1/2 w-[250px] h-[250px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateCounterClockwise 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.7s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.3s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
+              </div>
+              
+              {/* Inner Circle (100px) - Clockwise */}
+              <div 
+                className="absolute top-1/2 left-1/2 w-[100px] h-[100px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                style={{ transform: 'translate(-50%, -50%)', animation: 'rotateClockwise 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.15s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.35s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.75s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.95s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 1.15s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 1.55s' }} />
+              </div>
+            </div>
+            
+            {/* SET 2: BOTTOM RIGHT - ALL GOLD */}
+            <div className="orbital-circle-set-2">
+              {/* Outer Circle (280px) - Clockwise */}
+              <div 
+                className="absolute w-[280px] h-[280px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
+                style={{ bottom: '70px', right: '-120px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 140px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 121px)', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 140px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 121px)', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
+              </div>
+              
+              {/* Middle Circle (210px) - Counter-clockwise */}
+              <div 
+                className="absolute w-[210px] h-[210px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
+                style={{ bottom: '105px', right: '-85px', animation: 'rotateCounterClockwiseBottomRight 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 105px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 91px)', top: 'calc(50% + 52px)', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 105px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 91px)', top: 'calc(50% + 52px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
+              </div>
+              
+              {/* Inner Circle (140px) - Clockwise */}
+              <div 
+                className="absolute w-[140px] h-[140px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
+                style={{ bottom: '140px', right: '-50px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% + 70px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 70px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
+              </div>
+            </div>
+            
+            {/* SET 3: UPPER LEFT - ALL CORAL */}
+            <div className="orbital-circle-set-3">
+              {/* Outer Circle (260px) - Clockwise */}
+              <div 
+                className="absolute w-[260px] h-[260px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
+                style={{ top: '-290px', left: '-80px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 130px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 113px)', top: 'calc(50% + 65px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 130px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 113px)', top: 'calc(50% + 65px)', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
+              </div>
+              
+              {/* Middle Circle (190px) - Counter-clockwise */}
+              <div 
+                className="absolute w-[190px] h-[190px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
+                style={{ top: '-255px', left: '-45px', animation: 'rotateCounterClockwiseUpperLeft 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 95px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 82px)', top: 'calc(50% + 47px)', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 95px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 82px)', top: 'calc(50% + 47px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
+              </div>
+              
+              {/* Inner Circle (120px) - Clockwise */}
+              <div 
+                className="absolute w-[120px] h-[120px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
+                style={{ top: '-220px', left: '-10px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
+              >
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 60px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% + 60px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 60px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
+                <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 60px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
+              </div>
+            </div>
+          </div>
         </div>
-      </nav>
+      </section>
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
@@ -82,52 +323,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           ]
         })}
       </script>
-      
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-32 md:pb-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
-                {data.heroTitle}
-              </h1>
-              <div id="sf-keyword-intro">
-                <p className="text-xl text-white/95 mb-6 drop-shadow-md">
-                  {data.heroSubtitle}
-                </p>
-              </div>
-              <p className="text-lg text-white/90 mb-8 drop-shadow-md">
-                {data.heroDescription}
-              </p>
-              <p className="text-white/85 mb-8 drop-shadow-md">
-                Discover <a href="/solutions" data-sf="internal-add" className="text-white underline hover:text-white/80">our solutions</a>, read <a href="/case-studies" data-sf="internal-add" className="text-white underline hover:text-white/80">client success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-white underline hover:text-white/80">AICPA resources</a>.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" className="group bg-white text-[#3A4A6C] hover:bg-white/90" asChild>
-                  <a href="/get-started">
-                    Get Started Today
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/20 hover:bg-white/20" asChild>
-                  <a href="/services">
-                    Learn More
-                  </a>
-                </Button>
-              </div>
-            </div>
-            {data.heroImage && (
-              <div className="relative">
-                <img 
-                  src={data.heroImage} 
-                  alt={data.heroTitle}
-                  className="rounded-lg shadow-xl"
-                />
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
       
       <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
