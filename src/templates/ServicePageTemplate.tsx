@@ -14,8 +14,8 @@ import SEO from "@/components/SEO";
 
 const heroStyles = `
   @keyframes rotateClockwise {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
   }
   
   @keyframes rotateClockwiseBottomRight {
@@ -29,8 +29,8 @@ const heroStyles = `
   }
   
   @keyframes rotateCounterClockwise {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(-360deg); }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
   }
   
   @keyframes rotateCounterClockwiseBottomRight {
@@ -72,7 +72,7 @@ const heroStyles = `
   }
   
   @media (max-width: 768px) {
-    .orbital-circle-set-1 { transform: scale(0.7) translate(-71.4%, -71.4%); }
+    .orbital-circle-set-1 { transform: scale(0.7); }
     .orbital-circle-set-2 { transform: scale(0.7); }
     .orbital-circle-set-3 { transform: scale(0.7); }
   }

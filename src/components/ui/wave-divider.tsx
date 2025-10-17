@@ -26,7 +26,7 @@ export const WaveDivider = ({
   const pathData = direction === "down" ? downPath : upPath;
 
   return (
-    <div className={cn("w-full -mt-1 -mb-1 leading-[0]", className)} style={{ backgroundColor: useGradient ? (direction === "down" ? fromColor : toColor) : (direction === "down" ? fromColor : toColor) }}>
+    <div className={cn("w-full -mt-1 -mb-1 leading-[0]", className)} style={{ backgroundColor: useGradient ? 'transparent' : (direction === "down" ? fromColor : toColor) }}>
       <svg 
         className="block w-full h-[60px] md:h-[80px]"
         viewBox="0 0 1440 100" 
