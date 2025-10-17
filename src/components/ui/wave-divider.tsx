@@ -17,11 +17,11 @@ export const WaveDivider = ({
   id = `wave-${Math.random().toString(36).substr(2, 9)}`,
   useGradient = false
 }: WaveDividerProps) => {
-  // Down curve: wave goes down in the middle
-  const downPath = "M0,50 Q360,80 720,50 T1440,50 L1440,100 L0,100 Z";
-  
-  // Up curve: wave goes up in the middle
-  const upPath = "M0,50 Q360,20 720,50 T1440,50 L1440,0 L0,0 Z";
+   // Down curve: wave goes down in the middle but starts at the very top to avoid top stripe
+   const downPath = "M0,0 Q360,30 720,0 T1440,0 L1440,100 L0,100 Z";
+   
+   // Up curve: wave goes up in the middle and anchors at the very bottom to avoid bottom stripe
+   const upPath = "M0,100 Q360,70 720,100 T1440,100 L1440,0 L0,0 Z";
   
   const pathData = direction === "down" ? downPath : upPath;
 
