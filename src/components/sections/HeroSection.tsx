@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -98,6 +99,8 @@ const styles = `
 `;
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   // Counter animations (trigger on page load)
   const leads = useCounterAnimation(147, { triggerOnLoad: true, duration: 2000 });
   const retention = useCounterAnimation(94, { triggerOnLoad: true, duration: 2000, isPercentage: true });
@@ -125,64 +128,53 @@ const HeroSection = () => {
       
       <section
       className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip"
-      style={{
-        backgroundImage: `url(${heroWaveBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
-      {/* Orbital Circle System */}
-      <svg
-        className="absolute right-[10%] top-[35%] w-[400px] h-[400px] z-[2] hidden lg:block"
-        viewBox="0 0 400 400"
-        style={{ 
-          filter: 'drop-shadow(0 0 8px rgba(45, 212, 191, 0.4))',
-          opacity: 0.5
-        }}
-      >
-        {/* Circle 1 (r=100) - Rotates Clockwise with Dots */}
-        <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 30s linear infinite' }}>
-          <circle cx="200" cy="200" r="100" stroke="#2dd4bf" strokeWidth="2" fill="none" opacity="0.5" />
-          <circle cx="300" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="270.71" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="300" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="129.29" cy="270.71" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="100" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="129.29" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="100" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="270.71" cy="129.29" r="3" fill="#5eead4" opacity="0.6" />
-        </g>
+      {/* Video Background Layer */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 0 }}>
+        {/* Video for Desktop (100% opacity on video itself, using overlay for darkening) */}
+        {!isMobile && (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: 1 }}
+            poster="/images/hero-poster.jpg"
+          >
+            <source src="/videos/hero-background.mp4" type="video/mp4" />
+          </video>
+        )}
         
-        {/* Circle 2 (r=140) - Rotates Counter-Clockwise with Dots */}
-        <g style={{ transformOrigin: 'center', animation: 'rotateCounterClockwise 40s linear infinite' }}>
-          <circle cx="200" cy="200" r="140" stroke="#2dd4bf" strokeWidth="1.5" fill="none" opacity="0.4" />
-          <circle cx="340" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="298.99" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="340" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="101.01" cy="298.99" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="60" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="101.01" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="60" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="298.99" cy="101.01" r="3" fill="#5eead4" opacity="0.6" />
-        </g>
+        {/* Mobile Fallback - Original Background Image */}
+        {isMobile && (
+          <div 
+            className="absolute inset-0"
+            style={{ 
+              backgroundImage: `url(${heroWaveBackground})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+        )}
         
-        {/* Circle 3 (r=180) - Rotates Clockwise with Dots */}
-        <g style={{ transformOrigin: 'center', animation: 'rotateClockwise 50s linear infinite' }}>
-          <circle cx="200" cy="200" r="180" stroke="#2dd4bf" strokeWidth="1" fill="none" opacity="0.3" />
-          <circle cx="380" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="327.28" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="380" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="72.72" cy="327.28" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="20" cy="200" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="72.72" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="200" cy="20" r="3" fill="#5eead4" opacity="0.6" />
-          <circle cx="327.28" cy="72.72" r="3" fill="#5eead4" opacity="0.6" />
-        </g>
-      </svg>
+        {/* Dark overlay for readability (desktop video only) */}
+        {!isMobile && (
+          <div 
+            className="absolute inset-0" 
+            style={{ 
+              background: 'rgba(0, 0, 0, 0.3)',
+              zIndex: 1
+            }}
+          />
+        )}
+      </div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12">
+      <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
         <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
           
           {/* Left Column - Content */}
