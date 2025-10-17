@@ -1,16 +1,15 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Settings } from "lucide-react";
-import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import { StandardCard } from "@/components/ui/standard-card";
 import { WaveDivider } from "@/components/ui/wave-divider";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
 
 const heroStyles = `
   @keyframes rotateClockwise {
@@ -82,6 +81,8 @@ interface ServicePageTemplateProps {
   data: ServicePageData;
 }
 
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
   const defaultFAQs = [
     {
@@ -117,11 +118,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       />
       <Header />
       
-      {/* Hero Section with Breadcrumbs */}
+      {/* Hero Section - Blue Gradient Background */}
       <section className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
         <style>{heroStyles}</style>
         
-        {/* Breadcrumbs - Subtle */}
+        {/* Breadcrumbs */}
         <nav id="sf-breadcrumbs" className="absolute top-0 left-0 right-0 pt-4 z-20" aria-label="Breadcrumb">
           <div className="max-w-[1400px] mx-auto px-4">
             <Breadcrumb>
@@ -145,34 +146,58 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[500px] pt-8">
           {/* Hero Content - Centered */}
           <div className="hero-content relative z-10 text-center max-w-[800px] px-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-[Poppins]">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
               {data.heroTitle}
-            </h1>
+            </motion.h1>
             
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-white/90 leading-[1.7] mb-8">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                className="text-lg md:text-xl text-white/90 leading-relaxed mb-4"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
                 {data.heroSubtitle}
-              </p>
+              </motion.p>
             </div>
             
-            <p className="text-lg md:text-xl text-white/90 leading-[1.7] mb-8">
-              {data.heroDescription}
-            </p>
-            
-            <Button 
-              size="lg"
-              className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] transition-all duration-200"
-              style={{ animation: 'pulse-button 2s ease-in-out infinite' }}
-              asChild
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="text-lg md:text-xl text-white/80 leading-relaxed mb-8"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              <a href="/get-started">
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
+              {data.heroDescription}
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            >
+              <Button 
+                size="lg"
+                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] transition-all duration-200"
+                style={{ animation: 'pulse-button 2s ease-in-out infinite' }}
+                asChild
+              >
+                <a href="/get-started">
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </motion.div>
           </div>
           
-          {/* Hero Graphics - Behind content */}
+          {/* Hero Graphics - Orbital Circles */}
           <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
             {/* Glass Bubble with Settings Icon */}
             <div 
@@ -184,12 +209,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             
             {/* SET 1: CENTER/MAIN - ALL TEAL */}
             <div className="orbital-circle-set-1">
-              {/* Positioning wrapper to offset the set 500px to the right */}
               <div 
                 className="absolute top-1/2 left-1/2"
                 style={{ transform: 'translate(calc(-50% + 500px), -50%)' }}
               >
-                {/* Outer Circle (400px) - Clockwise */}
+                {/* Outer Circle (400px) */}
                 <div 
                   className="absolute w-[400px] h-[400px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
                   style={{ top: 'calc(50% - 200px)', left: 'calc(50% - 200px)', animation: 'rotateClockwise 60s linear infinite' }}
@@ -204,7 +228,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                   <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
                 </div>
                 
-                {/* Middle Circle (250px) - Counter-clockwise */}
+                {/* Middle Circle (250px) */}
                 <div 
                   className="absolute w-[250px] h-[250px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
                   style={{ top: 'calc(50% - 125px)', left: 'calc(50% - 125px)', animation: 'rotateCounterClockwise 60s linear infinite' }}
@@ -219,7 +243,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                   <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
                 </div>
                 
-                {/* Inner Circle (100px) - Clockwise */}
+                {/* Inner Circle (100px) */}
                 <div 
                   className="absolute w-[100px] h-[100px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
                   style={{ top: 'calc(50% - 50px)', left: 'calc(50% - 50px)', animation: 'rotateClockwise 60s linear infinite' }}
@@ -238,7 +262,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             
             {/* SET 2: BOTTOM RIGHT - ALL GOLD */}
             <div className="orbital-circle-set-2">
-              {/* Outer Circle (280px) - Clockwise */}
               <div 
                 className="absolute w-[280px] h-[280px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
                 style={{ bottom: '270px', right: '-120px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
@@ -251,7 +274,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
               </div>
               
-              {/* Middle Circle (210px) - Counter-clockwise */}
               <div 
                 className="absolute w-[210px] h-[210px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
                 style={{ bottom: '305px', right: '-85px', animation: 'rotateCounterClockwiseBottomRight 60s linear infinite' }}
@@ -264,7 +286,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 <div className="absolute w-2 h-2 rounded-full bg-[#fbbf24] -ml-1 -mt-1" style={{ left: 'calc(50% - 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
               </div>
               
-              {/* Inner Circle (140px) - Clockwise */}
               <div 
                 className="absolute w-[140px] h-[140px] border-[3px] border-[rgba(251,191,36,0.4)] rounded-full"
                 style={{ bottom: '340px', right: '-50px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
@@ -278,7 +299,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             
             {/* SET 3: UPPER LEFT - ALL CORAL */}
             <div className="orbital-circle-set-3">
-              {/* Outer Circle (260px) - Clockwise */}
               <div 
                 className="absolute w-[260px] h-[260px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
                 style={{ top: '-140px', left: '-80px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
@@ -291,7 +311,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
               </div>
               
-              {/* Middle Circle (190px) - Counter-clockwise */}
               <div 
                 className="absolute w-[190px] h-[190px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
                 style={{ top: '-105px', left: '-45px', animation: 'rotateCounterClockwiseUpperLeft 60s linear infinite' }}
@@ -304,7 +323,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 <div className="absolute w-2 h-2 rounded-full bg-[#fb7185] -ml-1 -mt-1" style={{ left: 'calc(50% - 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
               </div>
               
-              {/* Inner Circle (120px) - Clockwise */}
               <div 
                 className="absolute w-[120px] h-[120px] border-[3px] border-[rgba(251,113,133,0.4)] rounded-full"
                 style={{ top: '-70px', left: '-10px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
@@ -318,103 +336,148 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </div>
       </section>
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${window.location.origin}/services` },
-            { "@type": "ListItem", "position": 3, "name": data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), "item": window.location.href }
-          ]
-        })}
-      </script>
-      
-      <WaveDivider fromColor="#243b55" toColor="#4a7ba7" direction="down" useGradient={true} className="-mt-px" />
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-lg text-[#334155] max-w-3xl mx-auto">
-              Discover how this service transforms your accounting firm
-            </p>
-          </div>
-          
-          <GeometricDivider variant="lines" />
-          
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8 mt-8">
-            {data.benefits.map((benefit, index) => (
-              <StandardCard
-                key={index}
-                icon={CheckCircle}
-                title={benefit.title}
-                description={benefit.description}
-                variant={index === 1 ? "featured" : index === 3 ? "popular" : "default"}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
-        <BackgroundPattern pattern="grid" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Features & Capabilities
-            </h2>
-          </div>
-          
-          <GeometricDivider variant="wave" />
-          
-          <div className="grid lg:grid-cols-2 gap-8 mt-8">
-            {data.features.map((feature, index) => (
-              <StandardCard
-                key={index}
-                title={feature.title}
-                description={feature.description}
-                variant={index === 1 ? "featured" : "default"}
-              >
-                {feature.details && (
-                  <div className="mt-4">
-                    <ul className="space-y-2">
-                      {feature.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-start gap-2">
-                          <CheckCircle className="h-4 w-4 text-[#14b8a6] mt-1 flex-shrink-0" />
-                          <span className="text-sm text-white/80">{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </StandardCard>
-            ))}
-          </div>
-        </div>
-      </section>
-      
+      {/* Wave: Hero (blue) → Benefits (white) */}
       <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
-      {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* Benefits Section - White Background */}
+      <section className="pt-5 pb-10 md:pt-5 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-4 leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Key Benefits
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
+              className="text-base md:text-lg text-[#334155] max-w-3xl mx-auto leading-relaxed"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              Discover how this service transforms your accounting firm
+            </motion.p>
+          </div>
+          
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {data.benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ 
+                  duration: isMobile ? 0.4 : 0.6,
+                  delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
+                  ease: "easeOut" 
+                }}
+              >
+                <StandardCard
+                  icon={CheckCircle}
+                  title={benefit.title}
+                  description={benefit.description}
+                  variant={index === 1 ? "featured" : index === 3 ? "popular" : "default"}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section - White Background */}
+      <section className="pt-10 pb-10 md:pt-10 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-4 leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Features & Capabilities
+            </motion.h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {data.features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ 
+                  duration: isMobile ? 0.4 : 0.6,
+                  delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
+                  ease: "easeOut" 
+                }}
+              >
+                <StandardCard
+                  title={feature.title}
+                  description={feature.description}
+                  variant={index === 1 ? "featured" : "default"}
+                >
+                  {feature.details && (
+                    <div className="mt-4">
+                      <ul className="space-y-2">
+                        {feature.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start gap-2">
+                            <CheckCircle className="h-4 w-4 text-[#14b8a6] mt-1 flex-shrink-0" />
+                            <span className="text-sm text-[#334155]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </StandardCard>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Wave: Features (white) → Final CTA (blue) */}
+      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
+
+      {/* FAQs Section - White Background (Moved before Final CTA) */}
+      <section id="sf-faqs" className="pt-16 pb-16 md:pt-16 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0a2e2e] mb-8 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+            className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-8 text-center leading-tight"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
             Frequently Asked Questions
-          </h2>
+          </motion.h2>
           <div className="space-y-4">
             {defaultFAQs.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-4 bg-background">
-                <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
-                <div className="text-[#334155] mt-2">{faq.answer}</div>
-              </details>
+              <motion.details 
+                key={index} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ 
+                  duration: isMobile ? 0.4 : 0.6,
+                  delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
+                  ease: "easeOut" 
+                }}
+                className="border border-[#e2e8f0] rounded-lg p-4 bg-white shadow-sm"
+              >
+                <summary className="cursor-pointer font-semibold text-lg text-[#0a2e2e]" style={{ fontFamily: "'Poppins', sans-serif" }}>{faq.question}</summary>
+                <div className="text-[#334155] mt-3 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>{faq.answer}</div>
+              </motion.details>
             ))}
           </div>
         </div>
@@ -443,27 +506,68 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           })}
         </script>
       </section>
-      
+
+      {/* Wave: FAQ (white) → Final CTA (blue) */}
       <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
-      {/* CTA Section */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">
+      {/* Final CTA Section - Blue Gradient Background */}
+      <section className="pt-5 pb-8 md:pt-5 md:pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">{data.ctaTitle}</h2>
-          <p className="text-xl opacity-90 mb-8 text-white/90">{data.ctaDescription}</p>
-          <Button 
-            size="lg" 
-            variant="white-on-dark"
-            className="group"
-            asChild
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+            className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
           >
-            <a href={data.ctaButtonLink}>
-              {data.ctaButtonText}
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
+            {data.ctaTitle}
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
+            className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            {data.ctaDescription}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
+          >
+            <Button 
+              size="lg" 
+              className="px-8 py-4 text-lg font-bold bg-white text-[#243b55] hover:bg-white/90 transition-all duration-200 group"
+              asChild
+            >
+              <a href={data.ctaButtonLink}>
+                {data.ctaButtonText}
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </section>
+
+      {/* Wave: Final CTA (blue) → Footer (white) */}
+      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
+
+      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${window.location.origin}/services` },
+            { "@type": "ListItem", "position": 3, "name": data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), "item": window.location.href }
+          ]
+        })}
+      </script>
+
       <Footer />
     </div>
   );
