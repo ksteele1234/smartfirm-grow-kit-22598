@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
-import { WaveDivider } from "@/components/ui/wave-divider";
-import { 
+import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
@@ -96,8 +95,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </Button>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Industry Overview Section */}
       <section className="py-16 md:py-20 bg-white">
@@ -128,8 +125,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           })}
         </script>
       </section>
-      
-      <WaveDivider fromColor="#ffffff" toColor="#f8fafc" direction="up" className="-mt-px" />
 
       {/* Challenges & Solutions Section */}
       <section className="py-16 md:py-20 bg-[#f8fafc]">
@@ -164,8 +159,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#f8fafc" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Services Section */}
       <section className="py-16 md:py-20 bg-white">
@@ -197,8 +190,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#ffffff" toColor="#f8fafc" direction="up" className="-mt-px" />
 
       {/* Case Studies Section */}
       <section className="py-16 md:py-20 bg-[#f8fafc]">
@@ -233,8 +224,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#f8fafc" toColor="#243b55" direction="down" className="-mt-px" />
 
       {/* FAQs Section */}
       <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
@@ -263,8 +252,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           })}
         </script>
       </section>
-      
-      <WaveDivider fromColor="#4a7ba7" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Final CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">

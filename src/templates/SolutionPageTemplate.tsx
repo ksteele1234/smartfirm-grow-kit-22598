@@ -3,7 +3,6 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { SolutionPageData } from "@/types/cms";
 import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight } from "lucide-react";
 import { 
@@ -113,8 +112,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </a>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* Problem & Solution Section */}
       <section className="py-10 md:py-20 px-4 md:px-[72px] relative bg-white">
@@ -156,8 +153,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           })}
         </script>
       </section>
-      
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Key Benefits Section */}
       <section className="py-10 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
@@ -190,8 +185,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
         </div>
       </section>
-      
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
 
       {/* How It Works Section */}
       <section className="py-10 md:py-20 px-4 md:px-[72px] bg-white">
@@ -291,8 +284,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           })}
         </script>
       </section>
-      
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Final CTA Section */}
       <section className="py-12 md:py-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white relative overflow-hidden">

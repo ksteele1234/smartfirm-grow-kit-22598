@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Settings } from "lucide-react";
 import { StandardCard } from "@/components/ui/standard-card";
-import { WaveDivider } from "@/components/ui/wave-divider";
-import { 
+import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
@@ -337,11 +336,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
-      {/* Wave: Hero (blue) → Benefits (white) */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
-        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
-      </div>
-
       {/* Benefits Section - White Background */}
       <section className="pt-5 pb-10 md:pt-5 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="max-w-7xl mx-auto">
@@ -519,11 +513,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </script>
       </section>
 
-      {/* Wave: FAQ (white) → Final CTA (blue) */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
-      </div>
-
       {/* Final CTA Section - Blue Gradient Background */}
       <section className="pt-0 pb-0 md:pt-0 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
         <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
@@ -566,11 +555,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </motion.div>
         </div>
       </section>
-
-      {/* Wave: Final CTA (blue) → Footer (dark teal) */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
-        <WaveDivider fromColor="#4a7ba7" toColor="#0a2e2e" direction="down" />
-      </div>
 
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
         {JSON.stringify({
