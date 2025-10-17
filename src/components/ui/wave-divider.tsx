@@ -26,10 +26,10 @@ export const WaveDivider = ({
   const pathData = direction === "down" ? downPath : upPath;
 
   return (
-    <div className={cn("w-full overflow-visible", className)} style={{ backgroundColor: useGradient ? 'transparent' : (direction === "down" ? fromColor : toColor), marginTop: '-1px', marginBottom: '-1px', lineHeight: 0 }}>
+    <div className={cn("w-full", className)} style={{ backgroundColor: useGradient ? 'transparent' : (direction === "down" ? fromColor : toColor), marginTop: '-1px', marginBottom: '-1px', lineHeight: 0, overflow: 'visible' }}>
       <svg 
         className="block w-full h-[60px] md:h-[80px]"
-        style={{ display: 'block', width: '100%' }}
+        style={{ display: 'block', minWidth: '100%' }}
         viewBox="0 0 1440 100" 
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"

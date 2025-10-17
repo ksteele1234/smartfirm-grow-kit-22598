@@ -521,7 +521,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
 
       {/* Wave: FAQ (white) → Final CTA (blue) */}
       <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]">
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
+        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" />
       </div>
 
       {/* Final CTA Section - Blue Gradient Background */}
