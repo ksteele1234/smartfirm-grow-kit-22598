@@ -119,7 +119,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <Header />
       
       {/* Hero Section - Blue Gradient Background */}
-      <section className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden">
+      <section className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-visible">
         <style>{heroStyles}</style>
         
         {/* Breadcrumbs */}
@@ -384,7 +384,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                   icon={CheckCircle}
                   title={benefit.title}
                   description={benefit.description}
-                  variant={index === 1 ? "featured" : index === 3 ? "popular" : "default"}
+                  variant={
+                    benefit.title === "Executive Dashboards" ? "popular" : 
+                    index === 1 ? "featured" : 
+                    "default"
+                  }
                 />
               </motion.div>
             ))}
@@ -451,6 +455,15 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       {/* FAQs Section - White Background (Moved before Final CTA) */}
       <section id="sf-faqs" className="pt-16 pb-16 md:pt-16 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
+          {/* Decorative centered line */}
+          <motion.div 
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-32 h-0.5 bg-gradient-to-r from-transparent via-[#14b8a6] to-transparent mx-auto mb-8"
+          />
+          
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -511,8 +524,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" className="-mt-px" />
 
       {/* Final CTA Section - Blue Gradient Background */}
-      <section className="pt-5 pb-8 md:pt-5 md:pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-5 pb-0 md:pt-5 md:pb-0 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] text-white overflow-visible mb-0">
+        <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -554,7 +567,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Wave: Final CTA (blue) → Footer (white) */}
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" className="-mt-px" />
+      <div className="w-full" style={{ marginTop: 0, marginBottom: 0 }}>
+        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
+      </div>
 
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
         {JSON.stringify({
