@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button";
 import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarketingSolutions";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { CurvedSeparator } from "@/components/ui/curved-separator";
-import { WaveDivider } from "@/components/ui/wave-divider";
 import { ArrowRight, Play } from "lucide-react";
 
 const Index = () => {
@@ -49,49 +48,28 @@ const Index = () => {
         <HeroSection />
 
         {/* Section 2: Unified Credibility Section - Background A (White) */}
-        <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white">
+        <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white wave-bottom">
           <StatsGrid />
           <FounderStory />
         </section>
 
-        {/* Wave 1: Stats → Complete Marketing Solutions (white → blue) */}
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" />
-
         {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
         <CompleteMarketingSolutions />
-
-        {/* Wave 2: Complete Marketing Solutions → Why SmartFirm (blue → white) */}
-        <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="up" />
 
         {/* Section 4: Why SmartFirm is Different - Background A (White) */}
         <WhySmartFirmIsDifferent />
 
-        {/* Wave 3: Why SmartFirm → Ready to Transform (white → dark teal) */}
-        <WaveDivider fromColor="#ffffff" toColor="#0c3535" direction="down" />
-
         {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
         <ReadyToTransformSection />
-
-        {/* Wave 4: Ready to Transform → Firm Comparison (light teal → white) */}
-        <WaveDivider fromColor="#103d3d" toColor="#ffffff" direction="up" />
 
         {/* Section 6: Firm Comparison - Background A (White) */}
         <FirmComparisonSection />
 
-        {/* Wave 5: Firm Comparison → FAQ (white → white, visual break) */}
-        <WaveDivider fromColor="#ffffff" toColor="#ffffff" direction="down" />
-
         {/* Section 7: FAQ - Background B (Soft Teal) */}
         <HomepageFAQSection />
 
-        {/* Wave 6: FAQ → Final CTA (white → blue) */}
-        <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="down" />
-
         {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
         <FinalCTASection />
-
-        {/* Wave 7: Final CTA → Footer (blue → deep teal) */}
-        <WaveDivider fromColor="#4a7ba7" toColor="#0a2e2e" direction="down" />
       </main>
       
       {/* Section 9: Footer - Background C (Soft Blue) */}

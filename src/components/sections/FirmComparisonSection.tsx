@@ -26,7 +26,7 @@ const FirmComparisonSection = () => {
   ];
 
   return (
-    <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white overflow-hidden">
+    <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white overflow-hidden wave-bottom">
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Section Header */}
         <motion.div 
