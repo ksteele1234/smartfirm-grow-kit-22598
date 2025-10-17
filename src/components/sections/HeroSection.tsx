@@ -146,7 +146,10 @@ const HeroSection = () => {
             preload="auto"
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 0.2 }}
+            style={{ 
+              opacity: 0.3,
+              filter: 'brightness(1.3) contrast(1.1)'
+            }}
             poster="/images/hero-poster.jpg"
           >
             <source src="/videos/hero-background.mp4" type="video/mp4" />
