@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
-import { WaveDivider } from "@/components/ui/wave-divider";
 
 const heroStyles = `
   @keyframes rotateClockwise {
@@ -121,10 +120,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <main>
       {/* Hero Section - Blue Gradient Background */}
       <section 
-        className="hero-section relative pt-20 pb-5 md:pt-20 md:pb-5 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-visible"
+        className="hero-section relative pt-32 pb-20 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden wave-bottom"
         style={{
-          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)',
-          paddingBottom: '20px'
+          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
         }}
       >
         <style>{heroStyles}</style>
@@ -344,11 +342,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
-      {/* Wave: Hero → Benefits (blue → white) */}
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
-
       {/* Benefits Section - White Background */}
-      <section className="pt-5 pb-10 md:pt-5 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -404,7 +399,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section - White Background */}
-      <section className="pt-10 pb-10 md:pt-10 md:pb-10 px-4 sm:px-6 lg:px-8 bg-white relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -457,7 +452,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section - White Background (Moved before Final CTA) */}
-      <section id="sf-faqs" className="pt-16 pb-16 md:pt-16 md:pb-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white wave-bottom">
         <div className="max-w-4xl mx-auto">
           {/* Decorative centered line */}
           <motion.div 
@@ -524,16 +519,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </script>
       </section>
 
-      {/* Wave: Before Final CTA (white → blue) */}
-      <WaveDivider fromColor="#ffffff" toColor="#243b55" direction="up" />
-
       {/* Final CTA Section - Blue Gradient Background */}
       <section 
-        className="pt-0 pb-0 md:pt-0 md:pb-0 px-4 sm:px-6 lg:px-8 text-white overflow-visible mb-0"
+        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
         style={{
-          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)',
-          paddingTop: '20px',
-          paddingBottom: '32px'
+          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
         }}
       >
         <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
@@ -576,9 +566,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </motion.div>
         </div>
       </section>
-
-      {/* Wave: After Final CTA (blue → white) */}
-      <WaveDivider fromColor="#4a7ba7" toColor="#ffffff" direction="down" />
       </main>
 
       <script id="sf-breadcrumb-jsonld" type="application/ld+json">
