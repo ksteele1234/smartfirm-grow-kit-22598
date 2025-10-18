@@ -48,7 +48,7 @@ const Index = () => {
         <HeroSection />
 
         {/* Section 2: Unified Credibility Section - Background A (White) */}
-        <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white wave-bottom">
+        <section className="pt-2.5 md:pt-5 bg-white wave-bottom">
           <StatsGrid />
           <FounderStory />
         </section>

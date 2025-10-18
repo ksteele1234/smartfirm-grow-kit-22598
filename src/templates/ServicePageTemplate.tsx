@@ -120,7 +120,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <main>
       {/* Hero Section - Blue Gradient Background */}
       <section 
-        className="hero-section relative pt-32 pb-20 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden wave-bottom"
+        className="hero-section relative pt-32 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden wave-bottom"
         style={{
           background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
         }}

@@ -82,7 +82,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       <main>
         {/* Hero Section */}
         <section 
-          className="relative pt-32 pb-20 overflow-hidden wave-bottom"
+          className="relative pt-32 overflow-hidden wave-bottom"
           style={{
             background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
           }}
@@ -104,7 +104,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="py-16 md:py-20 bg-white wave-bottom">
+      <section className="pt-16 md:pt-20 bg-white wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
@@ -134,7 +134,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="py-16 md:py-20 bg-[#f8fafc] wave-bottom">
+      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -168,7 +168,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-20 bg-white wave-bottom">
+      <section className="pt-16 md:pt-20 bg-white wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -199,7 +199,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-16 md:py-20 bg-[#f8fafc] wave-bottom">
+      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -233,7 +233,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] wave-bottom">
+      <section id="sf-faqs" className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] wave-bottom">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
@@ -262,7 +262,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
+        className="relative pt-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
         style={{
           background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
         }}

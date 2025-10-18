@@ -52,7 +52,7 @@ const WhySmartFirmIsDifferent = () => {
   ];
 
   return (
-    <section className="pt-2.5 pb-2.5 md:pt-5 md:pb-5 bg-white wave-bottom">
+    <section className="pt-2.5 md:pt-5 bg-white wave-bottom">
       <div className="container mx-auto px-6 max-w-[1200px]">
         
         {/* Section Header */}
