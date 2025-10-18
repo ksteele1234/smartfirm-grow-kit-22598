@@ -4,11 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const ScaleFirm = () => {
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
-    title: "Scale Your Accounting Firm",
+    title: "Scale Your Accounting Firm Successfully | SmartFirm",
     slug: "scale-firm",
+    metaDescription: "Scale your accounting firm through systematized processes, delegation frameworks, service productization, pricing optimization, and capacity planning.",
     content: {},
-    heroTitle: "Scale Your Accounting Firm Without the Overwhelm",
-    heroSubtitle: "Scale your accounting firm without the overwhelm. Break through growth plateaus with systems and automation that work without your constant involvement. Build a firm that grows while you focus on high-value activities.",
+    heroTitle: "Scale Accounting Firm | SmartFirm",
+    heroSubtitle: "Learn how to scale your accounting firm by implementing systematized client delivery processes, building delegation frameworks, productizing services, optimizing pricing, and planning capacity strategically.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
     keyBenefits: [

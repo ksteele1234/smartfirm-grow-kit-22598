@@ -4,12 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const GetMoreReferrals = () => {
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
-    title: "Get More Referrals Without Asking",
+    title: "Automated Client Referral System for CPAs | SmartFirm",
     slug: "get-more-referrals-without-asking",
-    metaDescription: "Generate more referrals automatically by turning happy clients into advocates, building trust before meetings, and staying top-of-mind year-round with automated systems.",
+    metaDescription: "Get more referrals without asking through a client referral system for CPAs delivering exceptional experiences and simplifying client introductions.",
     content: {},
-    heroTitle: "Get More Referrals Without Asking",
-    heroSubtitle: "Get more referrals without asking. Turn satisfied clients into active advocates with automated systems that generate referrals naturally",
+    heroTitle: "Client Referral System For Cpas | SmartFirm",
+    heroSubtitle: "Our automated client referral system for CPAs generates referrals naturally by delivering exceptional client experiences, creating referral-worthy moments, and making it effortless for clients to introduce you.",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",
     keyBenefits: [

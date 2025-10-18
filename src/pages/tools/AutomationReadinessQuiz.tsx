@@ -186,8 +186,8 @@ const AutomationReadinessQuiz = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Automation Readiness Quiz | SmartFirm"
-        description="Assess your firm's automation readiness. Discover opportunities to streamline operations and improve efficiency."
+        title="Automation Readiness Assessment for Accountants"
+        description="Discover if you're ready for automation with our readiness assessment for accountants evaluating processes, technology, team, and client base for automation."
         noindex={false}
       />
       <Header />
@@ -198,12 +198,12 @@ const AutomationReadinessQuiz = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Quiz</h1>
-          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
-            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
-            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
-          </p>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment For Accountants | SmartFirm</h1>
+          <div id="sf-keyword-intro">
+            <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+              Our automation readiness assessment for accountants evaluates your current processes, technology infrastructure, team capabilities, and client base to determine your optimal automation strategy and implementation timeline.
+            </p>
+          </div>
           
           <Card>
             <CardHeader>

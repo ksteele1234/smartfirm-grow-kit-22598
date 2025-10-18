@@ -4,11 +4,12 @@ import { IndustryPageData } from "@/types/cms";
 const BusinessAdvisory = () => {
   const industryData: IndustryPageData = {
     id: "business-advisory",
-    title: "Marketing for Business Advisory Services",
+    title: "Custom Marketing Agency for Business Advisors",
     slug: "business-advisory",
+    metaDescription: "Partner with a custom marketing agency for business advisors positioning you as a strategic advisor, attracting growth-focused clients, and commanding fees.",
     content: {},
-    heroTitle: "Marketing Solutions for Business Advisory Services",
-    heroSubtitle: "Marketing solutions for business advisory services that establish thought leadership and attract high-value clients seeking strategic business guidance and financial consulting expertise.",
+    heroTitle: "Custom Marketing Agency For Business Advisors | SmartFirm",
+    heroSubtitle: "Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",
     industryOverview: "Business advisory services command premium rates but require establishing deep trust and demonstrating expertise. Our marketing strategies help you position yourself as a trusted advisor and attract clients who value strategic guidance over commodity services.",
     challenges: [
       {

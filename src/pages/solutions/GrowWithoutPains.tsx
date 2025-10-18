@@ -4,12 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const GrowWithoutPains = () => {
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
-    title: "Grow Without the Growing Pains",
+    title: "Strategic Accounting Firm Growth Consulting",
     slug: "grow-without-growing-pains",
-    metaDescription: "Scale your accounting firm smoothly with systems that handle growth efficiently, avoiding the typical growing pains that overwhelm expanding practices.",
+    metaDescription: "Grow without growing pains through accounting firm growth consulting addressing capacity constraints, delegation challenges, and service delivery systems.",
     content: {},
-    heroTitle: "AI-Driven Growth Without the Growing Pains",
-    heroSubtitle: "AI-driven growth without the growing pains. Scale your firm smoothly with intelligent systems that handle growth efficiently using predictive analytics, avoiding overwhelm and maintaining quality through automation",
+    heroTitle: "Accounting Firm Growth Consulting | SmartFirm",
+    heroSubtitle: "Our accounting firm growth consulting helps you scale without burnout by addressing capacity planning, building delegation systems, standardizing service delivery, and creating sustainable growth infrastructure.",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
     keyBenefits: [

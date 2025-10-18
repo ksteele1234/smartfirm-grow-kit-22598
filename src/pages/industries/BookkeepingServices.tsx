@@ -4,11 +4,12 @@ import { IndustryPageData } from "@/types/cms";
 const BookkeepingServices = () => {
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
-    title: "Marketing for Bookkeeping Services",
+    title: "Marketing Services for Bookkeeping Firms | SmartFirm",
     slug: "bookkeeping-services", 
+    metaDescription: "Explore bookkeeping firms marketing services that differentiate your practice, attract ideal clients, and position you as a strategic financial partner.",
     content: {},
-    heroTitle: "Marketing Solutions for Bookkeeping Services",
-    heroSubtitle: "Build a consistent pipeline of small business clients and establish recurring revenue streams with marketing strategies tailored for bookkeeping professionals.",
+    heroTitle: "Bookkeeping Firms Marketing Services | SmartFirm",
+    heroSubtitle: "Our bookkeeping firms marketing services differentiate your practice from commodity providers, attract your ideal small business clients, and position you as a strategic financial partner.",
     industryOverview: "Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.",
     challenges: [
       {

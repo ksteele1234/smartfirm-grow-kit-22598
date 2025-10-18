@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const ContentMarketing = () => {
   const serviceData: ServicePageData = {
     id: "content-marketing",
-    title: "Content Marketing for Accounting Firms",
+    title: "Strategic Content Marketing for CPAs | SmartFirm",
     slug: "content-marketing",
+    metaDescription: "Strategic content marketing for CPAs that positions you as an expert, attracts ideal clients, and builds trust through blogs, guides, and educational resources.",
     content: {},
-    heroTitle: "Content Marketing That Positions Your Firm as the Expert",
-    heroSubtitle: "Build trust and attract ideal clients with strategic content that showcases your expertise.",
+    heroTitle: "Strategic Content Marketing For Cpas | SmartFirm",
+    heroSubtitle: "Our strategic content marketing for CPAs creates SEO-optimized blog posts, comprehensive tax guides, client education resources, and thought leadership articles that establish your expertise and attract qualified leads.",
     heroDescription: "Our content marketing services create blog posts, guides, and resources that educate prospects and establish your firm as the go-to authority. We deliver complete strategy: keyword research, editorial calendars, expert-written articles, and promotion across channels to nurture prospects and demonstrate your expertise.",
     benefits: [
       {

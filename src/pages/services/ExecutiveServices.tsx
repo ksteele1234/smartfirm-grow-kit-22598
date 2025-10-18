@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const ExecutiveServices = () => {
   const serviceData: ServicePageData = {
     id: "executive-services",
-    title: "Executive Services for Accounting Firms",
+    title: "Fractional CIO Services for Accounting Firms",
     slug: "executive-services",
+    metaDescription: "Access strategic guidance through fractional CIO for accounting firms: technology roadmaps, vendor management, security assessments, and digital planning.",
     content: {},
-    heroTitle: "Fractional Executive Services for Growing Firms",
-    heroSubtitle: "Fractional executive services for growing firms that provide experienced CIO and CFO expertise without the full-time cost to accelerate your firm's growth and strategic initiatives.",
+    heroTitle: "Fractional Cio For Accounting Firms | SmartFirm",
+    heroSubtitle: "Our fractional CIO for accounting firms provides executive-level technology leadership including strategic planning, vendor evaluation, security assessments, and digital transformation guidance without full-time costs.",
     heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
     benefits: [
       {

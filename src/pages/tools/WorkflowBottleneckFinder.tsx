@@ -239,8 +239,8 @@ const WorkflowBottleneckFinder = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Workflow Bottleneck Finder | SmartFirm"
-        description="Find workflow bottlenecks and time-wasting tasks. Calculate potential time savings for your accounting firm."
+        title="Comprehensive SEO Audit for Accounting Firms"
+        description="Complete our accounting firm workflow audit identifying bottlenecks, redundancies, manual tasks, and automation opportunities across your client delivery process."
         noindex={false}
       />
       <Header />
@@ -251,12 +251,12 @@ const WorkflowBottleneckFinder = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Workflow Bottleneck Finder</h1>
-          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
-            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
-            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
-          </p>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Workflow Audit | SmartFirm</h1>
+          <div id="sf-keyword-intro">
+            <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+              This accounting firm workflow audit maps your entire client delivery process, identifies bottlenecks and redundancies, highlights manual tasks ripe for automation, and recommends efficiency improvements.
+            </p>
+          </div>
           
           <Card>
             <CardHeader>

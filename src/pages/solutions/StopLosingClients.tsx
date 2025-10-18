@@ -4,12 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const StopLosingClients = () => {
   const solutionData: SolutionPageData = {
     id: "stop-losing-clients",
-    title: "Stop Losing Clients to Tech-Savvy CPAs",
+    title: "Modern Marketing Services for CPAs | SmartFirm",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
-    metaDescription: "CPA marketing automation that prevents client loss through modern systems, faster response times, and professional automation that keeps you ahead of tech-savvy competitors.",
+    metaDescription: "Compete with modern marketing services for CPAs that showcase your technology adoption, streamline client experience, and position you as forward-thinking.",
     content: {},
-    heroTitle: "CPA Marketing Automation That Stops Client Loss",
-    heroSubtitle: "Stay competitive with modern systems that impress clients and automate what tech-savvy CPAs do manually",
+    heroTitle: "Modern Marketing Services For Cpas | SmartFirm",
+    heroSubtitle: "Our modern marketing services for CPAs help you compete with tech-savvy competitors by highlighting your technology stack, streamlining client interactions, and positioning your practice as innovative.",
     problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
     solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",
     keyBenefits: [

@@ -332,8 +332,8 @@ const GrowthPotentialScorecard = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Growth Potential Scorecard | SmartFirm"
-        description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
+        title="Accounting Firm Growth Scorecard Tool | SmartFirm"
+        description="Use our accounting firm growth scorecard to rate your marketing, operations, client experience, technology, and team to identify growth constraints."
         noindex={false}
       />
       <Header />
@@ -344,12 +344,12 @@ const GrowthPotentialScorecard = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Growth Potential Scorecard</h1>
-          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
-            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
-            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
-          </p>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Growth Scorecard | SmartFirm</h1>
+          <div id="sf-keyword-intro">
+            <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+              This accounting firm growth scorecard evaluates your marketing effectiveness, operational efficiency, client experience quality, technology adoption, and team capabilities to pinpoint growth constraints.
+            </p>
+          </div>
           
           <Card>
             <CardHeader>

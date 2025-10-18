@@ -330,8 +330,8 @@ const ModernFirmQuiz = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Modern Firm Quiz | SmartFirm"
-        description="How modern is your accounting firm? Take our quiz to assess technology adoption and operational efficiency."
+        title="Modern Accounting Firm Assessment Tool | SmartFirm"
+        description="Rate your practice with our modern accounting firm assessment measuring technology adoption, client experience, service delivery, and competitive positioning."
         noindex={false}
       />
       <Header />
@@ -342,12 +342,12 @@ const ModernFirmQuiz = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Modern Firm Quiz</h1>
-          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
-            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
-            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
-          </p>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Modern Accounting Firm Assessment | SmartFirm</h1>
+          <div id="sf-keyword-intro">
+            <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+              This modern accounting firm assessment measures your technology adoption, client experience quality, service delivery methods, and competitive positioning to show how you compare to modern practices.
+            </p>
+          </div>
           
           <Card>
             <CardHeader>

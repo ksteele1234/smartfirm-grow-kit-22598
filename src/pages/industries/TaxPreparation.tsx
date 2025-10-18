@@ -4,11 +4,12 @@ import { IndustryPageData } from "@/types/cms";
 const TaxPreparation = () => {
   const industryData: IndustryPageData = {
     id: "tax-preparation",
-    title: "Marketing for Tax Preparation Services",
+    title: "Digital Marketing Services for Tax Firms | SmartFirm",
     slug: "tax-preparation",
+    metaDescription: "Discover digital marketing services for tax firms that attract year-round clients, reduce seasonal revenue swings, and position you as a strategic tax advisor.",
     content: {},
-    heroTitle: "Marketing Solutions for Tax Preparation Services",
-    heroSubtitle: "Marketing solutions for tax preparation services that attract more clients during tax season and build year-round revenue streams with strategies designed specifically for tax preparers.",
+    heroTitle: "Digital Marketing Services For Tax Firms | SmartFirm",
+    heroSubtitle: "Our digital marketing services for tax firms help you attract year-round advisory clients, reduce seasonal revenue volatility, and position your practice as a strategic tax planning partner.",
     industryOverview: "Tax preparation businesses face unique seasonal challenges - intense demand during tax season followed by slower summer months. Our marketing solutions help you maximize tax season revenue while building services that generate income year-round.",
     challenges: [
       {

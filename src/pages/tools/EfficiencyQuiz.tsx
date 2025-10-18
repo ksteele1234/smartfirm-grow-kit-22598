@@ -251,10 +251,10 @@ const EfficiencyQuiz = () => {
 
   return (
     <ToolPageWrapper
-      title="Efficiency Quiz | SmartFirm"
-      description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
-      pageTitle="How Efficient Is Your Firm?"
-      intro="How efficient is your firm? Discover where your accounting practice can improve efficiency in billing, client management, and marketing with our expert-designed assessment tool trusted by accounting professionals nationwide."
+      title="Accounting Firm Efficiency Assessment Tool | SmartFirm"
+      description="Take our accounting firm efficiency assessment to identify time-wasting processes, automation opportunities, and workflow improvements saving 10+ hours weekly."
+      pageTitle="Accounting Firm Efficiency Assessment | SmartFirm"
+      intro="This accounting firm efficiency assessment identifies time-consuming manual processes, automation opportunities, workflow bottlenecks, and system integration gaps that could save you 10+ hours per week."
     >
       <section className="section-padding">
         <div className="container mx-auto max-w-2xl">

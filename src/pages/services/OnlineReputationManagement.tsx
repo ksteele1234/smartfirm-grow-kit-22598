@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const OnlineReputationManagement = () => {
   const serviceData: ServicePageData = {
     id: "online-reputation-management",
-    title: "Online Reputation Management for CPAs",
+    title: "Online Reputation Management for CPAs | SmartFirm",
     slug: "online-reputation-management",
+    metaDescription: "Protect your practice with reputation management for CPAs monitoring reviews, responding to feedback, addressing negative comments, and promoting wins.",
     content: {},
-    heroTitle: "Protect and Elevate Your Firm's Online Reputation",
-    heroSubtitle: "Turn every client interaction into a competitive advantage.",
+    heroTitle: "Reputation Management For Cpas | SmartFirm",
+    heroSubtitle: "Our reputation management for CPAs monitors your online presence across review platforms, responds professionally to feedback, addresses negative comments strategically, and amplifies positive client experiences.",
     heroDescription: "Our reputation management service monitors reviews, responds professionally, and builds a 5-star presence that attracts more clients. We monitor all major review platforms, generate positive reviews from satisfied clients, respond professionally to feedback, and transform your online presence into a powerful trust signal.",
     benefits: [
       {

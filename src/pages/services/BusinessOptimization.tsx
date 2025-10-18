@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const BusinessOptimization = () => {
   const serviceData: ServicePageData = {
     id: "business-optimization",
-    title: "Business Optimization for Accounting Firms",
+    title: "Business Optimization For Accounting Firms | SmartFirm",
     slug: "business-optimization",
+    metaDescription: "Streamline operations with business optimization for accounting firms analyzing workflows, identifying bottlenecks, and implementing process improvements.",
     content: {},
-    heroTitle: "Business Optimization for Accounting Firms",
-    heroSubtitle: "Business optimization for accounting firms that improves your firm's processes and performance with data-driven insights and executive dashboards.",
+    heroTitle: "Business Optimization For Accounting Firms | SmartFirm",
+    heroSubtitle: "Our business optimization for accounting firms maps your current workflows, identifies time-wasting bottlenecks, implements automation solutions, and creates standardized processes for consistent delivery.",
     heroDescription: "Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.",
     benefits: [
       {

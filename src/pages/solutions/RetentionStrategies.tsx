@@ -4,11 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const RetentionStrategies = () => {
   const solutionData: SolutionPageData = {
     id: "retention-strategies",
-    title: "Advanced Client Retention Strategies",
+    title: "Advanced Retention Strategies for CPAs | SmartFirm",
     slug: "retention-strategies",
+    metaDescription: "Implement retention strategies for CPAs featuring client success programs, regular business reviews, proactive tax planning, exclusive events, and incentives.",
     content: {},
-    heroTitle: "Advanced Client Retention Strategies for CPAs",
-    heroSubtitle: "Advanced client retention strategies for CPAs that keep your best clients happy and engaged with automated touchpoints, value-added services, and satisfaction tracking systems that ensure long-term loyalty.",
+    heroTitle: "Retention Strategies For Cpas | SmartFirm",
+    heroSubtitle: "Our retention strategies for CPAs include structured client success programs, quarterly business review processes, proactive tax planning outreach, exclusive client events, and loyalty incentive programs.",
     problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
     solutionOverview: "Our advanced retention strategies include automated client communication systems, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value and loyalty.",
     keyBenefits: [

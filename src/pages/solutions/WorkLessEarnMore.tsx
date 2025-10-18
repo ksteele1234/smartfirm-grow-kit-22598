@@ -4,12 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const WorkLessEarnMore = () => {
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
-    title: "Work Less, Earn More",
+    title: "Increase Your Accounting Firm Revenue | SmartFirm",
     slug: "work-less-earn-more",
-    metaDescription: "Maximize profitability while reducing hours through automation, efficient systems, and strategic positioning that lets you work less while earning more.",
+    metaDescription: "Increase accounting firm revenue while reducing hours through value pricing strategies, service mix optimization, automation, and high-margin advisory.",
     content: {},
-    heroTitle: "Work Less, Earn More",
-    heroSubtitle: "Work less, earn more—that's the promise of smart automation. Maximize your profitability while reducing your hours through efficient systems and strategic positioning.",
+    heroTitle: "Increase Accounting Firm Revenue | SmartFirm",
+    heroSubtitle: "Discover how to increase accounting firm revenue while working fewer hours through value-based pricing models, service mix optimization, process automation, and transitioning to high-margin advisory services.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
     keyBenefits: [

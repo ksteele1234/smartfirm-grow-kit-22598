@@ -158,14 +158,14 @@ const ToolsCalculators = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Free Tools & Calculators | SmartFirm"
-        description="Free assessment tools for accounting firms. Measure efficiency, marketing ROI, and growth potential with expert-designed calculators."
+        title="Free Marketing Tools for Accounting Firms | SmartFirm"
+        description="Access free marketing tools for accounting firms including growth calculators, ROI assessments, workflow audits, marketing scorecards, quizzes, and benchmarks."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Free Tools & Calculators", url: "/tools" }
+          { name: "Free Tools & Calculators", url: "/tools-marketing-tools-for-accounting-firms" }
         ]}
         faqs={[
           {
@@ -211,11 +211,11 @@ const ToolsCalculators = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                Free Tools & Calculators for Accounting Firms
+                Marketing Tools For Accounting Firms | SmartFirm
               </h1>
               <div id="sf-keyword-intro">
                 <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                  Free tools & calculators for accounting firms: expert-designed assessment tools that help you measure efficiency, calculate ROI, and identify growth opportunities with data-driven insights.
+                  Our free marketing tools for accounting firms help you assess your current state, identify opportunities, and benchmark against competitors through interactive calculators and diagnostic assessments.
                 </p>
               </div>
               <p className="text-base md:text-lg text-muted-foreground">

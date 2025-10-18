@@ -323,10 +323,10 @@ const MarketingScorecard = () => {
 
   return (
     <ToolPageWrapper
-      title="Marketing Scorecard | SmartFirm"
-      description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
-      pageTitle="Is Your Marketing Working?"
-      intro="Is your marketing working? Find out with our quick yes/no assessment that reveals gaps in your marketing strategy and provides personalized action plans tailored for accounting firms."
+      title="Marketing Assessment Tool for Accountants | SmartFirm"
+      description="Complete our marketing assessment for accountants scoring your website, SEO, automation, content, social media, and reviews to identify opportunities."
+      pageTitle="Marketing Assessment For Accountants | SmartFirm"
+      intro="Our marketing assessment for accountants evaluates your website effectiveness, SEO performance, marketing automation, content strategy, social media presence, and online reviews to identify growth opportunities."
     >
       <section className="section-padding">
         <div className="container mx-auto max-w-2xl">

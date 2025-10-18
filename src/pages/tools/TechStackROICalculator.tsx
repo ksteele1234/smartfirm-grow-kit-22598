@@ -273,8 +273,8 @@ const TechStackROICalculator = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Tech Stack ROI Calculator | SmartFirm"
-        description="Calculate ROI on your accounting firm's technology stack. Find cost savings and efficiency improvements."
+        title="Accounting Firm Technology ROI Calculator | SmartFirm"
+        description="Calculate your accounting firm technology ROI by inputting software costs, time savings, error reduction, and capacity gains to justify technology investments."
         noindex={false}
       />
       <Header />
@@ -285,12 +285,12 @@ const TechStackROICalculator = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Tech Stack ROI Calculator</h1>
-          <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
-            <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
-            <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
-          </p>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Technology Roi | SmartFirm</h1>
+          <div id="sf-keyword-intro">
+            <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
+              Our accounting firm technology ROI calculator helps you quantify the return on technology investments by measuring time savings, error reduction, capacity increases, and client satisfaction improvements.
+            </p>
+          </div>
           
           <Card>
             <CardHeader>

@@ -4,12 +4,12 @@ import { SolutionPageData } from "@/types/cms";
 const ProtectPractice = () => {
   const solutionData: SolutionPageData = {
     id: "protect-practice",
-    title: "Protect Your Practice & Your Future",
+    title: "CPA Practice Management & Planning Services",
     slug: "protect-practice-and-future",
-    metaDescription: "Safeguard your accounting practice against threats, ensure business continuity, and future-proof your firm with comprehensive protection strategies.",
+    metaDescription: "Protect your practice and future with CPA practice management services covering succession planning, risk management, compliance requirements, and continuity.",
     content: {},
-    heroTitle: "Protect Your Practice & Your Future",
-    heroSubtitle: "Protect your practice & your future with comprehensive strategies that safeguard your firm against threats and ensure business continuity.",
+    heroTitle: "Cpa Practice Management Services | SmartFirm",
+    heroSubtitle: "Our CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, business continuity planning, and exit strategy development.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
     keyBenefits: [
