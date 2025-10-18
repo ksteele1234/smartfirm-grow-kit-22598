@@ -209,6 +209,10 @@ const SEO = ({
             "@type": "Country",
             "name": "United States"
           },
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Accounting Firms, CPAs, Bookkeepers"
+          },
           "description": pageDescription
         });
       }
