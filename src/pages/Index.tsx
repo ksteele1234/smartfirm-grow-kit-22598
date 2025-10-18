@@ -20,8 +20,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Marketing Automation for Accounting Firms | SmartFirm"
-        description="Marketing automation for accounting firms and CPAs that delivers faster client intake, better follow-up, and measurable growth with proven strategies."
+        title="Expert Digital Marketing For Accounting Firms | SmartFirm"
+        description="SmartFirm delivers expert digital marketing for accounting firms with done-for-you automation, SEO, websites, and retention systems to get & keep clients."
         image="/assets/og-default.webp"
         pageType="default"
         noindex={false}
