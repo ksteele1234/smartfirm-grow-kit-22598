@@ -41,7 +41,7 @@ const Services = () => {
       <SEO 
         title="Leading Marketing Services For Accounting Firms | SmartFirm"
         description="Explore leading marketing services for accounting firms: automation platforms, conversion-optimized websites, local SEO, retention, and growth systems."
-        canonicalUrl="https://smartfirm.io/services"
+        canonicalUrl="https://smartfirm.io/leading-marketing-services-for-accounting-firms"
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}

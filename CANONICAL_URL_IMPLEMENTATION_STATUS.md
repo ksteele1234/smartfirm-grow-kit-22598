@@ -1,11 +1,12 @@
 # Canonical URL Implementation Status
 
-## ✅ Completed (39/39 pages)
+## ✅ Completed (43/43 pages)
 
-### Core Pages (6/6) ✅
-- ✅ Solutions → `https://smartfirm.io/solutions`
-- ✅ Services → `https://smartfirm.io/services`
-- ✅ AllServices → `https://smartfirm.io/services/all`
+### Core Pages (10/10) ✅
+- ✅ Solutions → `https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms`
+- ✅ Services → `https://smartfirm.io/leading-marketing-services-for-accounting-firms`
+- ✅ AllServices → `https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms`
+- ✅ Industries → `https://smartfirm.io/industries-expert-marketing-agency-for-accountants`
 - ✅ QuickStart → `https://smartfirm.io/quick-start`
 - ✅ ToolsCalculators → `https://smartfirm.io/tools`
 - ✅ GrowthCalculator → `https://smartfirm.io/growth-calculator`
@@ -39,7 +40,7 @@
 - ✅ BookkeepingServices → `https://smartfirm.io/industries/bookkeeping-services`
 - ✅ BusinessAdvisory → `https://smartfirm.io/industries/business-advisory`
 
-### Tool Pages (9/9) ✅
+### Tool Pages (10/10) ✅
 - ✅ EfficiencyQuiz → `https://smartfirm.io/tools/efficiency-quiz`
 - ✅ MarketingScorecard → `https://smartfirm.io/tools/marketing-scorecard`
 - ✅ AutomationReadinessQuiz → `https://smartfirm.io/tools/automation-readiness-quiz`
@@ -52,15 +53,15 @@
 - ✅ ClientLifetimeValueCalculator → `https://smartfirm.io/tools/client-lifetime-value-calculator`
 - ✅ LeadGenerationScorecard → `https://smartfirm.io/tools/lead-generation-scorecard`
 
-## Single-URL Pages (20 pages) ✅
+## Single-URL Pages (16 pages) ✅
 These pages don't need canonical URLs as they only have one route:
-- Index, Industries, Resources, About, Contact, SuccessStories, GetStarted, FAQ
+- Index, Resources, About, Contact, SuccessStories, GetStarted, FAQ
 - Privacy, Terms, Cookies
 - AuditAssurance, StrategyIntegration
 - AdvancedSEOQA, PageGrader
 - ServerError, ThankYou, NotFound
 
-**Total Progress: 39/39 pages with multiple routes completed (100%)**
+**Total Progress: 43/43 pages with multiple routes completed (100%)**
 
 ## Implementation Summary
 
@@ -73,5 +74,14 @@ These pages don't need canonical URLs as they only have one route:
 - ✅ Updated ServicePageTemplate to pass canonicalUrl to SEO
 - ✅ Updated IndustryPageTemplate to pass canonicalUrl to SEO
 
+### Primary URL Changes ✅
+- ✅ `/services` → `/leading-marketing-services-for-accounting-firms` (primary)
+- ✅ `/services/all` → `/services/all-professional-marketing-services-for-accounting-firms` (primary)
+- ✅ `/solutions` → `/solutions-expert-marketing-agency-for-accounting-firms` (primary)
+- ✅ `/industries` → `/industries-expert-marketing-agency-for-accountants` (primary)
+
+### Sitemap Updated ✅
+- ✅ Regenerated sitemap.xml with new primary URLs
+
 ### All Pages Complete ✅
-All 39 pages with multiple route aliases now have explicit canonical URLs ensuring search engines index the correct primary URL.
+All 43 pages with multiple route aliases now have explicit canonical URLs ensuring search engines index the correct primary URL.

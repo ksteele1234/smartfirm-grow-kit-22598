@@ -59,7 +59,7 @@ const Solutions = () => {
       <SEO 
         title="Expert Marketing Agency For Accounting Firms | SmartFirm"
         description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
-        canonicalUrl="https://smartfirm.io/solutions"
+        canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
         noindex={false}
         dateModified={new Date().toISOString()}

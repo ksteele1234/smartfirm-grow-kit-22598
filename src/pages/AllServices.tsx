@@ -103,7 +103,7 @@ const AllServices = () => {
       <SEO 
         title="Professional Marketing Services For Accounting Firms"
         description="Browse professional marketing services for accounting firms—from marketing automation, websites, and SEO to social media, content marketing, and optimization."
-        canonicalUrl="https://smartfirm.io/services/all"
+        canonicalUrl="https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms"
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}

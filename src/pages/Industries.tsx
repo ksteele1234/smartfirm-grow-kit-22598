@@ -97,6 +97,7 @@ const Industries = () => {
       <SEO 
         title="Marketing for Accountants: Industry-Specific Solutions | SmartFirm"
         description="Marketing for accountants including solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
+        canonicalUrl="https://smartfirm.io/industries-expert-marketing-agency-for-accountants"
         pageType="industry"
         noindex={false}
         dateModified={new Date().toISOString()}
