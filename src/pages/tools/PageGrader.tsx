@@ -78,8 +78,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
 
   const routes = [
     { path: "/", type: "core" },
-    { path: "/services", type: "core" },
-    { path: "/services/all", type: "core" },
+    { path: "/leading-marketing-services-for-accounting-firms", type: "core" },
+    { path: "/services/all-professional-marketing-services-for-accounting-firms", type: "core" },
     { path: "/solutions", type: "core" },
     { path: "/industries", type: "core" },
     { path: "/resources", type: "core" },

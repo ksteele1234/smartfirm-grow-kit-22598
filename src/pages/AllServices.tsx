@@ -101,15 +101,15 @@ const AllServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="All Services | SmartFirm"
-        description="Complete suite of marketing, technology, and optimization services for accounting firms. Lead generation to client retention."
+        title="Professional Marketing Services For Accounting Firms"
+        description="Browse professional marketing services for accounting firms—from marketing automation, websites, and SEO to social media, content marketing, and optimization."
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/services" },
-          { name: "All Services", url: "/services/all" }
+          { name: "Services", url: "/leading-marketing-services-for-accounting-firms" },
+          { name: "All Services", url: "/services/all-professional-marketing-services-for-accounting-firms" }
         ]}
       />
       <Header />
@@ -143,12 +143,13 @@ const AllServices = () => {
         <div className="max-w-7xl mx-auto relative">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              Complete Suite of Services for
-              <span className="text-teal block mt-2">Accounting Firms</span>
+              Professional Marketing Services For Accounting Firms
             </h1>
-            <p className="text-xl text-text-secondary leading-relaxed">
-              From marketing automation to technology solutions, we provide everything your accounting firm needs to attract clients, streamline operations, and scale sustainably.
-            </p>
+            <div id="sf-keyword-intro">
+              <p className="text-xl text-text-secondary leading-relaxed">
+                SmartFirm's professional marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
+              </p>
+            </div>
           </div>
         </div>
       </section>

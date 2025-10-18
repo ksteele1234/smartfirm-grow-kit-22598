@@ -46,8 +46,8 @@ const SEOAudit = () => {
   // All routes to audit (from App.tsx and sitemap.xml)
   const routes = [
     "/",
-    "/services",
-    "/services/all",
+    "/leading-marketing-services-for-accounting-firms",
+    "/services/all-professional-marketing-services-for-accounting-firms",
     "/solutions",
     "/industries",
     "/resources",

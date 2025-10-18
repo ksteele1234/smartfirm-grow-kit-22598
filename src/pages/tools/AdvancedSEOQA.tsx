@@ -67,7 +67,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
 
   // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
-    "/", "/services", "/services/all", "/solutions", "/industries", "/resources",
+    "/", "/leading-marketing-services-for-accounting-firms", "/services/all-professional-marketing-services-for-accounting-firms", "/solutions", "/industries", "/resources",
     "/about", "/contact", "/case-studies", "/get-started", "/faq",
     "/solutions/i-need-more-leads", "/solutions/lead-generation",
     "/solutions/i-want-to-scale-my-firm", "/solutions/scale-firm",
