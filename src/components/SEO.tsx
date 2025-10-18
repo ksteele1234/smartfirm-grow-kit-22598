@@ -18,6 +18,10 @@ interface SEOProps {
   author?: string;
   breadcrumbs?: Array<{ name: string; url: string }>;
   faqs?: Array<{ question: string; answer: string }>;
+  // Organization schema enhancements
+  organizationType?: 'Organization' | 'ProfessionalService';
+  showContactInfo?: boolean;
+  showAddress?: boolean;
 }
 
 const SEO = ({ 
@@ -34,7 +38,10 @@ const SEO = ({
   dateModified,
   author,
   breadcrumbs,
-  faqs
+  faqs,
+  organizationType = 'Organization',
+  showContactInfo = false,
+  showAddress = false
 }: SEOProps) => {
   const location = useLocation();
   
@@ -118,9 +125,9 @@ const SEO = ({
       // Build graph array with all schemas
       const graphItems: any[] = [];
 
-      // 1. Organization (always present)
-      graphItems.push({
-        "@type": "Organization",
+      // 1. Organization/ProfessionalService (always present)
+      const organizationSchema: any = {
+        "@type": organizationType,
         "@id": `https://${primaryDomain}/#organization`,
         "name": "SmartFirm",
         "url": `https://${primaryDomain}`,
@@ -131,7 +138,30 @@ const SEO = ({
         "sameAs": [
           // Add LinkedIn/YouTube URLs here when available
         ]
-      });
+      };
+
+      // Add optional contact information
+      if (showContactInfo) {
+        organizationSchema.description = "Expert digital marketing for accounting firms";
+        organizationSchema.telephone = "+1-541-658-3789";
+        organizationSchema.email = "contact@smartfirm.io";
+      }
+
+      // Add optional address information
+      if (showAddress) {
+        organizationSchema.address = {
+          "@type": "PostalAddress",
+          "addressLocality": "Eugene",
+          "addressRegion": "OR",
+          "addressCountry": "US"
+        };
+        organizationSchema.areaServed = {
+          "@type": "Country",
+          "name": "United States"
+        };
+      }
+
+      graphItems.push(organizationSchema);
 
       // 2. Website (always present)
       graphItems.push({
@@ -254,7 +284,7 @@ const SEO = ({
 
     updateConsolidatedStructuredData();
     
-  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, robots, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, primaryDomain, defaultImage]);
+  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, robots, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
   
   return null;
 };

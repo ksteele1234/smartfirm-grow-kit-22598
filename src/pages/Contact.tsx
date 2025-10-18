@@ -40,6 +40,9 @@ const Contact = () => {
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
+        organizationType="ProfessionalService"
+        showContactInfo={true}
+        showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Contact Us", url: "/contact" }

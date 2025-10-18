@@ -102,6 +102,9 @@ const GetStarted = () => {
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
+        organizationType="ProfessionalService"
+        showContactInfo={true}
+        showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Get Started", url: "/get-started" }

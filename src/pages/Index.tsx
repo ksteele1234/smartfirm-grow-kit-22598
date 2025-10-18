@@ -26,6 +26,9 @@ const Index = () => {
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
+        organizationType="ProfessionalService"
+        showContactInfo={true}
+        showAddress={true}
         breadcrumbs={[{ name: "Home", url: "/" }]}
         faqs={[
           { question: "How is this different from other marketing agencies?", answer: "We only work with accounting firms: no restaurants, dentists, or tech startups. Our founder is a CPA who understands busy season, utilization rates, and the difference between $500 tax clients and $5K advisory retainers. We don't offer generic 'brand awareness' tactics. We build marketing infrastructure: websites that convert, Google profiles that rank, review systems that build trust, and dashboards that prove ROI." },

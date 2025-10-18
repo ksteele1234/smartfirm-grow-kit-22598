@@ -117,6 +117,9 @@ const About = () => {
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
+        organizationType="ProfessionalService"
+        showContactInfo={true}
+        showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "About Us", url: "/about" }
