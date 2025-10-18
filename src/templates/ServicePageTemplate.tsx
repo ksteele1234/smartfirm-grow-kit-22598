@@ -137,7 +137,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white/40" />
                 <BreadcrumbItem>
-                  <BreadcrumbLink href="/services" className="hover:text-white/80">Services</BreadcrumbLink>
+                  <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms" className="hover:text-white/80">Services</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="text-white/40" />
                 <BreadcrumbItem>

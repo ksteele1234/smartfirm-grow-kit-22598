@@ -114,7 +114,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.industryOverview}
             </p>
             <p className="mt-4 text-[#334155] text-center">
-              View <a href="/services" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">AICPA best practices</a>.
+              View <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">AICPA best practices</a>.
             </p>
           </div>
         </div>

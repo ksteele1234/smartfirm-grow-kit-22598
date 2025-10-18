@@ -39,15 +39,15 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Marketing Automation Services for Accounting Firms | SmartFirm"
-        description="Marketing automation services for accounting firms including lead generation, client retention, and business optimization that drive measurable growth."
+        title="Leading Marketing Services For Accounting Firms | SmartFirm"
+        description="Explore leading marketing services for accounting firms: automation platforms, conversion-optimized websites, local SEO, retention, and growth systems."
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/services" }
+          { name: "Services", url: "/leading-marketing-services-for-accounting-firms" }
         ]}
       />
       <Header />
@@ -78,10 +78,10 @@ const Services = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">Marketing Automation Services for Accounting Firms</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">Leading Marketing Services For Accounting Firms | SmartFirm</h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-                Marketing automation services for accounting firms include intelligent lead generation, AI-driven technology optimization, and data-driven expertise to scale your practice efficiently.
+                Our leading marketing services for accounting firms include turnkey automation platforms, high-converting website design, search engine optimization, and systematic client retention programs.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

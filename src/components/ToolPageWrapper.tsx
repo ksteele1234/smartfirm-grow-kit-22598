@@ -113,7 +113,7 @@ export const ToolPageWrapper = ({
                 <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
                   <span>Trusted by accounting professionals</span>
                   <span>•</span>
-                  <span>View our <a href="/services" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
+                  <span>View our <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
                   <span>•</span>
                   <span>Read <a href="/case-studies" data-sf="internal-add" className="text-primary hover:underline">success stories</a></span>
                   <span>•</span>

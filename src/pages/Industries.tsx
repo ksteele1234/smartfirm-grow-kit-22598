@@ -381,7 +381,7 @@ const Industries = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/services">
+                <a href="/leading-marketing-services-for-accounting-firms">
                   View All Services
                 </a>
               </Button>

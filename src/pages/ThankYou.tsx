@@ -111,7 +111,7 @@ const ThankYou = () => {
               <a href="/solutions" className="text-primary hover:underline">
                 Solutions
               </a>
-              <a href="/services" className="text-primary hover:underline">
+              <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline">
                 Services
               </a>
               <a href="/resources" className="text-primary hover:underline">
