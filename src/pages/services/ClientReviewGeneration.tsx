@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const ClientReviewGeneration = () => {
   const serviceData: ServicePageData = {
     id: "client-review-generation",
-    title: "Client Review Generation for CPAs",
+    title: "Automated Review Generation for CPAs | SmartFirm",
     slug: "client-review-generation", 
+    metaDescription: "Automated review generation for CPAs that requests feedback at optimal times, makes leaving reviews effortless, and builds your online reputation systematically.",
     content: {},
-    heroTitle: "Client Review Generation for CPAs",
-    heroSubtitle: "Build trust and credibility with automated systems that generate authentic 5-star reviews from satisfied clients, boosting your online reputation and attracting new business.",
+    heroTitle: "Automated Review Generation For Cpas | SmartFirm",
+    heroSubtitle: "Our automated review generation for CPAs identifies satisfied clients, sends perfectly-timed review requests, provides one-click review links, and monitors your reputation across Google, Yelp, and Facebook.",
     heroDescription: "Our review generation system helps accounting firms build a strong online reputation through systematic collection and management of client testimonials.",
     benefits: [
       {

@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const AutomatedLeadFollowUp = () => {
   const serviceData: ServicePageData = {
     id: "automated-lead-follow-up",
-    title: "Automated Lead Follow-Up for Accounting Firms",
+    title: "Automated Lead Follow-Up For CPAs | SmartFirm",
     slug: "automated-lead-follow-up",
+    metaDescription: "Automated lead follow-up for CPAs that responds instantly, nurtures prospects, schedules consultations, and converts 40% more leads without manual effort.",
     content: {},
-    heroTitle: "Automated Lead Follow-Up for Accounting Firms",
-    heroSubtitle: "Automated lead follow-up for accounting firms so you never lose a prospect again, with intelligent sequences that convert leads into clients while you focus on serving existing customers.",
+    heroTitle: "Automated Lead Follow Up For Cpas | SmartFirm",
+    heroSubtitle: "Our automated lead follow-up for CPAs sends instant responses to new inquiries, delivers personalized nurture sequences, schedules consultations automatically, and ensures no lead falls through the cracks.",
     heroDescription: "Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.",
     benefits: [
       {

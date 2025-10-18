@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const EmailMarketing = () => {
   const serviceData: ServicePageData = {
     id: "email-marketing",
-    title: "Email Marketing for CPAs",
+    title: "Professional Email Marketing for CPAs | SmartFirm",
     slug: "email-marketing",
+    metaDescription: "Email marketing for CPAs that nurtures leads, educates clients, promotes services, and drives engagement with automated campaigns and personalized messaging.",
     content: {},
-    heroTitle: "AI-Powered Email Marketing for CPAs",
-    heroSubtitle: "Nurture client relationships and stay top-of-mind with intelligent, predictive email marketing campaigns designed specifically for accounting practices.",
+    heroTitle: "Email Marketing For Cpas | SmartFirm",
+    heroSubtitle: "Our email marketing for CPAs delivers automated nurture sequences, seasonal tax reminders, service announcements, educational newsletters, and re-engagement campaigns that keep your firm top-of-mind.",
     heroDescription: "Our AI-driven email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through automated personalization and data-driven communication strategies.",
     benefits: [
       {

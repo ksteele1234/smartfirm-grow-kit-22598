@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const SEOForAccountants = () => {
   const serviceData: ServicePageData = {
     id: "seo-for-accountants",
-    title: "SEO for Accounting Firms",
+    title: "Expert SEO Services for Accounting Firms | SmartFirm",
     slug: "seo-for-accountants",
+    metaDescription: "Rank higher with SEO for accounting firms targeting 'CPA near me,' 'small business bookkeeping,' 'tax preparation' through local optimization and content.",
     content: {},
-    heroTitle: "AI-Optimized SEO for Accounting Firms",
-    heroSubtitle: "Dominate local search results with intelligent SEO strategies that attract high-value clients actively searching for CPA services and accounting expertise.",
+    heroTitle: "Seo For Accounting Firms | SmartFirm",
+    heroSubtitle: "Our SEO for accounting firms targets high-intent local searches like \"CPA near me\" and \"small business accountant\" through technical optimization, content creation, and local citation building.",
     heroDescription: "Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.",
     benefits: [
       {

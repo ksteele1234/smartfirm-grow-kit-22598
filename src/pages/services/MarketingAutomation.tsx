@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const MarketingAutomation = () => {
   const serviceData: ServicePageData = {
     id: "marketing-automation",
-    title: "Marketing Automation for Accounting Firms",
+    title: "Marketing Automation For Accounting Firms | SmartFirm",
     slug: "marketing-automation",
+    metaDescription: "Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.",
     content: {},
-    heroTitle: "Marketing Automation for Accounting Firms",
-    heroSubtitle: "Marketing automation for accounting firms that streamlines your entire marketing process with automated workflows that nurture leads, engage clients, and grow your practice.",
+    heroTitle: "Marketing Automation For Accounting Firms | SmartFirm",
+    heroSubtitle: "Our marketing automation for accounting firms creates intelligent workflows that nurture new leads, schedule consultations, onboard clients, send service reminders, and reactivate dormant relationships.",
     heroDescription: "Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.",
     benefits: [
       {

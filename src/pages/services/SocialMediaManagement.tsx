@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const SocialMediaManagement = () => {
   const serviceData: ServicePageData = {
     id: "social-media-management",
-    title: "Social Media Management for CPAs",
+    title: "Social Media Management for CPAs | SmartFirm",
     slug: "social-media-management",
+    metaDescription: "Social media management for CPAs that builds authority, attracts ideal clients, and stays compliant with professional standards across LinkedIn, Facebook, and Twitter.",
     content: {},
-    heroTitle: "Social Media Management for CPAs",
-    heroSubtitle: "Social media management for CPAs that helps you establish thought leadership and build your brand across all major social platforms while staying compliant with professional standards.",
+    heroTitle: "Social Media Management For Cpas | SmartFirm",
+    heroSubtitle: "Our social media management for CPAs creates compliant, professional content that showcases your expertise, engages your target audience, and drives qualified leads without consuming your time.",
     heroDescription: "Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.",
     benefits: [
       {

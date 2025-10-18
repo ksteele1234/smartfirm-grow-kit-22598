@@ -144,15 +144,23 @@ const App = () => (
         
         {/* Service Sub-pages */}
         <Route path="/services/marketing-automation" element={<MarketingAutomation />} />
+        <Route path="/services/marketing-automation-marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
         <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
+        <Route path="/services/technology-solutions-accounting-firm-technology-consulting" element={<TechnologySolutions />} />
         <Route path="/services/business-optimization" element={<BusinessOptimization />} />
         <Route path="/services/executive-services" element={<ExecutiveServices />} />
         <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
+        <Route path="/services/automated-lead-follow-up-automated-lead-follow-up-for-cpas" element={<AutomatedLeadFollowUp />} />
         <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
+        <Route path="/services/client-review-generation-automated-review-generation-for-cpas" element={<ClientReviewGeneration />} />
         <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
+        <Route path="/services/seo-for-accountants-seo-for-accounting-firms" element={<SEOForAccountants />} />
         <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
+        <Route path="/services/social-media-management-social-media-management-for-cpas" element={<SocialMediaManagement />} />
         <Route path="/services/email-marketing" element={<EmailMarketing />} />
+        <Route path="/services/email-marketing-email-marketing-for-cpas" element={<EmailMarketing />} />
         <Route path="/services/website-design" element={<WebsiteDesign />} />
+        <Route path="/services/website-design-professional-website-design-for-accounting-firms" element={<WebsiteDesign />} />
         <Route path="/services/content-marketing" element={<ContentMarketing />} />
         <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
         <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
@@ -181,6 +189,7 @@ const App = () => (
         
         {/* Funnel Pages */}
         <Route path="/growth-calculator" element={<GrowthCalculator />} />
+        <Route path="/growth-calculator-accounting-firm-growth-calculator" element={<GrowthCalculator />} />
         
         {/* Legal Pages */}
         <Route path="/privacy" element={<Privacy />} />

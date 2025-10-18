@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {
     id: "website-design",
-    title: "Website Design for Accounting Firms",
+    title: "Professional Website Design for Accounting Firms",
     slug: "website-design",
+    metaDescription: "Professional website design for accounting firms that converts 3-5x more visitors into clients. Mobile-optimized, compliance-ready, and built for growth.",
     content: {},
-    heroTitle: "Website Design for Accounting Firms",
-    heroSubtitle: "Convert more visitors into clients with high-performing websites designed specifically for accounting firms.",
+    heroTitle: "Professional Website Design For Accounting Firms",
+    heroSubtitle: "Our professional website design for accounting firms features conversion-optimized layouts, mobile responsiveness, compliance-friendly content, integrated lead capture, and fast-loading performance.",
     heroDescription: "Our website design service creates professional, conversion-optimized websites that establish credibility and generate leads for your accounting practice.",
     benefits: [
       {

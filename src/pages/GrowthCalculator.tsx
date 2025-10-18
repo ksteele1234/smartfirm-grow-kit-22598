@@ -34,8 +34,8 @@ const GrowthCalculator = () => {
   return (
     <>
       <SEO 
-        title="Growth Calculator - SmartFirm.io"
-        description="Discover how much revenue your accounting firm is leaving on the table. Get instant clarity on your growth potential in just 60 seconds."
+        title="Free Accounting Firm Growth Calculator Tool | SmartFirm"
+        description="Use our accounting firm growth calculator to input your client count, average fees, and capacity—then see how many clients you're leaving on the table."
       />
       <FunnelHeader />
 
@@ -52,12 +52,14 @@ const GrowthCalculator = () => {
               />
               
               <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#0F4C5C] leading-tight">
-                How Much Revenue Is Your Firm Leaving on the Table?
+                Accounting Firm Growth Calculator | SmartFirm
               </h1>
               
-              <p className="text-lg text-gray-700">
-                In just <span className="font-semibold text-[#0F4C5C]">60 seconds</span>, discover how many new clients you could add this year with the <span className="font-semibold text-[#0F4C5C]">right marketing system</span>.
-              </p>
+              <div id="sf-keyword-intro">
+                <p className="text-lg text-gray-700">
+                  This accounting firm growth calculator analyzes your existing client base, pricing structure, and available capacity to reveal your untapped revenue potential and optimal client mix.
+                </p>
+              </div>
             </div>
 
             {/* Right Column - Form */}

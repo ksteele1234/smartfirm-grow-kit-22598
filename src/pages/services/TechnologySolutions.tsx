@@ -4,11 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const TechnologySolutions = () => {
   const serviceData: ServicePageData = {
     id: "technology-solutions",
-    title: "Technology Solutions for Accounting Firms",
+    title: "Accounting Firm Technology Consulting | SmartFirm",
     slug: "technology-solutions",
+    metaDescription: "Accounting firm technology consulting that evaluates your tech stack, identifies inefficiencies, recommends solutions, and implements integrated systems.",
     content: {},
-    heroTitle: "Technology Solutions for Modern Accounting Firms",
-    heroSubtitle: "Technology solutions for modern accounting firms that optimize your tech stack and automate business processes to increase efficiency and reduce operational overhead.",
+    heroTitle: "Accounting Firm Technology Consulting | SmartFirm",
+    heroSubtitle: "Our accounting firm technology consulting analyzes your current software ecosystem, identifies redundancies and gaps, recommends optimal solutions, and manages implementation to streamline operations.",
     heroDescription: "Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.",
     benefits: [
       {
