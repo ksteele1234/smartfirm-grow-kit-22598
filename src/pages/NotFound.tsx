@@ -97,7 +97,7 @@ const NotFound = () => {
               You might be looking for:
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/solutions" className="text-primary hover:underline">
+              <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-primary hover:underline">
                 Solutions
               </a>
               <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline">

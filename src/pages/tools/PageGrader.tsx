@@ -80,7 +80,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     { path: "/", type: "core" },
     { path: "/leading-marketing-services-for-accounting-firms", type: "core" },
     { path: "/services/all-professional-marketing-services-for-accounting-firms", type: "core" },
-    { path: "/solutions", type: "core" },
+    { path: "/solutions-expert-marketing-agency-for-accounting-firms", type: "core" },
     { path: "/industries", type: "core" },
     { path: "/resources", type: "core" },
     { path: "/about", type: "core" },

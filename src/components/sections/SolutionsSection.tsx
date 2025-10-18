@@ -159,7 +159,7 @@ const SolutionsSection = () => {
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
-                <a href="/solutions">
+                <a href="/solutions-expert-marketing-agency-for-accounting-firms">
                   <Eye className="mr-2 h-5 w-5" />
                   Browse All Solutions
                 </a>

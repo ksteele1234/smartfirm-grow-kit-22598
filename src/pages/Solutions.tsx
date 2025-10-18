@@ -57,14 +57,14 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Marketing Automation Solutions for Accounting Firms | SmartFirm"
-        description="Marketing automation solutions for accounting firms that drive client retention, lead generation, and competitive strategies with proven results."
+        title="Expert Marketing Agency For Accounting Firms | SmartFirm"
+        description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
         pageType="solution"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Solutions", url: "/solutions" }
+          { name: "Solutions", url: "/solutions-expert-marketing-agency-for-accounting-firms" }
         ]}
       />
       <Header />
@@ -99,11 +99,11 @@ const Solutions = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
-              Marketing Automation Solutions for Accounting Firm Challenges
+              Expert Marketing Agency For Accounting Firms | SmartFirm
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Marketing automation solutions designed specifically for accounting firms help you overcome competition, meet client expectations, and tackle technology demands. SmartFirm provides AI-powered, predictive solutions with intelligent automation that work specifically for practices like yours.
+                As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
               </p>
             </div>
           </div>

@@ -48,7 +48,7 @@ const SEOAudit = () => {
     "/",
     "/leading-marketing-services-for-accounting-firms",
     "/services/all-professional-marketing-services-for-accounting-firms",
-    "/solutions",
+    "/solutions-expert-marketing-agency-for-accounting-firms",
     "/industries",
     "/resources",
     "/about",
