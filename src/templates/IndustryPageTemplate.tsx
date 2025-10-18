@@ -36,6 +36,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         pageType="industry"
         title={data.title}
         description={(data.heroSubtitle || data.industryOverview).substring(0, 155)}
+        canonicalUrl={data.canonicalUrl}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[

@@ -229,6 +229,7 @@ const ModernFirmQuiz = () => {
         <SEO 
           title="Modern Firm Quiz Results | SmartFirm"
           description="Your firm modernization assessment with technology adoption recommendations for accounting firms."
+          canonicalUrl="https://smartfirm.io/tools/modern-firm-quiz"
           pageType="tool"
           toolName="Modern Firm Quiz"
           noindex={false}
@@ -334,6 +335,7 @@ const ModernFirmQuiz = () => {
       <SEO 
         title="Modern Accounting Firm Assessment Tool | SmartFirm"
         description="Rate your practice with our modern accounting firm assessment measuring technology adoption, client experience, service delivery, and competitive positioning."
+        canonicalUrl="https://smartfirm.io/tools/modern-firm-quiz"
         pageType="tool"
         toolName="Modern Firm Quiz"
         noindex={false}

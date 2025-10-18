@@ -106,6 +106,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         audience="accounting firms"
         title={data.title}
         description={(data.heroDescription || data.heroSubtitle).substring(0, 155)}
+        canonicalUrl={data.canonicalUrl}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[

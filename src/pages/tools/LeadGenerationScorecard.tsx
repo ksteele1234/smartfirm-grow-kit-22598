@@ -196,6 +196,7 @@ const LeadGenerationScorecard = () => {
         <SEO 
           title="Lead Generation Scorecard Results | SmartFirm"
           description="Your lead generation assessment results with recommendations to improve your accounting firm's marketing."
+          canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard"
           pageType="tool"
           toolName="Lead Generation Scorecard"
           noindex={false}
@@ -301,6 +302,7 @@ const LeadGenerationScorecard = () => {
       <SEO 
         title="Lead Generation Scorecard | SmartFirm"
         description="Assess your accounting firm's lead generation effectiveness. Get scored recommendations for improvement."
+        canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard"
         pageType="tool"
         toolName="Lead Generation Scorecard"
         noindex={false}

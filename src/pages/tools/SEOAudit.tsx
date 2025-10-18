@@ -532,6 +532,7 @@ const SEOAudit = () => {
       <SEO 
         title="SEO Audit Tool"
         description="Internal SEO audit tool for SmartFirm website analysis"
+        canonicalUrl="https://smartfirm.io/tools/seo-audit"
         pageType="tool"
         toolName="SEO Audit Tool"
         robots="noindex,nofollow"

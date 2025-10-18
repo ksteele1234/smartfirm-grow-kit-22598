@@ -7,6 +7,7 @@ const MarketingAutomation = () => {
     title: "Marketing Automation For Accounting Firms | SmartFirm",
     slug: "marketing-automation",
     metaDescription: "Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.",
+    canonicalUrl: "https://smartfirm.io/services/marketing-automation",
     content: {},
     heroTitle: "Marketing Automation For Accounting Firms | SmartFirm",
     heroSubtitle: "Our marketing automation for accounting firms creates intelligent workflows that nurture new leads, schedule consultations, onboard clients, send service reminders, and reactivate dormant relationships.",

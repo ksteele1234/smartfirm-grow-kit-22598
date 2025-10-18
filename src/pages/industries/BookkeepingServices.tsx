@@ -7,6 +7,7 @@ const BookkeepingServices = () => {
     title: "Marketing Services for Bookkeeping Firms | SmartFirm",
     slug: "bookkeeping-services", 
     metaDescription: "Explore bookkeeping firms marketing services that differentiate your practice, attract ideal clients, and position you as a strategic financial partner.",
+    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services",
     content: {},
     heroTitle: "Bookkeeping Firms Marketing Services | SmartFirm",
     heroSubtitle: "Our bookkeeping firms marketing services differentiate your practice from commodity providers, attract your ideal small business clients, and position you as a strategic financial partner.",

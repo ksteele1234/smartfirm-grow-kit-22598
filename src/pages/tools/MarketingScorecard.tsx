@@ -142,6 +142,7 @@ const MarketingScorecard = () => {
         <SEO 
           title="Marketing Scorecard Results | SmartFirm"
           description="Your marketing assessment results with personalized recommendations for accounting firm growth."
+          canonicalUrl="https://smartfirm.io/tools/marketing-scorecard"
           pageType="tool"
           toolName="Marketing Scorecard"
           noindex={false}
@@ -277,6 +278,7 @@ const MarketingScorecard = () => {
         <SEO 
           title="Marketing Scorecard | SmartFirm"
           description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
+          canonicalUrl="https://smartfirm.io/tools/marketing-scorecard"
           pageType="tool"
           toolName="Marketing Scorecard"
           noindex={false}

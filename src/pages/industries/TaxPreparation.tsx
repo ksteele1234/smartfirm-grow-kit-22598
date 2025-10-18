@@ -7,6 +7,7 @@ const TaxPreparation = () => {
     title: "Digital Marketing Services for Tax Firms | SmartFirm",
     slug: "tax-preparation",
     metaDescription: "Discover digital marketing services for tax firms that attract year-round clients, reduce seasonal revenue swings, and position you as a strategic tax advisor.",
+    canonicalUrl: "https://smartfirm.io/industries/tax-preparation",
     content: {},
     heroTitle: "Digital Marketing Services For Tax Firms | SmartFirm",
     heroSubtitle: "Our digital marketing services for tax firms help you attract year-round advisory clients, reduce seasonal revenue volatility, and position your practice as a strategic tax planning partner.",

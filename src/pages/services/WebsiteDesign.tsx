@@ -7,6 +7,7 @@ const WebsiteDesign = () => {
     title: "Professional Website Design for Accounting Firms",
     slug: "website-design",
     metaDescription: "Professional website design for accounting firms that converts 3-5x more visitors into clients. Mobile-optimized, compliance-ready, and built for growth.",
+    canonicalUrl: "https://smartfirm.io/services/website-design",
     content: {},
     heroTitle: "Professional Website Design For Accounting Firms",
     heroSubtitle: "Our professional website design for accounting firms features conversion-optimized layouts, mobile responsiveness, compliance-friendly content, integrated lead capture, and fast-loading performance.",

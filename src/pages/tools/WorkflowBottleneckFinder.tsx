@@ -158,6 +158,7 @@ const WorkflowBottleneckFinder = () => {
         <SEO 
           title="Workflow Bottleneck Finder Results | SmartFirm"
           description="Your workflow analysis results with time savings recommendations for your accounting firm."
+          canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder"
           pageType="tool"
           toolName="Workflow Bottleneck Finder"
           noindex={false}
@@ -243,6 +244,7 @@ const WorkflowBottleneckFinder = () => {
       <SEO 
         title="Comprehensive SEO Audit for Accounting Firms"
         description="Complete our accounting firm workflow audit identifying bottlenecks, redundancies, manual tasks, and automation opportunities across your client delivery process."
+        canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder"
         pageType="tool"
         toolName="Workflow Bottleneck Finder"
         noindex={false}

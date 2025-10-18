@@ -7,6 +7,7 @@ const BusinessAdvisory = () => {
     title: "Custom Marketing Agency for Business Advisors",
     slug: "business-advisory",
     metaDescription: "Partner with a custom marketing agency for business advisors positioning you as a strategic advisor, attracting growth-focused clients, and commanding fees.",
+    canonicalUrl: "https://smartfirm.io/industries/business-advisory",
     content: {},
     heroTitle: "Custom Marketing Agency For Business Advisors | SmartFirm",
     heroSubtitle: "Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",

@@ -12,6 +12,7 @@ export interface ServicePageData extends CMSPageData {
   heroSubtitle: string;
   heroDescription: string;
   heroImage?: string;
+  canonicalUrl?: string;
   benefits: Array<{
     title: string;
     description: string;
@@ -65,6 +66,7 @@ export interface IndustryPageData extends CMSPageData {
   heroTitle: string;
   heroSubtitle: string;
   industryOverview: string;
+  canonicalUrl?: string;
   challenges: Array<{
     title: string;
     description: string;

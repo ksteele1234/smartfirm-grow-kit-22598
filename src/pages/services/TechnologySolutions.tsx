@@ -7,6 +7,7 @@ const TechnologySolutions = () => {
     title: "Accounting Firm Technology Consulting | SmartFirm",
     slug: "technology-solutions",
     metaDescription: "Accounting firm technology consulting that evaluates your tech stack, identifies inefficiencies, recommends solutions, and implements integrated systems.",
+    canonicalUrl: "https://smartfirm.io/services/technology-solutions",
     content: {},
     heroTitle: "Accounting Firm Technology Consulting | SmartFirm",
     heroSubtitle: "Our accounting firm technology consulting analyzes your current software ecosystem, identifies redundancies and gaps, recommends optimal solutions, and manages implementation to streamline operations.",
