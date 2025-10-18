@@ -142,6 +142,8 @@ const MarketingScorecard = () => {
         <SEO 
           title="Marketing Scorecard Results | SmartFirm"
           description="Your marketing assessment results with personalized recommendations for accounting firm growth."
+          pageType="tool"
+          toolName="Marketing Scorecard"
           noindex={false}
         />
         <Header />
@@ -275,6 +277,8 @@ const MarketingScorecard = () => {
         <SEO 
           title="Marketing Scorecard | SmartFirm"
           description="Quick marketing assessment for accounting firms. Get personalized recommendations to improve your marketing."
+          pageType="tool"
+          toolName="Marketing Scorecard"
           noindex={false}
         />
         <Header />

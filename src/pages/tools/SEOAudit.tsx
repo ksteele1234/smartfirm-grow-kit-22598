@@ -532,6 +532,8 @@ const SEOAudit = () => {
       <SEO 
         title="SEO Audit Tool"
         description="Internal SEO audit tool for SmartFirm website analysis"
+        pageType="tool"
+        toolName="SEO Audit Tool"
         robots="noindex,nofollow"
       />
       <Header />

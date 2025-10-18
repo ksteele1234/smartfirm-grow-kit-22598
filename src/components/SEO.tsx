@@ -1,17 +1,30 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { generateBreadcrumbs } from '@/utils/breadcrumbGenerator';
+import { LEGAL_PAGE_DATES } from '@/config/legalPageDates';
 
 interface SEOProps {
   title?: string;
   description?: string;
   image?: string;
   noindex?: boolean;
-  robots?: string; // Custom robots directive (e.g., "noindex,follow", "noindex,nofollow")
+  robots?: string;
   // Template fields
-  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'default';
+  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'default';
   serviceName?: string;
   audience?: string;
   topic?: string;
+  // Image enhancements
+  pageImage?: string;
+  // Tool page specific
+  toolName?: string;
+  // Success story specific
+  articleHeadline?: string;
+  // Legal page specific
+  genre?: string;
+  lastReviewed?: string;
+  // Speakable (optional override)
+  speakableSelectors?: string[];
   // Structured data fields
   datePublished?: string;
   dateModified?: string;
@@ -28,16 +41,22 @@ const SEO = ({
   title, 
   description,
   image,
-  noindex = false, // Site is live: allow indexing by default
-  robots, // Custom robots directive
+  noindex = false,
+  robots,
   pageType = 'default',
   serviceName,
   audience,
   topic,
-  datePublished,
+  pageImage,
+  toolName,
+  articleHeadline,
+  genre: genreProp,
+  lastReviewed: lastReviewedProp,
+  speakableSelectors,
+  datePublished: datePublishedProp,
   dateModified,
   author,
-  breadcrumbs,
+  breadcrumbs: breadcrumbsProp,
   faqs,
   organizationType = 'Organization',
   showContactInfo = false,
@@ -74,16 +93,45 @@ const SEO = ({
     generatedDescription = `Learn ${topic} for finance firms: actionable tips and tools from SmartFirm.`;
   }
   
+  // Auto-populate legal page data if applicable
+  const pathname = location.pathname;
+  const legalPageData = LEGAL_PAGE_DATES[pathname as keyof typeof LEGAL_PAGE_DATES];
+  
+  let genre = genreProp;
+  let lastReviewed = lastReviewedProp;
+  let datePublished = datePublishedProp;
+  
+  if (pageType === 'legal' && legalPageData) {
+    genre = genre || legalPageData.genre;
+    lastReviewed = lastReviewed || legalPageData.lastReviewed;
+    datePublished = datePublished || legalPageData.datePublished;
+  }
+  
   const pageTitle = generatedTitle;
   const pageDescription = generatedDescription;
-  const pageImage = image || defaultImage;
-  const canonicalUrl = `https://${primaryDomain}${location.pathname}`;
+  const pageImageUrl = pageImage || image || defaultImage;
+  const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
+  const canonicalUrl = `https://${primaryDomain}${pathname}`;
+  
+  // Auto-generate breadcrumbs if not provided and not homepage
+  const autoBreadcrumbs = !breadcrumbsProp && pathname !== '/' 
+    ? generateBreadcrumbs(pathname, title) 
+    : breadcrumbsProp;
+  
+  // Helper function to format tool names
+  const formatToolName = (url: string): string => {
+    const slug = url.split('/').pop() || '';
+    return slug
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
   
   useEffect(() => {
     // Update document title
     document.title = pageTitle;
     
-    // Update or create meta tags
+    // Update standard meta tags
     const updateMetaTag = (property: string, content: string, useProperty = false) => {
       const attribute = useProperty ? 'property' : 'name';
       let element = document.querySelector(`meta[${attribute}="${property}"]`);
@@ -179,13 +227,25 @@ const SEO = ({
         }
       });
 
-      // 3. WebPage (always present)
-      graphItems.push({
+      // 3. WebPage (always present with enhancements)
+      const webPageSchema: any = {
         "@type": "WebPage",
         "@id": `${canonicalUrl}#webpage`,
         "url": canonicalUrl,
         "name": pageTitle,
         "description": pageDescription,
+        "inLanguage": "en-US",
+        "image": pageImageFull,
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": pageImageFull,
+          "width": 1200,
+          "height": 630
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": speakableSelectors || ["h1", "p:first-of-type", ".value-proposition"]
+        },
         "dateModified": dateModified || new Date().toISOString(),
         "isPartOf": {
           "@id": `https://${primaryDomain}/#website`
@@ -193,7 +253,17 @@ const SEO = ({
         "about": {
           "@id": `https://${primaryDomain}/#organization`
         }
-      });
+      };
+      
+      // Add optional fields
+      if (lastReviewed) {
+        webPageSchema.lastReviewed = lastReviewed;
+      }
+      if (genre) {
+        webPageSchema.genre = genre;
+      }
+      
+      graphItems.push(webPageSchema);
 
       // 4. Service (for service pages)
       if (pageType === 'service' && serviceName) {
@@ -217,7 +287,7 @@ const SEO = ({
         });
       }
 
-      // 5. Article (for blog pages)
+      // 5. Article (for blog and success story pages)
       if (pageType === 'blog' && topic) {
         graphItems.push({
           "@type": "Article",
@@ -231,12 +301,63 @@ const SEO = ({
           "publisher": {
             "@id": `https://${primaryDomain}/#organization`
           },
-          "image": `https://${primaryDomain}${pageImage}`,
+          "image": pageImageFull,
           "description": pageDescription,
           "mainEntityOfPage": {
             "@id": `${canonicalUrl}#webpage`
           }
         });
+      }
+      
+      // Enhanced Article schema for success stories
+      if (pageType === 'success-story') {
+        graphItems.push({
+          "@type": "Article",
+          "@id": `${canonicalUrl}#article`,
+          "headline": articleHeadline || pageTitle,
+          "datePublished": datePublished || new Date().toISOString(),
+          "dateModified": dateModified || datePublished || new Date().toISOString(),
+          "author": {
+            "@type": "Organization",
+            "name": "SmartFirm"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "SmartFirm",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `https://${primaryDomain}/assets/smartfirm-logo-full.png`
+            }
+          },
+          "image": pageImageFull,
+          "description": pageDescription
+        });
+        
+        // Link to WebPage via mainEntity
+        webPageSchema.mainEntity = { "@id": `${canonicalUrl}#article` };
+      }
+      
+      // 5b. SoftwareApplication (for tool pages)
+      if (pageType === 'tool') {
+        const toolDisplayName = toolName || formatToolName(canonicalUrl);
+        graphItems.push({
+          "@type": "SoftwareApplication",
+          "@id": `${canonicalUrl}#software`,
+          "name": toolDisplayName,
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web Browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "provider": {
+            "@id": `https://${primaryDomain}/#organization`
+          }
+        });
+        
+        // Link to WebPage via mainEntity
+        webPageSchema.mainEntity = { "@id": `${canonicalUrl}#software` };
       }
 
       // 6. FAQPage (when FAQs provided)
@@ -255,12 +376,12 @@ const SEO = ({
         });
       }
 
-      // 7. BreadcrumbList (when breadcrumbs provided)
-      if (breadcrumbs && breadcrumbs.length > 0) {
+      // 7. BreadcrumbList (auto-generated or provided)
+      if (autoBreadcrumbs && autoBreadcrumbs.length > 0) {
         graphItems.push({
           "@type": "BreadcrumbList",
           "@id": `${canonicalUrl}#breadcrumb`,
-          "itemListElement": breadcrumbs.map((crumb, index) => ({
+          "itemListElement": autoBreadcrumbs.map((crumb, index) => ({
             "@type": "ListItem",
             "position": index + 1,
             "name": crumb.name,
@@ -288,7 +409,7 @@ const SEO = ({
 
     updateConsolidatedStructuredData();
     
-  }, [pageTitle, pageDescription, pageImage, canonicalUrl, noindex, robots, pageType, serviceName, topic, datePublished, dateModified, author, breadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
+  }, [pageTitle, pageDescription, pageImageUrl, pageImageFull, canonicalUrl, pathname, noindex, robots, pageType, serviceName, topic, toolName, articleHeadline, genre, lastReviewed, speakableSelectors, datePublished, dateModified, author, autoBreadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
   
   return null;
 };

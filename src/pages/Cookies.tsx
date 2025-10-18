@@ -31,13 +31,8 @@ const Cookies = () => {
       <SEO 
         title="Cookie Policy | SmartFirm"
         description="Learn how SmartFirm uses cookies to improve your website experience. Manage your cookie preferences and settings."
-        pageType="default"
+        pageType="legal"
         noindex={false}
-        dateModified={new Date().toISOString()}
-        breadcrumbs={[
-          { name: "Home", url: "/" },
-          { name: "Cookie Policy", url: "/cookies" }
-        ]}
         faqs={faqs}
       />
       <Header />

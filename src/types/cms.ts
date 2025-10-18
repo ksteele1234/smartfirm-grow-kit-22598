@@ -107,6 +107,7 @@ export interface SuccessStoryData extends CMSPageData {
     image?: string;
   };
   services: string[];
+  publishDate?: string;
 }
 
 export interface ResourcePageData extends CMSPageData {

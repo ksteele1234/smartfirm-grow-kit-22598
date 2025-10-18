@@ -17,6 +17,10 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
       <SEO 
         title={data.title}
         description={data.testimonial.quote || `${data.clientName} success story - ${data.industry}`}
+        pageType="success-story"
+        articleHeadline={data.title}
+        datePublished={data.publishDate || new Date().toISOString()}
+        pageImage={data.clientLogo || '/assets/og-default.png'}
       />
       <Header />
       {/* Hero Section */}

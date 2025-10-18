@@ -22,14 +22,13 @@ const Index = () => {
       <SEO 
         title="Expert Digital Marketing For Accounting Firms | SmartFirm"
         description="SmartFirm delivers expert digital marketing for accounting firms with done-for-you automation, SEO, websites, and retention systems to get & keep clients."
-        image="/assets/og-default.webp"
+        pageImage="/assets/hero-wave-background.webp"
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
         organizationType="ProfessionalService"
         showContactInfo={true}
         showAddress={true}
-        breadcrumbs={[{ name: "Home", url: "/" }]}
         faqs={[
           { question: "How is this different from other marketing agencies?", answer: "We only work with accounting firms: no restaurants, dentists, or tech startups. Our founder is a CPA who understands busy season, utilization rates, and the difference between $500 tax clients and $5K advisory retainers. We don't offer generic 'brand awareness' tactics. We build marketing infrastructure: websites that convert, Google profiles that rank, review systems that build trust, and dashboards that prove ROI." },
           { question: "How much time will my team need to invest?", answer: "During the initial 30-day setup, expect to invest 4-6 hours total across a few strategy sessions where we nail down your positioning, ideal clients, and messaging. We handle all the technical execution: website build, GBP optimization, system integrations. After launch, your team invests approximately 2 hours per month for performance reviews and content approval." },

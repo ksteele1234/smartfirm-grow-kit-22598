@@ -153,6 +153,8 @@ const TechStackROICalculator = () => {
         <SEO 
           title="Tech Stack ROI Calculator Results | SmartFirm"
           description="Your tech stack analysis results with cost savings and efficiency recommendations."
+          pageType="tool"
+          toolName="Tech Stack ROI Calculator"
           noindex={false}
         />
         <Header />
@@ -275,6 +277,8 @@ const TechStackROICalculator = () => {
       <SEO 
         title="Accounting Firm Technology ROI Calculator | SmartFirm"
         description="Calculate your accounting firm technology ROI by inputting software costs, time savings, error reduction, and capacity gains to justify technology investments."
+        pageType="tool"
+        toolName="Tech Stack ROI Calculator"
         noindex={false}
       />
       <Header />

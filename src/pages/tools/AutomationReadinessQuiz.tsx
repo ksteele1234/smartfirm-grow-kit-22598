@@ -129,6 +129,8 @@ const AutomationReadinessQuiz = () => {
         <SEO 
           title="Automation Readiness Quiz Results | SmartFirm"
           description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
+          pageType="tool"
+          toolName="Automation Readiness Quiz"
           noindex={false}
         />
         <Header />
@@ -188,6 +190,8 @@ const AutomationReadinessQuiz = () => {
       <SEO 
         title="Automation Readiness Assessment for Accountants"
         description="Discover if you're ready for automation with our readiness assessment for accountants evaluating processes, technology, team, and client base for automation."
+        pageType="tool"
+        toolName="Automation Readiness Quiz"
         noindex={false}
       />
       <Header />

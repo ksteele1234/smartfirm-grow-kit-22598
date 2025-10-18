@@ -169,6 +169,8 @@ const GrowthPotentialScorecard = () => {
           <SEO 
             title="Growth Potential Scorecard | SmartFirm"
             description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
+            pageType="tool"
+            toolName="Growth Potential Scorecard"
             noindex={false}
           />
           <Header />
@@ -190,6 +192,8 @@ const GrowthPotentialScorecard = () => {
         <SEO 
           title="Growth Potential Scorecard Results | SmartFirm"
           description="Your growth potential analysis with benchmarking and recommendations for your accounting firm."
+          pageType="tool"
+          toolName="Growth Potential Scorecard"
           noindex={false}
         />
         <Header />
@@ -334,6 +338,8 @@ const GrowthPotentialScorecard = () => {
       <SEO 
         title="Accounting Firm Growth Scorecard Tool | SmartFirm"
         description="Use our accounting firm growth scorecard to rate your marketing, operations, client experience, technology, and team to identify growth constraints."
+        pageType="tool"
+        toolName="Growth Potential Scorecard"
         noindex={false}
       />
       <Header />

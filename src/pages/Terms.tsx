@@ -31,13 +31,8 @@ const Terms = () => {
       <SEO 
         title="Terms of Service | SmartFirm"
         description="SmartFirm terms of service governing the use of our software, tools, and services. Updated for Oregon law compliance."
-        pageType="default"
+        pageType="legal"
         noindex={false}
-        dateModified={new Date().toISOString()}
-        breadcrumbs={[
-          { name: "Home", url: "/" },
-          { name: "Terms of Service", url: "/terms" }
-        ]}
         faqs={faqs}
       />
       <Header />

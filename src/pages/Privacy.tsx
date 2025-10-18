@@ -31,13 +31,8 @@ const Privacy = () => {
       <SEO 
         title="Privacy Policy | SmartFirm"
         description="Learn how SmartFirm collects, uses, and protects your information. Updated to comply with Oregon Consumer Privacy Act (OCPA)."
-        pageType="default"
+        pageType="legal"
         noindex={false}
-        dateModified={new Date().toISOString()}
-        breadcrumbs={[
-          { name: "Home", url: "/" },
-          { name: "Privacy Policy", url: "/privacy" }
-        ]}
         faqs={faqs}
       />
       <Header />

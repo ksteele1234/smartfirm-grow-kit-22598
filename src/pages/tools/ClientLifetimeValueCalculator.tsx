@@ -88,6 +88,8 @@ const ClientLifetimeValueCalculator = () => {
         <SEO 
           title="Client Lifetime Value Calculator Results | SmartFirm"
           description="Your client lifetime value analysis with retention recommendations for your accounting firm."
+          pageType="tool"
+          toolName="Client Lifetime Value Calculator"
           noindex={false}
         />
         <Header />
@@ -233,6 +235,8 @@ const ClientLifetimeValueCalculator = () => {
       <SEO 
         title="Client Lifetime Value Calculator | SmartFirm"
         description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
+        pageType="tool"
+        toolName="Client Lifetime Value Calculator"
         noindex={false}
       />
         <Header />
