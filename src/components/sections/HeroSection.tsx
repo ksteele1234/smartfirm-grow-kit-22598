@@ -147,7 +147,7 @@ const HeroSection = () => {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ 
-              opacity: 0.3,
+              opacity: 1,
               filter: 'brightness(1.8) contrast(1.1)'
             }}
             poster="/images/hero-poster.jpg"
