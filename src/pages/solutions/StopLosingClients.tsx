@@ -7,6 +7,7 @@ const StopLosingClients = () => {
     title: "Modern Marketing Services for CPAs | SmartFirm",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
     metaDescription: "Compete with modern marketing services for CPAs that showcase your technology adoption, streamline client experience, and position you as forward-thinking.",
+    canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas",
     content: {},
     heroTitle: "Modern Marketing Services For Cpas | SmartFirm",
     heroSubtitle: "Our modern marketing services for CPAs help you compete with tech-savvy competitors by highlighting your technology stack, streamlining client interactions, and positioning your practice as innovative.",

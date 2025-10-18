@@ -9,6 +9,7 @@ interface SEOProps {
   image?: string;
   noindex?: boolean;
   robots?: string;
+  canonicalUrl?: string; // Override canonical URL for pages with multiple route aliases
   // Template fields
   pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'default';
   serviceName?: string;
@@ -43,6 +44,7 @@ const SEO = ({
   image,
   noindex = false,
   robots,
+  canonicalUrl: canonicalUrlProp,
   pageType = 'default',
   serviceName,
   audience,
@@ -111,7 +113,8 @@ const SEO = ({
   const pageDescription = generatedDescription;
   const pageImageUrl = pageImage || image || defaultImage;
   const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
-  const canonicalUrl = `https://${primaryDomain}${pathname}`;
+  // Use provided canonical URL or generate from pathname
+  const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${pathname}`;
   
   // Auto-generate breadcrumbs if not provided and not homepage
   const autoBreadcrumbs = !breadcrumbsProp && pathname !== '/' 

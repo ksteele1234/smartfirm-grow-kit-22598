@@ -37,6 +37,7 @@ export interface SolutionPageData extends CMSPageData {
   heroSubtitle: string;
   problemStatement: string;
   solutionOverview: string;
+  canonicalUrl?: string;
   keyBenefits: Array<{
     title: string;
     description: string;

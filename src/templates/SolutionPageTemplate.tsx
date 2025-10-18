@@ -48,6 +48,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         pageType="solution"
         title={data.title}
         description={(data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
+        canonicalUrl={data.canonicalUrl}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[

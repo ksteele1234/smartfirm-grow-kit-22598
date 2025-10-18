@@ -103,13 +103,14 @@ const AllServices = () => {
       <SEO 
         title="Professional Marketing Services For Accounting Firms"
         description="Browse professional marketing services for accounting firms—from marketing automation, websites, and SEO to social media, content marketing, and optimization."
+        canonicalUrl="https://smartfirm.io/services/all"
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/leading-marketing-services-for-accounting-firms" },
-          { name: "All Services", url: "/services/all-professional-marketing-services-for-accounting-firms" }
+          { name: "Services", url: "/services" },
+          { name: "All Services", url: "/services/all" }
         ]}
       />
       <Header />

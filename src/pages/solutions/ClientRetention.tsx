@@ -6,6 +6,7 @@ const ClientRetention = () => {
     id: "client-retention",
     title: "Client Retention Strategies",
     slug: "client-retention",
+    canonicalUrl: "https://smartfirm.io/solutions/client-retention",
     content: {},
     heroTitle: "AI-Powered Client Retention Strategies",
     heroSubtitle: "Strengthen client relationships with predictive analytics and intelligent automation. Our AI-driven retention strategies keep your best clients engaged and loyal for years through data-driven insights.",

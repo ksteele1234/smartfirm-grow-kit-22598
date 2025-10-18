@@ -160,12 +160,13 @@ const ToolsCalculators = () => {
       <SEO 
         title="Free Marketing Tools for Accounting Firms | SmartFirm"
         description="Access free marketing tools for accounting firms including growth calculators, ROI assessments, workflow audits, marketing scorecards, quizzes, and benchmarks."
+        canonicalUrl="https://smartfirm.io/tools"
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Free Tools & Calculators", url: "/tools-marketing-tools-for-accounting-firms" }
+          { name: "Free Tools & Calculators", url: "/tools" }
         ]}
         faqs={[
           {

@@ -59,12 +59,13 @@ const Solutions = () => {
       <SEO 
         title="Expert Marketing Agency For Accounting Firms | SmartFirm"
         description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
+        canonicalUrl="https://smartfirm.io/solutions"
         pageType="solution"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Solutions", url: "/solutions-expert-marketing-agency-for-accounting-firms" }
+          { name: "Solutions", url: "/solutions" }
         ]}
       />
       <Header />

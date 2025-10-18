@@ -7,6 +7,7 @@ const WorkLessEarnMore = () => {
     title: "Increase Your Accounting Firm Revenue | SmartFirm",
     slug: "work-less-earn-more",
     metaDescription: "Increase accounting firm revenue while reducing hours through value pricing strategies, service mix optimization, automation, and high-margin advisory.",
+    canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more",
     content: {},
     heroTitle: "Increase Accounting Firm Revenue | SmartFirm",
     heroSubtitle: "Discover how to increase accounting firm revenue while working fewer hours through value-based pricing models, service mix optimization, process automation, and transitioning to high-margin advisory services.",

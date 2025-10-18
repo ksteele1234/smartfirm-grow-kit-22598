@@ -7,6 +7,7 @@ const GrowWithoutPains = () => {
     title: "Strategic Accounting Firm Growth Consulting",
     slug: "grow-without-growing-pains",
     metaDescription: "Grow without growing pains through accounting firm growth consulting addressing capacity constraints, delegation challenges, and service delivery systems.",
+    canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
     content: {},
     heroTitle: "Accounting Firm Growth Consulting | SmartFirm",
     heroSubtitle: "Our accounting firm growth consulting helps you scale without burnout by addressing capacity planning, building delegation systems, standardizing service delivery, and creating sustainable growth infrastructure.",

@@ -7,6 +7,7 @@ const ScaleFirm = () => {
     title: "Scale Your Accounting Firm Successfully | SmartFirm",
     slug: "scale-firm",
     metaDescription: "Scale your accounting firm through systematized processes, delegation frameworks, service productization, pricing optimization, and capacity planning.",
+    canonicalUrl: "https://smartfirm.io/solutions/scale-firm",
     content: {},
     heroTitle: "Scale Accounting Firm | SmartFirm",
     heroSubtitle: "Learn how to scale your accounting firm by implementing systematized client delivery processes, building delegation frameworks, productizing services, optimizing pricing, and planning capacity strategically.",
