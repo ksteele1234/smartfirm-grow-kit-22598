@@ -137,8 +137,8 @@ const QuickStart = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="SmartFirm 30-Day Quick Start Package | Marketing Package for CPA Firms"
-        description="Launch your accounting firm's marketing in 30 days with SmartFirm's Quick Start Package. A complete marketing package for CPA firms, including website design, GBP optimization, CRM automations, review generation, email marketing, and SEO."
+        title="Complete Marketing Package for CPA Firms | SmartFirm"
+        description="Launch a complete marketing package for CPA firms in 30 days: website setup, lead capture forms, email automation, review requests, and SEO foundation—ready."
         pageType="service"
         serviceName="30-Day Quick Start Package"
         noindex={false}
@@ -146,7 +146,7 @@ const QuickStart = () => {
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Get Started", url: "/get-started" },
-          { name: "Quick Start Package", url: "/quick-start-marketing-for-cpa-firms" }
+          { name: "Quick Start Package", url: "/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms" }
         ]}
         faqs={[
           {
@@ -198,12 +198,12 @@ const QuickStart = () => {
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Get Started with a Marketing Package for CPA Firms in Just 30 Days
+              Marketing Package For Cpa Firms | SmartFirm
             </h1>
             
             <div id="sf-keyword-intro">
               <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-10 leading-relaxed">
-                The SmartFirm Quick Start Package gives accountants, CPAs, bookkeepers, and tax preparers everything they need to launch modern marketing systems — fast.
+                This marketing package for CPA firms delivers a turnkey system in 30 days including website deployment, automated lead follow-up, client onboarding sequences, and review generation workflows.
               </p>
             </div>
             

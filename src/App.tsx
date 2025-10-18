@@ -121,6 +121,7 @@ const App = () => (
         <Route path="/case-studies" element={<SuccessStories />} />
         <Route path="/get-started" element={<GetStarted />} />
         <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
+        <Route path="/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms" element={<QuickStart />} />
         
         {/* Solution Sub-pages */}
         <Route path="/solutions/i-want-to-scale-my-firm" element={<ScaleFirm />} />
