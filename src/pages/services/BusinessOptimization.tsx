@@ -76,6 +76,24 @@ const BusinessOptimization = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How long does the optimization process take?",
+        answer: "Phase 1 (Audit and Analysis): 2-3 weeks. Phase 2 (Recommendations and Roadmap): 1 week. Phase 3 (Implementation Support): 8-12 weeks. You'll have actionable insights within 30 days and see measurable improvements within 90 days."
+      },
+      {
+        question: "What if the recommendations require major changes I'm not ready for?",
+        answer: "We provide a prioritized roadmap with quick wins (implement this month), medium-term improvements (implement this quarter), and long-term strategic shifts (implement this year). You control the pace—we provide the plan."
+      },
+      {
+        question: "Will you help implement the recommendations, or just provide a report?",
+        answer: "We offer both options. Some firms want a diagnostic report and handle implementation themselves. Others want ongoing support to execute the roadmap. We tailor our engagement to your needs and capacity."
+      },
+      {
+        question: "How do you measure success?",
+        answer: "We track specific KPIs tied to your goals: revenue per client, profit margin, capacity utilization, client acquisition cost, and retention rate. You'll see exactly how optimization efforts impact your bottom line—not vague \"improvements.\""
+      }
+    ],
     ctaTitle: "Optimize Your Firm's Performance",
     ctaDescription: "Let's analyze your operations and implement improvements that drive measurable results.",
     ctaButtonText: "Get Analysis",

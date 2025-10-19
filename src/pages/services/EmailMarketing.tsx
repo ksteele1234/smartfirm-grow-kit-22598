@@ -76,6 +76,24 @@ const EmailMarketing = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How often will you send emails to my clients?",
+        answer: "We recommend 1-2 emails per month for general newsletters, plus automated emails triggered by specific events (tax deadline reminders, service completion follow-ups, appointment reminders). We'll tailor frequency to your preferences and client expectations."
+      },
+      {
+        question: "What if clients unsubscribe or complain about too many emails?",
+        answer: "We follow email marketing best practices: clear unsubscribe links, segmented lists (so clients only get relevant content), and frequency caps. Unsubscribe rates for our campaigns average 0.5-1% (industry average is 2-3%), meaning your content is well-received."
+      },
+      {
+        question: "Can you segment my list by service type or client value?",
+        answer: "Yes. We segment by service type (tax-only, advisory, full-service), engagement level (active, at-risk, dormant), and lifecycle stage (prospect, new client, long-term client). This ensures everyone gets personalized, relevant content."
+      },
+      {
+        question: "Do I need to write the emails, or do you handle that?",
+        answer: "We write everything. You provide high-level input (upcoming service changes, seasonal promotions, key messages), and we draft emails for your approval. Most firms spend 15-20 minutes per month reviewing and approving content."
+      }
+    ],
     ctaTitle: "Start Nurturing Client Relationships",
     ctaDescription: "Discover how strategic email marketing can strengthen client relationships and drive business growth.",
     ctaButtonText: "Get Started",

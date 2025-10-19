@@ -76,6 +76,24 @@ const AutomatedLeadFollowUp = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How quickly does the system respond to new leads?",
+        answer: "Instantly. When a lead fills out your contact form, submits a consultation request, or calls your tracking number, our system responds within 60 seconds via email and SMS. Voicemail drops happen within 5 minutes if they don't answer."
+      },
+      {
+        question: "What if a lead wants to talk to a real person immediately?",
+        answer: "The system includes your phone number and booking link in every automated message. Leads can call you directly or book a consultation instantly. The automation handles nurturing for leads who aren't ready to talk yet—not replacing human interaction, just ensuring no one falls through the cracks."
+      },
+      {
+        question: "Can I customize the follow-up messages?",
+        answer: "Yes. We provide proven templates based on thousands of accounting firm leads, but you can customize tone, messaging, and offers. We'll work with you during setup to ensure every message sounds like you."
+      },
+      {
+        question: "What happens if a lead doesn't respond to the automated sequence?",
+        answer: "After 7 touches over 14 days (email, SMS, voicemail), the system flags the lead as \"unresponsive\" and notifies you. You can choose to make a personal outreach attempt or move them to a long-term nurture campaign. Most leads respond by touch 3-4."
+      }
+    ],
     ctaTitle: "Ready to Automate Your Lead Follow-Up?",
     ctaDescription: "Let's set up automated sequences that convert more prospects into clients for your accounting firm.",
     ctaButtonText: "Get Started",

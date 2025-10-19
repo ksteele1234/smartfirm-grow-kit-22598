@@ -52,6 +52,24 @@ const ContentMarketing = () => {
         description: "Monthly reports show traffic, rankings, and lead attribution so you see content ROI clearly"
       }
     ],
+    faqs: [
+      {
+        question: "How often will you publish content?",
+        answer: "We recommend 2-4 blog posts per month, plus quarterly long-form guides or resources. Consistency matters more than volume—we'd rather publish 2 high-quality posts monthly than 8 mediocre ones."
+      },
+      {
+        question: "What topics will you write about?",
+        answer: "We focus on high-intent topics your ideal clients are searching for: tax planning strategies, business advisory insights, CFO services explainers, industry-specific guides, and answers to common client questions. Every piece is designed to attract and convert prospects."
+      },
+      {
+        question: "Do I need to provide topic ideas, or do you handle that?",
+        answer: "We handle topic research and planning based on keyword data, industry trends, and your service focus. You provide input on your expertise and unique perspectives—we turn that into SEO-optimized content."
+      },
+      {
+        question: "How long until content marketing generates leads?",
+        answer: "Most firms see their first content-generated leads within 60-90 days. Consistent lead flow (5-10 leads/month) typically starts around month 6. Content marketing is a long-term investment—it compounds over time as your content library grows."
+      }
+    ],
     ctaTitle: "Ready to Build Your Content Marketing Engine?",
     ctaDescription: "Book a free strategy call to discover how content marketing can grow your firm's visibility and authority.",
     ctaButtonText: "Get Started",

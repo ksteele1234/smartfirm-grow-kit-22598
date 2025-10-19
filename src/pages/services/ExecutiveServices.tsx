@@ -76,6 +76,24 @@ const ExecutiveServices = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How is this different from hiring a business coach?",
+        answer: "Generic business coaches don't understand accounting. We're former firm owners who've navigated busy season, compliance constraints, and scaling challenges specific to accounting practices. You'll get advice that actually works in your world—not generic business theory."
+      },
+      {
+        question: "How much time commitment is required from me?",
+        answer: "Fractional CIO services: 2-4 hours per month (strategy calls + review). Executive coaching: 2 hours per month (1:1 sessions). Growth planning: 4-6 hours upfront, then 1-2 hours monthly. We're designed for busy firm owners who can't dedicate 10+ hours per week to strategic work."
+      },
+      {
+        question: "What's included in fractional CIO services?",
+        answer: "Technology roadmap and planning, vendor evaluation and management, security assessments and compliance, digital transformation strategy, and ongoing advisory. You get strategic technology leadership without the $150K+ salary of a full-time CIO."
+      },
+      {
+        question: "Can I try this before committing to a long-term engagement?",
+        answer: "Yes. We offer a 90-day pilot for executive services. If you don't see value, you can cancel. Most firms extend after the pilot because they finally have the strategic support they've been missing."
+      }
+    ],
     ctaTitle: "Access Executive-Level Expertise",
     ctaDescription: "Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.",
     ctaButtonText: "Explore Services",

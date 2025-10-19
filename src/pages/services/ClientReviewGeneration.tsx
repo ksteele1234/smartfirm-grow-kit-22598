@@ -76,6 +76,24 @@ const ClientReviewGeneration = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How does the system know when to request reviews?",
+        answer: "We integrate with your practice management software to detect service completion triggers (tax return filed, advisory project closed, monthly bookkeeping completed). The system automatically sends review requests 2-3 days after completion—when satisfaction is highest."
+      },
+      {
+        question: "What if a client leaves a negative review?",
+        answer: "Our monitoring system alerts you immediately (email + SMS). We provide response templates for addressing concerns professionally and offer to help resolve issues offline. Most negative reviews can be resolved or mitigated with a thoughtful, timely response."
+      },
+      {
+        question: "Will clients get annoyed by review requests?",
+        answer: "No. We send one request per service completion, with a polite reminder 7 days later if they don't respond. Clients who've already left a review are automatically excluded from future requests. Our approach is respectful and non-pushy."
+      },
+      {
+        question: "Which review platforms do you focus on?",
+        answer: "Google is the priority (90% of prospects check Google reviews first). We also request reviews on Facebook and industry-specific platforms if relevant. You can customize which platforms to prioritize based on where your prospects look."
+      }
+    ],
     ctaTitle: "Start Building Your Review Reputation",
     ctaDescription: "Discover how our automated review generation system can build trust and attract more clients to your accounting practice.",
     ctaButtonText: "Get Started",

@@ -76,6 +76,24 @@ const TechnologySolutions = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How long does implementation take?",
+        answer: "Most integrations and workflow automations are implemented in 2-4 weeks. Week 1: Audit and planning. Week 2: Configuration and testing. Week 3: Data migration and team training. Week 4: Go-live and support. We minimize disruption to your current operations."
+      },
+      {
+        question: "Will this require changing all my existing tools?",
+        answer: "Not necessarily. We audit your current stack and recommend changes only where there are major gaps or inefficiencies. Many firms keep QuickBooks and practice management software and simply add integrations to connect everything. We optimize what you have before recommending replacements."
+      },
+      {
+        question: "What if my team resists new technology?",
+        answer: "We include hands-on training and documentation for your team. Most resistance comes from fear of complexity—our solutions are designed to make work easier, not harder. We show your team how much time they'll save, and adoption follows naturally."
+      },
+      {
+        question: "What's the ongoing cost after implementation?",
+        answer: "Software costs vary by firm size: $200-$500/month for small firms (4-10 people), $500-$1,500/month for mid-size firms (10-25 people). We recommend tools with transparent pricing and no surprise fees. Ongoing support and optimization are available if needed."
+      }
+    ],
     ctaTitle: "Transform Your Firm with Technology",
     ctaDescription: "Let's optimize your technology stack and automate your processes for maximum efficiency and growth.",
     ctaButtonText: "Schedule Consultation",

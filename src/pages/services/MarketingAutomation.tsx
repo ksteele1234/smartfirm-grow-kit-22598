@@ -76,6 +76,24 @@ const MarketingAutomation = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How long does it take to see results?",
+        answer: "Most firms see immediate time savings (10+ hours/week) within the first week of implementation. Lead conversion improvements typically show within 30-45 days as prospects move through nurture sequences. Full ROI (increased revenue from better conversion) is usually visible within 90 days."
+      },
+      {
+        question: "Will this integrate with QuickBooks and my practice management software?",
+        answer: "Yes. We integrate with QuickBooks Online, Xero, and leading practice management platforms (Karbon, Canopy, Practice Ignition, Financial Cents). We also connect with your CRM, email, and scheduling tools to create one seamless system."
+      },
+      {
+        question: "Do I need to manage this daily, or is it truly hands-off?",
+        answer: "It's designed to run on autopilot. After initial setup and approval of email templates, the system handles 90% of lead follow-up and client communication automatically. You'll review a weekly dashboard (5-10 minutes) and step in personally only when leads are ready to close."
+      },
+      {
+        question: "What if I don't have a CRM or email marketing platform yet?",
+        answer: "No problem. We'll recommend the right tools for your firm size and budget, set them up, and configure all automations. Most firms start with a simple stack ($100-$200/month in software costs) and scale from there."
+      }
+    ],
     ctaTitle: "Ready to Automate Your Marketing?",
     ctaDescription: "Let's implement a marketing automation system that grows your firm while you focus on serving clients.",
     ctaButtonText: "Get Started",

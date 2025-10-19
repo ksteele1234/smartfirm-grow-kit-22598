@@ -76,6 +76,24 @@ const SEOForAccountants = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How long does SEO take to show results?",
+        answer: "Local SEO improvements (Google Maps rankings) typically show within 60-90 days. Organic search rankings for competitive keywords take 4-6 months. Most firms see their first SEO-generated leads within 90 days and consistent monthly leads by month 6."
+      },
+      {
+        question: "What's the difference between SEO and Google Ads?",
+        answer: "Google Ads generate immediate leads but stop when you stop paying. SEO builds long-term rankings that generate leads for years without ongoing ad spend. We recommend both: ads for immediate leads while SEO builds, then reduce ad spend as organic traffic grows."
+      },
+      {
+        question: "Do I need to write blog posts, or do you handle that?",
+        answer: "We handle all content creation. Our team writes SEO-optimized blog posts, service pages, and local content tailored to accounting firms. You review and approve before publishing—no writing required on your end."
+      },
+      {
+        question: "Will this work if I'm in a competitive market?",
+        answer: "Yes, but it takes longer. In competitive markets (major metros), we focus on hyper-local keywords (\"CPA in [neighborhood]\") and niche services (\"R&D tax credit specialist\") where you can rank faster. Most firms see results within 6 months even in competitive markets."
+      }
+    ],
     ctaTitle: "Ready to Dominate Local Search Results?",
     ctaDescription: "Let's optimize your website to attract more qualified prospects from Google search.",
     ctaButtonText: "Talk to Us",

@@ -76,6 +76,24 @@ const WebsiteDesign = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "How long does the website design process take?",
+        answer: "Most accounting firm websites are completed in 2-4 weeks. Week 1: Strategy and mockups. Week 2: Design and copywriting. Week 3: Development and your review. Week 4: Revisions and launch. We handle everything—you review and approve at key milestones."
+      },
+      {
+        question: "Can you migrate my existing content, or do we start from scratch?",
+        answer: "We can do either. If your current site has good content, we'll migrate and optimize it. If it's outdated or off-brand, we'll write new copy from scratch. Most firms choose a hybrid: keep core service descriptions, rewrite homepage and key landing pages."
+      },
+      {
+        question: "Will my website be compliant with AICPA regulations?",
+        answer: "Yes. All content is reviewed for compliance with AICPA advertising rules, state board regulations, and professional standards. We avoid prohibited claims, ensure proper disclosures, and follow best practices for accounting firm websites."
+      },
+      {
+        question: "What if I need changes after launch?",
+        answer: "We include 30 days of post-launch support for minor tweaks and adjustments. After that, you can manage content yourself via the CMS, or we offer ongoing maintenance plans ($200-$500/month) for firms that prefer hands-off management."
+      }
+    ],
     ctaTitle: "Get a Website That Converts",
     ctaDescription: "Let's design a professional website that establishes credibility and generates leads for your accounting firm.",
     ctaButtonText: "View Portfolio",

@@ -76,6 +76,24 @@ const SocialMediaManagement = () => {
         ]
       }
     ],
+    faqs: [
+      {
+        question: "Which platforms do you manage?",
+        answer: "We focus on LinkedIn (primary for B2B accounting), Facebook (for local visibility), and optionally Twitter/X and Instagram. LinkedIn drives the most engagement and referrals for accounting firms, so we prioritize it."
+      },
+      {
+        question: "How often will you post, and what type of content?",
+        answer: "We post 12-16 times per month across platforms: tax tips, industry news commentary, client success stories (anonymized), service spotlights, and thought leadership. All content is pre-approved by you and compliant with AICPA guidelines."
+      },
+      {
+        question: "Do I need to provide content ideas, or do you create everything?",
+        answer: "We create everything. Our team follows accounting industry news, tax law changes, and best practices to generate timely, relevant content. You review and approve monthly content calendars—no brainstorming or writing required."
+      },
+      {
+        question: "Will you respond to comments and messages?",
+        answer: "We monitor and respond to comments on posts (thanking people for engagement, answering general questions). For direct messages or inquiries, we notify you immediately so you can respond personally. We never impersonate you in private conversations."
+      }
+    ],
     ctaTitle: "Build Your Professional Social Media Presence",
     ctaDescription: "Let's establish your firm as a trusted authority on social media while generating new business opportunities.",
     ctaButtonText: "Get Started",

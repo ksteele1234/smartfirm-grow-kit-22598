@@ -52,6 +52,24 @@ const OnlineReputationManagement = () => {
         description: "Monthly reports and strategy adjustments ensure continuous reputation improvement"
       }
     ],
+    faqs: [
+      {
+        question: "How quickly will you alert me to negative reviews?",
+        answer: "Immediately. Our monitoring system checks Google, Yelp, Facebook, and other platforms every hour. When a new review appears, you'll receive an email and SMS alert within minutes—giving you time to respond before prospects see it."
+      },
+      {
+        question: "Can you remove negative reviews?",
+        answer: "We can't remove legitimate reviews (no one can), but we can help you respond professionally, resolve issues offline, and encourage satisfied clients to leave positive reviews that push negative ones down. We can also flag fake or policy-violating reviews for platform removal."
+      },
+      {
+        question: "What if I don't have time to respond to every review?",
+        answer: "We provide response templates for common review types (positive, constructive, negative). Many firms authorize us to post approved responses to positive reviews (\"Thank you for your kind words!\") while flagging negative reviews for personal response."
+      },
+      {
+        question: "How many reviews should I aim for?",
+        answer: "We recommend 30+ Google reviews as a minimum baseline (builds trust), 50+ to be competitive in most markets, and 100+ to dominate your local market. We'll set realistic goals based on your current review count and client volume."
+      }
+    ],
     ctaTitle: "Ready to Strengthen Your Online Reputation?",
     ctaDescription: "Book a free reputation audit to see how we can transform your firm's online presence and attract more ideal clients.",
     ctaButtonText: "Get Started",
