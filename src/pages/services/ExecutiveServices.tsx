@@ -14,24 +14,24 @@ const ExecutiveServices = () => {
     heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
     benefits: [
       {
-        title: "Fractional CIO Services",
-        description: "Strategic technology leadership and digital transformation guidance",
-        icon: "Monitor"
-      },
-      {
-        title: "Fractional CFO Services",
-        description: "Financial strategy, planning, and performance optimization expertise",
-        icon: "DollarSign"
-      },
-      {
-        title: "Cost-Effective Leadership",
-        description: "Access C-level expertise without full-time executive compensation",
-        icon: "TrendingDown"
-      },
-      {
-        title: "Strategic Growth Planning",
-        description: "Develop and execute strategic initiatives for sustainable growth",
+        title: "Strategic Guidance from Former Practitioners",
+        description: "Generic business coaches don't understand accounting. We're former firm owners who've scaled practices, navigated busy season, and dealt with compliance constraints. You'll get strategic advice that actually works in the real world of accounting—not generic business theory.",
         icon: "Target"
+      },
+      {
+        title: "Fractional CIO Without the Full-Time Cost",
+        description: "You need strategic technology leadership but can't justify a $150K+ CIO salary. Our fractional CIO services provide technology roadmaps, vendor management, security assessments, and digital transformation planning—at a fraction of the cost of a full-time hire.",
+        icon: "Briefcase"
+      },
+      {
+        title: "Navigate Growth Transitions Confidently",
+        description: "Scaling from $400K to $1M requires different systems, pricing, and team structure than running a solo practice. We've guided dozens of firms through this transition and know exactly which changes to make (and when) to avoid growing pains. You'll scale smoothly instead of hitting the ceiling.",
+        icon: "TrendingUp"
+      },
+      {
+        title: "Accountability That Drives Results",
+        description: "It's easy to let strategic initiatives slide when you're buried in client work. Our executive coaching provides regular check-ins, progress tracking, and accountability to ensure you actually implement growth strategies. Firms with executive coaching grow 2-3x faster than those going it alone.",
+        icon: "CheckCircle"
       }
     ],
     features: [

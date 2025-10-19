@@ -14,24 +14,24 @@ const BusinessOptimization = () => {
     heroDescription: "Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.",
     benefits: [
       {
-        title: "Process Improvement",
-        description: "Identify and eliminate inefficiencies in your current workflows",
-        icon: "RefreshCw"
+        title: "Identify Hidden Revenue Leaks",
+        description: "You're leaving $50K-$100K on the table every year through inefficient pricing, scope creep, and underutilized capacity. Our operational audit identifies exactly where you're losing money and provides a roadmap to capture it. Firms typically increase profitability by 20-30% within 12 months.",
+        icon: "DollarSign"
       },
       {
-        title: "Executive Dashboards",
-        description: "Real-time insights into your firm's performance and key metrics",
-        icon: "BarChart"
-      },
-      {
-        title: "Performance Analytics",
-        description: "Data-driven decision making with comprehensive business intelligence",
+        title: "Systematize Your Growth",
+        description: "You can't scale a business built on heroic effort. We document your processes, create delegation frameworks, and build systems that work without you—so you can grow from $400K to $1M without working 70-hour weeks. You'll have a scalable business, not a high-paying job.",
         icon: "TrendingUp"
       },
       {
-        title: "Operational Excellence",
-        description: "Achieve consistent, high-quality service delivery across your firm",
+        title: "Optimize Your Service Mix",
+        description: "Compliance work is low-margin and commoditized. Advisory work is high-margin and differentiated. We analyze your service mix, identify which services generate the best ROI, and help you transition toward higher-value work. Firms increase average client value by 40-60% within 18 months.",
         icon: "Target"
+      },
+      {
+        title: "Get Actionable Insights, Not Generic Advice",
+        description: "You don't need another consultant telling you to 'work on your business, not in it.' We provide specific, actionable recommendations based on your numbers: which clients to fire, which services to sunset, where to invest, and how to price for profit. You'll have a clear 90-day action plan, not vague platitudes.",
+        icon: "BarChart"
       }
     ],
     features: [

@@ -14,24 +14,24 @@ const ClientReviewGeneration = () => {
     heroDescription: "Our review generation system helps accounting firms build a strong online reputation through systematic collection and management of client testimonials.",
     benefits: [
       {
-        title: "Enhanced Online Reputation",
-        description: "Build a strong online presence with consistent positive reviews",
+        title: "Triple Your 5-Star Reviews in 90 Days",
+        description: "Prospects trust online reviews more than your website copy. Our automated system requests Google reviews from satisfied clients at the perfect moment (right after service completion), generating 3-5x more reviews than manual requests. Firms go from 8 reviews to 30+ reviews in 90 days.",
         icon: "Star"
       },
       {
-        title: "Increased Trust & Credibility",
-        description: "Prospects trust firms with strong review profiles 3x more",
+        title: "Win More Clients Without Spending More",
+        description: "A firm with 50+ five-star reviews converts 2-3x more website visitors than a firm with 10 reviews. More reviews = more trust = more clients—without increasing your ad spend. Firms report 30-50% higher conversion rates after building their review presence.",
+        icon: "Briefcase"
+      },
+      {
+        title: "Protect Your Reputation 24/7",
+        description: "Negative reviews kill your pipeline. Our system monitors Google, Yelp, and Facebook for new reviews, alerts you immediately, and provides response templates for addressing concerns professionally. You'll catch and resolve issues before they damage your reputation.",
         icon: "Shield"
       },
       {
-        title: "Automated Review Requests",
-        description: "Systematic approach ensures no satisfied client is missed",
+        title: "Set It and Forget It",
+        description: "Manually asking for reviews is awkward and inconsistent. Our system automatically sends review requests after tax filing, advisory meetings, or project completion—no manual work required. You'll build a 5-star reputation on autopilot while focusing on client work.",
         icon: "Zap"
-      },
-      {
-        title: "Review Response Management",
-        description: "Professional responses to all reviews maintain your reputation",
-        icon: "MessageCircle"
       }
     ],
     features: [

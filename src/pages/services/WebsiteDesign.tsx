@@ -14,23 +14,23 @@ const WebsiteDesign = () => {
     heroDescription: "Our website design service creates professional, conversion-optimized websites that establish credibility and generate leads for your accounting practice.",
     benefits: [
       {
-        title: "Professional Credibility",
-        description: "Build trust with a website that reflects your expertise",
-        icon: "Shield"
+        title: "Turn Visitors Into Qualified Leads",
+        description: "Your current website gets traffic but doesn't convert. Our conversion-optimized designs feature strategic CTAs, trust signals (certifications, testimonials), and lead capture forms that turn 3-5% of visitors into consultation requests. Firms see 2-3x more qualified inquiries within 60 days of launch.",
+        icon: "Briefcase"
       },
       {
-        title: "Higher Conversions",
-        description: "Turn website visitors into prospects and clients",
-        icon: "TrendingUp"
+        title: "Look Like the $1M Firm You're Building",
+        description: "Outdated websites signal 'small, overwhelmed practice' to prospects. Our professional designs with client portals, service-specific landing pages, and mobile-responsive layouts position you as the established, tech-forward firm that attracts premium clients. First impressions matter—especially when competing for $10K+ advisory engagements.",
+        icon: "Sparkles"
       },
       {
-        title: "Mobile Optimization",
-        description: "Perfect experience on all devices and screen sizes",
-        icon: "Smartphone"
+        title: "Launch in Weeks, Not Months",
+        description: "You don't have time to manage a 6-month website project. We handle design, copywriting, compliance review, and technical setup—delivering a complete, conversion-ready site in 2-4 weeks. You review mockups, approve content, and we handle everything else so you can focus on serving clients.",
+        icon: "Zap"
       },
       {
-        title: "SEO Foundation",
-        description: "Built with search engine optimization in mind",
+        title: "Built for SEO From Day One",
+        description: "A beautiful website that no one finds is useless. Our sites are built with technical SEO foundations: fast load times, mobile optimization, schema markup, and keyword-optimized content. You'll rank higher for 'CPA near me' and 'accounting services' searches without ongoing SEO retainers.",
         icon: "Search"
       }
     ],

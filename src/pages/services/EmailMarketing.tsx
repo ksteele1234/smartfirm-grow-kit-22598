@@ -14,24 +14,24 @@ const EmailMarketing = () => {
     heroDescription: "Our AI-driven email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through automated personalization and data-driven communication strategies.",
     benefits: [
       {
-        title: "Client Retention",
-        description: "Keep clients engaged with regular valuable communication",
-        icon: "Heart"
+        title: "Keep Clients Engaged Year-Round",
+        description: "Clients who only hear from you during tax season are retention risks. Our strategic email campaigns—monthly newsletters, tax deadline reminders, service announcements—keep you top-of-mind year-round. Firms using our email programs see 15-25% higher client retention rates.",
+        icon: "Mail"
       },
       {
-        title: "Referral Generation",
-        description: "Systematic referral requests that generate new business",
-        icon: "Users"
+        title: "Create Upsell Opportunities on Autopilot",
+        description: "Your clients need advisory, payroll, and CFO services—but they don't know you offer them. Our segmented email campaigns educate clients on your full service menu, creating upsell opportunities without awkward sales conversations. Firms generate $20K-$50K in additional revenue annually from email-driven upsells.",
+        icon: "DollarSign"
       },
       {
-        title: "Service Upselling",
-        description: "Identify and promote additional service opportunities",
-        icon: "TrendingUp"
+        title: "Reduce No-Shows and Last-Minute Requests",
+        description: "Appointment no-shows and last-minute document requests disrupt your workflow. Our automated reminder sequences reduce no-shows by 60% and train clients to submit documents on time. You'll spend less time chasing clients and more time on billable work.",
+        icon: "Clock"
       },
       {
-        title: "Professional Communication",
-        description: "Maintain professional standards while staying personal",
-        icon: "MessageCircle"
+        title: "Personalized at Scale",
+        description: "Generic 'Dear Client' emails get ignored. Our platform segments your list by service type, engagement level, and lifecycle stage—sending personalized content that resonates. Open rates average 35-45% (vs. industry average of 21%), meaning your messages actually get read.",
+        icon: "Target"
       }
     ],
     features: [

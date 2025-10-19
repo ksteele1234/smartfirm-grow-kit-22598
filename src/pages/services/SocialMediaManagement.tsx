@@ -14,24 +14,24 @@ const SocialMediaManagement = () => {
     heroDescription: "Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.",
     benefits: [
       {
-        title: "Professional Brand Building",
-        description: "Establish thought leadership in your market area",
-        icon: "Users"
+        title: "Establish Thought Leadership Without the Time Drain",
+        description: "You know you should be posting on LinkedIn, but creating content takes hours you don't have. We create and post 12-16 pieces of compliant, educational content per month—positioning you as the expert while you focus on client work. Your network sees consistent activity without you lifting a finger.",
+        icon: "GraduationCap"
       },
       {
-        title: "Compliant Content",
-        description: "All content meets professional accounting standards",
-        icon: "Shield"
+        title: "Stay Top-of-Mind for Referrals",
+        description: "Out of sight = out of mind. When your network sees you sharing tax tips, industry insights, and client success stories regularly, you're the first CPA they think of when someone asks for a referral. Firms with active social presence report 30-50% more referral inquiries than those who post sporadically.",
+        icon: "Handshake"
       },
       {
-        title: "Lead Generation",
-        description: "Convert social media followers into prospects",
-        icon: "TrendingUp"
+        title: "Attract Advisory-Level Clients",
+        description: "Compliance work attracts price shoppers. Advisory work attracts growth-focused clients who pay premium fees. Our content strategy showcases your strategic thinking—CFO services, tax planning, business advisory—attracting the $10K-$50K engagements that move you from $400K to $1M.",
+        icon: "Briefcase"
       },
       {
-        title: "Client Engagement",
-        description: "Strengthen relationships with existing clients",
-        icon: "Heart"
+        title: "Fully Compliant, Zero Risk",
+        description: "You can't afford compliance violations from social media mistakes. All our content is pre-approved, follows AICPA guidelines, and avoids regulatory red flags. We handle content creation, scheduling, and engagement monitoring—you review and approve before anything goes live.",
+        icon: "CheckCircle"
       }
     ],
     features: [

@@ -14,24 +14,24 @@ const TechnologySolutions = () => {
     heroDescription: "Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.",
     benefits: [
       {
-        title: "Tech Stack Optimization",
-        description: "Maximize efficiency with integrated technology solutions tailored to your firm",
-        icon: "Settings"
-      },
-      {
-        title: "Process Automation",
-        description: "Automate repetitive tasks and workflows to free up time for client work",
-        icon: "Zap"
-      },
-      {
-        title: "Seamless Integrations",
-        description: "Connect your existing tools for a unified, efficient workflow",
+        title: "Stop Juggling 10+ Disconnected Tools",
+        description: "QuickBooks, practice management, CRM, email, scheduling—nothing talks to each other. Our integration platform connects your entire tech stack, eliminating double data entry and tool-switching. You'll save 5-8 hours per week on manual data transfers and reduce errors by 80%.",
         icon: "Link"
       },
       {
-        title: "Scalable Infrastructure",
-        description: "Build systems that grow with your firm and support future expansion",
+        title: "Scale Without Adding Headcount",
+        description: "You can't grow from $400K to $1M by hiring more people to do manual work. Our workflow automation handles client onboarding, document collection, approval routing, and status updates—allowing your 4-person team to serve 2-3x more clients without burning out.",
         icon: "TrendingUp"
+      },
+      {
+        title: "Get Clear Visibility Into Your Practice",
+        description: "You can't manage what you can't measure. Our dashboards show real-time metrics on pipeline, capacity, revenue, and client health—in plain English, not tech jargon. You'll make data-driven decisions instead of guessing where to focus your growth efforts.",
+        icon: "BarChart"
+      },
+      {
+        title: "Implement in Weeks, Not Months",
+        description: "You don't have time for a 6-month tech overhaul. We audit your current stack, recommend the right tools, configure integrations, migrate data, and train your team—all within 2-4 weeks. You'll be up and running quickly without disrupting client service.",
+        icon: "Zap"
       }
     ],
     features: [

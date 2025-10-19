@@ -14,24 +14,24 @@ const AutomatedLeadFollowUp = () => {
     heroDescription: "Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.",
     benefits: [
       {
-        title: "24/7 Lead Nurturing",
-        description: "Automated sequences work around the clock to nurture prospects",
-        icon: "Clock"
+        title: "Never Lose Another Lead",
+        description: "78% of prospects choose the first firm that responds. When a lead fills out your contact form at 7pm, our system responds instantly—via email and SMS—while your competitors wait until tomorrow. You'll capture leads that would have gone to faster-responding firms.",
+        icon: "AlertCircle"
       },
       {
-        title: "Increased Conversion Rates",
-        description: "Convert 40% more leads with timely, relevant follow-up",
+        title: "Convert 40% More Prospects",
+        description: "Manual follow-up is inconsistent. You forget to follow up, get busy with client work, or don't know what to say. Our proven 7-touch sequence (email, SMS, voicemail) nurtures prospects through the decision process automatically. Firms using our system convert 40% more inquiries into booked consultations.",
         icon: "TrendingUp"
       },
       {
-        title: "Time Savings",
-        description: "Save 15+ hours per week on manual follow-up activities",
-        icon: "Zap"
+        title: "Free Up 8-12 Hours Per Week",
+        description: "Following up with 10-20 leads per week manually takes 8-12 hours of your team's time. Our automation handles initial responses, nurture sequences, appointment scheduling, and proposal follow-ups—freeing your team to focus on serving clients and closing deals.",
+        icon: "Clock"
       },
       {
-        title: "Personalized Messaging",
-        description: "Tailored sequences based on lead source and interests",
-        icon: "Users"
+        title: "Know Exactly Where Every Lead Stands",
+        description: "No more 'Did we follow up with that lead from last week?' Our dashboard shows every lead's status, which emails they opened, which links they clicked, and when they're ready for a personal call. You'll know exactly when to step in and close the deal.",
+        icon: "BarChart"
       }
     ],
     features: [

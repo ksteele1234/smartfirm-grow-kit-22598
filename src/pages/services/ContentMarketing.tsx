@@ -14,24 +14,24 @@ const ContentMarketing = () => {
     heroDescription: "Our content marketing services create blog posts, guides, and resources that educate prospects and establish your firm as the go-to authority. We deliver complete strategy: keyword research, editorial calendars, expert-written articles, and promotion across channels to nurture prospects and demonstrate your expertise.",
     benefits: [
       {
-        title: "Establish Thought Leadership",
-        description: "Position your firm as the trusted expert prospects turn to for guidance",
-        icon: "Award"
+        title: "Attract Ideal Clients Through Education",
+        description: "Prospects don't want to be sold—they want to be educated. Our strategic content (blog posts, guides, videos, resources) answers the questions your ideal clients are searching for, positioning you as the trusted advisor before they ever contact you. Firms generate 20-30 qualified leads per month from content alone.",
+        icon: "GraduationCap"
       },
       {
-        title: "Organic Lead Generation",
-        description: "Attract qualified prospects actively searching for accounting solutions",
+        title: "Build Authority That Commands Premium Fees",
+        description: "Firms that publish thought leadership content charge 20-30% higher fees than those that don't. When prospects read your insights on tax planning, business advisory, or CFO services, price becomes less of an objection. You'll attract clients who value expertise, not those shopping for the cheapest option.",
+        icon: "Briefcase"
+      },
+      {
+        title: "SEO That Compounds Over Time",
+        description: "Every piece of content we create is optimized for search engines and designed to rank for high-intent keywords. Unlike ads that stop working when you stop paying, content generates leads for years. Firms investing in content marketing see 3-5x ROI within 18-24 months.",
         icon: "TrendingUp"
       },
       {
-        title: "Build Trust Before Contact",
-        description: "Educate and nurture prospects so they arrive ready to engage",
-        icon: "Users"
-      },
-      {
-        title: "Long-Term Visibility",
-        description: "Content continues attracting traffic and leads months after publication",
-        icon: "Target"
+        title: "Done-For-You, Compliance-Approved",
+        description: "You don't have time to write blog posts, and you can't risk compliance violations. We create all content, ensure AICPA compliance, and handle publishing—you review and approve. You'll have a consistent content engine without the time drain or regulatory risk.",
+        icon: "CheckCircle"
       }
     ],
     features: [

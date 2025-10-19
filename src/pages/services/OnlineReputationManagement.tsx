@@ -14,24 +14,24 @@ const OnlineReputationManagement = () => {
     heroDescription: "Our reputation management service monitors reviews, responds professionally, and builds a 5-star presence that attracts more clients. We monitor all major review platforms, generate positive reviews from satisfied clients, respond professionally to feedback, and transform your online presence into a powerful trust signal.",
     benefits: [
       {
-        title: "Boost Star Ratings",
-        description: "Generate more 5-star reviews from happy clients with automated request workflows",
-        icon: "Star"
-      },
-      {
-        title: "Monitor & Respond Fast",
-        description: "Catch negative reviews early and respond professionally to protect your reputation",
+        title: "Protect Your Pipeline from Negative Reviews",
+        description: "One negative Google review can cost you 10-20 lost prospects. Our monitoring system alerts you immediately when negative feedback appears, provides response templates, and helps you resolve issues before they damage your reputation. You'll catch and address concerns within hours, not weeks.",
         icon: "Shield"
       },
       {
-        title: "Build Social Proof",
-        description: "Showcase glowing testimonials across your website and marketing materials",
-        icon: "Award"
+        title: "Build a 5-Star Presence That Converts",
+        description: "Prospects compare firms by reading reviews. A firm with 50+ five-star reviews wins clients over a firm with 10 reviews—even if the latter is technically better. We systematically build your review presence across Google, Yelp, and Facebook, creating social proof that converts prospects into clients.",
+        icon: "Star"
       },
       {
-        title: "Competitive Advantage",
-        description: "Outrank competitors in local search with higher ratings and more reviews",
-        icon: "TrendingUp"
+        title: "Turn Happy Clients Into Brand Advocates",
+        description: "Your best clients would happily refer you—if you asked. Our reputation management system identifies your biggest fans and encourages them to share success stories, leave reviews, and refer colleagues. You'll generate 30-50% more referrals without awkward 'ask for referrals' conversations.",
+        icon: "Handshake"
+      },
+      {
+        title: "Monitor Your Reputation 24/7",
+        description: "You can't manage what you don't monitor. Our dashboard tracks reviews, mentions, and sentiment across all platforms—alerting you to both opportunities (positive feedback to showcase) and threats (negative reviews to address). You'll have complete visibility into your online reputation without manually checking 10+ sites.",
+        icon: "BarChart"
       }
     ],
     features: [

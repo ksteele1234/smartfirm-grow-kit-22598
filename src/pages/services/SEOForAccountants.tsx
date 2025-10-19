@@ -14,24 +14,24 @@ const SEOForAccountants = () => {
     heroDescription: "Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.",
     benefits: [
       {
-        title: "Higher Google Rankings",
-        description: "Achieve top 3 rankings for high-value accounting keywords",
-        icon: "TrendingUp"
-      },
-      {
-        title: "Local Market Dominance",
-        description: "Dominate local search results in your service area",
+        title: "Dominate 'CPA Near Me' Searches",
+        description: "When prospects search 'CPA near me' or 'small business accountant,' you're nowhere to be found. Our local SEO strategies get you into the top 3 Google results and Google Maps pack within 90-120 days. Firms typically see 50-100+ qualified organic leads per year from local search alone.",
         icon: "MapPin"
       },
       {
-        title: "Qualified Traffic",
-        description: "Attract prospects actively searching for accounting services",
+        title: "Attract High-Intent Prospects 24/7",
+        description: "Paid ads stop working the moment you stop paying. SEO builds a sustainable lead generation engine that attracts prospects actively searching for your services—year-round, without ongoing ad spend. You'll get 5-10 qualified inquiries per month from organic search within 6 months.",
         icon: "Target"
       },
       {
-        title: "Long-Term Growth",
-        description: "Build sustainable organic traffic that grows over time",
-        icon: "BarChart"
+        title: "Stop Competing on Price",
+        description: "When prospects find you through referrals or ads, they shop around. When they find you ranking #1 for 'tax planning CPA,' you're the authority—and price becomes less of an objection. SEO-generated leads close 30-40% faster and at 20% higher fees than cold outreach or paid ad leads.",
+        icon: "DollarSign"
+      },
+      {
+        title: "Long-Term ROI That Compounds",
+        description: "Unlike ads that require constant spend, SEO is an asset that appreciates. The content and rankings you build this year continue generating leads next year—and the year after. Firms investing $2K/month in SEO for 12 months typically generate $50K-$100K in new client revenue annually from organic search.",
+        icon: "TrendingUp"
       }
     ],
     features: [

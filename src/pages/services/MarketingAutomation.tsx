@@ -14,24 +14,24 @@ const MarketingAutomation = () => {
     heroDescription: "Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.",
     benefits: [
       {
-        title: "Automated Lead Nurturing",
-        description: "Convert prospects into clients with intelligent email sequences and timely follow-ups",
-        icon: "Zap"
+        title: "Stop Losing Leads to Slow Follow-Up",
+        description: "Every hour you wait to respond to a lead reduces your conversion rate by 10%. Our marketing automation responds to every inquiry within minutes—via email, SMS, and voicemail—nurturing prospects through personalized sequences while you focus on client work. Firms using our system convert 40% more leads without adding staff.",
+        icon: "Rocket"
       },
       {
-        title: "Client Engagement",
-        description: "Keep existing clients informed and engaged with automated communications",
-        icon: "Users"
-      },
-      {
-        title: "Time Savings",
-        description: "Reduce manual marketing tasks by 80% with intelligent automation",
+        title: "Reclaim 10+ Hours Per Week",
+        description: "Manual follow-up, appointment reminders, and client onboarding emails are eating your team's time. Our intelligent workflows handle lead nurturing, consultation scheduling, service reminders, and re-engagement campaigns automatically. You'll save 10-15 hours weekly that you can redirect to billable work or strategic growth.",
         icon: "Clock"
       },
       {
-        title: "Scalable Growth",
-        description: "Handle more leads and clients without increasing your workload",
+        title: "Scale Without Hiring",
+        description: "You can't grow from $400K to $1M by manually managing every lead and client touchpoint. Our automation platform handles 10x the volume of inquiries and clients without increasing your workload. Handle 200+ active leads and 100+ clients with the same 4-person team you have today.",
         icon: "TrendingUp"
+      },
+      {
+        title: "Get Clear ROI Reporting",
+        description: "No more guessing what's working. Our dashboard shows exactly which campaigns generate leads, which sequences convert prospects, and what your cost-per-client is. You'll see pipeline stage metrics, conversion rates, and ROI tied directly to your utilization goals—in plain English, not marketing jargon.",
+        icon: "BarChart"
       }
     ],
     features: [
