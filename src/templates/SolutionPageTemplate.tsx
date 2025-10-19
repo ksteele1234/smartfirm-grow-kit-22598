@@ -60,6 +60,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       />
       <Header />
       
+      <main id="main-content" role="main">
       {/* Breadcrumbs */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -322,6 +323,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </Button>
         </div>
       )}
+      </main>
       <Footer />
     </div>
   );

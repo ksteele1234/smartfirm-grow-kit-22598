@@ -23,6 +23,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
         pageImage={data.clientLogo || '/assets/og-default.webp'}
       />
       <Header />
+      <main id="main-content" role="main">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="max-w-7xl mx-auto">
@@ -199,6 +200,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
           </div>
         </div>
       </section>
+      </main>
       <Footer />
     </div>
   );

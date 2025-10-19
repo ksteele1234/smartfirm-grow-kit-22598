@@ -1,76 +1,94 @@
+import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import SkipToContent from "./components/ui/skip-to-content";
+
+// Critical pages - load immediately
 import Index from "./pages/Index";
-import Solutions from "./pages/Solutions";
-import Services from "./pages/Services";
-import AllServices from "./pages/AllServices";
-import Industries from "./pages/Industries";
-import Resources from "./pages/Resources";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import SuccessStories from "./pages/SuccessStories";
-import GetStarted from "./pages/GetStarted";
-import QuickStart from "./pages/QuickStart";
 import NotFound from "./pages/NotFound";
-import ServerError from "./pages/ServerError";
-import ThankYou from "./pages/ThankYou";
+
+// Lazy load all other pages for better performance
+const Solutions = lazy(() => import("./pages/Solutions"));
+const Services = lazy(() => import("./pages/Services"));
+const AllServices = lazy(() => import("./pages/AllServices"));
+const Industries = lazy(() => import("./pages/Industries"));
+const Resources = lazy(() => import("./pages/Resources"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const SuccessStories = lazy(() => import("./pages/SuccessStories"));
+const GetStarted = lazy(() => import("./pages/GetStarted"));
+const QuickStart = lazy(() => import("./pages/QuickStart"));
+const ServerError = lazy(() => import("./pages/ServerError"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 // Solution Pages
-import ScaleFirm from "./pages/solutions/ScaleFirm";
-import ClientRetention from "./pages/solutions/ClientRetention";
-import RetentionStrategies from "./pages/solutions/RetentionStrategies";
-import StopLosingClients from "./pages/solutions/StopLosingClients";
-import GetMoreReferrals from "./pages/solutions/GetMoreReferrals";
-import WorkLessEarnMore from "./pages/solutions/WorkLessEarnMore";
-import GrowWithoutPains from "./pages/solutions/GrowWithoutPains";
-import ProtectPractice from "./pages/solutions/ProtectPractice";
+const ScaleFirm = lazy(() => import("./pages/solutions/ScaleFirm"));
+const ClientRetention = lazy(() => import("./pages/solutions/ClientRetention"));
+const RetentionStrategies = lazy(() => import("./pages/solutions/RetentionStrategies"));
+const StopLosingClients = lazy(() => import("./pages/solutions/StopLosingClients"));
+const GetMoreReferrals = lazy(() => import("./pages/solutions/GetMoreReferrals"));
+const WorkLessEarnMore = lazy(() => import("./pages/solutions/WorkLessEarnMore"));
+const GrowWithoutPains = lazy(() => import("./pages/solutions/GrowWithoutPains"));
+const ProtectPractice = lazy(() => import("./pages/solutions/ProtectPractice"));
 
 // Service Pages
-import AutomatedLeadFollowUp from "./pages/services/AutomatedLeadFollowUp";
-import ClientReviewGeneration from "./pages/services/ClientReviewGeneration";
-import SEOForAccountants from "./pages/services/SEOForAccountants";
-import SocialMediaManagement from "./pages/services/SocialMediaManagement";
-import EmailMarketing from "./pages/services/EmailMarketing";
-import WebsiteDesign from "./pages/services/WebsiteDesign";
-import MarketingAutomation from "./pages/services/MarketingAutomation";
-import TechnologySolutions from "./pages/services/TechnologySolutions";
-import BusinessOptimization from "./pages/services/BusinessOptimization";
-import ExecutiveServices from "./pages/services/ExecutiveServices";
-import ContentMarketing from "./pages/services/ContentMarketing";
-import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
-import StrategyIntegration from "./pages/services/StrategyIntegration";
+const AutomatedLeadFollowUp = lazy(() => import("./pages/services/AutomatedLeadFollowUp"));
+const ClientReviewGeneration = lazy(() => import("./pages/services/ClientReviewGeneration"));
+const SEOForAccountants = lazy(() => import("./pages/services/SEOForAccountants"));
+const SocialMediaManagement = lazy(() => import("./pages/services/SocialMediaManagement"));
+const EmailMarketing = lazy(() => import("./pages/services/EmailMarketing"));
+const WebsiteDesign = lazy(() => import("./pages/services/WebsiteDesign"));
+const MarketingAutomation = lazy(() => import("./pages/services/MarketingAutomation"));
+const TechnologySolutions = lazy(() => import("./pages/services/TechnologySolutions"));
+const BusinessOptimization = lazy(() => import("./pages/services/BusinessOptimization"));
+const ExecutiveServices = lazy(() => import("./pages/services/ExecutiveServices"));
+const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
+const OnlineReputationManagement = lazy(() => import("./pages/services/OnlineReputationManagement"));
+const StrategyIntegration = lazy(() => import("./pages/services/StrategyIntegration"));
 
 // Industry Pages
-import TaxPreparation from "./pages/industries/TaxPreparation";
-import BookkeepingServices from "./pages/industries/BookkeepingServices";
-import BusinessAdvisory from "./pages/industries/BusinessAdvisory";
-import AuditAssurance from "./pages/industries/AuditAssurance";
+const TaxPreparation = lazy(() => import("./pages/industries/TaxPreparation"));
+const BookkeepingServices = lazy(() => import("./pages/industries/BookkeepingServices"));
+const BusinessAdvisory = lazy(() => import("./pages/industries/BusinessAdvisory"));
+const AuditAssurance = lazy(() => import("./pages/industries/AuditAssurance"));
 
 // Tools & Calculators Pages
-import ToolsCalculators from "./pages/ToolsCalculators";
-import EfficiencyQuiz from "./pages/tools/EfficiencyQuiz";
-import MarketingScorecard from "./pages/tools/MarketingScorecard";
-import ROICalculator from "./pages/tools/ROICalculator";
-import AutomationReadinessQuiz from "./pages/tools/AutomationReadinessQuiz";
-import WorkflowBottleneckFinder from "./pages/tools/WorkflowBottleneckFinder";
-import TechStackROICalculator from "./pages/tools/TechStackROICalculator";
-import ClientLifetimeValueCalculator from "./pages/tools/ClientLifetimeValueCalculator";
-import LeadGenerationScorecard from "./pages/tools/LeadGenerationScorecard";
-import ModernFirmQuiz from "./pages/tools/ModernFirmQuiz";
-import GrowthPotentialScorecard from "./pages/tools/GrowthPotentialScorecard";
-import SEOAudit from "./pages/tools/SEOAudit";
-import PageGrader from "./pages/tools/PageGrader";
-import AdvancedSEOQA from "./pages/tools/AdvancedSEOQA";
-import GrowthCalculator from "./pages/GrowthCalculator";
+const ToolsCalculators = lazy(() => import("./pages/ToolsCalculators"));
+const EfficiencyQuiz = lazy(() => import("./pages/tools/EfficiencyQuiz"));
+const MarketingScorecard = lazy(() => import("./pages/tools/MarketingScorecard"));
+const ROICalculator = lazy(() => import("./pages/tools/ROICalculator"));
+const AutomationReadinessQuiz = lazy(() => import("./pages/tools/AutomationReadinessQuiz"));
+const WorkflowBottleneckFinder = lazy(() => import("./pages/tools/WorkflowBottleneckFinder"));
+const TechStackROICalculator = lazy(() => import("./pages/tools/TechStackROICalculator"));
+const ClientLifetimeValueCalculator = lazy(() => import("./pages/tools/ClientLifetimeValueCalculator"));
+const LeadGenerationScorecard = lazy(() => import("./pages/tools/LeadGenerationScorecard"));
+const ModernFirmQuiz = lazy(() => import("./pages/tools/ModernFirmQuiz"));
+const GrowthPotentialScorecard = lazy(() => import("./pages/tools/GrowthPotentialScorecard"));
+const SEOAudit = lazy(() => import("./pages/tools/SEOAudit"));
+const PageGrader = lazy(() => import("./pages/tools/PageGrader"));
+const AdvancedSEOQA = lazy(() => import("./pages/tools/AdvancedSEOQA"));
+const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 
 // Legal Pages
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import Cookies from "./pages/Cookies";
-import FAQ from "./pages/FAQ";
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Cookies = lazy(() => import("./pages/Cookies"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="text-center">
+      <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+      <p className="mt-4 text-muted-foreground">Loading page...</p>
+    </div>
+  </div>
+);
 
 const queryClient = new QueryClient();
 
@@ -78,6 +96,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <Toaster />
+      <SkipToContent />
       {/* Global wave clip-path definitions */}
       <svg width="0" height="0" style={{ position: 'absolute', pointerEvents: 'none' }} aria-hidden="true">
         <defs>
@@ -105,7 +124,8 @@ const App = () => (
       
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Solutions />} />
         <Route path="/solutions" element={<Solutions />} />
@@ -228,7 +248,8 @@ const App = () => (
         
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
-        </Routes>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   </QueryClientProvider>

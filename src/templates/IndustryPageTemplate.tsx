@@ -48,6 +48,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       />
       <Header />
       
+      <main id="main-content" role="main">
       {/* Breadcrumbs */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -80,9 +81,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         })}
       </script>
       
-      <main>
-        {/* Hero Section */}
-        <section 
+      {/* Hero Section */}
+      <section
           className="relative pt-32 overflow-hidden wave-bottom"
           style={{
             background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'

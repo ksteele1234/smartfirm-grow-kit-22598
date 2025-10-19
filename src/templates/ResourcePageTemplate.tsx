@@ -22,6 +22,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
         description={data.heroSubtitle || data.metaDescription}
       />
       <Header />
+      <main id="main-content" role="main">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-accent/20 to-secondary/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -173,6 +174,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
           </div>
         </div>
       </section>
+      </main>
       <Footer />
     </div>
   );

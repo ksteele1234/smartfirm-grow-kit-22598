@@ -19,7 +19,7 @@ import { ArrowRight, Play } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Expert Digital Marketing For Accounting Firms | SmartFirm"
         description="SmartFirm delivers expert digital marketing for accounting firms with done-for-you automation, SEO, websites, and retention systems to get & keep clients."
         pageImage="/assets/hero-wave-background.webp"
@@ -45,7 +45,7 @@ const Index = () => {
       />
       <Header />
 
-      <main>
+      <main id="main-content" role="main">
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 

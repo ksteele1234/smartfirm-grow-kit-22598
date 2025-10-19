@@ -382,8 +382,8 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
-            <nav className="flex flex-col space-y-4">
+          <nav className="lg:hidden py-4 border-t border-border" aria-label="Mobile navigation">
+            <div className="flex flex-col space-y-4">
               <a href="/" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 HOME
               </a>
@@ -410,8 +410,8 @@ const Header = () => {
               >
                 <a href="/get-started">GET STARTED</a>
               </Button>
-            </nav>
-          </div>
+            </div>
+          </nav>
         )}
       </div>
     </header>
