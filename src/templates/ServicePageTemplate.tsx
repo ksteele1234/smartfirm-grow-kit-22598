@@ -114,7 +114,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           { name: "Services", url: "/services" },
           { name: data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
-        faqs={defaultFAQs}
+        faqs={data.faqs || defaultFAQs}
       />
       <Header />
       
@@ -465,7 +465,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             Frequently Asked Questions
           </motion.h2>
           <div className="space-y-4">
-            {defaultFAQs.map((faq, index) => (
+            {(data.faqs || defaultFAQs).map((faq, index) => (
               <motion.details 
                 key={index} 
                 initial={{ opacity: 0, y: 20 }}
@@ -488,7 +488,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": defaultFAQs.map(faq => ({
+            "mainEntity": (data.faqs || defaultFAQs).map(faq => ({
               "@type": "Question",
               "name": faq.question,
               "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
