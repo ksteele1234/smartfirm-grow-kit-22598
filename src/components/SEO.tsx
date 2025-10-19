@@ -68,7 +68,7 @@ const SEO = ({
   
   const defaultTitle = "SmartFirm | Automation & AI for Accounting Firms";
   const defaultDescription = "SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth.";
-  const defaultImage = "/assets/og-default.png";
+  const defaultImage = "/assets/og-default.webp";
   const siteName = "SmartFirm";
   const primaryDomain = "smartfirm.io";
   
@@ -329,7 +329,7 @@ const SEO = ({
             "name": "SmartFirm",
             "logo": {
               "@type": "ImageObject",
-              "url": `https://${primaryDomain}/assets/smartfirm-logo-full.png`
+              "url": `https://${primaryDomain}/assets/smartfirm-logo-full.webp`
             }
           },
           "image": pageImageFull,

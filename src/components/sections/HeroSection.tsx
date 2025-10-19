@@ -135,37 +135,6 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Video Layer - Desktop Only */}
-      {!isMobile && (
-        <div className="absolute inset-0 w-full h-full overflow-hidden" style={{ zIndex: 0 }}>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ 
-              opacity: 1,
-              filter: 'brightness(1.8) contrast(1.1)'
-            }}
-            poster="/images/hero-poster.jpg"
-          >
-            <source src="/videos/hero-background.mp4" type="video/mp4" />
-          </video>
-          
-          {/* Dark overlay for readability */}
-          <div 
-            className="absolute inset-0" 
-            style={{ 
-              background: 'rgba(0, 0, 0, 0.4)',
-              zIndex: 1
-            }}
-          />
-        </div>
-      )}
-
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
         <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">

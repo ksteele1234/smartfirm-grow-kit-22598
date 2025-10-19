@@ -20,7 +20,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
         pageType="success-story"
         articleHeadline={data.title}
         datePublished={data.publishDate || new Date().toISOString()}
-        pageImage={data.clientLogo || '/assets/og-default.png'}
+        pageImage={data.clientLogo || '/assets/og-default.webp'}
       />
       <Header />
       {/* Hero Section */}

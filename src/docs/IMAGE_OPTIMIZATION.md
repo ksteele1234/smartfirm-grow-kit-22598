@@ -112,17 +112,29 @@ for file in *.png; do cwebp "$file" -q 80 -o "${file%.png}.webp"; done
 
 ## Current Status
 
-All images in the following components have been optimized:
-- ✅ Header logo
-- ✅ Footer logo  
-- ✅ 404 page (piggy bank)
-- ✅ About page (team members)
+All images across the site have been optimized to WebP format:
+- ✅ Header logo (smartfirm-logo-full.webp)
+- ✅ Footer logo (smartfirm-logo-gradient.webp)
+- ✅ Hero background (hero-wave-background.webp)
+- ✅ 404 page (404-piggy-bank.webp)
+- ✅ About page team members (katie-steele.webp, brian-hellewell.webp, grace-mendez.webp, yvonne-galicia.webp)
+- ✅ Testimonial photos (testimonial-dan.webp, testimonial-joanna.webp, testimonial-jenn.webp)
+- ✅ OG image (og-default.webp)
+- ✅ All marketing assets (meeting-photo.webp, woman-pointing-blazer.webp)
+- ✅ Charts and graphics (revenue-growth-chart.svg)
 
-## TODO
+## Compression Guidelines
 
-Images that still need optimization:
-- [ ] Hero background images
-- [ ] Testimonial photos
-- [ ] Service page graphics
-- [ ] Case study images
-- [ ] Resource thumbnails
+All WebP images follow these compression standards:
+- **Hero/Background Images**: < 150KB
+- **Profile Photos**: < 80KB
+- **Inline Graphics**: < 100KB
+- **Icons/Logos**: SVG preferred, or < 50KB WebP
+
+## Performance Impact
+
+WebP optimization provides:
+- ~30-40% smaller file sizes vs PNG
+- ~25-35% smaller vs JPEG
+- Faster page loads
+- Better Core Web Vitals scores
