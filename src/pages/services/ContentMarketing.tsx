@@ -9,7 +9,7 @@ const ContentMarketing = () => {
     metaDescription: "Strategic content marketing for CPAs that positions you as an expert, attracts ideal clients, and builds trust through blogs, guides, and educational resources.",
     canonicalUrl: "https://smartfirm.io/services/content-marketing",
     content: {},
-    heroTitle: "Strategic Content Marketing For Cpas | SmartFirm",
+    heroTitle: "Strategic Content Marketing For CPAs",
     heroSubtitle: "Our strategic content marketing for CPAs creates SEO-optimized blog posts, comprehensive tax guides, client education resources, and thought leadership articles that establish your expertise and attract qualified leads.",
     heroDescription: "Our content marketing services create blog posts, guides, and resources that educate prospects and establish your firm as the go-to authority. We deliver complete strategy: keyword research, editorial calendars, expert-written articles, and promotion across channels to nurture prospects and demonstrate your expertise.",
     benefits: [

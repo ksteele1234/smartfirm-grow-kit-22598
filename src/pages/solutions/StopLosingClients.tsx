@@ -9,7 +9,7 @@ const StopLosingClients = () => {
     metaDescription: "Compete with modern marketing services for CPAs that showcase your technology adoption, streamline client experience, and position you as forward-thinking.",
     canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas",
     content: {},
-    heroTitle: "Modern Marketing Services For Cpas | SmartFirm",
+    heroTitle: "Modern Marketing Services For CPAs",
     heroSubtitle: "Our modern marketing services for CPAs help you compete with tech-savvy competitors by highlighting your technology stack, streamlining client interactions, and positioning your practice as innovative.",
     problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
     solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",

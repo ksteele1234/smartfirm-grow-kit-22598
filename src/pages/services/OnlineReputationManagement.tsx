@@ -9,7 +9,7 @@ const OnlineReputationManagement = () => {
     metaDescription: "Protect your practice with reputation management for CPAs monitoring reviews, responding to feedback, addressing negative comments, and promoting wins.",
     canonicalUrl: "https://smartfirm.io/services/online-reputation-management",
     content: {},
-    heroTitle: "Reputation Management For Cpas | SmartFirm",
+    heroTitle: "Reputation Management For CPAs",
     heroSubtitle: "Our reputation management for CPAs monitors your online presence across review platforms, responds professionally to feedback, addresses negative comments strategically, and amplifies positive client experiences.",
     heroDescription: "Our reputation management service monitors reviews, responds professionally, and builds a 5-star presence that attracts more clients. We monitor all major review platforms, generate positive reviews from satisfied clients, respond professionally to feedback, and transform your online presence into a powerful trust signal.",
     benefits: [

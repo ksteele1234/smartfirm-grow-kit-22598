@@ -9,7 +9,7 @@ const GetMoreReferrals = () => {
     metaDescription: "Get more referrals without asking through a client referral system for CPAs delivering exceptional experiences and simplifying client introductions.",
     canonicalUrl: "https://smartfirm.io/solutions/get-more-referrals-without-asking",
     content: {},
-    heroTitle: "Client Referral System For Cpas | SmartFirm",
+    heroTitle: "Client Referral System For CPAs",
     heroSubtitle: "Our automated client referral system for CPAs generates referrals naturally by delivering exceptional client experiences, creating referral-worthy moments, and making it effortless for clients to introduce you.",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",

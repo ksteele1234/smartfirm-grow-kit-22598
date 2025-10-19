@@ -9,7 +9,7 @@ const EmailMarketing = () => {
     metaDescription: "Email marketing for CPAs that nurtures leads, educates clients, promotes services, and drives engagement with automated campaigns and personalized messaging.",
     canonicalUrl: "https://smartfirm.io/services/email-marketing",
     content: {},
-    heroTitle: "Email Marketing For Cpas | SmartFirm",
+    heroTitle: "Email Marketing For CPAs",
     heroSubtitle: "Our email marketing for CPAs delivers automated nurture sequences, seasonal tax reminders, service announcements, educational newsletters, and re-engagement campaigns that keep your firm top-of-mind.",
     heroDescription: "Our AI-driven email marketing for accounting firms helps you maintain strong client relationships, generate referrals, and identify upselling opportunities through automated personalization and data-driven communication strategies.",
     benefits: [

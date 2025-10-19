@@ -9,7 +9,7 @@ const GrowWithoutPains = () => {
     metaDescription: "Grow without growing pains through accounting firm growth consulting addressing capacity constraints, delegation challenges, and service delivery systems.",
     canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
     content: {},
-    heroTitle: "Accounting Firm Growth Consulting | SmartFirm",
+    heroTitle: "Accounting Firm Growth Consulting",
     heroSubtitle: "Our accounting firm growth consulting helps you scale without burnout by addressing capacity planning, building delegation systems, standardizing service delivery, and creating sustainable growth infrastructure.",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",

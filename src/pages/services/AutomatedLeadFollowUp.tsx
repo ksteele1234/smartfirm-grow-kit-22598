@@ -9,7 +9,7 @@ const AutomatedLeadFollowUp = () => {
     metaDescription: "Automated lead follow-up for CPAs that responds instantly, nurtures prospects, schedules consultations, and converts 40% more leads without manual effort.",
     canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up",
     content: {},
-    heroTitle: "Automated Lead Follow Up For Cpas | SmartFirm",
+    heroTitle: "Automated Lead Follow Up For CPAs",
     heroSubtitle: "Our automated lead follow-up for CPAs sends instant responses to new inquiries, delivers personalized nurture sequences, schedules consultations automatically, and ensures no lead falls through the cracks.",
     heroDescription: "Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.",
     benefits: [

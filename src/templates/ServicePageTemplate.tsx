@@ -167,22 +167,12 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-                className="text-lg md:text-xl text-white/90 leading-relaxed mb-4"
+                className="text-lg md:text-xl text-white/90 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
                 {data.heroSubtitle}
               </motion.p>
             </div>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-lg md:text-xl text-white/80 leading-relaxed mb-8"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              {data.heroDescription}
-            </motion.p>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}

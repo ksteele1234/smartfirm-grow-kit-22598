@@ -9,7 +9,7 @@ const SocialMediaManagement = () => {
     metaDescription: "Social media management for CPAs that builds authority, attracts ideal clients, and stays compliant with professional standards across LinkedIn, Facebook, and Twitter.",
     canonicalUrl: "https://smartfirm.io/services/social-media-management",
     content: {},
-    heroTitle: "Social Media Management For Cpas | SmartFirm",
+    heroTitle: "Social Media Management For CPAs",
     heroSubtitle: "Our social media management for CPAs creates compliant, professional content that showcases your expertise, engages your target audience, and drives qualified leads without consuming your time.",
     heroDescription: "Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.",
     benefits: [
