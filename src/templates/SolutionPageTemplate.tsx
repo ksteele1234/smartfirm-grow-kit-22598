@@ -16,6 +16,7 @@ interface SolutionPageTemplateProps {
 }
 
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
+  const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
 
   useEffect(() => {
@@ -53,7 +54,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Solutions", url: "/solutions" },
+          { name: "Solutions", url: solutionsIndexPath },
           { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
         faqs={defaultFAQs}
@@ -67,12 +68,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <Breadcrumb>
             <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/solutions">Solutions</BreadcrumbLink>
-              </BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+                <BreadcrumbLink href={solutionsIndexPath}>Solutions</BreadcrumbLink>
+            </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
@@ -87,7 +88,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Solutions", "item": `${window.location.origin}/solutions` },
+            { "@type": "ListItem", "position": 2, "name": "Solutions", "item": `${window.location.origin}${solutionsIndexPath}` },
             { "@type": "ListItem", "position": 3, "name": data.title.replace(' | SmartFirm', ''), "item": window.location.href }
           ]
         })}

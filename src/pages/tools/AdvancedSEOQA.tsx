@@ -67,12 +67,12 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
 
   // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
-    "/", "/leading-marketing-services-for-accounting-firms", "/services/all-professional-marketing-services-for-accounting-firms", "/solutions-expert-marketing-agency-for-accounting-firms", "/industries", "/resources",
+    "/", "/leading-marketing-services-for-accounting-firms", "/services/all-professional-marketing-services-for-accounting-firms", "/solutions-expert-marketing-agency-for-accounting-firms", "/industries-expert-marketing-agency-for-accountants", "/resources",
     "/about", "/contact", "/case-studies", "/get-started", "/faq",
     "/solutions/i-need-more-leads", "/solutions/lead-generation",
-    "/solutions/i-want-to-scale-my-firm", "/solutions/scale-firm",
-    "/solutions/i'm-losing-clients-to-competitors", "/solutions/client-retention",
-    "/solutions/i-need-better-client-retention", "/solutions/retention-strategies",
+    "/solutions/scale-firm", "/solutions/scale-firm",
+    "/solutions/client-retention", "/solutions/client-retention",
+    "/solutions/retention-strategies", "/solutions/retention-strategies",
     "/solutions/stop-losing-clients-to-tech-savvy-cpas",
     "/solutions/get-more-referrals-without-asking",
     "/solutions/work-less-earn-more", "/solutions/grow-without-growing-pains",

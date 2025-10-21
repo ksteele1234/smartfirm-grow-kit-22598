@@ -7,7 +7,7 @@ const ProtectPractice = () => {
     title: "CPA Practice Management & Planning Services",
     slug: "protect-practice-and-future",
     metaDescription: "Protect your practice and future with CPA practice management services covering succession planning, risk management, compliance requirements, and continuity.",
-    canonicalUrl: "https://smartfirm.io/solutions/protect-your-practice",
+    canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
     content: {},
     heroTitle: "CPA Practice Management Services",
     heroSubtitle: "Our CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, business continuity planning, and exit strategy development.",

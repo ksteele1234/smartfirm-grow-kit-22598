@@ -81,7 +81,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     { path: "/leading-marketing-services-for-accounting-firms", type: "core" },
     { path: "/services/all-professional-marketing-services-for-accounting-firms", type: "core" },
     { path: "/solutions-expert-marketing-agency-for-accounting-firms", type: "core" },
-    { path: "/industries", type: "core" },
+    { path: "/industries-expert-marketing-agency-for-accountants", type: "core" },
     { path: "/resources", type: "core" },
     { path: "/about", type: "core" },
     { path: "/contact", type: "core" },
@@ -90,21 +90,14 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     { path: "/faq", type: "core" },
     { path: "/solutions/i-need-more-leads", type: "solution" },
     { path: "/solutions/lead-generation", type: "solution" },
-    { path: "/solutions/i-want-to-scale-my-firm", type: "solution" },
     { path: "/solutions/scale-firm", type: "solution" },
-    { path: "/solutions/i'm-losing-clients-to-competitors", type: "solution" },
     { path: "/solutions/client-retention", type: "solution" },
-    { path: "/solutions/i-need-better-client-retention", type: "solution" },
     { path: "/solutions/retention-strategies", type: "solution" },
     { path: "/solutions/stop-losing-clients-to-tech-savvy-cpas", type: "solution" },
-    { path: "/solutions/compete-with-tech-savvy-cpas", type: "solution" },
     { path: "/solutions/get-more-referrals-without-asking", type: "solution" },
-    { path: "/solutions/increase-referrals", type: "solution" },
     { path: "/solutions/work-less-earn-more", type: "solution" },
     { path: "/solutions/grow-without-growing-pains", type: "solution" },
-    { path: "/solutions/sustainable-growth", type: "solution" },
     { path: "/solutions/protect-practice-and-future", type: "solution" },
-    { path: "/solutions/protect-your-practice", type: "solution" },
     { path: "/services/marketing-automation", type: "service" },
     { path: "/services/technology-solutions", type: "service" },
     { path: "/services/business-optimization", type: "service" },
@@ -780,9 +773,9 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     if (pageType === 'service') {
       suggestions.push('/case-studies', '/resources', '/get-started');
     } else if (pageType === 'solution') {
-      suggestions.push('/services', '/case-studies', '/get-started');
+      suggestions.push('/leading-marketing-services-for-accounting-firms', '/case-studies', '/get-started');
     } else if (pageType === 'industry') {
-      suggestions.push('/services', '/solutions', '/get-started');
+      suggestions.push('/leading-marketing-services-for-accounting-firms', '/solutions-expert-marketing-agency-for-accounting-firms', '/get-started');
     }
     
     return suggestions.slice(0, 3);

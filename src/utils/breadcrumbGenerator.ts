@@ -5,7 +5,7 @@ export interface BreadcrumbItem {
 
 // Mapping for custom breadcrumb names (from keyword CSV or manual entries)
 const BREADCRUMB_NAME_MAP: Record<string, string> = {
-  '/solutions/client-retention-cpa-client-retention-strategies': 'CPA Client Retention Strategies',
+  '/solutions/client-retention': 'CPA Client Retention Strategies',
   '/solutions/stop-losing-clients': 'Stop Losing Clients',
   '/solutions/get-more-referrals': 'Get More Referrals',
   '/solutions/work-less-earn-more': 'Work Less, Earn More',
@@ -31,9 +31,9 @@ const BREADCRUMB_NAME_MAP: Record<string, string> = {
   '/industries/bookkeeping-services': 'Bookkeeping Services Marketing',
   '/industries/tax-preparation': 'Tax Preparation Marketing',
   '/industries/business-advisory': 'Business Advisory Marketing',
-  '/industries': 'Industries We Serve',
-  '/services': 'Our Services',
-  '/solutions': 'Solutions',
+  '/industries-expert-marketing-agency-for-accountants': 'Industries We Serve',
+  '/leading-marketing-services-for-accounting-firms': 'Our Services',
+  '/solutions-expert-marketing-agency-for-accounting-firms': 'Solutions',
   '/tools': 'Tools & Calculators',
   '/resources': 'Resources',
   '/about': 'About Us',

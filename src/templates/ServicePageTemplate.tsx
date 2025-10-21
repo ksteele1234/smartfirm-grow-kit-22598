@@ -83,6 +83,7 @@ interface ServicePageTemplateProps {
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
+  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
   const defaultFAQs = [
     {
       question: "How long does implementation take?",
@@ -111,7 +112,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/services" },
+          { name: "Services", url: servicesIndexPath },
           { name: data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
         faqs={data.faqs || defaultFAQs}
@@ -565,7 +566,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${window.location.origin}/services` },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${window.location.origin}${servicesIndexPath}` },
             { "@type": "ListItem", "position": 3, "name": data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), "item": window.location.href }
           ]
         })}

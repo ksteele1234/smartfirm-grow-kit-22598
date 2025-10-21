@@ -33,6 +33,7 @@ import {
 import SEO from "@/components/SEO";
 
 const Industries = () => {
+  const industriesIndexPath = "/industries-expert-marketing-agency-for-accountants";
   const industryCategories = [
     {
       icon: <User className="h-8 w-8 text-primary-blue" />,
@@ -103,7 +104,7 @@ const Industries = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Industries", url: "/industries" }
+          { name: "Industries", url: industriesIndexPath }
         ]}
       />
       <Header />

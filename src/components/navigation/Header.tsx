@@ -306,7 +306,7 @@ const Header = () => {
                   "hover:text-[#14b8a6] focus:text-[#14b8a6]",
                   "data-[state=open]:text-[#14b8a6]"
                 )}>
-                  <a href="/industries" className="flex items-center">
+                  <a href="/industries-expert-marketing-agency-for-accountants" className="flex items-center">
                     INDUSTRIES
                   </a>
                 </NavigationMenuTrigger>
@@ -393,7 +393,7 @@ const Header = () => {
               <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/industries-expert-marketing-agency-for-accountants" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
                 INDUSTRIES
               </a>
               <a href="/about" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
