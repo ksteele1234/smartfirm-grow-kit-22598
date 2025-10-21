@@ -82,7 +82,7 @@ const FounderStory = () => {
                   </div>
                   <div
                     className="text-sm font-normal mt-1 text-center"
-                    style={{ color: '#718096' }}
+                    style={{ color: '#4a5568' }}
                   >
                     {founder.title}
                   </div>

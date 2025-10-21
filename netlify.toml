@@ -2,9 +2,7 @@
   package = "netlify-plugin-checklinks"
 
   [plugins.inputs]
-    entryPoints = [
-      "https://newsmartfirmwebsite.netlify.app/"
-    ]
+    entryPoints = ["/"]
     recursive = true
     pretty = true
     checkExternal = false

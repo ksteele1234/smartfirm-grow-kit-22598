@@ -32,7 +32,7 @@ const GrowthAddOnsCard = () => {
 
       {/* Services List Section */}
       <div className="mb-6">
-        <h4 className="text-[15px] font-bold text-[#14b8a6] text-center mb-3">
+        <h4 className="text-[15px] font-bold text-[#0f766e] text-center mb-3">
           Available Services:
         </h4>
         <div className="flex flex-col gap-1.5">
