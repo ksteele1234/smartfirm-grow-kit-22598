@@ -21,18 +21,19 @@ import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accent
 import SEO from "@/components/SEO";
 
 const Solutions = () => {
+  const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const solutionCategories = [
     {
       icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
       title: "Stop Losing Clients to Tech-Savvy CPAs",
       subtitle: "Get Found Online When Clients Search, Look Professional with Modern Systems, Respond Faster Than Your Competition, Automate What Younger CPAs Do Manually.",
-      link: "/solutions/compete-with-tech-savvy-cpas"
+      link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
     },
     {
       icon: <Users className="h-8 w-8 text-primary-teal" />,
       title: "Get More Referrals Without Asking",
       subtitle: "Turn Happy Clients into Advocates, Get Found by People Looking for CPAs, Build Trust Before You Meet, Stay Top-of-Mind Year-Round.",
-      link: "/solutions/increase-referrals"
+      link: "/solutions/get-more-referrals-without-asking"
     },
     {
       icon: <Zap className="h-8 w-8 text-primary-blue" />,
@@ -44,13 +45,13 @@ const Solutions = () => {
       icon: <TrendingUp className="h-8 w-8 text-primary-teal" />,
       title: "Grow Without the Growing Pains",
       subtitle: "Handle More Clients Without More Stress, Scale Without Hiring Full-Time Staff, Maintain Quality While Growing, Plan for Growth Without Guesswork.",
-      link: "/solutions/sustainable-growth"
+      link: "/solutions/grow-without-growing-pains"
     },
     {
       icon: <Shield className="h-8 w-8 text-primary-blue" />,
       title: "Protect Your Practice & Your Future",
       subtitle: "Secure Your Client Data Like a Big Firm, Plan Your Exit Strategy, Maximize Your Practice Value, Ensure Business Continuity.",
-      link: "/solutions/protect-your-practice"
+      link: "/solutions/protect-practice-and-future"
     }
   ];
 
@@ -65,7 +66,7 @@ const Solutions = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Solutions", url: "/solutions" }
+          { name: "Solutions", url: solutionsIndexPath }
         ]}
       />
       <Header />

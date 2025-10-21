@@ -255,7 +255,7 @@ const GetStarted = () => {
                     size="lg"
                     asChild
                   >
-                    <a href={option.title === "Quick Start Program" ? "/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms" : option.title === "Contact Us Directly" ? "/contact" : "/get-started"}>
+                    <a href={option.title === "Quick Start Program" ? "/quick-start-marketing-for-cpa-firms" : option.title === "Contact Us Directly" ? "/contact" : "/get-started"}>
                       {option.cta}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>

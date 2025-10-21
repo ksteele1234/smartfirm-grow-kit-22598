@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const AllServices = () => {
+  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
+  const allServicesPath = "/services/all-professional-marketing-services-for-accounting-firms";
   const services = [
     {
       icon: Smartphone,
@@ -109,8 +111,8 @@ const AllServices = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/services" },
-          { name: "All Services", url: "/services/all" }
+          { name: "Services", url: servicesIndexPath },
+          { name: "All Services", url: allServicesPath }
         ]}
       />
       <Header />

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+tmp/replace_aliases.py
+tmp/route_inventory.py
+tmp/route-inventory.csv

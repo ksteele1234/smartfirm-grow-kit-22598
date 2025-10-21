@@ -15,6 +15,7 @@ interface IndustryPageTemplateProps {
 }
 
 const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
+  const industriesIndexPath = "/industries-expert-marketing-agency-for-accountants";
   const defaultFAQs = [
     {
       question: "Do you work with firms like mine?",
@@ -41,7 +42,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Industries", url: "/industries" },
+          { name: "Industries", url: industriesIndexPath },
           { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
         faqs={defaultFAQs}
@@ -55,12 +56,12 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           <Breadcrumb>
             <BreadcrumbList className="text-sm text-muted-foreground">
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/industries">Industries</BreadcrumbLink>
-              </BreadcrumbItem>
+              <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+                <BreadcrumbLink href={industriesIndexPath}>Industries</BreadcrumbLink>
+            </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
@@ -75,7 +76,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${window.location.origin}/industries` },
+            { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${window.location.origin}${industriesIndexPath}` },
             { "@type": "ListItem", "position": 3, "name": data.title.replace(' | SmartFirm', ''), "item": window.location.href }
           ]
         })}

@@ -93,7 +93,7 @@ const Footer = () => {
               ))}
               <li>
                 <a 
-                  href="/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms" 
+                  href="/quick-start-marketing-for-cpa-firms" 
                   className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
                 >
                   Quick Start Package

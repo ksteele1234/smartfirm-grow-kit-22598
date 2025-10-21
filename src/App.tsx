@@ -126,128 +126,82 @@ const App = () => (
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Solutions />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/leading-marketing-services-for-accounting-firms" element={<Services />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<AllServices />} />
-        <Route path="/services/all" element={<AllServices />} />
-        <Route path="/all-services" element={<AllServices />} />
-        <Route path="/industries-expert-marketing-agency-for-accountants" element={<Industries />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/case-studies" element={<SuccessStories />} />
-        <Route path="/get-started" element={<GetStarted />} />
-        <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
-        <Route path="/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms" element={<QuickStart />} />
-        
-        {/* Solution Sub-pages */}
-        <Route path="/solutions/i-want-to-scale-my-firm" element={<ScaleFirm />} />
-        <Route path="/solutions/scale-firm" element={<ScaleFirm />} />
-        <Route path="/solutions/scale-firm-scale-accounting-firm" element={<ScaleFirm />} />
-        <Route path="/solutions/i'm-losing-clients-to-competitors" element={<ClientRetention />} />
-        <Route path="/solutions/client-retention" element={<ClientRetention />} />
-        <Route path="/solutions/i-need-better-client-retention" element={<RetentionStrategies />} />
-        <Route path="/solutions/retention-strategies" element={<RetentionStrategies />} />
-        <Route path="/solutions/retention-strategies-advanced-retention-strategies-for-cpas" element={<RetentionStrategies />} />
-        
-        {/* Main Solution Categories */}
-        <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
-        <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas-modern-accounting-firm-services" element={<StopLosingClients />} />
-        <Route path="/solutions/compete-with-tech-savvy-cpas" element={<StopLosingClients />} />
-        <Route path="/solutions/get-more-referrals-without-asking" element={<GetMoreReferrals />} />
-        <Route path="/solutions/get-more-referrals-without-asking-automated-client-referral-system-for-cpas" element={<GetMoreReferrals />} />
-        <Route path="/solutions/increase-referrals" element={<GetMoreReferrals />} />
-        <Route path="/solutions/work-less-earn-more" element={<WorkLessEarnMore />} />
-        <Route path="/solutions/work-less-earn-more-increase-accounting-firm-revenue" element={<WorkLessEarnMore />} />
-        <Route path="/solutions/grow-without-growing-pains" element={<GrowWithoutPains />} />
-        <Route path="/solutions/grow-without-growing-pains-accounting-firm-growth-consulting" element={<GrowWithoutPains />} />
-        <Route path="/solutions/sustainable-growth" element={<GrowWithoutPains />} />
-        <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
-        <Route path="/solutions/protect-your-practice" element={<ProtectPractice />} />
-        <Route path="/solutions/protect-your-practice-cpa-practice-management-services" element={<ProtectPractice />} />
-        
-        {/* Service Sub-pages */}
-        <Route path="/services/marketing-automation" element={<MarketingAutomation />} />
-        <Route path="/services/marketing-automation-marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
-        <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
-        <Route path="/services/technology-solutions-accounting-firm-technology-consulting" element={<TechnologySolutions />} />
-        <Route path="/services/business-optimization" element={<BusinessOptimization />} />
-        <Route path="/services/business-optimization-business-optimization-for-accounting-firms" element={<BusinessOptimization />} />
-        <Route path="/services/executive-services" element={<ExecutiveServices />} />
-        <Route path="/services/executive-services-fractional-cio-for-accounting-firms" element={<ExecutiveServices />} />
-        <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
-        <Route path="/services/automated-lead-follow-up-automated-lead-follow-up-for-cpas" element={<AutomatedLeadFollowUp />} />
-        <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
-        <Route path="/services/client-review-generation-automated-review-generation-for-cpas" element={<ClientReviewGeneration />} />
-        <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
-        <Route path="/services/seo-for-accountants-seo-for-accounting-firms" element={<SEOForAccountants />} />
-        <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
-        <Route path="/services/social-media-management-social-media-management-for-cpas" element={<SocialMediaManagement />} />
-        <Route path="/services/email-marketing" element={<EmailMarketing />} />
-        <Route path="/services/email-marketing-email-marketing-for-cpas" element={<EmailMarketing />} />
-        <Route path="/services/website-design" element={<WebsiteDesign />} />
-        <Route path="/services/website-design-professional-website-design-for-accounting-firms" element={<WebsiteDesign />} />
-        <Route path="/services/content-marketing" element={<ContentMarketing />} />
-        <Route path="/services/content-marketing-strategic-content-marketing-for-cpas" element={<ContentMarketing />} />
-        <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
-        <Route path="/services/online-reputation-management-reputation-management-for-cpas" element={<OnlineReputationManagement />} />
-        <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
-        
-        {/* Industry Sub-pages */}
-        <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
-        <Route path="/industries/tax-preparation-digital-marketing-services-for-tax-firms" element={<TaxPreparation />} />
-        <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
-        <Route path="/industries/bookkeeping-services-bookkeeping-firms-marketing-services" element={<BookkeepingServices />} />
-        <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
-        <Route path="/industries/business-advisory-custom-marketing-agency-for-business-advisors" element={<BusinessAdvisory />} />
-        <Route path="/industries/audit-assurance" element={<AuditAssurance />} />
-        
-        {/* Tools & Calculators */}
-        <Route path="/tools" element={<ToolsCalculators />} />
-        <Route path="/tools-marketing-tools-for-accounting-firms" element={<ToolsCalculators />} />
-        <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
-        <Route path="/tools/efficiency-quiz-accounting-firm-efficiency-assessment" element={<EfficiencyQuiz />} />
-        <Route path="/tools/marketing-scorecard" element={<MarketingScorecard />} />
-        <Route path="/tools/marketing-scorecard-marketing-assessment-for-accountants" element={<MarketingScorecard />} />
-        <Route path="/tools/roi-calculator" element={<ROICalculator />} />
-        <Route path="/tools/automation-readiness-quiz" element={<AutomationReadinessQuiz />} />
-        <Route path="/tools/automation-readiness-quiz-automation-readiness-assessment-for-accountants" element={<AutomationReadinessQuiz />} />
-        <Route path="/tools/workflow-bottleneck-finder" element={<WorkflowBottleneckFinder />} />
-        <Route path="/tools/workflow-bottleneck-finder-accounting-firm-workflow-audit" element={<WorkflowBottleneckFinder />} />
-        <Route path="/tools/tech-stack-roi-calculator" element={<TechStackROICalculator />} />
-        <Route path="/tools/tech-stack-roi-calculator-accounting-firm-technology-roi" element={<TechStackROICalculator />} />
-        <Route path="/tools/client-lifetime-value-calculator" element={<ClientLifetimeValueCalculator />} />
-        <Route path="/tools/lead-generation-scorecard" element={<LeadGenerationScorecard />} />
-        <Route path="/tools/modern-firm-quiz" element={<ModernFirmQuiz />} />
-        <Route path="/tools/modern-firm-quiz-modern-accounting-firm-assessment" element={<ModernFirmQuiz />} />
-        <Route path="/tools/growth-potential-scorecard" element={<GrowthPotentialScorecard />} />
-        <Route path="/tools/growth-potential-scorecard-accounting-firm-growth-scorecard" element={<GrowthPotentialScorecard />} />
-        <Route path="/tools/seo-audit" element={<SEOAudit />} />
-        <Route path="/tools/seo-audit-advanced-seo-assessment-for-cpas" element={<SEOAudit />} />
-        <Route path="/tools/page-grader" element={<PageGrader />} />
-        <Route path="/tools/page-grader-website-page-audit-for-accountants" element={<PageGrader />} />
-        <Route path="/tools/advanced-seo-qa" element={<AdvancedSEOQA />} />
-        
-        {/* Funnel Pages */}
-        <Route path="/growth-calculator" element={<GrowthCalculator />} />
-        <Route path="/growth-calculator-accounting-firm-growth-calculator" element={<GrowthCalculator />} />
-        
-        {/* Legal Pages */}
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/cookies" element={<Cookies />} />
-        <Route path="/faq" element={<FAQ />} />
-        
-        {/* Utility Pages - Excluded from sitemap */}
-        <Route path="/500" element={<ServerError />} />
-        <Route path="/thank-you" element={<ThankYou />} />
-        
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-        <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Index />} />
+            <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Solutions />} />
+            <Route path="/leading-marketing-services-for-accounting-firms" element={<Services />} />
+            <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<AllServices />} />
+            <Route path="/industries-expert-marketing-agency-for-accountants" element={<Industries />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/case-studies" element={<SuccessStories />} />
+            <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
+            
+            {/* Solution Sub-pages */}
+            <Route path="/solutions/scale-firm" element={<ScaleFirm />} />
+            <Route path="/solutions/client-retention" element={<ClientRetention />} />
+            <Route path="/solutions/retention-strategies" element={<RetentionStrategies />} />
+            
+            {/* Main Solution Categories */}
+            <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
+            <Route path="/solutions/get-more-referrals-without-asking" element={<GetMoreReferrals />} />
+            <Route path="/solutions/work-less-earn-more" element={<WorkLessEarnMore />} />
+            <Route path="/solutions/grow-without-growing-pains" element={<GrowWithoutPains />} />
+            <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
+            
+            {/* Service Sub-pages */}
+            <Route path="/services/marketing-automation" element={<MarketingAutomation />} />
+            <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
+            <Route path="/services/business-optimization" element={<BusinessOptimization />} />
+            <Route path="/services/executive-services" element={<ExecutiveServices />} />
+            <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
+            <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
+            <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
+            <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
+            <Route path="/services/email-marketing" element={<EmailMarketing />} />
+            <Route path="/services/website-design" element={<WebsiteDesign />} />
+            <Route path="/services/content-marketing" element={<ContentMarketing />} />
+            <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
+            <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
+            
+            {/* Industry Sub-pages */}
+            <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
+            <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
+            <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
+            <Route path="/industries/audit-assurance" element={<AuditAssurance />} />
+            
+            {/* Tools & Calculators */}
+            <Route path="/tools" element={<ToolsCalculators />} />
+            <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
+            <Route path="/tools/marketing-scorecard" element={<MarketingScorecard />} />
+            <Route path="/tools/roi-calculator" element={<ROICalculator />} />
+            <Route path="/tools/automation-readiness-quiz" element={<AutomationReadinessQuiz />} />
+            <Route path="/tools/workflow-bottleneck-finder" element={<WorkflowBottleneckFinder />} />
+            <Route path="/tools/tech-stack-roi-calculator" element={<TechStackROICalculator />} />
+            <Route path="/tools/client-lifetime-value-calculator" element={<ClientLifetimeValueCalculator />} />
+            <Route path="/tools/lead-generation-scorecard" element={<LeadGenerationScorecard />} />
+            <Route path="/tools/modern-firm-quiz" element={<ModernFirmQuiz />} />
+            <Route path="/tools/growth-potential-scorecard" element={<GrowthPotentialScorecard />} />
+            <Route path="/tools/seo-audit" element={<SEOAudit />} />
+            <Route path="/tools/page-grader" element={<PageGrader />} />
+            <Route path="/tools/advanced-seo-qa" element={<AdvancedSEOQA />} />
+            
+            {/* Funnel Pages */}
+            <Route path="/growth-calculator" element={<GrowthCalculator />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/faq" element={<FAQ />} />
+            
+            {/* Utility Pages - Excluded from sitemap */}
+            <Route path="/500" element={<ServerError />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

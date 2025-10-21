@@ -9,6 +9,7 @@ import SEO from "@/components/SEO";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const Services = () => {
+  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
   const serviceCategories = [{
     icon: <Zap className="h-8 w-8 text-primary" />,
     title: "AI-Powered Marketing Automation",
@@ -48,7 +49,7 @@ const Services = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/services" }
+          { name: "Services", url: servicesIndexPath }
         ]}
       />
       <Header />
@@ -87,7 +88,7 @@ const Services = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="default" size="lg" asChild>
-                <Link to="/all-services">
+                <Link to="/services/all-professional-marketing-services-for-accounting-firms">
                   Explore All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
