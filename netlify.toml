@@ -1,8 +1,0 @@
-[[plugins]]
-  package = "netlify-plugin-checklinks"
-
-  [plugins.inputs]
-    entryPoints = ["/"]
-    recursive = true
-    pretty = true
-    checkExternal = false
