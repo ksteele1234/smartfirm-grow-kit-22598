@@ -50,14 +50,7 @@ const Index = () => {
         <HeroSection />
 
         {/* Section 2: Unified Credibility Section - Background A (White) */}
-        <section
-          className="bg-white"
-          style={{
-            paddingTop: "clamp(48px, 6vw, 72px)",
-            paddingBottom: "clamp(24px, 4vw, 32px)",
-            marginBottom: "0px",
-          }}
-        >
+        <section className="bg-white section-padding">
           <StatsGrid />
           <FounderStory />
         </section>

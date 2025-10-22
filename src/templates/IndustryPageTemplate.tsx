@@ -102,8 +102,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-32 overflow-hidden bg-gradient-muted-blue">
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="relative overflow-hidden bg-gradient-muted-blue pt-32">
+        <div className="relative z-10 mx-auto max-w-4xl text-center px-4">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
@@ -120,8 +120,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="pt-16 md:pt-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
               Industry Overview
@@ -150,8 +150,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc]">
-        <div className="container mx-auto px-4">
+      <section className="section-padding bg-[#f8fafc]">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Common Challenges & Our Solutions
@@ -184,8 +184,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="pt-16 md:pt-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Specialized Services
@@ -215,8 +215,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc]">
-        <div className="container mx-auto px-4">
+      <section className="section-padding bg-[#f8fafc]">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Success Stories
@@ -249,13 +249,13 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
+      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
-            {defaultFAQs.map((faq, index) => (
+            {faqsToRender.map((faq, index) => (
               <details key={index} className="border border-white/20 rounded-lg p-4 bg-white">
                 <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
                 <div className="text-[#334155] mt-2">{faq.answer}</div>
@@ -267,7 +267,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": defaultFAQs.map(faq => ({
+            "mainEntity": faqsToRender.map(faq => ({
               "@type": "Question",
               "name": faq.question,
               "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -278,10 +278,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative pt-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
-        }}
+        className="relative text-white overflow-hidden bg-gradient-muted-blue section-padding"
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">{data.ctaTitle}</h2>

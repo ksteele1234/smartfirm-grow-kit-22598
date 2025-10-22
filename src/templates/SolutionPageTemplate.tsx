@@ -134,7 +134,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] relative bg-white">
+      <section className="section-padding relative bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
@@ -205,7 +205,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
@@ -237,7 +237,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* How It Works Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white">
+      <section className="section-padding bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
@@ -277,7 +277,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white">
+      <section className="section-padding bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
@@ -314,7 +314,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white">
+      <section id="sf-faqs" className="section-padding bg-white">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
@@ -345,7 +345,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative pt-16 px-4 md:px-[72px] text-white overflow-hidden bg-gradient-deep-teal"
+        className="relative text-white overflow-hidden bg-gradient-deep-teal section-padding"
       >
         <div className="max-w-[800px] mx-auto text-center relative space-y-6 md:space-y-8">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>

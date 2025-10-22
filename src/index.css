@@ -340,4 +340,3 @@ All colors MUST be HSL converted from the official brand colors.
     @apply bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent;
   }
 }
-

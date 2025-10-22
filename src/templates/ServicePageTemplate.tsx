@@ -438,7 +438,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       {/* Benefits Section - White Background */}
       <section
         id="sf-benefits"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] relative"
+        className="section-padding bg-[#f8fafc] relative"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -497,7 +497,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       {/* Features Section - White Background */}
       <section
         id="sf-features"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f0fdfa] relative"
+        className="section-padding bg-[#f0fdfa] relative"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -551,7 +551,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section - White Background (Moved before Final CTA) */}
-      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="sf-faqs" className="section-padding bg-white">
         <div className="max-w-4xl mx-auto">
           {/* Decorative centered line */}
           <motion.div 
