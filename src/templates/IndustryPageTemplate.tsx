@@ -3,7 +3,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
-import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Building, Users, Shield } from "lucide-react";
 import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -30,6 +30,25 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       answer: "All our solutions are designed with accounting industry standards and compliance requirements in mind."
     }
   ];
+  const defaultIndustryMetrics = [
+    {
+      label: "Average pipeline lift",
+      value: "37%",
+      description: "Increase in qualified opportunities within the first 90 days."
+    },
+    {
+      label: "Time saved per partner",
+      value: "12 hrs",
+      description: "Freed from manual follow-up and nurture workflows every month."
+    },
+    {
+      label: "Lead-to-client conversion",
+      value: "3.2x",
+      description: "Improvement driven by industry-specific nurture journeys."
+    }
+  ];
+  const metricsToRender = data.industryMetrics && data.industryMetrics.length > 0 ? data.industryMetrics : defaultIndustryMetrics;
+  const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultFAQs;
 
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
@@ -45,7 +64,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           { name: "Industries", url: industriesIndexPath },
           { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
-        faqs={defaultFAQs}
+        faqs={faqsToRender}
       />
       <Header />
       
@@ -83,12 +102,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section
-          className="relative pt-32 overflow-hidden wave-bottom"
-          style={{
-            background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
-          }}
-        >
+      <section className="relative pt-32 overflow-hidden bg-gradient-muted-blue">
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
@@ -106,7 +120,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="pt-16 md:pt-20 bg-white wave-bottom">
+      <section className="pt-16 md:pt-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
@@ -136,7 +150,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
+      <section className="pt-16 md:pt-20 bg-[#f8fafc]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -170,7 +184,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="pt-16 md:pt-20 bg-white wave-bottom">
+      <section className="pt-16 md:pt-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -201,7 +215,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
+      <section className="pt-16 md:pt-20 bg-[#f8fafc]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
@@ -235,7 +249,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] wave-bottom">
+      <section id="sf-faqs" className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
@@ -264,7 +278,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative pt-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
+        className="relative pt-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden"
         style={{
           background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
         }}

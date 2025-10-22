@@ -24,7 +24,7 @@ const FounderStory = () => {
   ];
 
   return (
-    <section className="pt-4 pb-4 bg-transparent">
+    <section className="pt-4 pb-[50px] bg-transparent">
       <div className="container mx-auto px-6 max-w-[1100px]">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-16 md:gap-10">
           {/* LEFT COLUMN: Founder Story */}
@@ -62,9 +62,13 @@ const FounderStory = () => {
             </p>
 
             {/* Founder Photos */}
-            <div className="flex flex-row gap-4 mt-8">
+            <div className="flex flex-row gap-4 mt-8 pb-8">
               {founders.map((founder, index) => (
-                <div key={index} className="flex flex-col items-center">
+                <div
+                  key={index}
+                  className="flex flex-col items-center"
+                  style={{ paddingBottom: '24px' }}
+                >
                   <img
                     src={founder.image}
                     alt={`${founder.name} headshot`}
@@ -76,13 +80,13 @@ const FounderStory = () => {
                   />
                   <div
                     className="text-base font-semibold mt-2 text-center"
-                    style={{ color: '#1A202C' }}
+                    style={{ color: '#1A202C', marginBottom: '4px' }}
                   >
                     {founder.name}
                   </div>
                   <div
                     className="text-sm font-normal mt-1 text-center"
-                    style={{ color: '#4a5568' }}
+                    style={{ color: '#4a5568', marginBottom: '16px' }}
                   >
                     {founder.title}
                   </div>

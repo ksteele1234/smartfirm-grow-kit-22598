@@ -1,8 +1,9 @@
+import { useMemo, useRef } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { ServicePageData } from "@/types/cms";
-import { CheckCircle, ArrowRight, Settings } from "lucide-react";
+import { CheckCircle, ArrowRight, Settings, Clock, DollarSign, MessageCircle } from "lucide-react";
 import { StandardCard } from "@/components/ui/standard-card";
 import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
@@ -82,22 +83,88 @@ interface ServicePageTemplateProps {
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
+const defaultServiceFaqs = [
+  {
+    question: "How long does implementation take?",
+    answer: "Most service implementations are completed within 2-4 weeks, with initial results visible in the first month.",
+    category: "Implementation"
+  },
+  {
+    question: "What integrations are supported?",
+    answer: "We integrate with leading accounting platforms including QuickBooks, Xero, and popular CRM systems.",
+    category: "ROI & Integrations"
+  },
+  {
+    question: "Is training included?",
+    answer: "Yes, we provide comprehensive onboarding and training for your team to ensure smooth adoption.",
+    category: "Support"
+  }
+];
+
+const inferFaqCategory = (question: string): string => {
+  const normalized = question.toLowerCase();
+  if (normalized.includes("price") || normalized.includes("roi") || normalized.includes("budget")) {
+    return "Pricing & ROI";
+  }
+  if (normalized.includes("integrat") || normalized.includes("timeline") || normalized.includes("launch")) {
+    return "Implementation";
+  }
+  if (normalized.includes("support") || normalized.includes("training") || normalized.includes("onboarding")) {
+    return "Support";
+  }
+  return "General";
+};
+
 const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
   const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
-  const defaultFAQs = [
+  const finalCtaRef = useRef<HTMLElement | null>(null);
+
+  const faqsWithFallback = useMemo(() => {
+    const source = (data.faqs && data.faqs.length > 0 ? data.faqs : defaultServiceFaqs);
+    return source.map(faq => ({
+      ...faq,
+      category: faq.category ?? inferFaqCategory(faq.question)
+    }));
+  }, [data.faqs]);
+
+  const faqGroups = useMemo(() => {
+    const groups = new Map<string, Array<(typeof faqsWithFallback)[number]>>();
+    faqsWithFallback.forEach(faq => {
+      const category = faq.category ?? "General";
+      if (!groups.has(category)) {
+        groups.set(category, [] as Array<(typeof faqsWithFallback)[number]>);
+      }
+      groups.get(category)!.push(faq);
+    });
+    return Array.from(groups.entries()).map(([category, items]) => ({ category, items }));
+  }, [faqsWithFallback]);
+
+  const quickActions = useMemo(() => ([
     {
-      question: "How long does implementation take?",
-      answer: "Most service implementations are completed within 2-4 weeks, with initial results visible in the first month."
+      label: "Implementation Timeline",
+      description: "Understand your launch milestones",
+      href: "#sf-benefits",
+      Icon: Clock
     },
     {
-      question: "What integrations are supported?",
-      answer: "We integrate with leading accounting platforms including QuickBooks, Xero, and popular CRM systems."
+      label: "Pricing Approach",
+      description: "See how we scope investment",
+      href: "#sf-features",
+      Icon: DollarSign
     },
     {
-      question: "Is training included?",
-      answer: "Yes, we provide comprehensive onboarding and training for your team to ensure smooth adoption."
+      label: "FAQs",
+      description: "Get answers for your team",
+      href: "#sf-faqs",
+      Icon: MessageCircle
+    },
+    {
+      label: data.ctaButtonText || "Book Consultation",
+      description: "Connect with a strategist",
+      href: "#sf-final-cta",
+      Icon: ArrowRight
     }
-  ];
+  ]), [data.ctaButtonText]);
 
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
@@ -115,17 +182,14 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           { name: "Services", url: servicesIndexPath },
           { name: data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
-        faqs={data.faqs || defaultFAQs}
+        faqs={faqsWithFallback}
       />
       <Header />
       
       <main id="main-content" role="main">
       {/* Hero Section - Blue Gradient Background */}
       <section
-        className="hero-section relative pt-32 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden wave-bottom"
-        style={{
-          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
-        }}
+        className="hero-section relative pt-32 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue"
       >
         <style>{heroStyles}</style>
         
@@ -334,8 +398,48 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
+      {/* Persistent Quick Actions for decision-makers */}
+      <nav
+        aria-label="Service quick actions"
+        className="hidden xl:flex flex-col gap-3 fixed top-32 right-10 z-30 w-[260px]"
+      >
+        {quickActions.map(({ label, description, href, Icon }) => (
+          <a
+            key={label}
+            href={href}
+            className="group flex items-start gap-3 rounded-xl border border-border bg-white/90 backdrop-blur-sm px-4 py-3 shadow-[0_12px_32px_rgba(15,23,42,0.08)] transition-all hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white shadow-teal-sm transition-transform group-hover:scale-105">
+              <Icon className="h-4 w-4" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-sm font-semibold text-slate-900">{label}</span>
+              <span className="block text-xs text-slate-500">{description}</span>
+            </span>
+          </a>
+        ))}
+      </nav>
+
+      {/* Mobile quick links */}
+      <div className="xl:hidden border-b border-border/60 bg-white/95 px-4 py-3 backdrop-blur-sm">
+        <div className="flex gap-3 overflow-x-auto">
+          {quickActions.map(({ label, href }) => (
+            <a
+              key={label}
+              href={href}
+              className="whitespace-nowrap rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+
       {/* Benefits Section - White Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
+      <section
+        id="sf-benefits"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f8fafc] relative"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -391,7 +495,10 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section - White Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
+      <section
+        id="sf-features"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-[#f0fdfa] relative"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -444,7 +551,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section - White Background (Moved before Final CTA) */}
-      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white wave-bottom">
+      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           {/* Decorative centered line */}
           <motion.div 
@@ -465,23 +572,49 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           >
             Frequently Asked Questions
           </motion.h2>
-          <div className="space-y-4">
-            {(data.faqs || defaultFAQs).map((faq, index) => (
-              <motion.details 
-                key={index} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ 
-                  duration: isMobile ? 0.4 : 0.6,
-                  delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
-                  ease: "easeOut" 
-                }}
-                className="border border-[#e2e8f0] rounded-lg p-4 bg-white shadow-sm"
-              >
-                <summary className="cursor-pointer font-semibold text-lg text-[#0a2e2e]" style={{ fontFamily: "'Poppins', sans-serif" }}>{faq.question}</summary>
-                <div className="text-[#334155] mt-3 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>{faq.answer}</div>
-              </motion.details>
+          <div className="space-y-6">
+            {faqGroups.map(({ category, items }, groupIndex) => (
+              <div key={category} className="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
+                <h3 className="text-lg font-semibold text-[#0a2e2e] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                  {category}
+                </h3>
+                <div className="space-y-3">
+                  {items.map((faq, itemIndex) => {
+                    const staggerIndex = groupIndex * 5 + itemIndex;
+                    return (
+                      <motion.details
+                        key={`${category}-${faq.question}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{
+                          duration: isMobile ? 0.35 : 0.5,
+                          delay: isMobile
+                            ? Math.min(staggerIndex * 0.08, 0.32)
+                            : staggerIndex * 0.08,
+                          ease: "easeOut"
+                        }}
+                        className="group border border-slate-200/70 rounded-xl bg-white px-5 py-4 shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
+                        onToggle={(event) => {
+                          if (event.currentTarget.open && finalCtaRef.current) {
+                            window.requestAnimationFrame(() => {
+                              finalCtaRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                            });
+                          }
+                        }}
+                      >
+                        <summary className="cursor-pointer list-none text-base font-semibold text-[#0a2e2e] flex items-center justify-between gap-4">
+                          <span>{faq.question}</span>
+                          <ArrowRight className="h-4 w-4 text-[#14b8a6] transition-transform group-open:rotate-90" aria-hidden="true" />
+                        </summary>
+                        <div className="text-[#334155] mt-3 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                          {faq.answer}
+                        </div>
+                      </motion.details>
+                    );
+                  })}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -489,7 +622,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": (data.faqs || defaultFAQs).map(faq => ({
+            "mainEntity": faqsWithFallback.map(faq => ({
               "@type": "Question",
               "name": faq.question,
               "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -513,10 +646,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
 
       {/* Final CTA Section - Blue Gradient Background */}
       <section 
-        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
-        style={{
-          background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
-        }}
+        id="sf-final-cta"
+        ref={finalCtaRef}
+        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
       >
         <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
           <motion.h2 

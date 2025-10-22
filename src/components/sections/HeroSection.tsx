@@ -85,12 +85,12 @@ const styles = `
   .stat-number {
     text-shadow: 0 2px 4px rgba(251, 191, 36, 0.3);
   }
-  
+
   /* Clip-path for wave-shaped hero bottom */
   .hero-wave-clip {
     clip-path: url(#hero-wave-desktop);
   }
-  
+
   @media (max-width: 768px) {
     .hero-wave-clip {
       clip-path: url(#hero-wave-mobile);
@@ -110,7 +110,7 @@ const HeroSection = () => {
   return (
     <>
       <style>{styles}</style>
-      
+
       {/* Hidden SVG for clip-path definitions */}
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
@@ -118,7 +118,7 @@ const HeroSection = () => {
           <clipPath id="hero-wave-desktop" clipPathUnits="objectBoundingBox">
             <path d="M0,0 L1,0 L1,0.92 Q0.75,1 0.5,0.92 T0,0.92 Z" />
           </clipPath>
-          
+
           {/* Mobile clip-path (80px wave) */}
           <clipPath id="hero-wave-mobile" clipPathUnits="objectBoundingBox">
             <path d="M0,0 L1,0 L1,0.88 Q0.75,1 0.5,0.88 T0,0.88 Z" />
@@ -144,13 +144,13 @@ const HeroSection = () => {
             
             {/* Headline - Solid White */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-              Expert Digital Marketing For Accounting Firms | SmartFirm
+              Predictable Growth for Accounting Firms Without Wasting Time on Marketing
             </h1>
 
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
               <p className="text-xl leading-relaxed max-w-[600px] mb-8 font-medium" style={{ color: 'rgba(255, 255, 255, 0.9)', textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>
-                SmartFirm provides expert digital marketing for accounting firms by handling your entire marketing operation—from automated lead nurturing to SEO and website conversion optimization.
+                SmartFirm provides expert digital marketing for accounting firms, CPAs, bookkeepers, and tax preparers. We handle your entire operation through marketing automation, lead nurture, and SEO services designed to get you more accounting clients and help you keep them longer.
               </p>
             </div>
 

@@ -139,7 +139,7 @@ const SolutionsSection = () => {
           </div>
         </div>
 
-        <GeometricDivider variant="wave" className="my-12" />
+        <GeometricDivider variant="lines" className="my-12" />
 
         {/* CTA Section */}
         <div className="text-center">

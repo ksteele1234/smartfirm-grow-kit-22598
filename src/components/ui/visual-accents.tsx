@@ -5,7 +5,7 @@ export const GeometricDivider = ({
   variant = "dots", 
   className = "" 
 }: { 
-  variant?: "dots" | "lines" | "wave" | "zigzag";
+  variant?: "dots" | "lines" | "zigzag";
   className?: string;
 }) => {
   const variants = {
@@ -23,13 +23,6 @@ export const GeometricDivider = ({
           <div className="w-3 h-3 bg-primary rounded-full"></div>
         </div>
         <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/30 max-w-24"></div>
-      </div>
-    ),
-    wave: (
-      <div className={cn("py-4 overflow-hidden", className)}>
-        <svg viewBox="0 0 1200 120" className="w-full h-6">
-          <path d="M0,60 Q300,10 600,60 T1200,60" stroke="currentColor" strokeWidth="2" fill="none" className="text-primary/30"/>
-        </svg>
       </div>
     ),
     zigzag: (

@@ -64,7 +64,7 @@ const HomepageFAQSection = () => {
   ];
 
   return (
-    <section className="pt-2.5 md:pt-5 bg-white overflow-hidden wave-bottom">
+    <section className="pt-2.5 md:pt-5 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div 

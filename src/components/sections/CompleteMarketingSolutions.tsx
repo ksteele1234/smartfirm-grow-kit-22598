@@ -8,7 +8,13 @@ export const CompleteMarketingSolutions = () => {
   const heading = useScrollAnimation();
 
   return (
-    <section className="relative pt-2.5 md:pt-5 bg-gradient-to-b from-[#243b55] to-[#4a7ba7] wave-bottom">
+    <section
+      className="relative overflow-hidden bg-gradient-to-b from-[#243b55] to-[#4a7ba7]"
+      style={{
+        paddingTop: "clamp(160px, 16vw, 220px)",
+        paddingBottom: "clamp(96px, 12vw, 150px)",
+      }}
+    >
       <div className="container mx-auto px-4 max-w-[1200px]">
         {/* Section Heading */}
         <motion.div 
