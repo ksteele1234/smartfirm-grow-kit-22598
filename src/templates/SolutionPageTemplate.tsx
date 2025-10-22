@@ -95,7 +95,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] overflow-hidden wave-bottom">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#243b55] to-[#4a7ba7] section-padding pt-32">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
@@ -118,7 +118,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] relative bg-white wave-bottom">
+      <section className="relative bg-white section-padding">
         <div className="max-w-[1200px] mx-auto">
           {/* Asymmetrical layout with accent line */}
           <div className="grid lg:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-10 md:gap-y-14 items-start">
@@ -159,7 +159,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden wave-bottom">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#243b55] to-[#4a7ba7] section-padding">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
@@ -191,7 +191,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* How It Works Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white wave-bottom">
+      <section className="bg-white section-padding">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
@@ -223,7 +223,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Results Section */}
-      <section className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white wave-bottom">
+      <section className="bg-white section-padding">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
@@ -260,7 +260,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="pt-10 md:pt-20 px-4 md:px-[72px] bg-white wave-bottom">
+      <section id="sf-faqs" className="bg-white section-padding">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
@@ -290,8 +290,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Final CTA Section */}
-      <section 
-        className="relative pt-16 px-4 md:px-[72px] text-white overflow-hidden wave-top wave-bottom"
+      <section
+        className="relative text-white overflow-hidden section-padding"
         style={{
           background: 'linear-gradient(135deg, #165c6c 0%, #2d8a99 100%)'
         }}

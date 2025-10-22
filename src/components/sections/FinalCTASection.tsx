@@ -8,7 +8,7 @@ const FinalCTASection = () => {
   const content = useScrollAnimation();
 
   return (
-    <section className="relative pt-16 px-6 bg-gradient-to-b from-[#243b55] to-[#4a7ba7] overflow-hidden wave-top wave-bottom">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#243b55] to-[#4a7ba7] section-padding">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -20,7 +20,7 @@ const FinalCTASection = () => {
         />
       </div>
 
-      <div className="container relative mx-auto max-w-[700px]">
+      <div className="relative mx-auto max-w-[700px]">
         <motion.div 
           ref={content.ref}
           initial="hidden"

@@ -84,12 +84,12 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       
       {/* Hero Section */}
       <section
-          className="relative pt-32 overflow-hidden wave-bottom"
+          className="relative overflow-hidden section-padding pt-32"
           style={{
             background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
           }}
         >
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
@@ -106,8 +106,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="pt-16 md:pt-20 bg-white wave-bottom">
-        <div className="container mx-auto px-4">
+      <section className="bg-white section-padding">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
               Industry Overview
@@ -136,8 +136,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#f8fafc] section-padding">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Common Challenges & Our Solutions
@@ -170,8 +170,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="pt-16 md:pt-20 bg-white wave-bottom">
-        <div className="container mx-auto px-4">
+      <section className="bg-white section-padding">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Specialized Services
@@ -201,8 +201,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="pt-16 md:pt-20 bg-[#f8fafc] wave-bottom">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#f8fafc] section-padding">
+        <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Success Stories
@@ -235,7 +235,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="pt-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#243b55] to-[#4a7ba7] wave-bottom">
+      <section id="sf-faqs" className="bg-gradient-to-br from-[#243b55] to-[#4a7ba7] section-padding">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
@@ -264,7 +264,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative pt-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
+        className="relative text-white overflow-hidden section-padding"
         style={{
           background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
         }}

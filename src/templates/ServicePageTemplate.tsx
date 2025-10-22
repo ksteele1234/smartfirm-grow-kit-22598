@@ -122,7 +122,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <main id="main-content" role="main">
       {/* Hero Section - Blue Gradient Background */}
       <section
-        className="hero-section relative pt-32 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden wave-bottom"
+        className="hero-section relative min-h-[600px] overflow-hidden section-padding pt-32"
         style={{
           background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
         }}
@@ -335,7 +335,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Benefits Section - White Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
+      <section className="relative bg-white section-padding">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -391,7 +391,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Features Section - White Background */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative wave-bottom">
+      <section className="relative bg-white section-padding">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <motion.h2 
@@ -444,7 +444,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section - White Background (Moved before Final CTA) */}
-      <section id="sf-faqs" className="py-20 px-4 sm:px-6 lg:px-8 bg-white wave-bottom">
+      <section id="sf-faqs" className="bg-white section-padding">
         <div className="max-w-4xl mx-auto">
           {/* Decorative centered line */}
           <motion.div 
@@ -512,8 +512,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* Final CTA Section - Blue Gradient Background */}
-      <section 
-        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden wave-top wave-bottom"
+      <section
+        className="relative text-white overflow-hidden section-padding"
         style={{
           background: 'linear-gradient(135deg, #243b55 0%, #4a7ba7 100%)'
         }}
