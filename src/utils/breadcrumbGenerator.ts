@@ -12,7 +12,6 @@ const BREADCRUMB_NAME_MAP: Record<string, string> = {
   '/solutions/grow-without-pains': 'Grow Without Growing Pains',
   '/solutions/protect-practice': 'Protect Your Practice',
   '/solutions/scale-firm': 'Scale Your Firm',
-  '/solutions/client-retention': 'Client Retention',
   '/solutions/retention-strategies': 'Retention Strategies',
   '/services/marketing-automation': 'Marketing Automation',
   '/services/seo-for-accountants': 'SEO for Accountants',
