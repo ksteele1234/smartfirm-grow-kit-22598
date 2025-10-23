@@ -34,7 +34,6 @@ interface SolutionPageTemplateProps {
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
-  const leadResult = data.results?.[0];
   const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultSolutionFaqs;
 
   useEffect(() => {
@@ -109,28 +108,23 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg px-2.5 mr-3" asChild>
-            <a href="/get-started" aria-label="Get started with your custom solution">
-              See How This Works for You
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </a>
-          </Button>
-          <a href="/case-studies" className="text-white/90 hover:text-white underline underline-offset-4 text-base font-medium mt-4 inline-block transition-colors">
-            View Success Stories
-          </a>
-          {leadResult && (
-            <div className="mt-10 inline-flex items-center gap-3 rounded-2xl bg-white/10 px-6 py-3 text-left backdrop-blur-lg border border-white/20 shadow-[0_12px_40px_rgba(15,23,42,0.18)]">
-              <div className="h-12 w-12 rounded-full bg-gradient-gold text-slate-900 font-bold flex items-center justify-center text-lg">
-                {leadResult.value}
-              </div>
-              <div className="text-sm text-white/90">
-                <p className="font-semibold text-white tracking-wide uppercase text-xs mb-1">
-                  Proof Point
-                </p>
-                <p className="leading-snug">{leadResult.description}</p>
-              </div>
-            </div>
-          )}
+          <div className="mt-10 flex justify-center">
+            <Button
+              size="lg"
+              className="bg-[#F87171] hover:bg-[#ef4444] text-white border-none shadow-lg px-10"
+              asChild
+            >
+              <a href="/get-started" aria-label="Book your strategy call">
+                Book Your Strategy Call
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </a>
+            </Button>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          </svg>
         </div>
       </section>
 
