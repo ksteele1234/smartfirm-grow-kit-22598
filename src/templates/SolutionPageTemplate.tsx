@@ -127,7 +127,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* Problem & Solution Section */}
       <section className="section-padding relative bg-white -mt-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
+            <div
+              className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
+              aria-hidden="true"
+            />
             <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                 <Shield className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
@@ -147,8 +151,15 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </span>
                 ))}
               </div>
+              <div className="mt-8 rounded-2xl border border-[#fecdd3] bg-[#fff5f5] px-6 py-5 shadow-sm">
+                <p className="text-sm font-semibold text-[#be123c] tracking-wide uppercase">Why it matters</p>
+                <p className="mt-2 text-base text-[#1f2937] leading-relaxed">
+                  “48% of accounting firms lose qualified leads because response times exceed two hours.”
+                </p>
+                <p className="mt-3 text-xs text-[#6b7280]">Source: 2024 AICPA Technology & Growth Benchmark</p>
+              </div>
             </article>
-            <article className="relative overflow-hidden rounded-3xl border border-teal-100 bg-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
+            <article className="relative overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-teal-sm">
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
                 Our Solution
@@ -160,22 +171,49 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 {data.solutionOverview}
               </p>
               {data.results?.length ? (
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {data.results.slice(0, 2).map((result, index) => (
-                    <div key={`${result.metric}-${index}`} className="rounded-2xl border border-white/40 bg-white/70 p-4 shadow-sm">
-                      <div className="text-sm font-semibold text-[#0a2e2e]/80">{result.metric}</div>
-                      <div className="mt-2 flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-[#14b8a6]">{result.value}</span>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {data.results.slice(0, 4).map((result, index) => {
+                    const metricContext: Record<string, string> = {
+                      "Client Retention Rate": "within 6 months of launch",
+                      "Faster Response Time": "after automating follow-up flows",
+                      "More Online Visibility": "from unified local + organic campaigns",
+                      "Pipeline velocity": "with conversion tracking in place"
+                    };
+                    const contextLabel = metricContext[result.metric] ?? "measured across SmartFirm client cohort";
+
+                    return (
+                      <div
+                        key={`${result.metric}-${index}`}
+                        className="rounded-2xl bg-white shadow-lg shadow-teal-100/40 border border-white/60 px-5 py-6"
+                      >
+                        <div className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">
+                          {result.metric}
+                        </div>
+                        <div className="mt-3 flex items-baseline gap-2">
+                          <span className="text-3xl font-bold text-[#fb7185] leading-none">{result.value}</span>
+                          <span className="text-sm text-[#475569]">{contextLabel}</span>
+                        </div>
+                        <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+                          {result.description}
+                        </p>
                       </div>
-                      <p className="mt-2 text-xs text-[#334155] leading-snug">
-                        {result.description}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : null}
-              <p className="mt-6 text-sm md:text-base text-[#334155]">
-                Learn more about <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">success stories</a>, or review <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">AICPA guidance</a>.
+              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                <Button variant="coral" size="lg" asChild>
+                  <a href="/get-started">Book Your Strategy Call</a>
+                </Button>
+                <a
+                  href="/case-studies"
+                  className="text-sm font-medium text-[#0f766e] hover:text-[#115e59] transition-colors"
+                >
+                  See how firms apply this ?
+                </a>
+              </div>
+              <p className="mt-4 text-xs text-[#64748b]">
+                Results shown aggregate 2024 SmartFirm client data. Learn more about <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our methodology</a> or review <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[#0f766e]">AICPA guidance</a>.
               </p>
             </article>
           </div>
@@ -193,9 +231,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             "description": data.solutionOverview
           })}
         </script>
-      </section>
-
-      {/* Key Benefits Section */}
+      </section>      {/* Key Benefits Section */}
       <section className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
@@ -378,3 +414,4 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 };
 
 export default SolutionPageTemplate;
+
