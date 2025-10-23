@@ -127,12 +127,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* Problem & Solution Section */}
       <section className="section-padding relative bg-white -mt-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2 md:auto-rows-fr">
             <div
               className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
               aria-hidden="true"
             />
-            <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                 <Shield className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
                 The Challenge
@@ -151,15 +151,24 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </span>
                 ))}
               </div>
-              <div className="mt-8 rounded-2xl border border-[#fecdd3] bg-[#fff5f5] px-6 py-5 shadow-sm">
-                <p className="text-sm font-semibold text-[#be123c] tracking-wide uppercase">Why it matters</p>
-                <p className="mt-2 text-base text-[#1f2937] leading-relaxed">
-                  “48% of accounting firms lose qualified leads because response times exceed two hours.”
-                </p>
-                <p className="mt-3 text-xs text-[#6b7280]">Source: 2024 AICPA Technology & Growth Benchmark</p>
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm">
+                <p className="text-sm font-semibold text-slate-700 tracking-wide uppercase">What we keep hearing</p>
+                <ul className="mt-4 space-y-3 text-sm text-[#1f2937] leading-relaxed">
+                  {[
+                    "Leads wait 24+ hours before they hear back from the firm.",
+                    "Partners juggle intake manually, so nothing feels consistent.",
+                    "Marketing activity spikes only when the pipeline starts drying up."
+                  ].map((signal) => (
+                    <li key={signal} className="flex items-start gap-3">
+                      <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#14b8a6]" aria-hidden="true" />
+                      <span>{signal}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-xs text-[#6b7280]">Themes pulled from discovery calls with SmartFirm prospects in 2025.</p>
               </div>
             </article>
-            <article className="relative overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-teal-sm">
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
                 Our Solution
@@ -179,7 +188,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                       "More Online Visibility": "from unified local + organic campaigns",
                       "Pipeline velocity": "with conversion tracking in place"
                     };
-                    const contextLabel = metricContext[result.metric] ?? "measured across SmartFirm client cohort";
+                    const contextLabel = metricContext[result.metric] ?? "pulled from recent SmartFirm engagement notes";
 
                     return (
                       <div
@@ -213,7 +222,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 </a>
               </div>
               <p className="mt-4 text-xs text-[#64748b]">
-                Results shown aggregate 2024 SmartFirm client data. Learn more about <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our methodology</a> or review <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[#0f766e]">AICPA guidance</a>.
+                These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our service playbooks</a>.
               </p>
             </article>
           </div>
