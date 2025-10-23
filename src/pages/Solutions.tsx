@@ -89,7 +89,7 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Expert Marketing Agency For Accounting Firms | SmartFirm"
+        title="Expert Marketing Agency For Accounting Firms"
         description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
         canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
