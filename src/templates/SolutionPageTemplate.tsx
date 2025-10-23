@@ -77,7 +77,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-36 pb-48 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
+      <section className="relative pt-36 pb-36 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
         <nav id="sf-breadcrumbs" aria-label="Breadcrumb" className="absolute top-6 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb>
@@ -125,7 +125,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="section-padding relative bg-white">
+      <section className="section-padding relative bg-white -mt-6">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid gap-6 md:gap-8 md:grid-cols-2">
             <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">

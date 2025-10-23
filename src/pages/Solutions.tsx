@@ -122,7 +122,7 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-36 md:pb-[180px] bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -149,7 +149,7 @@ const Solutions = () => {
         </section>
 
         {/* Introduction Content */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="pt-12 md:pt-16 pb-20 md:pb-24 bg-background -mt-6">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
