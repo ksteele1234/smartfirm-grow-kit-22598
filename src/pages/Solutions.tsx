@@ -140,6 +140,15 @@ const Solutions = () => {
                 As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
               </p>
             </div>
+            <div className="mt-10 flex justify-center">
+              <Button
+                size="lg"
+                className="bg-[#F87171] hover:bg-[#ef4444] text-white border-none"
+                asChild
+              >
+                <a href="/get-started">Book Your Strategy Call</a>
+              </Button>
+            </div>
           </div>
         </section>
 
