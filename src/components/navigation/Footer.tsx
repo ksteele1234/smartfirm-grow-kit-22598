@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
 import OptimizedImage from "@/components/ui/optimized-image";
-import smartFirmLogo from "@/assets/smartfirm-logo-gradient.webp";
+import smartFirmLogo from "@/assets/smartfirm-logo-lockup.svg";
 
 const Footer = () => {
   const services = [
@@ -36,9 +36,9 @@ const Footer = () => {
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
-                width={300}
-                height={64}
-                className="h-16 w-auto max-w-[160px]"
+                width={320}
+                height={120}
+                className="h-16 w-auto max-w-[180px]"
               />
             </a>
             <p className="text-sm text-white/70 leading-[1.6]">

@@ -2,6 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { motion } from 'framer-motion';
 import { homepageFaqs } from "@/data/faqContent";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { fadeInUpVariants } from '@/lib/animationVariants';
 
@@ -78,9 +79,10 @@ const HomepageFAQSection = () => {
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <p className="text-base text-[#1e293b] leading-[1.7]">
-                      {faq.answer}
-                    </p>
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                    />
                   </div>
                 </div>
               </motion.div>

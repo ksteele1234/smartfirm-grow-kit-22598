@@ -28,6 +28,7 @@ import {
   ChevronDown
 } from "lucide-react";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const GetStarted = () => {
   const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
@@ -451,9 +452,10 @@ const GetStarted = () => {
                     }`}
                   >
                     <div className="px-6 pb-6">
-                      <p className="text-base text-[#1e293b] leading-[1.7]">
-                        {faq.answer}
-                      </p>
+                      <FaqAnswer
+                        text={faq.answer}
+                        paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                      />
                     </div>
                   </div>
                 </div>

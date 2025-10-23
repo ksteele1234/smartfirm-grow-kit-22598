@@ -70,7 +70,7 @@ const Services = () => {
       </nav>
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -80,20 +80,20 @@ const Services = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">Leading Marketing Services For Accounting Firms | SmartFirm</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">Leading Marketing Services For Accounting Firms</h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
                 Our leading marketing services for accounting firms include turnkey automation platforms, high-converting website design, search engine optimization, and systematic client retention programs.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="default" size="lg" asChild>
+            <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+              <Button variant="coral" size="hero" asChild>
                 <Link to="/services/all-professional-marketing-services-for-accounting-firms">
                   Explore All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+              <Button variant="white-outline-on-dark" size="hero" asChild>
                 <Link to="/get-started">Book a Free Consultation</Link>
               </Button>
             </div>

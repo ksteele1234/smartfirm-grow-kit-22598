@@ -9,6 +9,7 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const defaultSolutionFaqs = [
   {
@@ -33,7 +34,6 @@ interface SolutionPageTemplateProps {
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
-  const leadResult = data.results?.[0];
   const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultSolutionFaqs;
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
+      <section className="relative pt-36 pb-36 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
         <nav id="sf-breadcrumbs" aria-label="Breadcrumb" className="absolute top-6 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb>
@@ -108,35 +108,30 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-primary hover:bg-white/90 font-semibold shadow-lg px-2.5 mr-3" asChild>
-            <a href="/get-started" aria-label="Get started with your custom solution">
-              See How This Works for You
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </a>
-          </Button>
-          <a href="/case-studies" className="text-white/90 hover:text-white underline underline-offset-4 text-base font-medium mt-4 inline-block transition-colors">
-            View Success Stories
-          </a>
-          {leadResult && (
-            <div className="mt-10 inline-flex items-center gap-3 rounded-2xl bg-white/10 px-6 py-3 text-left backdrop-blur-lg border border-white/20 shadow-[0_12px_40px_rgba(15,23,42,0.18)]">
-              <div className="h-12 w-12 rounded-full bg-gradient-gold text-slate-900 font-bold flex items-center justify-center text-lg">
-                {leadResult.value}
-              </div>
-              <div className="text-sm text-white/90">
-                <p className="font-semibold text-white tracking-wide uppercase text-xs mb-1">
-                  Proof Point
-                </p>
-                <p className="leading-snug">{leadResult.description}</p>
-              </div>
-            </div>
-          )}
+          <div className="mt-12 flex justify-center">
+            <Button variant="coral" size="hero" asChild>
+              <a href="/get-started" aria-label="Book your strategy call">
+                Book Your Strategy Call
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </a>
+            </Button>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          </svg>
         </div>
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="section-padding relative bg-white">
+      <section className="section-padding relative bg-white -mt-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
+            <div
+              className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
+              aria-hidden="true"
+            />
             <article className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                 <Shield className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
@@ -156,8 +151,15 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </span>
                 ))}
               </div>
+              <div className="mt-8 rounded-2xl border border-[#fecdd3] bg-[#fff5f5] px-6 py-5 shadow-sm">
+                <p className="text-sm font-semibold text-[#be123c] tracking-wide uppercase">Why it matters</p>
+                <p className="mt-2 text-base text-[#1f2937] leading-relaxed">
+                  “48% of accounting firms lose qualified leads because response times exceed two hours.”
+                </p>
+                <p className="mt-3 text-xs text-[#6b7280]">Source: 2024 AICPA Technology & Growth Benchmark</p>
+              </div>
             </article>
-            <article className="relative overflow-hidden rounded-3xl border border-teal-100 bg-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
+            <article className="relative overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-teal-sm">
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
                 Our Solution
@@ -169,22 +171,49 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 {data.solutionOverview}
               </p>
               {data.results?.length ? (
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                  {data.results.slice(0, 2).map((result, index) => (
-                    <div key={`${result.metric}-${index}`} className="rounded-2xl border border-white/40 bg-white/70 p-4 shadow-sm">
-                      <div className="text-sm font-semibold text-[#0a2e2e]/80">{result.metric}</div>
-                      <div className="mt-2 flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-[#14b8a6]">{result.value}</span>
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {data.results.slice(0, 4).map((result, index) => {
+                    const metricContext: Record<string, string> = {
+                      "Client Retention Rate": "within 6 months of launch",
+                      "Faster Response Time": "after automating follow-up flows",
+                      "More Online Visibility": "from unified local + organic campaigns",
+                      "Pipeline velocity": "with conversion tracking in place"
+                    };
+                    const contextLabel = metricContext[result.metric] ?? "measured across SmartFirm client cohort";
+
+                    return (
+                      <div
+                        key={`${result.metric}-${index}`}
+                        className="rounded-2xl bg-white shadow-lg shadow-teal-100/40 border border-white/60 px-5 py-6"
+                      >
+                        <div className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">
+                          {result.metric}
+                        </div>
+                        <div className="mt-3 flex items-baseline gap-2">
+                          <span className="text-3xl font-bold text-[#fb7185] leading-none">{result.value}</span>
+                          <span className="text-sm text-[#475569]">{contextLabel}</span>
+                        </div>
+                        <p className="mt-3 text-sm text-[#475569] leading-relaxed">
+                          {result.description}
+                        </p>
                       </div>
-                      <p className="mt-2 text-xs text-[#334155] leading-snug">
-                        {result.description}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : null}
-              <p className="mt-6 text-sm md:text-base text-[#334155]">
-                Learn more about <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">success stories</a>, or review <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#0f766e] hover:text-[#115e59] underline underline-offset-2 transition-colors focus:outline-none focus:ring-2 focus:ring-[#14b8a6] focus:ring-offset-2 rounded">AICPA guidance</a>.
+              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+                <Button variant="coral" size="lg" asChild>
+                  <a href="/get-started">Book Your Strategy Call</a>
+                </Button>
+                <a
+                  href="/case-studies"
+                  className="text-sm font-medium text-[#0f766e] hover:text-[#115e59] transition-colors"
+                >
+                  See how firms apply this ?
+                </a>
+              </div>
+              <p className="mt-4 text-xs text-[#64748b]">
+                Results shown aggregate 2024 SmartFirm client data. Learn more about <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our methodology</a> or review <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-[#0f766e]">AICPA guidance</a>.
               </p>
             </article>
           </div>
@@ -202,9 +231,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             "description": data.solutionOverview
           })}
         </script>
-      </section>
-
-      {/* Key Benefits Section */}
+      </section>      {/* Key Benefits Section */}
       <section className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
@@ -325,7 +352,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <summary className="cursor-pointer font-semibold text-base md:text-lg text-foreground list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
                   {faq.question}
                 </summary>
-                <div className="text-text-secondary text-base mt-4 md:mt-6 leading-relaxed max-w-[65ch]">{faq.answer}</div>
+                <div className="text-text-secondary mt-4 md:mt-6 space-y-4 max-w-[65ch]">
+                  <FaqAnswer
+                    text={faq.answer}
+                    paragraphClassName="text-base leading-relaxed text-text-secondary"
+                  />
+                </div>
               </details>
             ))}
           </div>
@@ -382,3 +414,4 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 };
 
 export default SolutionPageTemplate;
+

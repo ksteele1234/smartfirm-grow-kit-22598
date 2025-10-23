@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const heroStyles = `
   @keyframes rotateClockwise {
@@ -607,8 +608,14 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                           <span>{faq.question}</span>
                           <ArrowRight className="h-4 w-4 text-[#14b8a6] transition-transform group-open:rotate-90" aria-hidden="true" />
                         </summary>
-                        <div className="text-[#334155] mt-3 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                          {faq.answer}
+                        <div
+                          className="text-[#334155] mt-3 leading-relaxed space-y-3"
+                          style={{ fontFamily: "'DM Sans', sans-serif" }}
+                        >
+                          <FaqAnswer
+                            text={faq.answer}
+                            paragraphClassName="text-[#334155] leading-relaxed"
+                          />
                         </div>
                       </motion.details>
                     );

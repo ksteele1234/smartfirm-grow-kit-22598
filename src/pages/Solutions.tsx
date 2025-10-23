@@ -19,6 +19,7 @@ import {
 import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const fallbackSolutionsFaqs = [
@@ -88,7 +89,7 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Expert Marketing Agency For Accounting Firms | SmartFirm"
+        title="Expert Marketing Agency For Accounting Firms"
         description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
         canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
@@ -121,7 +122,7 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-36 md:pb-[180px] bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -132,18 +133,23 @@ const Solutions = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
-              Expert Marketing Agency For Accounting Firms | SmartFirm
+              Expert Marketing Agency For Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
               </p>
             </div>
+            <div className="mt-12 flex justify-center">
+              <Button variant="coral" size="hero" asChild>
+                <a href="/get-started">Book Your Strategy Call</a>
+              </Button>
+            </div>
           </div>
         </section>
 
         {/* Introduction Content */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="pt-12 md:pt-16 pb-20 md:pb-24 bg-background -mt-6">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -362,9 +368,12 @@ const Solutions = () => {
                     <AccordionTrigger className="text-left text-sm">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {faq.answer}
-                    </AccordionContent>
+                <AccordionContent className="text-muted-foreground">
+                  <FaqAnswer
+                    text={faq.answer}
+                    paragraphClassName="text-sm md:text-base leading-relaxed text-muted-foreground"
+                  />
+                </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>

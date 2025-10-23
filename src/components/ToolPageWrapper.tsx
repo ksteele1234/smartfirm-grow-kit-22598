@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -140,9 +141,10 @@ export const ToolPageWrapper = ({
                       {faq.question}
                       <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                     </summary>
-                    <p className="mt-4 text-muted-foreground leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="mt-4 text-muted-foreground leading-relaxed"
+                    />
                   </details>
                 ))}
               </div>
