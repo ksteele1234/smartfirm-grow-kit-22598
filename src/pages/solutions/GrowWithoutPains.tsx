@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const GrowWithoutPains = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/grow-without-growing-pains");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
     title: "Strategic Accounting Firm Growth Consulting",
@@ -75,7 +77,8 @@ const GrowWithoutPains = () => {
       }
     ],
     ctaTitle: "Scale Your Firm the Smart Way",
-    ctaDescription: "Grow your practice without the typical chaos and stress. Book a call to see how we can build your growth infrastructure."
+    ctaDescription: "Grow your practice without the typical chaos and stress. Book a call to see how we can build your growth infrastructure.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

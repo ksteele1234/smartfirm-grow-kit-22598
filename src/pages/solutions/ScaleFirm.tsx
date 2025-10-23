@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const ScaleFirm = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/scale-firm");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
     title: "Scale Your Accounting Firm Successfully | SmartFirm",
@@ -75,7 +77,8 @@ const ScaleFirm = () => {
       }
     ],
     ctaTitle: "Ready to Scale Your Firm Systematically?",
-    ctaDescription: "Let's discuss how to build the systems and processes that will enable sustainable growth for your accounting practice."
+    ctaDescription: "Let's discuss how to build the systems and processes that will enable sustainable growth for your accounting practice.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

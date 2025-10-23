@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const WorkLessEarnMore = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more");
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
     title: "Increase Your Accounting Firm Revenue | SmartFirm",
@@ -75,7 +77,8 @@ const WorkLessEarnMore = () => {
       }
     ],
     ctaTitle: "Start Working Less While Earning More",
-    ctaDescription: "Transform your practice into an efficient, profitable business. Book a strategy call to see how we can optimize your operations."
+    ctaDescription: "Transform your practice into an efficient, profitable business. Book a strategy call to see how we can optimize your operations.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

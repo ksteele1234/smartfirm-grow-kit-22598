@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const RetentionStrategies = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/retention-strategies");
   const solutionData: SolutionPageData = {
     id: "retention-strategies",
     title: "Advanced Retention Strategies for CPAs | SmartFirm",
@@ -75,7 +77,8 @@ const RetentionStrategies = () => {
       }
     ],
     ctaTitle: "Implement Advanced Retention Strategies",
-    ctaDescription: "Transform your client relationships with our proven retention automation and satisfaction monitoring systems."
+    ctaDescription: "Transform your client relationships with our proven retention automation and satisfaction monitoring systems.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

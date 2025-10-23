@@ -1,7 +1,9 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const TaxPreparation = () => {
+  const industryFaqs = getFaqsForPath("/industries/tax-preparation");
   const industryData: IndustryPageData = {
     id: "tax-preparation",
     title: "Digital Marketing Services for Tax Firms | SmartFirm",
@@ -66,7 +68,8 @@ const TaxPreparation = () => {
       }
     ],
     ctaTitle: "Ready to Transform Your Tax Business?",
-    ctaDescription: "Let's discuss strategies to maximize your tax season revenue and build sustainable year-round income streams."
+    ctaDescription: "Let's discuss strategies to maximize your tax season revenue and build sustainable year-round income streams.",
+    faqs: industryFaqs
   };
 
   return <IndustryPageTemplate data={industryData} />;

@@ -19,9 +19,39 @@ import {
 import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
+import { getFaqsForPath } from "@/data/faqContent";
+
+const fallbackSolutionsFaqs = [
+  {
+    question: "How do I compete with tech-savvy CPAs who seem to get all the clients?",
+    answer: "The key is implementing the same marketing automation and technology solutions they use. Our clients typically see immediate improvements in online visibility, lead response times, and professional presentation. We help traditional accounting firms modernize their operations without losing their personal touch."
+  },
+  {
+    question: "Why aren't my accounting clients referring new business to me?",
+    answer: "Most accounting firms don't have systematic referral processes. We implement automated follow-up sequences, review generation systems, and stay-in-touch campaigns that keep you top-of-mind. Our clients typically see 300% more referrals within 6 months."
+  },
+  {
+    question: "How can I work less while growing my accounting practice?",
+    answer: "Automation is the answer. We streamline client onboarding, document collection, appointment scheduling, and follow-up communications. Most CPAs save 15+ hours per week while actually improving client service quality and increasing revenue."
+  },
+  {
+    question: "What's the best way to scale my accounting firm without hiring more staff?",
+    answer: "Technology and process optimization allow you to handle more clients with your existing team. We implement systems for automated client communication, efficient workflow management, and strategic partnerships that multiply your capacity without increasing overhead."
+  },
+  {
+    question: "How do I protect my accounting practice from cybersecurity threats?",
+    answer: "We implement enterprise-grade security measures including encrypted communications, secure client portals, automated backups, and compliance monitoring. Our security protocols meet AICPA and IRS requirements while being easy for your team to use."
+  },
+  {
+    question: "How long before I see results from implementing these solutions?",
+    answer: "Most accounting firms see immediate improvements in efficiency within 30 days, significant lead generation increases within 60 days, and measurable revenue growth within 90 days. The exact timeline depends on your specific challenges and implementation scope."
+  }
+];
 
 const Solutions = () => {
   const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
+  const solutionsFaqs = getFaqsForPath(solutionsIndexPath);
+  const faqsToRender = solutionsFaqs.length ? solutionsFaqs : fallbackSolutionsFaqs;
   const solutionCategories = [
     {
       icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
@@ -62,6 +92,7 @@ const Solutions = () => {
         description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
         canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
+        faqs={faqsToRender}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
@@ -322,59 +353,20 @@ const Solutions = () => {
               </div>
               
               <Accordion type="single" collapsible className="space-y-4">
-                <AccordionItem value="item-1" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    How do I compete with tech-savvy CPAs who seem to get all the clients?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    The key is implementing the same marketing automation and technology solutions they use. Our clients typically see immediate improvements in online visibility, lead response times, and professional presentation. We help traditional accounting firms modernize their operations without losing their personal touch.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    Why aren't my accounting clients referring new business to me?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Most accounting firms don't have systematic referral processes. We implement automated follow-up sequences, review generation systems, and stay-in-touch campaigns that keep you top-of-mind. Our clients typically see 300% more referrals within 6 months.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    How can I work less while growing my accounting practice?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Automation is the answer. We streamline client onboarding, document collection, appointment scheduling, and follow-up communications. Most CPAs save 15+ hours per week while actually improving client service quality and increasing revenue.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    What's the best way to scale my accounting firm without hiring more staff?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Technology and process optimization allow you to handle more clients with your existing team. We implement systems for automated client communication, efficient workflow management, and strategic partnerships that multiply your capacity without increasing overhead.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    How do I protect my accounting practice from cybersecurity threats?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    We implement enterprise-grade security measures including encrypted communications, secure client portals, automated backups, and compliance monitoring. Our security protocols meet AICPA and IRS requirements while being easy for your team to use.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-6" className="border border-border rounded-lg px-6 bg-background">
-                  <AccordionTrigger className="text-left text-sm">
-                    How long before I see results from implementing these solutions?
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    Most accounting firms see immediate improvements in efficiency within 30 days, significant lead generation increases within 60 days, and measurable revenue growth within 90 days. The exact timeline depends on your specific challenges and implementation scope.
-                  </AccordionContent>
-                </AccordionItem>
+                {faqsToRender.map((faq, index) => (
+                  <AccordionItem
+                    key={faq.question}
+                    value={`solutions-faq-${index}`}
+                    className="border border-border rounded-lg px-6 bg-background"
+                  >
+                    <AccordionTrigger className="text-left text-sm">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
               </Accordion>
             </div>
           </div>

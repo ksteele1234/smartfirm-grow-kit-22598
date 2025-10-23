@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const ClientRetention = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/client-retention");
   const solutionData: SolutionPageData = {
     id: "client-retention",
     title: "Client Retention Strategies",
@@ -74,7 +76,8 @@ const ClientRetention = () => {
       }
     ],
     ctaTitle: "Ready to Strengthen Client Relationships?",
-    ctaDescription: "Discover how to turn your existing clients into your most valuable business asset with proven retention strategies."
+    ctaDescription: "Discover how to turn your existing clients into your most valuable business asset with proven retention strategies.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

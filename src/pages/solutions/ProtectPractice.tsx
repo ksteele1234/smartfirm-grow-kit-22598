@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const ProtectPractice = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/protect-practice-and-future");
   const solutionData: SolutionPageData = {
     id: "protect-practice",
     title: "CPA Practice Management & Planning Services",
@@ -75,7 +77,8 @@ const ProtectPractice = () => {
       }
     ],
     ctaTitle: "Secure Your Practice Today",
-    ctaDescription: "Don't wait for a threat to materialize. Protect your practice and future-proof your business now. Book a security consultation."
+    ctaDescription: "Don't wait for a threat to materialize. Protect your practice and future-proof your business now. Book a security consultation.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

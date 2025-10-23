@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const GetMoreReferrals = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-without-asking");
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
     title: "Automated Client Referral System for CPAs | SmartFirm",
@@ -75,7 +77,8 @@ const GetMoreReferrals = () => {
       }
     ],
     ctaTitle: "Start Getting More Referrals Automatically",
-    ctaDescription: "Stop hoping for referrals and start generating them systematically. Book a call to see how we can build your referral engine."
+    ctaDescription: "Stop hoping for referrals and start generating them systematically. Book a call to see how we can build your referral engine.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;

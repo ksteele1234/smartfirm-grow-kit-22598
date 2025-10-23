@@ -1,7 +1,9 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const StopLosingClients = () => {
+  const solutionFaqs = getFaqsForPath("/solutions/stop-losing-clients-to-tech-savvy-cpas");
   const solutionData: SolutionPageData = {
     id: "stop-losing-clients",
     title: "Modern Marketing Services for CPAs | SmartFirm",
@@ -75,7 +77,8 @@ const StopLosingClients = () => {
       }
     ],
     ctaTitle: "Don't Let Tech-Savvy CPAs Win Your Clients",
-    ctaDescription: "Get the modern CPA marketing automation and systems that keeps you competitive. Book a strategy call to see how we can transform your practice with proven digital marketing for CPAs."
+    ctaDescription: "Get the modern CPA marketing automation and systems that keeps you competitive. Book a strategy call to see how we can transform your practice with proven digital marketing for CPAs.",
+    faqs: solutionFaqs
   };
 
   return <SolutionPageTemplate data={solutionData} />;
