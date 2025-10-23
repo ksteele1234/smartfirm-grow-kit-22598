@@ -20,8 +20,30 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { getFaqsForPath } from "@/data/faqContent";
+
+const fallbackToolsFaqs = [
+  {
+    question: "How do these tools help my accounting firm?",
+    answer: "Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources."
+  },
+  {
+    question: "Are these assessments really free?",
+    answer: "Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement."
+  },
+  {
+    question: "How long do the assessments take?",
+    answer: "Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations."
+  },
+  {
+    question: "What happens after I complete an assessment?",
+    answer: "You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements."
+  }
+];
 
 const ToolsCalculators = () => {
+  const toolsFaqs = getFaqsForPath("/tools");
+  const faqsToRender = toolsFaqs.length ? toolsFaqs : fallbackToolsFaqs;
   const tools = [
     {
       id: "efficiency-quiz",
@@ -162,29 +184,12 @@ const ToolsCalculators = () => {
         description="Access free marketing tools for accounting firms including growth calculators, ROI assessments, workflow audits, marketing scorecards, quizzes, and benchmarks."
         canonicalUrl="https://smartfirm.io/tools"
         pageType="default"
+        faqs={faqsToRender}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Free Tools & Calculators", url: "/tools" }
-        ]}
-        faqs={[
-          {
-            question: "How do these tools help my accounting firm?",
-            answer: "Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources."
-          },
-          {
-            question: "Are these assessments really free?",
-            answer: "Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement."
-          },
-          {
-            question: "How long do the assessments take?",
-            answer: "Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations."
-          },
-          {
-            question: "What happens after I complete an assessment?",
-            answer: "You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements."
-          }
         ]}
       />
       <Header />
@@ -351,47 +356,24 @@ const ToolsCalculators = () => {
                 Frequently Asked Questions
               </h2>
               <div className="space-y-4">
-                <details className="group border border-border rounded-lg p-6 bg-background">
-                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                    How do these tools help my accounting firm?
-                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    Our free tools & calculators provide data-driven insights into your firm's efficiency, marketing ROI, and growth potential, helping you make informed decisions about where to invest your time and resources.
-                  </p>
-                </details>
-
-                <details className="group border border-border rounded-lg p-6 bg-background">
-                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                    Are these assessments really free?
-                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    Yes, all our assessment tools are completely free with no obligation. We designed them to help accounting firms identify opportunities for improvement.
-                  </p>
-                </details>
-
-                <details className="group border border-border rounded-lg p-6 bg-background">
-                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                    How long do the assessments take?
-                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    Most assessments take between 2-5 minutes to complete and provide instant results with personalized recommendations.
-                  </p>
-                </details>
-
-                <details className="group border border-border rounded-lg p-6 bg-background">
-                  <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                    What happens after I complete an assessment?
-                    <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
-                    You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements.
-                  </p>
-                </details>
+                {faqsToRender.map((faq, index) => (
+                  <details
+                    key={`${faq.question}-${index}`}
+                    className="group border border-border rounded-lg p-6 bg-background"
+                  >
+                    <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
+                      {faq.question}
+                      <span className="ml-2 transform group-open:rotate-180 transition-transform">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
               </div>
-            </div>
+              </div>
           </div>
         </section>
       </main>

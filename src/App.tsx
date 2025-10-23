@@ -97,6 +97,7 @@ const App = () => (
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
       <Toaster />
       <SkipToContent />
+
       <BrowserRouter>
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>

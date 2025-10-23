@@ -26,6 +26,7 @@ export interface ServicePageData extends CMSPageData {
   faqs?: Array<{
     question: string;
     answer: string;
+    category?: string;
   }>;
   ctaTitle: string;
   ctaDescription: string;
@@ -83,9 +84,15 @@ export interface IndustryPageData extends CMSPageData {
     result: string;
     link: string;
   }>;
+  industryMetrics?: Array<{
+    label: string;
+    value: string;
+    description?: string;
+  }>;
   faqs?: Array<{
     question: string;
     answer: string;
+    category?: string;
   }>;
   ctaTitle: string;
   ctaDescription: string;

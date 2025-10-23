@@ -1,7 +1,9 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const BusinessAdvisory = () => {
+  const industryFaqs = getFaqsForPath("/industries/business-advisory");
   const industryData: IndustryPageData = {
     id: "business-advisory",
     title: "Custom Marketing Agency for Business Advisors",
@@ -66,7 +68,8 @@ const BusinessAdvisory = () => {
       }
     ],
     ctaTitle: "Build Your Advisory Practice",
-    ctaDescription: "Learn how to establish thought leadership and attract high-value advisory clients."
+    ctaDescription: "Learn how to establish thought leadership and attract high-value advisory clients.",
+    faqs: industryFaqs
   };
 
   return <IndustryPageTemplate data={industryData} />;

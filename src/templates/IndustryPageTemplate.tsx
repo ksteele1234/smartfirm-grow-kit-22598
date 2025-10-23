@@ -3,7 +3,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IndustryPageData } from "@/types/cms";
-import { CheckCircle, ArrowRight, Building, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Building, Users, Shield } from "lucide-react";
 import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -30,6 +30,25 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       answer: "All our solutions are designed with accounting industry standards and compliance requirements in mind."
     }
   ];
+  const defaultIndustryMetrics = [
+    {
+      label: "Average pipeline lift",
+      value: "37%",
+      description: "Increase in qualified opportunities within the first 90 days."
+    },
+    {
+      label: "Time saved per partner",
+      value: "12 hrs",
+      description: "Freed from manual follow-up and nurture workflows every month."
+    },
+    {
+      label: "Lead-to-client conversion",
+      value: "3.2x",
+      description: "Improvement driven by industry-specific nurture journeys."
+    }
+  ];
+  const metricsToRender = data.industryMetrics && data.industryMetrics.length > 0 ? data.industryMetrics : defaultIndustryMetrics;
+  const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultFAQs;
 
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
@@ -45,7 +64,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           { name: "Industries", url: industriesIndexPath },
           { name: data.title.replace(' | SmartFirm', ''), url: window.location.pathname }
         ]}
-        faqs={defaultFAQs}
+        faqs={faqsToRender}
       />
       <Header />
       
@@ -83,13 +102,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section
-          className="relative overflow-hidden section-padding pt-32"
-          style={{
-            background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
-          }}
-        >
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
+      <section className="relative overflow-hidden bg-gradient-muted-blue pt-32">
+        <div className="relative z-10 mx-auto max-w-4xl text-center px-4">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
@@ -106,8 +120,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="bg-white section-padding">
-        <div className="mx-auto max-w-6xl">
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-6">
               Industry Overview
@@ -136,8 +150,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="bg-[#f8fafc] section-padding">
-        <div className="mx-auto max-w-6xl">
+      <section className="section-padding bg-[#f8fafc]">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Common Challenges & Our Solutions
@@ -170,8 +184,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="bg-white section-padding">
-        <div className="mx-auto max-w-6xl">
+      <section className="section-padding bg-white">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Specialized Services
@@ -201,8 +215,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="bg-[#f8fafc] section-padding">
-        <div className="mx-auto max-w-6xl">
+      <section className="section-padding bg-[#f8fafc]">
+        <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
               Success Stories
@@ -235,13 +249,13 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="bg-gradient-to-br from-[#243b55] to-[#4a7ba7] section-padding">
+      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
-            {defaultFAQs.map((faq, index) => (
+            {faqsToRender.map((faq, index) => (
               <details key={index} className="border border-white/20 rounded-lg p-4 bg-white">
                 <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
                 <div className="text-[#334155] mt-2">{faq.answer}</div>
@@ -253,7 +267,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": defaultFAQs.map(faq => ({
+            "mainEntity": faqsToRender.map(faq => ({
               "@type": "Question",
               "name": faq.question,
               "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
@@ -264,10 +278,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative text-white overflow-hidden section-padding"
-        style={{
-          background: 'linear-gradient(135deg, #00133d 0%, #002d5c 100%)'
-        }}
+        className="relative text-white overflow-hidden bg-gradient-muted-blue section-padding"
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">{data.ctaTitle}</h2>

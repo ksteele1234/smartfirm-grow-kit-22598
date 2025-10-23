@@ -105,7 +105,7 @@ const WhySmartFirmIsDifferent = () => {
                 {/* Key Benefit with checkmark */}
                 <div className="flex items-start gap-2 mt-4">
                   <CheckCircle className="w-4 h-4 text-[#14b8a6] flex-shrink-0 mt-0.5" />
-                  <p className="text-sm font-semibold text-[#4a7ba7]">
+                  <p className="text-sm font-semibold text-[#1f5d93]">
                     {item.keyBenefit}
                   </p>
                 </div>

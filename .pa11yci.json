@@ -1,0 +1,19 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 20000,
+    "wcagVersion": "2.1"
+  },
+  "urls": [
+    "https://newsmartfirmwebsite.netlify.app/",
+    "https://newsmartfirmwebsite.netlify.app/leading-marketing-services-for-accounting-firms",
+    "https://newsmartfirmwebsite.netlify.app/services/marketing-automation",
+    "https://newsmartfirmwebsite.netlify.app/solutions-expert-marketing-agency-for-accounting-firms",
+    "https://newsmartfirmwebsite.netlify.app/solutions/scale-firm",
+    "https://newsmartfirmwebsite.netlify.app/resources-digital-marketing-agency-for-cpa-firms",
+    "https://newsmartfirmwebsite.netlify.app/get-started",
+    "https://newsmartfirmwebsite.netlify.app/contact",
+    "https://newsmartfirmwebsite.netlify.app/tools",
+    "https://newsmartfirmwebsite.netlify.app/growth-calculator"
+  ]
+}

@@ -1,7 +1,9 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const BookkeepingServices = () => {
+  const industryFaqs = getFaqsForPath("/industries/bookkeeping-services");
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
     title: "Marketing Services for Bookkeeping Firms | SmartFirm",
@@ -66,7 +68,8 @@ const BookkeepingServices = () => {
       }
     ],
     ctaTitle: "Build Your Bookkeeping Empire",
-    ctaDescription: "Discover how to attract quality small business clients and build predictable recurring revenue."
+    ctaDescription: "Discover how to attract quality small business clients and build predictable recurring revenue.",
+    faqs: industryFaqs
   };
 
   return <IndustryPageTemplate data={industryData} />;

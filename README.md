@@ -60,6 +60,10 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Project documentation
+
+Supporting strategy and optimization notes are stored in the [`src/docs/`](src/docs) directory to keep them close to the codebase. Recent UX guidance for the marketing templates lives in [`src/docs/UX_TEMPLATE_RECOMMENDATIONS.md`](src/docs/UX_TEMPLATE_RECOMMENDATIONS.md).
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/17317595-b7b1-40e4-a2f0-31acfb34d893) and click on Share -> Publish.
