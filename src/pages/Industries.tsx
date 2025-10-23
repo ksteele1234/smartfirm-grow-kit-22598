@@ -31,6 +31,7 @@ import {
   PieChart
 } from "lucide-react";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const fallbackIndustryFaqs = [
@@ -446,7 +447,10 @@ const Industries = () => {
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">
-                      {faq.answer}
+                      <FaqAnswer
+                        text={faq.answer}
+                        paragraphClassName="text-muted-foreground leading-relaxed"
+                      />
                     </AccordionContent>
                   </AccordionItem>
                 ))}

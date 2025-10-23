@@ -1,6 +1,7 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -367,9 +368,10 @@ const ToolsCalculators = () => {
                         +
                       </span>
                     </summary>
-                    <p className="mt-4 text-muted-foreground leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="mt-4 text-muted-foreground leading-relaxed"
+                    />
                   </details>
                 ))}
               </div>

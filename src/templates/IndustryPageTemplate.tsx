@@ -8,6 +8,7 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 
 interface IndustryPageTemplateProps {
@@ -258,7 +259,12 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             {faqsToRender.map((faq, index) => (
               <details key={index} className="border border-white/20 rounded-lg p-4 bg-white">
                 <summary className="cursor-pointer font-medium text-[#1e293b]">{faq.question}</summary>
-                <div className="text-[#334155] mt-2">{faq.answer}</div>
+                <div className="text-[#334155] mt-2 space-y-3">
+                  <FaqAnswer
+                    text={faq.answer}
+                    paragraphClassName="text-[#334155]"
+                  />
+                </div>
               </details>
             ))}
           </div>

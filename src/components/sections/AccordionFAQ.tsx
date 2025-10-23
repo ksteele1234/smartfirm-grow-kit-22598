@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 interface FAQItem {
   question: string;
@@ -78,9 +79,10 @@ const AccordionFAQ = ({
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <p className="text-base text-[#1e293b] leading-[1.7]">
-                      {faq.answer}
-                    </p>
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                    />
                   </div>
                 </div>
               </div>

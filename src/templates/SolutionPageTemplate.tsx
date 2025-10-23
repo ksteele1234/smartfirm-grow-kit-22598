@@ -9,6 +9,7 @@ import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const defaultSolutionFaqs = [
   {
@@ -325,7 +326,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <summary className="cursor-pointer font-semibold text-base md:text-lg text-foreground list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
                   {faq.question}
                 </summary>
-                <div className="text-text-secondary text-base mt-4 md:mt-6 leading-relaxed max-w-[65ch]">{faq.answer}</div>
+                <div className="text-text-secondary mt-4 md:mt-6 space-y-4 max-w-[65ch]">
+                  <FaqAnswer
+                    text={faq.answer}
+                    paragraphClassName="text-base leading-relaxed text-text-secondary"
+                  />
+                </div>
               </details>
             ))}
           </div>

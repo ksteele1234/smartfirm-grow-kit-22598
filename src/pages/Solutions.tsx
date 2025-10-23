@@ -19,6 +19,7 @@ import {
 import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const fallbackSolutionsFaqs = [
@@ -362,9 +363,12 @@ const Solutions = () => {
                     <AccordionTrigger className="text-left text-sm">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {faq.answer}
-                    </AccordionContent>
+                <AccordionContent className="text-muted-foreground">
+                  <FaqAnswer
+                    text={faq.answer}
+                    paragraphClassName="text-sm md:text-base leading-relaxed text-muted-foreground"
+                  />
+                </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>

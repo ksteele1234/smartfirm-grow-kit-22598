@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { faqCategories } from "@/data/faqContent";
+import FaqAnswer from "@/components/faq/FaqAnswer";
 import { 
   ArrowRight,
   Search,
@@ -169,11 +170,12 @@ const FAQ = () => {
                               isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                             }`}
                           >
-                            <div className="px-6 pb-6">
-                              <p className="text-base text-[#1e293b] leading-[1.7]">
-                                {faq.answer}
-                              </p>
-                            </div>
+                  <div className="px-6 pb-6">
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                    />
+                  </div>
                           </div>
                         </div>
                       );
