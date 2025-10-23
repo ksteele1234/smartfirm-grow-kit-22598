@@ -127,7 +127,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* Problem & Solution Section */}
       <section className="section-padding relative bg-white -mt-6">
         <div className="max-w-[1200px] mx-auto">
-          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2 md:auto-rows-fr">
+          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
             <div
               className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
               aria-hidden="true"
@@ -167,6 +167,19 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 </ul>
                 <p className="mt-4 text-xs text-[#6b7280]">Themes pulled from discovery calls with SmartFirm prospects in 2025.</p>
               </div>
+              {data.problemSolutionPairs?.length ? (
+                <div className="mt-8">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-700">Problems we hear every week</p>
+                  <ul className="mt-4 space-y-4 text-sm leading-relaxed text-[#1f2937]">
+                    {data.problemSolutionPairs.map((pair, index) => (
+                      <li key={`problem-${index}`} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 shadow-sm">
+                        <span className="block font-semibold text-[#0f172a]">Problem</span>
+                        <span className="mt-1 block text-[#1f2937]">{pair.problem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </article>
             <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
               <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-teal-sm">
@@ -198,7 +211,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                         <div className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">
                           {result.metric}
                         </div>
-                        <div className="mt-3 flex items-baseline gap-2">
+                        <div className="mt-3 flex flex-col gap-1">
                           <span className="text-3xl font-bold text-[#fb7185] leading-none">{result.value}</span>
                           <span className="text-sm text-[#475569]">{contextLabel}</span>
                         </div>
@@ -208,6 +221,19 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                       </div>
                     );
                   })}
+                </div>
+              ) : null}
+              {data.problemSolutionPairs?.length ? (
+                <div className="mt-8">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-[#0f766e]">How we tackle each roadblock</p>
+                  <ul className="mt-4 space-y-4 text-sm leading-relaxed text-[#0f172a]">
+                    {data.problemSolutionPairs.map((pair, index) => (
+                      <li key={`solution-${index}`} className="rounded-xl border border-white/60 bg-white/70 px-4 py-4 shadow-sm">
+                        <span className="block font-semibold text-[#0f766e]">Solution</span>
+                        <span className="mt-1 block text-[#0f172a]">{pair.solution}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ) : null}
               <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">

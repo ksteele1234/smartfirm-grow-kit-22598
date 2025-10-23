@@ -15,6 +15,20 @@ const GetMoreReferrals = () => {
     heroSubtitle: "Our automated client referral system for CPAs generates referrals naturally by delivering exceptional client experiences, creating referral-worthy moments, and making it effortless for clients to introduce you.",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",
+    problemSolutionPairs: [
+      {
+        problem: "Clients only hear from the firm at tax time, so they forget the value you deliver the rest of the year.",
+        solution: "Automate education touchpoints—quarterly insights, deadline reminders, and quick wins—that keep you top-of-mind without manual effort."
+      },
+      {
+        problem: "Happy clients want to refer but there is no frictionless way to introduce you to their peers.",
+        solution: "Launch a referral hub with shareable links, pre-written emails, and simple intake forms that capture warm introductions instantly."
+      },
+      {
+        problem: "Online reviews are outdated, making prospects wonder if your firm is still active.",
+        solution: "Trigger review requests right after key milestones and syndicate the feedback across Google, Yelp, and niche directories automatically."
+      }
+    ],
     keyBenefits: [
       {
         title: "Turn Happy Clients into Advocates",

@@ -15,6 +15,20 @@ const ProtectPractice = () => {
     heroSubtitle: "Our CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, business continuity planning, and exit strategy development.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
+    problemSolutionPairs: [
+      {
+        problem: "Legacy file servers and unsecured email leave staff sharing client data without MFA or intrusion monitoring.",
+        solution: "Deploy managed security including MFA, encrypted portals, and 24/7 threat detection tuned to IRS and state privacy expectations."
+      },
+      {
+        problem: "The firm's succession and continuity plans live in a partner's head with no clear owner if something happens unexpectedly.",
+        solution: "Document succession playbooks, update authority matrices, and rehearse continuity scenarios so the practice can keep operating under stress."
+      },
+      {
+        problem: "New regulatory updates get noticed only when an auditor flags them because monitoring is ad hoc.",
+        solution: "Stand up a compliance calendar with automated alerts, defined owners, and quarterly risk reviews that keep requirements in front of the team."
+      }
+    ],
     keyBenefits: [
       {
         title: "Cybersecurity & Data Protection",
