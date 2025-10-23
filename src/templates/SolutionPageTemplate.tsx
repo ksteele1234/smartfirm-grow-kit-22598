@@ -4,7 +4,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { SolutionPageData } from "@/types/cms";
-import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight, CheckCircle } from "lucide-react";
+import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight, CheckCircle, XCircle } from "lucide-react";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -146,7 +146,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Capacity strain", "Manual follow-up", "Reactive marketing"].map(challenge => (
                   <span key={challenge} className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
-                    <CheckCircle className="h-3.5 w-3.5 text-[#14b8a6]" aria-hidden="true" />
+                    <XCircle className="h-3.5 w-3.5 text-[#fb7185]" aria-hidden="true" />
                     {challenge}
                   </span>
                 ))}
@@ -160,7 +160,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                     "Marketing activity spikes only when the pipeline starts drying up."
                   ].map((signal) => (
                     <li key={signal} className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#14b8a6]" aria-hidden="true" />
+                      <XCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#fb7185]" aria-hidden="true" />
                       <span>{signal}</span>
                     </li>
                   ))}
@@ -193,6 +193,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 {data.solutionOverview}
               </p>
               {data.results?.length ? (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {data.results.map(result => (
+                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-[#0f766e] shadow-sm border border-white/60">
+                      <CheckCircle className="h-3.5 w-3.5 text-[#14b8a6]" aria-hidden="true" />
+                      {result.value}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+              {data.results?.length ? (
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {data.results.slice(0, 4).map((result, index) => {
                     const metricContext: Record<string, string> = {
@@ -221,6 +231,20 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                       </div>
                     );
                   })}
+                </div>
+              ) : null}
+              {data.problemSolutionPairs?.length ? (
+                <div className="mt-8 rounded-2xl border border-white/60 bg-white/70 px-6 py-6 shadow-sm">
+                  <p className="text-sm font-semibold uppercase tracking-wide text-[#0f766e]">What we hear after the systems go live</p>
+                  <ul className="mt-4 space-y-3 text-sm text-[#0f172a] leading-relaxed">
+                    {data.problemSolutionPairs.map((pair, index) => (
+                      <li key={`after-${index}`} className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#14b8a6]" aria-hidden="true" />
+                        <span>{pair.solution}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-4 text-xs text-[#0f766e]/70">Insights from post-implementation debriefs with SmartFirm client teams.</p>
                 </div>
               ) : null}
               {data.problemSolutionPairs?.length ? (
