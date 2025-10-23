@@ -14,6 +14,20 @@ const ClientRetention = () => {
     heroSubtitle: "Strengthen client relationships with predictive analytics and intelligent automation. Our AI-driven retention strategies keep your best clients engaged and loyal for years through data-driven insights.",
     problemStatement: "Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you're constantly replacing lost clients instead of growing your practice.",
     solutionOverview: "Our AI-driven client retention solution combines predictive client behavior analysis, automated value proposition optimization, intelligent communication systems, and data-driven client experience enhancement to strengthen relationships and reduce churn.",
+    problemSolutionPairs: [
+      {
+        problem: "Client managers guess which relationships are at risk because there is no shared churn signal or scoring model.",
+        solution: "Apply predictive analytics that score engagement, billing trends, and sentiment so at-risk accounts surface before they defect."
+      },
+      {
+        problem: "Outreach varies wildly by advisor, leaving some clients with gaps of months between touches.",
+        solution: "Automate cross-channel cadences—email, SMS, and portal alerts—guided by AI triggers that recommend the next best action."
+      },
+      {
+        problem: "Leadership cannot see which services each client actually uses, making it hard to demonstrate value.",
+        solution: "Consolidate billing, deliverables, and meeting insights into dashboards that highlight wins and tee up strategic conversations."
+      }
+    ],
     keyBenefits: [
       {
         title: "Reduced Client Churn",

@@ -15,6 +15,20 @@ const WorkLessEarnMore = () => {
     heroSubtitle: "Discover how to increase accounting firm revenue while working fewer hours through value-based pricing models, service mix optimization, process automation, and transitioning to high-margin advisory services.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
+    problemSolutionPairs: [
+      {
+        problem: "Partners lose 8+ hours each week double-checking work-in-progress and chasing client paperwork instead of focusing on advisory work.",
+        solution: "Centralize production with workflow dashboards, automated reminders, and delegated review checkpoints so handoffs happen without partner intervention."
+      },
+      {
+        problem: "Hourly billing caps revenue growth because clients scrutinize timesheets and push back on rate increases.",
+        solution: "Package services with value-based pricing frameworks, minimum fees, and anchored advisory bundles that tie price to outcomes instead of time."
+      },
+      {
+        problem: "Scope creep erodes margins when the team says yes to off-book requests just to keep clients happy.",
+        solution: "Productize deliverables with clear inclusions, automated change-order prompts, and client approval workflows before extra work begins."
+      }
+    ],
     keyBenefits: [
       {
         title: "Automate Routine Tasks",

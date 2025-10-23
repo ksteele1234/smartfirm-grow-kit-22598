@@ -15,6 +15,20 @@ const ScaleFirm = () => {
     heroSubtitle: "Learn how to scale your accounting firm by implementing systematized client delivery processes, building delegation frameworks, productizing services, optimizing pricing, and planning capacity strategically.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
+    problemSolutionPairs: [
+      {
+        problem: "The owner still acts as project manager on every engagement, so nothing moves unless they review it personally.",
+        solution: "Implement role-based workflow automation with delegated approvals so senior staff can run engagements inside clear guardrails."
+      },
+      {
+        problem: "Service delivery steps live in individual spreadsheets, creating inconsistent client experiences across teams.",
+        solution: "Document standardized operating procedures, then embed them into your practice management system so every client follows the same high-quality path."
+      },
+      {
+        problem: "New hires take months to become productive because onboarding depends on shadowing whoever is available.",
+        solution: "Build structured onboarding tracks with playbooks, video walkthroughs, and recurring coaching checkpoints that ramp new team members in weeks."
+      }
+    ],
     keyBenefits: [
       {
         title: "Systematic Growth",

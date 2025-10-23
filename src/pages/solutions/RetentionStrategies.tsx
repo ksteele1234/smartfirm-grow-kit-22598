@@ -13,8 +13,22 @@ const RetentionStrategies = () => {
     content: {},
     heroTitle: "Retention Strategies For CPAs",
     heroSubtitle: "Our retention strategies for CPAs include structured client success programs, quarterly business review processes, proactive tax planning outreach, exclusive client events, and loyalty incentive programs.",
-    problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
+   problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
     solutionOverview: "Our advanced retention strategies include automated client communication systems, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value and loyalty.",
+    problemSolutionPairs: [
+      {
+        problem: "Clients cancel because they only hear from the firm when an emergency or tax deadline looms.",
+        solution: "Schedule proactive planning reviews, milestone check-ins, and evergreen education campaigns so every client sees value year-round."
+      },
+      {
+        problem: "Partners lack visibility into which accounts are thrilled and which are quietly disengaging.",
+        solution: "Track sentiment with automated surveys, NPS checkpoints, and service health dashboards that surface red flags early."
+      },
+      {
+        problem: "Small issues grow into escalations because staff does not have a playbook for resolving concerns quickly.",
+        solution: "Equip the team with retention playbooks, same-day response SLAs, and escalation alerts that keep relationships on track."
+      }
+    ],
     keyBenefits: [
       {
         title: "Automated Client Communication",

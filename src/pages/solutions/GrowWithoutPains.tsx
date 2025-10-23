@@ -15,6 +15,20 @@ const GrowWithoutPains = () => {
     heroSubtitle: "Our accounting firm growth consulting helps you scale without burnout by addressing capacity planning, building delegation systems, standardizing service delivery, and creating sustainable growth infrastructure.",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
+    problemSolutionPairs: [
+      {
+        problem: "Managers constantly reshuffle work because no one can see team capacity or deadlines in one place.",
+        solution: "Roll out predictive capacity planning dashboards that forecast workload and auto-balance assignments before crunch time hits."
+      },
+      {
+        problem: "Review notes pile up at the end of the month, so quality checks happen days after files should be out the door.",
+        solution: "Embed staged quality automation that flags exceptions in real time and routes only the issues that need human review."
+      },
+      {
+        problem: "Leadership lacks a clear view of which growth initiatives are straining operations until staff burn out.",
+        solution: "Connect pipeline, staffing, and profitability data in one scorecard so you can expand services with the right resources already lined up."
+      }
+    ],
     keyBenefits: [
       {
         title: "Scalable Systems Architecture",

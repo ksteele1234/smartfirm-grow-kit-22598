@@ -15,6 +15,20 @@ const StopLosingClients = () => {
     heroSubtitle: "Our modern marketing services for CPAs help you compete with tech-savvy competitors by highlighting your technology stack, streamlining client interactions, and positioning your practice as innovative.",
     problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
     solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",
+    problemSolutionPairs: [
+      {
+        problem: "Prospects Google the firm and find an outdated website, thin reviews, and no proof you understand cloud tools.",
+        solution: "Refresh your digital presence with SEO-optimized pages, current testimonials, and technology messaging that signals you run a modern practice."
+      },
+      {
+        problem: "Leads sit in the inbox overnight because intake depends on whoever checks voicemail or email first.",
+        solution: "Route every inquiry through automated scheduling, chat, and SMS follow-up so prospects get a reply within minutes, not days."
+      },
+      {
+        problem: "New clients experience inconsistent onboarding because forms, document requests, and reminders are handled manually.",
+        solution: "Launch a branded client portal with automated onboarding sequences that guide every new relationship the same way every time."
+      }
+    ],
     keyBenefits: [
       {
         title: "Get Found Online When Clients Search",
