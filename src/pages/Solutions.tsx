@@ -122,7 +122,7 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -140,12 +140,8 @@ const Solutions = () => {
                 As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
               </p>
             </div>
-            <div className="mt-10 flex justify-center">
-              <Button
-                size="lg"
-                className="bg-[#F87171] hover:bg-[#ef4444] text-white border-none"
-                asChild
-              >
+            <div className="mt-12 flex justify-center">
+              <Button variant="coral" size="hero" asChild>
                 <a href="/get-started">Book Your Strategy Call</a>
               </Button>
             </div>

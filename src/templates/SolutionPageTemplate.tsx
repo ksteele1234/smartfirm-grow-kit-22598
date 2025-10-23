@@ -77,7 +77,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
+      <section className="relative pt-36 pb-48 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
         <nav id="sf-breadcrumbs" aria-label="Breadcrumb" className="absolute top-6 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb>
@@ -108,12 +108,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <div className="mt-10 flex justify-center">
-            <Button
-              size="lg"
-              className="bg-[#F87171] hover:bg-[#ef4444] text-white border-none shadow-lg px-10"
-              asChild
-            >
+          <div className="mt-12 flex justify-center">
+            <Button variant="coral" size="hero" asChild>
               <a href="/get-started" aria-label="Book your strategy call">
                 Book Your Strategy Call
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />

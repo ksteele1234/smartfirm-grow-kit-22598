@@ -160,7 +160,7 @@ const Industries = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -177,6 +177,19 @@ const Industries = () => {
               <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
               </p>
+            </div>
+            <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+              <Button variant="coral" size="hero" asChild>
+                <a href="/get-started">
+                  Book Your Strategy Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button variant="white-outline-on-dark" size="hero" asChild>
+                <a href="/leading-marketing-services-for-accounting-firms">
+                  Explore Services
+                </a>
+              </Button>
             </div>
           </div>
         </section>
