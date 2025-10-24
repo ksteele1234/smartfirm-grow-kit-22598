@@ -38,7 +38,7 @@ const Footer = () => {
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
                 width={320}
                 height={120}
-                className="h-48 w-auto max-w-[540px]"
+                className="h-36 w-auto max-w-[405px]"
               />
             </a>
             <p className="text-sm text-white/70 leading-[1.6]">
