@@ -33,22 +33,42 @@ const GrowWithoutPains = () => {
       {
         title: "Scalable Systems Architecture",
         description: "Build infrastructure that handles growth seamlessly without breaking down or requiring constant attention.",
-        icon: "Building"
+        icon: "Building",
+        points: [
+          "Audit workflows to remove duplicate work across teams.",
+          "Implement standardized intake and delivery templates.",
+          "Integrate core apps so data syncs automatically."
+        ]
       },
       {
         title: "Quality Control Automation",
         description: "Maintain high service standards even as volume increases through automated quality checks and workflows.",
-        icon: "Shield"
+        icon: "Shield",
+        points: [
+          "Set rule-based reviews that flag exceptions instantly.",
+          "Route complex files to senior staff before they bottleneck.",
+          "Track review turnaround so nothing slips past deadlines."
+        ]
       },
       {
         title: "Team Efficiency Tools",
         description: "Equip your growing team with tools and processes that prevent overwhelm and maintain productivity.",
-        icon: "Users"
+        icon: "Users",
+        points: [
+          "Give visibility into workloads with live capacity dashboards.",
+          "Automate task assignments based on role and availability.",
+          "Offer quick-reference playbooks inside each workflow."
+        ]
       },
       {
         title: "Growth Monitoring Dashboard",
         description: "Track growth metrics and identify potential issues before they become problems.",
-        icon: "BarChart"
+        icon: "BarChart",
+        points: [
+          "Overlay pipeline demand with staffing forecasts.",
+          "Monitor profitability by service line in real time.",
+          "Receive alerts when KPIs drift from targets."
+        ]
       }
     ],
     howItWorks: [

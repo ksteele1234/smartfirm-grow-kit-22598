@@ -33,22 +33,42 @@ const ProtectPractice = () => {
       {
         title: "Cybersecurity & Data Protection",
         description: "Implement enterprise-grade security measures to protect sensitive client data and prevent costly breaches.",
-        icon: "Shield"
+        icon: "Shield",
+        points: [
+          "Enforce MFA, device management, and role-based permissions.",
+          "Monitor threats with 24/7 intrusion detection tuned for financial data.",
+          "Encrypt data in transit and at rest with SOC 2-aligned policies."
+        ]
       },
       {
         title: "Business Continuity Planning",
         description: "Ensure your practice continues operating smoothly during disruptions with robust contingency plans.",
-        icon: "Clock"
+        icon: "Clock",
+        points: [
+          "Document playbooks for staff coverage and client communications.",
+          "Test backup and recovery procedures on a scheduled cadence.",
+          "Map vendor dependencies so alternates are ready before you need them."
+        ]
       },
       {
         title: "Future-Proofing Strategy",
         description: "Adapt to changing regulations, technology, and market conditions before they become problems.",
-        icon: "TrendingUp"
+        icon: "TrendingUp",
+        points: [
+          "Review regulatory trackers and update policies quarterly.",
+          "Pilot emerging tools in sandboxes before firmwide rollout.",
+          "Align tech stack roadmaps with long-term firm goals."
+        ]
       },
       {
         title: "Risk Management Systems",
         description: "Identify and mitigate potential threats to your practice before they cause damage.",
-        icon: "AlertTriangle"
+        icon: "AlertTriangle",
+        points: [
+          "Score operational risks and assign owners to mitigation plans.",
+          "Automate incident reporting and follow-up checklists.",
+          "Share dashboards that keep leadership aware of top risks."
+        ]
       }
     ],
     howItWorks: [

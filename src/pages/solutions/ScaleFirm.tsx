@@ -33,22 +33,42 @@ const ScaleFirm = () => {
       {
         title: "Systematic Growth",
         description: "Scale revenue predictably without proportional increases in workload",
-        icon: "TrendingUp"
+        icon: "TrendingUp",
+        points: [
+          "Model revenue targets against delivery capacity before launching campaigns.",
+          "Automate lead nurture so acquisition keeps pace with delivery.",
+          "Use dashboards that connect marketing, sales, and fulfillment data."
+        ]
       },
       {
         title: "Operational Efficiency",
         description: "Streamlined processes that work without your constant oversight",
-        icon: "Cog"
+        icon: "Cog",
+        points: [
+          "Map every engagement to standardized SOPs and timelines.",
+          "Automate approvals and escalations to reduce owner dependency.",
+          "Spot bottlenecks quickly with real-time workflow reporting."
+        ]
       },
       {
         title: "Quality Maintenance",
         description: "Maintain high service standards even as you serve more clients",
-        icon: "Shield"
+        icon: "Shield",
+        points: [
+          "Embed QA checklists inside your practice management system.",
+          "Trigger peer reviews for high-risk filings automatically.",
+          "Collect client feedback after milestones to course correct fast."
+        ]
       },
       {
         title: "Work-Life Balance",
         description: "Build a firm that runs efficiently while you focus on strategy",
-        icon: "Clock"
+        icon: "Clock",
+        points: [
+          "Delegate day-to-day coordination with role-specific dashboards.",
+          "Automate status updates so clients stay informed without calls.",
+          "Reserve leadership time for strategic planning and mentorship."
+        ]
       }
     ],
     howItWorks: [

@@ -33,22 +33,42 @@ const WorkLessEarnMore = () => {
       {
         title: "Automate Routine Tasks",
         description: "Eliminate repetitive work with automation that handles client onboarding, follow-ups, and administrative tasks.",
-        icon: "Zap"
+        icon: "Zap",
+        points: [
+          "Trigger intake packets, e-signatures, and payment links automatically.",
+          "Route document requests and reminders without manual emails.",
+          "Sync task updates directly into your practice management platform."
+        ]
       },
       {
         title: "Premium Service Positioning",
         description: "Position your services as premium solutions that command higher fees and attract better clients.",
-        icon: "TrendingUp"
+        icon: "TrendingUp",
+        points: [
+          "Package deliverables into advisory-ready bundles clients understand.",
+          "Build authority with polished proposals and ROI-focused messaging.",
+          "Use pricing anchors that reinforce your strategic value."
+        ]
       },
       {
         title: "Efficient Client Management",
         description: "Streamline client relationships with systems that reduce management time while improving satisfaction.",
-        icon: "Users"
+        icon: "Users",
+        points: [
+          "Centralize client communication in shared portals.",
+          "Surface status updates so the whole team sees next steps.",
+          "Automate satisfaction check-ins after major milestones."
+        ]
       },
       {
         title: "Revenue Optimization",
         description: "Identify and implement revenue opportunities that increase profits without increasing workload.",
-        icon: "DollarSign"
+        icon: "DollarSign",
+        points: [
+          "Analyze service mix to uncover underpriced engagements.",
+          "Layer in advisory add-ons triggered by client milestones.",
+          "Track realization per client so pricing stays aligned with value."
+        ]
       }
     ],
     howItWorks: [
