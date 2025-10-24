@@ -312,6 +312,19 @@ All colors MUST be HSL converted from the official brand colors.
     background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
   }
 
+  /* ===== ON-DARK TYPOGRAPHY ===== */
+  .text-on-dark-heading {
+    color: #ffffff;
+  }
+
+  .text-on-dark-body {
+    color: #e2f5f8;
+  }
+
+  .text-on-dark-muted {
+    color: rgba(226, 245, 248, 0.8);
+  }
+
   /* ===== SECTION SPACING ===== */
   .section-padding {
     @apply py-[60px] md:py-[80px] lg:py-[100px] px-6 md:px-12;

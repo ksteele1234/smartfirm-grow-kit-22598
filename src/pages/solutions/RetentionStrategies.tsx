@@ -115,8 +115,8 @@ const RetentionStrategies = () => {
         description: "Average client satisfaction rating"
       }
     ],
-    ctaTitle: "Implement Advanced Retention Strategies",
-    ctaDescription: "Transform your client relationships with our proven retention automation and satisfaction monitoring systems.",
+    ctaTitle: "Still have questions about keeping clients longer?",
+    ctaDescription: "We’ll show you how proactive communication, satisfaction tracking, and upsell journeys come together to lift lifetime value. Book a call to see how we can build your retention playbook.",
     faqs: solutionFaqs
   };
 

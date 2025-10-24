@@ -84,7 +84,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
+      <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue text-on-dark-body">
         <nav id="sf-breadcrumbs" aria-label="Breadcrumb" className="absolute top-6 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb>
@@ -107,11 +107,11 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
         </nav>
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#647FBC] mb-6 drop-shadow-lg">
+          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-on-dark-heading mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl font-sans text-[#333333] mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
+            <p className="text-xl font-sans text-on-dark-body mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
               {data.heroSubtitle}
             </p>
           </div>
@@ -399,44 +399,18 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         </script>
       </section>
 
-      {/* Still Have Questions CTA */}
-      <section className="py-16 bg-white">
+      {/* Combined CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-[720px] mx-auto text-center space-y-6">
-          <h3 className="text-2xl md:text-3xl font-heading font-semibold text-[#4D869C] leading-tight">
-            Still have questions?
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#647FBC] leading-tight">
+            {data.ctaTitle}
+          </h2>
           <p className="text-base md:text-lg font-sans text-[#333333] leading-[1.6]">
-            Our team is happy to walk you through the process, show live examples, or map out a custom plan for your firm.
+            {data.ctaDescription}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="coral" size="lg" asChild>
-              <a href="/get-started?chat=true">Start a Live Chat</a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="/contact">Contact our team</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section 
-        className="relative text-white overflow-hidden bg-gradient-deep-teal section-padding"
-      >
-        <div className="max-w-[800px] mx-auto text-center relative space-y-6 md:space-y-8">
-          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">{data.ctaTitle}</h2>
-          <p className="text-base md:text-xl text-white/90 leading-relaxed max-w-[65ch] mx-auto">{data.ctaDescription}</p>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-            <Button size="lg" variant="coral" className="group w-full sm:w-auto px-10" asChild>
-              <a href="/get-started" aria-label="Book your strategy call now">
-                Book Your Strategy Call
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-              </a>
-            </Button>
-            <a href="/case-studies" className="text-white hover:text-white/80 underline underline-offset-4 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary rounded">
-              View Case Studies
-            </a>
-          </div>
+          <Button size="lg" variant="coral" className="px-10" asChild>
+            <a href="/get-started">Book Your Strategy Call</a>
+          </Button>
         </div>
       </section>
 

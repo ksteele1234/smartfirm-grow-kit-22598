@@ -115,8 +115,8 @@ const ProtectPractice = () => {
         description: "Prevent costly breaches and compliance violations"
       }
     ],
-    ctaTitle: "Secure Your Practice Today",
-    ctaDescription: "Don't wait for a threat to materialize. Protect your practice and future-proof your business now. Book a security consultation.",
+    ctaTitle: "Still have questions about protecting your practice and future?",
+    ctaDescription: "We’ll walk you through the security, continuity, and compliance safeguards top firms rely on. Book a call and we’ll map the protection plan for your firm.",
     faqs: solutionFaqs
   };
 

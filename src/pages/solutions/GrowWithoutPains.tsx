@@ -115,8 +115,8 @@ const GrowWithoutPains = () => {
         description: "Reduce growing pains and overwhelm"
       }
     ],
-    ctaTitle: "Scale Your Firm the Smart Way",
-    ctaDescription: "Grow your practice without the typical chaos and stress. Book a call to see how we can build your growth infrastructure.",
+    ctaTitle: "Still have questions about scaling without growing pains?",
+    ctaDescription: "We can map the systems, dashboards, and delegation paths that keep growth predictable. Book a call to see how we can build your firm’s growth infrastructure.",
     faqs: solutionFaqs
   };
 

@@ -115,8 +115,8 @@ const ScaleFirm = () => {
         description: "Client satisfaction maintained during scaling"
       }
     ],
-    ctaTitle: "Ready to Scale Your Firm Systematically?",
-    ctaDescription: "Let's discuss how to build the systems and processes that will enable sustainable growth for your accounting practice.",
+    ctaTitle: "Still have questions about scaling your firm sustainably?",
+    ctaDescription: "We’ll walk you through the operating rhythms, delegation plans, and capacity modeling that make growth repeatable. Book a call to see how we can architect your scaling roadmap.",
     faqs: solutionFaqs
   };
 
