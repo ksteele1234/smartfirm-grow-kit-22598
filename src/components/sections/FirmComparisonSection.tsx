@@ -39,7 +39,7 @@ const FirmComparisonSection = () => {
           <div className="text-sm font-semibold text-[#0F4C5C] uppercase tracking-wider mb-3">
             The $1M Question
           </div>
-          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#0a2e2e] leading-tight max-w-[900px] mx-auto mb-6 font-heading">
+          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#647FBC] leading-tight max-w-[900px] mx-auto mb-6 font-heading">
             What Separates Firms Stuck at $400K from Those Scaling to $1M?
           </h2>
           <p className="text-[18px] lg:text-[20px] text-[#475569] leading-relaxed max-w-[700px] mx-auto mb-16">
@@ -91,7 +91,7 @@ const FirmComparisonSection = () => {
               
               <div className="flex items-start gap-3 mb-6">
                 <TrendingUp className="w-10 h-10 flex-shrink-0 text-[#14b8a6] mt-1" />
-                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#0a2e2e] text-left">
+                <h3 className="text-[24px] lg:text-[28px] font-bold text-[#647FBC] text-left">
                   Firms Scaling to $1M+
                 </h3>
               </div>

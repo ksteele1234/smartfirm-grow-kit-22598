@@ -79,7 +79,7 @@ All colors MUST be HSL converted from the official brand colors.
     --light-slate: 210 40% 98%; /* #f8fafc */
 
     /* Text Colors */
-    --text-dark: 215 25% 27%; /* slate-900 equivalent */
+    --text-dark: 0 0% 20%; /* #333333 */
     --text-light: 0 0% 100%; /* white */
     --text-muted: 215 16% 47%; /* slate-600 */
 
@@ -223,15 +223,19 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl text-foreground;
+    @apply text-4xl lg:text-5xl text-[#647FBC];
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl text-foreground;
+    @apply text-3xl lg:text-4xl text-[#647FBC];
   }
 
   h3 {
-    @apply text-xl lg:text-2xl font-medium;
+    @apply text-xl lg:text-2xl font-medium text-[#4D869C];
+  }
+
+  h4, h5, h6 {
+    color: #4D869C;
   }
 
   p {
@@ -306,6 +310,19 @@ All colors MUST be HSL converted from the official brand colors.
 
   .bg-gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+  }
+
+  /* ===== ON-DARK TYPOGRAPHY ===== */
+  .text-on-dark-heading {
+    color: #ffffff;
+  }
+
+  .text-on-dark-body {
+    color: #e2f5f8;
+  }
+
+  .text-on-dark-muted {
+    color: rgba(226, 245, 248, 0.8);
   }
 
   /* ===== SECTION SPACING ===== */

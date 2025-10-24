@@ -26,7 +26,7 @@ const GrowthAddOnsCard = () => {
       </h3>
 
       {/* Description */}
-      <p className="text-base text-[#1e293b] text-center leading-[1.6] mb-6">
+      <p className="text-base text-[#333333] text-center leading-[1.6] mb-6">
         Already have your marketing foundation in place? Add ongoing content creation, social media management, paid advertising, or custom solutions tailored to your firm's growth goals.
       </p>
 

@@ -115,8 +115,8 @@ const StopLosingClients = () => {
         description: "Get found when prospects search for CPAs"
       }
     ],
-    ctaTitle: "Don't Let Tech-Savvy CPAs Win Your Clients",
-    ctaDescription: "Get the modern CPA marketing automation and systems that keeps you competitive. Book a strategy call to see how we can transform your practice with proven digital marketing for CPAs.",
+    ctaTitle: "Still have questions about keeping prospects from choosing tech-savvy competitors?",
+    ctaDescription: "We’ll show you how to modernize your digital presence, automate follow-up, and deliver the experience today’s clients expect. Book a call to see how we can future-proof your marketing engine.",
     faqs: solutionFaqs
   };
 

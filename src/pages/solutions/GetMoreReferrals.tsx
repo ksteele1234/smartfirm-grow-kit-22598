@@ -115,8 +115,8 @@ const GetMoreReferrals = () => {
         description: "Attract higher-value clients through referrals"
       }
     ],
-    ctaTitle: "Start Getting More Referrals Automatically",
-    ctaDescription: "Stop hoping for referrals and start generating them systematically. Book a call to see how we can build your referral engine.",
+    ctaTitle: "Still have questions about how to get started getting more referrals automatically?",
+    ctaDescription: "Our team is happy to walk you through the process so you can stop hoping for referrals and start generating them systematically. Book a call to see how we can build your referral engine.",
     faqs: solutionFaqs
   };
 

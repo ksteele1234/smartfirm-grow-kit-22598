@@ -123,11 +123,11 @@ const FAQ = () => {
             <div className="max-w-[800px] mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-16">
-                  <h2 className="text-3xl font-bold text-[#0a2e2e] mb-4">
+                  <h2 className="text-3xl font-bold text-[#647FBC] mb-4">
                     {category.category}
                   </h2>
                   {category.info && (
-                    <p className="text-sm text-[#334155] mb-6">
+                    <p className="text-sm text-[#333333] mb-6">
                       Page:{" "}
                       <a
                         href={category.info}
@@ -173,7 +173,7 @@ const FAQ = () => {
                   <div className="px-6 pb-6">
                     <FaqAnswer
                       text={faq.answer}
-                      paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                      paragraphClassName="text-base text-[#333333] leading-[1.7]"
                     />
                   </div>
                           </div>
@@ -186,11 +186,11 @@ const FAQ = () => {
 
               {filteredFAQs.length === 0 && searchTerm && (
                 <div className="text-center py-16">
-                  <MessageSquare className="h-16 w-16 text-[#334155] mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-[#0a2e2e] mb-2">
+                  <MessageSquare className="h-16 w-16 text-[#333333] mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-[#647FBC] mb-2">
                     No matching questions found
                   </h3>
-                  <p className="text-[#334155] mb-6">
+                  <p className="text-[#333333] mb-6">
                     Try adjusting your search terms or browse the categories above.
                   </p>
                   <Button
@@ -209,10 +209,10 @@ const FAQ = () => {
         <section className="py-20 md:py-28 bg-[#f8fafc]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-8">
                 Still Have Questions?
               </h2>
-              <p className="text-lg text-[#334155] mb-10 leading-relaxed">
+              <p className="text-lg text-[#333333] mb-10 leading-relaxed">
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
               
@@ -222,7 +222,7 @@ const FAQ = () => {
                     <MessageSquare className="h-6 w-6 text-[#14b8a6]" />
                   </div>
                   <h3 className="text-lg font-semibold text-[#243b55] mb-2">Live Chat</h3>
-                  <p className="text-sm text-[#334155] mb-4">
+                  <p className="text-sm text-[#333333] mb-4">
                     Chat with our experts in real-time
                   </p>
                   <Button variant="outline" className="w-full">
@@ -235,7 +235,7 @@ const FAQ = () => {
                     <Phone className="h-6 w-6 text-[#14b8a6]" />
                   </div>
                   <h3 className="text-lg font-semibold text-[#243b55] mb-2">Phone Support</h3>
-                  <p className="text-sm text-[#334155] mb-4">
+                  <p className="text-sm text-[#333333] mb-4">
                     Speak directly with our team
                   </p>
                   <Button variant="outline" className="w-full" asChild>
@@ -248,7 +248,7 @@ const FAQ = () => {
                     <Mail className="h-6 w-6 text-[#14b8a6]" />
                   </div>
                   <h3 className="text-lg font-semibold text-[#243b55] mb-2">Email Support</h3>
-                  <p className="text-sm text-[#334155] mb-4">
+                  <p className="text-sm text-[#333333] mb-4">
                     Get detailed answers via email
                   </p>
                   <Button variant="outline" className="w-full" asChild>

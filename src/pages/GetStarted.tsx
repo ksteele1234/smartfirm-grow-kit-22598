@@ -406,7 +406,7 @@ const GetStarted = () => {
       <section id="sf-faqs" className="py-[100px] md:py-[80px] bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
+            <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
               Common Questions About Getting Started
             </h2>
           </div>
@@ -454,7 +454,7 @@ const GetStarted = () => {
                     <div className="px-6 pb-6">
                       <FaqAnswer
                         text={faq.answer}
-                        paragraphClassName="text-base text-[#1e293b] leading-[1.7]"
+                        paragraphClassName="text-base text-[#333333] leading-[1.7]"
                       />
                     </div>
                   </div>

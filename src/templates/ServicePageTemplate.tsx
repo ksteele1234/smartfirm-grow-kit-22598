@@ -448,7 +448,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-4 leading-tight"
+              className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-4 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Key Benefits
@@ -458,7 +458,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
-              className="text-base md:text-lg text-[#334155] max-w-3xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-[#333333] max-w-3xl mx-auto leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Discover how this service transforms your accounting firm
@@ -507,7 +507,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-4 leading-tight"
+              className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-4 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Features & Capabilities
@@ -538,7 +538,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                         {feature.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start gap-2">
                             <CheckCircle className="h-4 w-4 text-[#14b8a6] mt-1 flex-shrink-0" />
-                            <span className="text-sm text-[#334155]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{detail}</span>
+                            <span className="text-sm text-[#333333]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -568,7 +568,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-bold text-[#0a2e2e] mb-8 text-center leading-tight"
+            className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-8 text-center leading-tight"
             style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             Frequently Asked Questions
@@ -576,7 +576,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <div className="space-y-6">
             {faqGroups.map(({ category, items }, groupIndex) => (
               <div key={category} className="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
-                <h3 className="text-lg font-semibold text-[#0a2e2e] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <h3 className="text-lg font-semibold text-[#647FBC] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {category}
                 </h3>
                 <div className="space-y-3">
@@ -604,17 +604,17 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                           }
                         }}
                       >
-                        <summary className="cursor-pointer list-none text-base font-semibold text-[#0a2e2e] flex items-center justify-between gap-4">
+                        <summary className="cursor-pointer list-none text-base font-semibold text-[#647FBC] flex items-center justify-between gap-4">
                           <span>{faq.question}</span>
                           <ArrowRight className="h-4 w-4 text-[#14b8a6] transition-transform group-open:rotate-90" aria-hidden="true" />
                         </summary>
                         <div
-                          className="text-[#334155] mt-3 leading-relaxed space-y-3"
+                          className="text-[#333333] mt-3 leading-relaxed space-y-3"
                           style={{ fontFamily: "'DM Sans', sans-serif" }}
                         >
                           <FaqAnswer
                             text={faq.answer}
-                            paragraphClassName="text-[#334155] leading-relaxed"
+                            paragraphClassName="text-[#333333] leading-relaxed"
                           />
                         </div>
                       </motion.details>

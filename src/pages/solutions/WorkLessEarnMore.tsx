@@ -119,8 +119,8 @@ const WorkLessEarnMore = () => {
         description: "Command higher fees with better positioning"
       }
     ],
-    ctaTitle: "Start Working Less While Earning More",
-    ctaDescription: "Transform your practice into an efficient, profitable business. Book a strategy call to see how we can optimize your operations.",
+    ctaTitle: "Still have questions about working less while earning more?",
+    ctaDescription: "Our team can show you how to streamline delivery, repackage pricing, and reclaim partner time. Book a call to see how we can design your efficiency playbook.",
     faqs: solutionFaqs
   };
 

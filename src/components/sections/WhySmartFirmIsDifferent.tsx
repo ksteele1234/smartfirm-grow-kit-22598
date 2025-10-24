@@ -63,7 +63,7 @@ const WhySmartFirmIsDifferent = () => {
           variants={fadeInUpVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#0a2e2e] mb-4">
+          <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
             Why SmartFirm is Different
           </h2>
           <p className="text-xl text-[#475569] max-w-[700px] mx-auto">
@@ -98,7 +98,7 @@ const WhySmartFirmIsDifferent = () => {
                 </h3>
                 
                 {/* Description */}
-                <p className="text-base text-[#1e293b] leading-relaxed mb-4">
+                <p className="text-base text-[#333333] leading-relaxed mb-4">
                   {item.description}
                 </p>
                 

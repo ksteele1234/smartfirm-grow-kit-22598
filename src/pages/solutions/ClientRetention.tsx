@@ -114,8 +114,8 @@ const ClientRetention = () => {
         description: "Client satisfaction scores after implementing our strategies"
       }
     ],
-    ctaTitle: "Ready to Strengthen Client Relationships?",
-    ctaDescription: "Discover how to turn your existing clients into your most valuable business asset with proven retention strategies.",
+    ctaTitle: "Still have questions about AI-powered client retention?",
+    ctaDescription: "We’ll unpack the analytics, playbooks, and automations that keep your best clients engaged before they drift. Book a call to see how we can activate an intelligent retention program for your firm.",
     faqs: solutionFaqs
   };
 

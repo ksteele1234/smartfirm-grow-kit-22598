@@ -21,6 +21,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
         articleHeadline={data.title}
         datePublished={data.publishDate || new Date().toISOString()}
         pageImage={data.clientLogo || '/assets/og-default.webp'}
+        author={data.testimonial.author}
       />
       <Header />
       <main id="main-content" role="main">
