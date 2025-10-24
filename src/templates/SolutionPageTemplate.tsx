@@ -83,7 +83,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative pt-36 pb-36 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
+      <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
         <nav id="sf-breadcrumbs" aria-label="Breadcrumb" className="absolute top-6 left-0 right-0 z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Breadcrumb>
@@ -131,7 +131,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="section-padding relative bg-white -mt-6">
+      <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
         <div className="max-w-[1200px] mx-auto">
           <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
             <div
@@ -234,7 +234,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </article>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center gap-4 text-center">
+        <div className="mt-7 flex flex-col items-center gap-3 text-center">
           <Button variant="coral" size="lg" asChild>
             <a href="/get-started">Book Your Strategy Call</a>
           </Button>
@@ -244,7 +244,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           >
             See how firms apply this ?
           </a>
-          <p className="text-xs text-[#64748b] max-w-[640px]">
+          <p className="text-xs text-[#64748b] max-w-[640px] mt-1">
             These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our service playbooks</a>.
           </p>
         </div>
@@ -264,14 +264,14 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="section-padding bg-gradient-to-br from-[#0f766e] via-[#14b8a6] to-[#5eead4] relative overflow-hidden">
+      <section className="section-padding bg-gradient-to-br from-[#0b5258] via-[#0f766e] to-[#0b9786] relative overflow-hidden pt-[40px] md:pt-[52px]">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
               Key Benefits
             </h2>
             <p className="text-base md:text-lg text-white/80 max-w-[65ch] mx-auto">
-              See how our solution transforms your practice<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
+              See how our solution transforms your practice with more clarity, capacity, and consistency.
             </p>
           </div>
           
@@ -346,45 +346,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="section-padding bg-white">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] leading-tight">
-              Proven Results
-            </h2>
-            <p className="text-base md:text-lg text-[#334155] max-w-[65ch] mx-auto">
-              Real outcomes from real clients<sup className="text-xs"><a href="#proof-methodology" className="text-primary hover:underline">1</a></sup>
-            </p>
-          </div>
-          {/* Dynamic grid based on number of results */}
-          <div className={`grid gap-6 ${data.results.length === 3 ? 'md:grid-cols-1 lg:grid-cols-3' : 'md:grid-cols-2 lg:grid-cols-4'}`}>
-            {data.results.map((result, index) => (
-              <StandardCard
-                key={index}
-                title={result.metric}
-                description={result.description}
-                variant="default"
-                className="text-center bg-background space-y-4 md:space-y-6"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-4 md:mb-6">
-                  {result.value}
-                </div>
-              </StandardCard>
-            ))}
-          </div>
-          
-          {/* Proof Methodology */}
-          <div id="proof-methodology" className="mt-10 md:mt-16 p-4 md:p-6 bg-background border border-border rounded-lg">
-            <p className="text-sm text-text-secondary leading-relaxed">
-              <sup>1</sup> Results based on aggregated client data from firms implementing our solutions over a 12-month period. Individual results may vary based on firm size, market conditions, and implementation quality.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-white">
+      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#0ea5e9] via-[#38bdf8] to-[#bae6fd]">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
@@ -416,6 +379,26 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             }))
           })}
         </script>
+      </section>
+
+      {/* Still Have Questions CTA */}
+      <section className="py-16 bg-white">
+        <div className="max-w-[720px] mx-auto text-center space-y-6">
+          <h3 className="text-2xl md:text-3xl font-heading font-semibold text-[#0a2e2e] leading-tight">
+            Still have questions?
+          </h3>
+          <p className="text-base md:text-lg text-[#334155] leading-relaxed">
+            Our team is happy to walk you through the process, show live examples, or map out a custom plan for your firm.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button variant="coral" size="lg" asChild>
+              <a href="/get-started?chat=true">Start a Live Chat</a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="/contact">Contact our team</a>
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* Final CTA Section */}

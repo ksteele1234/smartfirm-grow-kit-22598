@@ -80,22 +80,26 @@ const WorkLessEarnMore = () => {
       {
         step: 1,
         title: "Efficiency Audit",
-        description: "Analyze your current workflows to identify time-wasting activities and automation opportunities."
+        description: "Analyze your current workflows to identify time-wasting activities and automation opportunities.",
+        subheading: "Audit"
       },
       {
         step: 2,
         title: "Implement Automation",
-        description: "Deploy systems that handle routine tasks automatically, freeing up your valuable time."
+        description: "Deploy systems that handle routine tasks automatically, freeing up your valuable time.",
+        subheading: "Implement"
       },
       {
         step: 3,
         title: "Optimize Pricing Strategy",
-        description: "Restructure your services and pricing to maximize profitability and attract premium clients."
+        description: "Restructure your services and pricing to maximize profitability and attract premium clients.",
+        subheading: "Automate"
       },
       {
         step: 4,
         title: "Scale Efficiently",
-        description: "Build systems that allow growth without proportional increases in time investment."
+        description: "Build systems that allow growth without proportional increases in time investment.",
+        subheading: "Optimize"
       }
     ],
     results: [
