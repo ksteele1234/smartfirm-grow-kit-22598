@@ -71,6 +71,11 @@ const GrowWithoutPains = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Team members hit capacity surprises because staffing forecasts live in spreadsheets.",
+      "Quality slips get noticed after busy season when rework is already expensive.",
+      "Managers spend nights reshuffling tasks to cover last-minute surges."
+    ],
     howItWorks: [
       {
         step: 1,

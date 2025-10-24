@@ -70,6 +70,11 @@ const ClientRetention = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Top clients churn without warning because early risk signals go unnoticed.",
+      "Account managers guess at the next best touchpoint instead of following data.",
+      "Leadership can’t see retention KPIs in one place, so decisions lag behind reality."
+    ],
     howItWorks: [
       {
         step: 1,

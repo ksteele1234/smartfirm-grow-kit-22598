@@ -71,6 +71,11 @@ const ProtectPractice = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Sensitive client files still live on desktop hard drives without MFA or logging.",
+      "Succession documents exist, but no one has updated them since the last partner retreat.",
+      "Regulatory updates catch the team off guard because monitoring is piecemeal."
+    ],
     howItWorks: [
       {
         step: 1,

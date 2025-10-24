@@ -71,6 +71,11 @@ const ScaleFirm = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "The firm owner still signs off on every proposal and workflow before work starts.",
+      "Delivery hinges on a few rockstar seniors; if they take PTO, projects stall.",
+      "Growth pauses every tax season because hiring and onboarding can’t keep pace."
+    ],
     howItWorks: [
       {
         step: 1,

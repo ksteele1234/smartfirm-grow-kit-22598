@@ -35,6 +35,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
   const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
   const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultSolutionFaqs;
+  const defaultHearingSignals = [
+    "Leads wait 24+ hours before they hear back from the firm.",
+    "Partners juggle intake manually, so nothing feels consistent.",
+    "Marketing activity spikes only when the pipeline starts drying up."
+  ];
+  const hearingSignals = data.hearingSignals?.length ? data.hearingSignals : defaultHearingSignals;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -154,11 +160,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm">
                 <p className="text-sm font-semibold text-slate-700 tracking-wide uppercase">What we keep hearing</p>
                 <ul className="mt-4 space-y-3 text-sm text-[#1f2937] leading-relaxed">
-                  {[
-                    "Leads wait 24+ hours before they hear back from the firm.",
-                    "Partners juggle intake manually, so nothing feels consistent.",
-                    "Marketing activity spikes only when the pipeline starts drying up."
-                  ].map((signal) => (
+                  {hearingSignals.map((signal) => (
                     <li key={signal} className="flex items-start gap-3">
                       <XCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#fb7185]" aria-hidden="true" />
                       <span>{signal}</span>
@@ -229,22 +231,22 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </ul>
                 </div>
               ) : null}
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
-                <Button variant="coral" size="lg" asChild>
-                  <a href="/get-started">Book Your Strategy Call</a>
-                </Button>
-                <a
-                  href="/case-studies"
-                  className="text-sm font-medium text-[#0f766e] hover:text-[#115e59] transition-colors"
-                >
-                  See how firms apply this ?
-                </a>
-              </div>
-              <p className="mt-4 text-xs text-[#64748b]">
-                These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our service playbooks</a>.
-              </p>
             </article>
           </div>
+        </div>
+        <div className="mt-12 flex flex-col items-center gap-4 text-center">
+          <Button variant="coral" size="lg" asChild>
+            <a href="/get-started">Book Your Strategy Call</a>
+          </Button>
+          <a
+            href="/case-studies"
+            className="text-sm font-medium text-[#0f766e] hover:text-[#115e59] transition-colors"
+          >
+            See how firms apply this ?
+          </a>
+          <p className="text-xs text-[#64748b] max-w-[640px]">
+            These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our service playbooks</a>.
+          </p>
         </div>
         <script id="sf-entity-jsonld" type="application/ld+json">
           {JSON.stringify({

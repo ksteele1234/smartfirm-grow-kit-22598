@@ -71,6 +71,11 @@ const RetentionStrategies = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Clients only hear from the firm at filing deadlines, so relationships feel transactional.",
+      "No one knows which accounts are at risk until a cancellation email arrives.",
+      "Expansion ideas surface, but there’s no documented follow-up to close them."
+    ],
     howItWorks: [
       {
         step: 1,
