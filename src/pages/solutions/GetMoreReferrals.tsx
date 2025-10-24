@@ -33,22 +33,42 @@ const GetMoreReferrals = () => {
       {
         title: "Turn Happy Clients into Advocates",
         description: "Automatically identify satisfied clients and convert them into active referral sources with proven systems.",
-        icon: "Users"
+        icon: "Users",
+        points: [
+          "Capture satisfaction scores after every engagement milestone.",
+          "Notify your team when promoters are ready for referral asks.",
+          "Reward advocates with value-add resources instead of discounts."
+        ]
       },
       {
         title: "Get Found by People Looking for CPAs",
         description: "Dominate local search and online directories so referrals can easily find and recommend you.",
-        icon: "Search"
+        icon: "Search",
+        points: [
+          "Optimize Google Business Profile and niche directories monthly.",
+          "Publish referral-friendly landing pages tailored to industries.",
+          "Track discovery sources so you know which partners drive traffic."
+        ]
       },
       {
         title: "Build Trust Before You Meet",
         description: "Create educational content, testimonials, and case studies that make referrals easy to give.",
-        icon: "Shield"
+        icon: "Shield",
+        points: [
+          "Package client wins into shareable one-pagers and videos.",
+          "Automate testimonial requests after great outcomes.",
+          "Deliver educational drip sequences that warm up introductions."
+        ]
       },
       {
         title: "Stay Top-of-Mind Year-Round",
         description: "Automated newsletters, tax tips, and seasonal reminders keep you memorable to referral sources.",
-        icon: "Calendar"
+        icon: "Calendar",
+        points: [
+          "Send segmented newsletters based on client interests.",
+          "Schedule quarterly appreciation touchpoints for partners.",
+          "Surface timely tax updates that spark referral conversations."
+        ]
       }
     ],
     howItWorks: [

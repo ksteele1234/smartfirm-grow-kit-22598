@@ -33,22 +33,42 @@ const StopLosingClients = () => {
       {
         title: "Get Found Online When Clients Search",
         description: "Dominate local search results and convert website visitors into paying clients with proven SEO for CPAs and conversion optimization designed for CPA firms.",
-        icon: "Search"
+        icon: "Search",
+        points: [
+          "Optimize location pages and service keywords around intent-rich searches.",
+          "Publish authoritative content that answers prospect questions.",
+          "Track rankings and conversions so improvements are transparent."
+        ]
       },
       {
         title: "Look Professional with Modern Systems",
         description: "Impress clients with professional client portals, automated communications, and modern CPA websites that showcase your expertise.",
-        icon: "Star"
+        icon: "Star",
+        points: [
+          "Launch responsive site templates tailored to accounting prospects.",
+          "Embed secure portals for document exchange and project updates.",
+          "Automate branded nurture sequences that welcome new clients."
+        ]
       },
       {
         title: "Respond Faster Than Competition",
         description: "Never miss a lead with instant chat, automated scheduling, and mobile access to everything through our CPA marketing automation tools.",
-        icon: "Zap"
+        icon: "Zap",
+        points: [
+          "Instantly route leads to SMS, email, and CRM workflows.",
+          "Offer self-serve booking for consultations and follow-up calls.",
+          "Alert your team in real time when high-value prospects engage."
+        ]
       },
       {
         title: "Automate What Others Do Manually",
         description: "Set up automated follow-ups, social media marketing for CPAs, reviews, and lead tracking that works 24/7 without your involvement.",
-        icon: "Settings"
+        icon: "Settings",
+        points: [
+          "Pre-build drip campaigns tied to tax cycles and service timelines.",
+          "Schedule social and email content from one dashboard.",
+          "Consolidate reporting so you can see attribution by channel."
+        ]
       }
     ],
     howItWorks: [

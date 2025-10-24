@@ -202,37 +202,6 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   ))}
                 </div>
               ) : null}
-              {data.results?.length ? (
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {data.results.slice(0, 4).map((result, index) => {
-                    const metricContext: Record<string, string> = {
-                      "Client Retention Rate": "within 6 months of launch",
-                      "Faster Response Time": "after automating follow-up flows",
-                      "More Online Visibility": "from unified local + organic campaigns",
-                      "Pipeline velocity": "with conversion tracking in place"
-                    };
-                    const contextLabel = metricContext[result.metric] ?? "pulled from recent SmartFirm engagement notes";
-
-                    return (
-                      <div
-                        key={`${result.metric}-${index}`}
-                        className="rounded-2xl bg-white shadow-lg shadow-teal-100/40 border border-white/60 px-5 py-6"
-                      >
-                        <div className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">
-                          {result.metric}
-                        </div>
-                        <div className="mt-3 flex flex-col gap-1">
-                          <span className="text-3xl font-bold text-[#fb7185] leading-none">{result.value}</span>
-                          <span className="text-sm text-[#475569]">{contextLabel}</span>
-                        </div>
-                        <p className="mt-3 text-sm text-[#475569] leading-relaxed">
-                          {result.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : null}
               {data.problemSolutionPairs?.length ? (
                 <div className="mt-8 rounded-2xl border border-white/60 bg-white/70 px-6 py-6 shadow-sm">
                   <p className="text-sm font-semibold uppercase tracking-wide text-[#0f766e]">What we hear after the systems go live</p>
@@ -290,8 +259,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             "description": data.solutionOverview
           })}
         </script>
-      </section>      {/* Key Benefits Section */}
-      <section className="section-padding bg-gradient-to-br from-[#243b55] to-[#4a7ba7] relative overflow-hidden">
+      </section>
+
+      {/* Key Benefits Section */}
+      <section className="section-padding bg-gradient-to-br from-[#0f766e] via-[#14b8a6] to-[#5eead4] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
@@ -308,15 +279,26 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               const icons = [TrendingUp, Shield, Zap, Users, BarChart, Clock];
               const IconComponent = icons[index % icons.length];
               return (
-              <StandardCard
-                key={index}
-                icon={IconComponent}
-                title={benefit.title}
-                description={benefit.description}
-                variant="default"
-                className="bg-background space-y-6"
-              />
-            );
+                <StandardCard
+                  key={index}
+                  icon={IconComponent}
+                  title={benefit.title}
+                  description={benefit.description}
+                  variant="default"
+                  className="bg-white/95 backdrop-blur-sm space-y-6 border-white/60 text-left"
+                  titleClassName="text-[#1e40af] group-hover:text-[#0f172a]"
+                  iconClassName="text-[#0f766e]"
+                  descriptionClassName="text-left max-w-none"
+                >
+                  {benefit.points?.length ? (
+                    <ul className="text-sm text-[#1f2937] leading-relaxed space-y-2 list-disc pl-5">
+                      {benefit.points.map((point, bulletIndex) => (
+                        <li key={`benefit-${index}-bullet-${bulletIndex}`}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </StandardCard>
+              );
             })}
           </div>
         </div>

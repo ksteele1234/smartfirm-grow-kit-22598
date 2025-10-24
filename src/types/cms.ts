@@ -48,6 +48,7 @@ export interface SolutionPageData extends CMSPageData {
     title: string;
     description: string;
     icon?: string;
+    points?: string[];
   }>;
   howItWorks: Array<{
     step: number;

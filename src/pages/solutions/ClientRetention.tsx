@@ -32,22 +32,42 @@ const ClientRetention = () => {
       {
         title: "Reduced Client Churn",
         description: "Decrease client loss by 60% with proactive retention strategies",
-        icon: "Shield"
+        icon: "Shield",
+        points: [
+          "Predict churn risk using engagement and billing signals.",
+          "Initiate save plans with scripted outreach when risk rises.",
+          "Track interventions so the whole team sees next steps."
+        ]
       },
       {
         title: "Increased Client Value",
         description: "Existing clients become more valuable through additional services",
-        icon: "TrendingUp"
+        icon: "TrendingUp",
+        points: [
+          "Highlight advisory opportunities based on financial milestones.",
+          "Automate educational campaigns that tee up premium services.",
+          "Measure added revenue from expansion plays by client segment."
+        ]
       },
       {
         title: "Competitive Differentiation",
         description: "Stand out from competitors with superior client experience",
-        icon: "Star"
+        icon: "Star",
+        points: [
+          "Personalize messaging with AI-driven client profiles.",
+          "Showcase proactive insights in dashboards clients can access anytime.",
+          "Gather testimonials and case stories that prove your edge."
+        ]
       },
       {
         title: "Predictable Revenue",
         description: "Build reliable revenue streams from loyal, long-term clients",
-        icon: "BarChart"
+        icon: "BarChart",
+        points: [
+          "Forecast renewals and expansion revenue months in advance.",
+          "Automate billing follow-ups and payment reminders.",
+          "Give leadership visibility into retention KPIs in real time."
+        ]
       }
     ],
     howItWorks: [

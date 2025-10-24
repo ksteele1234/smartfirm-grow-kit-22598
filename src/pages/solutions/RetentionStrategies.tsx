@@ -33,22 +33,42 @@ const RetentionStrategies = () => {
       {
         title: "Automated Client Communication",
         description: "Stay top-of-mind with scheduled touchpoints and value-added content",
-        icon: "MessageCircle"
+        icon: "MessageCircle",
+        points: [
+          "Map tailored cadences for tax, advisory, and bookkeeping clients.",
+          "Deliver reminders and insights automatically around key deadlines.",
+          "Log every interaction so your team sees the full communication history."
+        ]
       },
       {
         title: "Proactive Service Delivery",
         description: "Anticipate client needs and deliver value before they ask",
-        icon: "Zap"
+        icon: "Zap",
+        points: [
+          "Use data signals to surface upsell and planning opportunities.",
+          "Schedule quarterly business reviews with ready-to-go agendas.",
+          "Launch campaigns around regulatory changes before clients ask."
+        ]
       },
       {
         title: "Revenue Expansion",
         description: "Identify and capture upselling opportunities automatically",
-        icon: "TrendingUp"
+        icon: "TrendingUp",
+        points: [
+          "Detect service gaps via engagement scoring and billing analysis.",
+          "Send targeted offers based on client lifecycle moments.",
+          "Track close rates on cross-sell initiatives in a single dashboard."
+        ]
       },
       {
         title: "Client Satisfaction Monitoring",
         description: "Track satisfaction metrics and address issues before they become problems",
-        icon: "Heart"
+        icon: "Heart",
+        points: [
+          "Automate NPS and CSAT surveys after major deliverables.",
+          "Trigger service recovery workflows when scores dip.",
+          "Summarize sentiment trends for quarterly leadership reviews."
+        ]
       }
     ],
     howItWorks: [
