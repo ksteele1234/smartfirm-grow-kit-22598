@@ -13,13 +13,20 @@ interface ResourcePageTemplateProps {
 }
 
 const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
+  const isArticle = true;
+  const publishDate = data.publishDate || new Date().toISOString();
+  const authorName = data.author?.name;
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        pageType={data.category.toLowerCase().includes('blog') ? 'blog' : 'default'}
-        topic={data.category.toLowerCase().includes('blog') ? data.heroTitle : undefined}
+        pageType={isArticle ? 'blog' : 'default'}
+        topic={isArticle ? data.heroTitle : undefined}
         title={data.title}
         description={data.heroSubtitle || data.metaDescription}
+        datePublished={publishDate}
+        dateModified={publishDate}
+        author={authorName}
       />
       <Header />
       <main id="main-content" role="main">
