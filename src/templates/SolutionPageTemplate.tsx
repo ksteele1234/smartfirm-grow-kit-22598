@@ -4,7 +4,7 @@ import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { SolutionPageData } from "@/types/cms";
-import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight, CheckCircle, XCircle } from "lucide-react";
+import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight, CheckCircle, XCircle, Search, Settings, Sparkles, BarChart3 } from "lucide-react";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -41,6 +41,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
     "Marketing activity spikes only when the pipeline starts drying up."
   ];
   const hearingSignals = data.hearingSignals?.length ? data.hearingSignals : defaultHearingSignals;
+  const defaultHowItWorksSubheadings = ["Audit", "Implement", "Automate", "Optimize"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -291,6 +292,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   titleClassName="text-[#1e40af] group-hover:text-[#0f172a]"
                   iconClassName="text-[#0f766e]"
                   descriptionClassName="text-left max-w-none"
+                headerClassName="pb-3"
+                contentWrapperClassName="space-y-4 p-5 md:p-6 pt-0"
                 >
                   {benefit.points?.length ? (
                     <ul className="text-sm text-[#1f2937] leading-relaxed space-y-2 list-disc pl-5">
@@ -317,6 +320,20 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               Our proven process gets you results quickly
             </p>
           </div>
+          <div className="hidden md:flex items-center justify-between mb-12 relative">
+            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-to-r from-[#14b8a6] via-[#22d3ee] to-[#2dd4bf]" aria-hidden="true" />
+            {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone) => {
+              const IconComp = milestone.icon;
+              return (
+                <div key={milestone.label} className="flex flex-col items-center text-center relative z-10 flex-1">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#f0fdfa] text-[#0f766e] shadow-[0_8px_30px_rgba(20,184,166,0.25)]">
+                    <IconComp className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-[#0f766e]">{milestone.label}</span>
+                </div>
+              );
+            })}
+          </div>
           <ol className="relative mx-auto max-w-[700px] border-l border-slate-200 pl-6 md:pl-10 md:max-w-none">
             {data.howItWorks.map((step, index) => (
               <li key={step.step ?? index} className={`relative pb-10 md:pb-12 ${index === data.howItWorks.length - 1 ? "pb-0" : ""}`}>
@@ -324,7 +341,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   {String(step.step ?? index + 1).padStart(2, "0")}
                 </span>
                 <div className="ml-2 md:ml-4 rounded-2xl border border-slate-100 bg-white px-5 py-5 md:px-8 md:py-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
-                  <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">{step.subheading ?? defaultHowItWorksSubheadings[index] ?? `Step ${index + 1}`}</span>
+                  <div className="mt-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-xl md:text-2xl font-heading font-semibold text-[#0a2e2e] leading-tight">
                       {step.title}
                     </h3>
@@ -347,7 +365,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#0ea5e9] via-[#38bdf8] to-[#bae6fd]">
+      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#0b1f4d] via-[#163a6b] to-[#1f4e89]">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions

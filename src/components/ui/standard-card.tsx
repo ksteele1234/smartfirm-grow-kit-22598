@@ -11,6 +11,8 @@ interface StandardCardProps extends React.HTMLAttributes<HTMLDivElement> {
   titleClassName?: string;
   iconClassName?: string;
   descriptionClassName?: string;
+  headerClassName?: string;
+  contentWrapperClassName?: string;
   variant?: "default" | "popular" | "featured";
   children?: React.ReactNode;
   href?: string;
@@ -26,6 +28,8 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
     titleClassName,
     iconClassName,
     descriptionClassName,
+    headerClassName,
+    contentWrapperClassName,
     variant = "default",
     children,
     href,
@@ -55,18 +59,18 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
           </div>
         )}
         
-        <CardHeader className="text-center pb-6 p-5 md:p-6">
-        {Icon && (
-          <div className="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
-            <Icon className={cn("h-7 w-7 text-[#14b8a6]", iconClassName)} strokeWidth={1.5} />
-          </div>
-        )}
-        <CardTitle className={cn("text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-[#14b8a6] transition-colors leading-tight", titleClassName)}>
-          {title}
-        </CardTitle>
+        <CardHeader className={cn("text-center pb-6 p-5 md:p-6", headerClassName)}>
+          {Icon && (
+            <div className="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+              <Icon className={cn("h-7 w-7 text-[#14b8a6]", iconClassName)} strokeWidth={1.5} />
+            </div>
+          )}
+          <CardTitle className={cn("text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-[#14b8a6] transition-colors leading-tight", titleClassName)}>
+            {title}
+          </CardTitle>
         </CardHeader>
         
-        <CardContent className="space-y-6 p-5 md:p-6 pt-0">
+        <CardContent className={cn("space-y-6 p-5 md:p-6 pt-0", contentWrapperClassName)}>
           <CardDescription className={cn("text-base text-text-primary leading-relaxed text-center max-w-[65ch] mx-auto", descriptionClassName)}>
             {description}
           </CardDescription>
