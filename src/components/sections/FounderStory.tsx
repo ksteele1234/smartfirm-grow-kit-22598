@@ -24,7 +24,7 @@ const FounderStory = () => {
   ];
 
   return (
-    <section className="pt-4 pb-[50px] bg-transparent">
+    <section className="pt-4 pb-[10px] bg-transparent">
       <div className="container mx-auto px-6 max-w-[1100px]">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-16 md:gap-10">
           {/* LEFT COLUMN: Founder Story */}
