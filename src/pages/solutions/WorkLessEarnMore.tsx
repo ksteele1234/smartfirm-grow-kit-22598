@@ -71,6 +71,11 @@ const WorkLessEarnMore = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Partners still log 60+ hours a week because every file needs their review.",
+      "Clients balk at new pricing while scope creep continues unchecked.",
+      "Onboarding drags out for weeks because admin teams chase documents manually."
+    ],
     howItWorks: [
       {
         step: 1,

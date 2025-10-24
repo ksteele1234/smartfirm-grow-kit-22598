@@ -71,6 +71,11 @@ const StopLosingClients = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Prospects bounce when they land on an outdated website with broken calls-to-action.",
+      "Inbound leads wait days for a reply because intake depends on manual follow-up.",
+      "New clients get paper forms and email chains while competitors offer portals and apps."
+    ],
     howItWorks: [
       {
         step: 1,

@@ -71,6 +71,11 @@ const GetMoreReferrals = () => {
         ]
       }
     ],
+    hearingSignals: [
+      "Clients rave privately but rarely refer because there’s no structured ask.",
+      "Online reviews look dated, so prospects wonder if the firm is still active.",
+      "Referral mentions live in email threads, making it impossible to track follow-through."
+    ],
     howItWorks: [
       {
         step: 1,

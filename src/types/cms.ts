@@ -43,6 +43,7 @@ export interface SolutionPageData extends CMSPageData {
     problem: string;
     solution: string;
   }>;
+  hearingSignals?: string[];
   canonicalUrl?: string;
   keyBenefits: Array<{
     title: string;
