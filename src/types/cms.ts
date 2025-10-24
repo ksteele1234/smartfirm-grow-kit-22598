@@ -55,6 +55,7 @@ export interface SolutionPageData extends CMSPageData {
     step: number;
     title: string;
     description: string;
+    subheading?: string;
   }>;
   results: Array<{
     metric: string;
