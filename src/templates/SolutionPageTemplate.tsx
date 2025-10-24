@@ -265,7 +265,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="section-padding bg-gradient-to-br from-[#0b5258] via-[#0f766e] to-[#0b9786] relative overflow-hidden pt-[40px] md:pt-[52px]">
+      <section className="section-padding bg-gradient-deep-teal relative overflow-hidden pt-[40px] md:pt-[52px]">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-white leading-tight">
@@ -321,7 +321,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </p>
           </div>
           <div className="hidden md:flex items-center justify-between mb-12 relative">
-            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-to-r from-[#14b8a6] via-[#22d3ee] to-[#2dd4bf]" aria-hidden="true" />
+            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-to-r from-[#14b8a6] via-[#2dd4bf] to-[#5eead4]" aria-hidden="true" />
             {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone) => {
               const IconComp = milestone.icon;
               return (
@@ -365,7 +365,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-gradient-to-br from-[#0b1f4d] via-[#163a6b] to-[#1f4e89]">
+      <section id="sf-faqs" className="section-padding bg-gradient-muted-blue">
         <div className="max-w-[800px] mx-auto">
           <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#0a2e2e] mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
