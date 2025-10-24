@@ -30,7 +30,7 @@ const HowItWorksSection = () => {
       <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#0a2e2e] mb-6">
+          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#647FBC] mb-6">
             Your Path to Growth with 
             <span className="text-[#14b8a6] block">Marketing Automation for Accountants</span>
           </h2>

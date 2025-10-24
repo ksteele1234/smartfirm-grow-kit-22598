@@ -33,10 +33,10 @@ const WhatMakesUsDifferent = () => {
       <div className="container mx-auto px-6 max-w-[1200px]">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#0a2e2e] mb-4">
+          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">
             What Makes SmartFirm Different
           </h2>
-          <p className="text-[20px] sm:text-[18px] font-normal text-[#1e293b] leading-relaxed max-w-[700px] mx-auto">
+          <p className="text-[20px] sm:text-[18px] font-normal text-[#333333] leading-relaxed max-w-[700px] mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </div>
@@ -63,7 +63,7 @@ const WhatMakesUsDifferent = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-base font-normal text-[#1e293b] leading-relaxed flex-grow text-left">
+                <p className="text-base font-normal text-[#333333] leading-relaxed flex-grow text-left">
                   {pillar.description}
                 </p>
 
