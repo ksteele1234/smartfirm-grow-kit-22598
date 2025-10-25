@@ -48,7 +48,7 @@
 All colors MUST be HSL converted from the official brand colors.
 */
 
-@layer base {
+ @layer base {
   :root {
     /* ===== COLOR PRIMITIVES ===== */
     /* Deep Teal Gradient */
@@ -223,11 +223,11 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl text-[#647FBC];
+    @apply text-4xl lg:text-5xl text-[#134444];
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl text-[#647FBC];
+    @apply text-3xl lg:text-4xl text-[#4a7ba7];
   }
 
   h3 {
@@ -235,7 +235,7 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h4, h5, h6 {
-    color: #4D869C;
+    color: #4a7ba4;
   }
 
   p {
@@ -295,7 +295,7 @@ All colors MUST be HSL converted from the official brand colors.
   .bg-gradient-deep-teal {
     background: linear-gradient(135deg, hsl(var(--deep-teal-start)), hsl(var(--deep-teal-end)));
   }
-
+  
   .bg-gradient-muted-blue {
     background: linear-gradient(135deg, hsl(var(--muted-blue-start)), hsl(var(--muted-blue-end)));
   }

@@ -14,6 +14,7 @@ export interface ServicePageData extends CMSPageData {
   heroImage?: string;
   canonicalUrl?: string;
   benefits: Array<{
+    details: any;
     title: string;
     description: string;
     icon?: string;
