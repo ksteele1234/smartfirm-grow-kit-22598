@@ -190,7 +190,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       <main id="main-content" role="main">
       {/* Hero Section - Blue Gradient Background */}
       <section
-        className="hero-section relative pt-32 min-h-[600px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue"
+        className="hero-section relative pt-24 pb-32 min-h-[unset] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue"
       >
         <style>{heroStyles}</style>
         
@@ -215,7 +215,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </nav>
         
-        <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[500px] pt-8">
+        <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
           {/* Hero Content - Centered */}
           <div className="hero-content relative z-10 text-center max-w-[800px] px-4">
             <motion.h1 
@@ -397,9 +397,16 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             </div>
           </div>
         </div>
-      </section>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+  <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+  </svg>
+</div>
 
-      {/* Persistent Quick Actions for decision-makers */}
+      </section>
+ 
+
+     {/* Persistent Quick Actions for decision-makers
       <nav
         aria-label="Service quick actions"
         className="hidden xl:flex flex-col gap-3 fixed top-32 right-10 z-30 w-[260px]"
@@ -421,7 +428,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         ))}
       </nav>
 
-      {/* Mobile quick links */}
+      Mobile quick links 
       <div className="xl:hidden border-b border-border/60 bg-white/95 px-4 py-3 backdrop-blur-sm">
         <div className="flex gap-3 overflow-x-auto">
           {quickActions.map(({ label, href }) => (
@@ -434,23 +441,23 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             </a>
           ))}
         </div>
-      </div>
+      </div>*/}
 
       {/* Benefits Section - White Background */}
       <section
         id="sf-benefits"
-        className="section-padding bg-[#f8fafc] relative"
-      >
+        className="pt-[20px] md:pt-[40px] lg:pt-[20px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-[#f8fafc] relative px-6 md:px-12"
+>  
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-4 leading-tight"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
+            <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+            className="text-3xl md:text-4xl font-bold mb-4 leading-tight"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
               Key Benefits
             </motion.h2>
             <motion.p 
@@ -458,7 +465,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
-              className="text-base md:text-lg text-[#333333] max-w-3xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-[hsl(var(--text-dark))] max-w-3xl mx-auto leading-relaxed"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Discover how this service transforms your accounting firm
@@ -488,17 +495,30 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                     index === 1 ? "featured" : 
                     "default"
                   }
-                />
+                  >
+                {benefit.details && (
+                    <div className="mt-4">
+                      <ul className="space-y-2">
+                        {benefit.details.map((detail, detailIndex) => (
+                          <li key={detailIndex} className="flex items-start gap-2">
+                            <CheckCircle className="h-4 w-4 text-[#14b8a6] mt-1 flex-shrink-0" />
+                            <span className="text-sm text-[#333333]" style={{ fontFamily: "'DM Sans', sans-serif" }}>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  </StandardCard>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section - White Background */}
+      {/* Features Section - Teal Background */}
       <section
         id="sf-features"
-        className="section-padding bg-[#f0fdfa] relative"
+        className="pt-[20px] md:pt-[40px] lg:pt-[60px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-gradient-deep-teal relative px-6 md:px-12"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -507,13 +527,13 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-4 leading-tight"
+              className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Features & Capabilities
             </motion.h2>
           </div>
-          
+          {/* Features Grid */}
           <div className="grid lg:grid-cols-2 gap-8">
             {data.features.map((feature, index) => (
               <motion.div
@@ -552,7 +572,11 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       </section>
 
       {/* FAQs Section - White Background (Moved before Final CTA) */}
-      <section id="sf-faqs" className="section-padding bg-white">
+      <section 
+        id="sf-faqs"
+        className="pt-[40px] md:pt-[60px] lg:pt-[40px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12"
+>
+
         <div className="max-w-4xl mx-auto">
           {/* Decorative centered line */}
           <motion.div 

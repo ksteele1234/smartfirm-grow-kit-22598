@@ -268,10 +268,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       <section className="section-padding bg-gradient-deep-teal relative overflow-hidden pt-[40px] md:pt-[52px]">
         <div className="max-w-[1200px] mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#647FBC] leading-tight">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-on-dark-heading leading-tight">
               Key Benefits
             </h2>
-            <p className="text-base md:text-lg font-sans text-[#333333] max-w-[65ch] mx-auto leading-[1.6]">
+            <p className="text-base md:text-lg font-sans text-on-dark-body max-w-[65ch] mx-auto leading-[1.6]">
               See how our solution transforms your practice with more clarity, capacity, and consistency.
             </p>
           </div>
@@ -367,7 +367,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* FAQs Section */}
       <section id="sf-faqs" className="section-padding bg-gradient-muted-blue">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#647FBC] mb-10 md:mb-14 text-center leading-tight">
+          <h2 className="text-[28px] md:text-4xl font-heading font-bold text-on-dark-heading mb-10 md:mb-14 text-center leading-tight">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4 md:space-y-6">
