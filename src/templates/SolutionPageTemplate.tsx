@@ -144,40 +144,40 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <Shield className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
                 The Challenge
               </span>
-              <h2 className="mt-6 text-[26px] md:text-3xl font-heading font-bold text-[#647FBC] leading-tight">
+              <h2 className="mt-6 text-[26px] md:text-3xl font-heading font-bold leading-tight">
                 Why firms feel stuck
               </h2>
-              <p className="mt-4 text-base md:text-lg font-sans text-[#333333] leading-[1.6]">
+              <p className="mt-4 text-base md:text-lg font-sans text-foreground leading-[1.6]">
                 {data.problemStatement}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {["Capacity strain", "Manual follow-up", "Reactive marketing"].map(challenge => (
-                  <span key={challenge} className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-[#333333]">
-                    <XCircle className="h-3.5 w-3.5 text-[#fb7185]" aria-hidden="true" />
+                  <span key={challenge} className="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-foreground">
+                    <XCircle className="h-3.5 w-3.5 text-destructive" aria-hidden="true" />
                     {challenge}
                   </span>
                 ))}
               </div>
               <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm">
-                <p className="text-sm font-semibold text-[#4D869C] tracking-wide uppercase">What we keep hearing</p>
-                <ul className="mt-4 space-y-3 text-sm text-[#333333] leading-[1.6]">
+                <p className="text-sm font-semibold tracking-wide uppercase">What we keep hearing</p>
+                <ul className="mt-4 space-y-3 text-sm text-foreground leading-[1.6]">
                   {hearingSignals.map((signal) => (
                     <li key={signal} className="flex items-start gap-3">
-                      <XCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#fb7185]" aria-hidden="true" />
+                      <XCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-destructive" aria-hidden="true" />
                       <span>{signal}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="mt-4 text-xs text-[#6b7280]">Themes pulled from discovery calls with SmartFirm prospects in 2025.</p>
+                <p className="mt-4 text-xs text-muted-foreground">Themes pulled from discovery calls with SmartFirm prospects in 2025.</p>
               </div>
               {data.problemSolutionPairs?.length ? (
                 <div className="mt-8">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-[#4D869C]">Problems we hear every week</p>
-                  <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-[#333333]">
+                  <p className="text-sm font-semibold uppercase tracking-wide">Problems we hear every week</p>
+                  <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-foreground">
                     {data.problemSolutionPairs.map((pair, index) => (
                       <li key={`problem-${index}`} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 shadow-sm">
-                        <span className="block font-semibold text-[#4D869C]">Problem</span>
-                        <span className="mt-1 block text-[#333333]">{pair.problem}</span>
+                        <span className="block font-semibold">Problem</span>
+                        <span className="mt-1 block text-foreground">{pair.problem}</span>
                       </li>
                     ))}
                   </ul>
@@ -189,17 +189,17 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
                 Our Solution
               </span>
-              <h2 className="mt-6 text-[26px] md:text-3xl font-heading font-bold text-[#647FBC] leading-tight">
+              <h2 className="mt-6 text-[26px] md:text-3xl font-heading font-bold leading-tight">
                 How SmartFirm unlocks momentum
               </h2>
-              <p className="mt-4 text-base md:text-lg font-sans text-[#333333] leading-[1.6]">
+              <p className="mt-4 text-base md:text-lg font-sans text-foreground leading-[1.6]">
                 {data.solutionOverview}
               </p>
               {data.results?.length ? (
                 <div className="mt-6 flex flex-wrap gap-2">
                   {data.results.map(result => (
-                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-[#0f766e] shadow-sm border border-white/60">
-                      <CheckCircle className="h-3.5 w-3.5 text-[#14b8a6]" aria-hidden="true" />
+                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-primary shadow-sm border border-white/60">
+                      <CheckCircle className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                       {result.value}
                     </span>
                   ))}
@@ -207,26 +207,26 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               ) : null}
               {data.problemSolutionPairs?.length ? (
                 <div className="mt-8 rounded-2xl border border-white/60 bg-white/70 px-6 py-6 shadow-sm">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-[#4D869C]">What we hear after the systems go live</p>
-                  <ul className="mt-4 space-y-3 text-sm text-[#333333] leading-[1.6]">
+                  <p className="text-sm font-semibold uppercase tracking-wide">What we hear after the systems go live</p>
+                  <ul className="mt-4 space-y-3 text-sm text-foreground leading-[1.6]">
                     {data.problemSolutionPairs.map((pair, index) => (
                       <li key={`after-${index}`} className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#14b8a6]" aria-hidden="true" />
+                        <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" aria-hidden="true" />
                         <span>{pair.solution}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 text-xs text-[#0f766e]/70">Insights from post-implementation debriefs with SmartFirm client teams.</p>
+                  <p className="mt-4 text-xs text-primary/70">Insights from post-implementation debriefs with SmartFirm client teams.</p>
                 </div>
               ) : null}
               {data.problemSolutionPairs?.length ? (
                 <div className="mt-8">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-[#4D869C]">How we tackle each roadblock</p>
-                  <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-[#333333]">
+                  <p className="text-sm font-semibold uppercase tracking-wide">How we tackle each roadblock</p>
+                  <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-foreground">
                     {data.problemSolutionPairs.map((pair, index) => (
                       <li key={`solution-${index}`} className="rounded-xl border border-white/60 bg-white/70 px-4 py-4 shadow-sm">
-                        <span className="block font-semibold text-[#4D869C]">Solution</span>
-                        <span className="mt-1 block text-[#333333]">{pair.solution}</span>
+                        <span className="block font-semibold">Solution</span>
+                        <span className="mt-1 block text-foreground">{pair.solution}</span>
                       </li>
                     ))}
                   </ul>
@@ -241,12 +241,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </Button>
           <a
             href="/case-studies"
-            className="text-sm font-medium text-[#0f766e] hover:text-[#115e59] transition-colors"
+            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
           >
             See how firms apply this ?
           </a>
-          <p className="text-xs text-[#64748b] max-w-[640px] mt-1">
-            These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-[#0f766e]">our service playbooks</a>.
+          <p className="text-xs text-muted-foreground max-w-[640px] mt-1">
+            These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary">our service playbooks</a>.
           </p>
         </div>
         <script id="sf-entity-jsonld" type="application/ld+json">
@@ -289,14 +289,14 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   description={benefit.description}
                   variant="default"
                   className="bg-white/95 backdrop-blur-sm space-y-6 border-white/60 text-left"
-                  titleClassName="text-[#647FBC] group-hover:text-[#4D869C]"
-                  iconClassName="text-[#14b8a6]"
-                  descriptionClassName="text-left max-w-none text-[#333333] leading-[1.6]"
+                  titleClassName="group-hover:text-primary/80"
+                  iconClassName="text-primary"
+                  descriptionClassName="text-left max-w-none text-foreground leading-[1.6]"
                   headerClassName="pb-3"
                   contentWrapperClassName="space-y-4 p-5 md:p-6 pt-0"
                 >
                   {benefit.points?.length ? (
-                    <ul className="text-sm text-[#333333] leading-[1.6] space-y-2 list-disc pl-5">
+                    <ul className="text-sm text-foreground leading-[1.6] space-y-2 list-disc pl-5">
                       {benefit.points.map((point, bulletIndex) => (
                         <li key={`benefit-${index}-bullet-${bulletIndex}`}>{point}</li>
                       ))}
@@ -313,23 +313,23 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       <section className="section-padding bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
-            <h2 className="text-[28px] md:text-4xl font-heading font-bold text-[#647FBC] leading-tight">
+            <h2 className="text-[28px] md:text-4xl font-heading font-bold leading-tight">
               How It Works
             </h2>
-            <p className="text-base md:text-lg font-sans text-[#333333] max-w-[65ch] mx-auto leading-[1.6]">
+            <p className="text-base md:text-lg font-sans text-foreground max-w-[65ch] mx-auto leading-[1.6]">
               Our proven process gets you results quickly
             </p>
           </div>
           <div className="hidden md:flex items-center justify-between mb-12 relative">
-            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-to-r from-[#14b8a6] via-[#2dd4bf] to-[#5eead4]" aria-hidden="true" />
+            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-vibrant-teal" aria-hidden="true" />
             {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone) => {
               const IconComp = milestone.icon;
               return (
                 <div key={milestone.label} className="flex flex-col items-center text-center relative z-10 flex-1">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#f0fdfa] text-[#0f766e] shadow-[0_8px_30px_rgba(20,184,166,0.25)]">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/5 text-primary shadow-[0_8px_30px_rgba(20,184,166,0.25)]">
                     <IconComp className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-[#0f766e]">{milestone.label}</span>
+                  <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary">{milestone.label}</span>
                 </div>
               );
             })}
@@ -341,12 +341,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   {String(step.step ?? index + 1).padStart(2, "0")}
                 </span>
                 <div className="ml-2 md:ml-4 rounded-2xl border border-slate-100 bg-white px-5 py-5 md:px-8 md:py-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-[#0f766e]">{step.subheading ?? defaultHowItWorksSubheadings[index] ?? `Step ${index + 1}`}</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-primary">{step.subheading ?? defaultHowItWorksSubheadings[index] ?? `Step ${index + 1}`}</span>
                   <div className="mt-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                    <h3 className="text-xl md:text-2xl font-heading font-semibold text-[#4D869C] leading-tight">
+                    <h3 className="text-xl md:text-2xl font-heading font-semibold leading-tight">
                       {step.title}
                     </h3>
-                    <span className="inline-flex items-center gap-2 rounded-full bg-[#f0fdfa] px-3 py-1 text-xs font-medium uppercase tracking-wide text-[#0f766e]">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-3 py-1 text-xs font-medium uppercase tracking-wide text-primary">
                       <Clock className="h-3.5 w-3.5" aria-hidden="true" />
                       Milestone {index + 1}
                     </span>

@@ -113,7 +113,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group bg-white text-[#243b55] hover:bg-white/90">
+          <Button size="lg" variant="secondary" className="group">
             Get Industry-Specific Solutions
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -121,17 +121,17 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Industry Overview Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-6">
+            <h2 className="text-3xl font-heading font-bold mb-6">
               Industry Overview
             </h2>
-            <p className="text-lg font-sans text-[#333333] max-w-4xl mx-auto leading-[1.6]">
+            <p className="text-lg font-sans text-foreground max-w-4xl mx-auto leading-[1.6]">
               {data.industryOverview}
             </p>
-            <p className="mt-4 font-sans text-[#333333] text-center leading-[1.6]">
-              View <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-[#14b8a6] hover:text-[#2dd4bf] underline">AICPA best practices</a>.
+            <p className="mt-4 font-sans text-foreground text-center leading-[1.6]">
+              View <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">our services</a>, explore <a href="/case-studies" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">success stories</a>, or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">AICPA best practices</a>.
             </p>
           </div>
         </div>
@@ -151,10 +151,10 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Challenges & Solutions Section */}
-      <section className="section-padding bg-[#f8fafc]">
+      <section className="section-padding bg-muted">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-4">
+            <h2 className="text-3xl font-heading font-bold mb-4">
               Common Challenges & Our Solutions
             </h2>
           </div>
@@ -162,20 +162,20 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             {data.challenges.map((challenge, index) => (
               <Card key={index} className="bg-background">
                 <CardHeader>
-                  <CardTitle className="text-xl font-heading text-[#4D869C] flex items-start gap-3">
+                  <CardTitle className="text-xl font-heading flex items-start gap-3">
                     <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <span className="text-destructive font-bold">!</span>
                     </div>
                     {challenge.title}
                   </CardTitle>
-                  <CardDescription className="text-base font-sans text-[#333333] ml-11 leading-[1.6]">
+                  <CardDescription className="text-base font-sans text-foreground ml-11 leading-[1.6]">
                     {challenge.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="ml-11">
-                  <div className="bg-[#14b8a6]/5 p-4 rounded-lg">
-                    <h3 className="font-semibold text-[#4D869C] mb-2">Our Solution:</h3>
-                    <p className="font-sans text-[#333333] leading-[1.6]">{challenge.solution}</p>
+                  <div className="bg-primary/5 p-4 rounded-lg">
+                    <h3 className="font-semibold mb-2">Our Solution:</h3>
+                    <p className="font-sans text-foreground leading-[1.6]">{challenge.solution}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -185,10 +185,10 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-background">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-4">
+            <h2 className="text-3xl font-heading font-bold mb-4">
               Specialized Services
             </h2>
           </div>
@@ -199,10 +199,10 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
                     <Building className="h-6 w-6 text-secondary" />
                   </div>
-                  <CardTitle className="text-xl font-heading text-[#4D869C]">{service.title}</CardTitle>
+                  <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base font-sans text-[#333333] mb-4 leading-[1.6]">
+                  <CardDescription className="text-base font-sans text-foreground mb-4 leading-[1.6]">
                     {service.description}
                   </CardDescription>
                   <Button variant="outline" size="sm" asChild>
@@ -216,10 +216,10 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="section-padding bg-[#f8fafc]">
+      <section className="section-padding bg-muted">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-4">
+            <h2 className="text-3xl font-heading font-bold mb-4">
               Success Stories
             </h2>
           </div>
@@ -232,13 +232,13 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                       <Users className="h-6 w-6 text-accent" />
                     </div>
                     <div>
-                      <CardTitle className="text-lg font-heading text-[#4D869C]">{study.title}</CardTitle>
-                      <CardDescription className="font-sans text-[#333333]">{study.client}</CardDescription>
+                      <CardTitle className="text-lg font-heading">{study.title}</CardTitle>
+                      <CardDescription className="font-sans text-foreground">{study.client}</CardDescription>
                     </div>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="font-sans text-[#333333] leading-[1.6] mb-4">{study.result}</p>
+                  <p className="font-sans text-foreground leading-[1.6] mb-4">{study.result}</p>
                   <Button variant="outline" size="sm" asChild>
                     <a href={study.link}>Read {study.client} Success Story</a>
                   </Button>
@@ -250,19 +250,19 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-white">
+      <section id="sf-faqs" className="section-padding bg-background">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-8 text-center">
+          <h2 className="text-3xl font-heading font-bold mb-8 text-center">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
             {faqsToRender.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-4 bg-white">
-                <summary className="cursor-pointer font-semibold text-[#4D869C]">{faq.question}</summary>
-                <div className="text-[#333333] mt-2 space-y-3 leading-[1.6]">
+              <details key={index} className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-semibold">{faq.question}</summary>
+                <div className="text-foreground mt-2 space-y-3 leading-[1.6]">
                   <FaqAnswer
                     text={faq.answer}
-                    paragraphClassName="text-base leading-[1.6] text-[#333333]"
+                    paragraphClassName="text-base leading-[1.6] text-foreground"
                   />
                 </div>
               </details>
@@ -284,11 +284,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
 
       {/* Final CTA Section */}
       <section 
-        className="relative bg-white section-padding"
+        className="relative bg-background section-padding"
       >
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-heading font-bold text-[#647FBC]">{data.ctaTitle}</h2>
-          <p className="text-xl font-sans text-[#333333] leading-[1.6]">{data.ctaDescription}</p>
+          <h2 className="text-3xl font-heading font-bold">{data.ctaTitle}</h2>
+          <p className="text-xl font-sans text-foreground leading-[1.6]">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="default" className="group">
               Schedule a Consultation
