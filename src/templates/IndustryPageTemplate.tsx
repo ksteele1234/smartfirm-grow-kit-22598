@@ -105,11 +105,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-muted-blue pt-32">
         <div className="relative z-10 mx-auto max-w-4xl text-center px-4">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#647FBC] mb-6 drop-shadow-lg">
+          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-on-dark-heading mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl font-sans text-[#333333] mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
+            <p className="text-xl font-sans text-on-dark-body mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
               {data.heroSubtitle}
             </p>
           </div>
@@ -250,7 +250,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </section>
 
       {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-gradient-muted-blue">
+      <section id="sf-faqs" className="section-padding bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-[#647FBC] mb-8 text-center">
             Frequently Asked Questions
