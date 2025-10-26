@@ -28,6 +28,38 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Entrance animations for smooth page loads */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-delayed {
+  0%, 20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Respect user motion preferences - Global override for all animations */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -150,6 +182,12 @@ All colors MUST be HSL converted from the official brand colors.
     /* Legacy shadows */
     --shadow-soft: 0 4px 12px rgba(20, 184, 166, 0.1);
     --shadow-card: 0 2px 8px rgba(20, 184, 166, 0.08);
+
+    /* Elevation System - Professional depth hierarchy */
+    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(20, 184, 166, 0.06);
+    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(20, 184, 166, 0.08);
+    --elevation-3: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(20, 184, 166, 0.1);
+    --elevation-4: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(20, 184, 166, 0.12);
 
     /* ===== SPACING ===== */
     --section-padding-mobile: 3.75rem; /* 60px */
@@ -379,4 +417,75 @@ All colors MUST be HSL converted from the official brand colors.
   .text-gradient-gold {
     @apply bg-gradient-to-r from-[hsl(var(--gold-start))] to-[hsl(var(--gold-end))] bg-clip-text text-transparent;
   }
+
+  /* ===== ELEVATION SYSTEM ===== */
+  .elevation-1 {
+    box-shadow: var(--elevation-1);
+  }
+
+  .elevation-2 {
+    box-shadow: var(--elevation-2);
+  }
+
+  .elevation-3 {
+    box-shadow: var(--elevation-3);
+  }
+
+  .elevation-4 {
+    box-shadow: var(--elevation-4);
+  }
+
+  /* ===== GLASS-MORPHISM EFFECTS ===== */
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/80 border border-white/20;
+    box-shadow: 0 8px 32px rgba(20, 184, 166, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-card-light {
+    @apply backdrop-blur-md bg-white/60 border border-white/30;
+    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  /* ===== BORDER GLOW EFFECTS ===== */
+  .border-glow-teal {
+    @apply border-2 transition-all duration-300;
+    border-color: hsl(var(--vibrant-teal-start));
+  }
+
+  .border-glow-teal:hover {
+    box-shadow: 0 0 0 3px hsl(var(--vibrant-teal-start) / 0.15),
+                0 0 20px hsl(var(--vibrant-teal-start) / 0.2);
+  }
+
+  .border-glow-coral {
+    @apply border-2 transition-all duration-300;
+    border-color: hsl(var(--coral-start));
+  }
+
+  .border-glow-coral:hover {
+    box-shadow: 0 0 0 3px hsl(var(--coral-start) / 0.15),
+                0 0 20px hsl(var(--coral-start) / 0.2);
+  }
+
+  /* ===== ENTRANCE ANIMATIONS ===== */
+  .animate-slide-up {
+    animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-fade-in-delayed {
+    animation: fade-in-delayed 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Entrance animation delays for staggered effects */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
 }
