@@ -340,33 +340,33 @@ const QuickStart = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative py-[120px] md:py-[100px] bg-gradient-to-br from-[#0a2e2e] to-[#134444] overflow-hidden">
+        <section id="pricing" className="relative py-[120px] md:py-[100px] bg-gradient-deep-teal overflow-hidden">
           {/* Orbital Circle System - 2 circles rotating opposite directions */}
           <svg className="absolute right-[15%] top-[20%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-50">
             {/* Circle 1: Clockwise rotation */}
             <g style={{ transformOrigin: 'center' }} className="animate-rotate-clockwise">
-              <circle cx="200" cy="200" r="120" stroke="#fb7185" strokeWidth="2" fill="none" />
-              <circle cx="320" cy="200" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="283.14" cy="283.14" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="200" cy="320" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="116.86" cy="283.14" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="80" cy="200" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="116.86" cy="116.86" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="200" cy="80" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="283.14" cy="116.86" r="4" fill="#fb7185" opacity="0.8" />
+              <circle cx="200" cy="200" r="120" className="stroke-accent" strokeWidth="2" fill="none" />
+              <circle cx="320" cy="200" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="283.14" cy="283.14" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="200" cy="320" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="116.86" cy="283.14" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="80" cy="200" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="116.86" cy="116.86" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="200" cy="80" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="283.14" cy="116.86" r="4" className="fill-accent" opacity="0.8" />
             </g>
             
             {/* Circle 2: Counter-clockwise rotation */}
             <g style={{ transformOrigin: 'center' }} className="animate-rotate-counter">
-              <circle cx="200" cy="200" r="160" stroke="#fb7185" strokeWidth="1.5" fill="none" />
-              <circle cx="360" cy="200" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="313.14" cy="313.14" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="200" cy="360" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="86.86" cy="313.14" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="40" cy="200" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="86.86" cy="86.86" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="200" cy="40" r="4" fill="#fb7185" opacity="0.8" />
-              <circle cx="313.14" cy="86.86" r="4" fill="#fb7185" opacity="0.8" />
+              <circle cx="200" cy="200" r="160" className="stroke-accent" strokeWidth="1.5" fill="none" />
+              <circle cx="360" cy="200" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="313.14" cy="313.14" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="200" cy="360" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="86.86" cy="313.14" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="40" cy="200" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="86.86" cy="86.86" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="200" cy="40" r="4" className="fill-accent" opacity="0.8" />
+              <circle cx="313.14" cy="86.86" r="4" className="fill-accent" opacity="0.8" />
             </g>
           </svg>
           
@@ -378,14 +378,14 @@ const QuickStart = () => {
             </div>
             
             <div className="max-w-[500px] mx-auto">
-              <div className="relative bg-white/[0.08] backdrop-blur-[20px] border border-white/15 rounded-[24px] p-12 shadow-[0_0_48px_rgba(45,212,191,0.3),0_12px_48px_rgba(0,0,0,0.4)]">
+              <div className="relative glass-card elevation-3 rounded-[24px] p-12">
                 {/* Early Adopter Badge - Coral */}
-                <div className="inline-block bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
+                <div className="inline-block bg-gradient-coral text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
                   Early Adopter Pricing*
                 </div>
 
                 {/* Badge - Gold gradient */}
-                <div className="inline-block bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] px-4 py-2 rounded-xl text-sm font-bold text-white mb-6 ml-2">
+                <div className="inline-block bg-gradient-gold px-4 py-2 rounded-xl text-sm font-bold text-white mb-6 ml-2">
                   Start Here
                 </div>
                 
@@ -393,10 +393,10 @@ const QuickStart = () => {
                 <div className="mb-8">
                   {/* Monthly Fee - Prominent */}
                   <div className="mb-4">
-                    <div className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1 animate-subtle-pulse">
+                    <div className="text-6xl md:text-7xl font-extrabold text-gradient-gold mb-1 animate-subtle-pulse">
                       $999
                     </div>
-                    <div className="text-base text-white/70">per month</div>
+                    <div className="text-base text-on-dark-body">per month</div>
                   </div>
 
                   {/* Plus Sign */}
@@ -404,49 +404,49 @@ const QuickStart = () => {
 
                   {/* Setup Fee - Smaller */}
                   <div>
-                    <div className="text-xs text-white/50 line-through mb-1">
+                    <div className="text-xs text-on-dark-muted line-through mb-1">
                       Regular: $9,999
                     </div>
-                    <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent mb-1">
+                    <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-1">
                       $6,999
                     </div>
-                    <div className="text-sm text-white/60">One-time setup</div>
+                    <div className="text-sm text-on-dark-muted">One-time setup</div>
                   </div>
                 </div>
                 
                 {/* Features List with Teal Checkmarks + Glow */}
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Professional website (launch-ready)</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Professional website (launch-ready)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Google Business Profile optimization</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Google Business Profile optimization</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Automated review generation system</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Automated review generation system</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Client communication workflows</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Client communication workflows</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Email marketing foundation</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Email marketing foundation</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Performance tracking dashboard</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Performance tracking dashboard</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Monthly performance reports</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Monthly performance reports</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#2dd4bf] flex-shrink-0 mt-0.5" style={{ filter: 'drop-shadow(0 0 4px rgba(45, 212, 191, 0.6))' }} />
-                    <span className="text-base text-white leading-[1.8]">Ongoing support & optimization</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Ongoing support & optimization</span>
                   </li>
                 </ul>
                 
@@ -455,7 +455,7 @@ const QuickStart = () => {
                   {/* Primary CTA - Coral Gradient */}
                   <Button 
                     asChild
-                    className="w-full bg-gradient-to-r from-[#fb7185] to-[#f43f5e] hover:from-[#f43f5e] hover:to-[#fb7185] text-white text-lg font-bold py-4 rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.6)] transition-all duration-300 hover:-translate-y-0.5"
+                    className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 rounded-xl glow-coral hover-lift transition-all duration-300"
                   >
                     <a href="/get-started">Get Started</a>
                   </Button>
@@ -464,13 +464,13 @@ const QuickStart = () => {
                   <Button 
                     variant="outline"
                     asChild
-                    className="w-full bg-transparent hover:bg-white/10 text-white border-2 border-white/30 text-lg font-semibold py-4 rounded-xl transition-all"
+                    className="w-full bg-transparent hover:bg-white/10 text-on-dark-heading border-2 border-white/30 text-lg font-semibold py-4 rounded-xl transition-all"
                   >
                     <a href="/contact">Book Your Call</a>
                   </Button>
 
                   {/* Urgency Note */}
-                  <p className="text-xs text-white/60 text-center mt-2">
+                  <p className="text-xs text-on-dark-muted text-center mt-2">
                     *for the next 3 firms only
                   </p>
                 </div>

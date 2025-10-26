@@ -14,7 +14,7 @@ export interface FaqAnswerProps {
 const FaqAnswer = ({
   text,
   paragraphClassName,
-  linkClassName = "text-[#14b8a6] hover:underline",
+  linkClassName = "text-primary hover:underline",
 }: FaqAnswerProps) => {
   if (!text) {
     return null;

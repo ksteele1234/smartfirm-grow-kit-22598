@@ -406,7 +406,7 @@ const GetStarted = () => {
       <section id="sf-faqs" className="py-[100px] md:py-[80px] bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
+            <h2 className="text-4xl font-bold text-primary mb-4">
               Common Questions About Getting Started
             </h2>
           </div>
@@ -431,17 +431,17 @@ const GetStarted = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                  className="bg-card border border-border rounded-xl elevation-1 hover:elevation-2 card-interactive transition-shadow duration-200"
                 >
                   <button
                     onClick={() => setOpenFaqItem(isOpen ? null : index)}
                     className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
                   >
-                    <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
+                    <span className="text-lg font-semibold text-secondary group-hover:text-primary transition-colors duration-200">
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -454,7 +454,7 @@ const GetStarted = () => {
                     <div className="px-6 pb-6">
                       <FaqAnswer
                         text={faq.answer}
-                        paragraphClassName="text-base text-[#333333] leading-[1.7]"
+                        paragraphClassName="text-base text-foreground leading-[1.7]"
                       />
                     </div>
                   </div>

@@ -704,5 +704,27 @@ All colors MUST be HSL converted from the official brand colors.
       box-shadow: 0 0 0 8px hsl(var(--vibrant-teal-start) / 0);
     }
   }
+
+  /* ===== SVG & GRAPHICS UTILITIES ===== */
+  /* For animated SVG dots and orbital graphics */
+  .dot-primary {
+    fill: hsl(var(--primary));
+  }
+
+  .dot-accent {
+    fill: hsl(var(--accent));
+  }
+
+  .stroke-primary-soft {
+    stroke: hsl(var(--primary) / 0.5);
+  }
+
+  .stroke-accent-soft {
+    stroke: hsl(var(--accent) / 0.5);
+  }
+
+  .border-primary-soft {
+    border-color: hsl(var(--primary) / 0.5);
+  }
 }
 

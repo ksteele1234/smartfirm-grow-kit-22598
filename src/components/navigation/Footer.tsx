@@ -26,7 +26,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-[#0a2e2e] pb-8">
+    <footer className="bg-gradient-deep-teal pb-8">
       <div className="container mx-auto px-6 max-w-[1200px] pt-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
@@ -54,7 +54,7 @@ const Footer = () => {
                 <li key={service.slug}>
                   <a 
                     href={`/services/${service.slug}`}
-                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                   >
                     {service.name}
                   </a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li key={solution.slug}>
                   <a 
                     href={`/solutions/${solution.slug}`}
-                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                   >
                     {solution.name}
                   </a>
@@ -85,7 +85,7 @@ const Footer = () => {
                 <li key={resource.slug}>
                   <a 
                     href={resource.slug}
-                    className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                   >
                     {resource.name}
                   </a>
@@ -94,7 +94,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/quick-start-marketing-for-cpa-firms" 
-                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                 >
                   Quick Start Package
                 </a>
@@ -102,7 +102,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/about" 
-                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                 >
                   About Us
                 </a>
@@ -115,25 +115,25 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
-                <a href="tel:+15416583789" className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200">
+                <Phone className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
+                <a href="tel:+15416583789" className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200">
                   (541) 658-3789
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
-                <a href="mailto:contact@smartfirm.io" className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200">
+                <Mail className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
+                <a href="mailto:contact@smartfirm.io" className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200">
                   contact@smartfirm.io
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-white/70 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-white/70">Eugene, OR</span>
+                <MapPin className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
+                <span className="text-sm text-on-dark-body">Eugene, OR</span>
               </div>
               <div>
                 <a 
                   href="/contact" 
-                  className="text-sm text-white/70 hover:text-[#2dd4bf] transition-colors duration-200"
+                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                 >
                   Contact Us
                 </a>
@@ -142,10 +142,10 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex flex-wrap gap-3">
-              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Twitter className="h-4 w-4" />
               </a>
               <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">

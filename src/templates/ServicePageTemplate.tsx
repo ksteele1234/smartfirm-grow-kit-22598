@@ -247,8 +247,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             >
               <Button 
                 size="lg"
-                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white rounded-xl shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] transition-all duration-200"
-                style={{ animation: 'pulse-button 2s ease-in-out infinite' }}
+                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift transition-all duration-200 pulse-teal"
                 asChild
               >
                 <a href="/get-started">
@@ -263,10 +262,10 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
             {/* Glass Bubble with Settings Icon */}
             <div 
-              className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] bg-white/8 backdrop-blur-[20px] border border-white/12 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] z-[15]"
+              className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] glass-card-light rounded-full flex items-center justify-center elevation-3 z-[15]"
               style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
             >
-              <Settings className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-[#14b8a6]" style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} />
+              <Settings className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-primary glow-cyan" />
             </div>
             
             {/* SET 1: CENTER/MAIN - ALL TEAL */}
@@ -277,42 +276,42 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               >
                 {/* Outer Circle (400px) */}
                 <div 
-                  className="absolute w-[400px] h-[400px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                  className="absolute w-[400px] h-[400px] border-[3px] border-primary-soft rounded-full"
                   style={{ top: 'calc(50% - 200px)', left: 'calc(50% - 200px)', animation: 'rotateClockwise 60s linear infinite' }}
                 >
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 200px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 200px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 200px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 200px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
                 </div>
                 
                 {/* Middle Circle (250px) */}
                 <div 
-                  className="absolute w-[250px] h-[250px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                  className="absolute w-[250px] h-[250px] border-[3px] border-primary-soft rounded-full"
                   style={{ top: 'calc(50% - 125px)', left: 'calc(50% - 125px)', animation: 'rotateCounterClockwise 60s linear infinite' }}
                 >
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.7s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.3s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.1s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.7s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.3s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
                 </div>
                 
                 {/* Inner Circle (100px) */}
                 <div 
-                  className="absolute w-[100px] h-[100px] border-[3px] border-[rgba(20,184,166,0.5)] rounded-full"
+                  className="absolute w-[100px] h-[100px] border-[3px] border-primary-soft rounded-full"
                   style={{ top: 'calc(50% - 50px)', left: 'calc(50% - 50px)', animation: 'rotateClockwise 60s linear infinite' }}
                 >
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.15s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.35s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.15s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.35s' }} />
+                  <div className="absolute w-2 h-2 rounded-full dot-primary -ml-1 -mt-1" style={{ left: 'calc(50% + 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
                   <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.75s' }} />
                   <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.95s' }} />
                   <div className="absolute w-2 h-2 rounded-full bg-[#14b8a6] -ml-1 -mt-1" style={{ left: 'calc(50% - 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 1.15s' }} />
