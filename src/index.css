@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================================
+   SMARTFIRM.IO DESIGN SYSTEM
+   ============================================================================
+   
+   This design system enforces brand consistency and provides reusable
+   utilities for the SmartFirm.io website. All styles follow professional
+   best practices with semantic tokens and consistent patterns.
+
+   DESIGN PRINCIPLES:
+   1. ✅ Always use semantic tokens (--primary, --accent) in components
+   2. ❌ Never use color primitives (--vibrant-teal-start) directly
+   3. 📐 Maintain consistent spacing with utility classes
+   4. ♿ Ensure accessibility with proper contrast and focus states
+   5. 📱 Design mobile-first, enhance for larger screens
+
+   COLOR USAGE:
+   - Primary: Vibrant teal for main brand elements (buttons, links, headings)
+   - Secondary: Muted blue for supporting elements
+   - Accent: Coral for CTAs and high-priority actions
+   - Neutral: White/light slate for backgrounds and surfaces
+
+   SHADOWS & ELEVATION:
+   - elevation-1: Flat cards, minimal depth
+   - elevation-2: Standard cards, resting state
+   - elevation-3: Interactive elements on hover/focus
+   - elevation-4: Modals, dialogs, overlays
+
+   TYPOGRAPHY SCALE:
+   - text-display: Hero sections (5xl-6xl)
+   - h1: Page titles (4xl-5xl)
+   - h2: Section headings (3xl-4xl)
+   - h3: Subsection headings (xl-2xl)
+   - text-lead: Large body text (xl-2xl)
+   - body: Standard paragraph text (base)
+
+   For component documentation, see: /src/docs/UX_TEMPLATE_RECOMMENDATIONS.md
+   ============================================================================ */
+
+/* ============================================================================
+   ANIMATIONS - Keyframes and motion utilities
+   ============================================================================ */
+
 /* Float animation for hero metric cards */
 @keyframes float {
   0%, 100% { 
@@ -76,6 +118,10 @@
   }
 }
 
+/* ============================================================================
+   COLOR SYSTEM - Brand colors and semantic tokens
+   ============================================================================ */
+
 /* SmartFirm.io Design System - Official Brand Guidelines
 All colors MUST be HSL converted from the official brand colors.
 */
@@ -142,59 +188,50 @@ All colors MUST be HSL converted from the official brand colors.
     --destructive: 0 84% 60%;
     --destructive-foreground: var(--white);
 
-    --border: 215 20% 85%;
-    --input: 215 20% 85%;
-    --ring: var(--vibrant-teal-start);
-
-    /* Legacy support for existing components - To be removed in future cleanup */
-    --primary-blue: 221 47% 62%;
-    --secondary-blue: 218 34% 67%;
-    --primary-teal: var(--vibrant-teal-start);
-    --light-teal: 180 28% 60%;
-    --accent-light: 64 89% 92%;
-    --dark-teal: var(--deep-teal-start);
-    --dark-blue: var(--muted-blue-start);
-    --teal: var(--vibrant-teal-start);
-    --teal-foreground: var(--text-light);
+    /* Form & interaction states */
+    --border: 215 20% 85%; /* Default border color for inputs and cards */
+    --input: 215 20% 85%; /* Input field border color */
+    --ring: var(--vibrant-teal-start); /* Focus ring color (keyboard navigation) */
 
     /* ===== TYPOGRAPHY ===== */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+    /* Professional sans-serif stack optimized for readability */
+    --font-heading: 'Poppins', sans-serif; /* Bold, modern headings */
+    --font-body: 'DM Sans', sans-serif; /* Clean, readable body text */
 
-    /* ===== SHADOWS ===== */
-    /* Neutral Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    /* ===== SHADOWS & ELEVATION ===== */
+    /* Neutral shadows - For general UI elements without color association */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow for flat cards */
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Standard card shadow */
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Elevated card shadow */
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Modal/dialog shadow */
 
-    /* Teal-Tinted Shadows */
-    --shadow-teal-sm: 0 2px 8px rgba(20, 184, 166, 0.08);
-    --shadow-teal-md: 0 4px 12px rgba(20, 184, 166, 0.12);
-    --shadow-teal-lg: 0 8px 24px rgba(20, 184, 166, 0.15);
+    /* Brand-tinted shadows - For interactive elements with brand association */
+    --shadow-teal-sm: 0 2px 8px rgba(20, 184, 166, 0.08); /* Subtle teal hint */
+    --shadow-teal-md: 0 4px 12px rgba(20, 184, 166, 0.12); /* Medium teal shadow */
+    --shadow-teal-lg: 0 8px 24px rgba(20, 184, 166, 0.15); /* Strong teal shadow for hover states */
 
-    /* Colored Glows */
-    --glow-teal: 0 0 12px rgba(20, 184, 166, 0.3);
-    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4);
-    --glow-cyan: 0 0 20px rgba(94, 234, 212, 0.3);
-    --glow-gold: 0 0 14px rgba(251, 191, 36, 0.35);
+    /* Colored glows - For emphasis and CTAs */
+    --glow-teal: 0 0 12px rgba(20, 184, 166, 0.3); /* Teal button glow */
+    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4); /* Coral CTA glow */
+    --glow-cyan: 0 0 20px rgba(94, 234, 212, 0.3); /* Accent glow */
+    --glow-gold: 0 0 14px rgba(251, 191, 36, 0.35); /* Premium highlight glow */
 
-    /* Legacy shadows */
-    --shadow-soft: 0 4px 12px rgba(20, 184, 166, 0.1);
-    --shadow-card: 0 2px 8px rgba(20, 184, 166, 0.08);
-
-    /* Elevation System - Professional depth hierarchy */
-    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(20, 184, 166, 0.06);
-    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(20, 184, 166, 0.08);
-    --elevation-3: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(20, 184, 166, 0.1);
-    --elevation-4: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(20, 184, 166, 0.12);
+    /* Professional elevation system - 4-level hierarchy for depth */
+    /* Use elevation-1 for flat cards, elevation-2 for standard cards, */
+    /* elevation-3 for elevated/hover states, elevation-4 for modals */
+    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(20, 184, 166, 0.06); /* Minimal lift */
+    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(20, 184, 166, 0.08); /* Standard card */
+    --elevation-3: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(20, 184, 166, 0.1); /* Hover/focus state */
+    --elevation-4: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(20, 184, 166, 0.12); /* Modal/overlay */
 
     /* ===== SPACING ===== */
-    --section-padding-mobile: 3.75rem; /* 60px */
-    --section-padding-tablet: 5rem; /* 80px */
-    --section-padding-desktop: 6.25rem; /* 100px */
+    /* Consistent vertical rhythm for section padding across breakpoints */
+    --section-padding-mobile: 3.75rem; /* 60px - Comfortable on small screens */
+    --section-padding-tablet: 5rem; /* 80px - Breathing room on tablets */
+    --section-padding-desktop: 6.25rem; /* 100px - Generous spacing on desktop */
 
-    --radius: 0.5rem;
+    /* Component border radius for consistent rounded corners */
+    --radius: 0.5rem; /* 8px - Standard card/button radius */
   }
 
   .dark {
@@ -235,6 +272,10 @@ All colors MUST be HSL converted from the official brand colors.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+
+/* ============================================================================
+   BASE STYLES - Global element styling
+   ============================================================================ */
 
 @layer base {
   * {
@@ -322,8 +363,13 @@ All colors MUST be HSL converted from the official brand colors.
   }
 }
 
+/* ============================================================================
+   COMPONENT UTILITIES - Reusable component classes
+   ============================================================================ */
+
 @layer components {
-  /* Stagger animation for list items */
+  /* ===== ANIMATION & INTERACTION PATTERNS ===== */
+  /* Stagger animation for list items - Creates smooth sequential reveals */
   .stagger-container > * {
     animation: fade-in-up 0.6s ease-out;
   }
