@@ -101,6 +101,14 @@ const Footer = () => {
               </li>
               <li>
                 <a 
+                  href="/faq" 
+                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a 
                   href="/about" 
                   className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
                 >

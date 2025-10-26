@@ -14,8 +14,7 @@ const normalizePath = (path: string = "") =>
 
 export const faqCategories: FAQCategory[] = [
   {
-    category: "HUB PAGES - Solutions Hub",
-    info: "/solutions-expert-marketing-agency-for-accounting-firms",
+    category: "Solutions",
     questions: [
       {
         question: "How do I know which solution is right for my accounting firm?",
@@ -40,8 +39,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "HUB PAGES - Industries Hub",
-    info: "/industries-expert-marketing-agency-for-accountants",
+    category: "Industries",
     questions: [
       {
         question: "Why does industry specialization matter for accounting firm marketing?",
@@ -66,8 +64,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Client Retention",
-    info: "/solutions/client-retention",
+    category: "Client Retention",
     questions: [
       {
         question: "What's a good client retention rate for an accounting firm?",
@@ -88,8 +85,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Scale Firm",
-    info: "/solutions/scale-firm",
+    category: "Scale Firm",
     questions: [
       {
         question: "What's the biggest mistake accounting firms make when trying to scale?",
@@ -110,8 +106,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Work Less Earn More",
-    info: "/solutions/work-less-earn-more",
+    category: "Work Less Earn More",
     questions: [
       {
         question: "Is it really possible to work less and earn more as a CPA?",
@@ -132,8 +127,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Retention Strategies",
-    info: "/solutions/retention-strategies",
+    category: "Retention Strategies",
     questions: [
       {
         question: "What's the ROI of investing in client retention vs. new client acquisition?",
@@ -154,8 +148,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Stop Losing Clients to Tech-Savvy CPAs",
-    info: "/solutions/stop-losing-clients-to-tech-savvy-cpas",
+    category: "Stop Losing Clients to Tech-Savvy CPAs",
     questions: [
       {
         question: "What technology do I need to compete with tech-savvy CPA firms?",
@@ -176,8 +169,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Get More Referrals Without Asking",
-    info: "/solutions/get-more-referrals-without-asking",
+    category: "Get More Referrals Without Asking",
     questions: [
       {
         question: "Why is asking for referrals uncomfortable, and how can I avoid it?",
@@ -198,8 +190,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Grow Without Growing Pains",
-    info: "/solutions/grow-without-growing-pains",
+    category: "Grow Without Growing Pains",
     questions: [
       {
         question: "What are \"growing pains\" and how do I know if my firm is experiencing them?",
@@ -220,8 +211,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "SOLUTION PAGES - Protect Practice and Future",
-    info: "/solutions/protect-practice-and-future",
+    category: "Protect Practice and Future",
     questions: [
       {
         question: "What are the biggest threats to accounting firms today?",
@@ -242,8 +232,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "INDUSTRY PAGES - Tax Preparation",
-    info: "/industries/tax-preparation",
+    category: "Tax Preparation",
     questions: [
       {
         question: "How can I generate revenue outside of tax season?",
@@ -264,8 +253,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "INDUSTRY PAGES - Bookkeeping Services",
-    info: "/industries/bookkeeping-services",
+    category: "Bookkeeping Services",
     questions: [
       {
         question: "How do I differentiate my bookkeeping services from low-cost competitors?",
@@ -286,8 +274,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "INDUSTRY PAGES - Business Advisory",
-    info: "/industries/business-advisory",
+    category: "Business Advisory",
     questions: [
       {
         question: "How do I position myself as a business advisor, not just an accountant?",
@@ -308,8 +295,7 @@ export const faqCategories: FAQCategory[] = [
     ]
   },
   {
-    category: "TOOLS HUB - Tools Hub",
-    info: "/tools",
+    category: "Tools & Calculators",
     questions: [
       {
         question: "How do these tools help my accounting firm grow?",
@@ -366,13 +352,30 @@ export const homepageFaqs: FAQItem[] = [
   }
 ];
 
-const faqMap = new Map(
-  faqCategories
-    .filter(category => Boolean(category.info))
-    .map(category => [normalizePath(category.info!), category.questions])
+const pathToCategoryMap = new Map<string, string>([
+  ["/solutions-expert-marketing-agency-for-accounting-firms", "Solutions"],
+  ["/industries-expert-marketing-agency-for-accountants", "Industries"],
+  ["/solutions/client-retention", "Client Retention"],
+  ["/solutions/scale-firm", "Scale Firm"],
+  ["/solutions/work-less-earn-more", "Work Less Earn More"],
+  ["/solutions/retention-strategies", "Retention Strategies"],
+  ["/solutions/stop-losing-clients-to-tech-savvy-cpas", "Stop Losing Clients to Tech-Savvy CPAs"],
+  ["/solutions/get-more-referrals-without-asking", "Get More Referrals Without Asking"],
+  ["/solutions/grow-without-growing-pains", "Grow Without Growing Pains"],
+  ["/solutions/protect-practice-and-future", "Protect Practice and Future"],
+  ["/industries/tax-preparation", "Tax Preparation"],
+  ["/industries/bookkeeping-services", "Bookkeeping Services"],
+  ["/industries/business-advisory", "Business Advisory"],
+  ["/tools", "Tools & Calculators"]
+]);
+
+const categoryToQuestionsMap = new Map(
+  faqCategories.map(category => [category.category, category.questions])
 );
 
 export const getFaqsForPath = (path: string): FAQItem[] => {
   const normalized = normalizePath(path);
-  return faqMap.get(normalized) ?? [];
+  const categoryName = pathToCategoryMap.get(normalized);
+  if (!categoryName) return [];
+  return categoryToQuestionsMap.get(categoryName) ?? [];
 };

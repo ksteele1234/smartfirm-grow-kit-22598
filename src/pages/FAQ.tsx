@@ -123,20 +123,9 @@ const FAQ = () => {
             <div className="max-w-[800px] mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-16">
-                  <h2 className="text-3xl font-bold text-primary mb-4">
+                  <h2 className="text-3xl font-bold text-primary mb-6">
                     {category.category}
                   </h2>
-                  {category.info && (
-                    <p className="text-sm text-muted-foreground mb-6">
-                      Page:{" "}
-                      <a
-                        href={category.info}
-                        className="text-accent hover:underline story-link"
-                      >
-                        {category.info}
-                      </a>
-                    </p>
-                  )}
 
                   <div className="space-y-4">
                     {category.questions.map((faq, index) => {
