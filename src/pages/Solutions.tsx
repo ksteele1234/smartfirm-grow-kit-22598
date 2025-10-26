@@ -61,7 +61,7 @@ const Solutions = () => {
       link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
     },
     {
-      icon: <Users className="h-8 w-8 text-teal" />,
+      icon: <Users className="h-8 w-8 text-accent" />,
       title: "Get More Referrals Without Asking",
       subtitle: "Turn Happy Clients into Advocates, Get Found by People Looking for CPAs, Build Trust Before You Meet, Stay Top-of-Mind Year-Round.",
       link: "/solutions/get-more-referrals-without-asking"
@@ -73,7 +73,7 @@ const Solutions = () => {
       link: "/solutions/work-less-earn-more"
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-teal" />,
+      icon: <TrendingUp className="h-8 w-8 text-accent" />,
       title: "Grow Without the Growing Pains",
       subtitle: "Handle More Clients Without More Stress, Scale Without Hiring Full-Time Staff, Maintain Quality While Growing, Plan for Growth Without Guesswork.",
       link: "/solutions/grow-without-growing-pains"
@@ -239,9 +239,9 @@ const Solutions = () => {
           <BackgroundPattern pattern="dots" className="opacity-20" />
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <Card className="shadow-lg border-border/50 bg-gradient-to-br from-background to-teal/5 overflow-hidden">
+              <Card className="elevation-2 bg-gradient-to-br from-background to-accent/5 overflow-hidden card-interactive">
                 <CardHeader className="text-center pb-8 px-6 md:px-10 pt-10">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal/20 to-primary/20 text-primary text-sm font-medium mb-6">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 text-primary text-sm font-medium mb-6">
                     <Star className="h-4 w-4 mr-2" />
                     Featured Solution
                   </div>
@@ -262,25 +262,25 @@ const Solutions = () => {
                       </h3>
                       <ul className="space-y-3 text-muted-foreground">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Turn happy clients into advocates automatically
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Get found by people looking for CPAs
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Build trust before you even meet prospects
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Stay top-of-mind year-round with automation
                         </li>
                       </ul>
                     </div>
                     
-                    <div className="bg-gradient-to-br from-teal/10 to-primary/10 p-6 md:p-8 rounded-lg border border-border/30">
+                    <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 md:p-8 rounded-lg border">
                       <h3 className="font-semibold text-primary mb-6 flex items-center text-lg">
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Client Success Story:
@@ -297,7 +297,7 @@ const Solutions = () => {
                   </div>
                   
                   <div className="text-center pt-6">
-                    <Button size="lg" variant="hero" className="bg-gradient-to-r from-teal to-primary hover:from-teal/90 hover:to-primary/90 text-white" asChild>
+                    <Button size="lg" variant="hero" className="bg-gradient-teal-to-primary hover-lift" asChild>
                       <a href="/solutions/get-more-referrals-without-asking">
                         Learn About This Solution
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -311,7 +311,7 @@ const Solutions = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <section className="py-20 bg-gradient-teal-to-primary text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">

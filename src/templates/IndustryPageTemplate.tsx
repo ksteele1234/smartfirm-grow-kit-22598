@@ -160,7 +160,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
           <div className="grid gap-6">
             {data.challenges.map((challenge, index) => (
-              <Card key={index} className="bg-background">
+              <Card key={index} className="elevation-1 card-interactive">
                 <CardHeader>
                   <CardTitle className="text-xl font-heading flex items-start gap-3">
                     <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -194,9 +194,9 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="elevation-1 card-interactive hover:elevation-2">
                 <CardHeader>
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <Building className="h-6 w-6 text-secondary" />
                   </div>
                   <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
@@ -225,7 +225,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {data.caseStudies.map((study, index) => (
-              <Card key={index} className="bg-background">
+              <Card key={index} className="elevation-1 card-interactive">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
@@ -257,7 +257,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </h2>
           <div className="space-y-4">
             {faqsToRender.map((faq, index) => (
-              <details key={index} className="border border-border rounded-lg p-4 bg-background">
+              <details key={index} className="elevation-1 rounded-lg p-4 card-interactive">
                 <summary className="cursor-pointer font-semibold">{faq.question}</summary>
                 <div className="text-foreground mt-2 space-y-3 leading-[1.6]">
                   <FaqAnswer

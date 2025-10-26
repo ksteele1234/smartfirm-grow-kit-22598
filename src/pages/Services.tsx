@@ -16,7 +16,7 @@ const Services = () => {
     description: "Intelligent Lead Generation with predictive scoring, AI-driven Website & SEO optimization, Automated Review & Reputation Management with sentiment analysis, Smart Social Media campaigns with behavioral targeting.",
     link: "/services/marketing-automation"
   }, {
-    icon: <Settings className="h-8 w-8 text-teal" />,
+    icon: <Settings className="h-8 w-8 text-accent" />,
     title: "AI-Ready Technology Solutions",
     description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
     link: "/services/technology-solutions"
@@ -26,7 +26,7 @@ const Services = () => {
     description: "Predictive Process Improvement and AI-powered Executive Dashboards that provide actionable insights to optimize your firm's performance and forecast growth opportunities.",
     link: "/services/business-optimization"
   }, {
-    icon: <Users className="h-8 w-8 text-teal" />,
+    icon: <Users className="h-8 w-8 text-accent" />,
     title: "Strategic AI Consulting",
     description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
     link: "/services/executive-services"
@@ -188,7 +188,7 @@ const Services = () => {
             <div className="max-w-6xl mx-auto">
               <Card className="shadow-lg border-border bg-background">
                 <CardHeader className="text-center pb-8 px-10 pt-10">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-teal/10 text-teal text-sm font-medium mb-6">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
                     <Star className="h-4 w-4 mr-2" />
                     Spotlight Service
                   </div>
@@ -204,25 +204,25 @@ const Services = () => {
                 <CardContent className="space-y-8 px-10 pb-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-6">
-                      <h4 className="font-semibold text-teal flex items-center text-lg">
+                      <h4 className="font-semibold text-accent flex items-center text-lg">
                         <Target className="h-5 w-5 mr-2" />
                         Key Features:
                       </h4>
                       <ul className="space-y-3 text-muted-foreground">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Personalized email sequences
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Smart timing optimization
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Lead scoring and prioritization
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                           Automated appointment scheduling
                         </li>
                       </ul>

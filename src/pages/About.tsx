@@ -39,7 +39,7 @@ const About = () => {
       description: "We evolve our solutions to keep firms ahead of industry trends."
     },
     {
-      icon: <Shield className="h-8 w-8 text-teal" />,
+      icon: <Shield className="h-8 w-8 text-accent" />,
       title: "Integrity",
       description: "We build trust through transparency, honesty, and consistency."
     },
@@ -49,7 +49,7 @@ const About = () => {
       description: "Your growth is our success. We measure ourselves by the results we deliver for your firm."
     },
     {
-      icon: <Zap className="h-8 w-8 text-teal" />,
+      icon: <Zap className="h-8 w-8 text-accent" />,
       title: "Efficiency",
       description: "We simplify processes and reduce complexity so you can focus on clients, not tech."
     }
@@ -202,10 +202,10 @@ const About = () => {
                 </CardHeader>
               </Card>
 
-              <Card className="border-light-border shadow-elegant">
+              <Card className="border elevation-1 card-interactive">
                 <CardHeader className="text-center pb-6">
-                  <div className="mx-auto mb-4 p-3 rounded-lg bg-teal/10 w-fit">
-                    <Eye className="h-8 w-8 text-teal" />
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-accent/10 w-fit">
+                    <Eye className="h-8 w-8 text-accent" />
                   </div>
                   <CardTitle className="text-2xl md:text-3xl text-primary mb-4">
                     Our Vision
@@ -233,9 +233,9 @@ const About = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {coreValues.map((value, index) => (
-                <Card key={index} className="text-center border-light-border shadow-elegant group hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="text-center elevation-1 card-interactive group hover:elevation-2">
                   <CardHeader className="pb-4">
-                    <div className="mx-auto mb-4 p-3 rounded-lg bg-accent-light/20 w-fit group-hover:bg-accent-light/40 transition-colors">
+                    <div className="mx-auto mb-4 p-3 rounded-lg bg-accent/10 w-fit group-hover:bg-accent/20 transition-colors">
                       {value.icon}
                     </div>
                     <CardTitle className="text-xl text-primary mb-3">
@@ -259,7 +259,7 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                   Meet the Founder & CEO
                 </h2>
-                <p className="text-2xl font-semibold text-teal mb-8">
+                <p className="text-2xl font-semibold text-accent mb-8">
                   Hey, I'm Katie!
                 </p>
               </div>
@@ -296,7 +296,7 @@ const About = () => {
               </div>
 
               <div className="space-y-8">
-                <Card className="border-light-border shadow-elegant">
+                <Card className="elevation-1 card-interactive">
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary mb-4">Why It Works:</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground space-y-4">
@@ -305,7 +305,7 @@ const About = () => {
                   </CardHeader>
                 </Card>
 
-                <Card className="border-light-border shadow-elegant">
+                <Card className="elevation-1 card-interactive">
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary mb-4">Why I Started SmartFirm:</CardTitle>
                     <CardDescription className="text-lg text-muted-foreground space-y-4">
@@ -353,7 +353,7 @@ const About = () => {
                 }
                 
                 return (
-                  <Card key={index} className="text-center border-light-border shadow-elegant">
+                  <Card key={index} className="text-center elevation-1 card-interactive">
                     <CardHeader className="pb-4">
                       <OptimizedImage 
                         src={member.image} 

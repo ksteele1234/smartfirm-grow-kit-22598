@@ -139,8 +139,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
               aria-hidden="true"
             />
-            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
-              <span className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl elevation-2 bg-card p-8">
+              <span className="inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                 <Shield className="h-3.5 w-3.5 text-slate-500" aria-hidden="true" />
                 The Challenge
               </span>
@@ -158,7 +158,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </span>
                 ))}
               </div>
-              <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-6 shadow-sm">
+              <div className="mt-8 rounded-2xl elevation-1 bg-muted px-6 py-6">
                 <p className="text-sm font-semibold tracking-wide uppercase">What we keep hearing</p>
                 <ul className="mt-4 space-y-3 text-sm text-foreground leading-[1.6]">
                   {hearingSignals.map((signal) => (
@@ -175,7 +175,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   <p className="text-sm font-semibold uppercase tracking-wide">Problems we hear every week</p>
                   <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-foreground">
                     {data.problemSolutionPairs.map((pair, index) => (
-                      <li key={`problem-${index}`} className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 shadow-sm">
+                      <li key={`problem-${index}`} className="rounded-xl elevation-1 bg-muted px-4 py-4">
                         <span className="block font-semibold">Problem</span>
                         <span className="mt-1 block text-foreground">{pair.problem}</span>
                       </li>
@@ -184,8 +184,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 </div>
               ) : null}
             </article>
-            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-teal-100 bg-gradient-to-br from-[#ecfeff] via-white to-[#f0fdfa] p-8 shadow-[0_24px_60px_rgba(20,184,166,0.12)]">
-              <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white shadow-teal-sm">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-3xl elevation-2 bg-gradient-to-br from-accent/5 via-background to-accent/10 p-8 glow-cyan">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gradient-vibrant-teal px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white glow-cyan">
                 <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
                 Our Solution
               </span>
@@ -206,7 +206,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 </div>
               ) : null}
               {data.problemSolutionPairs?.length ? (
-                <div className="mt-8 rounded-2xl border border-white/60 bg-white/70 px-6 py-6 shadow-sm">
+                <div className="mt-8 rounded-2xl glass-card-light px-6 py-6">
                   <p className="text-sm font-semibold uppercase tracking-wide">What we hear after the systems go live</p>
                   <ul className="mt-4 space-y-3 text-sm text-foreground leading-[1.6]">
                     {data.problemSolutionPairs.map((pair, index) => (
@@ -224,7 +224,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   <p className="text-sm font-semibold uppercase tracking-wide">How we tackle each roadblock</p>
                   <ul className="mt-4 space-y-4 text-sm leading-[1.6] text-foreground">
                     {data.problemSolutionPairs.map((pair, index) => (
-                      <li key={`solution-${index}`} className="rounded-xl border border-white/60 bg-white/70 px-4 py-4 shadow-sm">
+                      <li key={`solution-${index}`} className="rounded-xl glass-card-light px-4 py-4">
                         <span className="block font-semibold">Solution</span>
                         <span className="mt-1 block text-foreground">{pair.solution}</span>
                       </li>
@@ -235,18 +235,18 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </article>
           </div>
         </div>
-        <div className="mt-7 flex flex-col items-center gap-3 text-center">
-          <Button variant="coral" size="lg" asChild>
+          <div className="mt-7 flex flex-col items-center gap-3 text-center">
+          <Button variant="coral" size="lg" className="hover-lift pulse-teal" asChild>
             <a href="/get-started">Book Your Strategy Call</a>
           </Button>
           <a
             href="/case-studies"
-            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors story-link"
           >
             See how firms apply this ?
           </a>
           <p className="text-xs text-muted-foreground max-w-[640px] mt-1">
-            These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary">our service playbooks</a>.
+            These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
           </p>
         </div>
         <script id="sf-entity-jsonld" type="application/ld+json">
@@ -321,12 +321,12 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </p>
           </div>
           <div className="hidden md:flex items-center justify-between mb-12 relative">
-            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-vibrant-teal" aria-hidden="true" />
+            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-teal" aria-hidden="true" />
             {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone) => {
               const IconComp = milestone.icon;
               return (
                 <div key={milestone.label} className="flex flex-col items-center text-center relative z-10 flex-1">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/5 text-primary shadow-[0_8px_30px_rgba(20,184,166,0.25)]">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/5 text-primary glow-cyan">
                     <IconComp className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary">{milestone.label}</span>
@@ -334,7 +334,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               );
             })}
           </div>
-          <ol className="relative mx-auto max-w-[700px] border-l border-slate-200 pl-6 md:pl-10 md:max-w-none">
+          <ol className="relative mx-auto max-w-[700px] border-l border pl-6 md:pl-10 md:max-w-none">
             {data.howItWorks.map((step, index) => (
               <li key={step.step ?? index} className={`relative pb-10 md:pb-12 ${index === data.howItWorks.length - 1 ? "pb-0" : ""}`}>
                 <span className="absolute -left-3 md:-left-4 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white text-lg font-semibold shadow-[0_10px_30px_rgba(20,184,166,0.35)]">
