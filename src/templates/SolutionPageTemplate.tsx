@@ -418,8 +418,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {showStickyFAB && (
         <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border shadow-lg p-4 animate-fade-in">
           <Button size="lg" variant="coral" className="group w-full" asChild>
-            <a href="/get-started" aria-label="Get started now">
-              Get Started Now
+            <a href="/get-started" aria-label="Book a free call">
+              Book a Free Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
           </Button>

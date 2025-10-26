@@ -301,7 +301,7 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="white-on-dark" size="lg" asChild>
                 <a href="/get-started">
-                  Get Started Today
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

@@ -46,7 +46,7 @@ const FinalCTASection = () => {
               className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover:translate-y-[-2px] glow-coral hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
             >
               <Link to="/get-started">
-                Book Your Free Strategy Call
+                Book a Free Call
               </Link>
             </Button>
           </div>

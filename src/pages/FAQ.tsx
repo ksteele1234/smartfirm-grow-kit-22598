@@ -259,7 +259,7 @@ const FAQ = () => {
 
               <Button size="lg" variant="hero" asChild>
                 <a href="/get-started">
-                  Get Started Today
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

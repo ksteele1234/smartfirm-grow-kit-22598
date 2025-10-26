@@ -304,7 +304,7 @@ const Resources = () => {
             <div className="text-center">
               <Button variant="outline" asChild>
                 <a href="/get-started">
-                  Get Started
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

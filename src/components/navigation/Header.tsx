@@ -365,7 +365,7 @@ const Header = () => {
               asChild
               className="uppercase text-sm font-bold tracking-wide px-6 py-2.5"
             >
-              <a href="/get-started">GET STARTED</a>
+              <a href="/get-started">BOOK A FREE CALL</a>
             </Button>
           </div>
 
@@ -408,7 +408,7 @@ const Header = () => {
                 className="w-full mt-4 uppercase text-sm font-bold tracking-wide" 
                 asChild
               >
-                <a href="/get-started">GET STARTED</a>
+                <a href="/get-started">BOOK A FREE CALL</a>
               </Button>
             </div>
           </nav>

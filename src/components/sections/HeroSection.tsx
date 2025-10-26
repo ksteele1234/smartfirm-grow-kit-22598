@@ -170,7 +170,7 @@ const HeroSection = () => {
                 asChild
               >
                 <a href="/get-started" className="inline-flex items-center justify-center gap-2">
-                  Get Your Free Growth Plan
+                  Book a Free Call
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </Button>

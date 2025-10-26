@@ -251,7 +251,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 asChild
               >
                 <a href="/get-started">
-                  Get Started Today
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
