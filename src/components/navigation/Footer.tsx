@@ -168,13 +168,13 @@ const Footer = () => {
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-6 text-xs text-white/50">
-              <a href="/privacy" className="hover:text-[#2dd4bf] transition-colors duration-200">
+              <a href="/privacy" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="/terms" className="hover:text-[#2dd4bf] transition-colors duration-200">
+              <a href="/terms" className="hover:text-primary transition-colors duration-200">
                 Terms of Service
               </a>
-              <a href="/cookies" className="hover:text-[#2dd4bf] transition-colors duration-200">
+              <a href="/cookies" className="hover:text-primary transition-colors duration-200">
                 Cookie Policy
               </a>
             </div>

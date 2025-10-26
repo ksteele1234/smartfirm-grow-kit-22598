@@ -4,7 +4,7 @@ import { FloatingShapes } from "@/components/ui/visual-accents";
 
 const ReadyToTransformSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[#0a2e2e] to-[#134444] overflow-hidden section-padding">
+    <section className="relative bg-gradient-deep-teal overflow-hidden section-padding">
       {/* Orbital Circle System - 3 circles rotating in lower right corner */}
       <svg 
         className="absolute w-[400px] h-[400px] z-[1] hidden lg:block opacity-90"

@@ -208,13 +208,13 @@ const Resources = () => {
             <div className="max-w-6xl mx-auto">
               <Card className="shadow-lg border-border overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  <div className="bg-gradient-to-br from-primary to-teal p-10 lg:p-16 text-primary-foreground flex items-center">
+                  <div className="bg-gradient-vibrant-teal p-10 lg:p-16 text-primary-foreground flex items-center">
                     <div>
-                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-white text-sm font-medium mb-6">
+                      <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 text-on-dark-heading text-sm font-medium mb-6">
                         <Star className="h-4 w-4 mr-2" />
                         Featured Resource
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-6">
+                      <h3 className="text-2xl md:text-3xl font-bold text-on-dark-heading mb-6">
                         The Ultimate Guide to Automated Lead Generation
                       </h3>
                       <p className="text-white/90 mb-8 text-lg leading-relaxed">

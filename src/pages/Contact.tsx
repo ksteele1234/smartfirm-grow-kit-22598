@@ -103,7 +103,7 @@ const Contact = () => {
       <main>
       {/* Hero Section */}
       <section className="relative bg-gradient-deep-teal pt-32 pb-24 pb-32 md:pb-40 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
         {/* Curved bottom edge */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">

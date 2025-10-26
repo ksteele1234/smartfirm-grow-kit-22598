@@ -191,7 +191,7 @@ const Header = () => {
                 <NavigationMenuLink href="/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
+                  "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   HOME
                 </NavigationMenuLink>
@@ -201,8 +201,8 @@ const Header = () => {
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
-                  "data-[state=open]:text-[#14b8a6]"
+                  "hover:text-primary focus:text-primary",
+                  "data-[state=open]:text-primary"
                 )}>
                   <a href="/leading-marketing-services-for-accounting-firms" className="flex items-center">
                     SERVICES
@@ -252,8 +252,8 @@ const Header = () => {
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
-                  "data-[state=open]:text-[#14b8a6]"
+                  "hover:text-primary focus:text-primary",
+                  "data-[state=open]:text-primary"
                 )}>
                   <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="flex items-center">
                     SOLUTIONS
@@ -303,8 +303,8 @@ const Header = () => {
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6]",
-                  "data-[state=open]:text-[#14b8a6]"
+                  "hover:text-primary focus:text-primary",
+                  "data-[state=open]:text-primary"
                 )}>
                   <a href="/industries-expert-marketing-agency-for-accountants" className="flex items-center">
                     INDUSTRIES
@@ -340,7 +340,7 @@ const Header = () => {
                 <NavigationMenuLink href="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
+                  "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   ABOUT US
                 </NavigationMenuLink>
@@ -350,7 +350,7 @@ const Header = () => {
                 <NavigationMenuLink href="/contact" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-sm font-medium text-slate-700 transition-colors duration-200",
-                  "hover:text-[#14b8a6] focus:text-[#14b8a6] focus:outline-none"
+                  "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   CONTACT
                 </NavigationMenuLink>
@@ -384,22 +384,22 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="lg:hidden py-4 border-t border-border" aria-label="Mobile navigation">
             <div className="flex flex-col space-y-4">
-              <a href="/" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 HOME
               </a>
-              <a href="/leading-marketing-services-for-accounting-firms" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/leading-marketing-services-for-accounting-firms" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 SERVICES
               </a>
-              <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries-expert-marketing-agency-for-accountants" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/industries-expert-marketing-agency-for-accountants" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 INDUSTRIES
               </a>
-              <a href="/about" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/about" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 ABOUT US
               </a>
-              <a href="/contact" className="text-slate-700 hover:text-[#14b8a6] transition-colors duration-200 font-medium">
+              <a href="/contact" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 CONTACT
               </a>
               <Button 

@@ -64,7 +64,7 @@ const ToolsCalculators = () => {
       duration: "3 minutes",
       results: "Personalized report",
       link: "/tools/marketing-scorecard",
-      color: "from-teal to-light-teal"
+      color: "from-primary to-accent"
     },
     {
       id: "roi-calculator",
@@ -94,7 +94,7 @@ const ToolsCalculators = () => {
       duration: "5 minutes",
       results: "Bottleneck analysis",
       link: "/tools/workflow-bottleneck-finder",
-      color: "from-teal to-light-teal"
+      color: "from-primary to-accent"
     },
     {
       id: "tech-stack-roi-calculator",
@@ -124,7 +124,7 @@ const ToolsCalculators = () => {
       duration: "4 minutes",
       results: "Lead gen score",
       link: "/tools/lead-generation-scorecard",
-      color: "from-teal to-light-teal"
+      color: "from-primary to-accent"
     },
     {
       id: "modern-firm-quiz",
@@ -154,7 +154,7 @@ const ToolsCalculators = () => {
       duration: "2 minutes",
       results: "SEO report",
       link: "/tools/seo-audit",
-      color: "from-teal to-light-teal"
+      color: "from-primary to-accent"
     },
     {
       id: "page-grader",

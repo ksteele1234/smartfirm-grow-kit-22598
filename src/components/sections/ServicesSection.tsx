@@ -51,7 +51,7 @@ const ServicesSection = () => {
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
-          <p className="text-xl text-[#6B7280] max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
             From SEO and PPC services for accounting firms to review generation and website optimization. SmartFirm offers marketing packages for CPA firms that convert prospects into long-term clients.
           </p>
         </div>
@@ -66,15 +66,15 @@ const ServicesSection = () => {
                 <Link 
                   key={index}
                   to={service.link}
-                  className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-accent/20"
                 >
                   <div className="mb-4">
-                    <Icon className="h-10 w-10 text-[#3A4A6C] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                    <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-[#6B7280] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </Link>
@@ -90,15 +90,15 @@ const ServicesSection = () => {
                 <Link 
                   key={index + 3}
                   to={service.link}
-                  className="group bg-[#7AB2B2]/10 hover:bg-[#7AB2B2]/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-[#7AB2B2]/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg border border-accent/20"
                 >
                   <div className="mb-4">
-                    <Icon className="h-10 w-10 text-[#3A4A6C] group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                    <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                   </div>
                   <h3 className="text-xl font-bold text-primary mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-[#6B7280] leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                 </Link>
@@ -109,12 +109,12 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary/5 to-teal/5 rounded-2xl p-8 lg:p-12 border border-border/50">
+          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-12 border border-border/50">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to Transform Your Marketing?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="dark-teal" size="lg" className="group" asChild>
+              <Button variant="vibrant-teal" size="lg" className="group" asChild>
                 <a href="/get-started">
                   <Phone className="mr-2 h-5 w-5" />
                   Book My Free Growth Strategy Call

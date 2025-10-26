@@ -627,7 +627,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                           }
                         }}
                       >
-                        <summary className="cursor-pointer list-none text-base font-semibold text-[#647FBC] flex items-center justify-between gap-4">
+                        <summary className="cursor-pointer list-none text-base font-semibold text-primary flex items-center justify-between gap-4">
                           <span>{faq.question}</span>
                           <ArrowRight className="h-4 w-4 text-[#14b8a6] transition-transform group-open:rotate-90" aria-hidden="true" />
                         </summary>
@@ -709,7 +709,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           >
             <Button 
               size="lg" 
-              className="px-8 py-4 text-lg font-bold bg-white text-[#243b55] hover:bg-white/90 transition-all duration-200 group"
+              variant="white-on-dark"
+              className="px-8 py-4 text-lg font-bold transition-all duration-200 group"
               asChild
             >
               <a href={data.ctaButtonLink}>

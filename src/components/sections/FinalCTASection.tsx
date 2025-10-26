@@ -8,7 +8,7 @@ const FinalCTASection = () => {
   const content = useScrollAnimation();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#243b55] to-[#4a7ba7] section-padding">
+    <section className="relative overflow-hidden bg-gradient-muted-blue section-padding">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
@@ -43,7 +43,7 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="px-12 py-5 text-xl font-bold bg-gradient-to-r from-[#fb7185] to-[#f43f5e] text-white hover:translate-y-[-2px] shadow-[0_8px_32px_rgba(251,113,133,0.6)] hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
+              className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover:translate-y-[-2px] glow-coral hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
               style={{
                 animation: 'gentlePulse 2s ease-in-out infinite'
               }}

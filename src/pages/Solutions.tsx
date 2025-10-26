@@ -323,8 +323,7 @@ const Solutions = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
-                variant="secondary"
-                className="bg-white text-primary hover:bg-white/90 font-semibold"
+                variant="white-on-dark"
                 asChild
               >
                 <a href="/get-started">

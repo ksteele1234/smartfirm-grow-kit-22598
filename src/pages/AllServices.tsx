@@ -261,7 +261,7 @@ const AllServices = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
+            <Button variant="white-outline-on-dark" size="lg" asChild>
               <a href="/contact">
                 Contact Us
               </a>

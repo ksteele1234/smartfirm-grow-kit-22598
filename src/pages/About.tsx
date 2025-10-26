@@ -161,7 +161,7 @@ const About = () => {
       <main>
         {/* Hero Section */}
         <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-deep-teal overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
@@ -364,10 +364,10 @@ const About = () => {
                         context="SmartFirm team member"
                         className={imageClasses}
                       />
-                      <CardTitle className="text-xl text-primary-blue mb-2">
+                      <CardTitle className="text-xl text-primary mb-2">
                         {member.name}
                       </CardTitle>
-                      <p className="text-primary-teal font-medium mb-4">{member.title}</p>
+                      <p className="text-accent font-medium mb-4">{member.title}</p>
                       <CardDescription className="text-text-secondary leading-relaxed">
                         {member.bio}
                       </CardDescription>
@@ -391,7 +391,7 @@ const About = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 What Makes SmartFirm Different
               </h2>
             </div>
@@ -401,9 +401,9 @@ const About = () => {
                 <Card key={index} className="border elevation-2 card-interactive h-full">
                   <CardHeader className="pb-4">
                     <div className="mb-4 p-3 rounded-lg bg-accent/10 w-fit">
-                      <CheckCircle className="h-8 w-8 text-primary-teal" />
+                      <CheckCircle className="h-8 w-8 text-accent" />
                     </div>
-                    <CardTitle className="text-xl text-primary-blue mb-3">
+                    <CardTitle className="text-xl text-primary mb-3">
                       {item.title}
                     </CardTitle>
                     <CardDescription className="text-text-secondary leading-relaxed">
@@ -420,7 +420,7 @@ const About = () => {
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Our Journey
               </h2>
             </div>
@@ -520,8 +520,7 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                variant="secondary"
-                className="bg-white text-primary-blue hover:bg-white/90"
+                variant="white-on-dark"
                 asChild
               >
                 <a href="/contact">

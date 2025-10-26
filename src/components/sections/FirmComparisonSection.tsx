@@ -83,10 +83,10 @@ const FirmComparisonSection = () => {
               animate={heading.isInView ? "visible" : "hidden"}
               variants={fadeInUpVariants}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-[#f0fdfa] to-[#ccfbf1] border-2 border-[#14b8a6] rounded-2xl p-10 shadow-[0_8px_24px_rgba(20,184,166,0.15)] hover:translate-y-[-4px] hover:shadow-[0_12px_32px_rgba(20,184,166,0.25)] transition-all duration-300"
+              className="bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary rounded-2xl p-10 elevation-2 hover:translate-y-[-4px] hover:elevation-3 transition-all duration-300"
             >
-              <div className="inline-block bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] px-4 py-2 rounded-lg mb-5">
-                <span className="text-sm font-bold text-white">The SmartFirm Way</span>
+              <div className="inline-block bg-gradient-vibrant-teal px-4 py-2 rounded-lg mb-5">
+                <span className="text-sm font-bold text-on-dark-heading">The SmartFirm Way</span>
               </div>
               
               <div className="flex items-start gap-3 mb-6">
