@@ -188,7 +188,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Mission & Vision</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <Card className="border-light-border shadow-elegant">
+              <Card className="border elevation-2 card-interactive">
                 <CardHeader className="text-center pb-6">
                   <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit">
                     <Target className="h-8 w-8 text-primary" />
@@ -273,7 +273,7 @@ const About = () => {
                     height={256}
                     description="Katie Steele professional headshot"
                     context="About SmartFirm page"
-                    className="w-64 h-64 rounded-lg object-cover shadow-elegant"
+                    className="w-64 h-64 rounded-lg object-cover elevation-2"
                   />
                 </div>
                 
@@ -398,9 +398,9 @@ const About = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {differentiators.map((item, index) => (
-                <Card key={index} className="border-light-border shadow-elegant h-full">
+                <Card key={index} className="border elevation-2 card-interactive h-full">
                   <CardHeader className="pb-4">
-                    <div className="mb-4 p-3 rounded-lg bg-accent-light/20 w-fit">
+                    <div className="mb-4 p-3 rounded-lg bg-accent/10 w-fit">
                       <CheckCircle className="h-8 w-8 text-primary-teal" />
                     </div>
                     <CardTitle className="text-xl text-primary-blue mb-3">
@@ -427,7 +427,7 @@ const About = () => {
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
                 {journeyMilestones.map((milestone, index) => (
-                  <Card key={index} className="border-light-border shadow-elegant">
+                  <Card key={index} className="border elevation-2 card-interactive">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-teal/20 flex items-center justify-center">

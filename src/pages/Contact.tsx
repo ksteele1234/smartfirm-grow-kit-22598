@@ -141,7 +141,7 @@ const Contact = () => {
 
               {/* Contact Details */}
               <div className="space-y-6">
-                <Card className="shadow-card">
+                <Card className="elevation-1 card-interactive">
                   <CardContent className="p-6">
                      <div className="flex items-center space-x-4">
                        <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
@@ -156,7 +156,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="elevation-1 card-interactive">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
@@ -171,7 +171,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="elevation-1 card-interactive">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
@@ -186,7 +186,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card">
+                <Card className="elevation-1 card-interactive">
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg flex items-center justify-center">
@@ -207,7 +207,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <Card className="shadow-card">
+              <Card className="elevation-1 card-interactive">
                 <CardHeader>
                   <CardTitle className="text-2xl font-heading text-primary">
                     Send Us a Message
@@ -255,7 +255,7 @@ const Contact = () => {
             </p>
 
             <div className="space-y-8">
-              <Card className="shadow-card">
+              <Card className="elevation-1 card-interactive">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -273,7 +273,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card">
+              <Card className="elevation-1 card-interactive">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -291,7 +291,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card">
+              <Card className="elevation-1 card-interactive">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -309,7 +309,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card">
+              <Card className="elevation-1 card-interactive">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">

@@ -169,7 +169,7 @@ const GetStarted = () => {
         </div>
         <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 shadow-soft w-full max-w-[1400px] mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 elevation-1 w-full max-w-[1400px] mx-auto">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
                 style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '600px'}}
@@ -208,7 +208,7 @@ const GetStarted = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {engagementOptions.map((option, index) => (
-              <Card key={index} className={`shadow-card hover:shadow-soft transition-shadow relative ${option.popular ? 'ring-2 ring-primary' : ''}`}>
+              <Card key={index} className={`elevation-1 hover:elevation-2 transition-shadow relative ${option.popular ? 'ring-2 ring-primary' : ''}`}>
                 {option.popular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     Most Popular
@@ -282,7 +282,7 @@ const GetStarted = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {supportOptions.map((option, index) => (
-              <Card key={index} className="shadow-card hover:shadow-soft transition-shadow">
+              <Card key={index} className="elevation-1 hover:elevation-2 transition-shadow">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-lg flex items-center justify-center">
                     <option.icon className="w-8 h-8 text-accent" />
@@ -316,7 +316,7 @@ const GetStarted = () => {
             </h2>
           </div>
           
-          <Card className="max-w-4xl mx-auto shadow-card">
+          <Card className="max-w-4xl mx-auto elevation-1">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-2">

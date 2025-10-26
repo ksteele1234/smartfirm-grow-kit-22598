@@ -222,10 +222,10 @@ const Industries = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {industryCategories.map((category, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border">
+                <Card key={index} className="group hover:elevation-2 transition-all duration-300 border card-interactive">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="p-3 rounded-lg bg-accent-light/20 w-fit">
+                      <div className="p-3 rounded-lg bg-accent/10 w-fit">
                         {category.icon}
                       </div>
                       <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
@@ -274,9 +274,9 @@ const Industries = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {specializedNiches.map((niche, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-light-border text-center">
+                <Card key={index} className="group hover:elevation-2 transition-all duration-300 border text-center card-interactive">
                   <CardHeader className="pb-2">
-                    <div className="mx-auto mb-3 p-3 rounded-lg bg-accent-light/20 w-fit">
+                    <div className="mx-auto mb-3 p-3 rounded-lg bg-accent/10 w-fit">
                       {niche.icon}
                     </div>
                     <CardTitle className="text-lg text-primary mb-2">
@@ -305,7 +305,7 @@ const Industries = () => {
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="shadow-elegant border-light-border">
+              <Card className="elevation-2 border card-interactive">
                 <CardHeader className="text-center pb-6">
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
                     <Star className="h-4 w-4 mr-1" />
@@ -346,7 +346,7 @@ const Industries = () => {
                       </ul>
                     </div>
                     
-                    <div className="bg-accent-light/30 p-6 rounded-lg">
+                    <div className="bg-muted p-6 rounded-lg">
                       <h3 className="font-semibold text-primary mb-3 flex items-center">
                         <Calculator className="h-5 w-5 mr-2" />
                         Industry Insights:
@@ -386,7 +386,7 @@ const Industries = () => {
         <section className="section-padding">
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
-              <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
+              <div className="bg-accent/10 p-8 rounded-lg border">
                 <Building className="h-12 w-12 text-accent mx-auto mb-6" />
                 <blockquote className="text-xl text-foreground italic mb-6">
                   "SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing 

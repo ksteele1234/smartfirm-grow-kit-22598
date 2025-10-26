@@ -66,10 +66,10 @@ const HowItWorksSection = () => {
                   
                   {/* Icon Circle */}
                   <div className="relative flex-shrink-0">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center shadow-soft group-hover:shadow-lg transition-all duration-300 scale-feedback">
+                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center elevation-1 group-hover:elevation-2 transition-all duration-300 scale-feedback">
                       <IconComponent className="h-10 w-10 text-white" />
                     </div>
-                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent-light border-2 border-primary rounded-full flex items-center justify-center">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent/10 border-2 border-primary rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const HowItWorksSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-card border border-border/50">
+          <div className="bg-white rounded-2xl p-8 lg:p-12 elevation-1 border border-border/50">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-[#243b55] mb-4">
               Ready to Get Started?
             </h3>

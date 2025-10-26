@@ -228,7 +228,7 @@ const SuccessStories = () => {
               </h2>
             </div>
             
-            <Card className="max-w-4xl mx-auto shadow-card">
+            <Card className="max-w-4xl mx-auto elevation-1">
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -390,7 +390,7 @@ const SuccessStories = () => {
           {/* Case Studies Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCaseStudies.map((study) => (
-              <Card key={study.id} className="shadow-card hover:shadow-soft transition-shadow group cursor-pointer">
+              <Card key={study.id} className="elevation-1 hover:elevation-2 transition-shadow group cursor-pointer card-interactive">
                 <CardHeader>
                   <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg h-40 mb-4 flex items-center justify-center">
                     <TrendingUp className="w-12 h-12 text-primary" />
@@ -430,7 +430,7 @@ const SuccessStories = () => {
             </p>
           </div>
           
-          <Card className="max-w-4xl mx-auto shadow-card">
+          <Card className="max-w-4xl mx-auto elevation-1">
             <CardContent className="p-8 md:p-12 text-center">
               <Quote className="w-12 h-12 text-primary mx-auto mb-6" />
               <blockquote className="text-xl md:text-2xl text-text-primary mb-8 italic">

@@ -148,13 +148,13 @@ const Footer = () => {
               <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Youtube className="h-4 w-4" />
               </a>
-              <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-white/70 hover:text-[#2dd4bf] hover:border-[#2dd4bf] transition-all duration-200">
+              <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>

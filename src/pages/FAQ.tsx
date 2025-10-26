@@ -145,7 +145,7 @@ const FAQ = () => {
                       return (
                         <div
                           key={index}
-                          className="bg-background border border-border rounded-xl shadow-soft hover:shadow-card transition-shadow duration-200"
+                          className="bg-background border rounded-xl elevation-1 hover:elevation-2 transition-shadow duration-200"
                         >
                           {/* Question (Clickable) */}
                           <button
@@ -217,7 +217,7 @@ const FAQ = () => {
               </p>
               
               <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <MessageSquare className="h-6 w-6 text-accent" />
                   </div>
@@ -230,7 +230,7 @@ const FAQ = () => {
                   </Button>
                 </div>
 
-                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Phone className="h-6 w-6 text-accent" />
                   </div>
@@ -243,7 +243,7 @@ const FAQ = () => {
                   </Button>
                 </div>
 
-                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Mail className="h-6 w-6 text-accent" />
                   </div>
