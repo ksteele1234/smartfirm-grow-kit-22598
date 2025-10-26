@@ -44,9 +44,6 @@ const FinalCTASection = () => {
               size="lg"
               asChild
               className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover:translate-y-[-2px] glow-coral hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
-              style={{
-                animation: 'gentlePulse 2s ease-in-out infinite'
-              }}
             >
               <Link to="/get-started">
                 Book Your Free Strategy Call
@@ -61,18 +58,6 @@ const FinalCTASection = () => {
         </motion.div>
       </div>
 
-      <style>{`
-        @keyframes gentlePulse {
-          0%, 100% { 
-            transform: scale(1); 
-            box-shadow: 0 8px 32px rgba(251, 113, 133, 0.6); 
-          }
-          50% { 
-            transform: scale(1.02); 
-            box-shadow: 0 12px 40px rgba(251, 113, 133, 0.7); 
-          }
-        }
-      `}</style>
     </section>
   );
 };

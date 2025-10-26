@@ -705,6 +705,19 @@ All colors MUST be HSL converted from the official brand colors.
     }
   }
 
+  /* Gentle coral glow for CTA buttons (global) */
+  @keyframes pulse-coral {
+    0%, 100% {
+      box-shadow: 0 6px 28px hsl(var(--coral-start) / 0.5);
+    }
+    50% {
+      box-shadow: 0 12px 44px hsl(var(--coral-start) / 0.7);
+    }
+  }
+  .animate-gentle-pulse {
+    animation: pulse-coral 3.5s ease-in-out infinite;
+  }
+
   /* ===== SVG & GRAPHICS UTILITIES ===== */
   /* For animated SVG dots and orbital graphics */
   .dot-primary {

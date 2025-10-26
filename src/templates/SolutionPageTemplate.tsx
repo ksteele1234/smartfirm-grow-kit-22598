@@ -236,7 +236,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
         </div>
           <div className="mt-7 flex flex-col items-center gap-3 text-center">
-          <Button variant="coral" size="lg" className="hover-lift pulse-teal" asChild>
+          <Button variant="coral" size="lg" className="hover-lift animate-gentle-pulse" asChild>
             <a href="/get-started">Book Your Strategy Call</a>
           </Button>
           <a
