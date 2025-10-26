@@ -375,18 +375,29 @@ const SEO = ({
 
       // 6. FAQPage (when FAQs provided)
       if (faqs && faqs.length > 0) {
-        graphItems.push({
-          "@type": "FAQPage",
-          "@id": `${canonicalUrl}#faqpage`,
-          "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": faq.answer
-            }
-          }))
-        });
+        // Check if FAQ schema already exists in DOM (from build-time injection)
+        const existingFAQSchema = document.querySelector('script[type="application/ld+json"]');
+        const hasFAQSchemaAlready = existingFAQSchema?.textContent?.includes('"@type":"FAQPage"') || 
+                                     existingFAQSchema?.textContent?.includes('"@type": "FAQPage"');
+        
+        if (!hasFAQSchemaAlready) {
+          console.log('[SEO] Adding FAQ schema via React (no pre-rendered schema found)');
+          graphItems.push({
+            "@type": "FAQPage",
+            "@id": `${canonicalUrl}#faqpage`,
+            "mainEntity": faqs.map((faq, index) => ({
+              "@type": "Question",
+              "@id": `${canonicalUrl}#question-${index + 1}`, // Unique ID for each question
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          });
+        } else {
+          console.log('[SEO] FAQ schema already exists in DOM (from build-time injection), skipping React injection');
+        }
       }
 
       // 7. BreadcrumbList (auto-generated or provided)
