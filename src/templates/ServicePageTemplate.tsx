@@ -247,7 +247,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             >
               <Button 
                 size="lg"
-                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift transition-all duration-200 animate-gentle-pulse"
+                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift transition-all duration-200"
                 asChild
               >
                 <a href="/get-started">
