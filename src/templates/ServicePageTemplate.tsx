@@ -160,7 +160,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
       Icon: MessageCircle
     },
     {
-      label: data.ctaButtonText || "Book Consultation",
+      label: data.ctaButtonText || "Book a Free Call",
       description: "Connect with a strategist",
       href: "#sf-final-cta",
       Icon: ArrowRight
