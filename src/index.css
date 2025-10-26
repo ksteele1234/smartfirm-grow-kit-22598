@@ -264,22 +264,61 @@ All colors MUST be HSL converted from the official brand colors.
 
   h1 {
     @apply text-4xl lg:text-5xl text-foreground;
+    letter-spacing: -0.02em; /* Tighter tracking for large text */
   }
 
   h2 {
     @apply text-3xl lg:text-4xl text-primary;
+    letter-spacing: -0.01em;
   }
 
   h3 {
     @apply text-xl lg:text-2xl font-medium text-primary;
+    letter-spacing: -0.01em;
   }
 
   h4, h5, h6 {
     @apply text-muted-foreground;
+    letter-spacing: normal;
   }
 
   p {
     line-height: 1.6;
+  }
+
+  /* ===== REFINED TYPOGRAPHY UTILITIES ===== */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Display text for hero sections */
+  .text-display {
+    @apply text-5xl lg:text-6xl font-bold;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  /* Large subheadings */
+  .text-lead {
+    @apply text-xl lg:text-2xl;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* Small print / disclaimers */
+  .text-small {
+    @apply text-sm;
+    line-height: 1.5;
+  }
+
+  .text-xs-refined {
+    @apply text-xs;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -352,6 +391,76 @@ All colors MUST be HSL converted from the official brand colors.
     background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
   }
 
+  /* ===== GRADIENT VARIANTS ===== */
+  /* Radial Gradients - For hero sections and focal points */
+  .bg-gradient-radial-teal {
+    background: radial-gradient(
+      ellipse at top,
+      hsl(var(--vibrant-teal-start)) 0%,
+      hsl(var(--deep-teal-end)) 100%
+    );
+  }
+
+  .bg-gradient-radial-blue {
+    background: radial-gradient(
+      circle at center,
+      hsl(var(--muted-blue-end)) 0%,
+      hsl(var(--muted-blue-start)) 100%
+    );
+  }
+
+  /* Mesh Gradients - Multi-color sophisticated backgrounds */
+  .bg-gradient-mesh-professional {
+    background: linear-gradient(135deg, 
+      hsl(var(--deep-teal-start)) 0%,
+      hsl(var(--vibrant-teal-start)) 40%,
+      hsl(var(--muted-blue-end)) 100%
+    );
+  }
+
+  .bg-gradient-mesh-vibrant {
+    background: linear-gradient(135deg,
+      hsl(var(--vibrant-teal-start)) 0%,
+      hsl(var(--bright-cyan)) 50%,
+      hsl(var(--vibrant-teal-end)) 100%
+    );
+  }
+
+  /* Animated Gradient - Subtle motion for CTAs */
+  .bg-gradient-animated {
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--coral-start)),
+      hsl(var(--coral-end)),
+      hsl(var(--vibrant-teal-start)),
+      hsl(var(--vibrant-teal-end))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Subtle Gradient Overlays */
+  .gradient-overlay-teal {
+    position: relative;
+  }
+
+  .gradient-overlay-teal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--vibrant-teal-start) / 0.05) 100%
+    );
+    pointer-events: none;
+  }
+
   /* ===== ON-DARK TYPOGRAPHY ===== */
   .text-on-dark-heading {
     color: #ffffff;
@@ -403,6 +512,23 @@ All colors MUST be HSL converted from the official brand colors.
 
   .hover-glow-coral {
     @apply transition-all duration-300 ease-out hover:glow-coral;
+  }
+
+  .hover-brighten {
+    @apply transition-all duration-300 ease-out;
+    filter: brightness(1);
+  }
+
+  .hover-brighten:hover {
+    filter: brightness(1.08);
+  }
+
+  .hover-scale-sm {
+    @apply transition-transform duration-200 ease-out hover:scale-105;
+  }
+
+  .hover-scale-lg {
+    @apply transition-transform duration-200 ease-out hover:scale-110;
   }
 
   /* ===== TEXT GRADIENT UTILITIES ===== */
@@ -488,4 +614,49 @@ All colors MUST be HSL converted from the official brand colors.
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
+
+  /* ===== VISUAL INTEREST UTILITIES ===== */
+  /* Backdrop effects for modals and overlays */
+  .backdrop-blur-professional {
+    @apply backdrop-blur-md bg-white/95;
+  }
+
+  /* Soft inner glow for premium feel */
+  .inner-glow-teal {
+    box-shadow: inset 0 2px 8px hsl(var(--vibrant-teal-start) / 0.1);
+  }
+
+  /* Card hover state - combined effect */
+  .card-interactive {
+    @apply transition-all duration-300 ease-out;
+    @apply hover:-translate-y-1 hover:shadow-teal-lg;
+  }
+
+  /* Smooth focus rings for accessibility */
+  .focus-ring-teal {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: hsl(var(--vibrant-teal-start));
+  }
+
+  .focus-ring-coral {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: hsl(var(--coral-start));
+  }
+
+  /* Pulsing effect for call-to-action */
+  .pulse-teal {
+    animation: pulse-teal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-teal {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 0 0 hsl(var(--vibrant-teal-start) / 0.4);
+    }
+    50% {
+      opacity: 0.9;
+      box-shadow: 0 0 0 8px hsl(var(--vibrant-teal-start) / 0);
+    }
+  }
 }
+
