@@ -134,6 +134,16 @@ const SEO = ({
     // Update document title
     document.title = pageTitle;
     
+    // Debug logging for FAQ structured data
+    if (pageType === 'faq' && faqs) {
+      console.log('[SEO Debug] FAQ structured data:', {
+        faqCount: faqs.length,
+        firstFaq: faqs[0],
+        pageType,
+        canonicalUrl
+      });
+    }
+    
     // Update standard meta tags
     const updateMetaTag = (property: string, content: string, useProperty = false) => {
       const attribute = useProperty ? 'property' : 'name';
