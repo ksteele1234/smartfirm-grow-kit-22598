@@ -51,6 +51,7 @@ All colors MUST be HSL converted from the official brand colors.
  @layer base {
   :root {
     /* ===== COLOR PRIMITIVES ===== */
+    /* ⚠️ DO NOT use primitives directly in components. Use semantic tokens below. */
     /* Deep Teal Gradient */
     --deep-teal-start: 180 74% 11%; /* #0a2e2e */
     --deep-teal-end: 180 62% 16%; /* #134444 */
@@ -84,6 +85,7 @@ All colors MUST be HSL converted from the official brand colors.
     --text-muted: 215 16% 47%; /* slate-600 */
 
     /* ===== SEMANTIC TOKENS ===== */
+    /* ✅ USE THESE in components for consistent theming */
     --background: var(--white);
     --foreground: var(--text-dark);
 
@@ -112,7 +114,7 @@ All colors MUST be HSL converted from the official brand colors.
     --input: 215 20% 85%;
     --ring: var(--vibrant-teal-start);
 
-    /* Legacy support for existing components */
+    /* Legacy support for existing components - To be removed in future cleanup */
     --primary-blue: 221 47% 62%;
     --secondary-blue: 218 34% 67%;
     --primary-teal: var(--vibrant-teal-start);
@@ -223,19 +225,19 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl text-[#134444];
+    @apply text-4xl lg:text-5xl text-foreground;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl text-[#4a7ba7];
+    @apply text-3xl lg:text-4xl text-primary;
   }
 
   h3 {
-    @apply text-xl lg:text-2xl font-medium text-[#4D869C];
+    @apply text-xl lg:text-2xl font-medium text-primary;
   }
 
   h4, h5, h6 {
-    color: #4a7ba4;
+    @apply text-muted-foreground;
   }
 
   p {
@@ -318,11 +320,11 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   .text-on-dark-body {
-    color: #e2f5f8;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .text-on-dark-muted {
-    color: rgba(226, 245, 248, 0.8);
+    color: rgba(255, 255, 255, 0.75);
   }
 
   /* ===== SECTION SPACING ===== */
@@ -344,16 +346,37 @@ All colors MUST be HSL converted from the official brand colors.
   .glow-cyan { box-shadow: var(--glow-cyan); }
   .glow-gold { box-shadow: var(--glow-gold); }
 
+  /* ===== HOVER STATE UTILITIES ===== */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
+  }
+
+  .hover-shadow-teal {
+    @apply transition-shadow duration-300 ease-out hover:shadow-teal-lg;
+  }
+
+  .hover-shadow-coral {
+    @apply transition-shadow duration-300 ease-out;
+  }
+
+  .hover-shadow-coral:hover {
+    box-shadow: 0 8px 24px rgba(251, 113, 133, 0.3);
+  }
+
+  .hover-glow-coral {
+    @apply transition-all duration-300 ease-out hover:glow-coral;
+  }
+
   /* ===== TEXT GRADIENT UTILITIES ===== */
   .text-gradient-teal {
-    @apply bg-gradient-to-r from-[#14b8a6] to-[#2dd4bf] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--vibrant-teal-start))] to-[hsl(var(--vibrant-teal-end))] bg-clip-text text-transparent;
   }
 
   .text-gradient-coral {
-    @apply bg-gradient-to-r from-[#fb7185] to-[#f43f5e] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--coral-start))] to-[hsl(var(--coral-end))] bg-clip-text text-transparent;
   }
 
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(var(--gold-start))] to-[hsl(var(--gold-end))] bg-clip-text text-transparent;
   }
 }
