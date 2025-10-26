@@ -30,34 +30,16 @@ const FounderStory = () => {
           {/* LEFT COLUMN: Founder Story */}
           <div className="lg:col-span-6">
             {/* Headline */}
-            <h2
-              className="text-[28px] lg:text-[28px] md:text-[26px] sm:text-2xl font-bold mb-5"
-              style={{
-                color: '#1A202C',
-                lineHeight: '1.3',
-              }}
-            >
+            <h2 className="text-[28px] lg:text-[28px] md:text-[26px] sm:text-2xl font-bold mb-5 text-foreground leading-[1.3]">
               Built By People Who Understand Your Business
             </h2>
 
             {/* Body Text */}
-            <p
-              className="text-[17px] md:text-base font-normal mb-8"
-              style={{
-                color: '#2D3748',
-                lineHeight: '1.7',
-              }}
-            >
+            <p className="text-[17px] md:text-base font-normal mb-8 text-foreground leading-[1.7]">
               SmartFirm was founded by Katie Steele and Brian Hellewell, CPA (Inactive) who bring 20+ years of experience in IT strategy, financial systems, and business optimization. Katie has spent over two decades transforming businesses—from turning around struggling hospitality brands to implementing enterprise-scale systems. Brian, a former SpaceX product manager, specializes in modernizing accounting firms with secure, scalable technology that integrates seamlessly with accounting tools.
             </p>
             
-            <p
-              className="text-[17px] md:text-base font-normal mb-8"
-              style={{
-                color: '#2D3748',
-                lineHeight: '1.7',
-              }}
-            >
+            <p className="text-[17px] md:text-base font-normal mb-8 text-foreground leading-[1.7]">
               Unlike agencies that dabble in every industry, we only work with accounting firms. We understand your metrics, your seasonality, and what it takes to scale from $400K to $1M+ without burning out your team.
             </p>
 
@@ -66,28 +48,17 @@ const FounderStory = () => {
               {founders.map((founder, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center"
-                  style={{ paddingBottom: '24px' }}
+                  className="flex flex-col items-center pb-6"
                 >
                   <img
                     src={founder.image}
                     alt={`${founder.name} headshot`}
-                    className="w-20 h-20 rounded-full object-cover"
-                    style={{
-                      border: '3px solid #FAFDD6',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
-                    }}
+                    className="w-20 h-20 rounded-full object-cover border-[3px] border-accent-light elevation-1"
                   />
-                  <div
-                    className="text-base font-semibold mt-2 text-center"
-                    style={{ color: '#1A202C', marginBottom: '4px' }}
-                  >
+                  <div className="text-base font-semibold mt-2 text-center text-foreground mb-1">
                     {founder.name}
                   </div>
-                  <div
-                    className="text-sm font-normal mt-1 text-center"
-                    style={{ color: '#4a5568', marginBottom: '16px' }}
-                  >
+                  <div className="text-sm font-normal mt-1 text-center text-muted-foreground mb-4">
                     {founder.title}
                   </div>
                 </div>
@@ -97,14 +68,9 @@ const FounderStory = () => {
 
           {/* RIGHT COLUMN: Why Accounting Firms Only Box */}
           <div className="lg:col-span-4 self-start">
-            <div
-              className="rounded-xl p-8 bg-white border-2 border-[#0F4C5C] shadow-[0_8px_24px_rgba(15,76,92,0.12)] hover:translate-y-[-4px] hover:shadow-[0_12px_28px_rgba(15,76,92,0.15)] transition-all duration-300"
-            >
+            <div className="rounded-xl p-8 bg-card border-2 border-primary elevation-2 hover-lift transition-all duration-300">
               {/* Headline */}
-              <h3
-                className="text-xl font-bold mb-5"
-                style={{ color: '#1A202C' }}
-              >
+              <h3 className="text-xl font-bold mb-5 text-foreground">
                 Why We Work Exclusively With CPAs
               </h3>
 
@@ -116,17 +82,10 @@ const FounderStory = () => {
                     className="flex items-start gap-3"
                   >
                     <CheckCircle2
-                      className="w-5 h-5 flex-shrink-0 mt-0.5"
-                      style={{ color: '#0F4C5C' }}
+                      className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary"
                       aria-hidden="true"
                     />
-                    <span
-                      className="text-base font-medium"
-                      style={{
-                        color: '#2D3748',
-                        lineHeight: '1.5',
-                      }}
-                    >
+                    <span className="text-base font-medium text-foreground leading-[1.5]">
                       {item}
                     </span>
                   </div>

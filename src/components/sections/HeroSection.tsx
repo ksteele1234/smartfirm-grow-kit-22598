@@ -21,11 +21,11 @@ const styles = `
   @keyframes gentlePulse {
     0%, 100% { 
       transform: scale(1); 
-      box-shadow: 0 4px 24px rgba(251, 113, 133, 0.5); 
+      box-shadow: 0 4px 24px hsl(var(--coral-start) / 0.5); 
     }
     50% { 
       transform: scale(1.02); 
-      box-shadow: 0 6px 32px rgba(251, 113, 133, 0.6); 
+      box-shadow: 0 6px 32px hsl(var(--coral-start) / 0.6); 
     }
   }
   @keyframes fadeIn {
@@ -83,7 +83,7 @@ const styles = `
   }
   
   .stat-number {
-    text-shadow: 0 2px 4px rgba(251, 191, 36, 0.3);
+    text-shadow: 0 2px 4px hsl(var(--gold-start) / 0.3);
   }
 
   /* Clip-path for wave-shaped hero bottom */
@@ -149,7 +149,7 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
-              <p className="text-xl leading-relaxed max-w-[600px] mb-8 font-medium" style={{ color: 'rgba(255, 255, 255, 0.9)', textShadow: '0 1px 3px rgba(0, 0, 0, 0.2)' }}>
+              <p className="text-xl leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md">
                 SmartFirm provides expert digital marketing for accounting firms, CPAs, bookkeepers, and tax preparers. We handle your entire operation through marketing automation, lead nurture, and SEO services designed to get you more accounting clients and help you keep them longer.
               </p>
             </div>
@@ -157,9 +157,9 @@ const HeroSection = () => {
             {/* Trust Badges with Gold Bullets */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-[#fbbf24]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--gold-start))]" />
               <span className="text-white text-sm font-medium">50+ Companies Supported</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-[#fbbf24]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--gold-start))]" />
               <span className="text-white text-sm font-medium">Up in 30 Days</span>
             </div>
 

@@ -63,10 +63,10 @@ const WhySmartFirmIsDifferent = () => {
           variants={fadeInUpVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
+          <h2 className="text-4xl font-bold text-primary mb-4">
             Why SmartFirm is Different
           </h2>
-          <p className="text-xl text-[#475569] max-w-[700px] mx-auto">
+          <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </motion.div>
@@ -83,29 +83,28 @@ const WhySmartFirmIsDifferent = () => {
                 animate={heading.isInView ? "visible" : "hidden"}
                 variants={fadeInUpVariants}
                 transition={{ delay }}
-                className="bg-white border border-[#e2e8f0] rounded-2xl p-8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_32px_rgba(20,184,166,0.15)]"
+                className="bg-card border border-border rounded-2xl p-8 elevation-1 card-interactive transition-all duration-300"
               >
                 {/* Icon */}
                 <Icon 
-                  className="w-10 h-10 mb-4" 
-                  style={{ color: item.iconColor }}
+                  className="w-10 h-10 mb-4 text-primary"
                   aria-hidden="true" 
                 />
                 
                 {/* Heading */}
-                <h3 className="text-lg font-semibold text-[#243b55] mb-2">
+                <h3 className="text-lg font-semibold text-secondary mb-2">
                   {item.headline}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-base text-[#333333] leading-relaxed mb-4">
+                <p className="text-base text-foreground leading-relaxed mb-4">
                   {item.description}
                 </p>
                 
                 {/* Key Benefit with checkmark */}
                 <div className="flex items-start gap-2 mt-4">
-                  <CheckCircle className="w-4 h-4 text-[#14b8a6] flex-shrink-0 mt-0.5" />
-                  <p className="text-sm font-semibold text-[#1f5d93]">
+                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-sm font-semibold text-secondary">
                     {item.keyBenefit}
                   </p>
                 </div>
