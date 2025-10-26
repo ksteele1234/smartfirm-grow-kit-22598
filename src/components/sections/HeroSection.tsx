@@ -20,12 +20,10 @@ const styles = `
   }
   @keyframes gentlePulse {
     0%, 100% { 
-      transform: scale(1); 
-      box-shadow: 0 4px 24px hsl(var(--coral-start) / 0.5); 
+      box-shadow: 0 4px 24px hsl(var(--coral-start) / 0.4); 
     }
     50% { 
-      transform: scale(1.02); 
-      box-shadow: 0 6px 32px hsl(var(--coral-start) / 0.6); 
+      box-shadow: 0 8px 40px hsl(var(--coral-start) / 0.7); 
     }
   }
   @keyframes fadeIn {
@@ -48,7 +46,7 @@ const styles = `
       animation: float 3s ease-in-out infinite;
     }
     .animate-gentle-pulse {
-      animation: gentlePulse 2s ease-in-out infinite;
+      animation: gentlePulse 3.5s ease-in-out infinite;
     }
     .animate-fade-in {
       animation: fadeIn 500ms ease-out forwards;
