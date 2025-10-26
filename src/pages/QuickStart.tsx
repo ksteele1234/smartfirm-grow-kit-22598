@@ -137,7 +137,7 @@ const QuickStart = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Complete Marketing Package for CPA Firms | SmartFirm"
+        title="Quick Start Marketing Package for CPA Firms | SmartFirm"
         description="Launch a complete marketing package for CPA firms in 30 days: website setup, lead capture forms, email automation, review requests, and SEO foundation—ready."
         canonicalUrl="https://smartfirm.io/quick-start"
         pageType="service"
@@ -189,17 +189,17 @@ const QuickStart = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-teal/10 overflow-hidden">
+        <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
           <BackgroundPattern pattern="dots" className="opacity-20" />
           <FloatingShapes variant="circles" className="opacity-30" />
           <div className="container mx-auto px-4 text-center relative">
-            <Badge className="mb-6 bg-gradient-to-r from-teal to-primary text-white">
+            <Badge className="mb-6 bg-gradient-vibrant-teal text-white">
               <Clock className="h-4 w-4 mr-2" />
               30-Day Implementation
             </Badge>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
-              Marketing Package For Cpa Firms | SmartFirm
+              Quick Start Marketing Package for CPA Firms
             </h1>
             
             <div id="sf-keyword-intro">
@@ -255,7 +255,7 @@ const QuickStart = () => {
               {packageIncludes.map((item, index) => (
                 <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
                   <CardHeader className="text-center pb-4">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
+                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-primary mb-4">
@@ -323,7 +323,7 @@ const QuickStart = () => {
               {idealFor.map((item, index) => (
                 <Card key={index} className="text-center border-border bg-background hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-6">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
+                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-primary mb-3">
@@ -480,7 +480,7 @@ const QuickStart = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-primary via-primary/95 to-teal text-white relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-gradient-vibrant-teal text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto px-4 text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
