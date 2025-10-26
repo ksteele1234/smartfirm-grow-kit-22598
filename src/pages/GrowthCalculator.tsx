@@ -52,7 +52,7 @@ const GrowthCalculator = () => {
                 className="w-64 h-auto"
               />
               
-              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-[#0F4C5C] leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary leading-tight">
                 Accounting Firm Growth Calculator | SmartFirm
               </h1>
               
@@ -93,46 +93,44 @@ const GrowthCalculator = () => {
       </section>
 
       {/* PROBLEM SECTION */}
-      <section className="py-8" style={{
-        background: 'linear-gradient(to bottom, #6B8FB8 0%, #7AA0C5 50%, #8BA8C8 100%)'
-      }}>
+      <section className="py-8 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/60">
         <div className="container mx-auto px-4 lg:px-6">
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#FAFDD6] text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-background-light text-center mb-8">
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+            <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
+                <p className="text-primary font-medium text-sm leading-tight">
                   Client workload keeps increasing, but growth doesn't.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+            <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
+                <p className="text-primary font-medium text-sm leading-tight">
                   Marketing feels overwhelming and eats up time you don't have.
                 </p>
               </div>
             </div>
 
-            <div className="bg-[#FAFDD6] flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
+            <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="#0F4C5C" stroke="#0F4C5C" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="#FAFDD6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <p className="text-[#0F4C5C] font-medium text-sm leading-tight">
+                <p className="text-primary font-medium text-sm leading-tight">
                   Without a system, firms plateau and miss out on predictable revenue.
                 </p>
               </div>
@@ -147,7 +145,7 @@ const GrowthCalculator = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[#0F4C5C] leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-primary leading-tight">
                 A Calculator Built for Accountants Who Want Growth Without Guesswork
               </h2>
               
@@ -162,21 +160,21 @@ const GrowthCalculator = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">100% free and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">Personalized to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="#0F4C5C"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
                     <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span className="text-gray-800">Built by marketing experts who understand accountants</span>
@@ -186,7 +184,7 @@ const GrowthCalculator = () => {
               <Button 
                 onClick={scrollToForm}
                 size="lg"
-                className="bg-[#7B8FC7] hover:bg-[#7B8FC7]/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
               >
                 Calculate My Growth Potential
               </Button>
@@ -214,12 +212,12 @@ const GrowthCalculator = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
             {/* Testimonial 1 - Dan */}
             <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
-              <div className="bg-[#7B8FC7] p-8 flex-1 flex items-center">
-                <p className="text-[#FAFDD6] text-sm leading-relaxed">
+              <div className="bg-primary p-8 flex-1 flex items-center">
+                <p className="text-background-light text-sm leading-relaxed">
                   "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
+              <div className="bg-background-light p-6 text-center space-y-4">
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
@@ -239,12 +237,12 @@ const GrowthCalculator = () => {
 
             {/* Testimonial 2 - Joanna */}
             <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
-              <div className="bg-[#7B8FC7] p-8 flex-1 flex items-center">
-                <p className="text-[#FAFDD6] text-sm leading-relaxed">
+              <div className="bg-primary p-8 flex-1 flex items-center">
+                <p className="text-background-light text-sm leading-relaxed">
                   "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
+              <div className="bg-background-light p-6 text-center space-y-4">
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
@@ -264,12 +262,12 @@ const GrowthCalculator = () => {
 
             {/* Testimonial 3 - Jenn S. */}
             <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
-              <div className="bg-[#7B8FC7] p-8 flex-1 flex items-center">
-                <p className="text-[#FAFDD6] text-sm leading-relaxed">
+              <div className="bg-primary p-8 flex-1 flex items-center">
+                <p className="text-background-light text-sm leading-relaxed">
                   "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
                 </p>
               </div>
-              <div className="bg-[#FAFDD6] p-6 text-center space-y-4">
+              <div className="bg-background-light p-6 text-center space-y-4">
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
@@ -304,9 +302,7 @@ const GrowthCalculator = () => {
             </div>
             
             {/* Gradient box with content */}
-            <div className="relative h-[155px] rounded-xl overflow-hidden" style={{
-              background: 'linear-gradient(to right, #91ADC8 0%, #91ADC8 40%, #647FBC 100%)'
-            }}>
+            <div className="relative h-[155px] rounded-xl overflow-hidden bg-gradient-to-r from-teal/80 via-teal/80 to-primary">
               <div className="absolute inset-0 flex items-center" style={{
                 paddingLeft: '290px',
                 paddingRight: '45px'
@@ -323,9 +319,8 @@ const GrowthCalculator = () => {
                   </p>
                   <Button 
                     onClick={scrollToForm}
-                    className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg shadow-md hover:opacity-90 transition-opacity"
+                    className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg shadow-md hover:opacity-90 transition-opacity bg-gradient-deep-teal"
                     style={{
-                      backgroundColor: '#0F4C5C',
                       width: '210px'
                     }}
                   >

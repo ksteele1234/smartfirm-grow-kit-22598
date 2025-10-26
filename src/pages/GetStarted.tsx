@@ -188,7 +188,7 @@ const GetStarted = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
             Ready to Take the Next Step?
           </h2>
-          <p className="text-lg text-text-secondary max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Every accounting firm is at a different stage of growth. That's why we offer multiple ways to get started, from free consultations to quick-win programs, all so you can move forward at your own pace.
           </p>
         </div>
@@ -201,7 +201,7 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Choose Your Starting Point
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Select the engagement option that best fits your current needs and comfort level.
             </p>
           </div>
@@ -223,7 +223,7 @@ const GetStarted = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <p className="text-text-secondary text-center">
+                  <p className="text-muted-foreground text-center">
                     {option.description}
                   </p>
                   
@@ -231,7 +231,7 @@ const GetStarted = () => {
                     {option.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-teal flex-shrink-0" />
-                        <span className="text-sm text-text-secondary">{benefit}</span>
+                        <span className="text-sm text-muted-foreground">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -243,7 +243,7 @@ const GetStarted = () => {
                         {option.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start space-x-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-teal mt-1.5 flex-shrink-0" />
-                            <span className="text-xs text-text-secondary">{detail}</span>
+                            <span className="text-xs text-muted-foreground">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -275,7 +275,7 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Additional Resources & Opportunities
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Already a client or looking for partnership opportunities? We've got you covered.
             </p>
           </div>
@@ -292,7 +292,7 @@ const GetStarted = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-center space-y-6">
-                  <p className="text-text-secondary">
+                  <p className="text-muted-foreground">
                     {option.description}
                   </p>
                   <Button variant="outline" className="group">
@@ -321,7 +321,7 @@ const GetStarted = () => {
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-2">
                   <Quote className="w-12 h-12 text-primary mb-6" />
-                  <blockquote className="text-xl text-text-primary mb-6 italic">
+                  <blockquote className="text-xl text-foreground mb-6 italic">
                     "I was hesitant about working with a consulting firm, but SmartFirm's free consultation gave me clarity on exactly what I needed to grow. 
                     Within a few months, we streamlined our processes and started seeing consistent client growth. The best decision I made for my practice."
                   </blockquote>
@@ -329,14 +329,14 @@ const GetStarted = () => {
                     <h4 className="font-heading font-semibold text-primary text-lg">
                       David Martinez
                     </h4>
-                    <p className="text-text-secondary">
+                    <p className="text-muted-foreground">
                       Owner, Martinez Tax & Accounting Services
                     </p>
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                       ))}
-                      <span className="text-text-light text-sm ml-2">5.0 out of 5</span>
+                      <span className="text-muted-foreground text-sm ml-2">5.0 out of 5</span>
                     </div>
                   </div>
                 </div>
@@ -345,15 +345,15 @@ const GetStarted = () => {
                   <div className="space-y-4">
                     <div>
                       <div className="text-2xl font-heading font-bold text-primary">Streamlined</div>
-                      <div className="text-sm text-text-secondary">Systems in Under 90 Days</div>
+                      <div className="text-sm text-muted-foreground">Systems in Under 90 Days</div>
                     </div>
                     <div>
                       <div className="text-2xl font-heading font-bold text-primary">Consistent</div>
-                      <div className="text-sm text-text-secondary">New Client Growth</div>
+                      <div className="text-sm text-muted-foreground">New Client Growth</div>
                     </div>
                     <div>
                       <div className="text-2xl font-heading font-bold text-primary">$0</div>
-                      <div className="text-sm text-text-secondary">Upfront Consultation Cost</div>
+                      <div className="text-sm text-muted-foreground">Upfront Consultation Cost</div>
                     </div>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               What Happens After You Get Started?
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Here's a simple overview of our proven process from initial contact to transformation.
             </p>
           </div>

@@ -70,7 +70,7 @@ const Services = () => {
       </nav>
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-gradient-deep-teal overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}

@@ -34,22 +34,22 @@ import SEO from "@/components/SEO";
 const About = () => {
   const coreValues = [
     {
-      icon: <Lightbulb className="h-8 w-8 text-primary-blue" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
       title: "Innovation",
       description: "We evolve our solutions to keep firms ahead of industry trends."
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary-teal" />,
+      icon: <Shield className="h-8 w-8 text-teal" />,
       title: "Integrity",
       description: "We build trust through transparency, honesty, and consistency."
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Client Success",
       description: "Your growth is our success. We measure ourselves by the results we deliver for your firm."
     },
     {
-      icon: <Zap className="h-8 w-8 text-primary-teal" />,
+      icon: <Zap className="h-8 w-8 text-teal" />,
       title: "Efficiency",
       description: "We simplify processes and reduce complexity so you can focus on clients, not tech."
     }
@@ -160,7 +160,7 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-deep-teal overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -185,18 +185,18 @@ const About = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue">Mission & Vision</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Mission & Vision</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <Card className="border-light-border shadow-elegant">
                 <CardHeader className="text-center pb-6">
-                  <div className="mx-auto mb-4 p-3 rounded-lg bg-primary-blue/10 w-fit">
-                    <Target className="h-8 w-8 text-primary-blue" />
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit">
+                    <Target className="h-8 w-8 text-primary" />
                   </div>
-                  <CardTitle className="text-2xl md:text-3xl text-primary-blue mb-4">
+                  <CardTitle className="text-2xl md:text-3xl text-primary mb-4">
                     Our Mission
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary leading-relaxed">
+                  <CardDescription className="text-lg text-muted-foreground leading-relaxed">
                     Our mission is to empower firms with digital marketing for CPA firms, from SEO to client retention. Firms hire SmartFirm when they want to work with an accountant marketing specialist who delivers measurable results.
                   </CardDescription>
                 </CardHeader>
@@ -204,13 +204,13 @@ const About = () => {
 
               <Card className="border-light-border shadow-elegant">
                 <CardHeader className="text-center pb-6">
-                  <div className="mx-auto mb-4 p-3 rounded-lg bg-primary-teal/10 w-fit">
-                    <Eye className="h-8 w-8 text-primary-teal" />
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-teal/10 w-fit">
+                    <Eye className="h-8 w-8 text-teal" />
                   </div>
-                  <CardTitle className="text-2xl md:text-3xl text-primary-blue mb-4">
+                  <CardTitle className="text-2xl md:text-3xl text-primary mb-4">
                     Our Vision
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary leading-relaxed">
+                  <CardDescription className="text-lg text-muted-foreground leading-relaxed">
                     To be the trusted partner for accounting firms, CPAs, and bookkeepers who want to modernize their practices, scale sustainably, and build long-term value. We see a future where automation and AI support accountants, not replace them, helping firms work smarter and grow faster.
                   </CardDescription>
                 </CardHeader>
@@ -223,10 +223,10 @@ const About = () => {
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Our Core Values
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 These values guide how we work with every client and every solution we deliver.
               </p>
             </div>
@@ -238,10 +238,10 @@ const About = () => {
                     <div className="mx-auto mb-4 p-3 rounded-lg bg-accent-light/20 w-fit group-hover:bg-accent-light/40 transition-colors">
                       {value.icon}
                     </div>
-                    <CardTitle className="text-xl text-primary-blue mb-3">
+                    <CardTitle className="text-xl text-primary mb-3">
                       {value.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
                       {value.description}
                     </CardDescription>
                   </CardHeader>
@@ -256,10 +256,10 @@ const About = () => {
           <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                   Meet the Founder & CEO
                 </h2>
-                <p className="text-2xl font-semibold text-primary-teal mb-8">
+                <p className="text-2xl font-semibold text-teal mb-8">
                   Hey, I'm Katie!
                 </p>
               </div>
@@ -277,9 +277,9 @@ const About = () => {
                   />
                 </div>
                 
-                <div className="lg:col-span-2 space-y-6 text-text-secondary">
+                <div className="lg:col-span-2 space-y-6 text-muted-foreground">
                   <div>
-                    <h3 className="text-2xl font-bold text-primary-blue mb-4">About SmartFirm:</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-4">About SmartFirm:</h3>
                     <p className="text-lg leading-relaxed">
                       I'm Katie Steele, founder of SmartFirm.
                     </p>
@@ -298,8 +298,8 @@ const About = () => {
               <div className="space-y-8">
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why It Works:</CardTitle>
-                    <CardDescription className="text-lg text-text-secondary space-y-4">
+                    <CardTitle className="text-2xl text-primary mb-4">Why It Works:</CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground space-y-4">
                       <p>I don't just understand marketing, I understand business. That's why SmartFirm has become the go-to accountant marketing specialist for firms ready to scale with proven systems instead of guesswork.</p>
                     </CardDescription>
                   </CardHeader>
@@ -307,8 +307,8 @@ const About = () => {
 
                 <Card className="border-light-border shadow-elegant">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary-blue mb-4">Why I Started SmartFirm:</CardTitle>
-                    <CardDescription className="text-lg text-text-secondary space-y-4">
+                    <CardTitle className="text-2xl text-primary mb-4">Why I Started SmartFirm:</CardTitle>
+                    <CardDescription className="text-lg text-muted-foreground space-y-4">
                       <p>
                         Most firm owners don't want to become tech experts, and you shouldn't have to. You want more clients, more time, and more peace of mind. You don't need another piece of software; you need a system that works for you.
                       </p>
@@ -318,7 +318,7 @@ const About = () => {
                       <p>
                         SmartFirm is the system I wish every accounting firm had years ago: simple, effective, and built to help you grow without burnout.
                       </p>
-                      <p className="font-semibold text-primary-blue pt-4">
+                      <p className="font-semibold text-primary pt-4">
                         If you're ready to have your marketing handled and start seeing results finally, I'd love to show you how.
                       </p>
                     </CardDescription>
@@ -333,10 +333,10 @@ const About = () => {
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Meet the Experts Behind Your Growth
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Our team blends accounting knowledge with modern marketing and technology so your firm can grow with confidence.
               </p>
             </div>

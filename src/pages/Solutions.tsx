@@ -55,31 +55,31 @@ const Solutions = () => {
   const faqsToRender = solutionsFaqs.length ? solutionsFaqs : fallbackSolutionsFaqs;
   const solutionCategories = [
     {
-      icon: <TrendingUp className="h-8 w-8 text-primary-blue" />,
+      icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Stop Losing Clients to Tech-Savvy CPAs",
       subtitle: "Get Found Online When Clients Search, Look Professional with Modern Systems, Respond Faster Than Your Competition, Automate What Younger CPAs Do Manually.",
       link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
     },
     {
-      icon: <Users className="h-8 w-8 text-primary-teal" />,
+      icon: <Users className="h-8 w-8 text-teal" />,
       title: "Get More Referrals Without Asking",
       subtitle: "Turn Happy Clients into Advocates, Get Found by People Looking for CPAs, Build Trust Before You Meet, Stay Top-of-Mind Year-Round.",
       link: "/solutions/get-more-referrals-without-asking"
     },
     {
-      icon: <Zap className="h-8 w-8 text-primary-blue" />,
+      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Work Less, Earn More",
       subtitle: "Stop Chasing Clients for Documents, Eliminate Repetitive Tasks, Get Paid Faster Without Awkward Calls, Focus on High-Value Work Only.",
       link: "/solutions/work-less-earn-more"
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-primary-teal" />,
+      icon: <TrendingUp className="h-8 w-8 text-teal" />,
       title: "Grow Without the Growing Pains",
       subtitle: "Handle More Clients Without More Stress, Scale Without Hiring Full-Time Staff, Maintain Quality While Growing, Plan for Growth Without Guesswork.",
       link: "/solutions/grow-without-growing-pains"
     },
     {
-      icon: <Shield className="h-8 w-8 text-primary-blue" />,
+      icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Protect Your Practice & Your Future",
       subtitle: "Secure Your Client Data Like a Big Firm, Plan Your Exit Strategy, Maximize Your Practice Value, Ensure Business Continuity.",
       link: "/solutions/protect-practice-and-future"
@@ -122,7 +122,7 @@ const Solutions = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 pb-36 md:pb-[180px] bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-36 md:pb-[180px] bg-gradient-deep-teal overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -181,7 +181,7 @@ const Solutions = () => {
                     <CardTitle className="text-xl text-primary mb-4">
                       {solution.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed text-base">
+                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
                       {solution.subtitle}
                     </CardDescription>
                   </CardHeader>
@@ -212,7 +212,7 @@ const Solutions = () => {
                     <CardTitle className="text-xl text-primary mb-4">
                       {solution.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed text-base">
+                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
                       {solution.subtitle}
                     </CardDescription>
                   </CardHeader>
@@ -248,7 +248,7 @@ const Solutions = () => {
                   <CardTitle className="text-3xl md:text-4xl text-primary mb-6 leading-tight">
                     Get More Referrals Without Asking
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                  <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                     Turn satisfied clients into active advocates with automated systems that generate referrals naturally. 
                     Our clients typically see 300% more referrals within 6 months without awkward conversations.
                   </CardDescription>
@@ -260,7 +260,7 @@ const Solutions = () => {
                         <Users className="h-5 w-5 mr-2" />
                         Key Benefits:
                       </h3>
-                      <ul className="space-y-3 text-text-secondary">
+                      <ul className="space-y-3 text-muted-foreground">
                         <li className="flex items-start">
                           <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
                           Turn happy clients into advocates automatically
@@ -285,12 +285,12 @@ const Solutions = () => {
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Client Success Story:
                       </h3>
-                      <blockquote className="text-text-secondary italic mb-4 leading-relaxed">
+                      <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">
                         "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a 
                         systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love 
                         sharing our services because the process makes it easy for them."
                       </blockquote>
-                      <cite className="text-sm text-text-light block">
+                      <cite className="text-sm text-muted-foreground block">
                         — Jennifer Chen, Chen & Associates CPA
                       </cite>
                     </div>

@@ -102,7 +102,7 @@ const Contact = () => {
       
       <main>
       {/* Hero Section */}
-      <section className="relative bg-[#0F4C5C] pt-32 pb-24 pb-32 md:pb-40 overflow-hidden">
+      <section className="relative bg-gradient-deep-teal pt-32 pb-24 pb-32 md:pb-40 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         </div>
         {/* Curved bottom edge */}
@@ -134,7 +134,7 @@ const Contact = () => {
                 <h2 className="text-3xl font-heading font-bold text-primary mb-6">
                   Get in Touch
                 </h2>
-                <p className="text-lg text-text-secondary mb-8">
+                <p className="text-lg text-muted-foreground mb-8">
                   Whether you're comparing accounting firm marketing services pricing or ready to launch a complete growth campaign, our team provides clarity, guidance, and results.
                 </p>
               </div>
@@ -149,8 +149,8 @@ const Contact = () => {
                        </div>
                       <div>
                          <h3 className="font-heading font-semibold text-primary">Phone</h3>
-                         <p className="text-text-secondary">(541) 658-3789</p>
-                         <p className="text-sm text-text-light">Monday–Friday: 9 AM–6 PM PT</p>
+                         <p className="text-muted-foreground">(541) 658-3789</p>
+                         <p className="text-sm text-muted-foreground">Monday–Friday: 9 AM–6 PM PT</p>
                        </div>
                      </div>
                   </CardContent>
@@ -164,8 +164,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-heading font-semibold text-primary">Email</h3>
-                        <p className="text-text-secondary">contact@smartfirm.io</p>
-                        <p className="text-sm text-text-light">We respond within 24 hours</p>
+                        <p className="text-muted-foreground">contact@smartfirm.io</p>
+                        <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                       </div>
                     </div>
                   </CardContent>
@@ -179,8 +179,8 @@ const Contact = () => {
                       </div>
                       <div>
                          <h3 className="font-heading font-semibold text-primary">Location</h3>
-                         <p className="text-text-secondary">Eugene, OR</p>
-                         <p className="text-sm text-text-light">Serving accounting firms across the United States.</p>
+                         <p className="text-muted-foreground">Eugene, OR</p>
+                         <p className="text-sm text-muted-foreground">Serving accounting firms across the United States.</p>
                        </div>
                     </div>
                   </CardContent>
@@ -194,7 +194,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-heading font-semibold text-primary">Business Hours</h3>
-                        <div className="text-text-secondary">
+                        <div className="text-muted-foreground">
                           <div>Monday - Friday: 9 AM - 6 PM</div>
                           <div>Saturday - Sunday: Closed</div>
                         </div>
@@ -212,7 +212,7 @@ const Contact = () => {
                   <CardTitle className="text-2xl font-heading text-primary">
                     Send Us a Message
                   </CardTitle>
-                  <CardDescription className="text-text-secondary">
+                  <CardDescription className="text-muted-foreground">
                     Fill out the form below and we'll get back to you within 24 hours.
                   </CardDescription>
                 </CardHeader>
@@ -250,7 +250,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
               Why Choose SmartFirm for Your Accounting Practice?
             </h2>
-            <p className="text-lg text-text-secondary text-center mb-16">
+            <p className="text-lg text-muted-foreground text-center mb-16">
               When you contact SmartFirm, you're reaching out to a team that specializes in helping accountants, CPAs, bookkeepers, and tax preparers grow with marketing automation and modern systems. Here's what sets us apart:
             </p>
 
@@ -265,7 +265,7 @@ const Contact = () => {
                       <h3 className="text-xl font-heading font-semibold text-primary mb-3">
                         Industry-Specific Expertise
                       </h3>
-                      <p className="text-text-secondary leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         We focus on accounting firms, so we understand your compliance needs, workflows, and growth goals. Our solutions are built for CPAs, bookkeepers, and tax professionals, not generic small businesses, this gives us (and our customers) and edge over the competition.
                       </p>
                     </div>
@@ -283,7 +283,7 @@ const Contact = () => {
                       <h3 className="text-xl font-heading font-semibold text-primary mb-3">
                         Experience You Can Trust
                       </h3>
-                      <p className="text-text-secondary leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         With 40+ years of combined experience and 50+ companies supported across industries, we know what it takes to help firms implement systems that generate leads, improve client retention, and scale efficiently.
                       </p>
                     </div>
@@ -301,7 +301,7 @@ const Contact = () => {
                       <h3 className="text-xl font-heading font-semibold text-primary mb-3">
                         Comprehensive Support
                       </h3>
-                      <p className="text-text-secondary leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         From your first consultation to long-term optimization, you'll have a dedicated team guiding you every step of the way. We don't disappear after launch, we continuously refine and improve your systems to keep you growing.
                       </p>
                     </div>
@@ -319,7 +319,7 @@ const Contact = () => {
                       <h3 className="text-xl font-heading font-semibold text-primary mb-3">
                         Fast Implementation
                       </h3>
-                      <p className="text-text-secondary leading-relaxed">
+                      <p className="text-muted-foreground leading-relaxed">
                         We respect your time. Most systems are fully operational in under 30 days, and we work around busy tax seasons or reporting periods to minimize disruption to your practice.
                       </p>
                     </div>
@@ -335,7 +335,7 @@ const Contact = () => {
       <section id="sf-faqs" className="py-[100px] md:py-[80px] bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
+            <h2 className="text-4xl font-bold text-primary mb-4">
               Frequently Asked Questions
             </h2>
           </div>
