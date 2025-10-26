@@ -20,10 +20,10 @@ const styles = `
   }
   @keyframes gentlePulse {
     0%, 100% { 
-      box-shadow: 0 4px 24px hsl(var(--coral-start) / 0.4); 
+      opacity: 1;
     }
     50% { 
-      box-shadow: 0 8px 40px hsl(var(--coral-start) / 0.7); 
+      opacity: 0.95;
     }
   }
   @keyframes fadeIn {

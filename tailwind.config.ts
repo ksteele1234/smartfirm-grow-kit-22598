@@ -205,8 +205,8 @@ export default {
           "100%": { transform: "rotate(-360deg)" }
         },
         "subtlePulse": {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.02)" }
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.95" }
         }
       },
       animation: {
@@ -218,7 +218,7 @@ export default {
         "magnetic": "magnetic 0.15s ease-out",
         "rotate-clockwise": "rotateClockwise 30s linear infinite",
         "rotate-counter": "rotateCounterClockwise 40s linear infinite",
-        "subtle-pulse": "subtlePulse 2s ease-in-out infinite"
+        "subtle-pulse": "subtlePulse 3.5s ease-in-out infinite"
       },
     },
   },

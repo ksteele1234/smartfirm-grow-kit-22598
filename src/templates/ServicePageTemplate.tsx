@@ -60,8 +60,8 @@ const heroStyles = `
   }
   
   @keyframes pulse-button {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.02); }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
   }
   
   @media (prefers-reduced-motion: reduce) {
