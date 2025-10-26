@@ -235,7 +235,7 @@ const SuccessStories = () => {
                     <p className="text-2xl font-heading font-bold text-primary mb-4">
                       {featuredCaseStudy.title}
                     </p>
-                    <p className="text-text-secondary mb-6">
+                    <p className="text-muted-foreground mb-6">
                       {featuredCaseStudy.summary}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -253,7 +253,7 @@ const SuccessStories = () => {
                     <h4 className="text-xl font-heading font-semibold text-primary mb-2">
                       {featuredCaseStudy.clientName}
                     </h4>
-                    <p className="text-text-secondary">
+                    <p className="text-muted-foreground">
                       Client logo and key metrics would be displayed here
                     </p>
                   </div>
@@ -271,7 +271,7 @@ const SuccessStories = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Explore More Success Stories
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Filter by industry, challenge solved, or firm size to find stories most relevant to your situation.
             </p>
           </div>
@@ -400,7 +400,7 @@ const SuccessStories = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-text-secondary mb-4 text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     {study.summary}
                   </p>
                   <div className="flex flex-wrap gap-1 mb-4">
@@ -409,7 +409,7 @@ const SuccessStories = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-primary">{study.clientName}</span>
-                    <ArrowRight className="w-4 h-4 text-text-light group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                   </div>
                 </CardContent>
               </Card>

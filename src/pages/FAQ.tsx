@@ -118,20 +118,20 @@ const FAQ = () => {
 
 
         {/* FAQ Content */}
-        <section className="py-[100px] md:py-[80px] bg-white">
+        <section className="py-[100px] md:py-[80px] bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-[800px] mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-16">
-                  <h2 className="text-3xl font-bold text-[#647FBC] mb-4">
+                  <h2 className="text-3xl font-bold text-primary mb-4">
                     {category.category}
                   </h2>
                   {category.info && (
-                    <p className="text-sm text-[#333333] mb-6">
+                    <p className="text-sm text-muted-foreground mb-6">
                       Page:{" "}
                       <a
                         href={category.info}
-                        className="text-[#14b8a6] hover:underline"
+                        className="text-teal hover:underline"
                       >
                         {category.info}
                       </a>
@@ -145,20 +145,20 @@ const FAQ = () => {
                       return (
                         <div
                           key={index}
-                          className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                          className="bg-background border border-border rounded-xl shadow-soft hover:shadow-card transition-shadow duration-200"
                         >
                           {/* Question (Clickable) */}
                           <button
                             onClick={() => toggleItem(categoryIndex, index)}
                             className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
                           >
-                            <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
+                            <span className="text-lg font-semibold text-foreground group-hover:text-teal transition-colors duration-200">
                               {faq.question}
                             </span>
                             
                             {/* Chevron Icon */}
                             <ChevronDown 
-                              className={`w-5 h-5 text-[#14b8a6] flex-shrink-0 transition-transform duration-300 ${
+                              className={`w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300 ${
                                 isOpen ? 'rotate-180' : ''
                               }`}
                             />
@@ -170,12 +170,12 @@ const FAQ = () => {
                               isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                             }`}
                           >
-                  <div className="px-6 pb-6">
-                    <FaqAnswer
-                      text={faq.answer}
-                      paragraphClassName="text-base text-[#333333] leading-[1.7]"
-                    />
-                  </div>
+                   <div className="px-6 pb-6">
+                     <FaqAnswer
+                       text={faq.answer}
+                       paragraphClassName="text-base text-muted-foreground leading-[1.7]"
+                     />
+                   </div>
                           </div>
                         </div>
                       );
@@ -186,11 +186,11 @@ const FAQ = () => {
 
               {filteredFAQs.length === 0 && searchTerm && (
                 <div className="text-center py-16">
-                  <MessageSquare className="h-16 w-16 text-[#333333] mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-[#647FBC] mb-2">
+                  <MessageSquare className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-primary mb-2">
                     No matching questions found
                   </h3>
-                  <p className="text-[#333333] mb-6">
+                  <p className="text-muted-foreground mb-6">
                     Try adjusting your search terms or browse the categories above.
                   </p>
                   <Button
@@ -206,23 +206,23 @@ const FAQ = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 md:py-28 bg-[#f8fafc]">
+        <section className="py-20 md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#647FBC] mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                 Still Have Questions?
               </h2>
-              <p className="text-lg text-[#333333] mb-10 leading-relaxed">
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
               
               <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MessageSquare className="h-6 w-6 text-[#14b8a6]" />
+                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MessageSquare className="h-6 w-6 text-teal" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Live Chat</h3>
-                  <p className="text-sm text-[#333333] mb-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Live Chat</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
                     Chat with our experts in real-time
                   </p>
                   <Button variant="outline" className="w-full">
@@ -230,12 +230,12 @@ const FAQ = () => {
                   </Button>
                 </div>
 
-                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="h-6 w-6 text-[#14b8a6]" />
+                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Phone className="h-6 w-6 text-teal" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Phone Support</h3>
-                  <p className="text-sm text-[#333333] mb-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Phone Support</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
                     Speak directly with our team
                   </p>
                   <Button variant="outline" className="w-full" asChild>
@@ -243,12 +243,12 @@ const FAQ = () => {
                   </Button>
                 </div>
 
-                <div className="bg-white border border-[#e2e8f0] rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-[#14b8a6]/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Mail className="h-6 w-6 text-[#14b8a6]" />
+                <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
+                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Mail className="h-6 w-6 text-teal" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#243b55] mb-2">Email Support</h3>
-                  <p className="text-sm text-[#333333] mb-4">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Email Support</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
                     Get detailed answers via email
                   </p>
                   <Button variant="outline" className="w-full" asChild>

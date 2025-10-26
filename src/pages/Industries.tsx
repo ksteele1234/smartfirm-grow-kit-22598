@@ -67,28 +67,28 @@ const Industries = () => {
   const faqsToRender = industriesFaqs.length ? industriesFaqs : fallbackIndustryFaqs;
   const industryCategories = [
     {
-      icon: <User className="h-8 w-8 text-primary-blue" />,
+      icon: <User className="h-8 w-8 text-primary" />,
       title: "Solo CPAs Like You",
       description: "The Solo CPA's Survival Guide, Solo Practice Optimization, Personal Productivity Solutions, Growth Without Complexity.",
       link: "/get-started",
       size: "Solo Practice"
     },
     {
-      icon: <Users className="h-8 w-8 text-primary-teal" />,
+      icon: <Users className="h-8 w-8 text-teal" />,
       title: "Small Accounting Firms (2-10 employees)",
       description: "Small Firm Challenges, Team Collaboration Solutions, Workflow Standardization.",
       link: "/get-started",
       size: "2-10 Employees"
     },
     {
-      icon: <Building className="h-8 w-8 text-primary-blue" />,
+      icon: <Building className="h-8 w-8 text-primary" />,
       title: "Mid-Sized Accounting Firms (11-50 employees)",
       description: "Growth & Scalability, Advanced Automation, Leadership & Management.",
       link: "/get-started",
       size: "11-50 Employees"
     },
     {
-      icon: <Building2 className="h-8 w-8 text-primary-teal" />,
+      icon: <Building2 className="h-8 w-8 text-teal" />,
       title: "Large Accounting Firms (50+ employees)",
       description: "Enterprise Solutions, Strategic Partnerships, Innovation & Future-Proofing.",
       link: "/get-started",
@@ -98,27 +98,27 @@ const Industries = () => {
 
   const specializedNiches = [
     {
-      icon: <Shield className="h-6 w-6 text-primary-blue" />,
+      icon: <Shield className="h-6 w-6 text-primary" />,
       title: "Forensic Accounting",
       link: "/get-started"
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-primary-teal" />,
+      icon: <TrendingUp className="h-6 w-6 text-teal" />,
       title: "Wealth Management",
       link: "/get-started"
     },
     {
-      icon: <FileText className="h-6 w-6 text-primary-blue" />,
+      icon: <FileText className="h-6 w-6 text-primary" />,
       title: "Audit & Assurance",
       link: "/industries/audit-assurance"
     },
     {
-      icon: <PieChart className="h-6 w-6 text-primary-teal" />,
+      icon: <PieChart className="h-6 w-6 text-teal" />,
       title: "Bookkeeping Services",
       link: "/industries/bookkeeping-services"
     },
     {
-      icon: <Calculator className="h-6 w-6 text-primary-blue" />,
+      icon: <Calculator className="h-6 w-6 text-primary" />,
       title: "Tax Preparation",
       link: "/industries/tax-preparation"
     }
@@ -160,7 +160,7 @@ const Industries = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-[#0F4C5C] overflow-hidden">
+        <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-gradient-deep-teal overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/src/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -201,12 +201,12 @@ const Industries = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
                 Serving a Spectrum of Accounting Professionals
               </h2>
-              <p className="text-lg text-text-secondary text-center leading-relaxed">
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
                 From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
                 challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
                 perfectly with your practice area and growth stage.
               </p>
-              <p className="text-lg text-text-secondary text-center leading-relaxed">
+              <p className="text-lg text-muted-foreground text-center leading-relaxed">
                 Whether you're a solo CPA looking to streamline operations, a small firm aiming to compete with larger practices, or an established firm seeking to modernize your marketing approach, SmartFirm delivers industry-specific solutions that drive results. We've helped hundreds of accounting professionals across all specializations achieve measurable growth through targeted strategies and proven methodologies.
               </p>
             </div>
@@ -216,7 +216,7 @@ const Industries = () => {
         {/* Firm Size Categories */}
         <section className="py-16 md:py-20 bg-background-light">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
               How We Help
             </h2>
             
@@ -228,21 +228,21 @@ const Industries = () => {
                       <div className="p-3 rounded-lg bg-accent-light/20 w-fit">
                         {category.icon}
                       </div>
-                      <span className="text-sm font-medium text-primary-teal bg-primary-teal/10 px-3 py-1 rounded-full">
+                      <span className="text-sm font-medium text-teal bg-teal/10 px-3 py-1 rounded-full">
                         {category.size}
                       </span>
                     </div>
-                    <CardTitle className="text-xl text-primary-blue mb-3">
+                    <CardTitle className="text-xl text-primary mb-3">
                       {category.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
                       {category.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary-blue group-hover:text-white transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
                       asChild
                     >
                       <a href={category.link}>
@@ -264,10 +264,10 @@ const Industries = () => {
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Specialized Niches
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Tailored strategies for specialized accounting practices with unique market dynamics and client needs.
               </p>
             </div>
@@ -279,7 +279,7 @@ const Industries = () => {
                     <div className="mx-auto mb-3 p-3 rounded-lg bg-accent-light/20 w-fit">
                       {niche.icon}
                     </div>
-                    <CardTitle className="text-lg text-primary-blue mb-2">
+                    <CardTitle className="text-lg text-primary mb-2">
                       {niche.title}
                     </CardTitle>
                   </CardHeader>
@@ -287,7 +287,7 @@ const Industries = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="w-full group-hover:bg-primary-blue group-hover:text-white transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
                       asChild
                     >
                       <a href={niche.link}>
@@ -307,14 +307,14 @@ const Industries = () => {
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-elegant border-light-border">
                 <CardHeader className="text-center pb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-teal/10 text-primary-teal text-sm font-medium mb-4">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-teal/10 text-teal text-sm font-medium mb-4">
                     <Star className="h-4 w-4 mr-1" />
                     Industry Spotlight
                   </div>
-                  <CardTitle className="text-3xl md:text-4xl text-primary-blue mb-4">
+                  <CardTitle className="text-3xl md:text-4xl text-primary mb-4">
                     Growth Strategies for Tax Preparation Firms
                   </CardTitle>
-                  <CardDescription className="text-lg text-text-secondary max-w-2xl mx-auto">
+                  <CardDescription className="text-lg text-muted-foreground max-w-2xl mx-auto">
                     Tax season creates unique opportunities and challenges. Discover how seasonal firms are building 
                     year-round revenue streams and scaling beyond traditional tax preparation.
                   </CardDescription>
@@ -322,54 +322,54 @@ const Industries = () => {
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h3 className="font-semibold text-primary-teal flex items-center">
+                      <h3 className="font-semibold text-teal flex items-center">
                         <Target className="h-5 w-5 mr-2" />
                         Key Opportunities:
                       </h3>
-                      <ul className="space-y-2 text-text-secondary">
+                      <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
                           Year-round advisory services
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
                           Automated client retention
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
                           Strategic business planning
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
                           Technology integration
                         </li>
                       </ul>
                     </div>
                     
                     <div className="bg-accent-light/30 p-6 rounded-lg">
-                      <h3 className="font-semibold text-primary-blue mb-3 flex items-center">
+                      <h3 className="font-semibold text-primary mb-3 flex items-center">
                         <Calculator className="h-5 w-5 mr-2" />
                         Industry Insights:
                       </h3>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Revenue Growth Potential</span>
-                          <span className="font-bold text-primary-blue">40-60%</span>
+                          <span className="text-muted-foreground">Revenue Growth Potential</span>
+                          <span className="font-bold text-primary">40-60%</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Client Retention Rate</span>
-                          <span className="font-bold text-primary-blue">85%+</span>
+                          <span className="text-muted-foreground">Client Retention Rate</span>
+                          <span className="font-bold text-primary">85%+</span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-text-secondary">Off-Season Revenue</span>
-                          <span className="font-bold text-primary-blue">+200%</span>
+                          <span className="text-muted-foreground">Off-Season Revenue</span>
+                          <span className="font-bold text-primary">+200%</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   
                   <div className="text-center pt-4">
-                    <Button size="lg" className="bg-primary-blue hover:bg-primary-blue/90" asChild>
+                    <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
                       <a href="/industries/tax-preparation">
                         Explore Tax Firm Strategies
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -387,13 +387,13 @@ const Industries = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
-                <Building className="h-12 w-12 text-primary-teal mx-auto mb-6" />
-                <blockquote className="text-xl text-text-primary italic mb-6">
+                <Building className="h-12 w-12 text-teal mx-auto mb-6" />
+                <blockquote className="text-xl text-foreground italic mb-6">
                   "SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing 
                   challenges that most agencies can't grasp. Their industry-specific approach helped us reach the right 
                   clients and establish thought leadership in our field."
                 </blockquote>
-                <cite className="text-text-secondary">
+                <cite className="text-muted-foreground">
                   — Jennifer Martinez, Martinez Forensic Accounting
                 </cite>
               </div>
@@ -402,7 +402,7 @@ const Industries = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="section-padding bg-gradient-to-br from-primary-blue to-primary-teal text-white">
+        <section className="section-padding bg-gradient-to-br from-primary to-teal text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Is Your Industry Ready for Smart Growth?
@@ -415,7 +415,7 @@ const Industries = () => {
               <Button 
                 size="lg" 
                 variant="secondary"
-                className="bg-white text-primary-blue hover:bg-white/90"
+                className="bg-white text-primary hover:bg-white/90"
                 asChild
               >
                 <a href="/get-started">

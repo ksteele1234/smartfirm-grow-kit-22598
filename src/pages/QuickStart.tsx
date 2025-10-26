@@ -203,7 +203,7 @@ const QuickStart = () => {
             </h1>
             
             <div id="sf-keyword-intro">
-              <p className="text-xl text-text-secondary max-w-4xl mx-auto mb-10 leading-relaxed">
+              <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
                 This marketing package for CPA firms delivers a turnkey system in 30 days including website deployment, automated lead follow-up, client onboarding sequences, and review generation workflows.
               </p>
             </div>
@@ -232,7 +232,7 @@ const QuickStart = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                 Why Choose the Quick Start?
               </h2>
-              <p className="text-lg text-text-secondary leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Your accounting firm doesn't need another complex tool — you need a system that works from day one. The SmartFirm 30-Day Quick Start Package is the most effective marketing package for CPA firms that want fast results and a strong foundation.
               </p>
             </div>
@@ -246,7 +246,7 @@ const QuickStart = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 What's Included in the 30-Day Quick Start Package
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Six essential components to transform your accounting firm's marketing
               </p>
             </div>
@@ -267,7 +267,7 @@ const QuickStart = () => {
                       {item.items.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-text-secondary">{feature}</span>
+                          <span className="text-sm text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -285,7 +285,7 @@ const QuickStart = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Outcomes in 30 Days
               </h2>
-              <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Here's what you'll have operational after your Quick Start implementation
               </p>
             </div>
@@ -300,7 +300,7 @@ const QuickStart = () => {
                     <CardTitle className="text-lg text-primary mb-3">
                       {outcome.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
                       {outcome.description}
                     </CardDescription>
                   </CardHeader>
@@ -329,7 +329,7 @@ const QuickStart = () => {
                     <CardTitle className="text-xl text-primary mb-3">
                       {item.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </CardDescription>
                   </CardHeader>
