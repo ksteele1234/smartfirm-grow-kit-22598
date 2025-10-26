@@ -201,7 +201,7 @@ const ROICalculator = () => {
                       </p>
                     </div>
                     <div className="text-center">
-                      <TrendingUp className="h-8 w-8 text-teal mx-auto mb-2" />
+                      <TrendingUp className="h-8 w-8 text-accent mx-auto mb-2" />
                       <h4 className="font-semibold mb-1">Growth Potential</h4>
                       <p className="text-sm text-muted-foreground">
                         {results.lifetimeROI >= 200 ? "Strong growth trajectory" : "Opportunity for optimization"}

@@ -74,7 +74,7 @@ const Industries = () => {
       size: "Solo Practice"
     },
     {
-      icon: <Users className="h-8 w-8 text-teal" />,
+      icon: <Users className="h-8 w-8 text-accent" />,
       title: "Small Accounting Firms (2-10 employees)",
       description: "Small Firm Challenges, Team Collaboration Solutions, Workflow Standardization.",
       link: "/get-started",
@@ -88,7 +88,7 @@ const Industries = () => {
       size: "11-50 Employees"
     },
     {
-      icon: <Building2 className="h-8 w-8 text-teal" />,
+      icon: <Building2 className="h-8 w-8 text-accent" />,
       title: "Large Accounting Firms (50+ employees)",
       description: "Enterprise Solutions, Strategic Partnerships, Innovation & Future-Proofing.",
       link: "/get-started",
@@ -103,7 +103,7 @@ const Industries = () => {
       link: "/get-started"
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-teal" />,
+      icon: <TrendingUp className="h-6 w-6 text-accent" />,
       title: "Wealth Management",
       link: "/get-started"
     },
@@ -113,7 +113,7 @@ const Industries = () => {
       link: "/industries/audit-assurance"
     },
     {
-      icon: <PieChart className="h-6 w-6 text-teal" />,
+      icon: <PieChart className="h-6 w-6 text-accent" />,
       title: "Bookkeeping Services",
       link: "/industries/bookkeeping-services"
     },
@@ -228,7 +228,7 @@ const Industries = () => {
                       <div className="p-3 rounded-lg bg-accent-light/20 w-fit">
                         {category.icon}
                       </div>
-                      <span className="text-sm font-medium text-teal bg-teal/10 px-3 py-1 rounded-full">
+                      <span className="text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
                         {category.size}
                       </span>
                     </div>
@@ -307,7 +307,7 @@ const Industries = () => {
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-elegant border-light-border">
                 <CardHeader className="text-center pb-6">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-teal/10 text-teal text-sm font-medium mb-4">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
                     <Star className="h-4 w-4 mr-1" />
                     Industry Spotlight
                   </div>
@@ -322,25 +322,25 @@ const Industries = () => {
                 <CardContent className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h3 className="font-semibold text-teal flex items-center">
+                      <h3 className="font-semibold text-accent flex items-center">
                         <Target className="h-5 w-5 mr-2" />
                         Key Opportunities:
                       </h3>
                       <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-3 flex-shrink-0"></div>
                           Year-round advisory services
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-3 flex-shrink-0"></div>
                           Automated client retention
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-3 flex-shrink-0"></div>
                           Strategic business planning
                         </li>
                         <li className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-3 flex-shrink-0"></div>
+                          <div className="dot-accent mt-2 mr-3 flex-shrink-0"></div>
                           Technology integration
                         </li>
                       </ul>
@@ -387,7 +387,7 @@ const Industries = () => {
           <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center">
               <div className="bg-accent-light/20 p-8 rounded-lg border border-accent-light">
-                <Building className="h-12 w-12 text-teal mx-auto mb-6" />
+                <Building className="h-12 w-12 text-accent mx-auto mb-6" />
                 <blockquote className="text-xl text-foreground italic mb-6">
                   "SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing 
                   challenges that most agencies can't grasp. Their industry-specific approach helped us reach the right 

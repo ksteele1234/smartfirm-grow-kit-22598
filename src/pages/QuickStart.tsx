@@ -266,7 +266,7 @@ const QuickStart = () => {
                     <ul className="space-y-3">
                       {item.items.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="h-5 w-5 text-teal mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-muted-foreground">{feature}</span>
                         </li>
                       ))}
@@ -294,8 +294,8 @@ const QuickStart = () => {
               {outcomes.map((outcome, index) => (
                 <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 hover:shadow-lg transition-all duration-300">
                   <CardHeader className="pb-4">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
-                      <outcome.icon className="h-8 w-8 text-teal" />
+                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 w-fit">
+                      <outcome.icon className="h-8 w-8 text-accent" />
                     </div>
                     <CardTitle className="text-lg text-primary mb-3">
                       {outcome.title}

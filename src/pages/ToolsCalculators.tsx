@@ -60,8 +60,8 @@ const ToolsCalculators = () => {
       id: "marketing-scorecard",
       title: "Is Your Marketing Working?",
       description: "Quick yes/no assessment that reveals gaps in your marketing strategy and provides personalized action plans.",
-      icon: <TrendingUp className="h-8 w-8 text-teal" />,
-      duration: "3 minutes", 
+      icon: <TrendingUp className="h-8 w-8 text-accent" />,
+      duration: "3 minutes",
       results: "Personalized report",
       link: "/tools/marketing-scorecard",
       color: "from-teal to-light-teal"
@@ -90,7 +90,7 @@ const ToolsCalculators = () => {
       id: "workflow-bottleneck-finder",
       title: "Workflow Bottleneck Finder",
       description: "Identify inefficiencies in your firm's workflows and get recommendations to eliminate bottlenecks.",
-      icon: <BarChart3 className="h-8 w-8 text-teal" />,
+      icon: <BarChart3 className="h-8 w-8 text-accent" />,
       duration: "5 minutes",
       results: "Bottleneck analysis",
       link: "/tools/workflow-bottleneck-finder",
@@ -120,7 +120,7 @@ const ToolsCalculators = () => {
       id: "lead-generation-scorecard",
       title: "Lead Generation Scorecard",
       description: "Evaluate your lead generation effectiveness and get actionable recommendations to improve conversions.",
-      icon: <TrendingUp className="h-8 w-8 text-teal" />,
+      icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "4 minutes",
       results: "Lead gen score",
       link: "/tools/lead-generation-scorecard",
@@ -150,7 +150,7 @@ const ToolsCalculators = () => {
       id: "seo-audit",
       title: "SEO Audit Tool",
       description: "Analyze your website's SEO performance and get expert recommendations to improve search rankings.",
-      icon: <TrendingUp className="h-8 w-8 text-teal" />,
+      icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "2 minutes",
       results: "SEO report",
       link: "/tools/seo-audit",
@@ -303,7 +303,7 @@ const ToolsCalculators = () => {
                 </div>
                 <div className="text-center">
                   <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
-                    <BarChart3 className="h-8 w-8 text-teal" />
+                    <BarChart3 className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-3">Data-Driven Insights</h3>
                   <p className="text-muted-foreground">

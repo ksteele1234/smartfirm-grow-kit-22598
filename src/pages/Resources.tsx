@@ -35,7 +35,7 @@ const Resources = () => {
       link: "/get-started"
     },
     {
-      icon: <Calculator className="h-8 w-8 text-teal" />,
+      icon: <Calculator className="h-8 w-8 text-accent" />,
       title: "Tools & Calculators",
       description: "Interactive tools like ROI calculators, profit estimators, and workflow templates.",
       link: "/tools"
@@ -47,7 +47,7 @@ const Resources = () => {
       link: "/get-started"
     },
     {
-      icon: <BarChart3 className="h-8 w-8 text-teal" />,
+      icon: <BarChart3 className="h-8 w-8 text-accent" />,
       title: "Case Studies",
       description: "Real-world examples of client success and transformation stories.",
       link: "/case-studies"
@@ -59,7 +59,7 @@ const Resources = () => {
       link: "/get-started"
     },
     {
-      icon: <MessageSquare className="h-8 w-8 text-teal" />,
+      icon: <MessageSquare className="h-8 w-8 text-accent" />,
       title: "FAQ",
       description: "Frequently asked questions about our services and solutions for accounting firms.",
       link: "/faq"
@@ -231,19 +231,19 @@ const Resources = () => {
                     <h3 className="font-semibold text-foreground mb-6 text-lg">What You'll Learn:</h3>
                     <ul className="space-y-4 text-muted-foreground mb-10 text-base">
                       <li className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                        <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                         How to create irresistible lead magnets
                       </li>
                       <li className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                        <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                         Email sequences that convert prospects
                       </li>
                       <li className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                        <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                         Landing page optimization strategies
                       </li>
                       <li className="flex items-start">
-                        <div className="h-2 w-2 rounded-full bg-teal mt-2 mr-4 flex-shrink-0"></div>
+                        <div className="dot-accent mt-2 mr-4 flex-shrink-0"></div>
                         Automation workflows that work
                       </li>
                     </ul>

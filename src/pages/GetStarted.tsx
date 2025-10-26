@@ -230,7 +230,7 @@ const GetStarted = () => {
                   <div className="space-y-3">
                     {option.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
                         <span className="text-sm text-muted-foreground">{benefit}</span>
                       </div>
                     ))}
@@ -242,7 +242,7 @@ const GetStarted = () => {
                       <ul className="space-y-2">
                         {option.details.map((detail, detailIndex) => (
                           <li key={detailIndex} className="flex items-start space-x-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-teal mt-1.5 flex-shrink-0" />
+                            <div className="dot-accent mt-1.5 flex-shrink-0" />
                             <span className="text-xs text-muted-foreground">{detail}</span>
                           </li>
                         ))}
@@ -284,8 +284,8 @@ const GetStarted = () => {
             {supportOptions.map((option, index) => (
               <Card key={index} className="shadow-card hover:shadow-soft transition-shadow">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal/10 to-primary/10 rounded-lg flex items-center justify-center">
-                    <option.icon className="w-8 h-8 text-teal" />
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-lg flex items-center justify-center">
+                    <option.icon className="w-8 h-8 text-accent" />
                   </div>
                   <CardTitle className="text-xl font-heading text-primary">
                     {option.title}

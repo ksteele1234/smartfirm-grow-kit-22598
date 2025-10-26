@@ -131,7 +131,7 @@ const FAQ = () => {
                       Page:{" "}
                       <a
                         href={category.info}
-                        className="text-teal hover:underline"
+                        className="text-accent hover:underline story-link"
                       >
                         {category.info}
                       </a>
@@ -152,13 +152,13 @@ const FAQ = () => {
                             onClick={() => toggleItem(categoryIndex, index)}
                             className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
                           >
-                            <span className="text-lg font-semibold text-foreground group-hover:text-teal transition-colors duration-200">
+                            <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200">
                               {faq.question}
                             </span>
                             
                             {/* Chevron Icon */}
                             <ChevronDown 
-                              className={`w-5 h-5 text-teal flex-shrink-0 transition-transform duration-300 ${
+                              className={`w-5 h-5 text-accent flex-shrink-0 transition-transform duration-300 ${
                                 isOpen ? 'rotate-180' : ''
                               }`}
                             />
@@ -218,8 +218,8 @@ const FAQ = () => {
               
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
-                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MessageSquare className="h-6 w-6 text-teal" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MessageSquare className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Live Chat</h3>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -231,8 +231,8 @@ const FAQ = () => {
                 </div>
 
                 <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
-                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Phone className="h-6 w-6 text-teal" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Phone className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Phone Support</h3>
                   <p className="text-sm text-muted-foreground mb-4">
@@ -244,8 +244,8 @@ const FAQ = () => {
                 </div>
 
                 <div className="bg-background border border-border rounded-xl p-6 text-center shadow-soft hover:shadow-card transition-shadow">
-                  <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Mail className="h-6 w-6 text-teal" />
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Mail className="h-6 w-6 text-accent" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Email Support</h3>
                   <p className="text-sm text-muted-foreground mb-4">
