@@ -88,13 +88,15 @@ const Services = () => {
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="coral" size="hero" asChild>
-                <Link to="/services/all-professional-marketing-services-for-accounting-firms">
-                  Explore All Services
+                <Link to="/get-started">
+                  Book a free call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="white-outline-on-dark" size="hero" asChild>
-                <Link to="/get-started">Book a Free Consultation</Link>
+              <Button variant="secondary" size="hero" asChild>
+                <Link to="/services/all-professional-marketing-services-for-accounting-firms">
+                  Explore all services
+                </Link>
               </Button>
             </div>
           </div>
