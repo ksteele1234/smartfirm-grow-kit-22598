@@ -304,12 +304,14 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl text-foreground;
+    @apply text-4xl lg:text-5xl;
+    color: hsl(189, 98%, 21%); /* #015c6b */
     letter-spacing: -0.02em; /* Tighter tracking for large text */
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl text-primary;
+    @apply text-3xl lg:text-4xl;
+    color: hsl(189, 98%, 21%); /* #015c6b */
     letter-spacing: -0.01em;
   }
 
