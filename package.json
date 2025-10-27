@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/generate-keyword-data.js",
     "build": "vite build && node scripts/inject-all-schemas.js",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
