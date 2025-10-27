@@ -297,7 +297,7 @@ const Solutions = () => {
                   </div>
                   
                   <div className="text-center pt-6">
-                    <Button size="lg" variant="hero" className="bg-gradient-teal-to-primary hover-lift" asChild>
+                    <Button size="lg" variant="default" asChild>
                       <a href="/solutions/get-more-referrals-without-asking">
                         Learn About This Solution
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -311,7 +311,7 @@ const Solutions = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-teal-to-primary text-white relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-primary to-teal text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -323,7 +323,7 @@ const Solutions = () => {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg" 
-                variant="white-on-dark"
+                variant="coral"
                 asChild
               >
                 <a href="/get-started">
@@ -333,7 +333,7 @@ const Solutions = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="white-outline-on-dark"
+                variant="secondary"
                 asChild
               >
                 <a href="/leading-marketing-services-for-accounting-firms">
