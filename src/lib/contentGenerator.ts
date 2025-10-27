@@ -1,23 +1,9 @@
-import { parse } from 'csv-parse/sync';
-import keywordsCSV from '@/data/keywords.csv?raw';
+import { keywordMappings, type KeywordMapping } from '@/data/keywordMappings';
 
 /**
  * Phase 2: Content Generation System
  * Handles keyword mapping, persona targeting, and content adaptation
  */
-
-export interface KeywordMapping {
-  category: string;
-  originalKeywords: string;
-  rootKeywords: string;
-  accountants: string;
-  cpas: string;
-  bookkeepers: string;
-  accountingFirms: string;
-  taxPreparers: string;
-  landingPage: string;
-  cta: string;
-}
 
 export interface PersonaConfig {
   id: string;
@@ -39,32 +25,10 @@ export interface ContentConfig {
 }
 
 /**
- * Load and parse keywords CSV
+ * Get keyword mappings (pre-parsed at build time)
  */
 export function loadKeywordMappings(): KeywordMapping[] {
-  try {
-    const records = parse(keywordsCSV, {
-      columns: true,
-      skip_empty_lines: true,
-      trim: true
-    });
-    
-    return records.map((record: any) => ({
-      category: record['Category'] || '',
-      originalKeywords: record['Original Keywords'] || '',
-      rootKeywords: record['Root Keywords'] || '',
-      accountants: record['Keywords for Accountants'] || '',
-      cpas: record['Keywords for CPAs'] || '',
-      bookkeepers: record['Keywords for Bookkeepers'] || '',
-      accountingFirms: record['Keywords for Accounting Firms'] || '',
-      taxPreparers: record['Keywords for Tax Preparers'] || '',
-      landingPage: record['Landing Page'] || '',
-      cta: record['CTA'] || ''
-    }));
-  } catch (error) {
-    console.error('Error loading keyword mappings:', error);
-    return [];
-  }
+  return keywordMappings;
 }
 
 /**
