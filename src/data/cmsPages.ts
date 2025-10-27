@@ -5,138 +5,276 @@ import { ServicePageData, SolutionPageData, IndustryPageData } from '@/types/cms
  * Central repository for all page content with keyword optimization
  */
 
-// Example Service Pages with full CMS data
+// Service Pages with full CMS data
 export const servicePages: Record<string, ServicePageData> = {
   'marketing-automation': {
     id: 'marketing-automation',
-    title: 'Marketing Automation for Accounting Firms | SmartFirm.io',
+    title: 'Marketing Automation For Accounting Firms | SmartFirm',
     slug: 'marketing-automation',
-    metaDescription: 'Comprehensive marketing automation solutions that help accounting firms attract, nurture, and convert clients on autopilot.',
+    metaDescription: 'Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.',
     canonicalUrl: 'https://smartfirm.io/services/marketing-automation',
-    heroTitle: 'Marketing Automation for Accounting Firms',
-    heroSubtitle: 'Attract, nurture, and convert clients on autopilot',
-    heroDescription: 'Our marketing automation platform is specifically designed for accounting firms to streamline client acquisition and retention.',
+    heroTitle: 'Marketing Automation For Accounting Firms',
+    heroSubtitle: 'Our marketing automation for accounting firms creates intelligent workflows that nurture new leads, schedule consultations, onboard clients, send service reminders, and reactivate dormant relationships.',
+    heroDescription: 'Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.',
     content: {},
     benefits: [
       {
-        title: 'Automated Lead Nurturing',
-        description: 'Never lose a lead again with automated follow-up sequences that nurture prospects into clients.'
+        title: 'Stop Losing Leads to Slow Follow-Up',
+        description: 'Every hour you wait to respond to a lead reduces your conversion rate by 10%. Our marketing automation responds to every inquiry within minutes—via email, SMS, and voicemail—nurturing prospects through personalized sequences while you focus on client work. Firms using our system convert 40% more leads without adding staff.',
+        icon: 'Rocket'
       },
       {
-        title: 'Client Retention Workflows',
-        description: 'Keep clients engaged year-round with automated check-ins, newsletters, and value-added content.'
+        title: 'Reclaim 10+ Hours Per Week',
+        description: 'Manual follow-up, appointment reminders, and client onboarding emails are eating your team\'s time. Our intelligent workflows handle lead nurturing, consultation scheduling, service reminders, and re-engagement campaigns automatically. You\'ll save 10-15 hours weekly that you can redirect to billable work or strategic growth.',
+        icon: 'Clock'
       },
       {
-        title: 'Performance Analytics',
-        description: 'Track every metric that matters with comprehensive dashboards and reporting.'
+        title: 'Scale Without Hiring',
+        description: 'You can\'t grow from $400K to $1M by manually managing every lead and client touchpoint. Our automation platform handles 10x the volume of inquiries and clients without increasing your workload. Handle 200+ active leads and 100+ clients with the same 4-person team you have today.',
+        icon: 'TrendingUp'
+      },
+      {
+        title: 'Get Clear ROI Reporting',
+        description: 'No more guessing what\'s working. Our dashboard shows exactly which campaigns generate leads, which sequences convert prospects, and what your cost-per-client is. You\'ll see pipeline stage metrics, conversion rates, and ROI tied directly to your utilization goals—in plain English, not marketing jargon.',
+        icon: 'BarChart'
       }
     ],
     features: [
       {
-        title: 'Email Marketing Campaigns',
-        description: 'Design and deploy professional email campaigns that resonate with your audience.',
+        title: 'Lead Generation & Follow-up',
+        description: 'Capture and nurture leads automatically with intelligent workflows',
         details: [
-          'Pre-built templates for accounting firms',
-          'A/B testing capabilities',
-          'Behavioral triggers and automation'
+          'Automated lead capture from multiple sources',
+          'Intelligent follow-up sequences via email and SMS',
+          'Lead scoring and qualification automation',
+          'Integration with your CRM and practice management systems'
         ]
       },
       {
-        title: 'CRM Integration',
-        description: 'Seamlessly integrate with your existing tools and workflows.',
+        title: 'Website & SEO Optimization',
+        description: 'Optimize your online presence for maximum visibility and conversions',
         details: [
-          'QuickBooks and Xero integration',
-          'Calendar and booking sync',
-          'Two-way data synchronization'
+          'SEO-optimized website design and content',
+          'Local search optimization and Google My Business management',
+          'Conversion rate optimization for higher lead generation',
+          'Performance tracking and analytics reporting'
+        ]
+      },
+      {
+        title: 'Review & Reputation Management',
+        description: 'Build a stellar online reputation with automated review generation',
+        details: [
+          'Automated review request campaigns',
+          'Reputation monitoring across multiple platforms',
+          'Response management for online reviews',
+          'Review showcase integration on your website'
+        ]
+      },
+      {
+        title: 'Analytics & Reporting',
+        description: 'Know what works with clear attribution and ROI insights',
+        details: [
+          'Campaign performance dashboards',
+          'Conversion tracking across forms and calls',
+          'A/B testing and optimization insights',
+          'ROI and pipeline impact reporting'
         ]
       }
     ],
+    faqs: [
+      {
+        question: 'How long does it take to see results?',
+        answer: 'Most firms see immediate time savings (10+ hours/week) within the first week of implementation. Lead conversion improvements typically show within 30-45 days as prospects move through nurture sequences. Full ROI (increased revenue from better conversion) is usually visible within 90 days.'
+      },
+      {
+        question: 'Will this integrate with QuickBooks and my practice management software?',
+        answer: 'Yes. We integrate with QuickBooks Online, Xero, and leading practice management platforms (Karbon, Canopy, Practice Ignition, Financial Cents). We also connect with your CRM, email, and scheduling tools to create one seamless system.'
+      },
+      {
+        question: 'Do I need to manage this daily, or is it truly hands-off?',
+        answer: 'It\'s designed to run on autopilot. After initial setup and approval of email templates, the system handles 90% of lead follow-up and client communication automatically. You\'ll review a weekly dashboard (5-10 minutes) and step in personally only when leads are ready to close.'
+      },
+      {
+        question: 'What if I don\'t have a CRM or email marketing platform yet?',
+        answer: 'No problem. We\'ll recommend the right tools for your firm size and budget, set them up, and configure all automations. Most firms start with a simple stack ($100-$200/month in software costs) and scale from there.'
+      }
+    ],
     ctaTitle: 'Ready to Automate Your Marketing?',
-    ctaDescription: 'Schedule a demo to see how our marketing automation platform can transform your firm.',
-    ctaButtonText: 'Book Your Demo',
+    ctaDescription: 'Let\'s implement a marketing automation system that grows your firm while you focus on serving clients.',
+    ctaButtonText: 'Get Started',
+    ctaButtonLink: '/get-started'
+  },
+  'seo-for-accountants': {
+    id: 'seo-for-accountants',
+    title: 'SEO for Accountants | SmartFirm',
+    slug: 'seo-for-accountants',
+    metaDescription: 'Specialized search engine optimization services designed to help accounting firms rank higher and attract qualified local clients.',
+    canonicalUrl: 'https://smartfirm.io/services/seo-for-accountants',
+    heroTitle: 'SEO for Accountants',
+    heroSubtitle: 'Rank higher, attract better clients, and dominate your local market',
+    heroDescription: 'Our SEO strategies are specifically designed for accounting firms to increase visibility and attract high-value clients in your area.',
+    content: {},
+    benefits: [
+      {
+        title: 'Local Market Dominance',
+        description: 'Appear at the top of search results when potential clients search for accounting services in your area.',
+        icon: 'MapPin'
+      },
+      {
+        title: 'Qualified Traffic',
+        description: 'Attract visitors who are actively looking for the specific services you offer.',
+        icon: 'Target'
+      },
+      {
+        title: 'Long-term ROI',
+        description: 'Build a sustainable source of new clients that compounds over time.',
+        icon: 'TrendingUp'
+      }
+    ],
+    features: [
+      {
+        title: 'Technical SEO',
+        description: 'Optimize your website foundation for maximum search visibility',
+        details: [
+          'Site speed optimization',
+          'Mobile responsiveness',
+          'Schema markup implementation',
+          'XML sitemap and robots.txt configuration'
+        ]
+      },
+      {
+        title: 'Local SEO',
+        description: 'Dominate local search results in your target markets',
+        details: [
+          'Google Business Profile optimization',
+          'Local citation building',
+          'Review generation and management',
+          'Local content creation'
+        ]
+      }
+    ],
+    ctaTitle: 'Ready to Rank Higher?',
+    ctaDescription: 'Let\'s build an SEO strategy that brings qualified clients to your firm.',
+    ctaButtonText: 'Get Started',
     ctaButtonLink: '/get-started'
   }
 };
 
-// Example Solution Pages
+// Solution Pages with full CMS data
 export const solutionPages: Record<string, SolutionPageData> = {
   'client-retention': {
     id: 'client-retention',
-    title: 'Client Retention Strategies for Accounting Firms | SmartFirm.io',
+    title: 'Client Retention Strategies | SmartFirm',
     slug: 'client-retention',
-    metaDescription: 'Proven client retention strategies that help accounting firms reduce churn and increase lifetime value.',
+    metaDescription: 'Strengthen client relationships with predictive analytics and intelligent automation for accounting firms.',
     canonicalUrl: 'https://smartfirm.io/solutions/client-retention',
-    heroTitle: 'Client Retention Strategies That Work',
-    heroSubtitle: 'Keep more clients, grow more revenue',
-    problemStatement: 'Losing clients to competitors? Our proven retention strategies help accounting firms build lasting relationships.',
-    solutionOverview: 'A comprehensive approach to client engagement, communication, and value delivery.',
+    heroTitle: 'AI-Powered Client Retention Strategies',
+    heroSubtitle: 'Strengthen client relationships with predictive analytics and intelligent automation. Our AI-driven retention strategies keep your best clients engaged and loyal for years through data-driven insights.',
+    problemStatement: 'Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you\'re constantly replacing lost clients instead of growing your practice.',
+    solutionOverview: 'Our AI-driven client retention solution combines predictive client behavior analysis, automated value proposition optimization, intelligent communication systems, and data-driven client experience enhancement to strengthen relationships and reduce churn.',
     content: {},
     problemSolutionPairs: [
       {
-        problem: 'Clients only hear from you during tax season',
-        solution: 'Automated year-round engagement campaigns that provide consistent value'
+        problem: 'Client managers guess which relationships are at risk because there is no shared churn signal or scoring model.',
+        solution: 'Apply predictive analytics that score engagement, billing trends, and sentiment so at-risk accounts surface before they defect.'
       },
       {
-        problem: 'No systematic follow-up process',
-        solution: 'Structured retention workflows with timing and messaging optimized for accounting firms'
+        problem: 'Outreach varies wildly by advisor, leaving some clients with gaps of months between touches.',
+        solution: 'Automate cross-channel cadences—email, SMS, and portal alerts—guided by AI triggers that recommend the next best action.'
+      },
+      {
+        problem: 'Leadership cannot see which services each client actually uses, making it hard to demonstrate value.',
+        solution: 'Consolidate billing, deliverables, and meeting insights into dashboards that highlight wins and tee up strategic conversations.'
       }
     ],
     keyBenefits: [
       {
-        title: 'Reduce Client Churn',
-        description: 'Systematic engagement reduces attrition by up to 40%',
+        title: 'Reduced Client Churn',
+        description: 'Decrease client loss by 60% with proactive retention strategies',
+        icon: 'Shield',
         points: [
-          'Proactive communication calendars',
-          'Value-added content delivery',
-          'Automated check-ins and surveys'
+          'Predict churn risk using engagement and billing signals.',
+          'Initiate save plans with scripted outreach when risk rises.',
+          'Track interventions so the whole team sees next steps.'
         ]
       },
       {
-        title: 'Increase Lifetime Value',
-        description: 'Engaged clients buy more services and refer more often',
+        title: 'Increased Client Value',
+        description: 'Existing clients become more valuable through additional services',
+        icon: 'TrendingUp',
         points: [
-          'Cross-sell and upsell automation',
-          'Referral generation systems',
-          'Service expansion workflows'
+          'Highlight advisory opportunities based on financial milestones.',
+          'Automate educational campaigns that tee up premium services.',
+          'Measure added revenue from expansion plays by client segment.'
+        ]
+      },
+      {
+        title: 'Competitive Differentiation',
+        description: 'Stand out from competitors with superior client experience',
+        icon: 'Star',
+        points: [
+          'Personalize messaging with AI-driven client profiles.',
+          'Showcase proactive insights in dashboards clients can access anytime.',
+          'Gather testimonials and case stories that prove your edge.'
+        ]
+      },
+      {
+        title: 'Predictable Revenue',
+        description: 'Build reliable revenue streams from loyal, long-term clients',
+        icon: 'BarChart',
+        points: [
+          'Forecast renewals and expansion revenue months in advance.',
+          'Automate billing follow-ups and payment reminders.',
+          'Give leadership visibility into retention KPIs in real time.'
         ]
       }
+    ],
+    hearingSignals: [
+      'Top clients churn without warning because early risk signals go unnoticed.',
+      'Account managers guess at the next best touchpoint instead of following data.',
+      'Leadership can\'t see retention KPIs in one place, so decisions lag behind reality.'
     ],
     howItWorks: [
       {
         step: 1,
-        title: 'Segment Your Client Base',
-        description: 'Organize clients by service type, engagement level, and growth potential'
+        title: 'Competitive Analysis',
+        description: 'Analyze what competitors offer and identify gaps in your service delivery'
       },
       {
         step: 2,
-        title: 'Deploy Retention Campaigns',
-        description: 'Launch automated workflows tailored to each segment'
+        title: 'Value Proposition Enhancement',
+        description: 'Develop compelling reasons for clients to stay and pay premium rates'
       },
       {
         step: 3,
-        title: 'Monitor & Optimize',
-        description: 'Track engagement metrics and continuously improve your approach'
+        title: 'Communication Systems',
+        description: 'Implement regular touchpoints and proactive communication workflows'
+      },
+      {
+        step: 4,
+        title: 'Experience Optimization',
+        description: 'Enhance every client interaction from onboarding to ongoing service'
       }
     ],
     results: [
       {
-        metric: 'Client Retention',
-        value: '94%',
-        description: 'Average retention rate for firms using our system'
+        metric: '92%',
+        value: '92%',
+        description: 'Client retention rate achieved by our partner firms'
       },
       {
-        metric: 'Revenue Growth',
-        value: '32%',
-        description: 'Average increase in revenue per client'
+        metric: '40%',
+        value: '40%',
+        description: 'Increase in average client lifetime value'
       },
       {
-        metric: 'Referral Rate',
-        value: '3x',
-        description: 'Increase in client referrals'
+        metric: '85%',
+        value: '85%',
+        description: 'Client satisfaction scores after implementing our strategies'
       }
     ],
-    ctaTitle: 'Start Retaining More Clients Today',
-    ctaDescription: 'See how our retention system can transform your practice'
+    ctaTitle: 'Still have questions about AI-powered client retention?',
+    ctaDescription: 'We\'ll unpack the analytics, playbooks, and automations that keep your best clients engaged before they drift. Book a call to see how we can activate an intelligent retention program for your firm.'
   }
 };
 
