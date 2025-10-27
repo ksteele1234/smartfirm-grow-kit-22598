@@ -176,6 +176,10 @@ All colors MUST be HSL converted from the official brand colors.
     --accent: var(--coral-start);
     --accent-foreground: var(--text-light);
 
+    /* Heading color tokens */
+    --heading-primary: 189 98% 21%; /* #015c6b - H1, H2 */
+    --heading-secondary: 205 100% 19%; /* #00385f - H3, H4, H5, H6 */
+
     --card: var(--white);
     --card-foreground: var(--text-dark);
 
@@ -305,24 +309,24 @@ All colors MUST be HSL converted from the official brand colors.
 
   h1 {
     @apply text-4xl lg:text-5xl;
-    color: hsl(189, 98%, 21%); /* #015c6b */
+    color: hsl(var(--heading-primary));
     letter-spacing: -0.02em; /* Tighter tracking for large text */
   }
 
   h2 {
     @apply text-3xl lg:text-4xl;
-    color: hsl(189, 98%, 21%); /* #015c6b */
+    color: hsl(var(--heading-primary));
     letter-spacing: -0.01em;
   }
 
   h3 {
     @apply text-xl lg:text-2xl font-medium;
-    color: hsl(205, 100%, 19%); /* #00385f */
+    color: hsl(var(--heading-secondary));
     letter-spacing: -0.01em;
   }
 
   h4, h5, h6 {
-    color: hsl(205, 100%, 19%); /* #00385f */
+    color: hsl(var(--heading-secondary));
     letter-spacing: normal;
   }
 
