@@ -4,7 +4,21 @@ import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { fadeInUpVariants } from '@/lib/animationVariants';
 
-const FinalCTASection = () => {
+interface FinalCTASectionProps {
+  title?: string;
+  description?: string;
+  primaryButtonText?: string;
+  primaryButtonLink?: string;
+  reassuranceText?: string;
+}
+
+const FinalCTASection = ({ 
+  title = "Are You Serious About Scaling to $1M?",
+  description = "Join 40+ companies building the marketing foundation that drives consistent growth. Early adopter pricing ends soon—start now and see results in 30 days.",
+  primaryButtonText = "Book a Free Call",
+  primaryButtonLink = "/get-started",
+  reassuranceText = "No commitment required • 30-minute consultation"
+}: FinalCTASectionProps = {}) => {
   const content = useScrollAnimation();
 
   return (
@@ -30,12 +44,12 @@ const FinalCTASection = () => {
         >
           {/* Main Headline */}
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">
-            Are You Serious About Scaling to $1M?
+            {title}
           </h2>
 
           {/* Subheadline */}
           <p className="text-xl text-white/70 leading-relaxed max-w-[600px] mx-auto mb-10">
-            Join 40+ companies building the marketing foundation that drives consistent growth. Early adopter pricing ends soon—start now and see results in 30 days.
+            {description}
           </p>
 
           {/* Primary CTA Button */}
@@ -45,15 +59,15 @@ const FinalCTASection = () => {
               asChild
               className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover:translate-y-[-2px] glow-coral hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-xl animate-gentle-pulse"
             >
-              <Link to="/get-started">
-                Book a Free Call
+              <Link to={primaryButtonLink}>
+                {primaryButtonText}
               </Link>
             </Button>
           </div>
 
           {/* Reassurance Text */}
           <p className="text-sm text-white/60 text-center">
-            No commitment required • 30-minute consultation
+            {reassuranceText}
           </p>
         </motion.div>
       </div>
