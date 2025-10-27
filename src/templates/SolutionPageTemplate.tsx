@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { SolutionPageData } from "@/types/cms";
 import { TrendingUp, Shield, Zap, Users, BarChart, Clock, ArrowRight, CheckCircle, XCircle, Search, Settings, Sparkles, BarChart3 } from "lucide-react";
+import { ContentConfig, resolveKeywordsForPage, generateMetaDescription, adaptContentForPersona, generateCTAForPersona } from "@/lib/contentGenerator";
 import { 
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
 } from "@/components/ui/breadcrumb";
@@ -29,11 +30,19 @@ const defaultSolutionFaqs = [
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
+  contentConfig?: ContentConfig;
 }
 
-const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
+const SolutionPageTemplate = ({ data, contentConfig }: SolutionPageTemplateProps) => {
   const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<{
+    keywords: { primary: string; secondary: string[] };
+    meta: { title: string; description: string };
+    heroSubtitle: string;
+    cta: { label: string; url: string };
+  } | null>(null);
+
   const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultSolutionFaqs;
   const defaultHearingSignals = [
     "Leads wait 24+ hours before they hear back from the firm.",
@@ -52,12 +61,30 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (contentConfig) {
+      const keywords = resolveKeywordsForPage(contentConfig.pageName, contentConfig.industryFocus);
+      const meta = {
+        title: `${data.heroTitle} | SmartFirm.io`,
+        description: generateMetaDescription(keywords.primary, data.heroSubtitle.split('.')[0] || data.heroSubtitle, 160)
+      };
+      const heroSubtitle = contentConfig.personaTarget 
+        ? adaptContentForPersona(data.heroSubtitle, contentConfig.personaTarget)
+        : data.heroSubtitle;
+      const cta = contentConfig.personaTarget 
+        ? generateCTAForPersona(contentConfig.personaTarget, contentConfig.pageType)
+        : { label: 'Book Your Strategy Call', url: '/get-started' };
+
+      setGeneratedContent({ keywords, meta, heroSubtitle, cta });
+    }
+  }, [contentConfig, data.heroTitle, data.heroSubtitle]);
+
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
         pageType="solution"
-        title={data.title}
-        description={(data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
+        title={generatedContent?.meta.title || data.title}
+        description={generatedContent?.meta.description || (data.metaDescription || data.heroSubtitle || data.problemStatement).substring(0, 155)}
         canonicalUrl={data.canonicalUrl}
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -112,13 +139,13 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl font-sans text-on-dark-body mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
-              {data.heroSubtitle}
+              {generatedContent?.heroSubtitle || data.heroSubtitle}
             </p>
           </div>
           <div className="mt-12 flex justify-center">
             <Button variant="coral" size="hero" asChild>
-              <a href="/get-started" aria-label="Book your strategy call">
-                Book Your Strategy Call
+              <a href={generatedContent?.cta.url || "/get-started"} aria-label="Book your strategy call">
+                {generatedContent?.cta.label || "Book Your Strategy Call"}
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </a>
             </Button>

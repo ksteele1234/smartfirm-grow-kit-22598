@@ -1,4 +1,4 @@
-import { EnhancedServicePageTemplate } from "@/templates/EnhancedServicePageTemplate";
+import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { servicePages } from "@/data/cmsPages";
 import { serviceContentConfigs } from "@/lib/contentConfigs";
 
@@ -7,7 +7,7 @@ const MarketingAutomation = () => {
   const contentConfig = serviceContentConfigs['marketing-automation'];
 
   return (
-    <EnhancedServicePageTemplate 
+    <ServicePageTemplate 
       data={serviceData} 
       contentConfig={contentConfig}
     />

@@ -1,9 +1,10 @@
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { ServicePageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Settings, Clock, DollarSign, MessageCircle } from "lucide-react";
+import { ContentConfig, resolveKeywordsForPage, generateMetaDescription, adaptContentForPersona, generateCTAForPersona } from "@/lib/contentGenerator";
 import { StandardCard } from "@/components/ui/standard-card";
 import {
   Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
@@ -80,6 +81,7 @@ const heroStyles = `
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
+  contentConfig?: ContentConfig;
 }
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
@@ -116,9 +118,33 @@ const inferFaqCategory = (question: string): string => {
   return "General";
 };
 
-const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
+const ServicePageTemplate = ({ data, contentConfig }: ServicePageTemplateProps) => {
   const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
   const finalCtaRef = useRef<HTMLElement | null>(null);
+  const [generatedContent, setGeneratedContent] = useState<{
+    keywords: { primary: string; secondary: string[] };
+    meta: { title: string; description: string };
+    heroSubtitle: string;
+    cta: { label: string; url: string };
+  } | null>(null);
+
+  useEffect(() => {
+    if (contentConfig) {
+      const keywords = resolveKeywordsForPage(contentConfig.pageName, contentConfig.industryFocus);
+      const meta = {
+        title: `${data.heroTitle} | SmartFirm.io`,
+        description: generateMetaDescription(keywords.primary, data.heroSubtitle.split('.')[0] || data.heroSubtitle, 160)
+      };
+      const heroSubtitle = contentConfig.personaTarget 
+        ? adaptContentForPersona(data.heroSubtitle, contentConfig.personaTarget)
+        : data.heroSubtitle;
+      const cta = contentConfig.personaTarget 
+        ? generateCTAForPersona(contentConfig.personaTarget, contentConfig.pageType)
+        : { label: 'Book a Free Call', url: '/get-started' };
+
+      setGeneratedContent({ keywords, meta, heroSubtitle, cta });
+    }
+  }, [contentConfig, data.heroTitle, data.heroSubtitle]);
 
   const faqsWithFallback = useMemo(() => {
     const source = (data.faqs && data.faqs.length > 0 ? data.faqs : defaultServiceFaqs);
@@ -173,8 +199,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         pageType="service"
         serviceName={data.title.replace(' for Accounting Firms', '').replace(' for Finance Firms', '')}
         audience="accounting firms"
-        title={data.title}
-        description={(data.heroDescription || data.heroSubtitle).substring(0, 155)}
+        title={generatedContent?.meta.title || data.title}
+        description={generatedContent?.meta.description || (data.heroDescription || data.heroSubtitle).substring(0, 155)}
         canonicalUrl={data.canonicalUrl}
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -236,7 +262,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 className="text-lg md:text-xl text-white/90 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                {data.heroSubtitle}
+                {generatedContent?.heroSubtitle || data.heroSubtitle}
               </motion.p>
             </div>
             
@@ -250,8 +276,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                 className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift transition-all duration-200"
                 asChild
               >
-                <a href="/get-started">
-                  Book a Free Call
+                <a href={generatedContent?.cta.url || "/get-started"}>
+                  {generatedContent?.cta.label || "Book a Free Call"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
