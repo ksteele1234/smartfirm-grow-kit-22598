@@ -299,13 +299,13 @@ const Services = () => {
               Discover how our tailored services can drive your growth and efficiency. Let's discuss your specific needs and create a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="white-on-dark" size="lg" asChild>
+              <Button variant="coral" size="lg" asChild>
                 <a href="/get-started">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="white-outline-on-dark" size="lg" asChild>
+              <Button variant="secondary" size="lg" asChild>
                 <a href="/solutions-expert-marketing-agency-for-accounting-firms">
                   Explore Our Solutions
                 </a>
