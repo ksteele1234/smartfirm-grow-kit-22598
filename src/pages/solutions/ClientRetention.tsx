@@ -1,6 +1,5 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { solutionPages } from "@/data/cmsPages";
-import { solutionContentConfigs } from "@/lib/contentConfigs";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const ClientRetention = () => {
@@ -9,12 +8,10 @@ const ClientRetention = () => {
     ...solutionPages['client-retention'],
     faqs: solutionFaqs
   };
-  const contentConfig = solutionContentConfigs['client-retention'];
 
   return (
     <SolutionPageTemplate 
       data={solutionData}
-      contentConfig={contentConfig}
     />
   );
 };
