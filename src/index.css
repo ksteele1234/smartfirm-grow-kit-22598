@@ -316,12 +316,13 @@ All colors MUST be HSL converted from the official brand colors.
   }
 
   h3 {
-    @apply text-xl lg:text-2xl font-medium text-primary;
+    @apply text-xl lg:text-2xl font-medium;
+    color: hsl(205, 100%, 19%); /* #00385f */
     letter-spacing: -0.01em;
   }
 
   h4, h5, h6 {
-    @apply text-muted-foreground;
+    color: hsl(205, 100%, 19%); /* #00385f */
     letter-spacing: normal;
   }
 
