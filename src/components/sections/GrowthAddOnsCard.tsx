@@ -12,7 +12,7 @@ const GrowthAddOnsCard = () => {
   ];
 
   return (
-    <div className="bg-white border-2 border-[#E2E8F0] rounded-xl p-card md:p-card sm:p-card-sm shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all duration-300 self-start">
+    <div className="bg-white border-2 border-[#E2E8F0] rounded-card p-card md:p-card sm:p-card-sm shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:border-[#0F4C5C] hover:translate-y-[-4px] hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] transition-all duration-300 self-start">
       {/* Icon Section */}
       <div className="flex justify-center mb-6">
         <div className="w-20 h-20 rounded-full bg-[rgba(20,184,166,0.15)] flex items-center justify-center">
@@ -50,7 +50,7 @@ const GrowthAddOnsCard = () => {
       <div className="flex flex-col items-center">
         <Button 
           asChild
-          className="bg-white hover:bg-[#F8F9FA] text-[#0F4C5C] border-2 border-[#0F4C5C] hover:border-[#14b8a6] text-base font-semibold py-3.5 px-7 rounded-lg transition-colors inline-block"
+          className="bg-white hover:bg-[#F8F9FA] text-[#0F4C5C] border-2 border-[#0F4C5C] hover:border-[#14b8a6] text-base font-semibold py-3.5 px-7 rounded-card-sm transition-colors inline-block"
         >
           <Link to="/services/add-ons">
             Explore Add-On Services →

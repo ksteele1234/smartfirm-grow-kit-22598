@@ -23,7 +23,7 @@ const QuickStartFeaturedCard = () => {
       </div>
 
       {/* Badge - Gold gradient */}
-      <div className="inline-block bg-gradient-gold px-4 py-2 rounded-xl text-sm font-bold text-white mb-6 ml-2">
+      <div className="inline-block bg-gradient-gold px-4 py-2 rounded-card text-sm font-bold text-white mb-6 ml-2">
         Start Here
       </div>
 
@@ -90,7 +90,7 @@ const QuickStartFeaturedCard = () => {
       <div className="flex flex-col gap-4">
         <Button 
           asChild
-          className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-xl glow-coral hover-lift transition-all duration-300"
+          className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift transition-all duration-300"
         >
           <Link to="/quick-start-marketing-for-cpa-firms">
             Start Your Quick Start
@@ -102,7 +102,7 @@ const QuickStartFeaturedCard = () => {
           <DialogTrigger asChild>
             <Button 
               variant="outline"
-              className="w-full text-base font-semibold py-3.5 px-8 rounded-xl"
+              className="w-full text-base font-semibold py-3.5 px-8 rounded-card"
             >
               Book Free Strategy Call
             </Button>

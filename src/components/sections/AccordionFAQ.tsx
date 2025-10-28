@@ -53,7 +53,7 @@ const AccordionFAQ = ({
             return (
               <div
                 key={index}
-                className="bg-white border border-[#e2e8f0] rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
+                className="bg-white border border-[#e2e8f0] rounded-card shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow duration-200"
               >
                 {/* Question (Clickable) */}
                 <button

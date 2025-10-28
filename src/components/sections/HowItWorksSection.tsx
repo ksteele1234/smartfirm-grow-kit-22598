@@ -84,7 +84,7 @@ const HowItWorksSection = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 lg:p-12 elevation-1 border border-border/50">
+          <div className="bg-white rounded-card-lg p-8 lg:p-12 elevation-1 border border-border/50">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-[#243b55] mb-4">
               Ready to Get Started?
             </h3>

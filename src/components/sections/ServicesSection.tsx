@@ -66,7 +66,7 @@ const ServicesSection = () => {
                 <Link 
                   key={index}
                   to={service.link}
-                  className="group bg-accent/10 hover:bg-accent/20 rounded-2xl p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
                 >
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
@@ -90,7 +90,7 @@ const ServicesSection = () => {
                 <Link 
                   key={index + 3}
                   to={service.link}
-                  className="group bg-accent/10 hover:bg-accent/20 rounded-2xl p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
                 >
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
@@ -109,7 +109,7 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-12 border border-border/50">
+          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-card-lg p-8 lg:p-12 border border-border/50">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to Transform Your Marketing?
             </h3>

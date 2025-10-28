@@ -39,7 +39,7 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             
@@ -72,7 +72,7 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             
@@ -103,7 +103,7 @@ export const CompleteMarketingSolutions = () => {
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-lg mb-4">
+            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             

@@ -136,7 +136,7 @@ export const ToolPageWrapper = ({
               </h2>
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
-                  <details key={index} className="group border border-border rounded-lg p-card-sm bg-background">
+                  <details key={index} className="group border border-border rounded-card-sm p-card-sm bg-background">
                     <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
                       {faq.question}
                       <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>

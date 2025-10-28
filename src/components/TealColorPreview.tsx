@@ -10,7 +10,7 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/50 backdrop-blur-sm">
       <div className="min-h-screen p-4 md:p-8">
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl elevation-4">
+        <div className="max-w-6xl mx-auto bg-white rounded-card-lg elevation-4">
           {/* Header */}
           <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 rounded-t-2xl flex items-center justify-between">
             <div>
@@ -19,7 +19,7 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-card-sm transition-colors"
               aria-label="Close preview"
             >
               <X className="w-6 h-6" />

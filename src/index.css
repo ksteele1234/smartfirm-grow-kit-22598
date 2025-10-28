@@ -211,7 +211,9 @@ All colors MUST be HSL converted from the official brand colors.
     --shadow-xl: 0 12px 32px rgba(100, 127, 188, 0.2);
 
     /* Border radius tokens */
-    --radius-card: 12px;
+    --radius-card-sm: 8px;   /* lg: Small cards, buttons */
+    --radius-card: 12px;     /* xl: Standard cards */
+    --radius-card-lg: 16px;  /* 2xl: Large feature cards */
     --radius-button: 8px;
     --radius-input: 8px;
 

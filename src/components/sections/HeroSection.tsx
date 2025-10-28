@@ -166,7 +166,7 @@ const HeroSection = () => {
               <Button 
                 variant="coral" 
                 size="lg"
-                className="px-10 py-4 text-lg font-bold rounded-xl animate-gentle-pulse hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
                 <a href="/get-started" className="inline-flex items-center justify-center gap-2">
@@ -185,7 +185,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up" 
               style={{ animationDelay: '0s' }}
             >
-              <div className="stat-card glass-card rounded-2xl p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {leads.count}
                 </p>
@@ -199,7 +199,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8" 
               style={{ animationDelay: '1s' }}
             >
-              <div className="stat-card glass-card rounded-2xl p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {retention.count}
                 </p>
@@ -213,7 +213,7 @@ const HeroSection = () => {
               className="animate-float animate-fade-in-up-delay-2" 
               style={{ animationDelay: '2s' }}
             >
-              <div className="stat-card glass-card rounded-2xl p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {avgDeal.count}
                 </p>
@@ -227,7 +227,7 @@ const HeroSection = () => {
               className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4" 
               style={{ animationDelay: '1.5s' }}
             >
-              <div className="stat-card glass-card rounded-xl p-4">
+              <div className="stat-card glass-card rounded-card p-4">
                 <p className="stat-number text-2xl font-extrabold text-gradient-gold mb-1">
                   {roi.count}
                 </p>

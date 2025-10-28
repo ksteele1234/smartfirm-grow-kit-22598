@@ -150,16 +150,16 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex flex-wrap gap-3">
-              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
+              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
+              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
+              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
+              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
                 <Youtube className="h-4 w-4" />
               </a>
               <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary transition-all duration-200">
