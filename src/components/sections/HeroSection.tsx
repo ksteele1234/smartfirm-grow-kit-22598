@@ -166,7 +166,7 @@ const HeroSection = () => {
               <Button 
                 variant="coral" 
                 size="lg"
-                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
                 asChild
               >
                 <a href="/get-started" className="inline-flex items-center justify-center gap-2">

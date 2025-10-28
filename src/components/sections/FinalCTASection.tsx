@@ -57,7 +57,7 @@ const FinalCTASection = ({
             <Button
               size="lg"
               asChild
-              className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover:translate-y-[-2px] glow-coral hover:shadow-[0_12px_40px_rgba(251,113,133,0.7)] transition-all duration-300 rounded-card animate-gentle-pulse"
+              className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover-lift glow-coral hover-shadow-coral rounded-card animate-gentle-pulse"
             >
               <Link to={primaryButtonLink}>
                 {primaryButtonText}

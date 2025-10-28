@@ -48,7 +48,7 @@ const WhatMakesUsDifferent = () => {
             return (
               <div
                 key={index}
-                className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 ease-in-out hover:border-[#0F4C5C] hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.1)] flex flex-col"
+                className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] elevation-1 hover:border-[#0F4C5C] hover-lift hover:elevation-2 color-transition flex flex-col"
               >
                 {/* Icon Container */}
                 <div className="flex justify-center mb-6">

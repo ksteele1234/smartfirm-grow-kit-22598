@@ -16,7 +16,7 @@ const QuickStartFeaturedCard = () => {
   ];
 
   return (
-    <div className="relative glass-card elevation-3 rounded-[24px] p-12 transition-all duration-300 self-start">
+    <div className="relative glass-card elevation-3 rounded-[24px] p-12 hover-lift self-start">
       {/* Early Adopter Badge - Coral */}
       <div className="inline-block bg-gradient-coral text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
         Early Adopter Pricing*
@@ -90,7 +90,7 @@ const QuickStartFeaturedCard = () => {
       <div className="flex flex-col gap-4">
         <Button 
           asChild
-          className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift transition-all duration-300"
+          className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift"
         >
           <Link to="/quick-start-marketing-for-cpa-firms">
             Start Your Quick Start

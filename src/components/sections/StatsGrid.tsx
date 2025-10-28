@@ -43,7 +43,7 @@ const StatsGrid = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-card-transform bg-white border border-slate-200 rounded-2xl p-10 md:p-12 text-center transition-all duration-300 hover:-translate-y-1"
+              className="stat-card-transform bg-white border border-slate-200 rounded-2xl p-10 md:p-12 text-center hover-lift color-transition"
               style={{
                 boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
               }}

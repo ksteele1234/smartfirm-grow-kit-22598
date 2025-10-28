@@ -37,7 +37,7 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/strategy-integration" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
@@ -70,7 +70,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/seo-for-accountants" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
@@ -101,7 +101,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/website-design" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
@@ -135,7 +135,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/client-review-generation" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Star 
               className="w-12 h-12 text-[#2dd4bf] mb-5" 
@@ -162,7 +162,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/email-marketing" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Mail 
               className="w-12 h-12 text-[#14b8a6] mb-5" 
@@ -189,7 +189,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/technology-solutions" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card shadow-[0_8px_32px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(45,212,191,0.2)]"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <BarChart3 
               className="w-12 h-12 text-[#2dd4bf] mb-5" 

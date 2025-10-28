@@ -66,7 +66,7 @@ const HowItWorksSection = () => {
                   
                   {/* Icon Circle */}
                   <div className="relative flex-shrink-0">
-                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center elevation-1 group-hover:elevation-2 transition-all duration-300 scale-feedback">
+                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center elevation-1 group-hover:elevation-2 scale-feedback color-transition">
                       <IconComponent className="h-10 w-10 text-white" />
                     </div>
                     <div className="absolute -top-3 -right-3 w-8 h-8 bg-accent/10 border-2 border-primary rounded-full flex items-center justify-center">

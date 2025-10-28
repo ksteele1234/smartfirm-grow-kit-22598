@@ -414,7 +414,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           <a
             key={label}
             href={href}
-            className="group flex items-start gap-3 rounded-xl border border-border bg-white/90 backdrop-blur-sm px-4 py-3 shadow-[0_12px_32px_rgba(15,23,42,0.08)] transition-all hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="group flex items-start gap-3 rounded-xl border border-border bg-white/90 backdrop-blur-sm px-4 py-3 elevation-1 hover-lift hover:elevation-2 color-transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white shadow-teal-sm transition-transform group-hover:scale-105">
               <Icon className="h-4 w-4" aria-hidden="true" />

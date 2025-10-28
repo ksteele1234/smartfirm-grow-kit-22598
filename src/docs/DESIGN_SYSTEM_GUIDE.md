@@ -200,11 +200,21 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 
 ### Interactive Card Pattern
 
+**✅ Use `card-interactive` for all interactive cards:**
+
 ```tsx
+// Standard interactive card - includes hover-lift and elevation changes
 <div className="card-interactive elevation-2 rounded-lg p-6">
-  {/* Combines hover-lift + shadow-teal-lg */}
+  {/* Automatically combines hover-lift + elevation-3 on hover */}
 </div>
+
+// With Card component
+<Card className="card-interactive border-border bg-background">
+  {/* Content */}
+</Card>
 ```
+
+**Transition utilities are built-in - no need to add `transition-all duration-300`**
 
 ---
 
@@ -380,6 +390,10 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 - Combine utilities for compound effects
 - Test dark mode variants
 - Ensure proper contrast ratios
+- Use `card-interactive` for all interactive cards
+- Use `hover-lift` for standard lift effects
+- Use `color-transition` for smooth color/border/shadow changes
+- Avoid redundant `transition-all duration-300` - utilities include transitions
 
 ### Don'ts ❌
 
@@ -389,6 +403,9 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 - Don't create inline gradients
 - Don't skip focus states
 - Don't nest too many animations
+- Don't use `transition-all duration-300` manually - use semantic utilities
+- Don't hardcode `hover:translate-y-` - use `hover-lift` instead
+- Don't combine multiple transition properties - use `color-transition`
 
 ---
 

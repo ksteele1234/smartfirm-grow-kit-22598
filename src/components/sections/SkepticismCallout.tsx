@@ -19,7 +19,7 @@ const SkepticismCallout = () => {
   return (
     <section className="py-8 bg-transparent">
       <div className="container mx-auto px-6 max-w-container-content">
-        <div className="rounded-xl p-10 md:p-8 sm:p-6 border-2 border-border bg-card elevation-1 hover:border-primary card-interactive transition-all duration-300">
+        <div className="rounded-xl p-10 md:p-8 sm:p-6 border-2 border-border bg-card elevation-1 card-interactive">
           {/* Headline */}
           <h2 className="text-[32px] md:text-[28px] sm:text-2xl font-bold mb-4 text-foreground leading-[1.2]">
             Most Marketing Agencies Don't Understand Accounting Firms. We Do.

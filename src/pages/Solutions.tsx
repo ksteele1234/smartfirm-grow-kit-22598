@@ -173,7 +173,7 @@ const Solutions = () => {
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
               {solutionCategories.slice(0, 3).map((solution, index) => (
-                <Card key={index} className="group hover:elevation-3 transition-all duration-300 border-border bg-gradient-to-br from-background to-primary/5">
+                <Card key={index} className="group card-interactive border-border bg-gradient-to-br from-background to-primary/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
                       {solution.icon}
@@ -204,7 +204,7 @@ const Solutions = () => {
             {/* Second row - 2 cards taking full width */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {solutionCategories.slice(3).map((solution, index) => (
-                <Card key={index + 3} className="group hover:elevation-3 transition-all duration-300 border-border bg-gradient-to-br from-background to-teal/5">
+                <Card key={index + 3} className="group card-interactive border-border bg-gradient-to-br from-background to-teal/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
                       {solution.icon}

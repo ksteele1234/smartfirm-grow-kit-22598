@@ -66,7 +66,7 @@ const ServicesSection = () => {
                 <Link 
                   key={index}
                   to={service.link}
-                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 hover:elevation-3 border border-accent/20 color-transition"
                 >
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
@@ -90,7 +90,7 @@ const ServicesSection = () => {
                 <Link 
                   key={index + 3}
                   to={service.link}
-                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 transition-all duration-300 hover:elevation-3 border border-accent/20"
+                  className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 hover:elevation-3 border border-accent/20 color-transition"
                 >
                   <div className="mb-4">
                     <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />

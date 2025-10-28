@@ -35,7 +35,7 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
     href,
     ...props 
   }, ref) => {
-    const baseCardClasses = "border border-[#E5E7EB] rounded-xl transition-all duration-300 group cursor-pointer hover:-translate-y-2 hover:shadow-[0_12px_48px_rgba(20,184,166,0.2)]";
+    const baseCardClasses = "border border-[#E5E7EB] rounded-xl group cursor-pointer card-interactive";
     
     const variantClasses = {
       default: "",
