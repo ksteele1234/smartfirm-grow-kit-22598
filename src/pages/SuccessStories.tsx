@@ -184,11 +184,11 @@ const SuccessStories = () => {
       {/* Hero Section */}
       <section className="py-section md:py-28 bg-gradient-to-br from-primary to-teal">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
+          <h1 className="text-display font-heading font-bold text-white mb-6">
             Real Results, Real Growth: SmartFirm Success Stories
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-lead text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
               Discover real results, real growth: SmartFirm success stories from accounting firms that transformed their practices. These case studies showcase how firms achieved significant growth and operational efficiency through our proven methodologies and dedicated support.
             </p>
           </div>

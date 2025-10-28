@@ -170,11 +170,11 @@ const About = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
               About SmartFirm: Marketing Automation for Accountants
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed mb-4 drop-shadow-md">
+              <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed mb-4 drop-shadow-md">
                 SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation, SEO, and client growth systems to help firms thrive in a competitive market.
               </p>
             </div>

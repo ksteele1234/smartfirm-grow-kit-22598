@@ -48,7 +48,7 @@ const FinalCTASection = ({
           </h2>
 
           {/* Subheadline */}
-          <p className="text-xl text-white/70 leading-relaxed max-w-text-sm mx-auto mb-10">
+          <p className="text-lead text-white/70 leading-relaxed max-w-text-sm mx-auto mb-10">
             {description}
           </p>
 

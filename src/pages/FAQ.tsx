@@ -93,11 +93,11 @@ const FAQ = () => {
         {/* Hero Section */}
         <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
+            <h1 className="text-display font-bold text-primary mb-8">
               Frequently Asked Questions for Accounting Firm Marketing Automation
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
+              <p className="text-lead text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
                 Get answers to common questions about marketing automation, SEO, PPC, and content marketing for accountants.
               </p>
             </div>

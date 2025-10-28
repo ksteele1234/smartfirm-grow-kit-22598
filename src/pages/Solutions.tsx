@@ -132,11 +132,11 @@ const Solutions = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-lg">
+            <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">
               Expert Marketing Agency For Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
               </p>
             </div>

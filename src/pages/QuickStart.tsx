@@ -198,7 +198,7 @@ const QuickStart = () => {
               30-Day Implementation
             </Badge>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h1 className="text-display font-bold text-primary mb-6">
               Quick Start Marketing Package for CPA Firms
             </h1>
             

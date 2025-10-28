@@ -141,13 +141,13 @@ const HeroSection = () => {
           <div className="order-2 lg:order-1 space-y-8">
             
             {/* Headline - Solid White */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
+            <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
               Predictable Growth for Accounting Firms Without Wasting Time on Marketing
             </h1>
 
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
-              <p className="text-xl leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md">
+              <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md">
                 SmartFirm provides expert digital marketing for accounting firms, CPAs, bookkeepers, and tax preparers. We handle your entire operation through marketing automation, lead nurture, and SEO services designed to get you more accounting clients and help you keep them longer.
               </p>
             </div>

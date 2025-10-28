@@ -170,11 +170,11 @@ const Industries = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
               Marketing for Accountants: Solutions for Your Niche
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lg md:text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
               </p>
             </div>
