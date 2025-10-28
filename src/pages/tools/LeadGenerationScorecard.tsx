@@ -227,7 +227,7 @@ const LeadGenerationScorecard = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   <Card className="bg-blue-50 border-blue-200">
                     <CardContent className="p-6">
                       <Target className="h-8 w-8 text-blue-600 mx-auto mb-3" />

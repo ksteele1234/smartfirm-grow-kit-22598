@@ -221,7 +221,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
@@ -246,7 +246,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
@@ -271,7 +271,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>

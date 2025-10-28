@@ -111,7 +111,7 @@ const ROICalculator = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-md mb-12">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-2xl">Monthly Performance</CardTitle>
@@ -185,7 +185,7 @@ const ROICalculator = () => {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-sm">
                     <div className="text-center">
                       <DollarSign className="h-8 w-8 text-green-600 mx-auto mb-2" />
                       <h4 className="font-semibold mb-1">Revenue Impact</h4>

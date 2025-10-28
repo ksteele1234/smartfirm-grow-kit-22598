@@ -235,7 +235,7 @@ const ToolsCalculators = () => {
         {/* Tools Grid */}
         <section className="py-16 md:py-section">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-sm md:gap-md max-w-7xl mx-auto">
               {tools.map((tool) => (
                 <Card key={tool.id} className="group hover:shadow-lg color-transition border-border relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
@@ -291,7 +291,7 @@ const ToolsCalculators = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-md md:gap-lg">
                 <div className="text-center">
                   <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
                     <Users className="h-8 w-8 text-primary" />

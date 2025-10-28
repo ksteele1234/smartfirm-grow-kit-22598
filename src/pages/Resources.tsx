@@ -327,7 +327,7 @@ const Resources = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-10 pb-10">
-                  <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="flex flex-col sm:flex-row gap-sm">
                     <Input 
                       type="email" 
                       placeholder="Enter your email address" 

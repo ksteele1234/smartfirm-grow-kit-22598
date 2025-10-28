@@ -257,7 +257,7 @@ const ModernFirmQuiz = () => {
                   <p className="text-muted-foreground">{modernityLevel.description}</p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-sm">
                   <Card className="text-center">
                     <CardContent className="p-6">
                       <Smartphone className="h-8 w-8 text-blue-600 mx-auto mb-3" />

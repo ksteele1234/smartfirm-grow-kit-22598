@@ -177,7 +177,7 @@ const WorkflowBottleneckFinder = () => {
                 <CardDescription>Here's how much time your bottlenecks are costing you</CardDescription>
               </CardHeader>
               <CardContent className="space-y-12">
-                <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="grid md:grid-cols-3 gap-sm text-center">
                   <Card className="bg-red-50 border-red-200">
                     <CardContent className="p-6">
                       <Clock className="h-8 w-8 text-red-600 mx-auto mb-2" />

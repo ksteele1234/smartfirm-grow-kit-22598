@@ -254,7 +254,7 @@ const Solutions = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8 px-6 md:px-10 pb-10">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-md">
                   <div className="space-y-6">
                       <h3 className="font-semibold text-primary flex items-center text-lg">
                         <Users className="h-5 w-5 mr-2" />
@@ -320,7 +320,7 @@ const Solutions = () => {
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto leading-relaxed">
               Let us help you implement the right strategies for sustainable growth. Book a free strategy call to discuss your specific challenges.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
                 size="lg" 
                 variant="coral"

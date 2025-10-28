@@ -192,7 +192,7 @@ const SuccessStories = () => {
               Discover real results, real growth: SmartFirm success stories from accounting firms that transformed their practices. These case studies showcase how firms achieved significant growth and operational efficiency through our proven methodologies and dedicated support.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-sm justify-center">
             <Button variant="white-outline-on-dark" size="hero">
               Read All Case Studies
             </Button>
@@ -230,7 +230,7 @@ const SuccessStories = () => {
             
             <Card className="max-w-4xl mx-auto elevation-1">
               <CardContent className="p-8 md:p-12">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid md:grid-cols-2 gap-md items-center">
                 <div>
                     <p className="text-2xl font-heading font-bold text-primary mb-4">
                       {featuredCaseStudy.title}
@@ -388,7 +388,7 @@ const SuccessStories = () => {
           </div>
 
           {/* Case Studies Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md">
             {filteredCaseStudies.map((study) => (
               <Card key={study.id} className="elevation-1 hover:elevation-2 transition-shadow group cursor-pointer card-interactive">
                 <CardHeader>

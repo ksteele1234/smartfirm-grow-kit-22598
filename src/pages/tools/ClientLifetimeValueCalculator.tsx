@@ -115,7 +115,7 @@ const ClientLifetimeValueCalculator = () => {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   <Card className="bg-red-50 border-red-200">
                     <CardHeader>
                       <CardTitle className="flex items-center text-red-700">

@@ -172,7 +172,7 @@ const TechStackROICalculator = () => {
                 <CardDescription>See how much you could save with automation and consolidation</CardDescription>
               </CardHeader>
               <CardContent className="space-y-12">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   <Card className="bg-red-50 border-red-200">
                     <CardHeader>
                       <CardTitle className="flex items-center text-red-700">
@@ -217,7 +217,7 @@ const TechStackROICalculator = () => {
                   </div>
                 )}
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   <Card>
                     <CardHeader>
                       <CardTitle className="text-lg">Efficiency Gains</CardTitle>

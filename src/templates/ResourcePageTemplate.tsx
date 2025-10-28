@@ -44,7 +44,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
           </p>
           
           {/* Meta Information */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-sm text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
               <span>{new Date(data.publishDate).toLocaleDateString()}</span>
@@ -132,7 +132,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
                 Related Resources
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md">
               {data.relatedResources.map((resource, index) => (
                 <Card key={index} className="hover:elevation-3 transition-shadow duration-300">
                   <CardHeader>

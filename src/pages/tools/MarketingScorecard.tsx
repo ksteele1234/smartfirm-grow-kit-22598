@@ -174,7 +174,7 @@ const MarketingScorecard = () => {
                 </CardHeader>
               </Card>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-sm mb-8">
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center">

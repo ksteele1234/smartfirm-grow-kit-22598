@@ -86,7 +86,7 @@ const Services = () => {
                 Our leading marketing services for accounting firms include turnkey automation platforms, high-converting website design, search engine optimization, and systematic client retention programs.
               </p>
             </div>
-            <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button variant="coral" size="hero" asChild>
                 <Link to="/get-started">
                   Book a free call
@@ -204,7 +204,7 @@ const Services = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8 px-10 pb-10">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div className="space-y-6">
                       <h4 className="font-semibold text-accent flex items-center text-lg">
                         <Target className="h-5 w-5 mr-2" />
@@ -300,7 +300,7 @@ const Services = () => {
             <p className="text-xl opacity-90 mb-10 max-w-3xl mx-auto">
               Discover how our tailored services can drive your growth and efficiency. Let's discuss your specific needs and create a custom solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button variant="coral" size="lg" asChild>
                 <a href="/get-started">
                   Book a Free Call

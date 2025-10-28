@@ -135,7 +135,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* Problem & Solution Section */}
       <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
         <div className="max-w-container-2xl mx-auto">
-          <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
+          <div className="relative grid gap-sm md:gap-md md:grid-cols-2">
             <div
               className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
               aria-hidden="true"
@@ -278,7 +278,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
           
           {/* Dynamic grid based on number of benefits */}
-          <div className={`grid gap-6 ${data.keyBenefits.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+          <div className={`grid gap-sm ${data.keyBenefits.length === 4 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
             {data.keyBenefits.map((benefit, index) => {
               const icons = [TrendingUp, Shield, Zap, Users, BarChart, Clock];
               const IconComponent = icons[index % icons.length];

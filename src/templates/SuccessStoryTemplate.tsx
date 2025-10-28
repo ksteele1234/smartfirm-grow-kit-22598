@@ -28,7 +28,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 to-secondary/10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-lg items-center">
             <div>
               <Badge variant="secondary" className="mb-4">
                 {data.industry}
@@ -131,7 +131,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
               Measurable Results
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-md">
             {data.results.map((result, index) => (
               <Card key={index} className="text-center hover:elevation-3 transition-shadow duration-300">
                 <CardHeader>

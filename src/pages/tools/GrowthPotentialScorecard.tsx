@@ -221,7 +221,7 @@ const GrowthPotentialScorecard = () => {
                   <p className="text-muted-foreground">{growthCategory.description}</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   <Card>
                     <CardHeader>
                       <CardTitle className="text-lg flex items-center">
@@ -371,7 +371,7 @@ const GrowthPotentialScorecard = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-sm">
                 <div>
                   <Label htmlFor="firmType" className="text-base font-medium">Firm Type</Label>
                   <Select onValueChange={setFirmType}>
@@ -401,7 +401,7 @@ const GrowthPotentialScorecard = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-sm">
                 <div>
                   <Label htmlFor="annualRevenue" className="text-base font-medium">Annual Revenue</Label>
                   <Input
@@ -430,7 +430,7 @@ const GrowthPotentialScorecard = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-sm">
                 <div>
                   <Label htmlFor="hourlyRate" className="text-base font-medium">Average Hourly Rate (Optional)</Label>
                   <Input

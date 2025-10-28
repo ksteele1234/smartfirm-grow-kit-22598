@@ -12,7 +12,7 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
       <div className="min-h-screen p-4 md:p-8">
         <div className="max-w-container-2xl mx-auto bg-white rounded-card-lg elevation-4">
           {/* Header */}
-          <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 rounded-t-2xl flex items-center justify-between">
+          <div className="sticky top-0 bg-white border-b border-border px-6 py-4 rounded-t-2xl flex items-center justify-between">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Deep Teal Gradient Palette Preview</h2>
               <p className="text-sm text-gray-600 mt-1">Premium underwater tech aesthetic • Sophisticated & calming</p>
@@ -80,7 +80,7 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
                   <p className="text-xl text-white/80">Body text with 80% opacity for comfortable reading</p>
                   <p className="text-lg" style={{ color: '#5eead4' }}>Highlighted text in bright cyan for emphasis</p>
                   <div className="flex gap-3 flex-wrap">
-                    <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white border border-white/20">Tag</span>
+                    <span className="text-sm px-3 py-1 rounded-full bg-white/10 text-white border border-on-dark">Tag</span>
                     <span className="text-sm px-3 py-1 rounded-full" style={{ background: '#14b8a6', color: 'white' }}>Active Tag</span>
                   </div>
                 </div>
@@ -115,9 +115,9 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
             <section>
               <h3 className="text-lg font-bold text-gray-900 mb-4">Card Components</h3>
               <div className="rounded-xl p-8" style={{ background: 'linear-gradient(135deg, #1a5555 0%, #2a7070 100%)' }}>
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-sm">
                   {/* Glass Card */}
-                  <div className="p-6 rounded-xl backdrop-blur-sm bg-white/10 border border-white/20">
+                  <div className="p-6 rounded-xl backdrop-blur-sm bg-white/10 border border-on-dark">
                     <h4 className="text-xl font-bold text-white mb-2">Glass Effect Card</h4>
                     <p className="text-white/80 mb-4">Subtle transparency with backdrop blur for depth</p>
                     <button className="px-4 py-2 rounded-lg text-sm font-semibold text-white" style={{ background: 'linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%)' }}>
@@ -171,7 +171,7 @@ const TealColorPreview = ({ onClose }: TealColorPreviewProps) => {
           </div>
 
           {/* Footer Actions */}
-          <div className="sticky bottom-0 bg-gray-50 border-t border-gray-200 px-6 py-4 rounded-b-2xl flex justify-between items-center">
+          <div className="sticky bottom-0 bg-gray-50 border-t border-border px-6 py-4 rounded-b-2xl flex justify-between items-center">
             <p className="text-sm text-gray-600">Review the palette and provide feedback</p>
             <button
               onClick={onClose}

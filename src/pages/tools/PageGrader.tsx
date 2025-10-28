@@ -1083,7 +1083,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
           <CardDescription>Configure grading parameters</CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
             <div className="flex items-center justify-between">
               <Label htmlFor="include-noindex">Include noindex pages</Label>
               <Switch

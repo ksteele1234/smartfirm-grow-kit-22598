@@ -472,7 +472,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
           
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-md">
             {data.benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -533,7 +533,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             </motion.h2>
           </div>
           {/* Features Grid */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-md">
             {data.features.map((feature, index) => (
               <motion.div
                 key={index}

@@ -158,7 +158,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               Common Challenges & Our Solutions
             </h2>
           </div>
-          <div className="grid gap-6">
+          <div className="grid gap-sm">
             {data.challenges.map((challenge, index) => (
               <Card key={index} className="elevation-1 card-interactive">
                 <CardHeader>
@@ -192,7 +192,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               Specialized Services
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-sm">
             {data.services.map((service, index) => (
               <Card key={index} className="elevation-1 card-interactive hover:elevation-2">
                 <CardHeader>
@@ -223,7 +223,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               Success Stories
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-sm">
             {data.caseStudies.map((study, index) => (
               <Card key={index} className="elevation-1 card-interactive">
                 <CardHeader>
