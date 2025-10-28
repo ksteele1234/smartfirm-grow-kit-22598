@@ -58,7 +58,7 @@ const AccordionFAQ = ({
                 {/* Question (Clickable) */}
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
+                  className="w-full flex items-center justify-between gap-4 p-card-sm text-left cursor-pointer group"
                 >
                   <span className="text-lg font-semibold text-[#243b55] group-hover:text-[#14b8a6] transition-colors duration-200">
                     {faq.question}

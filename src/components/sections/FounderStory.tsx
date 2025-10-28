@@ -68,7 +68,7 @@ const FounderStory = () => {
 
           {/* RIGHT COLUMN: Why Accounting Firms Only Box */}
           <div className="lg:col-span-4 self-start">
-            <div className="rounded-xl p-8 bg-card border-2 border-primary elevation-2 hover-lift transition-all duration-300">
+            <div className="rounded-xl p-card bg-card border-2 border-primary elevation-2 hover-lift transition-all duration-300">
               {/* Headline */}
               <h3 className="text-xl font-bold mb-5 text-foreground">
                 Why We Work Exclusively With CPAs

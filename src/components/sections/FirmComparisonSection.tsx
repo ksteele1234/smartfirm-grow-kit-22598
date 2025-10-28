@@ -56,7 +56,7 @@ const FirmComparisonSection = () => {
               animate={heading.isInView ? "visible" : "hidden"}
               variants={fadeInUpVariants}
               transition={{ delay: 0 }}
-              className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-10 shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] hover:shadow-[0_6px_16px_rgba(0,0,0,0.1)] transition-all duration-300"
+              className="bg-[#f8fafc] border border-[#e2e8f0] rounded-2xl p-card shadow-[0_4px_12px_rgba(0,0,0,0.06)] hover:translate-y-[-2px] hover:shadow-[0_6px_16px_rgba(0,0,0,0.1)] transition-all duration-300"
             >
               <div className="flex items-start gap-3 mb-6">
                 <XCircle className="w-10 h-10 flex-shrink-0 text-[#64748b] mt-1" />
@@ -83,7 +83,7 @@ const FirmComparisonSection = () => {
               animate={heading.isInView ? "visible" : "hidden"}
               variants={fadeInUpVariants}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary rounded-2xl p-10 elevation-2 hover:translate-y-[-4px] hover:elevation-3 transition-all duration-300"
+              className="bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary rounded-2xl p-card elevation-2 hover:translate-y-[-4px] hover:elevation-3 transition-all duration-300"
             >
               <div className="inline-block bg-gradient-vibrant-teal px-4 py-2 rounded-lg mb-5">
                 <span className="text-sm font-bold text-on-dark-heading">The SmartFirm Way</span>
