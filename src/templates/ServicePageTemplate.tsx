@@ -434,7 +434,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             <a
               key={label}
               href={href}
-              className="whitespace-nowrap rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="whitespace-nowrap rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 elevation-1 transition-colors hover:border-slate-300 hover:bg-slate-50"
             >
               {label}
             </a>
@@ -618,7 +618,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                             : staggerIndex * 0.08,
                           ease: "easeOut"
                         }}
-                        className="group border border-slate-200/70 rounded-xl bg-white px-5 py-4 shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
+                        className="group border border-slate-200/70 rounded-xl bg-white px-5 py-4 elevation-1 focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
                         onToggle={(event) => {
                           if (event.currentTarget.open && finalCtaRef.current) {
                             window.requestAnimationFrame(() => {

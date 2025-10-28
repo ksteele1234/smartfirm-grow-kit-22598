@@ -133,7 +133,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {data.results.map((result, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="text-center hover:elevation-3 transition-shadow duration-300">
                 <CardHeader>
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-8 w-8 text-primary" />

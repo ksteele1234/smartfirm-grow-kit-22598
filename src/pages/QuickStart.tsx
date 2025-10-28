@@ -253,7 +253,7 @@ const QuickStart = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {packageIncludes.map((item, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                <Card key={index} className="group hover:elevation-3 transition-all duration-300 border-border bg-background">
                   <CardHeader className="text-center pb-4">
                     <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />
@@ -292,7 +292,7 @@ const QuickStart = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {outcomes.map((outcome, index) => (
-                <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 hover:elevation-3 transition-all duration-300">
                   <CardHeader className="pb-4">
                     <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 w-fit">
                       <outcome.icon className="h-8 w-8 text-accent" />
@@ -321,7 +321,7 @@ const QuickStart = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {idealFor.map((item, index) => (
-                <Card key={index} className="text-center border-border bg-background hover:shadow-lg transition-all duration-300">
+                <Card key={index} className="text-center border-border bg-background hover:elevation-3 transition-all duration-300">
                   <CardHeader className="pb-6">
                     <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />

@@ -199,7 +199,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.results?.length ? (
                 <div className="mt-6 flex flex-wrap gap-2">
                   {data.results.map(result => (
-                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-primary shadow-sm border border-white/60">
+                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-primary elevation-1 border border-white/60">
                       <CheckCircle className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                       {result.value}
                     </span>
@@ -417,7 +417,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 
       {/* Sticky Mobile CTA */}
       {showStickyFAB && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border shadow-lg p-4 animate-fade-in">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border elevation-3 p-4 animate-fade-in">
           <Button size="lg" variant="coral" className="group w-full" asChild>
             <a href="/get-started" aria-label="Book a free call">
               Book a Free Call

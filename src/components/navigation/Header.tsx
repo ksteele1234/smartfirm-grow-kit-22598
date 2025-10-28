@@ -209,7 +209,7 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-card-sm w-[600px] grid-cols-1 bg-background border border-border shadow-lg z-50">
+                  <div className="grid gap-3 p-card-sm w-[600px] grid-cols-1 bg-background border border-border elevation-3 z-50">
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-primary mb-2">Main Service Categories</h4>
                       <div className="grid gap-2">

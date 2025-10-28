@@ -168,7 +168,7 @@ const Resources = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {resourceCategories.map((category, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 h-full border-border bg-background">
+                <Card key={index} className="group hover:elevation-3 transition-all duration-300 h-full border-border bg-background">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-accent/30 w-fit">
                       {category.icon}
@@ -206,7 +206,7 @@ const Resources = () => {
         <section className="py-section md:py-28">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <Card className="shadow-lg border-border overflow-hidden">
+              <Card className="elevation-3 border-border overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="bg-gradient-vibrant-teal p-10 lg:p-16 text-primary-foreground flex items-center">
                     <div>
@@ -272,7 +272,7 @@ const Resources = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
               {blogPosts.map((post, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border bg-background">
+                <Card key={index} className="group hover:elevation-3 transition-all duration-300 border-border bg-background">
                   <CardHeader className="pb-6 px-8 pt-8">
                     <div className="flex items-center text-sm text-muted-foreground mb-4">
                       <Calendar className="h-4 w-4 mr-1" />

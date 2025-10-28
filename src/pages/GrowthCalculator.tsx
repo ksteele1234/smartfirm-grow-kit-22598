@@ -64,7 +64,7 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Right Column - Form */}
-            <div id="calculator-form" className="bg-white rounded-lg p-6 shadow-md min-h-[493px]">
+            <div id="calculator-form" className="bg-white rounded-lg p-6 elevation-2 min-h-[493px]">
               <iframe
                 src="https://api.leadconnectorhq.com/widget/form/SiWJkhgszdob40Rkfcs2"
                 style={{
@@ -195,7 +195,7 @@ const GrowthCalculator = () => {
               <img 
                 src={meetingPhoto} 
                 alt="Business professionals in a meeting discussing growth strategies"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg elevation-3"
               />
             </div>
           </div>
@@ -211,7 +211,7 @@ const GrowthCalculator = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
             {/* Testimonial 1 - Dan */}
-            <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
+            <div className="rounded-lg overflow-hidden elevation-2 flex flex-col h-full">
               <div className="bg-primary p-8 flex-1 flex items-center">
                 <p className="text-background-light text-sm leading-relaxed">
                   "Client constantly tell us how easy it is to book with us now. The voice AI and chatbot answer questions and help clients pick up the phone. It's like having a full time receptionist and marketing assistant running 24/7."
@@ -221,7 +221,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={danPhoto} 
                   alt="Dan, CPA Managing Partner"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Dan</p>
@@ -236,7 +236,7 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 2 - Joanna */}
-            <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
+            <div className="rounded-lg overflow-hidden elevation-2 flex flex-col h-full">
               <div className="bg-primary p-8 flex-1 flex items-center">
                 <p className="text-background-light text-sm leading-relaxed">
                   "We doubled our monthly leads in 3 weeks. The AI tools are incredible our chat widget alone capture five new leads this first week. Worth getting real ROI from our marketing without having to do more work."
@@ -246,7 +246,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={joannaPhoto} 
                   alt="Joanna, Registered Agent"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Joanna</p>
@@ -261,7 +261,7 @@ const GrowthCalculator = () => {
             </div>
 
             {/* Testimonial 3 - Jenn S. */}
-            <div className="rounded-lg overflow-hidden shadow-md flex flex-col h-full">
+            <div className="rounded-lg overflow-hidden elevation-2 flex flex-col h-full">
               <div className="bg-primary p-8 flex-1 flex items-center">
                 <p className="text-background-light text-sm leading-relaxed">
                   "This system gave me a peace of mind. I'm no longer stressed about marketing, wondering where the next client will come from. The follow-up automation run in the background so I can focus doing great work for my clients."
@@ -271,7 +271,7 @@ const GrowthCalculator = () => {
                 <img 
                   src={jennPhoto} 
                   alt="Jenn S., Bookkeeper"
-                  className="w-24 h-24 mx-auto object-cover border-4 border-white shadow-md rounded-full -mt-12"
+                  className="w-24 h-24 mx-auto object-cover border-4 border-white elevation-2 rounded-full -mt-12"
                 />
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
@@ -319,7 +319,7 @@ const GrowthCalculator = () => {
                   </p>
                   <Button 
                     onClick={scrollToForm}
-                    className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg shadow-md hover:opacity-90 transition-opacity bg-gradient-deep-teal"
+                    className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg elevation-2 hover:opacity-90 transition-opacity bg-gradient-deep-teal"
                     style={{
                       width: '210px'
                     }}
