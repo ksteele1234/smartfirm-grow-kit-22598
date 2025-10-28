@@ -163,7 +163,7 @@ const AllServices = () => {
           <GeometricDivider variant="lines" />
           
           <h2 className="text-3xl font-heading font-bold text-primary mt-8">Explore Our Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md mt-8">
             {services.map((service, index) => (
               <StandardCard
                 key={index}
@@ -183,7 +183,7 @@ const AllServices = () => {
       <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-md">
             <div>
               <h3 className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</h3>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
@@ -208,7 +208,7 @@ const AllServices = () => {
       <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-background-light/50 border-t border-border/50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-sm">
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</h3>
               <p className="text-muted-foreground">We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.</p>

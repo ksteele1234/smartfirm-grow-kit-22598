@@ -205,7 +205,7 @@ const FAQ = () => {
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="grid md:grid-cols-3 gap-md mb-12">
                 <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <MessageSquare className="h-6 w-6 text-accent" />

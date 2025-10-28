@@ -208,7 +208,7 @@ const QuickStart = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
                 <a href="/contact">
                   Book My Free Consultation
@@ -251,7 +251,7 @@ const QuickStart = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-7xl mx-auto">
               {packageIncludes.map((item, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
                   <CardHeader className="text-center pb-4">
@@ -290,7 +290,7 @@ const QuickStart = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-6xl mx-auto">
               {outcomes.map((outcome, index) => (
                 <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 card-interactive">
                   <CardHeader className="pb-4">
@@ -319,7 +319,7 @@ const QuickStart = () => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-md max-w-6xl mx-auto">
               {idealFor.map((item, index) => (
                 <Card key={index} className="text-center border-border bg-background card-interactive">
                   <CardHeader className="pb-6">
@@ -489,7 +489,7 @@ const QuickStart = () => {
             <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
               Book your free consultation today and see how SmartFirm's Quick Start Package can transform your accounting practice.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
                 size="lg" 
                 variant="white-on-dark"

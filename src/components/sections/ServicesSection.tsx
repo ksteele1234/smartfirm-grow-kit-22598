@@ -59,7 +59,7 @@ const ServicesSection = () => {
         {/* Services Grid - 3 cards per row */}
         <div className="space-y-12">
           {/* Row 1 */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-sm">
             {services.slice(0, 3).map((service, index) => {
               const Icon = service.icon;
               return (
@@ -83,7 +83,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Row 2 */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-sm">
             {services.slice(3, 6).map((service, index) => {
               const Icon = service.icon;
               return (

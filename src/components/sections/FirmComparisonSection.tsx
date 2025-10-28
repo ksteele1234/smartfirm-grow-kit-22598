@@ -49,7 +49,7 @@ const FirmComparisonSection = () => {
 
         {/* Split-Screen Comparison */}
         <div className="max-w-container-2xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-md">
             {/* Left Column - Stuck at $400K-$600K */}
             <motion.div 
               initial="hidden"

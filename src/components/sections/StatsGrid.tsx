@@ -39,7 +39,7 @@ const StatsGrid = () => {
   return (
     <section className="pt-6 pb-8 md:pt-8 md:pb-8 bg-white" ref={stat1.ref || undefined}>
       <div className="container mx-auto px-6 md:px-12 max-w-container-2xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
           {stats.map((stat, index) => (
             <div
               key={index}

@@ -42,7 +42,7 @@ const WhatMakesUsDifferent = () => {
         </div>
 
         {/* 4 Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (

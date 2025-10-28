@@ -206,7 +206,7 @@ const GetStarted = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-md max-w-6xl mx-auto">
             {engagementOptions.map((option, index) => (
               <Card key={index} className={`elevation-1 hover:elevation-2 transition-shadow relative ${option.popular ? 'ring-2 ring-primary' : ''}`}>
                 {option.popular && (
@@ -280,7 +280,7 @@ const GetStarted = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-md max-w-4xl mx-auto">
             {supportOptions.map((option, index) => (
               <Card key={index} className="elevation-1 hover:elevation-2 transition-shadow">
                 <CardHeader className="text-center">
@@ -318,7 +318,7 @@ const GetStarted = () => {
           
           <Card className="max-w-4xl mx-auto elevation-1">
             <CardContent className="p-8 md:p-12">
-              <div className="grid md:grid-cols-3 gap-8 items-center">
+              <div className="grid md:grid-cols-3 gap-md items-center">
                 <div className="md:col-span-2">
                   <Quote className="w-12 h-12 text-primary mb-6" />
                   <blockquote className="text-xl text-foreground mb-6 italic">
@@ -376,7 +376,7 @@ const GetStarted = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-md">
               {[
                 { step: "01", title: "Initial Contact", description: "Reach out via your preferred method", icon: Phone },
                 { step: "02", title: "Discovery Call", description: "We understand your unique challenges", icon: Users },

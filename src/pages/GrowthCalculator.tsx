@@ -43,7 +43,7 @@ const GrowthCalculator = () => {
       {/* HERO SECTION */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-lg items-start max-w-6xl mx-auto">
             {/* Left Column - Content */}
             <div className="space-y-6">
               <img 
@@ -99,7 +99,7 @@ const GrowthCalculator = () => {
             Why Most Accounting Firms Struggle to Grow
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-sm max-w-5xl mx-auto">
             <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
@@ -142,7 +142,7 @@ const GrowthCalculator = () => {
       {/* CALCULATOR DESCRIPTION SECTION */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-lg items-center max-w-6xl mx-auto">
             {/* Left Column - Text */}
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-primary leading-tight">
@@ -209,7 +209,7 @@ const GrowthCalculator = () => {
             Trusted by Growth-Minded Accounting Firms
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+          <div className="grid md:grid-cols-3 gap-md max-w-6xl mx-auto items-start">
             {/* Testimonial 1 - Dan */}
             <div className="rounded-lg overflow-hidden elevation-2 flex flex-col h-full">
               <div className="bg-primary p-8 flex-1 flex items-center">

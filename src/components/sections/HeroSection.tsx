@@ -135,7 +135,7 @@ const HeroSection = () => {
     >
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
-        <div className="grid lg:grid-cols-[55%_45%] gap-12 items-center">
+        <div className="grid lg:grid-cols-[55%_45%] gap-lg items-center">
           
           {/* Left Column - Content */}
           <div className="order-2 lg:order-1 space-y-8">

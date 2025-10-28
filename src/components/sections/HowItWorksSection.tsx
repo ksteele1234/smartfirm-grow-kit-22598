@@ -53,7 +53,7 @@ const HowItWorksSection = () => {
               const isEven = index % 2 === 0;
               
               return (
-                <div key={index} className={`flex items-center gap-8 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                <div key={index} className={`flex items-center gap-md ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   {/* Content */}
                   <div className={`flex-1 ${isEven ? 'lg:text-right' : 'lg:text-left'} text-center`}>
                     <h3 className="text-2xl font-heading font-bold text-[#243b55] mb-4">

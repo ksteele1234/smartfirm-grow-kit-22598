@@ -59,7 +59,7 @@ export const CompleteMarketingSolutions = () => {
         </motion.div>
 
         {/* Two Core Services Side-by-Side */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-md mb-8">
           {/* SEO Card */}
           <motion.div
             initial="hidden"
@@ -124,7 +124,7 @@ export const CompleteMarketingSolutions = () => {
         </div>
 
         {/* Three Supporting Services - 3 Column Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md">
           {/* Review Generation Card */}
           <motion.div
             initial="hidden"

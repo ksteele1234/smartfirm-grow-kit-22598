@@ -173,6 +173,11 @@ export default {
         'card': 'var(--spacing-card)',
         'card-sm': 'var(--spacing-card-sm)',
       },
+      gap: {
+        'sm': 'var(--gap-sm)',
+        'md': 'var(--gap-md)',
+        'lg': 'var(--gap-lg)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

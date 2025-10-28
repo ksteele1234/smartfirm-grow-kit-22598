@@ -187,7 +187,7 @@ const About = () => {
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Mission & Vision</h2>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg">
               <Card className="border elevation-2 card-interactive">
                 <CardHeader className="text-center pb-6">
                   <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit">
@@ -231,7 +231,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
               {coreValues.map((value, index) => (
                 <Card key={index} className="text-center elevation-1 card-interactive group hover:elevation-2">
                   <CardHeader className="pb-4">
@@ -264,7 +264,7 @@ const About = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-md mb-12">
                 <div className="lg:col-span-1 flex justify-center items-start">
                   <OptimizedImage 
                     src={katieSteeleImage} 
@@ -341,7 +341,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
               {teamMembers.map((member, index) => {
                 // Apply specific positioning for team members
                 let imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover";
@@ -396,7 +396,7 @@ const About = () => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-md">
               {differentiators.map((item, index) => (
                 <Card key={index} className="border elevation-2 card-interactive h-full">
                   <CardHeader className="pb-4">

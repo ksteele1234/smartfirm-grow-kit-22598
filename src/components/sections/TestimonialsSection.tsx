@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Client Logos in Grayscale */}
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 mb-12 opacity-40">
+        <div className="flex flex-wrap justify-center items-center gap-md lg:gap-lg mb-12 opacity-40">
           <div className="text-white font-semibold text-lg grayscale">CPA Firm A</div>
           <div className="text-white font-semibold text-lg grayscale">Accounting Plus</div>
           <div className="text-white font-semibold text-lg grayscale">TaxPro Services</div>
@@ -159,7 +159,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Results Stats */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
+        <div className="grid md:grid-cols-3 gap-md max-w-4xl mx-auto mt-12">
           <div className="text-center">
             <div className="text-4xl font-heading font-bold text-white mb-2">98%</div>
             <div className="text-white/90">Client Satisfaction</div>

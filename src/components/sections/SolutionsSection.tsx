@@ -55,7 +55,7 @@ const SolutionsSection = () => {
         {/* Solutions Grid - Consistent Layout */}
         <div className="space-y-8 stagger-container">
           {/* First row - 2 cards taking full width */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-md">
             {solutions.slice(0, 2).map((solution, index) => (
               <StandardCard
                 key={index}
@@ -97,7 +97,7 @@ const SolutionsSection = () => {
           </div>
           
           {/* Second row - 2 cards taking full width */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-md">
             {solutions.slice(2).map((solution, index) => (
               <StandardCard
                 key={index + 2}

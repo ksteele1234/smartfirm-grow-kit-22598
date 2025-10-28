@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="bg-gradient-deep-teal pb-8">
       <div className="container mx-auto px-6 max-w-container-2xl pt-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg pb-12 border-b border-white/10">
           {/* Column 1 - Logo & About */}
           <div>
             <a href="/" className="inline-block mb-5">
@@ -175,7 +175,7 @@ const Footer = () => {
             <div className="text-xs text-white/50">
               © 2025 SmartFirm.io. All rights reserved.
             </div>
-            <div className="flex gap-6 text-xs text-white/50">
+            <div className="flex gap-sm text-xs text-white/50">
               <a href="/privacy" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
               </a>

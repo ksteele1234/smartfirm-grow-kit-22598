@@ -186,6 +186,11 @@ All colors MUST be HSL converted from the official brand colors.
     --spacing-section-lg: 6.25rem; /* 100px - large section padding */
     --spacing-card: 1.5rem; /* 24px - standard card padding */
     --spacing-card-sm: 1rem; /* 16px - compact card padding */
+    
+    /* Grid/Flex gap tokens */
+    --gap-sm: 1.5rem; /* 24px - tight grid spacing */
+    --gap-md: 2rem; /* 32px - standard grid spacing */
+    --gap-lg: 3rem; /* 48px - spacious grid spacing */
 
     /* Container width tokens */
     --container-xs: 500px; /* max-w-[500px] - extra small container */

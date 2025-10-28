@@ -131,7 +131,7 @@ const Resources = () => {
                 CPA marketing resources designed for accounting professionals include comprehensive guides, interactive calculators, and proven strategies to help your firm thrive and grow efficiently.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button size="lg" variant="hero">
                 Explore All Resources
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -166,7 +166,7 @@ const Resources = () => {
         {/* Resource Categories */}
         <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg">
               {resourceCategories.map((category, index) => (
                 <Card key={index} className="group card-interactive h-full border-border bg-background">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
@@ -270,7 +270,7 @@ const Resources = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-md lg:gap-lg mb-16">
               {blogPosts.map((post, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
                   <CardHeader className="pb-6 px-8 pt-8">

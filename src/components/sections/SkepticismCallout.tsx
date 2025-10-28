@@ -31,7 +31,7 @@ const SkepticismCallout = () => {
           </p>
 
           {/* Icon Grid */}
-          <div className="flex flex-wrap gap-8 mt-6">
+          <div className="flex flex-wrap gap-md mt-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (

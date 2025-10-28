@@ -367,15 +367,43 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 .section-container /* Max-width container with padding */
 ```
 
+### Grid & Flex Gap Tokens
+
+Use semantic gap tokens for consistent spacing in grid and flex layouts:
+
+```tsx
+// ✅ CORRECT - Use semantic gap tokens
+<div className="grid md:grid-cols-3 gap-sm">    {/* 24px - tight spacing */}
+<div className="grid md:grid-cols-2 gap-md">    {/* 32px - standard spacing */}
+<div className="grid lg:grid-cols-2 gap-lg">    {/* 48px - spacious layout */}
+
+// ❌ WRONG - Don't hardcode gap values
+<div className="grid md:grid-cols-3 gap-6">
+<div className="grid md:grid-cols-2 gap-8">
+<div className="grid lg:grid-cols-2 gap-12">
+```
+
+**Gap Token Reference:**
+- `gap-sm`: 1.5rem (24px) - Tight grid spacing, compact layouts
+- `gap-md`: 2rem (32px) - Standard grid spacing, most common
+- `gap-lg`: 3rem (48px) - Spacious layouts, breathing room
+
 ### Usage Examples
 
 ```tsx
 // Standard section
 <section className="section-padding">
   <div className="section-container">
-    {/* Content */}
+    <div className="grid md:grid-cols-3 gap-md">
+      {/* Content */}
+    </div>
   </div>
 </section>
+
+// Responsive gap sizing
+<div className="grid md:grid-cols-2 gap-sm lg:gap-md">
+  {/* Tighter on mobile, standard on desktop */}
+</div>
 ```
 
 ---
@@ -406,6 +434,7 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 - Don't use `transition-all duration-300` manually - use semantic utilities
 - Don't hardcode `hover:translate-y-` - use `hover-lift` instead
 - Don't combine multiple transition properties - use `color-transition`
+- Don't hardcode gap values (`gap-6`, `gap-8`, `gap-12`) - use semantic gap tokens (`gap-sm`, `gap-md`, `gap-lg`)
 
 ---
 

@@ -118,7 +118,7 @@ const Services = () => {
           {/* Service Categories Grid - Full Width Distribution */}
           <div className="container mx-auto px-4">
             {/* First row - 3 cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg mb-8">
               {serviceCategories.slice(0, 3).map((category, index) => <Card key={index} className="group card-interactive border-border h-full bg-gradient-to-br from-background to-primary/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
@@ -143,7 +143,7 @@ const Services = () => {
             </div>
             
             {/* Second row - 2 cards taking full width */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-md lg:gap-lg">
               {serviceCategories.slice(3).map((category, index) => <Card key={index + 3} className="group card-interactive border-border h-full bg-gradient-to-br from-background to-teal/5">
                   <CardHeader className="text-center pb-6 px-8 pt-8">
                     <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">

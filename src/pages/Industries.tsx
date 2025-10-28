@@ -178,7 +178,7 @@ const Industries = () => {
                 Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
               </p>
             </div>
-            <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button variant="coral" size="hero" asChild>
                 <a href="/get-started">
                   Book Your Strategy Call
@@ -220,7 +220,7 @@ const Industries = () => {
               How We Help
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
               {industryCategories.map((category, index) => (
                 <Card key={index} className="group hover:elevation-2 transition-all duration-300 border card-interactive">
                   <CardHeader className="pb-4">
@@ -272,7 +272,7 @@ const Industries = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-sm">
               {specializedNiches.map((niche, index) => (
                 <Card key={index} className="group hover:elevation-2 transition-all duration-300 border text-center card-interactive">
                   <CardHeader className="pb-2">
@@ -320,7 +320,7 @@ const Industries = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
                     <div className="space-y-4">
                       <h3 className="font-semibold text-accent flex items-center">
                         <Target className="h-5 w-5 mr-2" />
