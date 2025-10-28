@@ -107,7 +107,7 @@ export const ToolPageWrapper = ({
         {intro && (
           <section className="py-8 bg-gradient-to-br from-background to-muted/30">
             <div className="container mx-auto px-4">
-              <div id="sf-keyword-intro" className="max-w-4xl mx-auto text-center">
+              <div id="sf-keyword-intro" className="max-w-text-lg mx-auto text-center">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {intro}
                 </p>
@@ -130,7 +130,7 @@ export const ToolPageWrapper = ({
         {/* FAQ Section */}
         <section id="sf-faqs" className="py-16 md:py-section bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-text-md mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
                 Frequently Asked Questions
               </h2>

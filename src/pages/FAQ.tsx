@@ -97,13 +97,13 @@ const FAQ = () => {
               Frequently Asked Questions for Accounting Firm Marketing Automation
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lead text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
+              <p className="text-lead text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
                 Get answers to common questions about marketing automation, SEO, PPC, and content marketing for accountants.
               </p>
             </div>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative">
+            <div className="max-w-text-sm mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
               <Input
                 type="text"
@@ -197,7 +197,7 @@ const FAQ = () => {
         {/* Contact Section */}
         <section className="py-section md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-text-lg mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                 Still Have Questions?
               </h2>

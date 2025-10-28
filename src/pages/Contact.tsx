@@ -116,7 +116,7 @@ const Contact = () => {
             Contact SmartFirm for Marketing Automation for Accountants
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-xl text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">
               Ready to hire a marketing agency for accounting firms that understands compliance, deadlines, and growth? Contact SmartFirm today.
             </p>
           </div>
@@ -126,7 +126,7 @@ const Contact = () => {
       {/* Contact Information & Form Section */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-5 gap-16 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-16 max-w-container-3xl mx-auto">
             
             {/* Contact Information */}
             <div className="lg:col-span-2 space-y-8">
@@ -246,7 +246,7 @@ const Contact = () => {
       {/* Why Choose SmartFirm Section */}
       <section className="py-section md:py-28 bg-background-light">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-text-lg mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">
               Why Choose SmartFirm for Your Accounting Practice?
             </h2>

@@ -35,7 +35,7 @@ const HomepageFAQSection = () => {
           <h2 className="text-4xl font-bold text-[#647FBC] mb-4">
             Questions? We Have Answers.
           </h2>
-          <p className="text-lg text-[#333333] max-w-3xl mx-auto">
+          <p className="text-lg text-[#333333] max-w-text-md mx-auto">
             Everything you need to know about building your marketing foundation with SmartFirm
           </p>
         </motion.div>

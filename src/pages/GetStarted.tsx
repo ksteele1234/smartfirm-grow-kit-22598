@@ -162,7 +162,7 @@ const GetStarted = () => {
             Get Started with Marketing for Your Accounting Firm
           </h1>
           <div id="sf-keyword-intro">
-            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10">
+            <p className="text-xl text-white/90 max-w-text-lg mx-auto mb-10">
               Whether you're exploring digital marketing for CPA firms or ready for automation, SmartFirm makes it simple to get started.
             </p>
           </div>
@@ -188,7 +188,7 @@ const GetStarted = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
             Ready to Take the Next Step?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-text-md mx-auto">
             Every accounting firm is at a different stage of growth. That's why we offer multiple ways to get started, from free consultations to quick-win programs, all so you can move forward at your own pace.
           </p>
         </div>
@@ -201,12 +201,12 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Choose Your Starting Point
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
               Select the engagement option that best fits your current needs and comfort level.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-md max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-md max-w-container-2xl mx-auto">
             {engagementOptions.map((option, index) => (
               <Card key={index} className={`elevation-1 hover:elevation-2 transition-shadow relative ${option.popular ? 'ring-2 ring-primary' : ''}`}>
                 {option.popular && (
@@ -275,12 +275,12 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Additional Resources & Opportunities
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
               Already a client or looking for partnership opportunities? We've got you covered.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-md max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-md max-w-text-lg mx-auto">
             {supportOptions.map((option, index) => (
               <Card key={index} className="elevation-1 hover:elevation-2 transition-shadow">
                 <CardHeader className="text-center">
@@ -316,7 +316,7 @@ const GetStarted = () => {
             </h2>
           </div>
           
-          <Card className="max-w-4xl mx-auto elevation-1">
+          <Card className="max-w-text-lg mx-auto elevation-1">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-3 gap-md items-center">
                 <div className="md:col-span-2">
@@ -370,12 +370,12 @@ const GetStarted = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               What Happens After You Get Started?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
               Here's a simple overview of our proven process from initial contact to transformation.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-text-lg mx-auto">
             <div className="grid md:grid-cols-4 gap-md">
               {[
                 { step: "01", title: "Initial Contact", description: "Reach out via your preferred method", icon: Phone },
@@ -491,7 +491,7 @@ const GetStarted = () => {
       {/* Final CTA Section */}
       <section className="py-section bg-gradient-vibrant-teal">
         <div className="container mx-auto px-6 text-center">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-text-md mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
               Still Unsure Where to Begin?
             </h2>

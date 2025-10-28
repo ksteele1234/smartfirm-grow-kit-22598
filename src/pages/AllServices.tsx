@@ -143,8 +143,8 @@ const AllServices = () => {
       <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
         <FloatingShapes variant="circles" />
         <BackgroundPattern pattern="dots" />
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center max-w-4xl mx-auto">
+        <div className="max-w-container-3xl mx-auto relative">
+          <div className="text-center max-w-text-lg mx-auto">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
               Professional Marketing Services For Accounting Firms
             </h1>
@@ -159,7 +159,7 @@ const AllServices = () => {
 
       {/* Services Grid */}
       <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-container-3xl mx-auto">
           <GeometricDivider variant="lines" />
           
           <h2 className="text-3xl font-heading font-bold text-primary mt-8">Explore Our Services</h2>
@@ -181,7 +181,7 @@ const AllServices = () => {
 
       {/* Benefits Section */}
       <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-container-3xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
           <div className="grid md:grid-cols-2 gap-md">
             <div>
@@ -206,7 +206,7 @@ const AllServices = () => {
 
       {/* Process Section */}
       <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-background-light/50 border-t border-border/50">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-container-3xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
           <div className="grid md:grid-cols-3 gap-sm">
             <div>
@@ -227,7 +227,7 @@ const AllServices = () => {
 
       {/* FAQs */}
       <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-container-3xl mx-auto">
           <h2 className="text-3xl font-heading font-bold text-primary mb-6">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <details className="border border-border rounded-lg p-4 bg-background">
@@ -248,7 +248,7 @@ const AllServices = () => {
 
       {/* CTA Section */}
       <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-vibrant-teal text-white">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-text-lg mx-auto text-center">
           <p className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</p>
           <p className="text-xl opacity-90 mb-8 text-white/90">
             Let's create a customized growth plan for your firm. Book a free strategy call to discover which services will have the biggest impact on your practice.

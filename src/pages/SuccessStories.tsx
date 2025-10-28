@@ -271,7 +271,7 @@ const SuccessStories = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               Explore More Success Stories
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
               Filter by industry, challenge solved, or firm size to find stories most relevant to your situation.
             </p>
           </div>

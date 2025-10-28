@@ -40,7 +40,7 @@ const HowItWorksSection = () => {
         {/* Steps */}
         <div className="relative">
           {/* Connection Line with Accent */}
-          <div className="hidden lg:block absolute top-32 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
+          <div className="hidden lg:block absolute top-32 left-1/2 transform -translate-x-1/2 w-full max-w-text-lg">
             <div className="relative">
               <AccentLine className="opacity-30" />
             </div>

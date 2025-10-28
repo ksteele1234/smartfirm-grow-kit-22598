@@ -203,7 +203,7 @@ const QuickStart = () => {
             </h1>
             
             <div id="sf-keyword-intro">
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-10 leading-relaxed">
+              <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
                 This marketing package for CPA firms delivers a turnkey system in 30 days including website deployment, automated lead follow-up, client onboarding sequences, and review generation workflows.
               </p>
             </div>
@@ -228,7 +228,7 @@ const QuickStart = () => {
         {/* Why Choose Section */}
         <section className="py-16 md:py-section bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-text-lg mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                 Why Choose the Quick Start?
               </h2>
@@ -246,12 +246,12 @@ const QuickStart = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 What's Included in the 30-Day Quick Start Package
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                 Six essential components to transform your accounting firm's marketing
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-3xl mx-auto">
               {packageIncludes.map((item, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
                   <CardHeader className="text-center pb-4">
@@ -285,12 +285,12 @@ const QuickStart = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Outcomes in 30 Days
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                 Here's what you'll have operational after your Quick Start implementation
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-2xl mx-auto">
               {outcomes.map((outcome, index) => (
                 <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 card-interactive">
                   <CardHeader className="pb-4">
@@ -319,7 +319,7 @@ const QuickStart = () => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-md max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-md max-w-container-2xl mx-auto">
               {idealFor.map((item, index) => (
                 <Card key={index} className="text-center border-border bg-background card-interactive">
                   <CardHeader className="pb-6">
@@ -486,7 +486,7 @@ const QuickStart = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to Launch Your Firm's Marketing in 30 Days?
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto leading-relaxed">
               Book your free consultation today and see how SmartFirm's Quick Start Package can transform your accounting practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">

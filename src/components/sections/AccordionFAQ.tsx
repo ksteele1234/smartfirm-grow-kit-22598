@@ -39,7 +39,7 @@ const AccordionFAQ = ({
             {heading}
           </h2>
           {subheading && (
-            <p className="text-lg text-[#333333] max-w-3xl mx-auto">
+            <p className="text-lg text-[#333333] max-w-text-md mx-auto">
               {subheading}
             </p>
           )}

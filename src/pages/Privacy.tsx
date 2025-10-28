@@ -61,7 +61,7 @@ const Privacy = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
             Privacy Policy
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-text-md mx-auto">
             Your privacy is important to us. This policy explains how we collect, use, and protect your information.
           </p>
         </div>
@@ -70,7 +70,7 @@ const Privacy = () => {
       {/* Privacy Policy Content */}
       <section className="py-section bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto prose prose-lg">
+          <div className="max-w-text-lg mx-auto prose prose-lg">
             <div className="text-text-secondary space-y-8">
               <div className="text-sm text-text-light mb-8">
                 <p>Our Privacy Policy was last updated on June 28, 2025</p>
@@ -299,7 +299,7 @@ const Privacy = () => {
       {/* FAQ Section */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-text-md mx-auto">
             <h2 className="text-3xl font-bold text-primary mb-8 text-center">
               Frequently Asked Questions
             </h2>

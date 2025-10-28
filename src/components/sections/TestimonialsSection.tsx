@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 drop-shadow-lg">
             Trusted by Accounting Firms Nationwide
           </h2>
-          <p className="text-lg text-white/95 max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-lg text-white/95 max-w-text-sm mx-auto drop-shadow-md">
             See what firm owners are saying about their growth with SmartFirm
           </p>
         </div>

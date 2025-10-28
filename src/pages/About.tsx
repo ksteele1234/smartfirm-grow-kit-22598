@@ -174,7 +174,7 @@ const About = () => {
               About SmartFirm: Marketing Automation for Accountants
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed mb-4 drop-shadow-md">
+              <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed mb-4 drop-shadow-md">
                 SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation, SEO, and client growth systems to help firms thrive in a competitive market.
               </p>
             </div>
@@ -226,7 +226,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Our Core Values
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                 These values guide how we work with every client and every solution we deliver.
               </p>
             </div>
@@ -254,7 +254,7 @@ const About = () => {
         {/* Founder Story */}
         <section className="py-16 md:py-section">
           <div className="container mx-auto">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-container-content mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                   Meet the Founder & CEO
@@ -336,7 +336,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Meet the Experts Behind Your Growth
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                 Our team blends accounting knowledge with modern marketing and technology so your firm can grow with confidence.
               </p>
             </div>
@@ -424,7 +424,7 @@ const About = () => {
                 Our Journey
               </h2>
             </div>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-text-lg mx-auto">
               <div className="space-y-6">
                 {journeyMilestones.map((milestone, index) => (
                   <Card key={index} className="border elevation-2 card-interactive">
@@ -448,7 +448,7 @@ const About = () => {
         {/* FAQ Section */}
         <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-text-md mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
                 Frequently Asked Questions
               </h2>
@@ -513,7 +513,7 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto">
               We're committed to helping your accounting firm achieve its full potential. 
               Let's start a conversation about your growth goals and how we can help you reach them.
             </p>

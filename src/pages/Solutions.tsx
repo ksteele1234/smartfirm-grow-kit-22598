@@ -317,7 +317,7 @@ const Solutions = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Ready to Solve Your Firm's Challenges?
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto leading-relaxed">
               Let us help you implement the right strategies for sustainable growth. Book a free strategy call to discuss your specific challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

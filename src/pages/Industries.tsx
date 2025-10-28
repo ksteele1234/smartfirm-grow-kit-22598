@@ -174,7 +174,7 @@ const Industries = () => {
               Marketing for Accountants: Solutions for Your Niche
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">
                 Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
               </p>
             </div>
@@ -197,7 +197,7 @@ const Industries = () => {
         {/* Introduction */}
         <section className="py-16 md:py-section">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-text-lg mx-auto space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
                 Serving a Spectrum of Accounting Professionals
               </h2>
@@ -267,7 +267,7 @@ const Industries = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                 Specialized Niches
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                 Tailored strategies for specialized accounting practices with unique market dynamics and client needs.
               </p>
             </div>
@@ -304,7 +304,7 @@ const Industries = () => {
         {/* Industry Spotlight */}
         <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-text-lg mx-auto">
               <Card className="elevation-2 border card-interactive">
                 <CardHeader className="text-center pb-6">
                   <div className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
@@ -314,7 +314,7 @@ const Industries = () => {
                   <CardTitle className="text-3xl md:text-4xl text-primary mb-4">
                     Growth Strategies for Tax Preparation Firms
                   </CardTitle>
-                  <CardDescription className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  <CardDescription className="text-lg text-muted-foreground max-w-text-sm mx-auto">
                     Tax season creates unique opportunities and challenges. Discover how seasonal firms are building 
                     year-round revenue streams and scaling beyond traditional tax preparation.
                   </CardDescription>
@@ -385,7 +385,7 @@ const Industries = () => {
         {/* Testimonial Section */}
         <section className="section-padding">
           <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-text-md mx-auto text-center">
               <div className="bg-accent/10 p-8 rounded-lg border">
                 <Building className="h-12 w-12 text-accent mx-auto mb-6" />
                 <blockquote className="text-xl text-foreground italic mb-6">
@@ -407,7 +407,7 @@ const Industries = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Is Your Industry Ready for Smart Growth?
             </h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto">
               Discover tailored strategies designed for your accounting specialization. Let's discuss how industry-specific 
               solutions can accelerate your firm's growth.
             </p>
@@ -438,7 +438,7 @@ const Industries = () => {
         {/* FAQ Section */}
         <section className="py-section md:py-28">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-text-lg mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
                   Industry-Specific FAQ for Accounting Professionals
