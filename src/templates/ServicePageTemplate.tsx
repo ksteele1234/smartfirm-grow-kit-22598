@@ -247,7 +247,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             >
               <Button 
                 size="lg"
-                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift transition-all duration-200"
+                className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                 asChild
               >
                 <a href="/get-started">
@@ -710,7 +710,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             <Button 
               size="lg" 
               variant="white-on-dark"
-              className="px-8 py-4 text-lg font-bold transition-all duration-200 group"
+              className="px-8 py-4 text-lg font-bold color-transition group"
               asChild
             >
               <a href={data.ctaButtonLink}>

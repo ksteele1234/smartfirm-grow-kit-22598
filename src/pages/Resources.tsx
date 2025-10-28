@@ -291,7 +291,7 @@ const Resources = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 border-primary text-primary"
+                      className="group-hover:bg-primary group-hover:text-primary-foreground color-transition border-primary text-primary"
                     >
                       Read More
                       <ArrowRight className="ml-2 h-4 w-4" />

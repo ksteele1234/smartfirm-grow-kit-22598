@@ -237,7 +237,7 @@ const ToolsCalculators = () => {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
               {tools.map((tool) => (
-                <Card key={tool.id} className="group hover:shadow-lg transition-all duration-300 border-border relative overflow-hidden">
+                <Card key={tool.id} className="group hover:shadow-lg color-transition border-border relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-5 group-hover:opacity-10 transition-opacity`} />
                   <CardHeader className="relative z-10 text-center pb-4">
                     <div className="mx-auto mb-4 p-3 rounded-lg bg-accent w-fit">
@@ -262,7 +262,7 @@ const ToolsCalculators = () => {
                       </div>
                     </div>
                     <Button 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground color-transition"
                       variant="outline"
                       asChild
                     >

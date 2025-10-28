@@ -83,7 +83,7 @@ const WhySmartFirmIsDifferent = () => {
                 animate={heading.isInView ? "visible" : "hidden"}
                 variants={fadeInUpVariants}
                 transition={{ delay }}
-                className="bg-card border border-border rounded-2xl p-8 elevation-1 card-interactive transition-all duration-300"
+                className="bg-card border border-border rounded-2xl p-8 elevation-1 card-interactive"
               >
                 {/* Icon */}
                 <Icon 

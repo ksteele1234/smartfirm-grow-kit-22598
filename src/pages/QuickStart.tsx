@@ -455,7 +455,7 @@ const QuickStart = () => {
                   {/* Primary CTA - Coral Gradient */}
                   <Button 
                     asChild
-                    className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 rounded-xl glow-coral hover-lift transition-all duration-300"
+                    className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 rounded-xl glow-coral hover-lift"
                   >
                     <a href="/get-started">Get Started</a>
                   </Button>

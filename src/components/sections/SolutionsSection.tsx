@@ -83,7 +83,7 @@ const SolutionsSection = () => {
                   
                   <Button 
                     variant="ghost" 
-                    className="w-full justify-between transition-all duration-300"
+                    className="w-full justify-between color-transition"
                     asChild
                   >
                     <a href={solution.link}>
@@ -125,7 +125,7 @@ const SolutionsSection = () => {
                   
                   <Button 
                     variant="ghost" 
-                    className="w-full justify-between transition-all duration-300"
+                    className="w-full justify-between color-transition"
                     asChild
                   >
                     <a href={solution.link}>

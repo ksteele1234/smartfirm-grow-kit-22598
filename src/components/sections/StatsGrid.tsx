@@ -93,16 +93,16 @@ const StatsGrid = () => {
             opacity: 0;
           }
           .stat-card-transform:nth-child(1) {
-            animation-delay: 100ms;
+            animation-delay: var(--delay-100);
           }
           .stat-card-transform:nth-child(2) {
-            animation-delay: 200ms;
+            animation-delay: var(--delay-200);
           }
           .stat-card-transform:nth-child(3) {
-            animation-delay: 300ms;
+            animation-delay: var(--delay-300);
           }
           .stat-card-transform:nth-child(4) {
-            animation-delay: 400ms;
+            animation-delay: var(--delay-400);
           }
         }
         

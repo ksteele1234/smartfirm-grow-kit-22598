@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
 
         {/* Featured Testimonial Carousel */}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20 transition-all duration-500 ease-in-out">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20 color-transition">
             <div className="space-y-8">
               {/* Quote Icon */}
               <div className="flex justify-center">
@@ -136,7 +136,7 @@ const TestimonialsSection = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentIndex(index)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      className={`w-2.5 h-2.5 rounded-full color-transition ${
                         index === currentIndex 
                           ? 'bg-white w-8' 
                           : 'bg-white/40 hover:bg-white/60'

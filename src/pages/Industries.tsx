@@ -222,7 +222,7 @@ const Industries = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
               {industryCategories.map((category, index) => (
-                <Card key={index} className="group hover:elevation-2 transition-all duration-300 border card-interactive">
+                <Card key={index} className="group hover:elevation-2 border card-interactive">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between mb-4">
                       <div className="p-3 rounded-lg bg-accent/10 w-fit">
@@ -242,7 +242,7 @@ const Industries = () => {
                   <CardContent className="pt-0">
                     <Button 
                       variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-white color-transition"
                       asChild
                     >
                       <a href={category.link}>
@@ -274,7 +274,7 @@ const Industries = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-sm">
               {specializedNiches.map((niche, index) => (
-                <Card key={index} className="group hover:elevation-2 transition-all duration-300 border text-center card-interactive">
+                <Card key={index} className="group hover:elevation-2 border text-center card-interactive">
                   <CardHeader className="pb-2">
                     <div className="mx-auto mb-3 p-3 rounded-lg bg-accent/10 w-fit">
                       {niche.icon}
@@ -287,7 +287,7 @@ const Industries = () => {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                      className="w-full group-hover:bg-primary group-hover:text-white color-transition"
                       asChild
                     >
                       <a href={niche.link}>

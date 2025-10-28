@@ -155,7 +155,7 @@ const FAQ = () => {
 
                           {/* Answer (Expandable) */}
                           <div
-                            className={`overflow-hidden transition-all duration-300 ${
+                            className={`overflow-hidden color-transition ${
                               isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                             }`}
                           >

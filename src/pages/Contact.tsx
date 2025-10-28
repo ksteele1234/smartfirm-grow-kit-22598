@@ -384,7 +384,7 @@ const Contact = () => {
                     />
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
+                    className={`overflow-hidden color-transition ${
                       isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
