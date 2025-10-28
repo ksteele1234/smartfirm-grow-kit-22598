@@ -247,7 +247,7 @@ const AllServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary via-primary/95 to-teal text-white">
+      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-vibrant-teal text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</p>
           <p className="text-xl opacity-90 mb-8 text-white/90">

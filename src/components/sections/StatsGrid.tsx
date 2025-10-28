@@ -56,7 +56,7 @@ const StatsGrid = () => {
             >
               {/* The Number with Gold Gradient */}
               <div
-                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
+                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 text-gradient-gold"
                 style={{ 
                   textShadow: '0 2px 4px rgba(251, 191, 36, 0.2)',
                   fontWeight: 800

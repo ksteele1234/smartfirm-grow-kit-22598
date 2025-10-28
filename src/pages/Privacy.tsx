@@ -56,7 +56,7 @@ const Privacy = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal py-section">
+      <section className="bg-gradient-vibrant-teal py-section">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
             Privacy Policy

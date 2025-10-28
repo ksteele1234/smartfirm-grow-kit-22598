@@ -156,7 +156,7 @@ const GetStarted = () => {
       
       <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal py-section pb-16">
+      <section className="bg-gradient-vibrant-teal py-section pb-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
             Get Started with Marketing for Your Accounting Firm
@@ -385,12 +385,12 @@ const GetStarted = () => {
               ].map((item, index) => (
                 <div key={index} className="text-center">
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center text-white font-heading font-bold text-lg">
+                    <div className="w-16 h-16 mx-auto bg-gradient-vibrant-teal rounded-full flex items-center justify-center text-white font-heading font-bold text-lg">
                       {item.step}
                     </div>
                     <item.icon className="w-8 h-8 text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                     {index < 3 && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-teal transform -translate-y-1/2"></div>
+                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-vibrant-teal transform -translate-y-1/2"></div>
                     )}
                   </div>
                   <h3 className="font-heading font-semibold text-primary mb-2">{item.title}</h3>
@@ -489,7 +489,7 @@ const GetStarted = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-section bg-gradient-to-br from-teal to-primary">
+      <section className="py-section bg-gradient-vibrant-teal">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">

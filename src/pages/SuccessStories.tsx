@@ -182,7 +182,7 @@ const SuccessStories = () => {
       </nav>
       
       {/* Hero Section */}
-      <section className="py-section md:py-28 bg-gradient-to-br from-primary to-teal">
+      <section className="py-section md:py-28 bg-gradient-vibrant-teal">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-display font-heading font-bold text-white mb-6">
             Real Results, Real Growth: SmartFirm Success Stories
@@ -482,7 +482,7 @@ const SuccessStories = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-section bg-gradient-to-br from-teal to-primary">
+      <section className="py-section bg-gradient-vibrant-teal">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
             Ready to Be Our Next Success Story?

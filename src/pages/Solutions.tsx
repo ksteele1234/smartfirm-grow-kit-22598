@@ -311,7 +311,7 @@ const Solutions = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-section bg-gradient-to-br from-primary to-teal text-white relative overflow-hidden">
+        <section className="py-section bg-gradient-vibrant-teal text-white relative overflow-hidden">
           <FloatingShapes variant="circles" className="opacity-20" />
           <div className="container mx-auto text-center relative">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
