@@ -239,6 +239,11 @@ All colors MUST be HSL converted from the official brand colors.
     --input: 215 20% 85%; /* Input field border color */
     --ring: var(--vibrant-teal-start); /* Focus ring color (keyboard navigation) */
 
+    /* Semantic border colors for different contexts */
+    --border-on-dark-subtle: rgba(255, 255, 255, 0.1); /* Subtle border on dark backgrounds */
+    --border-on-dark: rgba(255, 255, 255, 0.2); /* Standard border on dark backgrounds */
+    --border-on-dark-strong: rgba(255, 255, 255, 0.3); /* Prominent border on dark backgrounds */
+
     /* ===== TYPOGRAPHY ===== */
     /* Professional sans-serif stack optimized for readability */
     --font-heading: 'Poppins', sans-serif; /* Bold, modern headings */

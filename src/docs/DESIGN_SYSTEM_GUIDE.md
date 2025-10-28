@@ -99,6 +99,48 @@ This guide documents the SmartFirm.io design system implemented in `src/index.cs
 
 ---
 
+## Border System
+
+### Semantic Border Colors
+
+**✅ Use these border utilities based on background context:**
+
+```css
+/* Light backgrounds */
+border-border          /* Default border for cards and inputs on light backgrounds */
+
+/* Dark backgrounds */
+border-on-dark-subtle  /* Subtle white border (10% opacity) for minimal separation */
+border-on-dark         /* Standard white border (20% opacity) for clear definition */
+border-on-dark-strong  /* Prominent white border (30% opacity) for emphasis */
+```
+
+### Usage Examples
+
+```tsx
+// ✅ CORRECT - Use semantic border tokens
+<div className="border border-on-dark rounded-lg">
+  Content on dark background
+</div>
+
+<Card className="border border-border">
+  Content on light background
+</Card>
+
+// ❌ WRONG - Don't hardcode border colors
+<div className="border border-white/20">
+<div className="border border-gray-200">
+```
+
+### Border Width
+
+Use standard Tailwind border width utilities:
+- `border` - 1px (default)
+- `border-2` - 2px (emphasis)
+- `border-4` - 4px (strong emphasis, rarely used)
+
+---
+
 ## Shadow & Elevation System
 
 ### Elevation Levels
@@ -435,6 +477,7 @@ Use semantic gap tokens for consistent spacing in grid and flex layouts:
 - Don't hardcode `hover:translate-y-` - use `hover-lift` instead
 - Don't combine multiple transition properties - use `color-transition`
 - Don't hardcode gap values (`gap-6`, `gap-8`, `gap-12`) - use semantic gap tokens (`gap-sm`, `gap-md`, `gap-lg`)
+- Don't hardcode border colors (`border-white/20`, `border-gray-200`, `border-slate-200`) - use semantic border tokens (`border-on-dark`, `border-border`)
 
 ---
 

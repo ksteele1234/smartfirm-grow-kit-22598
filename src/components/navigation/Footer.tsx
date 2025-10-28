@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="bg-gradient-deep-teal pb-8">
       <div className="container mx-auto px-6 max-w-container-2xl pt-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg pb-12 border-b border-on-dark-subtle">
           {/* Column 1 - Logo & About */}
           <div>
             <a href="/" className="inline-block mb-5">
@@ -150,19 +150,19 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex flex-wrap gap-3">
-              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
+              <a href="https://www.facebook.com/SmartFirm.io" target="_blank" rel="noopener noreferrer" aria-label="Visit SmartFirm on Facebook" className="w-9 h-9 bg-white/5 border border-on-dark-subtle rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
+              <a href="https://x.com/SmartFirm15" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Twitter" className="w-9 h-9 bg-white/5 border border-on-dark-subtle rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
+              <a href="https://www.linkedin.com/company/smart-firm" target="_blank" rel="noopener noreferrer" aria-label="Connect with SmartFirm on LinkedIn" className="w-9 h-9 bg-white/5 border border-on-dark-subtle rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-white/10 rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
+              <a href="https://www.youtube.com/@Marketing4Accountants" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to SmartFirm on YouTube" className="w-9 h-9 bg-white/5 border border-on-dark-subtle rounded-card-sm flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
                 <Youtube className="h-4 w-4" />
               </a>
-              <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
+              <a href="https://www.instagram.com/smartfirm.io" target="_blank" rel="noopener noreferrer" aria-label="Follow SmartFirm on Instagram" className="w-9 h-9 bg-white/5 border border-on-dark-subtle rounded-lg flex items-center justify-center text-on-dark-body hover:text-primary hover:border-primary color-transition">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>

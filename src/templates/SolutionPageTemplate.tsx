@@ -199,7 +199,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.results?.length ? (
                 <div className="mt-6 flex flex-wrap gap-2">
                   {data.results.map(result => (
-                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-primary elevation-1 border border-white/60">
+                    <span key={`result-badge-${result.metric}-${result.value}`} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-1 text-xs font-medium text-primary elevation-1 border border-on-dark">
                       <CheckCircle className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                       {result.value}
                     </span>
@@ -289,7 +289,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   title={benefit.title}
                   description={benefit.description}
                   variant="default"
-                  className="bg-white/95 backdrop-blur-sm space-y-6 border-white/60 text-left"
+                  className="bg-white/95 backdrop-blur-sm space-y-6 border-on-dark text-left"
                   titleClassName="group-hover:text-primary/80"
                   iconClassName="text-primary"
                   descriptionClassName="text-left max-w-none text-foreground leading-[1.6]"
@@ -341,7 +341,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <span className="absolute -left-3 md:-left-4 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white text-lg font-semibold shadow-[0_10px_30px_rgba(20,184,166,0.35)]">
                   {String(step.step ?? index + 1).padStart(2, "0")}
                 </span>
-                <div className="ml-2 md:ml-4 rounded-2xl border border-slate-100 bg-white px-5 py-5 md:px-8 md:py-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
+                <div className="ml-2 md:ml-4 rounded-2xl border border-border bg-white px-5 py-5 md:px-8 md:py-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary">{step.subheading ?? defaultHowItWorksSubheadings[index] ?? `Step ${index + 1}`}</span>
                   <div className="mt-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-xl md:text-2xl font-heading font-semibold leading-tight">

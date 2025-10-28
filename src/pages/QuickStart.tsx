@@ -464,7 +464,7 @@ const QuickStart = () => {
                   <Button 
                     variant="outline"
                     asChild
-                    className="w-full bg-transparent hover:bg-white/10 text-on-dark-heading border-2 border-white/30 text-lg font-semibold py-4 rounded-xl transition-all"
+                    className="w-full bg-transparent hover:bg-white/10 text-on-dark-heading border-2 border-on-dark-strong text-lg font-semibold py-4 rounded-xl transition-all"
                   >
                     <a href="/contact">Book Your Call</a>
                   </Button>

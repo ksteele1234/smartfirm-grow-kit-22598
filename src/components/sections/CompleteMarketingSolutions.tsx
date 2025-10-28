@@ -37,9 +37,9 @@ export const CompleteMarketingSolutions = () => {
           <Link 
             to="/services/strategy-integration" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
+            <span className="inline-block bg-white/15 border border-on-dark text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             
@@ -70,9 +70,9 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/seo-for-accountants" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
+            <span className="inline-block bg-white/15 border border-on-dark text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             
@@ -101,9 +101,9 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/website-design" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
-            <span className="inline-block bg-white/15 border border-white/20 text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
+            <span className="inline-block bg-white/15 border border-on-dark text-white text-xs font-semibold px-3 py-1 rounded-card-sm mb-4">
               Core Service
             </span>
             
@@ -135,7 +135,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/client-review-generation" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Star 
               className="w-12 h-12 text-[#2dd4bf] mb-5" 
@@ -162,7 +162,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/email-marketing" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Mail 
               className="w-12 h-12 text-[#14b8a6] mb-5" 

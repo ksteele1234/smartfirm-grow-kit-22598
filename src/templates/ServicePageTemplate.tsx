@@ -434,7 +434,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             <a
               key={label}
               href={href}
-              className="whitespace-nowrap rounded-full border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 elevation-1 transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="whitespace-nowrap rounded-full border border-border px-4 py-2 text-sm font-medium text-slate-700 elevation-1 transition-colors hover:border-slate-300 hover:bg-slate-50"
             >
               {label}
             </a>
@@ -598,7 +598,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </motion.h2>
           <div className="space-y-6">
             {faqGroups.map(({ category, items }, groupIndex) => (
-              <div key={category} className="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
+              <div key={category} className="rounded-2xl border border-border bg-white/80 p-6 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
                 <h3 className="text-lg font-semibold text-[#647FBC] mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {category}
                 </h3>
@@ -618,7 +618,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
                             : staggerIndex * 0.08,
                           ease: "easeOut"
                         }}
-                        className="group border border-slate-200/70 rounded-xl bg-white px-5 py-4 elevation-1 focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
+                        className="group border border-border rounded-xl bg-white px-5 py-4 elevation-1 focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
                         onToggle={(event) => {
                           if (event.currentTarget.open && finalCtaRef.current) {
                             window.requestAnimationFrame(() => {

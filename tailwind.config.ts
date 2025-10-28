@@ -32,6 +32,9 @@ export default {
         "aurora-5": "#FAFDD6",
         
         border: "hsl(var(--border))",
+        "border-on-dark-subtle": "var(--border-on-dark-subtle)",
+        "border-on-dark": "var(--border-on-dark)",
+        "border-on-dark-strong": "var(--border-on-dark-strong)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",

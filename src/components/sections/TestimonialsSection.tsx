@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
 
         {/* Featured Testimonial Carousel */}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-white/20 color-transition">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-on-dark color-transition">
             <div className="space-y-8">
               {/* Quote Icon */}
               <div className="flex justify-center">
@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
                 <img 
                   src={currentTestimonial.image} 
                   alt={currentTestimonial.name}
-                  className="w-20 h-20 rounded-full object-cover border-3 border-white/30 shadow-lg"
+                  className="w-20 h-20 rounded-full object-cover border-3 border-on-dark-strong shadow-lg"
                 />
                 <div className="text-center">
                   <div className="flex items-center justify-center space-x-3 mb-2">
@@ -125,7 +125,7 @@ const TestimonialsSection = () => {
                   variant="ghost"
                   size="sm"
                   onClick={prevTestimonial}
-                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-white/30"
+                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-on-dark-strong"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </Button>
@@ -149,7 +149,7 @@ const TestimonialsSection = () => {
                   variant="ghost"
                   size="sm"
                   onClick={nextTestimonial}
-                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-white/30"
+                  className="w-10 h-10 p-0 text-white hover:bg-white/20 border border-on-dark-strong"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </Button>

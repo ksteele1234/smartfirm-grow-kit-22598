@@ -165,8 +165,8 @@ const Header = () => {
       "bg-white sticky top-0 z-50 color-transition",
       "h-[72px] border-b",
       isScrolled 
-        ? "backdrop-blur-lg shadow-[0_2px_12px_rgba(0,0,0,0.08)] border-slate-200" 
-        : "border-slate-200"
+        ? "backdrop-blur-lg shadow-[0_2px_12px_rgba(0,0,0,0.08)] border-border" 
+        : "border-border"
     )}>
       <div className="container mx-auto px-6 lg:px-12 h-full">
         <div className="flex items-center justify-between h-full">
