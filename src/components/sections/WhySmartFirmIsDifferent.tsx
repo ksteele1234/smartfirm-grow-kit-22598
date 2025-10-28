@@ -53,7 +53,7 @@ const WhySmartFirmIsDifferent = () => {
 
   return (
     <section className="bg-white section-padding">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-container-2xl">
         
         {/* Section Header */}
         <motion.div 
@@ -66,7 +66,7 @@ const WhySmartFirmIsDifferent = () => {
           <h2 className="text-4xl font-bold text-primary mb-4">
             Why SmartFirm is Different
           </h2>
-          <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
+          <p className="text-xl text-muted-foreground max-w-text-md mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </motion.div>

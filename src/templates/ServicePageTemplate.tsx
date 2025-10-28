@@ -196,7 +196,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         
         {/* Breadcrumbs */}
         <nav id="sf-breadcrumbs" className="absolute top-0 left-0 right-0 pt-4 z-20" aria-label="Breadcrumb">
-          <div className="max-w-[1400px] mx-auto px-4">
+          <div className="max-w-container-3xl mx-auto px-4">
             <Breadcrumb>
               <BreadcrumbList className="text-xs text-white/60">
                 <BreadcrumbItem>
@@ -215,9 +215,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </nav>
         
-        <div className="hero-container max-w-[1400px] mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
+        <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
           {/* Hero Content - Centered */}
-          <div className="hero-content relative z-10 text-center max-w-[800px] px-4">
+          <div className="hero-content relative z-10 text-center max-w-container-lg px-4">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

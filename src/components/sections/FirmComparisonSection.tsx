@@ -27,7 +27,7 @@ const FirmComparisonSection = () => {
 
   return (
     <section className="bg-white overflow-hidden section-padding">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-container-2xl">
         {/* Section Header */}
         <motion.div 
           ref={heading.ref}
@@ -39,16 +39,16 @@ const FirmComparisonSection = () => {
           <div className="text-sm font-semibold text-[#0F4C5C] uppercase tracking-wider mb-3">
             The $1M Question
           </div>
-          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#647FBC] leading-tight max-w-[900px] mx-auto mb-6 font-heading">
+          <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-[#647FBC] leading-tight max-w-text-lg mx-auto mb-6 font-heading">
             What Separates Firms Stuck at $400K from Those Scaling to $1M?
           </h2>
-          <p className="text-[18px] lg:text-[20px] text-[#475569] leading-relaxed max-w-[700px] mx-auto mb-16">
+          <p className="text-[18px] lg:text-[20px] text-[#475569] leading-relaxed max-w-text-md mx-auto mb-16">
             It's not about working harder. It's about having the right marketing infrastructure.
           </p>
         </motion.div>
 
         {/* Split-Screen Comparison */}
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-container-2xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Stuck at $400K-$600K */}
             <motion.div 

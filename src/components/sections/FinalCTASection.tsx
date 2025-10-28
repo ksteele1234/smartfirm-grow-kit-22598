@@ -34,7 +34,7 @@ const FinalCTASection = ({
         />
       </div>
 
-      <div className="relative mx-auto max-w-[700px]">
+      <div className="relative mx-auto max-w-text-md">
         <motion.div 
           ref={content.ref}
           initial="hidden"
@@ -48,7 +48,7 @@ const FinalCTASection = ({
           </h2>
 
           {/* Subheadline */}
-          <p className="text-xl text-white/70 leading-relaxed max-w-[600px] mx-auto mb-10">
+          <p className="text-xl text-white/70 leading-relaxed max-w-text-sm mx-auto mb-10">
             {description}
           </p>
 

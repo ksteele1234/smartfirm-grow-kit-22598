@@ -4,7 +4,7 @@ const SetupExpectationCallout = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="max-w-[900px] mx-auto bg-[#FAFDD6] border-2 border-[#0F4C5C] rounded-xl p-6 md:py-8 md:px-10 flex flex-col md:flex-row gap-3 md:gap-5 items-start">
+        <div className="max-w-text-lg mx-auto bg-[#FAFDD6] border-2 border-[#0F4C5C] rounded-xl p-6 md:py-8 md:px-10 flex flex-col md:flex-row gap-3 md:gap-5 items-start">
           {/* Icon */}
           <div className="flex-shrink-0">
             <Info className="w-6 h-6 text-[#0F4C5C]" aria-hidden="true" />

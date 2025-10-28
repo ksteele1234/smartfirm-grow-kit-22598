@@ -23,7 +23,7 @@ const HomepageFAQSection = () => {
 
   return (
     <section className="bg-white overflow-hidden section-padding">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-container-2xl">
         {/* Section Header */}
         <motion.div 
           ref={heading.ref}
@@ -41,7 +41,7 @@ const HomepageFAQSection = () => {
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-[800px] mx-auto space-y-4">
+        <div className="max-w-container-lg mx-auto space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openItems.includes(index);
             const delay = Math.min(index * 0.05, 0.2);

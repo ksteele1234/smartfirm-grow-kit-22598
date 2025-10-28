@@ -291,7 +291,7 @@ const GrowthCalculator = () => {
       {/* BOTTOM CTA SECTION - Woman in Blazer */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto flex justify-center">
-          <div className="relative w-full max-w-[730px]">
+          <div className="relative w-full max-w-text-md">
             {/* Woman image - positioned absolutely to extend beyond gradient box */}
             <div className="absolute left-0 -top-20 md:-top-24 z-10 w-[240px] md:w-[260px]">
               <img 

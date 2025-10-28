@@ -188,12 +188,20 @@ All colors MUST be HSL converted from the official brand colors.
     --spacing-card-sm: 1rem; /* 16px - compact card padding */
 
     /* Container width tokens */
-    --container-sm: 640px; /* max-w-[640px] */
-    --container-md: 768px; /* max-w-[768px] */
-    --container-lg: 800px; /* max-w-[800px] */
-    --container-xl: 1024px; /* max-w-[1024px] */
-    --container-2xl: 1200px; /* max-w-[1200px] */
+    --container-xs: 500px; /* max-w-[500px] - extra small container */
+    --container-sm: 640px; /* max-w-[640px] - small container */
+    --container-md: 768px; /* max-w-[768px] - medium container */
+    --container-lg: 800px; /* max-w-[800px] - large container */
     --container-content: 1000px; /* max-w-[1000px] - content width */
+    --container-xl: 1024px; /* max-w-[1024px] - extra large */
+    --container-2xl: 1200px; /* max-w-[1200px] - 2x large */
+    --container-3xl: 1400px; /* max-w-[1400px] - 3x large */
+    
+    /* Text container widths */
+    --text-container-sm: 600px; /* max-w-[600px] - small text block */
+    --text-container-md: 700px; /* max-w-[700px] - medium text block */
+    --text-container-lg: 900px; /* max-w-[900px] - large text block */
+    --text-container-xl: 1100px; /* max-w-[1100px] - extra large text block */
 
     /* Elevation/Shadow tokens */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);

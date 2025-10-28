@@ -9,7 +9,7 @@ export const CompleteMarketingSolutions = () => {
 
   return (
     <section className="relative overflow-hidden bg-gradient-muted-blue section-padding">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-container-2xl">
         {/* Section Heading */}
         <motion.div 
           ref={heading.ref}
@@ -18,10 +18,10 @@ export const CompleteMarketingSolutions = () => {
           variants={fadeInUpVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white max-w-[800px] mx-auto mb-4">
+          <h2 className="text-4xl font-bold text-white max-w-container-lg mx-auto mb-4">
             Complete Marketing Solutions for Accountants, CPAs, and Bookkeepers
           </h2>
-          <p className="text-lg text-white/70 max-w-[700px] mx-auto mb-12">
+          <p className="text-lg text-white/70 max-w-text-md mx-auto mb-12">
             The foundational marketing infrastructure every accounting firm needs to attract, convert, and retain high-value clients.
           </p>
         </motion.div>

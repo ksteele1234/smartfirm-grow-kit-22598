@@ -120,7 +120,7 @@ const FAQ = () => {
         {/* FAQ Content */}
         <section className="py-[100px] md:py-[80px] bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-[800px] mx-auto">
+            <div className="max-w-container-lg mx-auto">
               {filteredFAQs.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="mb-16">
                   <h2 className="text-3xl font-bold text-primary mb-6">

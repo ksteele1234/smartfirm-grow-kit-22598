@@ -30,13 +30,13 @@ const WhatMakesUsDifferent = () => {
 
   return (
     <section className="py-20 bg-[#91ADC8]/[0.08]">
-      <div className="container mx-auto px-6 max-w-[1200px]">
+      <div className="container mx-auto px-6 max-w-container-2xl">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">
             What Makes SmartFirm Different
           </h2>
-          <p className="text-[20px] sm:text-[18px] font-normal text-[#333333] leading-relaxed max-w-[700px] mx-auto">
+          <p className="text-[20px] sm:text-[18px] font-normal text-[#333333] leading-relaxed max-w-text-md mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </div>

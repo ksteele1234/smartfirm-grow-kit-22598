@@ -46,7 +46,7 @@ const AccordionFAQ = ({
         </div>
 
         {/* FAQ Items */}
-        <div className="max-w-[800px] mx-auto space-y-4">
+        <div className="max-w-container-lg mx-auto space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openItems.includes(index);
             

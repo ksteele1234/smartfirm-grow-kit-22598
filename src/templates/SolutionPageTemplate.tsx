@@ -134,7 +134,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 
       {/* Problem & Solution Section */}
       <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-container-2xl mx-auto">
           <div className="relative grid gap-6 md:gap-8 md:grid-cols-2">
             <div
               className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
@@ -246,7 +246,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           >
             See how firms apply this ?
           </a>
-          <p className="text-xs text-muted-foreground max-w-[640px] mt-1">
+          <p className="text-xs text-muted-foreground max-w-container-sm mt-1">
             These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
           </p>
         </div>
@@ -267,7 +267,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 
       {/* Key Benefits Section */}
       <section className="section-padding bg-gradient-deep-teal relative overflow-hidden pt-[40px] md:pt-[52px]">
-        <div className="max-w-[1200px] mx-auto relative">
+        <div className="max-w-container-2xl mx-auto relative">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold text-on-dark-heading leading-tight">
               Key Benefits
@@ -312,7 +312,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
 
       {/* How It Works Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-container-2xl mx-auto">
           <div className="text-center mb-10 md:mb-14 space-y-4 md:space-y-6">
             <h2 className="text-[28px] md:text-4xl font-heading font-bold leading-tight">
               How It Works

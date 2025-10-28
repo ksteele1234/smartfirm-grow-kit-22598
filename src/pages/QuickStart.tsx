@@ -377,7 +377,7 @@ const QuickStart = () => {
               </h2>
             </div>
             
-            <div className="max-w-[500px] mx-auto">
+            <div className="max-w-container-xs mx-auto">
               <div className="relative glass-card elevation-3 rounded-[24px] p-12">
                 {/* Early Adopter Badge - Coral */}
                 <div className="inline-block bg-gradient-coral text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">

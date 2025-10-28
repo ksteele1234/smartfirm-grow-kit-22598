@@ -340,7 +340,7 @@ const Contact = () => {
             </h2>
           </div>
           
-          <div className="max-w-[800px] mx-auto space-y-4">
+          <div className="max-w-container-lg mx-auto space-y-4">
             {[
               {
                 question: "How do I get started?",

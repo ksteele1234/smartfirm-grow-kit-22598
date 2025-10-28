@@ -169,7 +169,7 @@ const GetStarted = () => {
         </div>
         <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 elevation-1 w-full max-w-[1400px] mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 elevation-1 w-full max-w-container-3xl mx-auto">
               <iframe 
                 src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
                 style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '600px'}}
@@ -411,7 +411,7 @@ const GetStarted = () => {
             </h2>
           </div>
           
-          <div className="max-w-[800px] mx-auto space-y-4">
+          <div className="max-w-container-lg mx-auto space-y-4">
             {[
               {
                 question: "How do I get started?",

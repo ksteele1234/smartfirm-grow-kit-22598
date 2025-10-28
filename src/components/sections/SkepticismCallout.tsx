@@ -18,7 +18,7 @@ const SkepticismCallout = () => {
 
   return (
     <section className="py-8 bg-transparent">
-      <div className="container mx-auto px-6 max-w-[1000px]">
+      <div className="container mx-auto px-6 max-w-container-content">
         <div className="rounded-xl p-10 md:p-8 sm:p-6 border-2 border-border bg-card elevation-1 hover:border-primary card-interactive transition-all duration-300">
           {/* Headline */}
           <h2 className="text-[32px] md:text-[28px] sm:text-2xl font-bold mb-4 text-foreground leading-[1.2]">
@@ -26,7 +26,7 @@ const SkepticismCallout = () => {
           </h2>
 
           {/* Body Text */}
-          <p className="text-lg md:text-[17px] sm:text-base font-normal max-w-[900px] text-foreground leading-[1.7]">
+          <p className="text-lg md:text-[17px] sm:text-base font-normal max-w-text-lg text-foreground leading-[1.7]">
             Generic marketing agencies treat you like any other business. But accounting firms operate differently—busy season chaos, utilization rates, the difference between $500 tax clients and $5K advisory retainers. We're founded by a CPA and a business turnaround specialist who've lived this reality.
           </p>
 

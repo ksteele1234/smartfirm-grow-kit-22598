@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-deep-teal pb-8">
-      <div className="container mx-auto px-6 max-w-[1200px] pt-20">
+      <div className="container mx-auto px-6 max-w-container-2xl pt-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           {/* Column 1 - Logo & About */}

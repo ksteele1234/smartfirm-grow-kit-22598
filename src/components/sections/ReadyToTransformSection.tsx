@@ -50,13 +50,13 @@ const ReadyToTransformSection = () => {
         </g>
       </svg>
 
-      <div className="mx-auto max-w-[1200px] relative z-10">
+      <div className="mx-auto max-w-container-2xl relative z-10">
         {/* Section Header - WHITE TEXT */}
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-white mb-4">
             Start Growing Your Firm Today
           </h2>
-          <p className="text-[18px] lg:text-[20px] text-white/80 max-w-[800px] mx-auto leading-[1.6]">
+          <p className="text-[18px] lg:text-[20px] text-white/80 max-w-container-lg mx-auto leading-[1.6]">
             Start with our proven Quick Start package or explore custom solutions for your firm
           </p>
         </div>
