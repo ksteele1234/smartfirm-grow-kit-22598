@@ -182,7 +182,7 @@ const SuccessStories = () => {
       </nav>
       
       {/* Hero Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-teal">
+      <section className="py-section md:py-28 bg-gradient-to-br from-primary to-teal">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
             Real Results, Real Growth: SmartFirm Success Stories
@@ -204,7 +204,7 @@ const SuccessStories = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-section md:py-28 bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8">
             Proof of Partnership: Our Clients' Achievements
@@ -219,7 +219,7 @@ const SuccessStories = () => {
 
       {/* Featured Case Study */}
       {featuredCaseStudy && (
-        <section className="py-20 bg-background-light">
+        <section className="py-section bg-background-light">
           <div className="container mx-auto px-6">
             <div className="text-center mb-12">
               <Badge className="mb-4">Featured Success Story</Badge>
@@ -265,7 +265,7 @@ const SuccessStories = () => {
       )}
 
       {/* Case Studies Grid with Filters */}
-      <section className="py-20 bg-background">
+      <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
@@ -419,7 +419,7 @@ const SuccessStories = () => {
       </section>
 
       {/* Testimonial Carousel */}
-      <section className="py-20 bg-background-light">
+      <section className="py-section bg-background-light">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
@@ -482,7 +482,7 @@ const SuccessStories = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-teal to-primary">
+      <section className="py-section bg-gradient-to-br from-teal to-primary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">
             Ready to Be Our Next Success Story?
@@ -498,7 +498,7 @@ const SuccessStories = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-8 text-center">

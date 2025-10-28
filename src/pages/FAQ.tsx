@@ -91,7 +91,7 @@ const FAQ = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               Frequently Asked Questions for Accounting Firm Marketing Automation
@@ -195,7 +195,7 @@ const FAQ = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 md:py-28 bg-background-light">
+        <section className="py-section md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">

@@ -160,7 +160,7 @@ const About = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-16 md:py-20 pb-32 md:pb-40 bg-gradient-deep-teal overflow-hidden">
+        <section className="relative py-16 md:py-section pb-32 md:pb-40 bg-gradient-deep-teal overflow-hidden">
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
@@ -182,7 +182,7 @@ const About = () => {
         </section>
 
         {/* Mission & Vision */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Mission & Vision</h2>
@@ -220,7 +220,7 @@ const About = () => {
         </section>
 
         {/* Core Values */}
-        <section className="py-16 md:py-20 bg-background-light">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -252,7 +252,7 @@ const About = () => {
         </section>
 
         {/* Founder Story */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
@@ -330,7 +330,7 @@ const About = () => {
         </section>
 
         {/* Meet the Team */}
-        <section className="py-16 md:py-20 bg-background-light">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -388,7 +388,7 @@ const About = () => {
         </section>
 
         {/* What Makes SmartFirm Different */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -417,7 +417,7 @@ const About = () => {
         </section>
 
         {/* Our Journey */}
-        <section className="py-16 md:py-20 bg-background-light">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -446,7 +446,7 @@ const About = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">
@@ -508,7 +508,7 @@ const About = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-primary to-teal text-white">
+        <section className="py-16 md:py-section bg-gradient-to-br from-primary to-teal text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares

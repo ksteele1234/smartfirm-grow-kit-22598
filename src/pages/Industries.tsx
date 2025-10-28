@@ -195,7 +195,7 @@ const Industries = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
@@ -214,7 +214,7 @@ const Industries = () => {
         </section>
 
         {/* Firm Size Categories */}
-        <section className="py-16 md:py-20 bg-background-light">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
               How We Help
@@ -261,7 +261,7 @@ const Industries = () => {
         </section>
 
         {/* Specialized Niches */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -302,7 +302,7 @@ const Industries = () => {
         </section>
 
         {/* Industry Spotlight */}
-        <section className="py-16 md:py-20 bg-background-light">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="elevation-2 border card-interactive">
@@ -436,7 +436,7 @@ const Industries = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 md:py-28">
+        <section className="py-section md:py-28">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">

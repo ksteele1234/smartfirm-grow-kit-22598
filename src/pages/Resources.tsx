@@ -121,7 +121,7 @@ const Resources = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-8">
               CPA Marketing Resources to Grow Your Firm
@@ -145,7 +145,7 @@ const Resources = () => {
         </section>
 
         {/* Introduction */}
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-section">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-8">
@@ -164,7 +164,7 @@ const Resources = () => {
         </section>
 
         {/* Resource Categories */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
               {resourceCategories.map((category, index) => (
@@ -203,7 +203,7 @@ const Resources = () => {
         </section>
 
         {/* Featured Resource */}
-        <section className="py-20 md:py-28">
+        <section className="py-section md:py-28">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <Card className="shadow-lg border-border overflow-hidden">
@@ -259,7 +259,7 @@ const Resources = () => {
         </section>
 
         {/* Latest Blog Posts */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
@@ -313,7 +313,7 @@ const Resources = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-20 md:py-28">
+        <section className="py-section md:py-28">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <Card className="border-border bg-gradient-to-br from-accent/30 to-accent/10">
@@ -348,7 +348,7 @@ const Resources = () => {
         </section>
 
         {/* Help Section */}
-        <section className="py-20 md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">

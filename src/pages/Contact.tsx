@@ -244,7 +244,7 @@ const Contact = () => {
       </section>
 
       {/* Why Choose SmartFirm Section */}
-      <section className="py-20 md:py-28 bg-background-light">
+      <section className="py-section md:py-28 bg-background-light">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-12 text-center">

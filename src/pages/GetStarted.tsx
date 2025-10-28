@@ -156,7 +156,7 @@ const GetStarted = () => {
       
       <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-teal py-20 pb-16">
+      <section className="bg-gradient-to-br from-primary to-teal py-section pb-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
             Get Started with Marketing for Your Accounting Firm
@@ -183,7 +183,7 @@ const GetStarted = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-background">
+      <section className="py-section bg-background">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
             Ready to Take the Next Step?
@@ -195,7 +195,7 @@ const GetStarted = () => {
       </section>
 
       {/* Engagement Options Section */}
-      <section className="py-20 bg-background-light">
+      <section className="py-section bg-background-light">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
@@ -269,7 +269,7 @@ const GetStarted = () => {
       </section>
 
       {/* Support & Partnership Options */}
-      <section className="py-20 bg-background">
+      <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
@@ -307,7 +307,7 @@ const GetStarted = () => {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-20 bg-background-light">
+      <section className="py-section bg-background-light">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <Badge className="mb-4">Client Success Story</Badge>
@@ -364,7 +364,7 @@ const GetStarted = () => {
       </section>
 
       {/* Process Timeline */}
-      <section className="py-20 bg-background">
+      <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
@@ -489,7 +489,7 @@ const GetStarted = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-teal to-primary">
+      <section className="py-section bg-gradient-to-br from-teal to-primary">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-6">

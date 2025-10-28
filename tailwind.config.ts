@@ -166,6 +166,13 @@ export default {
         'text-lg': 'var(--text-container-lg)',
         'text-xl': 'var(--text-container-xl)',
       },
+      spacing: {
+        'section': 'var(--spacing-section)',
+        'section-sm': 'var(--spacing-section-sm)',
+        'section-lg': 'var(--spacing-section-lg)',
+        'card': 'var(--spacing-card)',
+        'card-sm': 'var(--spacing-card-sm)',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
