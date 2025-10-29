@@ -165,16 +165,32 @@ All colors MUST be HSL converted from the official brand colors.
     /* ===== SEMANTIC TOKENS ===== */
     /* ✅ USE THESE in components for consistent theming */
     --background: var(--white);
+    --background-light: 210 40% 98%; /* Light slate background */
     --foreground: var(--text-dark);
 
     --primary: var(--vibrant-teal-start);
     --primary-foreground: var(--text-light);
+    --primary-blue: var(--muted-blue-start);
+    --primary-teal: var(--vibrant-teal-start);
 
     --secondary: var(--muted-blue-start);
     --secondary-foreground: var(--text-light);
+    --secondary-blue: var(--muted-blue-end);
 
     --accent: var(--coral-start);
     --accent-foreground: var(--text-light);
+    --accent-light: 166 76% 67%; /* Bright cyan */
+
+    --teal: var(--vibrant-teal-start);
+    --teal-foreground: var(--text-light);
+    --light-teal: 166 76% 67%; /* Bright cyan */
+    --dark-teal: var(--deep-teal-start);
+
+    --dark-blue: var(--muted-blue-start);
+    --slate-navy: var(--muted-blue-start);
+
+    --text-secondary: var(--text-muted);
+    --text-light: 0 0% 100%; /* white */
 
     /* Heading color tokens */
     --heading-primary: 189 98% 21%; /* #015c6b - H1, H2 */
