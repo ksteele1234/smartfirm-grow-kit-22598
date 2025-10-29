@@ -48,6 +48,7 @@ const ExecutiveServices = lazy(() => import("./pages/services/ExecutiveServices"
 const ContentMarketing = lazy(() => import("./pages/services/ContentMarketing"));
 const OnlineReputationManagement = lazy(() => import("./pages/services/OnlineReputationManagement"));
 const StrategyIntegration = lazy(() => import("./pages/services/StrategyIntegration"));
+const AddOns = lazy(() => import("./pages/services/AddOns"));
 
 // Industry Pages
 const TaxPreparation = lazy(() => import("./pages/industries/TaxPreparation"));
@@ -140,6 +141,7 @@ const App = () => (
             <Route path="/services/content-marketing" element={<ContentMarketing />} />
             <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
             <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
+            <Route path="/services/add-ons" element={<AddOns />} />
             
             {/* Industry Sub-pages */}
             <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
