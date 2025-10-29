@@ -357,7 +357,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                   </p>
                 </div>
                 {index !== data.howItWorks.length - 1 && (
-                  <span className="absolute left-[-1.5px] top-12 h-full w-[3px] bg-gradient-to-b from-[#14b8a6] via-[#2dd4bf] to-transparent" aria-hidden="true" />
+                  <span className="absolute left-[-1.5px] top-12 h-full w-[3px] bg-gradient-to-b from-accent via-accent-light to-transparent" aria-hidden="true" />
                 )}
               </li>
             ))}

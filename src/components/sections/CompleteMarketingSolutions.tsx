@@ -44,8 +44,7 @@ export const CompleteMarketingSolutions = () => {
             </span>
             
             <Settings 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">
@@ -77,8 +76,7 @@ export const CompleteMarketingSolutions = () => {
             </span>
             
             <Search 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">
@@ -108,8 +106,7 @@ export const CompleteMarketingSolutions = () => {
             </span>
             
             <Globe 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">
@@ -138,8 +135,7 @@ export const CompleteMarketingSolutions = () => {
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Star 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">
@@ -165,8 +161,7 @@ export const CompleteMarketingSolutions = () => {
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Mail 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">
@@ -192,8 +187,7 @@ export const CompleteMarketingSolutions = () => {
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <BarChart3 
-              className="w-12 h-12 text-accent mb-5" 
-              style={{ filter: 'drop-shadow(0 0 12px rgba(20, 184, 166, 0.5))' }} 
+              className="w-12 h-12 text-accent mb-5 glow-accent" 
             />
             
             <h3 className="text-xl font-semibold text-on-dark-heading mb-3">

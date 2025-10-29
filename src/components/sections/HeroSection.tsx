@@ -77,7 +77,6 @@ const styles = `
   }
   .stat-card:hover {
     transform: translateY(-4px) rotate(-1deg);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   }
   
   .stat-number {
@@ -182,7 +181,7 @@ const HeroSection = () => {
             
             {/* Card 1: +147 New Leads - Top Left */}
             <div className="animate-float animate-fade-in-up">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {leads.count}
                 </p>
@@ -193,7 +192,7 @@ const HeroSection = () => {
 
             {/* Card 2: 94% Client Retention - Middle Right (offset) */}
             <div className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8 delay-1000">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {retention.count}
                 </p>
@@ -204,7 +203,7 @@ const HeroSection = () => {
 
             {/* Card 3: $4.2K Avg Deal - Bottom Left */}
             <div className="animate-float animate-fade-in-up-delay-2 delay-2000">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6">
+              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {avgDeal.count}
                 </p>
@@ -215,7 +214,7 @@ const HeroSection = () => {
 
             {/* Card 4: 340% ROI - Bottom Right (smaller, hidden on mobile) */}
             <div className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4 delay-1500">
-              <div className="stat-card glass-card rounded-card p-4">
+              <div className="stat-card glass-card rounded-card p-4 hover:shadow-hero-card">
                 <p className="stat-number text-2xl font-extrabold text-gradient-gold mb-1">
                   {roi.count}
                 </p>

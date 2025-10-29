@@ -583,7 +583,7 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             whileInView={{ opacity: 1, scaleX: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-32 h-0.5 bg-gradient-to-r from-transparent via-[#14b8a6] to-transparent mx-auto mb-8"
+            className="w-32 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-8"
           />
           
           <motion.h2 

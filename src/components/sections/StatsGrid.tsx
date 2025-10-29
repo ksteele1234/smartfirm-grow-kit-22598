@@ -43,24 +43,11 @@ const StatsGrid = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-card-transform bg-white border border-border rounded-2xl p-10 md:p-12 text-center hover-lift color-transition"
-              style={{
-                boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(20, 184, 166, 0.08)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
-              }}
+              className="stat-card-transform bg-white border border-border rounded-2xl p-10 md:p-12 text-center hover-lift color-transition shadow-stat-card hover:shadow-stat-card-hover"
             >
               {/* The Number with Gold Gradient */}
               <div
-                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 text-gradient-gold"
-                style={{ 
-                  textShadow: '0 2px 4px rgba(251, 191, 36, 0.2)',
-                  fontWeight: 800
-                }}
+                className="text-5xl md:text-6xl font-extrabold leading-none mb-3 text-gradient-gold text-shadow-gold"
               >
                 {counters[index].count}
               </div>
