@@ -508,7 +508,7 @@ const About = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-section bg-gradient-vibrant-teal text-white">
+        <section className="py-16 md:py-section text-white" style={{ background: 'hsl(var(--professional-teal))' }}>
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares
