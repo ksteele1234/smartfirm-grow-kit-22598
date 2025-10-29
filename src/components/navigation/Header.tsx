@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import OptimizedImage from "@/components/ui/optimized-image";
-import smartFirmLogo from "@/assets/smartfirm-logo-full.webp";
+import smartFirmLogo from "@/assets/smartfirm-logo-header.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
