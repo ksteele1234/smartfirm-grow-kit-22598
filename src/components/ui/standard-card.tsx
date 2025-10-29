@@ -35,7 +35,7 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
     href,
     ...props 
   }, ref) => {
-    const baseCardClasses = "border border-[#E5E7EB] rounded-xl group cursor-pointer card-interactive";
+    const baseCardClasses = "border border-border rounded-xl group cursor-pointer card-interactive";
     
     const variantClasses = {
       default: "",
@@ -62,10 +62,10 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
         <CardHeader className={cn("text-center pb-6 p-5 md:p-6", headerClassName)}>
           {Icon && (
             <div className="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
-              <Icon className={cn("h-7 w-7 text-[#14b8a6]", iconClassName)} strokeWidth={1.5} />
+              <Icon className={cn("h-7 w-7 text-accent", iconClassName)} strokeWidth={1.5} />
             </div>
           )}
-          <CardTitle className={cn("text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-[#14b8a6] transition-colors leading-tight", titleClassName)}>
+          <CardTitle className={cn("text-[22px] md:text-2xl font-heading font-bold text-foreground group-hover:text-accent transition-colors leading-tight", titleClassName)}>
             {title}
           </CardTitle>
         </CardHeader>

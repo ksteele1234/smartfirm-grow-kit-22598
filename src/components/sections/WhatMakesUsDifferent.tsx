@@ -29,14 +29,14 @@ const WhatMakesUsDifferent = () => {
   ];
 
   return (
-    <section className="py-section bg-[#91ADC8]/[0.08]">
+    <section className="py-section bg-background-subtle">
       <div className="container mx-auto px-6 max-w-container-2xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-[#647FBC] mb-4">
+          <h2 className="text-[40px] md:text-[36px] sm:text-[32px] font-bold text-primary mb-4">
             What Makes SmartFirm Different
           </h2>
-          <p className="text-[20px] sm:text-[18px] font-normal text-[#333333] leading-relaxed max-w-text-md mx-auto">
+          <p className="text-[20px] sm:text-[18px] font-normal text-foreground leading-relaxed max-w-text-md mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </div>
@@ -48,27 +48,27 @@ const WhatMakesUsDifferent = () => {
             return (
               <div
                 key={index}
-                className="bg-white border-2 border-[#E2E8F0] rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] elevation-1 hover:border-[#0F4C5C] hover-lift hover:elevation-2 color-transition flex flex-col"
+                className="bg-white border-2 border-border rounded-xl p-10 md:p-8 sm:p-6 text-center min-h-[380px] elevation-1 hover:border-secondary hover-lift hover:elevation-2 color-transition flex flex-col"
               >
                 {/* Icon Container */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-[72px] h-[72px] rounded-full bg-[rgba(122,178,178,0.2)] border-2 border-[#0F4C5C] flex items-center justify-center">
-                    <Icon className="w-9 h-9 text-[#0F4C5C]" aria-hidden="true" />
+                  <div className="w-[72px] h-[72px] rounded-full bg-light-teal/20 border-2 border-secondary flex items-center justify-center">
+                    <Icon className="w-9 h-9 text-secondary" aria-hidden="true" />
                   </div>
                 </div>
 
                 {/* Headline */}
-                <h3 className="text-[22px] font-bold text-[#243b55] mb-4 text-left">
+                <h3 className="text-[22px] font-bold text-secondary mb-4 text-left">
                   {pillar.headline}
                 </h3>
 
                 {/* Description */}
-                <p className="text-base font-normal text-[#333333] leading-relaxed flex-grow text-left">
+                <p className="text-base font-normal text-foreground leading-relaxed flex-grow text-left">
                   {pillar.description}
                 </p>
 
                 {/* Key Benefit */}
-                <p className="text-[15px] font-semibold text-[#0F4C5C] mt-4 text-left">
+                <p className="text-[15px] font-semibold text-secondary mt-4 text-left">
                   {pillar.keyBenefit}
                 </p>
               </div>

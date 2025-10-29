@@ -30,9 +30,9 @@ const HowItWorksSection = () => {
       <div className="container relative mx-auto px-4 lg:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-[#647FBC] mb-6">
+          <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
             Your Path to Growth with 
-            <span className="text-[#14b8a6] block">Marketing Automation for Accountants</span>
+            <span className="text-accent block">Marketing Automation for Accountants</span>
           </h2>
         </div>
         
@@ -56,10 +56,10 @@ const HowItWorksSection = () => {
                 <div key={index} className={`flex items-center gap-md ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   {/* Content */}
                   <div className={`flex-1 ${isEven ? 'lg:text-right' : 'lg:text-left'} text-center`}>
-                    <h3 className="text-2xl font-heading font-bold text-[#243b55] mb-4">
+                    <h3 className="text-2xl font-heading font-bold text-secondary mb-4">
                       {step.title}
                     </h3>
-                    <p className={`text-text-secondary leading-relaxed max-w-md mx-auto ${isEven ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
+                    <p className={`text-muted-foreground leading-relaxed max-w-md mx-auto ${isEven ? 'lg:ml-auto' : 'lg:mr-auto'}`}>
                       {step.description}
                     </p>
                   </div>
@@ -85,7 +85,7 @@ const HowItWorksSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white rounded-card-lg p-8 lg:p-12 elevation-1 border border-border/50">
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-[#243b55] mb-4">
+            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-secondary mb-4">
               Ready to Get Started?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -6,20 +6,14 @@ interface CurvedSeparatorProps {
 }
 
 export const CurvedSeparator = ({ className, variant = "primary" }: CurvedSeparatorProps) => {
-  const bgColors = {
-    primary: "bg-[#647FBC]",
-    teal: "bg-[#0F4C5C]",
-    "light-teal": "bg-[#7AB2B2]",
-  };
-
-  const fillColors = {
-    primary: "#647FBC",
-    teal: "#0F4C5C",
-    "light-teal": "#7AB2B2",
+  const fillClasses = {
+    primary: "text-primary",
+    teal: "text-secondary",
+    "light-teal": "text-light-teal",
   };
 
   return (
-    <div className={cn("relative w-full -mb-1", className)}>
+    <div className={cn("relative w-full -mb-1", fillClasses[variant], className)}>
       <svg
         className="w-full h-12 md:h-16"
         viewBox="0 0 1440 60"
@@ -28,7 +22,7 @@ export const CurvedSeparator = ({ className, variant = "primary" }: CurvedSepara
       >
         <path
           d="M0,0 L720,60 L1440,0 Z"
-          fill={fillColors[variant]}
+          fill="currentColor"
         />
       </svg>
     </div>

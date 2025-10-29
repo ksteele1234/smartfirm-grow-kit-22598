@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 interface CheckmarkIconProps {
   className?: string;
   variant?: 'blue-border' | 'solid';
@@ -12,12 +14,12 @@ export const CheckmarkIcon = ({ className = "", variant = 'blue-border' }: Check
         viewBox="0 0 24 24" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
-        className={className}
+        className={cn("text-accent-muted", className)}
       >
-        <circle cx="12" cy="12" r="11" fill="#FAFDD6" stroke="#647FBC" strokeWidth="2"/>
+        <circle cx="12" cy="12" r="11" className="fill-accent-muted stroke-primary" strokeWidth="2"/>
         <path 
           d="M7 12L10.5 15.5L17 9" 
-          stroke="#FAFDD6" 
+          className="stroke-accent-muted"
           strokeWidth="2.5" 
           strokeLinecap="round" 
           strokeLinejoin="round"
@@ -34,12 +36,12 @@ export const CheckmarkIcon = ({ className = "", variant = 'blue-border' }: Check
       viewBox="0 0 20 20" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={cn("text-primary", className)}
     >
-      <circle cx="10" cy="10" r="10" fill="#647FBC"/>
+      <circle cx="10" cy="10" r="10" className="fill-primary"/>
       <path 
         d="M6 10L8.5 12.5L14 7" 
-        stroke="white" 
+        className="stroke-white"
         strokeWidth="2" 
         strokeLinecap="round" 
         strokeLinejoin="round"

@@ -155,9 +155,9 @@ const HeroSection = () => {
             {/* Trust Badges with Gold Bullets */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--gold-start))]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
               <span className="text-white text-sm font-medium">50+ Companies Supported</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--gold-start))]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
               <span className="text-white text-sm font-medium">Up in 30 Days</span>
             </div>
 
@@ -187,7 +187,7 @@ const HeroSection = () => {
                   {leads.count}
                 </p>
                 <p className="text-sm text-on-dark-muted font-medium mb-2">New Leads</p>
-                <p className="text-xs text-[#2dd4bf]">+32% this month</p>
+                <p className="text-xs text-accent-light">+32% this month</p>
               </div>
             </div>
 
@@ -198,7 +198,7 @@ const HeroSection = () => {
                   {retention.count}
                 </p>
                 <p className="text-sm text-on-dark-muted font-medium mb-2">Client Retention</p>
-                <p className="text-xs text-[#2dd4bf]">+8% improvement</p>
+                <p className="text-xs text-accent-light">+8% improvement</p>
               </div>
             </div>
 
@@ -209,7 +209,7 @@ const HeroSection = () => {
                   {avgDeal.count}
                 </p>
                 <p className="text-sm text-on-dark-muted font-medium mb-2">Avg Deal Value</p>
-                <p className="text-xs text-[#2dd4bf]">Per new client</p>
+                <p className="text-xs text-accent-light">Per new client</p>
               </div>
             </div>
 

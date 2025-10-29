@@ -10,8 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         // Primary CTA - Coral (for "Book Call", "Get Started")
-        default: "bg-gradient-coral text-white hover:opacity-90 shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] rounded-lg font-semibold transition-all",
-        coral: "bg-gradient-coral text-white hover:opacity-90 shadow-[0_4px_24px_rgba(251,113,133,0.6)] hover:shadow-[0_8px_32px_rgba(251,113,133,0.8)] rounded-lg font-semibold transition-all",
+        default: "bg-gradient-coral text-white hover:opacity-90 shadow-glow-coral hover:shadow-glow-coral-hover rounded-lg font-semibold transition-all",
+        coral: "bg-gradient-coral text-white hover:opacity-90 shadow-glow-coral hover:shadow-glow-coral-hover rounded-lg font-semibold transition-all",
         
         // Secondary - Vibrant Teal
         "vibrant-teal": "bg-gradient-vibrant-teal text-white hover:opacity-90 shadow-md hover:shadow-teal-md rounded-lg font-semibold transition-all",

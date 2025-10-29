@@ -166,12 +166,15 @@ All colors MUST be HSL converted from the official brand colors.
     /* ✅ USE THESE in components for consistent theming */
     --background: var(--white);
     --background-light: 210 40% 98%; /* Light slate background */
+    --background-subtle: 210 40% 98%; /* Light slate background */
     --foreground: var(--text-dark);
 
     --primary: var(--vibrant-teal-start);
     --primary-foreground: var(--text-light);
     --primary-blue: var(--muted-blue-start);
     --primary-teal: var(--vibrant-teal-start);
+    --primary-soft: 174 75% 41% / 0.3; /* Soft primary for borders */
+    --primary-muted: 209 43% 47%; /* Muted blue variant */
 
     --secondary: var(--muted-blue-start);
     --secondary-foreground: var(--text-light);
@@ -180,6 +183,9 @@ All colors MUST be HSL converted from the official brand colors.
     --accent: var(--coral-start);
     --accent-foreground: var(--text-light);
     --accent-light: 166 76% 67%; /* Bright cyan */
+    --accent-gold: var(--gold-start); /* Gold accent for highlights */
+    --accent-muted: 250 100% 97%; /* #FAFDD6 in HSL */
+    --accent-muted-light: 250 100% 97%; /* Light pale yellow */
 
     --teal: var(--vibrant-teal-start);
     --teal-foreground: var(--text-light);
@@ -230,6 +236,9 @@ All colors MUST be HSL converted from the official brand colors.
     --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 24px rgba(100, 127, 188, 0.15);
     --shadow-xl: 0 12px 32px rgba(100, 127, 188, 0.2);
+    --shadow-glow-coral: 0 4px 24px hsl(var(--coral-start) / 0.6);
+    --shadow-glow-coral-hover: 0 8px 32px hsl(var(--coral-start) / 0.8);
+    --shadow-elevation-1: 0 2px 12px hsl(0 0% 0% / 0.08);
 
     /* Border radius tokens */
     --radius-card-sm: 8px;   /* lg: Small cards, buttons */
@@ -406,6 +415,19 @@ All colors MUST be HSL converted from the official brand colors.
     text-wrap: pretty;
   }
 
+  /* Text on dark backgrounds */
+  .text-on-dark-heading {
+    color: hsl(var(--white));
+  }
+
+  .text-on-dark-body {
+    color: hsl(var(--white) / 0.92);
+  }
+
+  .text-on-dark-muted {
+    color: hsl(var(--white) / 0.75);
+  }
+
   /* Display text for hero sections */
   .text-display {
     @apply text-5xl lg:text-6xl font-bold;
@@ -497,6 +519,39 @@ All colors MUST be HSL converted from the official brand colors.
 
   .bg-gradient-vibrant-teal {
     background: linear-gradient(135deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
+  }
+
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--coral-start)), hsl(var(--coral-end)));
+  }
+
+  .bg-gradient-teal {
+    background: linear-gradient(90deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dot utilities */
+  .dot-primary {
+    @apply w-2 h-2 rounded-full bg-primary;
+  }
+
+  .dot-accent {
+    @apply w-2 h-2 rounded-full bg-accent;
+  }
+
+  /* Glass card utilities */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+
+  .glass-card-light {
+    @apply bg-white/70 backdrop-blur-sm border border-white/30;
   }
 
   .bg-gradient-coral {

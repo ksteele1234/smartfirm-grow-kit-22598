@@ -74,9 +74,9 @@ const Services = () => {
           <div className="absolute inset-0 overflow-hidden z-0" style={{ backgroundImage: 'url(/assets/page-header-background.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
           </div>
           {/* Curved bottom edge */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 text-background">
             <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="currentColor" />
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">

@@ -99,7 +99,7 @@ const FirmComparisonSection = () => {
               <div className="space-y-4">
                 {scalingCharacteristics.map((characteristic, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckmarkIcon variant="solid" className="w-6 h-6 flex-shrink-0 mt-0.5 text-accent drop-shadow-[0_0_8px_rgba(20,184,166,0.4)]" />
+                    <CheckmarkIcon variant="solid" className="w-6 h-6 flex-shrink-0 mt-0.5 text-accent glow-cyan" />
                     <p className="text-base text-foreground leading-[1.7] font-medium text-left">
                       {characteristic}
                     </p>

@@ -127,7 +127,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         </div>
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
           <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
           </svg>
         </div>
       </section>
@@ -137,7 +137,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         <div className="max-w-container-2xl mx-auto">
           <div className="relative grid gap-sm md:gap-md md:grid-cols-2">
             <div
-              className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-[#cffafe] to-transparent rounded-full pointer-events-none"
+              className="hidden md:block absolute inset-y-6 left-1/2 w-[3px] -translate-x-1/2 bg-gradient-to-b from-transparent via-accent-light/30 to-transparent rounded-full pointer-events-none"
               aria-hidden="true"
             />
             <article className="relative flex h-full flex-col overflow-hidden rounded-3xl elevation-2 bg-card p-8">
@@ -338,10 +338,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <ol className="relative mx-auto max-w-[700px] border-l border pl-6 md:pl-10 md:max-w-none">
             {data.howItWorks.map((step, index) => (
               <li key={step.step ?? index} className={`relative pb-10 md:pb-12 ${index === data.howItWorks.length - 1 ? "pb-0" : ""}`}>
-                <span className="absolute -left-3 md:-left-4 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white text-lg font-semibold shadow-[0_10px_30px_rgba(20,184,166,0.35)]">
+                <span className="absolute -left-3 md:-left-4 top-0 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-vibrant-teal text-white text-lg font-semibold shadow-teal-lg">
                   {String(step.step ?? index + 1).padStart(2, "0")}
                 </span>
-                <div className="ml-2 md:ml-4 rounded-2xl border border-border bg-white px-5 py-5 md:px-8 md:py-6 shadow-[0_20px_45px_rgba(15,23,42,0.08)]">
+                <div className="ml-2 md:ml-4 rounded-2xl border border-border bg-white px-5 py-5 md:px-8 md:py-6 shadow-xl">
                   <span className="text-xs font-semibold uppercase tracking-wide text-primary">{step.subheading ?? defaultHowItWorksSubheadings[index] ?? `Step ${index + 1}`}</span>
                   <div className="mt-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-xl md:text-2xl font-heading font-semibold leading-tight">
@@ -352,7 +352,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                       Milestone {index + 1}
                     </span>
                   </div>
-                  <p className="mt-3 text-base font-sans text-[#333333] leading-[1.6]">
+                  <p className="mt-3 text-base font-sans text-foreground leading-[1.6]">
                     {step.description}
                   </p>
                 </div>
@@ -374,13 +374,13 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           <div className="space-y-4 md:space-y-6">
             {faqsToRender.map((faq, index) => (
               <details key={index} className="border border-border rounded-lg p-4 md:p-6 bg-background group focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2" aria-expanded="false">
-                <summary className="cursor-pointer font-semibold text-base md:text-lg text-[#4D869C] list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+                <summary className="cursor-pointer font-semibold text-base md:text-lg text-secondary list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
                   {faq.question}
                 </summary>
                 <div className="text-text-secondary mt-4 md:mt-6 space-y-4 max-w-[65ch]">
                   <FaqAnswer
                     text={faq.answer}
-                    paragraphClassName="text-base leading-[1.6] text-[#333333]"
+                    paragraphClassName="text-base leading-[1.6] text-foreground"
                   />
                 </div>
               </details>
@@ -403,10 +403,10 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
       {/* Combined CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-[720px] mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#647FBC] leading-tight">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary leading-tight">
             {data.ctaTitle}
           </h2>
-          <p className="text-base md:text-lg font-sans text-[#333333] leading-[1.6]">
+          <p className="text-base md:text-lg font-sans text-foreground leading-[1.6]">
             {data.ctaDescription}
           </p>
           <Button size="lg" variant="coral" className="px-10" asChild>

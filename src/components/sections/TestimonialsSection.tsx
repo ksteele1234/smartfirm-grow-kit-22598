@@ -54,11 +54,11 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="relative py-16 pb-32 md:pb-40 bg-[#0F4C5C] overflow-hidden">
+    <section className="relative py-16 pb-32 md:pb-40 bg-secondary overflow-hidden">
       {/* Curved bottom edge */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 text-background">
         <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="#ffffff" />
+          <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="currentColor" />
         </svg>
       </div>
       <div className="container relative mx-auto px-4 lg:px-6 z-10">
@@ -109,7 +109,7 @@ const TestimonialsSection = () => {
                     </div>
                     <div className="flex space-x-1">
                       {[...Array(currentTestimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-[#FAFDD6] text-[#FAFDD6]" />
+                        <Star key={i} className="h-4 w-4 fill-accent-muted text-accent-muted" />
                       ))}
                     </div>
                   </div>
