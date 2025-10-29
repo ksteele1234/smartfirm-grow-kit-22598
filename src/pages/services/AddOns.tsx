@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Bot, Phone, PenTool, Target, Megaphone, FileText, MessageSquare } from "lucide-react";
+import { ArrowRight, CheckCircle2, Bot, Phone, PenTool, Target, Megaphone, FileText, MessageSquare, Presentation, Heart } from "lucide-react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
@@ -93,6 +93,28 @@ const AddOns = () => {
         "Platform management (LinkedIn, Facebook, Instagram)",
         "Engagement monitoring and community management"
       ]
+    },
+    {
+      icon: Presentation,
+      title: "Trade Show Planning, Materials & Booth Design",
+      description: "Make a lasting impression at industry events with professionally designed booths and strategic event planning.",
+      features: [
+        "Complete booth design and graphics",
+        "Pre-event marketing and promotion strategy",
+        "Branded collateral and takeaway materials",
+        "Lead capture system and post-event follow-up"
+      ]
+    },
+    {
+      icon: Heart,
+      title: "Client Retention & Loyalty Program",
+      description: "Keep your best clients engaged and reduce churn with automated touchpoints and strategic retention campaigns.",
+      features: [
+        "Automated milestone and anniversary campaigns",
+        "Exclusive client-only content and resources",
+        "Quarterly check-in and satisfaction surveys",
+        "Referral incentive program setup and management"
+      ]
     }
   ];
 
@@ -119,7 +141,7 @@ const AddOns = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Growth Add-Ons & Custom Marketing Solutions | SmartFirm"
-        description="Expand your marketing with flexible add-on services for accounting firms: blog posts, paid ads, newsletters, chatbots, voice AI, social media management, and custom campaigns."
+        description="Expand your marketing with flexible add-on services for accounting firms: blog posts, paid ads, newsletters, chatbots, voice AI, social media, trade shows, retention programs, and custom campaigns."
         canonicalUrl="https://smartfirm.io/services/add-ons"
         pageType="service"
         serviceName="Growth Add-Ons & Custom Marketing Solutions"

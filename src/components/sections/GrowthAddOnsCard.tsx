@@ -10,7 +10,9 @@ const GrowthAddOnsCard = () => {
     "Custom marketing campaigns",
     "Website Chatbot",
     "Voice AI to answer your phone, make appointments and route calls",
-    "Social Media Content Plan & Management"
+    "Social Media Content Plan & Management",
+    "Trade Show Planning, Materials & Booth Design",
+    "Client Retention & Loyalty Program"
   ];
 
   return (
