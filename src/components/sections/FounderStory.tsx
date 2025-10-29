@@ -30,16 +30,16 @@ const FounderStory = () => {
           {/* LEFT COLUMN: Founder Story */}
           <div className="lg:col-span-6">
             {/* Headline */}
-            <h2 className="text-[28px] lg:text-[28px] md:text-[26px] sm:text-2xl font-bold mb-5 text-foreground leading-[1.3]">
+            <h2 className="text-[28px] lg:text-[28px] md:text-[26px] sm:text-2xl font-bold mb-5 leading-[1.3]">
               Built By People Who Understand Your Business
             </h2>
 
             {/* Body Text */}
-            <p className="text-[17px] md:text-base font-normal mb-8 text-foreground leading-[1.7]">
+            <p className="text-[17px] md:text-base font-normal mb-8 leading-[1.7]">
               SmartFirm was founded by Katie Steele and Brian Hellewell, CPA (Inactive) who bring 20+ years of experience in IT strategy, financial systems, and business optimization. Katie has spent over two decades transforming businesses—from turning around struggling hospitality brands to implementing enterprise-scale systems. Brian, a former SpaceX product manager, specializes in modernizing accounting firms with secure, scalable technology that integrates seamlessly with accounting tools.
             </p>
             
-            <p className="text-[17px] md:text-base font-normal mb-8 text-foreground leading-[1.7]">
+            <p className="text-[17px] md:text-base font-normal mb-8 leading-[1.7]">
               Unlike agencies that dabble in every industry, we only work with accounting firms. We understand your metrics, your seasonality, and what it takes to scale from $400K to $1M+ without burning out your team.
             </p>
 
@@ -55,7 +55,7 @@ const FounderStory = () => {
                     alt={`${founder.name} headshot`}
                     className="w-20 h-20 rounded-full object-cover border-[3px] border-accent-light elevation-1"
                   />
-                  <div className="text-base font-semibold mt-2 text-center text-foreground mb-1">
+                  <div className="text-base font-semibold mt-2 text-center mb-1">
                     {founder.name}
                   </div>
                   <div className="text-sm font-normal mt-1 text-center text-muted-foreground mb-4">
@@ -70,7 +70,7 @@ const FounderStory = () => {
           <div className="lg:col-span-4 self-start">
             <div className="rounded-card p-card bg-card border-2 border-primary elevation-2 hover-lift color-transition">
               {/* Headline */}
-              <h3 className="text-xl font-bold mb-5 text-foreground">
+              <h3 className="text-xl font-bold mb-5">
                 Why We Work Exclusively With CPAs
               </h3>
 
@@ -85,7 +85,7 @@ const FounderStory = () => {
                       className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary"
                       aria-hidden="true"
                     />
-                    <span className="text-base font-medium text-foreground leading-[1.5]">
+                    <span className="text-base font-medium leading-[1.5]">
                       {item}
                     </span>
                   </div>
