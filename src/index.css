@@ -3,35 +3,48 @@
 @tailwind utilities;
 
 /* ============================================================================
-   SMARTFIRM.IO REFINED DESIGN SYSTEM v2.0
+   SMARTFIRM.IO DESIGN SYSTEM
    ============================================================================
    
-   DESIGN PHILOSOPHY (Monk Group Inspired):
-   - Generous white space creates premium feel
-   - Restrained color palette (3 primary + 2 accent)
-   - Sophisticated multi-layered shadows with brand tints
-   - Clear visual hierarchy through color and scale
-   - Smooth, intentional interactions
-   
-   COLOR SYSTEM:
-   - Professional Teal (#0A7265): H1/H2, primary brand
-   - Ocean Blue (#1B5E7E): H3/H4, secondary elements
-   - Deep Navy (#0F2942): Dark backgrounds
-   - Coral (#FB7185): CTAs ONLY
-   - Gold (#F59E0B): Metrics ONLY
-   
-   SPACING PHILOSOPHY:
-   - 20-30% more white space than standard
-   - Section padding: 120px desktop, 80px tablet, 60px mobile
-   - Card padding: 32px (up from 24px)
-   - Grid gaps: 32-48px (up from 24px)
-   
+   This design system enforces brand consistency and provides reusable
+   utilities for the SmartFirm.io website. All styles follow professional
+   best practices with semantic tokens and consistent patterns.
+
+   DESIGN PRINCIPLES:
+   1. ✅ Always use semantic tokens (--primary, --accent) in components
+   2. ❌ Never use color primitives (--vibrant-teal-start) directly
+   3. 📐 Maintain consistent spacing with utility classes
+   4. ♿ Ensure accessibility with proper contrast and focus states
+   5. 📱 Design mobile-first, enhance for larger screens
+
+   COLOR USAGE:
+   - Primary: Vibrant teal for main brand elements (buttons, links, headings)
+   - Secondary: Muted blue for supporting elements
+   - Accent: Coral for CTAs and high-priority actions
+   - Neutral: White/light slate for backgrounds and surfaces
+
+   SHADOWS & ELEVATION:
+   - elevation-1: Flat cards, minimal depth
+   - elevation-2: Standard cards, resting state
+   - elevation-3: Interactive elements on hover/focus
+   - elevation-4: Modals, dialogs, overlays
+
+   TYPOGRAPHY SCALE:
+   - text-display: Hero sections (5xl-6xl)
+   - h1: Page titles (4xl-5xl)
+   - h2: Section headings (3xl-4xl)
+   - h3: Subsection headings (xl-2xl)
+   - text-lead: Large body text (xl-2xl)
+   - body: Standard paragraph text (base)
+
+   For component documentation, see: /src/docs/UX_TEMPLATE_RECOMMENDATIONS.md
    ============================================================================ */
 
 /* ============================================================================
    ANIMATIONS - Keyframes and motion utilities
    ============================================================================ */
 
+/* Float animation for hero metric cards */
 @keyframes float {
   0%, 100% { 
     transform: translateY(0px); 
@@ -41,6 +54,7 @@
   }
 }
 
+/* Reduce float distance on mobile */
 @media (max-width: 768px) {
   @keyframes float {
     0%, 100% { 
@@ -56,6 +70,7 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Entrance animations for smooth page loads */
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -87,7 +102,7 @@
   }
 }
 
-/* Respect user motion preferences */
+/* Respect user motion preferences - Global override for all animations */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -104,164 +119,238 @@
 }
 
 /* ============================================================================
-   COLOR SYSTEM - Refined Professional Palette
+   COLOR SYSTEM - Brand colors and semantic tokens
    ============================================================================ */
 
-@layer base {
+/* SmartFirm.io Design System - Official Brand Guidelines
+All colors MUST be HSL converted from the official brand colors.
+*/
+
+ @layer base {
   :root {
-    /* ===== REFINED COLOR PRIMITIVES ===== */
-    /* Professional Teal - DEEPER for authority */
-    --professional-teal: 172 82% 24%;      /* #0A7265 - PRIMARY */
-    --professional-teal-dark: 172 82% 19%; /* #085B50 - Hover */
-    --professional-teal-light: 172 82% 29%; /* #0D8A7A - Light variant */
-    
-    /* Ocean Blue - Secondary (brings in blue tones) */
-    --ocean-blue: 198 64% 30%;      /* #1B5E7E */
-    --ocean-blue-dark: 198 64% 25%; /* #164B63 */
-    --ocean-blue-light: 198 64% 35%; /* #2C7A9F */
-    
-    /* Deep Navy - Emphasis */
-    --deep-navy: 208 59% 16%; /* #0F2942 */
-    
-    /* Bright Teal - Accent (use sparingly) */
-    --bright-teal: 174 75% 41%; /* #14B8A6 */
-    
-    /* Coral - CTAs ONLY */
-    --coral: 347 89% 73%;      /* #FB7185 */
-    --coral-dark: 349 89% 60%; /* #F43F5E */
-    
-    /* Gold - Metrics ONLY */
-    --gold: 38 92% 50%;      /* #F59E0B */
-    --gold-dark: 32 95% 44%; /* #D97706 */
-    
-    /* Neutral Palette */
-    --slate-dark: 215 19% 35%;   /* #475569 - Body text */
-    --slate: 215 16% 47%;        /* #64748B - Muted text */
-    --slate-light: 214 32% 91%;  /* #E2E8F0 - Borders */
-    --slate-lighter: 210 40% 98%; /* #F8FAFC - Light backgrounds */
-    --white: 0 0% 100%;          /* #FFFFFF */
-    
-    /* Light Teal Background */
-    --light-teal-bg: 168 50% 90%; /* #D4F1ED */
+    /* ===== COLOR PRIMITIVES ===== */
+    /* ⚠️ DO NOT use primitives directly in components. Use semantic tokens below. */
+    /* Deep Teal Gradient */
+    --deep-teal-start: 180 74% 11%; /* #0a2e2e */
+    --deep-teal-end: 180 62% 16%; /* #134444 */
+
+    /* Muted Blue Gradient */
+    --muted-blue-start: 215 42% 24%; /* #243b55 */
+    --muted-blue-end: 209 43% 47%; /* #4a7ba7 */
+
+    /* Vibrant Teal Gradient */
+    --vibrant-teal-start: 174 75% 41%; /* #14b8a6 */
+    --vibrant-teal-end: 172 79% 47%; /* #2dd4bf */
+
+    /* Bright Cyan */
+    --bright-cyan: 166 76% 67%; /* #5eead4 */
+
+    /* Coral Gradient (PRIMARY CTA) */
+    --coral-start: 347 89% 73%; /* #fb7185 */
+    --coral-end: 349 89% 60%; /* #f43f5e */
+
+    /* Gold Gradient */
+    --gold-start: 43 96% 56%; /* #fbbf24 */
+    --gold-end: 38 92% 50%; /* #f59e0b */
+
+    /* Neutral Backgrounds */
+    --white: 0 0% 100%; /* #ffffff */
+    --light-slate: 210 40% 98%; /* #f8fafc */
+
+    /* Text Colors */
+    --text-dark: 0 0% 20%; /* #333333 */
+    --text-light: 0 0% 100%; /* white */
+    --text-muted: 215 16% 47%; /* slate-600 */
 
     /* ===== SEMANTIC TOKENS ===== */
+    /* ✅ USE THESE in components for consistent theming */
     --background: var(--white);
-    --background-light: var(--slate-lighter);
-    --background-subtle: var(--light-teal-bg);
-    --foreground: var(--slate-dark);
-    
-    --primary: var(--professional-teal);
-    --primary-foreground: var(--white);
-    --primary-hover: var(--professional-teal-dark);
-    
-    --secondary: var(--ocean-blue);
-    --secondary-foreground: var(--white);
-    --secondary-hover: var(--ocean-blue-dark);
-    
-    --accent: var(--coral);
-    --accent-foreground: var(--white);
-    --accent-hover: var(--coral-dark);
-    
-    --highlight: var(--gold);
-    --highlight-foreground: var(--white);
-    --highlight-hover: var(--gold-dark);
-    
+    --background-light: 210 40% 98%; /* Light slate background */
+    --background-subtle: 210 40% 98%; /* Light slate background */
+    --foreground: var(--text-dark);
+
+    --primary: var(--vibrant-teal-start);
+    --primary-foreground: var(--text-light);
+    --primary-blue: var(--muted-blue-start);
+    --primary-teal: var(--vibrant-teal-start);
+    --primary-soft: 174 75% 41% / 0.3; /* Soft primary for borders */
+    --primary-muted: 209 43% 47%; /* Muted blue variant */
+
+    --secondary: var(--muted-blue-start);
+    --secondary-foreground: var(--text-light);
+    --secondary-blue: var(--muted-blue-end);
+
+    --accent: var(--coral-start);
+    --accent-foreground: var(--text-light);
+    --accent-light: 166 76% 67%; /* Bright cyan */
+    --accent-gold: var(--gold-start); /* Gold accent for highlights */
+    --accent-muted: 250 100% 97%; /* #FAFDD6 in HSL */
+    --accent-muted-light: 250 100% 97%; /* Light pale yellow */
+
+    --teal: var(--vibrant-teal-start);
+    --teal-foreground: var(--text-light);
+    --light-teal: 166 76% 67%; /* Bright cyan */
+    --dark-teal: var(--deep-teal-start);
+
+    --dark-blue: var(--muted-blue-start);
+    --slate-navy: var(--muted-blue-start);
+
+    --text-secondary: var(--text-muted);
+    --text-light: 0 0% 100%; /* white */
+
     /* Heading color tokens */
-    --heading-primary: var(--professional-teal);    /* H1, H2 */
-    --heading-secondary: var(--ocean-blue);         /* H3, H4, H5, H6 */
+    --heading-primary: 189 98% 21%; /* #015c6b - H1, H2 */
+    --heading-secondary: 205 100% 19%; /* #00385f - H3, H4, H5, H6 */
+
+    /* Spacing scale tokens */
+    --spacing-section: 5rem; /* 80px - standard section padding */
+    --spacing-section-sm: 2.5rem; /* 40px - mobile section padding */
+    --spacing-section-lg: 6.25rem; /* 100px - large section padding */
+    --spacing-card: 1.5rem; /* 24px - standard card padding */
+    --spacing-card-sm: 1rem; /* 16px - compact card padding */
     
-    /* Text colors */
-    --text-secondary: var(--slate);
-    --text-light: var(--white);
-    
-    /* Card & Surface */
-    --card: var(--white);
-    --card-foreground: var(--slate-dark);
-    
-    --muted: var(--slate-lighter);
-    --muted-foreground: var(--slate);
-    
-    /* Form & interaction */
-    --border: var(--slate-light);
-    --input: var(--slate-light);
-    --ring: var(--professional-teal);
-    
-    /* ===== REFINED SPACING (20-30% increase) ===== */
-    --spacing-section: 7.5rem;    /* 120px - desktop (was 100px) */
-    --spacing-section-md: 5rem;   /* 80px - tablet (was 70px) */
-    --spacing-section-sm: 3.75rem; /* 60px - mobile (was 50px) */
-    
-    --spacing-card: 2rem;         /* 32px - standard card (was 24px) */
-    --spacing-card-sm: 1.5rem;    /* 24px - compact card (was 16px) */
-    
-    --gap-sm: 2rem;    /* 32px - tight grid (was 24px) */
-    --gap-md: 2.5rem;  /* 40px - standard grid (was 32px) */
-    --gap-lg: 3rem;    /* 48px - spacious grid (was 48px) */
-    
-    /* Container widths */
-    --container-xs: 500px;
-    --container-sm: 640px;
-    --container-md: 768px;
-    --container-lg: 800px;
-    --container-content: 1000px;
-    --container-xl: 1024px;
-    --container-2xl: 1200px;
-    --container-3xl: 1400px;
+    /* Grid/Flex gap tokens */
+    --gap-sm: 1.5rem; /* 24px - tight grid spacing */
+    --gap-md: 2rem; /* 32px - standard grid spacing */
+    --gap-lg: 3rem; /* 48px - spacious grid spacing */
+
+    /* Container width tokens */
+    --container-xs: 500px; /* max-w-[500px] - extra small container */
+    --container-sm: 640px; /* max-w-[640px] - small container */
+    --container-md: 768px; /* max-w-[768px] - medium container */
+    --container-lg: 800px; /* max-w-[800px] - large container */
+    --container-content: 1000px; /* max-w-[1000px] - content width */
+    --container-xl: 1024px; /* max-w-[1024px] - extra large */
+    --container-2xl: 1200px; /* max-w-[1200px] - 2x large */
+    --container-3xl: 1400px; /* max-w-[1400px] - 3x large */
     
     /* Text container widths */
-    --text-container-sm: 600px;
-    --text-container-md: 700px;
-    --text-container-lg: 900px;
-    --text-container-xl: 1100px;
+    --text-container-sm: 600px; /* max-w-[600px] - small text block */
+    --text-container-md: 700px; /* max-w-[700px] - medium text block */
+    --text-container-lg: 900px; /* max-w-[900px] - large text block */
+    --text-container-xl: 1100px; /* max-w-[1100px] - extra large text block */
 
-    /* ===== SOPHISTICATED SHADOWS (Brand-tinted, multi-layered) ===== */
-    /* Neutral shadows - Soft, subtle */
+    /* Elevation/Shadow tokens */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
-    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.06);
-    
-    /* Brand-tinted shadows - Teal tints for sophistication */
-    --shadow-teal-sm: 0 2px 8px rgba(10, 114, 101, 0.08), 0 1px 4px rgba(10, 114, 101, 0.04);
-    --shadow-teal-md: 0 4px 12px rgba(10, 114, 101, 0.12), 0 2px 6px rgba(10, 114, 101, 0.06);
-    --shadow-teal-lg: 0 8px 24px rgba(10, 114, 101, 0.15), 0 4px 12px rgba(10, 114, 101, 0.08);
-    
-    /* Coral shadows for CTAs */
-    --shadow-coral: 0 4px 12px rgba(251, 113, 133, 0.2), 0 2px 6px rgba(251, 113, 133, 0.1);
-    --shadow-coral-hover: 0 8px 24px rgba(251, 113, 133, 0.3), 0 4px 12px rgba(251, 113, 133, 0.15);
-    
-    /* Professional elevation system */
-    --elevation-1: 0 2px 8px rgba(10, 114, 101, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
-    --elevation-2: 0 4px 12px rgba(10, 114, 101, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-    --elevation-3: 0 8px 24px rgba(10, 114, 101, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
-    --elevation-4: 0 16px 48px rgba(10, 114, 101, 0.15), 0 8px 24px rgba(0, 0, 0, 0.08);
-    
-    /* Glows for emphasis */
-    --glow-teal: 0 0 12px rgba(10, 114, 101, 0.3);
-    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4);
-    --glow-gold: 0 0 14px rgba(245, 158, 11, 0.35);
-    
-    /* ===== BORDER RADIUS ===== */
-    --radius-card-sm: 8px;
-    --radius-card: 12px;
-    --radius-card-lg: 16px;
+    --shadow-card: 0 4px 12px rgba(100, 127, 188, 0.1);
+    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(100, 127, 188, 0.15);
+    --shadow-xl: 0 12px 32px rgba(100, 127, 188, 0.2);
+    --shadow-glow-coral: 0 4px 24px hsl(var(--coral-start) / 0.6);
+    --shadow-glow-coral-hover: 0 8px 32px hsl(var(--coral-start) / 0.8);
+    --shadow-elevation-1: 0 2px 12px hsl(0 0% 0% / 0.08);
+
+    /* Border radius tokens */
+    --radius-card-sm: 8px;   /* lg: Small cards, buttons */
+    --radius-card: 12px;     /* xl: Standard cards */
+    --radius-card-lg: 16px;  /* 2xl: Large feature cards */
     --radius-button: 8px;
     --radius-input: 8px;
-    --radius: 0.5rem;
-    
+
+    --card: var(--white);
+    --card-foreground: var(--text-dark);
+
+    --muted: var(--light-slate);
+    --muted-foreground: var(--text-muted);
+
+    --popover: var(--white);
+    --popover-foreground: var(--text-dark);
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--white);
+
+    /* Form & interaction states */
+    --border: 215 20% 85%; /* Default border color for inputs and cards */
+    --input: 215 20% 85%; /* Input field border color */
+    --ring: var(--vibrant-teal-start); /* Focus ring color (keyboard navigation) */
+
+    /* Semantic border colors for different contexts */
+    --border-on-dark-subtle: rgba(255, 255, 255, 0.1); /* Subtle border on dark backgrounds */
+    --border-on-dark: rgba(255, 255, 255, 0.2); /* Standard border on dark backgrounds */
+    --border-on-dark-strong: rgba(255, 255, 255, 0.3); /* Prominent border on dark backgrounds */
+
     /* ===== TYPOGRAPHY ===== */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-    
-    /* Borders on dark backgrounds */
-    --border-on-dark-subtle: rgba(255, 255, 255, 0.1);
-    --border-on-dark: rgba(255, 255, 255, 0.2);
-    --border-on-dark-strong: rgba(255, 255, 255, 0.3);
+    /* Professional sans-serif stack optimized for readability */
+    --font-heading: 'Poppins', sans-serif; /* Bold, modern headings */
+    --font-body: 'DM Sans', sans-serif; /* Clean, readable body text */
+
+    /* ===== SHADOWS & ELEVATION ===== */
+    /* Neutral shadows - For general UI elements without color association */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow for flat cards */
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Standard card shadow */
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Elevated card shadow */
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Modal/dialog shadow */
+
+    /* Brand-tinted shadows - For interactive elements with brand association */
+    --shadow-teal-sm: 0 2px 8px rgba(20, 184, 166, 0.08); /* Subtle teal hint */
+    --shadow-teal-md: 0 4px 12px rgba(20, 184, 166, 0.12); /* Medium teal shadow */
+    --shadow-teal-lg: 0 8px 24px rgba(20, 184, 166, 0.15); /* Strong teal shadow for hover states */
+
+    /* Colored glows - For emphasis and CTAs */
+    --glow-teal: 0 0 12px rgba(20, 184, 166, 0.3); /* Teal button glow */
+    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4); /* Coral CTA glow */
+    --glow-cyan: 0 0 20px rgba(94, 234, 212, 0.3); /* Accent glow */
+    --glow-gold: 0 0 14px rgba(251, 191, 36, 0.35); /* Premium highlight glow */
+
+    /* Professional elevation system - 4-level hierarchy for depth */
+    /* Use elevation-1 for flat cards, elevation-2 for standard cards, */
+    /* elevation-3 for elevated/hover states, elevation-4 for modals */
+    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(20, 184, 166, 0.06); /* Minimal lift */
+    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(20, 184, 166, 0.08); /* Standard card */
+    --elevation-3: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(20, 184, 166, 0.1); /* Hover/focus state */
+    --elevation-4: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(20, 184, 166, 0.12); /* Modal/overlay */
+
+    /* ===== SPACING ===== */
+    /* Consistent vertical rhythm for section padding across breakpoints */
+    --section-padding-mobile: 3.75rem; /* 60px - Comfortable on small screens */
+    --section-padding-tablet: 5rem; /* 80px - Breathing room on tablets */
+    --section-padding-desktop: 6.25rem; /* 100px - Generous spacing on desktop */
+
+    /* Component border radius for consistent rounded corners */
+    --radius: 0.5rem; /* 8px - Standard card/button radius */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
 /* ============================================================================
-   BASE STYLES - Global element styling with refined hierarchy
+   BASE STYLES - Global element styling
    ============================================================================ */
 
 @layer base {
@@ -270,87 +359,54 @@
   }
 
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto; /* Changed from smooth to allow instant scroll to top on route changes */
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    line-height: 1.7; /* Increased from 1.6 for better readability */
+    line-height: 1.6;
     margin: 0;
-    color: hsl(var(--slate-dark));
   }
 
   section {
     margin: 0;
   }
 
-  /* ===== REFINED HEADING HIERARCHY ===== */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    line-height: 1.3; /* Increased from 1.2 for better spacing */
-    margin-bottom: 1.5rem; /* Increased from 1rem */
+    line-height: 1.2;
   }
 
-  /* H1 - Hero headlines (Professional Teal) */
   h1 {
-    @apply text-5xl lg:text-6xl; /* Increased from 4xl/5xl */
-    color: hsl(var(--professional-teal));
-    letter-spacing: -0.02em;
-    font-weight: 800; /* Bolder for authority */
+    @apply text-4xl lg:text-5xl;
+    color: hsl(var(--heading-primary));
+    letter-spacing: -0.02em; /* Tighter tracking for large text */
   }
 
-  /* H2 - Section headings (Professional Teal) */
   h2 {
-    @apply text-4xl lg:text-5xl; /* Increased from 3xl/4xl */
-    color: hsl(var(--professional-teal));
+    @apply text-3xl lg:text-4xl;
+    color: hsl(var(--heading-primary));
     letter-spacing: -0.01em;
-    font-weight: 700;
   }
 
-  /* H3 - Subsection headings (Ocean Blue) */
   h3 {
-    @apply text-2xl lg:text-3xl; /* Increased from xl/2xl */
-    color: hsl(var(--ocean-blue));
+    @apply text-xl lg:text-2xl font-medium;
+    color: hsl(var(--heading-secondary));
     letter-spacing: -0.01em;
-    font-weight: 700; /* Changed from medium to bold */
   }
 
-  /* H4 - Card titles (Ocean Blue) */
-  h4 {
-    @apply text-xl lg:text-2xl; /* Increased from lg/xl */
-    color: hsl(var(--ocean-blue));
-    font-weight: 600;
+  h4, h5, h6 {
+    color: hsl(var(--heading-secondary));
+    letter-spacing: normal;
   }
 
-  /* H5, H6 - Small headings */
-  h5, h6 {
-    @apply text-lg lg:text-xl; /* Increased from base/lg */
-    color: hsl(var(--ocean-blue));
-    font-weight: 600;
-  }
-
-  /* Body text - Larger, more readable */
   p {
-    @apply text-lg; /* Increased from base */
-    line-height: 1.7;
-    margin-bottom: 1.5rem; /* Increased from 1rem */
-    color: hsl(var(--slate-dark));
+    line-height: 1.6;
   }
 
-  /* Links */
-  a {
-    color: hsl(var(--professional-teal));
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: hsl(var(--professional-teal-dark));
-  }
-
-  /* ===== TYPOGRAPHY UTILITIES ===== */
+  /* ===== REFINED TYPOGRAPHY UTILITIES ===== */
   .text-balance {
     text-wrap: balance;
   }
@@ -374,7 +430,7 @@
 
   /* Display text for hero sections */
   .text-display {
-    @apply text-6xl lg:text-7xl font-bold; /* Increased */
+    @apply text-5xl lg:text-6xl font-bold;
     line-height: 1.1;
     letter-spacing: -0.03em;
   }
@@ -382,31 +438,32 @@
   /* Large subheadings */
   .text-lead {
     @apply text-xl lg:text-2xl;
-    line-height: 1.7; /* Increased from 1.5 */
+    line-height: 1.5;
     font-weight: 400;
   }
 
-  /* Small print */
+  /* Small print / disclaimers */
   .text-small {
     @apply text-sm;
-    line-height: 1.6; /* Increased from 1.5 */
+    line-height: 1.5;
   }
 
   .text-xs-refined {
     @apply text-xs;
-    line-height: 1.5; /* Increased from 1.4 */
+    line-height: 1.4;
     letter-spacing: 0.01em;
   }
 }
 
 /* ============================================================================
-   COMPONENT UTILITIES - Refined with Monk Group principles
+   COMPONENT UTILITIES - Reusable component classes
    ============================================================================ */
 
 @layer components {
   /* ===== ANIMATION & INTERACTION PATTERNS ===== */
+  /* Stagger animation for list items - Creates smooth sequential reveals */
   .stagger-container > * {
-    animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: fade-in-up 0.6s ease-out;
   }
   
   .stagger-container > *:nth-child(1) { animation-delay: 0.1s; }
@@ -416,24 +473,23 @@
   .stagger-container > *:nth-child(5) { animation-delay: 0.5s; }
   .stagger-container > *:nth-child(6) { animation-delay: 0.6s; }
   
-  /* Refined magnetic hover */
+  /* Magnetic hover effect for buttons */
   .magnetic {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
     cursor: pointer;
   }
   
   .magnetic:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-teal-md);
+    box-shadow: 0 8px 25px hsl(var(--primary-blue) / 0.15);
   }
   
-  /* Scale feedback */
+  /* Gentle scale feedback for interactive elements */
   .scale-feedback {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                background-color 0.3s ease-out,
-                border-color 0.3s ease-out,
-                color 0.3s ease-out;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.2s ease-out,
+                border-color 0.2s ease-out,
+                color 0.2s ease-out;
   }
   
   .scale-feedback:hover {
@@ -444,7 +500,7 @@
     transform: scale(0.98);
   }
   
-  /* Color transitions */
+  /* Smooth color transitions */
   .color-transition {
     transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -452,47 +508,146 @@
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* ===== SIMPLIFIED GRADIENT BACKGROUNDS (Only 2 gradients) ===== */
-  /* Hero gradient - Professional teal to deep navy */
-  .bg-gradient-hero {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--professional-teal)) 0%,
-      hsl(var(--ocean-blue)) 50%,
-      hsl(var(--deep-navy)) 100%
-    );
+  /* ===== GRADIENT BACKGROUNDS (135deg diagonal) ===== */
+  .bg-gradient-deep-teal {
+    background: linear-gradient(135deg, hsl(var(--deep-teal-start)), hsl(var(--deep-teal-end)));
   }
   
-  /* Accent gradient - For CTAs only */
-  .bg-gradient-coral {
-    background: linear-gradient(135deg, hsl(var(--coral)), hsl(var(--coral-dark)));
+  .bg-gradient-muted-blue {
+    background: linear-gradient(135deg, hsl(var(--muted-blue-start)), hsl(var(--muted-blue-end)));
   }
 
-  /* Text gradients */
-  .text-gradient-teal {
-    background: linear-gradient(135deg, hsl(var(--professional-teal)), hsl(var(--ocean-blue)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .bg-gradient-vibrant-teal {
+    background: linear-gradient(135deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
+  }
+
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--coral-start)), hsl(var(--coral-end)));
+  }
+
+  .bg-gradient-teal {
+    background: linear-gradient(90deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
   }
 
   .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-dark)));
+    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* ===== SECTION SPACING (Generous - Monk inspired) ===== */
-  .section-padding {
-    @apply py-[120px] md:py-[80px] px-6 md:px-12; /* Increased significantly */
+  /* Dot utilities */
+  .dot-primary {
+    @apply w-2 h-2 rounded-full bg-primary;
   }
-  
-  /* Mobile override */
-  @media (max-width: 768px) {
-    .section-padding {
-      @apply py-[60px] px-6;
-    }
+
+  .dot-accent {
+    @apply w-2 h-2 rounded-full bg-accent;
+  }
+
+  /* Glass card utilities */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+
+  .glass-card-light {
+    @apply bg-white/70 backdrop-blur-sm border border-white/30;
+  }
+
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, hsl(var(--coral-start)), hsl(var(--coral-end)));
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+  }
+
+  /* ===== GRADIENT VARIANTS ===== */
+  /* Radial Gradients - For hero sections and focal points */
+  .bg-gradient-radial-teal {
+    background: radial-gradient(
+      ellipse at top,
+      hsl(var(--vibrant-teal-start)) 0%,
+      hsl(var(--deep-teal-end)) 100%
+    );
+  }
+
+  .bg-gradient-radial-blue {
+    background: radial-gradient(
+      circle at center,
+      hsl(var(--muted-blue-end)) 0%,
+      hsl(var(--muted-blue-start)) 100%
+    );
+  }
+
+  /* Mesh Gradients - Multi-color sophisticated backgrounds */
+  .bg-gradient-mesh-professional {
+    background: linear-gradient(135deg, 
+      hsl(var(--deep-teal-start)) 0%,
+      hsl(var(--vibrant-teal-start)) 40%,
+      hsl(var(--muted-blue-end)) 100%
+    );
+  }
+
+  .bg-gradient-mesh-vibrant {
+    background: linear-gradient(135deg,
+      hsl(var(--vibrant-teal-start)) 0%,
+      hsl(var(--bright-cyan)) 50%,
+      hsl(var(--vibrant-teal-end)) 100%
+    );
+  }
+
+  /* Animated Gradient - Subtle motion for CTAs */
+  .bg-gradient-animated {
+    background: linear-gradient(
+      -45deg,
+      hsl(var(--coral-start)),
+      hsl(var(--coral-end)),
+      hsl(var(--vibrant-teal-start)),
+      hsl(var(--vibrant-teal-end))
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Subtle Gradient Overlays */
+  .gradient-overlay-teal {
+    position: relative;
+  }
+
+  .gradient-overlay-teal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(var(--vibrant-teal-start) / 0.05) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ===== ON-DARK TYPOGRAPHY ===== */
+  .text-on-dark-heading {
+    color: #ffffff;
+  }
+
+  .text-on-dark-body {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .text-on-dark-muted {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* ===== SECTION SPACING ===== */
+  .section-padding {
+    @apply py-[60px] md:py-[80px] lg:py-[100px] px-6 md:px-12;
   }
 
   .section-container {
@@ -503,13 +658,33 @@
   .shadow-teal-sm { box-shadow: var(--shadow-teal-sm); }
   .shadow-teal-md { box-shadow: var(--shadow-teal-md); }
   .shadow-teal-lg { box-shadow: var(--shadow-teal-lg); }
-  
-  .shadow-coral { box-shadow: var(--shadow-coral); }
-  .shadow-coral-hover { box-shadow: var(--shadow-coral-hover); }
-  
+
   .glow-teal { box-shadow: var(--glow-teal); }
   .glow-coral { box-shadow: var(--glow-coral); }
+  .glow-cyan { 
+    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.4));
+  }
   .glow-gold { box-shadow: var(--glow-gold); }
+  
+  .glow-accent {
+    filter: drop-shadow(0 0 12px hsl(var(--accent) / 0.5));
+  }
+  
+  .shadow-stat-card {
+    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.04);
+  }
+  
+  .shadow-stat-card-hover {
+    box-shadow: 0 8px 24px hsl(var(--accent) / 0.08);
+  }
+  
+  .shadow-hero-card {
+    box-shadow: 0 12px 40px hsl(var(--foreground) / 0.4);
+  }
+  
+  .text-shadow-gold {
+    text-shadow: 0 2px 4px hsl(var(--accent-gold) / 0.2);
+  }
 
   /* ===== HOVER STATE UTILITIES ===== */
   .hover-lift {
@@ -521,7 +696,15 @@
   }
 
   .hover-shadow-coral {
-    @apply transition-shadow duration-300 ease-out hover:shadow-coral-hover;
+    @apply transition-shadow duration-300 ease-out;
+  }
+
+  .hover-shadow-coral:hover {
+    box-shadow: 0 8px 24px rgba(251, 113, 133, 0.3);
+  }
+
+  .hover-glow-coral {
+    @apply transition-all duration-300 ease-out hover:glow-coral;
   }
 
   .hover-brighten {
@@ -530,55 +713,79 @@
   }
 
   .hover-brighten:hover {
-    filter: brightness(1.05); /* Reduced from 1.08 for subtlety */
+    filter: brightness(1.08);
   }
 
   .hover-scale-sm {
-    @apply transition-transform duration-300 ease-out hover:scale-105; /* Increased duration */
+    @apply transition-transform duration-200 ease-out hover:scale-105;
   }
 
   .hover-scale-lg {
-    @apply transition-transform duration-300 ease-out hover:scale-110;
+    @apply transition-transform duration-200 ease-out hover:scale-110;
+  }
+
+  /* ===== TEXT GRADIENT UTILITIES ===== */
+  .text-gradient-teal {
+    @apply bg-gradient-to-r from-[hsl(var(--vibrant-teal-start))] to-[hsl(var(--vibrant-teal-end))] bg-clip-text text-transparent;
+  }
+
+  .text-gradient-coral {
+    @apply bg-gradient-to-r from-[hsl(var(--coral-start))] to-[hsl(var(--coral-end))] bg-clip-text text-transparent;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(var(--gold-start))] to-[hsl(var(--gold-end))] bg-clip-text text-transparent;
   }
 
   /* ===== ELEVATION SYSTEM ===== */
-  .elevation-1 { box-shadow: var(--elevation-1); }
-  .elevation-2 { box-shadow: var(--elevation-2); }
-  .elevation-3 { box-shadow: var(--elevation-3); }
-  .elevation-4 { box-shadow: var(--elevation-4); }
+  .elevation-1 {
+    box-shadow: var(--elevation-1);
+  }
 
-  /* ===== GLASS-MORPHISM EFFECTS (Refined) ===== */
+  .elevation-2 {
+    box-shadow: var(--elevation-2);
+  }
+
+  .elevation-3 {
+    box-shadow: var(--elevation-3);
+  }
+
+  .elevation-4 {
+    box-shadow: var(--elevation-4);
+  }
+
+  /* ===== GLASS-MORPHISM EFFECTS ===== */
   .glass-card {
     @apply backdrop-blur-xl bg-white/80 border border-white/20;
-    box-shadow: var(--elevation-2),
+    box-shadow: 0 8px 32px rgba(20, 184, 166, 0.08),
                 inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .glass-card-light {
     @apply backdrop-blur-md bg-white/60 border border-white/30;
-    box-shadow: var(--elevation-1),
+    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.06),
                 inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 
   /* ===== BORDER GLOW EFFECTS ===== */
   .border-glow-teal {
     @apply border-2 transition-all duration-300;
-    border-color: hsl(var(--professional-teal));
+    border-color: hsl(var(--vibrant-teal-start));
   }
 
   .border-glow-teal:hover {
-    box-shadow: 0 0 0 3px hsl(var(--professional-teal) / 0.15),
-                0 0 20px hsl(var(--professional-teal) / 0.2);
+    box-shadow: 0 0 0 3px hsl(var(--vibrant-teal-start) / 0.15),
+                0 0 20px hsl(var(--vibrant-teal-start) / 0.2);
   }
 
   .border-glow-coral {
     @apply border-2 transition-all duration-300;
-    border-color: hsl(var(--coral));
+    border-color: hsl(var(--coral-start));
   }
 
   .border-glow-coral:hover {
-    box-shadow: 0 0 0 3px hsl(var(--coral) / 0.15),
-                0 0 20px hsl(var(--coral) / 0.2);
+    box-shadow: 0 0 0 3px hsl(var(--coral-start) / 0.15),
+                0 0 20px hsl(var(--coral-start) / 0.2);
   }
 
   /* ===== ENTRANCE ANIMATIONS ===== */
@@ -594,30 +801,42 @@
     animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  /* Entrance animation delays for staggered effects */
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
 
-  /* ===== CARD INTERACTIVE EFFECTS ===== */
+  /* ===== VISUAL INTEREST UTILITIES ===== */
+  /* Backdrop effects for modals and overlays */
+  .backdrop-blur-professional {
+    @apply backdrop-blur-md bg-white/95;
+  }
+
+  /* Soft inner glow for premium feel */
+  .inner-glow-teal {
+    box-shadow: inset 0 2px 8px hsl(var(--vibrant-teal-start) / 0.1);
+  }
+
+  /* Card hover state - combined effect */
   .card-interactive {
     @apply transition-all duration-300 ease-out;
     @apply hover:-translate-y-1 hover:shadow-teal-lg;
   }
 
-  /* ===== FOCUS RINGS (Accessibility) ===== */
+  /* Smooth focus rings for accessibility */
   .focus-ring-teal {
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-    --tw-ring-color: hsl(var(--professional-teal));
+    --tw-ring-color: hsl(var(--vibrant-teal-start));
   }
 
   .focus-ring-coral {
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-    --tw-ring-color: hsl(var(--coral));
+    --tw-ring-color: hsl(var(--coral-start));
   }
 
-  /* ===== PULSING EFFECTS ===== */
+  /* Pulsing effect for call-to-action */
   .pulse-teal {
     animation: pulse-teal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
@@ -625,18 +844,15 @@
   @keyframes pulse-teal {
     0%, 100% {
       opacity: 1;
-      box-shadow: 0 0 0 0 hsl(var(--professional-teal) / 0.4);
+      box-shadow: 0 0 0 0 hsl(var(--vibrant-teal-start) / 0.4);
     }
     50% {
-      opacity: 0.95;
-      box-shadow: 0 0 0 8px hsl(var(--professional-teal) / 0);
+      opacity: 0.9;
+      box-shadow: 0 0 0 8px hsl(var(--vibrant-teal-start) / 0);
     }
   }
 
-  .animate-gentle-pulse {
-    animation: pulse-coral 3.5s ease-in-out infinite;
-  }
-
+  /* Gentle coral glow for CTA buttons (global) */
   @keyframes pulse-coral {
     0%, 100% {
       opacity: 1;
@@ -645,16 +861,18 @@
       opacity: 0.95;
     }
   }
+  .animate-gentle-pulse {
+    animation: pulse-coral 3.5s ease-in-out infinite;
+  }
 
-  /* ===== UTILITY CLASSES ===== */
+  /* ===== SVG & GRAPHICS UTILITIES ===== */
+  /* For animated SVG dots and orbital graphics */
   .dot-primary {
-    @apply w-2 h-2 rounded-full;
-    background: hsl(var(--primary));
+    fill: hsl(var(--primary));
   }
 
   .dot-accent {
-    @apply w-2 h-2 rounded-full;
-    background: hsl(var(--accent));
+    fill: hsl(var(--accent));
   }
 
   .stroke-primary-soft {
@@ -668,34 +886,5 @@
   .border-primary-soft {
     border-color: hsl(var(--primary) / 0.5);
   }
-
-  /* Inner glow for premium feel */
-  .inner-glow-teal {
-    box-shadow: inset 0 2px 8px hsl(var(--professional-teal) / 0.1);
-  }
-
-  /* Backdrop effects */
-  .backdrop-blur-professional {
-    @apply backdrop-blur-md bg-white/95;
-  }
 }
 
-/* ============================================================================
-   RESPONSIVE UTILITIES
-   ============================================================================ */
-
-@media (max-width: 768px) {
-  h1 { font-size: 2.5rem; } /* 40px */
-  h2 { font-size: 2rem; }   /* 32px */
-  h3 { font-size: 1.5rem; } /* 24px */
-  h4 { font-size: 1.25rem; } /* 20px */
-  
-  p { font-size: 1rem; } /* 16px on mobile */
-  
-  .text-display { font-size: 2.5rem; }
-  .text-lead { font-size: 1.125rem; }
-}
-
-/* ============================================================================
-   END OF SMARTFIRM REFINED DESIGN SYSTEM v2.0
-   ============================================================================ */
