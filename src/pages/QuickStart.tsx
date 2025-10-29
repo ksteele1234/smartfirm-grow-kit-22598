@@ -448,6 +448,38 @@ const QuickStart = () => {
                     <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
                     <span className="text-base text-on-dark-heading leading-[1.8]">Ongoing support & optimization</span>
                   </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">One-month subscription included</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">White glove onboarding</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">24/7 Real-human tech support</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Users</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Contacts</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Email Addresses</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Domains</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
+                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Websites & Funnels</span>
+                  </li>
                 </ul>
                 
                 {/* CTA Buttons */}

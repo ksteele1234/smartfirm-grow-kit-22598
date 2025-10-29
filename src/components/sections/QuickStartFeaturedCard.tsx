@@ -12,7 +12,15 @@ const QuickStartFeaturedCard = () => {
     "Email marketing foundation",
     "Performance tracking dashboard",
     "Monthly performance reports",
-    "Ongoing support & optimization"
+    "Ongoing support & optimization",
+    "One-month subscription included",
+    "White glove onboarding",
+    "24/7 Real-human tech support",
+    "Unlimited Users",
+    "Unlimited Contacts",
+    "Unlimited Email Addresses",
+    "Unlimited Domains",
+    "Unlimited Websites & Funnels"
   ];
 
   return (
