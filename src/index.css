@@ -3,66 +3,39 @@
 @tailwind utilities;
 
 /* ============================================================================
-   SMARTFIRM.IO DESIGN SYSTEM
+   SMARTFIRM.IO REFINED DESIGN SYSTEM - PRODUCTION READY
    ============================================================================
    
-   This design system enforces brand consistency and provides reusable
-   utilities for the SmartFirm.io website. All styles follow professional
-   best practices with semantic tokens and consistent patterns.
-
-   DESIGN PRINCIPLES:
-   1. ✅ Always use semantic tokens (--primary, --accent) in components
-   2. ❌ Never use color primitives (--vibrant-teal-start) directly
-   3. 📐 Maintain consistent spacing with utility classes
-   4. ♿ Ensure accessibility with proper contrast and focus states
-   5. 📱 Design mobile-first, enhance for larger screens
-
-   COLOR USAGE:
-   - Primary: Vibrant teal for main brand elements (buttons, links, headings)
-   - Secondary: Muted blue for supporting elements
-   - Accent: Coral for CTAs and high-priority actions
-   - Neutral: White/light slate for backgrounds and surfaces
-
-   SHADOWS & ELEVATION:
-   - elevation-1: Flat cards, minimal depth
-   - elevation-2: Standard cards, resting state
-   - elevation-3: Interactive elements on hover/focus
-   - elevation-4: Modals, dialogs, overlays
-
-   TYPOGRAPHY SCALE:
-   - text-display: Hero sections (5xl-6xl)
-   - h1: Page titles (4xl-5xl)
-   - h2: Section headings (3xl-4xl)
-   - h3: Subsection headings (xl-2xl)
-   - text-lead: Large body text (xl-2xl)
-   - body: Standard paragraph text (base)
-
-   For component documentation, see: /src/docs/UX_TEMPLATE_RECOMMENDATIONS.md
+   DESIGN PHILOSOPHY (Monk Group Inspired):
+   - Generous white space creates premium feel (20-30% increase)
+   - Restrained color palette achieved by consolidating all gradients
+   - Sophisticated multi-layered shadows with brand tints
+   - Clear visual hierarchy through color and scale
+   
+   COLOR CONSOLIDATION STRATEGY:
+   All gradient classes preserved for backward compatibility, but redefined:
+   - All teal gradients → Professional Teal (#0A7265) to Ocean Blue (#1B5E7E)
+   - All blue gradients → Ocean Blue (#1B5E7E) to Deep Navy (#0F2942)
+   - Coral gradients → Coral (#FB7185) to Coral Dark (#F43F5E)
+   - Gold gradients → Gold (#F59E0B) to Gold Dark (#D97706)
+   
+   This achieves Monk Group restraint while maintaining backward compatibility.
+   
    ============================================================================ */
 
 /* ============================================================================
-   ANIMATIONS - Keyframes and motion utilities
+   ANIMATIONS
    ============================================================================ */
 
-/* Float animation for hero metric cards */
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0px); 
-  }
-  50% { 
-    transform: translateY(-15px); 
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-/* Reduce float distance on mobile */
 @media (max-width: 768px) {
   @keyframes float {
-    0%, 100% { 
-      transform: translateY(0px); 
-    }
-    50% { 
-      transform: translateY(-8px); 
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
   }
 }
 
@@ -70,7 +43,6 @@
   animation: float 4s ease-in-out infinite;
 }
 
-/* Entrance animations for smooth page loads */
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -83,12 +55,8 @@
 }
 
 @keyframes fade-in-delayed {
-  0%, 20% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%, 20% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes scale-in {
@@ -102,239 +70,205 @@
   }
 }
 
-/* Respect user motion preferences - Global override for all animations */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
-  .animate-float {
-    animation: none;
-  }
+  .animate-float { animation: none; }
 }
 
 /* ============================================================================
-   COLOR SYSTEM - Brand colors and semantic tokens
+   COLOR SYSTEM
    ============================================================================ */
 
-/* SmartFirm.io Design System - Official Brand Guidelines
-All colors MUST be HSL converted from the official brand colors.
-*/
-
- @layer base {
+@layer base {
   :root {
-    /* ===== COLOR PRIMITIVES ===== */
-    /* ⚠️ DO NOT use primitives directly in components. Use semantic tokens below. */
-    /* Deep Teal Gradient */
-    --deep-teal-start: 180 74% 11%; /* #0a2e2e */
-    --deep-teal-end: 180 62% 16%; /* #134444 */
+    /* ===== REFINED COLOR PRIMITIVES ===== */
+    --professional-teal: 172 82% 24%;      /* #0A7265 - PRIMARY */
+    --professional-teal-dark: 172 82% 19%; /* #085B50 */
+    --professional-teal-light: 172 82% 29%; /* #0D8A7A */
+    
+    --ocean-blue: 198 64% 30%;      /* #1B5E7E - SECONDARY */
+    --ocean-blue-dark: 198 64% 25%; /* #164B63 */
+    --ocean-blue-light: 198 64% 35%; /* #2C7A9F */
 
-    /* Muted Blue Gradient */
-    --muted-blue-start: 215 42% 24%; /* #243b55 */
-    --muted-blue-end: 209 43% 47%; /* #4a7ba7 */
+    --deep-navy: 208 59% 16%; /* #0F2942 */
+    --bright-teal: 174 75% 41%;  /* #14B8A6 */
+    --bright-cyan: 166 76% 67%;  /* #5EEAD4 */
 
-    /* Vibrant Teal Gradient */
-    --vibrant-teal-start: 174 75% 41%; /* #14b8a6 */
-    --vibrant-teal-end: 172 79% 47%; /* #2dd4bf */
+    --coral: 347 89% 73%;       /* #FB7185 */
+    --coral-dark: 349 89% 60%;  /* #F43F5E */
 
-    /* Bright Cyan */
-    --bright-cyan: 166 76% 67%; /* #5eead4 */
+    --gold: 38 92% 50%;      /* #F59E0B */
+    --gold-dark: 32 95% 44%; /* #D97706 */
 
-    /* Coral Gradient (PRIMARY CTA) */
-    --coral-start: 347 89% 73%; /* #fb7185 */
-    --coral-end: 349 89% 60%; /* #f43f5e */
+    --white: 0 0% 100%;
+    --slate-dark: 215 19% 35%;
+    --slate: 215 16% 47%;
+    --slate-light: 214 32% 91%;
+    --slate-lighter: 210 40% 98%;
+    --light-teal-bg: 168 50% 90%;
 
-    /* Gold Gradient */
-    --gold-start: 43 96% 56%; /* #fbbf24 */
-    --gold-end: 38 92% 50%; /* #f59e0b */
-
-    /* Neutral Backgrounds */
-    --white: 0 0% 100%; /* #ffffff */
-    --light-slate: 210 40% 98%; /* #f8fafc */
-
-    /* Text Colors */
-    --text-dark: 0 0% 20%; /* #333333 */
-    --text-light: 0 0% 100%; /* white */
-    --text-muted: 215 16% 47%; /* slate-600 */
+    /* ===== GRADIENT PRIMITIVES (Consolidated) ===== */
+    --deep-teal-start: var(--professional-teal);
+    --deep-teal-end: var(--professional-teal-dark);
+    --vibrant-teal-start: var(--professional-teal);
+    --vibrant-teal-end: var(--ocean-blue);
+    --muted-blue-start: var(--ocean-blue);
+    --muted-blue-end: var(--deep-navy);
+    --coral-start: var(--coral);
+    --coral-end: var(--coral-dark);
+    --gold-start: var(--gold);
+    --gold-end: var(--gold-dark);
 
     /* ===== SEMANTIC TOKENS ===== */
-    /* ✅ USE THESE in components for consistent theming */
     --background: var(--white);
-    --background-light: 210 40% 98%; /* Light slate background */
-    --background-subtle: 210 40% 98%; /* Light slate background */
-    --foreground: var(--text-dark);
+    --background-light: var(--slate-lighter);
+    --background-subtle: var(--light-teal-bg);
+    --foreground: var(--slate-dark);
 
-    --primary: var(--vibrant-teal-start);
-    --primary-foreground: var(--text-light);
-    --primary-blue: var(--muted-blue-start);
-    --primary-teal: var(--vibrant-teal-start);
-    --primary-soft: 174 75% 41% / 0.3; /* Soft primary for borders */
-    --primary-muted: 209 43% 47%; /* Muted blue variant */
+    --primary: var(--professional-teal);
+    --primary-foreground: var(--white);
+    --primary-blue: var(--ocean-blue);
+    --primary-teal: var(--professional-teal);
+    --primary-soft: var(--professional-teal) / 0.3;
+    --primary-muted: var(--ocean-blue);
+    --primary-hover: var(--professional-teal-dark);
 
-    --secondary: var(--muted-blue-start);
-    --secondary-foreground: var(--text-light);
-    --secondary-blue: var(--muted-blue-end);
+    --secondary: var(--ocean-blue);
+    --secondary-foreground: var(--white);
+    --secondary-blue: var(--ocean-blue-light);
+    --secondary-hover: var(--ocean-blue-dark);
 
-    --accent: var(--coral-start);
-    --accent-foreground: var(--text-light);
-    --accent-light: 166 76% 67%; /* Bright cyan */
-    --accent-gold: var(--gold-start); /* Gold accent for highlights */
-    --accent-muted: 250 100% 97%; /* #FAFDD6 in HSL */
-    --accent-muted-light: 250 100% 97%; /* Light pale yellow */
+    --accent: var(--coral);
+    --accent-foreground: var(--white);
+    --accent-light: var(--bright-cyan);
+    --accent-gold: var(--gold);
+    --accent-muted: 250 100% 97%;
+    --accent-muted-light: 250 100% 97%;
+    --accent-hover: var(--coral-dark);
 
-    --teal: var(--vibrant-teal-start);
-    --teal-foreground: var(--text-light);
-    --light-teal: 166 76% 67%; /* Bright cyan */
-    --dark-teal: var(--deep-teal-start);
+    --teal: var(--professional-teal);
+    --teal-foreground: var(--white);
+    --light-teal: var(--bright-teal);
+    --dark-teal: var(--professional-teal-dark);
 
-    --dark-blue: var(--muted-blue-start);
-    --slate-navy: var(--muted-blue-start);
+    --dark-blue: var(--ocean-blue);
+    --slate-navy: var(--ocean-blue);
 
-    --text-secondary: var(--text-muted);
-    --text-light: 0 0% 100%; /* white */
+    --text-dark: var(--slate-dark);
+    --text-light: var(--white);
+    --text-muted: var(--slate);
+    --text-secondary: var(--slate);
 
-    /* Heading color tokens */
-    --heading-primary: 189 98% 21%; /* #015c6b - H1, H2 */
-    --heading-secondary: 205 100% 19%; /* #00385f - H3, H4, H5, H6 */
+    --heading-primary: var(--professional-teal);
+    --heading-secondary: var(--ocean-blue);
 
-    /* Spacing scale tokens */
-    --spacing-section: 5rem; /* 80px - standard section padding */
-    --spacing-section-sm: 2.5rem; /* 40px - mobile section padding */
-    --spacing-section-lg: 6.25rem; /* 100px - large section padding */
-    --spacing-card: 1.5rem; /* 24px - standard card padding */
-    --spacing-card-sm: 1rem; /* 16px - compact card padding */
+    --highlight: var(--gold);
+    --highlight-foreground: var(--white);
+    --highlight-hover: var(--gold-dark);
+
+    /* ===== SPACING (20-30% increase) ===== */
+    --spacing-section: 7.5rem;     /* 120px */
+    --spacing-section-sm: 3.75rem; /* 60px */
+    --spacing-section-lg: 7.5rem;
+    --spacing-card: 2rem;          /* 32px */
+    --spacing-card-sm: 1.5rem;
     
-    /* Grid/Flex gap tokens */
-    --gap-sm: 1.5rem; /* 24px - tight grid spacing */
-    --gap-md: 2rem; /* 32px - standard grid spacing */
-    --gap-lg: 3rem; /* 48px - spacious grid spacing */
+    --gap-sm: 2rem;
+    --gap-md: 2.5rem;
+    --gap-lg: 3rem;
 
-    /* Container width tokens */
-    --container-xs: 500px; /* max-w-[500px] - extra small container */
-    --container-sm: 640px; /* max-w-[640px] - small container */
-    --container-md: 768px; /* max-w-[768px] - medium container */
-    --container-lg: 800px; /* max-w-[800px] - large container */
-    --container-content: 1000px; /* max-w-[1000px] - content width */
-    --container-xl: 1024px; /* max-w-[1024px] - extra large */
-    --container-2xl: 1200px; /* max-w-[1200px] - 2x large */
-    --container-3xl: 1400px; /* max-w-[1400px] - 3x large */
+    --container-xs: 500px;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 800px;
+    --container-content: 1000px;
+    --container-xl: 1024px;
+    --container-2xl: 1200px;
+    --container-3xl: 1400px;
     
-    /* Text container widths */
-    --text-container-sm: 600px; /* max-w-[600px] - small text block */
-    --text-container-md: 700px; /* max-w-[700px] - medium text block */
-    --text-container-lg: 900px; /* max-w-[900px] - large text block */
-    --text-container-xl: 1100px; /* max-w-[1100px] - extra large text block */
+    --text-container-sm: 600px;
+    --text-container-md: 700px;
+    --text-container-lg: 900px;
+    --text-container-xl: 1100px;
 
-    /* Elevation/Shadow tokens */
+    /* ===== SHADOWS (Brand-tinted) ===== */
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-    --shadow-card: 0 4px 12px rgba(100, 127, 188, 0.1);
-    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 24px rgba(100, 127, 188, 0.15);
-    --shadow-xl: 0 12px 32px rgba(100, 127, 188, 0.2);
-    --shadow-glow-coral: 0 4px 24px hsl(var(--coral-start) / 0.6);
-    --shadow-glow-coral-hover: 0 8px 32px hsl(var(--coral-start) / 0.8);
-    --shadow-elevation-1: 0 2px 12px hsl(0 0% 0% / 0.08);
+    --shadow-card: 0 4px 12px rgba(10, 114, 101, 0.1);
+    --shadow-card-hover: 0 8px 20px rgba(10, 114, 101, 0.12);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.06);
+    --shadow-glow-coral: 0 4px 24px rgba(251, 113, 133, 0.6);
+    --shadow-glow-coral-hover: 0 8px 32px rgba(251, 113, 133, 0.8);
+    --shadow-elevation-1: 0 2px 12px rgba(0, 0, 0, 0.08);
 
-    /* Border radius tokens */
-    --radius-card-sm: 8px;   /* lg: Small cards, buttons */
-    --radius-card: 12px;     /* xl: Standard cards */
-    --radius-card-lg: 16px;  /* 2xl: Large feature cards */
+    --shadow-teal-sm: 0 2px 8px rgba(10, 114, 101, 0.08), 0 1px 4px rgba(10, 114, 101, 0.04);
+    --shadow-teal-md: 0 4px 12px rgba(10, 114, 101, 0.12), 0 2px 6px rgba(10, 114, 101, 0.06);
+    --shadow-teal-lg: 0 8px 24px rgba(10, 114, 101, 0.15), 0 4px 12px rgba(10, 114, 101, 0.08);
+
+    --glow-teal: 0 0 12px rgba(10, 114, 101, 0.3);
+    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4);
+    --glow-cyan: 0 0 20px rgba(20, 184, 166, 0.3);
+    --glow-gold: 0 0 14px rgba(245, 158, 11, 0.35);
+
+    --elevation-1: 0 2px 8px rgba(10, 114, 101, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+    --elevation-2: 0 4px 12px rgba(10, 114, 101, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    --elevation-3: 0 8px 24px rgba(10, 114, 101, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
+    --elevation-4: 0 16px 48px rgba(10, 114, 101, 0.15), 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    --section-padding-mobile: 3.75rem;
+    --section-padding-tablet: 5rem;
+    --section-padding-desktop: 7.5rem;
+
+    --border: 215 20% 85%;
+    --input: 215 20% 85%;
+    --ring: var(--professional-teal);
+
+    --border-on-dark-subtle: rgba(255, 255, 255, 0.1);
+    --border-on-dark: rgba(255, 255, 255, 0.2);
+    --border-on-dark-strong: rgba(255, 255, 255, 0.3);
+
+    --radius-card-sm: 8px;
+    --radius-card: 12px;
+    --radius-card-lg: 16px;
     --radius-button: 8px;
     --radius-input: 8px;
+    --radius: 0.5rem;
 
     --card: var(--white);
-    --card-foreground: var(--text-dark);
-
-    --muted: var(--light-slate);
-    --muted-foreground: var(--text-muted);
-
+    --card-foreground: var(--slate-dark);
+    --muted: var(--slate-lighter);
+    --muted-foreground: var(--slate);
     --popover: var(--white);
-    --popover-foreground: var(--text-dark);
-
+    --popover-foreground: var(--slate-dark);
     --destructive: 0 84% 60%;
     --destructive-foreground: var(--white);
 
-    /* Form & interaction states */
-    --border: 215 20% 85%; /* Default border color for inputs and cards */
-    --input: 215 20% 85%; /* Input field border color */
-    --ring: var(--vibrant-teal-start); /* Focus ring color (keyboard navigation) */
-
-    /* Semantic border colors for different contexts */
-    --border-on-dark-subtle: rgba(255, 255, 255, 0.1); /* Subtle border on dark backgrounds */
-    --border-on-dark: rgba(255, 255, 255, 0.2); /* Standard border on dark backgrounds */
-    --border-on-dark-strong: rgba(255, 255, 255, 0.3); /* Prominent border on dark backgrounds */
-
-    /* ===== TYPOGRAPHY ===== */
-    /* Professional sans-serif stack optimized for readability */
-    --font-heading: 'Poppins', sans-serif; /* Bold, modern headings */
-    --font-body: 'DM Sans', sans-serif; /* Clean, readable body text */
-
-    /* ===== SHADOWS & ELEVATION ===== */
-    /* Neutral shadows - For general UI elements without color association */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow for flat cards */
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Standard card shadow */
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* Elevated card shadow */
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Modal/dialog shadow */
-
-    /* Brand-tinted shadows - For interactive elements with brand association */
-    --shadow-teal-sm: 0 2px 8px rgba(20, 184, 166, 0.08); /* Subtle teal hint */
-    --shadow-teal-md: 0 4px 12px rgba(20, 184, 166, 0.12); /* Medium teal shadow */
-    --shadow-teal-lg: 0 8px 24px rgba(20, 184, 166, 0.15); /* Strong teal shadow for hover states */
-
-    /* Colored glows - For emphasis and CTAs */
-    --glow-teal: 0 0 12px rgba(20, 184, 166, 0.3); /* Teal button glow */
-    --glow-coral: 0 0 16px rgba(251, 113, 133, 0.4); /* Coral CTA glow */
-    --glow-cyan: 0 0 20px rgba(94, 234, 212, 0.3); /* Accent glow */
-    --glow-gold: 0 0 14px rgba(251, 191, 36, 0.35); /* Premium highlight glow */
-
-    /* Professional elevation system - 4-level hierarchy for depth */
-    /* Use elevation-1 for flat cards, elevation-2 for standard cards, */
-    /* elevation-3 for elevated/hover states, elevation-4 for modals */
-    --elevation-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(20, 184, 166, 0.06); /* Minimal lift */
-    --elevation-2: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(20, 184, 166, 0.08); /* Standard card */
-    --elevation-3: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(20, 184, 166, 0.1); /* Hover/focus state */
-    --elevation-4: 0 16px 48px rgba(0, 0, 0, 0.12), 0 8px 24px rgba(20, 184, 166, 0.12); /* Modal/overlay */
-
-    /* ===== SPACING ===== */
-    /* Consistent vertical rhythm for section padding across breakpoints */
-    --section-padding-mobile: 3.75rem; /* 60px - Comfortable on small screens */
-    --section-padding-tablet: 5rem; /* 80px - Breathing room on tablets */
-    --section-padding-desktop: 6.25rem; /* 100px - Generous spacing on desktop */
-
-    /* Component border radius for consistent rounded corners */
-    --radius: 0.5rem; /* 8px - Standard card/button radius */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -350,120 +284,104 @@ All colors MUST be HSL converted from the official brand colors.
 }
 
 /* ============================================================================
-   BASE STYLES - Global element styling
+   BASE STYLES
    ============================================================================ */
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  html {
-    scroll-behavior: auto; /* Changed from smooth to allow instant scroll to top on route changes */
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: auto; }
+  
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
+    color: hsl(var(--slate-dark));
   }
 
-  section {
-    margin: 0;
-  }
+  section { margin: 0; }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
   }
 
   h1 {
-    @apply text-4xl lg:text-5xl;
+    @apply text-5xl lg:text-6xl;
     color: hsl(var(--heading-primary));
-    letter-spacing: -0.02em; /* Tighter tracking for large text */
+    letter-spacing: -0.02em;
+    font-weight: 800;
   }
 
   h2 {
-    @apply text-3xl lg:text-4xl;
+    @apply text-4xl lg:text-5xl;
     color: hsl(var(--heading-primary));
     letter-spacing: -0.01em;
+    font-weight: 700;
   }
 
   h3 {
-    @apply text-xl lg:text-2xl font-medium;
+    @apply text-2xl lg:text-3xl;
     color: hsl(var(--heading-secondary));
     letter-spacing: -0.01em;
+    font-weight: 700;
   }
 
   h4, h5, h6 {
+    @apply text-xl lg:text-2xl;
     color: hsl(var(--heading-secondary));
+    font-weight: 600;
     letter-spacing: normal;
   }
 
   p {
-    line-height: 1.6;
+    @apply text-lg;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: hsl(var(--slate-dark));
   }
 
-  /* ===== REFINED TYPOGRAPHY UTILITIES ===== */
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+  
+  .text-on-dark-heading { color: hsl(var(--white)); }
+  .text-on-dark-body { color: hsl(var(--white) / 0.92); }
+  .text-on-dark-muted { color: hsl(var(--white) / 0.75); }
 
-  .text-pretty {
-    text-wrap: pretty;
-  }
-
-  /* Text on dark backgrounds */
-  .text-on-dark-heading {
-    color: hsl(var(--white));
-  }
-
-  .text-on-dark-body {
-    color: hsl(var(--white) / 0.92);
-  }
-
-  .text-on-dark-muted {
-    color: hsl(var(--white) / 0.75);
-  }
-
-  /* Display text for hero sections */
   .text-display {
-    @apply text-5xl lg:text-6xl font-bold;
+    @apply text-6xl lg:text-7xl font-bold;
     line-height: 1.1;
     letter-spacing: -0.03em;
   }
 
-  /* Large subheadings */
   .text-lead {
     @apply text-xl lg:text-2xl;
-    line-height: 1.5;
+    line-height: 1.7;
     font-weight: 400;
   }
 
-  /* Small print / disclaimers */
   .text-small {
     @apply text-sm;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   .text-xs-refined {
     @apply text-xs;
-    line-height: 1.4;
+    line-height: 1.5;
     letter-spacing: 0.01em;
   }
 }
 
 /* ============================================================================
-   COMPONENT UTILITIES - Reusable component classes
+   COMPONENT UTILITIES
    ============================================================================ */
 
 @layer components {
-  /* ===== ANIMATION & INTERACTION PATTERNS ===== */
-  /* Stagger animation for list items - Creates smooth sequential reveals */
+  /* ===== ANIMATIONS ===== */
   .stagger-container > * {
-    animation: fade-in-up 0.6s ease-out;
+    animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .stagger-container > *:nth-child(1) { animation-delay: 0.1s; }
@@ -473,34 +391,27 @@ All colors MUST be HSL converted from the official brand colors.
   .stagger-container > *:nth-child(5) { animation-delay: 0.5s; }
   .stagger-container > *:nth-child(6) { animation-delay: 0.6s; }
   
-  /* Magnetic hover effect for buttons */
   .magnetic {
-    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
   }
   
   .magnetic:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px hsl(var(--primary-blue) / 0.15);
+    box-shadow: var(--shadow-teal-md);
   }
   
-  /* Gentle scale feedback for interactive elements */
   .scale-feedback {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                background-color 0.2s ease-out,
-                border-color 0.2s ease-out,
-                color 0.2s ease-out;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.3s ease-out,
+                border-color 0.3s ease-out,
+                color 0.3s ease-out;
   }
   
-  .scale-feedback:hover {
-    transform: scale(1.02);
-  }
+  .scale-feedback:hover { transform: scale(1.02); }
+  .scale-feedback:active { transform: scale(0.98); }
   
-  .scale-feedback:active {
-    transform: scale(0.98);
-  }
-  
-  /* Smooth color transitions */
   .color-transition {
     transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
@@ -508,103 +419,97 @@ All colors MUST be HSL converted from the official brand colors.
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* ===== GRADIENT BACKGROUNDS (135deg diagonal) ===== */
+  /* ===== GRADIENTS (All redefined to use refined palette) ===== */
+  
+  /* Deep teal → Professional Teal gradient */
   .bg-gradient-deep-teal {
-    background: linear-gradient(135deg, hsl(var(--deep-teal-start)), hsl(var(--deep-teal-end)));
+    background: linear-gradient(135deg, 
+      hsl(var(--professional-teal)), 
+      hsl(var(--professional-teal-dark))
+    );
   }
   
-  .bg-gradient-muted-blue {
-    background: linear-gradient(135deg, hsl(var(--muted-blue-start)), hsl(var(--muted-blue-end)));
-  }
-
+  /* Vibrant teal → Professional Teal to Ocean Blue */
   .bg-gradient-vibrant-teal {
-    background: linear-gradient(135deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
-  }
-
-  .bg-gradient-coral {
-    background: linear-gradient(135deg, hsl(var(--coral-start)), hsl(var(--coral-end)));
+    background: linear-gradient(135deg, 
+      hsl(var(--professional-teal)), 
+      hsl(var(--ocean-blue))
+    );
   }
 
   .bg-gradient-teal {
-    background: linear-gradient(90deg, hsl(var(--vibrant-teal-start)), hsl(var(--vibrant-teal-end)));
+    background: linear-gradient(90deg, 
+      hsl(var(--professional-teal)), 
+      hsl(var(--ocean-blue))
+    );
   }
 
-  .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Muted blue → Ocean Blue to Deep Navy */
+  .bg-gradient-muted-blue {
+    background: linear-gradient(135deg, 
+      hsl(var(--ocean-blue)), 
+      hsl(var(--deep-navy))
+    );
   }
 
-  /* Dot utilities */
-  .dot-primary {
-    @apply w-2 h-2 rounded-full bg-primary;
-  }
-
-  .dot-accent {
-    @apply w-2 h-2 rounded-full bg-accent;
-  }
-
-  /* Glass card utilities */
-  .glass-card {
-    @apply bg-white/10 backdrop-blur-sm border border-white/20;
-  }
-
-  .glass-card-light {
-    @apply bg-white/70 backdrop-blur-sm border border-white/30;
-  }
-
+  /* Coral gradient */
   .bg-gradient-coral {
-    background: linear-gradient(135deg, hsl(var(--coral-start)), hsl(var(--coral-end)));
+    background: linear-gradient(135deg, 
+      hsl(var(--coral)), 
+      hsl(var(--coral-dark))
+    );
   }
 
+  /* Gold gradient */
   .bg-gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-start)), hsl(var(--gold-end)));
+    background: linear-gradient(135deg, 
+      hsl(var(--gold)), 
+      hsl(var(--gold-dark))
+    );
   }
 
-  /* ===== GRADIENT VARIANTS ===== */
-  /* Radial Gradients - For hero sections and focal points */
+  /* Radial gradients */
   .bg-gradient-radial-teal {
     background: radial-gradient(
       ellipse at top,
-      hsl(var(--vibrant-teal-start)) 0%,
-      hsl(var(--deep-teal-end)) 100%
+      hsl(var(--professional-teal)) 0%,
+      hsl(var(--ocean-blue)) 100%
     );
   }
 
   .bg-gradient-radial-blue {
     background: radial-gradient(
       circle at center,
-      hsl(var(--muted-blue-end)) 0%,
-      hsl(var(--muted-blue-start)) 100%
+      hsl(var(--ocean-blue)) 0%,
+      hsl(var(--deep-navy)) 100%
     );
   }
 
-  /* Mesh Gradients - Multi-color sophisticated backgrounds */
+  /* Mesh gradients */
   .bg-gradient-mesh-professional {
     background: linear-gradient(135deg, 
-      hsl(var(--deep-teal-start)) 0%,
-      hsl(var(--vibrant-teal-start)) 40%,
-      hsl(var(--muted-blue-end)) 100%
+      hsl(var(--professional-teal)) 0%,
+      hsl(var(--ocean-blue)) 50%,
+      hsl(var(--deep-navy)) 100%
     );
   }
 
   .bg-gradient-mesh-vibrant {
     background: linear-gradient(135deg,
-      hsl(var(--vibrant-teal-start)) 0%,
-      hsl(var(--bright-cyan)) 50%,
-      hsl(var(--vibrant-teal-end)) 100%
+      hsl(var(--professional-teal)) 0%,
+      hsl(var(--ocean-blue)) 50%,
+      hsl(var(--professional-teal-light)) 100%
     );
   }
 
-  /* Animated Gradient - Subtle motion for CTAs */
+  /* Animated gradient */
   .bg-gradient-animated {
     background: linear-gradient(
       -45deg,
-      hsl(var(--coral-start)),
-      hsl(var(--coral-end)),
-      hsl(var(--vibrant-teal-start)),
-      hsl(var(--vibrant-teal-end))
+      hsl(var(--professional-teal)),
+      hsl(var(--ocean-blue)),
+      hsl(var(--professional-teal-light)),
+      hsl(var(--ocean-blue-light))
     );
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
@@ -615,7 +520,7 @@ All colors MUST be HSL converted from the official brand colors.
     50% { background-position: 100% 50%; }
   }
 
-  /* Subtle Gradient Overlays */
+  /* Gradient overlay */
   .gradient-overlay-teal {
     position: relative;
   }
@@ -627,264 +532,201 @@ All colors MUST be HSL converted from the official brand colors.
     background: linear-gradient(
       180deg,
       transparent 0%,
-      hsl(var(--vibrant-teal-start) / 0.05) 100%
+      hsl(var(--professional-teal) / 0.05) 100%
     );
     pointer-events: none;
   }
 
-  /* ===== ON-DARK TYPOGRAPHY ===== */
-  .text-on-dark-heading {
-    color: #ffffff;
+  /* Text gradients */
+  .text-gradient-teal {
+    background: linear-gradient(135deg, 
+      hsl(var(--professional-teal)), 
+      hsl(var(--ocean-blue))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .text-on-dark-body {
-    color: rgba(255, 255, 255, 0.92);
+  .text-gradient-coral {
+    background: linear-gradient(135deg, 
+      hsl(var(--coral)), 
+      hsl(var(--coral-dark))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .text-on-dark-muted {
-    color: rgba(255, 255, 255, 0.75);
+  .text-gradient-gold {
+    background: linear-gradient(135deg, 
+      hsl(var(--gold)), 
+      hsl(var(--gold-dark))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  /* ===== SECTION SPACING ===== */
-  .section-padding {
-    @apply py-[60px] md:py-[80px] lg:py-[100px] px-6 md:px-12;
+  /* ===== UTILITIES ===== */
+  .dot-primary { @apply w-2 h-2 rounded-full bg-primary; }
+  .dot-accent { @apply w-2 h-2 rounded-full bg-accent; }
+  
+  .glass-card { @apply bg-white/10 backdrop-blur-sm border border-white/20; }
+  .glass-card-light { @apply bg-white/70 backdrop-blur-sm border border-white/30; }
+
+  .section-padding { @apply py-[120px] md:py-[80px] px-6 md:px-12; }
+  
+  @media (max-width: 768px) {
+    .section-padding { @apply py-[60px] px-6; }
   }
 
-  .section-container {
-    @apply max-w-[1200px] mx-auto px-6 md:px-12;
-  }
+  .section-container { @apply max-w-[1200px] mx-auto px-6 md:px-12; }
 
-  /* ===== SHADOW UTILITIES ===== */
+  /* ===== SHADOWS ===== */
   .shadow-teal-sm { box-shadow: var(--shadow-teal-sm); }
   .shadow-teal-md { box-shadow: var(--shadow-teal-md); }
   .shadow-teal-lg { box-shadow: var(--shadow-teal-lg); }
-
   .glow-teal { box-shadow: var(--glow-teal); }
   .glow-coral { box-shadow: var(--glow-coral); }
-  .glow-cyan { 
-    filter: drop-shadow(0 0 8px hsl(var(--accent) / 0.4));
-  }
+  .glow-cyan { filter: drop-shadow(0 0 8px hsl(var(--bright-teal) / 0.4)); }
   .glow-gold { box-shadow: var(--glow-gold); }
+  .glow-accent { filter: drop-shadow(0 0 12px hsl(var(--accent) / 0.5)); }
   
-  .glow-accent {
-    filter: drop-shadow(0 0 12px hsl(var(--accent) / 0.5));
-  }
-  
-  .shadow-stat-card {
-    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.04);
-  }
-  
-  .shadow-stat-card-hover {
-    box-shadow: 0 8px 24px hsl(var(--accent) / 0.08);
-  }
-  
-  .shadow-hero-card {
-    box-shadow: 0 12px 40px hsl(var(--foreground) / 0.4);
-  }
-  
-  .text-shadow-gold {
-    text-shadow: 0 2px 4px hsl(var(--accent-gold) / 0.2);
-  }
+  .shadow-stat-card { box-shadow: 0 2px 8px hsl(var(--foreground) / 0.04); }
+  .shadow-stat-card-hover { box-shadow: 0 8px 24px hsl(var(--accent) / 0.08); }
+  .shadow-hero-card { box-shadow: 0 12px 40px hsl(var(--foreground) / 0.4); }
+  .text-shadow-gold { text-shadow: 0 2px 4px hsl(var(--gold) / 0.2); }
 
-  /* ===== HOVER STATE UTILITIES ===== */
-  .hover-lift {
-    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
-  }
-
-  .hover-shadow-teal {
-    @apply transition-shadow duration-300 ease-out hover:shadow-teal-lg;
-  }
-
+  /* ===== HOVER STATES ===== */
+  .hover-lift { @apply transition-transform duration-300 ease-out hover:-translate-y-1; }
+  .hover-shadow-teal { @apply transition-shadow duration-300 ease-out hover:shadow-teal-lg; }
+  
   .hover-shadow-coral {
     @apply transition-shadow duration-300 ease-out;
   }
-
   .hover-shadow-coral:hover {
     box-shadow: 0 8px 24px rgba(251, 113, 133, 0.3);
   }
 
-  .hover-glow-coral {
-    @apply transition-all duration-300 ease-out hover:glow-coral;
-  }
-
+  .hover-glow-coral { @apply transition-all duration-300 ease-out hover:glow-coral; }
+  
   .hover-brighten {
     @apply transition-all duration-300 ease-out;
     filter: brightness(1);
   }
+  .hover-brighten:hover { filter: brightness(1.05); }
 
-  .hover-brighten:hover {
-    filter: brightness(1.08);
-  }
+  .hover-scale-sm { @apply transition-transform duration-300 ease-out hover:scale-105; }
+  .hover-scale-lg { @apply transition-transform duration-300 ease-out hover:scale-110; }
 
-  .hover-scale-sm {
-    @apply transition-transform duration-200 ease-out hover:scale-105;
-  }
+  /* ===== ELEVATION ===== */
+  .elevation-1 { box-shadow: var(--elevation-1); }
+  .elevation-2 { box-shadow: var(--elevation-2); }
+  .elevation-3 { box-shadow: var(--elevation-3); }
+  .elevation-4 { box-shadow: var(--elevation-4); }
 
-  .hover-scale-lg {
-    @apply transition-transform duration-200 ease-out hover:scale-110;
-  }
-
-  /* ===== TEXT GRADIENT UTILITIES ===== */
-  .text-gradient-teal {
-    @apply bg-gradient-to-r from-[hsl(var(--vibrant-teal-start))] to-[hsl(var(--vibrant-teal-end))] bg-clip-text text-transparent;
-  }
-
-  .text-gradient-coral {
-    @apply bg-gradient-to-r from-[hsl(var(--coral-start))] to-[hsl(var(--coral-end))] bg-clip-text text-transparent;
-  }
-
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-[hsl(var(--gold-start))] to-[hsl(var(--gold-end))] bg-clip-text text-transparent;
-  }
-
-  /* ===== ELEVATION SYSTEM ===== */
-  .elevation-1 {
-    box-shadow: var(--elevation-1);
-  }
-
-  .elevation-2 {
-    box-shadow: var(--elevation-2);
-  }
-
-  .elevation-3 {
-    box-shadow: var(--elevation-3);
-  }
-
-  .elevation-4 {
-    box-shadow: var(--elevation-4);
-  }
-
-  /* ===== GLASS-MORPHISM EFFECTS ===== */
+  /* ===== GLASS EFFECTS ===== */
   .glass-card {
     @apply backdrop-blur-xl bg-white/80 border border-white/20;
-    box-shadow: 0 8px 32px rgba(20, 184, 166, 0.08),
-                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: var(--elevation-2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
   .glass-card-light {
     @apply backdrop-blur-md bg-white/60 border border-white/30;
-    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.06),
-                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    box-shadow: var(--elevation-1), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 
-  /* ===== BORDER GLOW EFFECTS ===== */
+  /* ===== BORDER GLOWS ===== */
   .border-glow-teal {
     @apply border-2 transition-all duration-300;
-    border-color: hsl(var(--vibrant-teal-start));
+    border-color: hsl(var(--professional-teal));
   }
 
   .border-glow-teal:hover {
-    box-shadow: 0 0 0 3px hsl(var(--vibrant-teal-start) / 0.15),
-                0 0 20px hsl(var(--vibrant-teal-start) / 0.2);
+    box-shadow: 0 0 0 3px hsl(var(--professional-teal) / 0.15),
+                0 0 20px hsl(var(--professional-teal) / 0.2);
   }
 
   .border-glow-coral {
     @apply border-2 transition-all duration-300;
-    border-color: hsl(var(--coral-start));
+    border-color: hsl(var(--coral));
   }
 
   .border-glow-coral:hover {
-    box-shadow: 0 0 0 3px hsl(var(--coral-start) / 0.15),
-                0 0 20px hsl(var(--coral-start) / 0.2);
+    box-shadow: 0 0 0 3px hsl(var(--coral) / 0.15),
+                0 0 20px hsl(var(--coral) / 0.2);
   }
 
   /* ===== ENTRANCE ANIMATIONS ===== */
-  .animate-slide-up {
-    animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+  .animate-slide-up { animation: slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .animate-fade-in-delayed { animation: fade-in-delayed 0.8s ease-out; }
+  .animate-scale-in { animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
 
-  .animate-fade-in-delayed {
-    animation: fade-in-delayed 0.8s ease-out;
-  }
-
-  .animate-scale-in {
-    animation: scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  /* Entrance animation delays for staggered effects */
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
 
-  /* ===== VISUAL INTEREST UTILITIES ===== */
-  /* Backdrop effects for modals and overlays */
-  .backdrop-blur-professional {
-    @apply backdrop-blur-md bg-white/95;
-  }
-
-  /* Soft inner glow for premium feel */
-  .inner-glow-teal {
-    box-shadow: inset 0 2px 8px hsl(var(--vibrant-teal-start) / 0.1);
-  }
-
-  /* Card hover state - combined effect */
+  /* ===== MISC ===== */
+  .backdrop-blur-professional { @apply backdrop-blur-md bg-white/95; }
+  .inner-glow-teal { box-shadow: inset 0 2px 8px hsl(var(--professional-teal) / 0.1); }
+  
   .card-interactive {
     @apply transition-all duration-300 ease-out;
     @apply hover:-translate-y-1 hover:shadow-teal-lg;
   }
 
-  /* Smooth focus rings for accessibility */
   .focus-ring-teal {
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-    --tw-ring-color: hsl(var(--vibrant-teal-start));
+    --tw-ring-color: hsl(var(--professional-teal));
   }
 
   .focus-ring-coral {
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
-    --tw-ring-color: hsl(var(--coral-start));
+    --tw-ring-color: hsl(var(--coral));
   }
 
-  /* Pulsing effect for call-to-action */
-  .pulse-teal {
-    animation: pulse-teal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
+  .pulse-teal { animation: pulse-teal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
 
   @keyframes pulse-teal {
     0%, 100% {
       opacity: 1;
-      box-shadow: 0 0 0 0 hsl(var(--vibrant-teal-start) / 0.4);
-    }
-    50% {
-      opacity: 0.9;
-      box-shadow: 0 0 0 8px hsl(var(--vibrant-teal-start) / 0);
-    }
-  }
-
-  /* Gentle coral glow for CTA buttons (global) */
-  @keyframes pulse-coral {
-    0%, 100% {
-      opacity: 1;
+      box-shadow: 0 0 0 0 hsl(var(--professional-teal) / 0.4);
     }
     50% {
       opacity: 0.95;
+      box-shadow: 0 0 0 8px hsl(var(--professional-teal) / 0);
     }
   }
-  .animate-gentle-pulse {
-    animation: pulse-coral 3.5s ease-in-out infinite;
+
+  .animate-gentle-pulse { animation: pulse-coral 3.5s ease-in-out infinite; }
+
+  @keyframes pulse-coral {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
   }
 
-  /* ===== SVG & GRAPHICS UTILITIES ===== */
-  /* For animated SVG dots and orbital graphics */
-  .dot-primary {
-    fill: hsl(var(--primary));
-  }
-
-  .dot-accent {
-    fill: hsl(var(--accent));
-  }
-
-  .stroke-primary-soft {
-    stroke: hsl(var(--primary) / 0.5);
-  }
-
-  .stroke-accent-soft {
-    stroke: hsl(var(--accent) / 0.5);
-  }
-
-  .border-primary-soft {
-    border-color: hsl(var(--primary) / 0.5);
-  }
+  .stroke-primary-soft { stroke: hsl(var(--primary) / 0.5); }
+  .stroke-accent-soft { stroke: hsl(var(--accent) / 0.5); }
+  .border-primary-soft { border-color: hsl(var(--primary) / 0.5); }
 }
 
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4, h5, h6 { font-size: 1.25rem; }
+  p { font-size: 1rem; }
+  .text-display { font-size: 2.5rem; }
+  .text-lead { font-size: 1.125rem; }
+}
+
+/* ============================================================================
+   END - SMARTFIRM PRODUCTION READY
+   ============================================================================ */
