@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 const GrowthAddOnsCard = () => {
   const services = [
     "Monthly blog posts",
-    "Social media content",
     "Paid advertising management",
     "Newsletter writing",
-    "Custom marketing campaigns"
+    "Custom marketing campaigns",
+    "Website Chatbot",
+    "Voice AI to answer your phone, make appointments and route calls",
+    "Social Media Content Plan & Management"
   ];
 
   return (
