@@ -13,50 +13,9 @@ import { motion } from "framer-motion";
 import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const heroStyles = `
-  @keyframes rotateClockwise {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  @keyframes rotateClockwiseBottomRight {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  @keyframes rotateClockwiseUpperLeft {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  @keyframes rotateCounterClockwise {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-  
-  @keyframes rotateCounterClockwiseBottomRight {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-  
-  @keyframes rotateCounterClockwiseUpperLeft {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-  
   @keyframes bubble-float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
-  }
-  
-  @keyframes pulse-dot {
-    0%, 100% { 
-      transform: scale(1); 
-      opacity: 0.6; 
-    }
-    50% { 
-      transform: scale(1.5); 
-      opacity: 1; 
-    }
   }
   
   @keyframes pulse-button {
@@ -69,12 +28,6 @@ const heroStyles = `
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .orbital-circle-set-1 { transform: scale(0.7); }
-    .orbital-circle-set-2 { transform: scale(0.7); }
-    .orbital-circle-set-3 { transform: scale(0.7); }
   }
 `;
 
@@ -266,133 +219,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
               style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
             >
               <Settings className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-primary glow-cyan" />
-            </div>
-            
-            {/* SET 1: CENTER/MAIN - TEAL/ACCENT (reverted) */}
-            <div className="orbital-circle-set-1">
-              <div 
-                className="absolute top-1/2 left-1/2"
-                style={{ transform: 'translate(calc(-50% + 500px), -50%)' }}
-              >
-                {/* Outer Circle (400px) */}
-                <div 
-                  className="absolute w-[400px] h-[400px] border-[3px] border-accent/40 rounded-full"
-                  style={{ top: 'calc(50% - 200px)', left: 'calc(50% - 200px)', animation: 'rotateClockwise 60s linear infinite' }}
-                >
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 200px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 200px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% + 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 200px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 141px)', top: 'calc(50% - 141px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
-                </div>
-                
-                {/* Middle Circle (250px) */}
-                <div 
-                  className="absolute w-[250px] h-[250px] border-[3px] border-accent/40 rounded-full"
-                  style={{ top: 'calc(50% - 125px)', left: 'calc(50% - 125px)', animation: 'rotateCounterClockwise 60s linear infinite' }}
-                >
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 0.7s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 125px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% + 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 125px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.3s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 88px)', top: 'calc(50% - 88px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
-                </div>
-                
-                {/* Inner Circle (100px) */}
-                <div 
-                  className="absolute w-[100px] h-[100px] border-[3px] border-accent/40 rounded-full"
-                  style={{ top: 'calc(50% - 50px)', left: 'calc(50% - 50px)', animation: 'rotateClockwise 60s linear infinite' }}
-                >
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.15s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.35s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 0.75s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 50px)', animation: 'pulse-dot 2s ease-in-out infinite 0.95s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 35px)', top: 'calc(50% + 35px)', animation: 'pulse-dot 2s ease-in-out infinite 1.15s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 50px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
-                  <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 35px)', top: 'calc(50% - 35px)', animation: 'pulse-dot 2s ease-in-out infinite 1.55s' }} />
-                </div>
-              </div>
-            </div>
-            
-            {/* SET 2: BOTTOM RIGHT - ALL GOLD */}
-            <div className="orbital-circle-set-2">
-              <div 
-                className="absolute w-[280px] h-[280px] border-[3px] border-accent-gold/40 rounded-full"
-                style={{ bottom: '270px', right: '-120px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 140px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% + 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% + 121px)', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 140px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% - 121px)', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% - 121px)', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
-              </div>
-              
-              <div 
-                className="absolute w-[210px] h-[210px] border-[3px] border-accent-gold/40 rounded-full"
-                style={{ bottom: '305px', right: '-85px', animation: 'rotateCounterClockwiseBottomRight 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 105px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% + 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% + 91px)', top: 'calc(50% + 52px)', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 105px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% - 91px)', top: 'calc(50% + 52px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% - 91px)', top: 'calc(50% - 52px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
-              </div>
-              
-              <div 
-                className="absolute w-[140px] h-[140px] border-[3px] border-accent-gold/40 rounded-full"
-                style={{ bottom: '340px', right: '-50px', animation: 'rotateClockwiseBottomRight 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 70px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% + 70px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 70px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent-gold -ml-1 -mt-1" style={{ left: 'calc(50% - 70px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
-              </div>
-            </div>
-            
-            {/* SET 3: UPPER LEFT - ALL CORAL */}
-            <div className="orbital-circle-set-3">
-              <div 
-                className="absolute w-[260px] h-[260px] border-[3px] border-accent/40 rounded-full"
-                style={{ top: '-140px', left: '-80px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 130px)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 0.3s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 113px)', top: 'calc(50% + 65px)', animation: 'pulse-dot 2s ease-in-out infinite 0.6s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 130px)', animation: 'pulse-dot 2s ease-in-out infinite 0.9s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 113px)', top: 'calc(50% + 65px)', animation: 'pulse-dot 2s ease-in-out infinite 1.2s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 113px)', top: 'calc(50% - 65px)', animation: 'pulse-dot 2s ease-in-out infinite 1.5s' }} />
-              </div>
-              
-              <div 
-                className="absolute w-[190px] h-[190px] border-[3px] border-accent/40 rounded-full"
-                style={{ top: '-105px', left: '-45px', animation: 'rotateCounterClockwiseUpperLeft 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 95px)', animation: 'pulse-dot 2s ease-in-out infinite 0.2s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 0.4s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 82px)', top: 'calc(50% + 47px)', animation: 'pulse-dot 2s ease-in-out infinite 0.5s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 95px)', animation: 'pulse-dot 2s ease-in-out infinite 0.8s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 82px)', top: 'calc(50% + 47px)', animation: 'pulse-dot 2s ease-in-out infinite 1.1s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 82px)', top: 'calc(50% - 47px)', animation: 'pulse-dot 2s ease-in-out infinite 1.4s' }} />
-              </div>
-              
-              <div 
-                className="absolute w-[120px] h-[120px] border-[3px] border-accent/40 rounded-full"
-                style={{ top: '-70px', left: '-10px', animation: 'rotateClockwiseUpperLeft 60s linear infinite' }}
-              >
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% - 60px)', animation: 'pulse-dot 2s ease-in-out infinite 0.25s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% + 60px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 0.55s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: '50%', top: 'calc(50% + 60px)', animation: 'pulse-dot 2s ease-in-out infinite 1s' }} />
-                <div className="absolute w-2 h-2 rounded-full bg-accent -ml-1 -mt-1" style={{ left: 'calc(50% - 60px)', top: '50%', animation: 'pulse-dot 2s ease-in-out infinite 1.35s' }} />
-              </div>
             </div>
           </div>
         </div>
