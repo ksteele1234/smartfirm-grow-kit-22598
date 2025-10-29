@@ -9,42 +9,42 @@ const WhySmartFirmIsDifferent = () => {
   const differentiators = [
     {
       icon: Building2,
-      iconColor: "#fb7185", // CORAL - emphasis on top differentiator
+      iconColor: "accent", // Using semantic token
       headline: "Accounting Firms Only",
       description: "We don't serve restaurants, dentists, or SaaS companies. Just CPAs, accounting firms, and bookkeepers. We understand busy season, utilization rates, and the compliance-to-advisory shift.",
       keyBenefit: "We speak your language"
     },
     {
       icon: Settings,
-      iconColor: "#fb7185", // CORAL - emphasis on execution
+      iconColor: "accent", // Using semantic token
       headline: "Done-For-You Execution",
       description: "We build your marketing infrastructure together during setup, then run everything for you. After onboarding, your team invests ~2 hours monthly while we handle the rest.",
       keyBenefit: "Reclaim your time for billable work"
     },
     {
       icon: Target,
-      iconColor: "#14b8a6", // TEAL
+      iconColor: "accent", // Using semantic token
       headline: "Quality Client Focus",
       description: "We help you attract $5K-$15K advisory clients, not $500 tax-only leads. Our strategies target CFO-level decision makers who value expertise over cheap compliance.",
       keyBenefit: "Higher revenue per client"
     },
     {
       icon: Calendar,
-      iconColor: "#14b8a6", // TEAL
+      iconColor: "accent", // Using semantic token
       headline: "Built Around Your Chaos",
       description: "Tax season, audit deadlines, quarterly close—we get it. Our systems work 24/7 whether you're buried in extensions or enjoying a slower summer. Setup happens on your timeline.",
       keyBenefit: "Marketing that works when you can't"
     },
     {
       icon: TrendingUp,
-      iconColor: "#14b8a6", // TEAL
+      iconColor: "accent", // Using semantic token
       headline: "Real Metrics That Matter",
       description: "We track CAC (Client Acquisition Cost), LTV (Lifetime Value), and utilization rates—the same KPIs you use to run your firm. No fluffy vanity metrics.",
       keyBenefit: "Data you actually understand"
     },
     {
       icon: Users,
-      iconColor: "#14b8a6", // TEAL
+      iconColor: "accent", // Using semantic token
       headline: "Advisory-First Targeting",
       description: "Our strategies position you for high-value advisory work, not $500 tax-only clients. We target CFO-level decision makers who need ongoing strategic guidance.",
       keyBenefit: "Attract clients worth 10x more"
@@ -66,7 +66,7 @@ const WhySmartFirmIsDifferent = () => {
           <h2 className="text-4xl font-bold text-primary mb-4">
             Why SmartFirm is Different
           </h2>
-          <p className="text-xl text-muted-foreground max-w-text-md mx-auto">
+          <p className="text-xl text-text-secondary max-w-text-md mx-auto">
             Most agencies treat accounting firms like any other client. We don't.
           </p>
         </motion.div>
