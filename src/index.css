@@ -143,7 +143,7 @@
     --secondary-blue: var(--ocean-blue-light);
     --secondary-hover: var(--ocean-blue-dark);
 
-    --accent: var(--ocean-blue);
+    --accent: var(--coral);
     --accent-foreground: var(--white);
     --accent-light: var(--bright-cyan);
     --accent-gold: var(--gold);

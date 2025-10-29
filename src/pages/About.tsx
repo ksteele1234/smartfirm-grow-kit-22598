@@ -510,7 +510,7 @@ const About = () => {
         {/* Final CTA */}
         <section className="py-16 md:py-section text-white" style={{ background: 'hsl(var(--professional-teal))' }}>
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Partner with a Team That Cares
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto">
