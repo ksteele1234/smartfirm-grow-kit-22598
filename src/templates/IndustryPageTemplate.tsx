@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import FaqAnswer from "@/components/faq/FaqAnswer";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 
 
 interface IndustryPageTemplateProps {
@@ -119,6 +120,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </Button>
         </div>
       </section>
+      <CurvedSeparator variant="primary" className="text-background" />
 
       {/* Industry Overview Section */}
       <section className="section-padding bg-background">
@@ -183,16 +185,17 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
+      <CurvedSeparator variant="primary" className="text-background" />
 
       {/* Services Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-gradient-muted-blue">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold mb-4">
+            <h2 className="text-3xl font-heading font-bold mb-4 text-on-dark-heading">
               Specialized Services
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-sm">
             {data.services.map((service, index) => (
               <Card key={index} className="elevation-1 card-interactive hover:elevation-2">
                 <CardHeader>
@@ -214,40 +217,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </div>
       </section>
-
-      {/* Case Studies Section */}
-      <section className="section-padding bg-muted">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold mb-4">
-              Success Stories
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-sm">
-            {data.caseStudies.map((study, index) => (
-              <Card key={index} className="elevation-1 card-interactive">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <Users className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-lg font-heading">{study.title}</CardTitle>
-                      <CardDescription className="font-sans text-foreground">{study.client}</CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-sans text-foreground leading-[1.6] mb-4">{study.result}</p>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={study.link}>Read {study.client} Success Story</a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CurvedSeparator variant="primary" className="text-background" />
 
       {/* FAQs Section */}
       <section id="sf-faqs" className="section-padding bg-background">
@@ -281,20 +251,21 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           })}
         </script>
       </section>
+      <CurvedSeparator variant="primary" className="text-background" />
 
       {/* Final CTA Section */}
       <section 
-        className="relative bg-background section-padding"
+        className="relative bg-gradient-muted-blue section-padding"
       >
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-heading font-bold">{data.ctaTitle}</h2>
-          <p className="text-xl font-sans text-foreground leading-[1.6]">{data.ctaDescription}</p>
+          <h2 className="text-3xl font-heading font-bold text-on-dark-heading">{data.ctaTitle}</h2>
+          <p className="text-xl font-sans text-on-dark-body leading-[1.6]">{data.ctaDescription}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="default" className="group">
+            <Button size="lg" variant="secondary" className="group">
               Schedule a Consultation
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="white-outline-on-dark">
               View All Services
             </Button>
           </div>
