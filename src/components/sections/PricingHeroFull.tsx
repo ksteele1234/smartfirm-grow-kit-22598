@@ -121,16 +121,16 @@ const PricingHeroFull = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col md:flex-row gap-3">
-            <Button 
-              asChild
-              size="lg"
-              className="flex-1 bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
-            >
-              <Link to="/quick-start-checkout">
-                Get Your Quick Start
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
+          <Button 
+            asChild
+            size="lg"
+            className="flex-1 bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
+          >
+            <a href="https://link.fastpaydirect.com/payment-link/6902d08c7b50c537fd119219" target="_blank" rel="noopener noreferrer">
+              Get Your Quick Start
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </a>
+          </Button>
             <Button 
               asChild
               size="lg"
