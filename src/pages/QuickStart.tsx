@@ -141,7 +141,7 @@ const QuickStart = () => {
       <SEO
         title="Quick Start Marketing Package for CPA Firms | SmartFirm"
         description="Launch a complete marketing package for CPA firms in 30 days: website setup, lead capture forms, email automation, review requests, and SEO foundation—ready."
-        canonicalUrl="https://smartfirm.io/quick-start"
+        canonicalUrl="https://smartfirm.io/quick-start-marketing-for-cpa-firms"
         pageType="service"
         serviceName="30-Day Quick Start Package"
         noindex={false}
@@ -149,7 +149,7 @@ const QuickStart = () => {
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Get Started", url: "/get-started" },
-          { name: "Quick Start Package", url: "/quick-start" }
+          { name: "Quick Start Package", url: "/quick-start-marketing-for-cpa-firms" }
         ]}
         faqs={[
           {

@@ -7,7 +7,7 @@
 - ✅ Services → `https://smartfirm.io/leading-marketing-services-for-accounting-firms`
 - ✅ AllServices → `https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms`
 - ✅ Industries → `https://smartfirm.io/industries-expert-marketing-agency-for-accountants`
-- ✅ QuickStart → `https://smartfirm.io/quick-start`
+- ✅ QuickStart → `https://smartfirm.io/quick-start-marketing-for-cpa-firms`
 - ✅ ToolsCalculators → `https://smartfirm.io/tools`
 - ✅ GrowthCalculator → `https://smartfirm.io/growth-calculator`
 
