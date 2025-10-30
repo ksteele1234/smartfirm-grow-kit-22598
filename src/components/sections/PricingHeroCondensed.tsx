@@ -8,6 +8,7 @@ const PricingHeroCondensed = () => {
   const features = [
     "Professional website (launch-ready)",
     "Google Business Profile optimization",
+    "Yext business listing management (200+ sites)",
     "Automated lead follow-up system",
     "Client communication workflows",
     "Review generation system",
