@@ -117,7 +117,7 @@ const ServicesSection = () => {
               <Button variant="vibrant-teal" size="lg" className="group" asChild>
                 <a href="/get-started">
                   <Phone className="mr-2 h-5 w-5" />
-                  Book My Free Growth Strategy Call
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

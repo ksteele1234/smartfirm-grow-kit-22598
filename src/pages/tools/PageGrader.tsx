@@ -855,7 +855,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
       faqs.push(
         {
           question: "How do I get started?",
-          answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+          answer: "Book a Free Call to discuss your firm's specific needs and goals."
         },
         {
           question: "What is the pricing structure?",

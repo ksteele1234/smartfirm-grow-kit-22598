@@ -67,7 +67,7 @@ const GrowthAddOnsCard = () => {
             to="/get-started" 
             className="text-secondary underline hover:text-secondary-dark transition-colors"
           >
-            Book a free strategy call
+            Book a Free Call
           </Link>
         </p>
       </div>

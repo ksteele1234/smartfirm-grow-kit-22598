@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
               <Button variant="hero" size="hero" className="group" asChild>
                 <a href="/get-started">
                   <Rocket className="mr-2 h-5 w-5" />
-                  Book My Free Growth Strategy Call
+                  Book a Free Call
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>

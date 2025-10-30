@@ -38,7 +38,7 @@ const fallbackToolsFaqs = [
   },
   {
     question: "What happens after I complete an assessment?",
-    answer: "You'll receive immediate results with actionable recommendations. Optionally, you can book a free strategy call to discuss your results and explore how SmartFirm can help implement improvements."
+    answer: "You'll receive immediate results with actionable recommendations. Optionally, you can Book a Free Call to discuss your results and explore how SmartFirm can help implement improvements."
   }
 ];
 

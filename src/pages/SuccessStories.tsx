@@ -150,7 +150,7 @@ const SuccessStories = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+            answer: "Book a Free Call to discuss your firm's specific needs and goals."
           },
           {
             question: "What is the pricing structure?",
@@ -197,7 +197,7 @@ const SuccessStories = () => {
               Read All Case Studies
             </Button>
             <Button variant="hero" size="hero">
-              Book a Free Strategy Call
+              Book a Free Call
             </Button>
           </div>
         </div>
@@ -492,7 +492,7 @@ const SuccessStories = () => {
           </p>
           <Button variant="white-on-dark" size="hero">
             <Calendar className="w-5 h-5 mr-2" />
-            Book Your Free Strategy Call
+            Book a Free Call
           </Button>
         </div>
       </section>
@@ -511,7 +511,7 @@ const SuccessStories = () => {
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-text-secondary leading-relaxed">
-                  Book a free strategy call to discuss your firm's specific needs and goals. We'll evaluate your current situation and recommend the best path forward based on these success stories.
+                  Book a Free Call to discuss your firm's specific needs and goals. We'll evaluate your current situation and recommend the best path forward based on these success stories.
                 </p>
               </details>
 

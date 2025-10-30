@@ -113,7 +113,7 @@ const GetStarted = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
+            answer: "Book a Free Call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
           },
           {
             question: "What is the pricing structure?",
@@ -175,7 +175,7 @@ const GetStarted = () => {
                 style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '600px'}}
                 scrolling="no" 
                 id="KLvW5plbvzaBvLcQYv7k_1759007988370"
-                title="Book Your Free Consultation"
+                title="Book a Free Call"
               />
             </div>
           </div>
@@ -415,7 +415,7 @@ const GetStarted = () => {
             {[
               {
                 question: "How do I get started?",
-                answer: "Book a free strategy call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
+                answer: "Book a Free Call. We'll evaluate your current situation, understand your firm's goals, and create a custom growth plan."
               },
               {
                 question: "What is the pricing structure?",
@@ -471,7 +471,7 @@ const GetStarted = () => {
               {
                 "@type": "Question",
                 "name": "How do I get started?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call to discuss your firm's specific needs and goals." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a Free Call to discuss your firm's specific needs and goals." }
               },
               {
                 "@type": "Question",

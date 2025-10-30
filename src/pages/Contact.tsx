@@ -51,7 +51,7 @@ const Contact = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
+            answer: "Book a Free Call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
           },
           {
             question: "What is the pricing structure?",
@@ -344,7 +344,7 @@ const Contact = () => {
             {[
               {
                 question: "How do I get started?",
-                answer: "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
+                answer: "Book a Free Call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice."
               },
               {
                 question: "What is the pricing structure?",
@@ -408,7 +408,7 @@ const Contact = () => {
               {
                 "@type": "Question",
                 "name": "How do I get started?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Book a free strategy call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a Free Call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice." }
               },
               {
                 "@type": "Question",

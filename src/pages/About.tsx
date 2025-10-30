@@ -127,7 +127,7 @@ const About = () => {
         faqs={[
           {
             question: "How do I get started?",
-            answer: "Book a free strategy call to discuss your firm's specific needs and goals."
+            answer: "Book a Free Call to discuss your firm's specific needs and goals."
           },
           {
             question: "What is the pricing structure?",
@@ -459,7 +459,7 @@ const About = () => {
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
                   <p className="mt-4 text-text-secondary leading-relaxed">
-                    Book a free strategy call. We will learn about your goals and create a custom plan for your firm.
+                    Book a Free Call. We will learn about your goals and create a custom plan for your firm.
                   </p>
                 </details>
 

@@ -214,7 +214,7 @@ const QuickStart = () => {
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
                 <a href="/contact">
-                  Book My Free Consultation
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -360,7 +360,7 @@ const QuickStart = () => {
               Ready to Launch Your Firm's Marketing in 30 Days?
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto leading-relaxed">
-              Book your free consultation today and see how SmartFirm's Quick Start Package can transform your accounting practice.
+              Book a Free Call today and see how SmartFirm's Quick Start Package can transform your accounting practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
@@ -370,7 +370,7 @@ const QuickStart = () => {
                 asChild
               >
                 <a href="/get-started">
-                  Book My Free Consultation
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>

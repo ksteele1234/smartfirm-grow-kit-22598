@@ -318,7 +318,7 @@ const Solutions = () => {
               Ready to Solve Your Firm's Challenges?
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto leading-relaxed">
-              Let us help you implement the right strategies for sustainable growth. Book a free strategy call to discuss your specific challenges.
+              Let us help you implement the right strategies for sustainable growth. Book a Free Call to discuss your specific challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
@@ -327,7 +327,7 @@ const Solutions = () => {
                 asChild
               >
                 <a href="/get-started">
-                  Book a Free Strategy Call
+                  Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

@@ -251,13 +251,13 @@ const AllServices = () => {
         <div className="max-w-text-lg mx-auto text-center">
           <p className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</p>
           <p className="text-xl opacity-90 mb-8 text-white/90">
-            Let's create a customized growth plan for your firm. Book a free strategy call to discover which services will have the biggest impact on your practice.
+            Let's create a customized growth plan for your firm. Book a Free Call to discover which services will have the biggest impact on your practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" className="group" asChild>
               <a href="/get-started">
                 <Phone className="mr-2 h-5 w-5" />
-                Book Your Free Strategy Call
+                Book a Free Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

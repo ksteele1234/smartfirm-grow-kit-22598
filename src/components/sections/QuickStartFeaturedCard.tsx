@@ -112,7 +112,7 @@ const QuickStartFeaturedCard = () => {
               variant="outline"
               className="w-full text-base font-semibold py-3.5 px-8 rounded-card"
             >
-              Book Free Strategy Call
+              Book a Free Call
             </Button>
           </DialogTrigger>
 ...
