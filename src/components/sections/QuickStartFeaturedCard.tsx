@@ -19,8 +19,7 @@ const QuickStartFeaturedCard = () => {
     "Unlimited Users",
     "Unlimited Contacts",
     "Unlimited Email Addresses",
-    "Unlimited Domains",
-    "Unlimited Websites & Funnels"
+    "Unlimited Domains"
   ];
 
   return (

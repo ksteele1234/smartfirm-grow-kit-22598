@@ -106,6 +106,8 @@
     --gold-dark: 32 95% 44%; /* #D97706 */
 
     --white: 0 0% 100%;
+    --text-light-on-dark-bg: var(--white);
+    
     --slate-dark: 215 19% 35%;
     --slate: 215 16% 47%;
     --slate-light: 214 32% 91%;
