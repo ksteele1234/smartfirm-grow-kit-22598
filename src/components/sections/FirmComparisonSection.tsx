@@ -40,7 +40,7 @@ const FirmComparisonSection = () => {
             The $1M Question
           </div>
           <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-primary leading-tight max-w-text-lg mx-auto mb-6 font-heading">
-            What Separates Firms Stuck at $400K from Those Scaling to $1M?
+            What Separates Firms Stuck at or under $900K from Those Scaling to $2M+?
           </h2>
           <p className="text-[18px] lg:text-[20px] text-text-secondary leading-relaxed max-w-text-md mx-auto mb-16">
             It's not about working harder. It's about having the right marketing infrastructure.
@@ -61,7 +61,7 @@ const FirmComparisonSection = () => {
               <div className="flex items-start gap-3 mb-6">
                 <XCircle className="w-10 h-10 flex-shrink-0 text-text-tertiary mt-1" />
                 <h3 className="text-[24px] lg:text-[28px] font-bold text-text-tertiary text-left">
-                  Firms Stuck at $400K-$600K
+                  Firms Stuck at $400K-$900K
                 </h3>
               </div>
               
@@ -83,16 +83,16 @@ const FirmComparisonSection = () => {
               animate={heading.isInView ? "visible" : "hidden"}
               variants={fadeInUpVariants}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-primary/5 to-accent/10 border-2 border-primary rounded-2xl p-card card-interactive"
+              className="bg-gradient-muted-blue border-2 border-primary rounded-2xl p-card card-interactive"
             >
-              <div className="inline-block bg-gradient-vibrant-teal px-4 py-2 rounded-card-sm mb-5">
+              <div className="inline-block bg-white/15 border border-on-dark px-4 py-2 rounded-card-sm mb-5">
                 <span className="text-sm font-bold text-on-dark-heading">The SmartFirm Way</span>
               </div>
               
               <div className="flex items-start gap-3 mb-6">
                 <TrendingUp className="w-10 h-10 flex-shrink-0 text-accent mt-1" />
-                <h3 className="text-[24px] lg:text-[28px] font-bold text-primary text-left">
-                  Firms Scaling to $1M+
+                <h3 className="text-[24px] lg:text-[28px] font-bold text-on-dark-heading text-left">
+                  Firms Scaling to $1M, $2M and beyond
                 </h3>
               </div>
               
@@ -100,7 +100,7 @@ const FirmComparisonSection = () => {
                 {scalingCharacteristics.map((characteristic, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckmarkIcon variant="solid" className="w-6 h-6 flex-shrink-0 mt-0.5 text-accent glow-cyan" />
-                    <p className="text-base text-foreground leading-[1.7] font-medium text-left">
+                    <p className="text-base text-on-dark-muted leading-[1.7] font-medium text-left">
                       {characteristic}
                     </p>
                   </div>
