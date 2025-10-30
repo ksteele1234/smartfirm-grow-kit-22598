@@ -29,6 +29,8 @@ import {
 } from "lucide-react";
 import SEO from "@/components/SEO";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import PricingHeroFull from "@/components/sections/PricingHeroFull";
+import GrowthAddOnsCard from "@/components/sections/GrowthAddOnsCard";
 
 const QuickStart = () => {
   const packageIncludes = [
@@ -340,174 +342,12 @@ const QuickStart = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="relative py-[120px] md:py-[100px] bg-gradient-deep-teal overflow-hidden">
-          {/* Orbital Circle System - 2 circles rotating opposite directions */}
-          <svg className="absolute right-[15%] top-[20%] w-[400px] h-[400px] z-[1] hidden lg:block opacity-50">
-            {/* Circle 1: Clockwise rotation */}
-            <g style={{ transformOrigin: 'center' }} className="animate-rotate-clockwise">
-              <circle cx="200" cy="200" r="120" className="stroke-accent" strokeWidth="2" fill="none" />
-              <circle cx="320" cy="200" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="283.14" cy="283.14" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="200" cy="320" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="116.86" cy="283.14" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="80" cy="200" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="116.86" cy="116.86" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="200" cy="80" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="283.14" cy="116.86" r="4" className="fill-accent" opacity="0.8" />
-            </g>
-            
-            {/* Circle 2: Counter-clockwise rotation */}
-            <g style={{ transformOrigin: 'center' }} className="animate-rotate-counter">
-              <circle cx="200" cy="200" r="160" className="stroke-accent" strokeWidth="1.5" fill="none" />
-              <circle cx="360" cy="200" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="313.14" cy="313.14" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="200" cy="360" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="86.86" cy="313.14" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="40" cy="200" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="86.86" cy="86.86" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="200" cy="40" r="4" className="fill-accent" opacity="0.8" />
-              <circle cx="313.14" cy="86.86" r="4" className="fill-accent" opacity="0.8" />
-            </g>
-          </svg>
-          
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Start Growing Your Firm Today
-              </h2>
-            </div>
-            
-            <div className="max-w-container-xs mx-auto">
-              <div className="relative glass-card elevation-3 rounded-[24px] p-12">
-                {/* Early Adopter Badge - Coral */}
-                <div className="inline-block bg-gradient-coral text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
-                  Early Adopter Pricing*
-                </div>
+        <PricingHeroFull />
 
-                {/* Badge - Gold gradient */}
-                <div className="inline-block bg-gradient-gold px-4 py-2 rounded-xl text-sm font-bold text-white mb-6 ml-2">
-                  Start Here
-                </div>
-                
-                {/* Price Display - $999 on top */}
-                <div className="mb-8">
-                  {/* Monthly Fee - Prominent */}
-                  <div className="mb-4">
-                    <div className="text-6xl md:text-7xl font-extrabold text-gradient-gold mb-1 animate-subtle-pulse">
-                      $999
-                    </div>
-                    <div className="text-base text-on-dark-body">per month</div>
-                  </div>
-
-                  {/* Plus Sign */}
-                  <div className="text-2xl font-bold text-white/40 text-center my-3">+</div>
-
-                  {/* Setup Fee - Smaller */}
-                  <div>
-                    <div className="text-xs text-on-dark-muted line-through mb-1">
-                      Regular: $9,999
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-1">
-                      $6,999
-                    </div>
-                    <div className="text-sm text-on-dark-muted">One-time setup</div>
-                  </div>
-                </div>
-                
-                {/* Features List with Teal Checkmarks + Glow */}
-                <ul className="space-y-4 mb-8">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Professional website (launch-ready)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Google Business Profile optimization</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Automated review generation system</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Client communication workflows</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Email marketing foundation</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Performance tracking dashboard</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Monthly performance reports</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Ongoing support & optimization</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">One-month subscription included</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">White glove onboarding</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">24/7 Real-human tech support</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Users</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Contacts</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Email Addresses</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Domains</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 glow-cyan" />
-                    <span className="text-base text-on-dark-heading leading-[1.8]">Unlimited Websites & Funnels</span>
-                  </li>
-                </ul>
-                
-                {/* CTA Buttons */}
-                <div className="flex flex-col gap-4">
-                  {/* Primary CTA - Coral Gradient */}
-                  <Button 
-                    asChild
-                    className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 rounded-xl glow-coral hover-lift"
-                  >
-                    <a href="/get-started">Get Started</a>
-                  </Button>
-                  
-                  {/* Secondary CTA - White Outline */}
-                  <Button 
-                    variant="outline"
-                    asChild
-                    className="w-full bg-transparent hover:bg-white/10 text-on-dark-heading border-2 border-on-dark-strong text-lg font-semibold py-4 rounded-xl transition-all"
-                  >
-                    <a href="/contact">Book Your Call</a>
-                  </Button>
-
-                  {/* Urgency Note */}
-                  <p className="text-xs text-on-dark-muted text-center mt-2">
-                    *for the next 3 firms only
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* Growth Add-Ons Section */}
+        <section className="py-16 bg-background">
+          <div className="container mx-auto px-6 max-w-2xl">
+            <GrowthAddOnsCard />
           </div>
         </section>
 

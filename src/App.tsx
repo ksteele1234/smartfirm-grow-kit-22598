@@ -21,6 +21,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const GetStarted = lazy(() => import("./pages/GetStarted"));
 const QuickStart = lazy(() => import("./pages/QuickStart"));
+const QuickStartCheckout = lazy(() => import("./pages/QuickStartCheckout"));
 const ServerError = lazy(() => import("./pages/ServerError"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
@@ -173,6 +174,9 @@ const App = () => (
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/faq" element={<FAQ />} />
+            
+            {/* Quick Start Checkout */}
+            <Route path="/quick-start-checkout" element={<QuickStartCheckout />} />
             
             {/* Utility Pages - Excluded from sitemap */}
             <Route path="/500" element={<ServerError />} />

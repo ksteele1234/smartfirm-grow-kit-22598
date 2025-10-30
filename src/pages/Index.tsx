@@ -1,7 +1,7 @@
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import ReadyToTransformSection from "@/components/sections/ReadyToTransformSection";
+import PricingHeroCondensed from "@/components/sections/PricingHeroCondensed";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
 import WhySmartFirmIsDifferent from "@/components/sections/WhySmartFirmIsDifferent";
@@ -61,8 +61,8 @@ const Index = () => {
         {/* Section 4: Why SmartFirm is Different - Background A (White) */}
         <WhySmartFirmIsDifferent />
 
-        {/* Section 5: Ready to Transform - Background B (Soft Teal) */}
-        <ReadyToTransformSection />
+        {/* Section 5: Pricing Hero - Background B (Dark Gradient) */}
+        <PricingHeroCondensed />
 
         {/* Section 6: Firm Comparison - Background A (White) */}
         <FirmComparisonSection />
