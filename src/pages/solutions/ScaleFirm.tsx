@@ -3,13 +3,13 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const ScaleFirm = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/scale-firm");
+  const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
     title: "Scale Your Accounting Firm Successfully | SmartFirm",
-    slug: "scale-firm",
+    slug: "scale-accounting-firm-successfully",
     metaDescription: "Scale your accounting firm through systematized processes, delegation frameworks, service productization, pricing optimization, and capacity planning.",
-    canonicalUrl: "https://smartfirm.io/solutions/scale-firm",
+    canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
     content: {},
     heroTitle: "Scale Accounting Firm",
     heroSubtitle: "Learn how to scale your accounting firm by implementing systematized client delivery processes, building delegation frameworks, productizing services, optimizing pricing, and planning capacity strategically.",

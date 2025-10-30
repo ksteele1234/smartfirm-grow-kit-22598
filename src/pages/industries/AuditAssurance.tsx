@@ -5,7 +5,7 @@ const AuditAssurance = () => {
   const industryData: IndustryPageData = {
     id: "audit-assurance",
     title: "Marketing for Audit & Assurance Services",
-    slug: "audit-assurance",
+    slug: "audit-assurance-marketing-agency",
     content: {},
     heroTitle: "Marketing Solutions for Audit & Assurance Services",
     heroSubtitle: "Build trust with organizations requiring audit services and establish your firm as the reliable choice for financial statement audits and assurance engagements.",

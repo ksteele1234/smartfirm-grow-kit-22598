@@ -3,13 +3,13 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const BusinessAdvisory = () => {
-  const industryFaqs = getFaqsForPath("/industries/business-advisory");
+  const industryFaqs = getFaqsForPath("/industries/business-advisory-marketing-services");
   const industryData: IndustryPageData = {
     id: "business-advisory",
     title: "Custom Marketing Agency for Business Advisors",
-    slug: "business-advisory",
+    slug: "business-advisory-marketing-services",
     metaDescription: "Partner with a custom marketing agency for business advisors positioning you as a strategic advisor, attracting growth-focused clients, and commanding fees.",
-    canonicalUrl: "https://smartfirm.io/industries/business-advisory",
+    canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services",
     content: {},
     heroTitle: "Custom Marketing Agency For Business Advisors",
     heroSubtitle: "Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",

@@ -4,18 +4,18 @@ import smartFirmLogo from "@/assets/smartfirm-logo-white.png";
 
 const Footer = () => {
   const services = [
-    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up" },
-    { name: "Client Review Generation", slug: "client-review-generation" },
-    { name: "SEO for Accountants", slug: "seo-for-accountants" },
-    { name: "Email Marketing", slug: "email-marketing" },
-    { name: "Social Media Management", slug: "social-media-management" },
-    { name: "Website Design", slug: "website-design" }
+    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up-for-cpas" },
+    { name: "Client Review Generation", slug: "automated-review-generation-for-cpas" },
+    { name: "SEO for Accountants", slug: "seo-for-accounting-firms" },
+    { name: "Email Marketing", slug: "email-marketing-for-cpas" },
+    { name: "Social Media Management", slug: "social-media-management-for-cpas" },
+    { name: "Website Design", slug: "professional-website-design-for-accounting-firms" }
   ];
 
   const solutions = [
     { name: "Lead Generation", slug: "lead-generation" },
-    { name: "Scale Your Firm", slug: "scale-firm" }, 
-    { name: "Client Retention", slug: "client-retention" },
+    { name: "Scale Your Firm", slug: "scale-accounting-firm-successfully" }, 
+    { name: "Client Retention", slug: "client-retention-strategies-for-cpas" },
     { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas" }
   ];
 

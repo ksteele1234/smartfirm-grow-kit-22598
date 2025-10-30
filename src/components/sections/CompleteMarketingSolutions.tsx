@@ -35,7 +35,7 @@ export const CompleteMarketingSolutions = () => {
           className="mb-8"
         >
           <Link 
-            to="/services/strategy-integration" 
+            to="/services/marketing-strategy-integration-for-accounting-firms"
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
@@ -67,7 +67,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.1 }}
           >
             <Link
-            to="/services/seo-for-accountants" 
+            to="/services/seo-for-accounting-firms"
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
@@ -97,7 +97,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.2 }}
           >
             <Link
-            to="/services/website-design" 
+            to="/services/professional-website-design-for-accounting-firms"
             onClick={() => window.scrollTo(0, 0)}
             className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
@@ -130,7 +130,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.3 }}
           >
             <Link
-            to="/services/client-review-generation" 
+            to="/services/automated-review-generation-for-cpas"
             onClick={() => window.scrollTo(0, 0)}
             className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
@@ -156,7 +156,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.4 }}
           >
             <Link
-            to="/services/email-marketing" 
+            to="/services/email-marketing-for-cpas"
             onClick={() => window.scrollTo(0, 0)}
             className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
@@ -182,7 +182,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.4 }}
           >
             <Link
-            to="/services/technology-solutions" 
+            to="/services/accounting-firm-technology-consulting"
             onClick={() => window.scrollTo(0, 0)}
             className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >

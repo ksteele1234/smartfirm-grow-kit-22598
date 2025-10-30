@@ -14,22 +14,22 @@ const Services = () => {
     icon: <Zap className="h-8 w-8 text-primary" />,
     title: "AI-Powered Marketing Automation",
     description: "Intelligent Lead Generation with predictive scoring, AI-driven Website & SEO optimization, Automated Review & Reputation Management with sentiment analysis, Smart Social Media campaigns with behavioral targeting.",
-    link: "/services/marketing-automation"
+    link: "/services/marketing-automation-for-accounting-firms"
   }, {
     icon: <Settings className="h-8 w-8 text-accent" />,
     title: "AI-Ready Technology Solutions",
     description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
-    link: "/services/technology-solutions"
+    link: "/services/accounting-firm-technology-consulting"
   }, {
     icon: <TrendingUp className="h-8 w-8 text-primary" />,
     title: "AI-Driven Business Intelligence",
     description: "Predictive Process Improvement and AI-powered Executive Dashboards that provide actionable insights to optimize your firm's performance and forecast growth opportunities.",
-    link: "/services/business-optimization"
+    link: "/services/business-optimization-for-accounting-firms"
   }, {
     icon: <Users className="h-8 w-8 text-accent" />,
     title: "Strategic AI Consulting",
     description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
-    link: "/services/executive-services"
+    link: "/services/fractional-cio-for-accounting-firms"
   }, {
     icon: <Package className="h-8 w-8 text-primary" />,
     title: "AI-Enhanced Service Packages",
@@ -254,7 +254,7 @@ const Services = () => {
                   
                   <div className="text-center pt-6">
                     <Button variant="hero" size="lg" asChild>
-                      <a href="/services/automated-lead-follow-up">
+                      <a href="/services/automated-lead-follow-up-for-cpas">
                         Learn More About This Service
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>

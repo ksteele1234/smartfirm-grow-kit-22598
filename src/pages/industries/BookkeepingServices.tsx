@@ -3,13 +3,13 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const BookkeepingServices = () => {
-  const industryFaqs = getFaqsForPath("/industries/bookkeeping-services");
+  const industryFaqs = getFaqsForPath("/industries/bookkeeping-services-marketing-automation");
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
     title: "Marketing Services for Bookkeeping Firms | SmartFirm",
-    slug: "bookkeeping-services", 
+    slug: "bookkeeping-services-marketing-automation", 
     metaDescription: "Explore bookkeeping firms marketing services that differentiate your practice, attract ideal clients, and position you as a strategic financial partner.",
-    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services",
+    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation",
     content: {},
     heroTitle: "Bookkeeping Firms Marketing Services",
     heroSubtitle: "Our bookkeeping firms marketing services differentiate your practice from commodity providers, attract your ideal small business clients, and position you as a strategic financial partner.",

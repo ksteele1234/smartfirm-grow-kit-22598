@@ -118,9 +118,9 @@ const App = () => (
             <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
             
             {/* Solution Sub-pages */}
-            <Route path="/solutions/scale-firm" element={<ScaleFirm />} />
-            <Route path="/solutions/client-retention" element={<ClientRetention />} />
-            <Route path="/solutions/retention-strategies" element={<RetentionStrategies />} />
+            <Route path="/solutions/scale-accounting-firm-successfully" element={<ScaleFirm />} />
+            <Route path="/solutions/client-retention-strategies-for-cpas" element={<ClientRetention />} />
+            <Route path="/solutions/advanced-retention-strategies-for-cpas" element={<RetentionStrategies />} />
             
             {/* Main Solution Categories */}
             <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
@@ -130,26 +130,26 @@ const App = () => (
             <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
             
             {/* Service Sub-pages */}
-            <Route path="/services/marketing-automation" element={<MarketingAutomation />} />
-            <Route path="/services/technology-solutions" element={<TechnologySolutions />} />
-            <Route path="/services/business-optimization" element={<BusinessOptimization />} />
-            <Route path="/services/executive-services" element={<ExecutiveServices />} />
-            <Route path="/services/automated-lead-follow-up" element={<AutomatedLeadFollowUp />} />
-            <Route path="/services/client-review-generation" element={<ClientReviewGeneration />} />
-            <Route path="/services/seo-for-accountants" element={<SEOForAccountants />} />
-            <Route path="/services/social-media-management" element={<SocialMediaManagement />} />
-            <Route path="/services/email-marketing" element={<EmailMarketing />} />
-            <Route path="/services/website-design" element={<WebsiteDesign />} />
-            <Route path="/services/content-marketing" element={<ContentMarketing />} />
-            <Route path="/services/online-reputation-management" element={<OnlineReputationManagement />} />
-            <Route path="/services/strategy-integration" element={<StrategyIntegration />} />
+            <Route path="/services/marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
+            <Route path="/services/accounting-firm-technology-consulting" element={<TechnologySolutions />} />
+            <Route path="/services/business-optimization-for-accounting-firms" element={<BusinessOptimization />} />
+            <Route path="/services/fractional-cio-for-accounting-firms" element={<ExecutiveServices />} />
+            <Route path="/services/automated-lead-follow-up-for-cpas" element={<AutomatedLeadFollowUp />} />
+            <Route path="/services/automated-review-generation-for-cpas" element={<ClientReviewGeneration />} />
+            <Route path="/services/seo-for-accounting-firms" element={<SEOForAccountants />} />
+            <Route path="/services/social-media-management-for-cpas" element={<SocialMediaManagement />} />
+            <Route path="/services/email-marketing-for-cpas" element={<EmailMarketing />} />
+            <Route path="/services/professional-website-design-for-accounting-firms" element={<WebsiteDesign />} />
+            <Route path="/services/strategic-content-marketing-for-cpas" element={<ContentMarketing />} />
+            <Route path="/services/reputation-management-for-cpas" element={<OnlineReputationManagement />} />
+            <Route path="/services/marketing-strategy-integration-for-accounting-firms" element={<StrategyIntegration />} />
             <Route path="/services/add-ons" element={<AddOns />} />
             
             {/* Industry Sub-pages */}
-            <Route path="/industries/tax-preparation" element={<TaxPreparation />} />
-            <Route path="/industries/bookkeeping-services" element={<BookkeepingServices />} />
-            <Route path="/industries/business-advisory" element={<BusinessAdvisory />} />
-            <Route path="/industries/audit-assurance" element={<AuditAssurance />} />
+            <Route path="/industries/tax-preparation-marketing-solutions" element={<TaxPreparation />} />
+            <Route path="/industries/bookkeeping-services-marketing-automation" element={<BookkeepingServices />} />
+            <Route path="/industries/business-advisory-marketing-services" element={<BusinessAdvisory />} />
+            <Route path="/industries/audit-assurance-marketing-agency" element={<AuditAssurance />} />
             
             {/* Tools & Calculators */}
             <Route path="/tools" element={<ToolsCalculators />} />
