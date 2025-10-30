@@ -104,8 +104,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
       </script>
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-muted-blue pt-32">
-        <div className="relative z-10 mx-auto max-w-4xl text-center px-4">
+      <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue text-on-dark-body">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl lg:text-5xl font-heading font-bold text-on-dark-heading mb-6 drop-shadow-lg">
             {data.heroTitle}
           </h1>
@@ -119,11 +119,15 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
+          </svg>
+        </div>
       </section>
-      <CurvedSeparator variant="primary" className="text-background" />
 
       {/* Industry Overview Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-heading font-bold mb-6">
@@ -205,12 +209,9 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                   <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base font-sans text-foreground mb-4 leading-[1.6]">
+                  <CardDescription className="text-base font-sans text-foreground leading-[1.6]">
                     {service.description}
                   </CardDescription>
-                  <Button variant="outline" size="sm" asChild>
-                    <a href={service.link}>Explore {service.title}</a>
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -260,13 +261,10 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl font-heading font-bold text-on-dark-heading">{data.ctaTitle}</h2>
           <p className="text-xl font-sans text-on-dark-body leading-[1.6]">{data.ctaDescription}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="group">
-              Schedule a Consultation
+          <div className="flex justify-center">
+            <Button size="lg" variant="coral" className="group">
+              Book a Free Call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button size="lg" variant="white-outline-on-dark">
-              View All Services
             </Button>
           </div>
         </div>
