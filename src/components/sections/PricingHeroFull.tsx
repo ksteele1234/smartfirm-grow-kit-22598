@@ -7,6 +7,7 @@ const PricingHeroFull = () => {
   const featuresColumn1 = [
     "Professional website (launch-ready)",
     "Google Business Profile optimization",
+    "Yext business listing management (200+ sites)",
     "Automated review generation system",
     "Client communication workflows",
     "Email marketing foundation",
