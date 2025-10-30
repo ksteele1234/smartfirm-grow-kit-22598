@@ -22,7 +22,7 @@ const HomepageFAQSection = () => {
 
 
   return (
-    <section className="bg-white overflow-hidden section-padding">
+    <section className="bg-gradient-deep-teal overflow-hidden section-padding">
       <div className="mx-auto max-w-container-2xl">
         {/* Section Header */}
         <motion.div 
@@ -32,10 +32,10 @@ const HomepageFAQSection = () => {
           variants={fadeInUpVariants}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl font-bold text-on-dark-heading mb-4">
             Questions? We Have Answers.
           </h2>
-          <p className="text-lg text-foreground max-w-text-md mx-auto">
+          <p className="text-lg text-on-dark-muted max-w-text-md mx-auto">
             Everything you need to know about building your marketing foundation with SmartFirm
           </p>
         </motion.div>
