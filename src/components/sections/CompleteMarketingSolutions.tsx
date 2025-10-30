@@ -132,7 +132,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/client-review-generation" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Star 
               className="w-12 h-12 text-accent mb-5 glow-accent" 
@@ -158,7 +158,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/email-marketing" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <Mail 
               className="w-12 h-12 text-accent mb-5 glow-accent" 
@@ -184,7 +184,7 @@ export const CompleteMarketingSolutions = () => {
             <Link
             to="/services/technology-solutions" 
             onClick={() => window.scrollTo(0, 0)}
-            className="block bg-white/[0.08] backdrop-blur-[20px] border border-white/[0.12] rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
+            className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
           >
             <BarChart3 
               className="w-12 h-12 text-accent mb-5 glow-accent" 
