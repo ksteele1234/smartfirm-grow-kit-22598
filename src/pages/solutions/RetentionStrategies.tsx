@@ -12,7 +12,7 @@ const RetentionStrategies = () => {
     canonicalUrl: "https://smartfirm.io/solutions/advanced-retention-strategies-for-cpas",
     content: {},
     heroTitle: "Retention Strategies For CPAs",
-    heroSubtitle: "Our retention strategies for CPAs include structured client success programs, quarterly business review processes, proactive tax planning outreach, exclusive client events, and loyalty incentive programs.",
+    heroSubtitle: "Even good accounting firms lose clients due to poor communication and lack of proactive service. Retention strategies for CPAs include automated client communication, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value.",
    problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
     solutionOverview: "Our advanced retention strategies include automated client communication systems, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value and loyalty.",
     problemSolutionPairs: [

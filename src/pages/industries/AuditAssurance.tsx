@@ -8,7 +8,7 @@ const AuditAssurance = () => {
     slug: "audit-assurance-marketing-agency",
     content: {},
     heroTitle: "Marketing Solutions for Audit & Assurance Services",
-    heroSubtitle: "Build trust with organizations requiring audit services and establish your firm as the reliable choice for financial statement audits and assurance engagements.",
+    heroSubtitle: "Audit firms struggle to establish credibility and build the trust organizations need before engaging professional audit services. Marketing solutions for audit & assurance services help you demonstrate competence, independence, and reliability to attract organizations requiring financial statement audits and assurance engagements.",
     industryOverview: "Audit and assurance services require the highest levels of trust and credibility. Our marketing strategies help you demonstrate competence, independence, and reliability to attract organizations that need professional audit services.",
     challenges: [
       {

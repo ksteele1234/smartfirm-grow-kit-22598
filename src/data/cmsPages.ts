@@ -14,7 +14,7 @@ export const servicePages: Record<string, ServicePageData> = {
     metaDescription: 'Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.',
     canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms',
     heroTitle: 'Marketing Automation For Accounting Firms',
-    heroSubtitle: 'Our marketing automation for accounting firms creates intelligent workflows that nurture new leads, schedule consultations, onboard clients, send service reminders, and reactivate dormant relationships.',
+    heroSubtitle: 'Manual follow-up costs accounting firms 10+ hours weekly and loses 40% of leads. Marketing automation for accounting firms solves this by instantly responding to inquiries, nurturing prospects automatically, and converting more clients without adding staff.',
     heroDescription: 'Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.',
     content: {},
     benefits: [
@@ -111,7 +111,7 @@ export const servicePages: Record<string, ServicePageData> = {
     metaDescription: 'Specialized search engine optimization services designed to help accounting firms rank higher and attract qualified local clients.',
     canonicalUrl: 'https://smartfirm.io/services/seo-for-accounting-firms',
     heroTitle: 'SEO for Accountants',
-    heroSubtitle: 'Rank higher, attract better clients, and dominate your local market',
+    heroSubtitle: 'Invisible firms lose 80% of potential clients to competitors on page one. SEO for accounting firms gets you found by high-intent prospects, dominates local search results, and delivers 3x more qualified leads without paid ads.',
     heroDescription: 'Our SEO strategies are specifically designed for accounting firms to increase visibility and attract high-value clients in your area.',
     content: {},
     benefits: [
@@ -169,7 +169,7 @@ export const solutionPages: Record<string, SolutionPageData> = {
     metaDescription: 'Strengthen client relationships with predictive analytics and intelligent automation for accounting firms.',
     canonicalUrl: 'https://smartfirm.io/solutions/client-retention-strategies-for-cpas',
     heroTitle: 'AI-Powered Client Retention Strategies',
-    heroSubtitle: 'Strengthen client relationships with predictive analytics and intelligent automation. Our AI-driven retention strategies keep your best clients engaged and loyal for years through data-driven insights.',
+    heroSubtitle: 'Losing even 5 clients per year costs $50K+ in recurring revenue and referrals. Client retention strategies for CPAs keep clients engaged through proactive communication, satisfaction tracking, and automated touchpoints that maximize lifetime value.',
     problemStatement: 'Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you\'re constantly replacing lost clients instead of growing your practice.',
     solutionOverview: 'Our AI-driven client retention solution combines predictive client behavior analysis, automated value proposition optimization, intelligent communication systems, and data-driven client experience enhancement to strengthen relationships and reduce churn.',
     content: {},

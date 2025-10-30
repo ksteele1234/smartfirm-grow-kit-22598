@@ -12,7 +12,7 @@ const ProtectPractice = () => {
     canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
     content: {},
     heroTitle: "CPA Practice Management Services",
-    heroSubtitle: "Our CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, business continuity planning, and exit strategy development.",
+    heroSubtitle: "Unprepared accounting practices face devastating threats from cybersecurity risks, regulatory changes, and technology disruption. CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, and business continuity planning.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
     problemSolutionPairs: [

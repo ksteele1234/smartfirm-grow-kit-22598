@@ -12,7 +12,7 @@ const WorkLessEarnMore = () => {
     canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more",
     content: {},
     heroTitle: "Increase Accounting Firm Revenue",
-    heroSubtitle: "Discover how to increase accounting firm revenue while working fewer hours through value-based pricing models, service mix optimization, process automation, and transitioning to high-margin advisory services.",
+    heroSubtitle: "Too many CPAs work 60+ hours weekly for modest returns, trapped in time-for-money thinking. Increase accounting firm revenue while reducing hours through value pricing strategies, service mix optimization, process automation, and transitioning to high-margin advisory services.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
     problemSolutionPairs: [

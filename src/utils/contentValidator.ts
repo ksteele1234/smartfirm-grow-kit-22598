@@ -215,6 +215,53 @@ export function validatePageContent(
 }
 
 /**
+ * Validate first sentence intent answer (Compact Keywords methodology)
+ */
+export function validateIntentAnswer(
+  firstSentence: string,
+  keyword: string
+): ValidationResult {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+  
+  // Check keyword placement (first 15 words)
+  const first15Words = firstSentence.split(/\s+/).slice(0, 15).join(' ');
+  if (!first15Words.toLowerCase().includes(keyword.toLowerCase())) {
+    errors.push('Primary keyword not in first 15 words');
+  }
+  
+  // Check for pain/desire language
+  const painIndicators = ['cost', 'lose', 'waste', 'struggle', 'problem', 'challenge', 'stuck', 'miss', 'fail'];
+  const hasPain = painIndicators.some(word => firstSentence.toLowerCase().includes(word));
+  if (!hasPain) {
+    warnings.push('Consider adding pain/desire language for stronger intent match');
+  }
+  
+  // Check for tangible metrics
+  const hasMetric = /\d+%|\d+x|\d+\+?\s+hours?|\$\d+|[0-9]+ clients?/i.test(firstSentence);
+  if (!hasMetric) {
+    warnings.push('Consider adding specific metric (%, hours, $, clients) for credibility');
+  }
+  
+  // Check sentence length (ideal: 25-35 words)
+  const wordCount = firstSentence.split(/\s+/).length;
+  if (wordCount < 20) {
+    warnings.push(`First sentence too short: ${wordCount} words (recommend 25-35)`);
+  } else if (wordCount > 40) {
+    warnings.push(`First sentence too long: ${wordCount} words (recommend 25-35)`);
+  }
+  
+  const score = errors.length === 0 ? (warnings.length === 0 ? 100 : 85) : 50;
+  
+  return {
+    valid: errors.length === 0,
+    errors,
+    warnings,
+    score
+  };
+}
+
+/**
  * Generate validation report
  */
 export function generateValidationReport(result: ValidationResult): string {

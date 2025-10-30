@@ -12,7 +12,7 @@ const BusinessAdvisory = () => {
     canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services",
     content: {},
     heroTitle: "Custom Marketing Agency For Business Advisors",
-    heroSubtitle: "Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",
+    heroSubtitle: "Business advisors struggle to establish thought leadership and justify premium pricing for strategic advice. Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",
     industryOverview: "Business advisory services command premium rates but require establishing deep trust and demonstrating expertise. Our marketing strategies help you position yourself as a trusted advisor and attract clients who value strategic guidance over commodity services.",
     challenges: [
       {

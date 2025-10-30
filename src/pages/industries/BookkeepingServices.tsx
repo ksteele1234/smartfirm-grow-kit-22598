@@ -12,7 +12,7 @@ const BookkeepingServices = () => {
     canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation",
     content: {},
     heroTitle: "Bookkeeping Firms Marketing Services",
-    heroSubtitle: "Our bookkeeping firms marketing services differentiate your practice from commodity providers, attract your ideal small business clients, and position you as a strategic financial partner.",
+    heroSubtitle: "Bookkeeping firms lose clients to low-cost software and struggle to justify professional rates. Bookkeeping firms marketing services differentiate your practice from commodity providers, attract ideal small business clients, and position you as a strategic financial partner commanding premium fees.",
     industryOverview: "Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.",
     challenges: [
       {
