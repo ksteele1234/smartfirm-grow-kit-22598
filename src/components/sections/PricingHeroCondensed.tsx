@@ -18,7 +18,7 @@ const PricingHeroCondensed = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 text-white">
-          <h2 className="text-[40px] md:text-[48px] font-heading font-bold mb-4 leading-tight">
+          <h2 className="text-[40px] md:text-[48px] font-heading font-bold mb-4 leading-tight text-light-on-dark-bg">
             Transform Your Firm in 30 Days
           </h2>
           <p className="text-[20px] font-body text-white/90 max-w-3xl mx-auto leading-relaxed">
