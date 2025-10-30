@@ -23,15 +23,6 @@ const HomepageFAQSection = () => {
 
   return (
     <section className="relative bg-gradient-mesh-professional overflow-hidden section-padding">
-      <div
-        className="absolute inset-0 overflow-hidden z-0"
-        style={{
-          backgroundImage: 'url(/assets/page-header-background.webp)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.25,
-        }}
-      />
       <div className="mx-auto max-w-container-2xl relative z-10">
         {/* Section Header */}
         <motion.div 
