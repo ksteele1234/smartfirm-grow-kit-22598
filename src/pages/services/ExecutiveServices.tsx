@@ -10,7 +10,7 @@ const ExecutiveServices = () => {
     canonicalUrl: "https://smartfirm.io/services/executive-services",
     content: {},
     heroTitle: "Fractional CIO For Accounting Firms",
-    heroSubtitle: "Our fractional CIO for accounting firms provides executive-level technology leadership including strategic planning, vendor evaluation, security assessments, and digital transformation guidance without full-time costs.",
+    heroSubtitle: "Growing firms need strategic technology leadership but can't justify $150K+ CIO salaries. Fractional CIO for accounting firms delivers technology roadmaps, vendor management, security assessments, and digital transformation planning at fraction of full-time cost—enabling 2-3x faster growth through expert guidance.",
     heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
     benefits: [
       {

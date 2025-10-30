@@ -10,7 +10,7 @@ const TechnologySolutions = () => {
     canonicalUrl: "https://smartfirm.io/services/technology-solutions",
     content: {},
     heroTitle: "Accounting Firm Technology Consulting",
-    heroSubtitle: "Our accounting firm technology consulting analyzes your current software ecosystem, identifies redundancies and gaps, recommends optimal solutions, and manages implementation to streamline operations.",
+    heroSubtitle: "Disconnected software costs accounting firms 5-8 hours weekly on manual data entry and causes 80% more errors. Accounting firm technology consulting integrates your entire tech stack, automates workflows, and enables 2-3x client capacity without adding headcount—implemented in 2-4 weeks, not months.",
     heroDescription: "Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.",
     benefits: [
       {

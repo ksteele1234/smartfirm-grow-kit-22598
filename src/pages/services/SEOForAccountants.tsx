@@ -10,7 +10,7 @@ const SEOForAccountants = () => {
     canonicalUrl: "https://smartfirm.io/services/seo-for-accountants",
     content: {},
     heroTitle: "SEO For Accounting Firms",
-    heroSubtitle: "Our SEO for accounting firms targets high-intent local searches like \"CPA near me\" and \"small business accountant\" through technical optimization, content creation, and local citation building.",
+    heroSubtitle: "Invisible firms lose 80% of potential clients to competitors on page one. SEO for accounting firms gets you found by high-intent prospects searching \"CPA near me,\" dominates local search results, and delivers 3x more qualified leads without paid ads.",
     heroDescription: "Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.",
     benefits: [
       {

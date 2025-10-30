@@ -10,7 +10,7 @@ const WebsiteDesign = () => {
     canonicalUrl: "https://smartfirm.io/services/website-design",
     content: {},
     heroTitle: "Professional Website Design For Accounting Firms",
-    heroSubtitle: "Our professional website design for accounting firms features conversion-optimized layouts, mobile responsiveness, compliance-friendly content, integrated lead capture, and fast-loading performance.",
+    heroSubtitle: "Outdated websites cost accounting firms 60% of potential clients who bounce within 10 seconds. Professional website design for accounting firms converts 3-5x more visitors into clients through mobile-optimized layouts, strategic CTAs, and compliance-ready content that builds trust instantly.",
     heroDescription: "Our website design service creates professional, conversion-optimized websites that establish credibility and generate leads for your accounting practice.",
     benefits: [
       {

@@ -10,7 +10,7 @@ const AutomatedLeadFollowUp = () => {
     canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up",
     content: {},
     heroTitle: "Automated Lead Follow Up For CPAs",
-    heroSubtitle: "Our automated lead follow-up for CPAs sends instant responses to new inquiries, delivers personalized nurture sequences, schedules consultations automatically, and ensures no lead falls through the cracks.",
+    heroSubtitle: "Slow follow-up costs CPAs 40% of potential clients within the first 24 hours. Automated lead follow-up for CPAs responds instantly via email and SMS, nurtures prospects through proven 7-touch sequences, and converts 40% more leads without manual effort or staff expansion.",
     heroDescription: "Our automated lead follow-up system ensures no prospect falls through the cracks while maintaining personal touch and professional communication.",
     benefits: [
       {

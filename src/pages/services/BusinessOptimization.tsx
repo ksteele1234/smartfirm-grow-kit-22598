@@ -10,7 +10,7 @@ const BusinessOptimization = () => {
     canonicalUrl: "https://smartfirm.io/services/business-optimization",
     content: {},
     heroTitle: "Business Optimization For Accounting Firms",
-    heroSubtitle: "Our business optimization for accounting firms maps your current workflows, identifies time-wasting bottlenecks, implements automation solutions, and creates standardized processes for consistent delivery.",
+    heroSubtitle: "Inefficient operations cost accounting firms $50K-$100K annually through pricing leaks, scope creep, and underutilized capacity. Business optimization for accounting firms identifies revenue losses, systematizes growth processes, and increases profitability by 20-30% within 12 months through data-driven improvements.",
     heroDescription: "Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.",
     benefits: [
       {

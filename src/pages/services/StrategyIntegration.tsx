@@ -8,7 +8,7 @@ const StrategyIntegration = () => {
     slug: "strategy-integration",
     content: {},
     heroTitle: "Foundation Setup: Strategy & Integration",
-    heroSubtitle: "Strategic planning and seamless integration services that ensure your marketing infrastructure works together—not as a disconnected tech mess.",
+    heroSubtitle: "Disconnected marketing tools waste 10+ hours weekly and lose 50% of leads in the gaps. Foundation setup strategy and integration connects your entire marketing infrastructure through custom roadmaps, seamless integrations, and white-glove onboarding that delivers measurable results within 30 days.",
     heroDescription: "Our foundation setup service provides a comprehensive deep dive into your firm's unique position, ideal clients, and competitive landscape, then builds everything to work together seamlessly.",
     benefits: [
       {

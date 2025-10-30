@@ -10,7 +10,7 @@ const ClientReviewGeneration = () => {
     canonicalUrl: "https://smartfirm.io/services/client-review-generation",
     content: {},
     heroTitle: "Automated Review Generation For CPAs",
-    heroSubtitle: "Our automated review generation for CPAs identifies satisfied clients, sends perfectly-timed review requests, provides one-click review links, and monitors your reputation across Google, Yelp, and Facebook.",
+    heroSubtitle: "CPAs with fewer than 30 Google reviews lose 60% of prospects to better-reviewed competitors. Automated review generation for CPAs systematically collects 3-5x more five-star reviews through perfectly-timed requests, converts 2-3x more website visitors, and builds trust on autopilot in 90 days.",
     heroDescription: "Our review generation system helps accounting firms build a strong online reputation through systematic collection and management of client testimonials.",
     benefits: [
       {
