@@ -30,7 +30,7 @@ const PricingHeroFull = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 text-white">
-          <h2 className="text-[40px] md:text-[48px] font-heading font-bold mb-4 leading-tight">
+          <h2 className="text-[40px] md:text-[48px] font-heading font-bold mb-4 leading-tight text-white">
             Start Growing Your Firm Today
           </h2>
           <p className="text-[20px] font-body text-white/90 max-w-3xl mx-auto leading-relaxed">
