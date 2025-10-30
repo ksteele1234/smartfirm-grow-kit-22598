@@ -26,7 +26,7 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-gradient-deep-teal pb-8">
+    <footer className="bg-[hsl(var(--deep-navy))] pb-8">
       <div className="container mx-auto px-6 max-w-container-2xl pt-20">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg pb-12 border-b border-on-dark-subtle">

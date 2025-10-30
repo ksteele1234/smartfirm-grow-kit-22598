@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const FunnelFooter = () => {
   return (
-    <footer className="bg-primary-muted py-6">
+    <footer className="bg-[hsl(var(--deep-navy))] py-6">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center">
           <p className="text-white/80 text-sm">

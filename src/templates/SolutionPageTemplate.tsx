@@ -321,16 +321,16 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               Our proven process gets you results quickly
             </p>
           </div>
-          <div className="hidden md:flex items-center justify-between mb-12 relative">
-            <span className="absolute left-[6%] right-[6%] top-6 h-[3px] bg-gradient-teal" aria-hidden="true" />
-            {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone) => {
+          <div className="hidden md:flex items-start justify-between mb-12 relative">
+            <span className="absolute left-[6%] right-[6%] top-16 h-[3px] bg-gradient-teal" aria-hidden="true" />
+            {[{ label: "Audit", icon: Search }, { label: "Implement", icon: Settings }, { label: "Automate", icon: Sparkles }, { label: "Optimize", icon: BarChart3 }].map((milestone, index) => {
               const IconComp = milestone.icon;
               return (
                 <div key={milestone.label} className="flex flex-col items-center text-center relative z-10 flex-1">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/5 text-primary glow-cyan">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/5 text-primary glow-cyan mb-6">
                     <IconComp className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary">{milestone.label}</span>
+                  <span className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary">{index + 1}. {milestone.label}</span>
                 </div>
               );
             })}
