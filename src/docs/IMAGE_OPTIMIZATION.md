@@ -94,7 +94,42 @@ When adding or updating images:
 - [ ] Set `priority` for hero images
 - [ ] Test loading performance
 
-## Tools
+## Automatic WebP Conversion (Build-Time)
+
+This project uses `vite-imagetools` for automatic image optimization during the build process.
+
+### Usage in Code
+
+When importing images, they are automatically converted to WebP with quality optimization:
+
+```tsx
+import heroImage from '@/assets/hero.png'; // Auto-converts to WebP at build time
+```
+
+### Advanced Import Queries
+
+You can customize the conversion using import queries:
+
+```tsx
+// Specific width
+import smallImage from '@/assets/photo.jpg?w=400';
+
+// Multiple formats and sizes (responsive images)
+import responsiveImage from '@/assets/photo.jpg?w=400;800;1200&format=webp;jpg';
+
+// Custom quality
+import highQualityImage from '@/assets/photo.png?quality=90&format=webp';
+```
+
+### Configuration
+
+The default transformation settings are in `vite.config.ts`:
+- Format: WebP
+- Quality: 80% (good balance of size/quality)
+
+## Manual Conversion Tools
+
+For images not processed through the build system, use these tools:
 
 **Recommended converters:**
 - [Squoosh](https://squoosh.app/) - Online image optimizer
