@@ -53,7 +53,7 @@ const FounderStory = () => {
                   <img
                     src={founder.image}
                     alt={`${founder.name} headshot`}
-                    className="w-20 h-20 rounded-full object-cover border-[3px] border-accent-light elevation-1"
+                    className="w-20 h-20 rounded-full object-cover border-[3px] border-primary elevation-1"
                   />
                   <div className="text-base font-semibold mt-2 text-center mb-1">
                     {founder.name}
