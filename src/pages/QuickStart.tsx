@@ -49,7 +49,8 @@ const QuickStart = () => {
       items: [
         "Setup or clean-up for local search visibility",
         "Branded descriptions and service listings",
-        "Review request integration"
+        "Review request integration",
+        "Yext business listing management - standardizes your listing across 200+ sites including Apple Maps, Bing, Facebook, and more"
       ]
     },
     {
