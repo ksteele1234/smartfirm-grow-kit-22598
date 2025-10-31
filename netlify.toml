@@ -14,18 +14,18 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Robots-Tag = "all"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.leadconnectorhq.com https://link.msgsndr.com; frame-src https://api.leadconnectorhq.com; media-src 'self';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.leadconnectorhq.com; frame-ancestors 'none';"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
 
-# Block preview and deploy URLs from search engines
+# Block preview and deploy URLs from search engines (use full table paths so TOML doesn't see duplicate [headers.values])
 [[context.deploy-preview.headers]]
   for = "/*"
-  [headers.values]
+  [context.deploy-preview.headers.values]
     X-Robots-Tag = "noindex, nofollow, noarchive"
 
 [[context.branch-deploy.headers]]
   for = "/*"
-  [headers.values]
+  [context.branch-deploy.headers.values]
     X-Robots-Tag = "noindex, nofollow, noarchive"
 
 # Asset Caching
@@ -44,4 +44,4 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Redirect rules are in public/_redirects file
+# Redirect rules are in public/_redirects
