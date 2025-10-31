@@ -229,11 +229,11 @@ const Contact = () => {
                       data-activation-value=""  
                       data-deactivation-type="neverDeactivate"  
                       data-deactivation-value=""  
-                      data-form-name="Lovable Contact Us"  
+                      data-form-name="SmartFirm Contact Form"  
                       data-height="879"  
                       data-layout-iframe-id="inline-R9iCUNna996pH7StYk0b"  
                       data-form-id="R9iCUNna996pH7StYk0b"  
-                      title="Lovable Contact Us"  
+                      title="SmartFirm Contact Form"  
                     />
                   </div>
                 </CardContent>
