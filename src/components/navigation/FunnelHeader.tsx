@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
+import OptimizedImage from "@/components/ui/optimized-image";
 import smartFirmLogo from "@/assets/smartfirm-logo-full.webp";
 
 export const FunnelHeader = () => {
@@ -8,9 +9,12 @@ export const FunnelHeader = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img 
+            <OptimizedImage 
               src={smartFirmLogo} 
-              alt="SmartFirm.io" 
+              alt="SmartFirm - Marketing and Automation for Accounting Firms" 
+              width={240}
+              height={60}
+              priority
               className="h-[60px] w-auto"
             />
           </Link>
