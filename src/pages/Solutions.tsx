@@ -137,7 +137,7 @@ const Solutions = () => {
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                As your expert marketing agency for accounting firms, we solve specific practice challenges like unpredictable lead flow, technology integration, client churn, and scaling without burnout.
+                Expert marketing agency for accounting firms solving inconsistent lead flow, technology overwhelm, client retention challenges, and scaling capacity—all without adding to your workload or budget stress.
               </p>
             </div>
             <div className="mt-12 flex justify-center">

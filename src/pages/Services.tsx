@@ -83,7 +83,7 @@ const Services = () => {
             <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">Leading Marketing Services For Accounting Firms</h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-                Our leading marketing services for accounting firms include turnkey automation platforms, high-converting website design, search engine optimization, and systematic client retention programs.
+                Leading marketing services for accounting firms include turnkey automation platforms, conversion-optimized website design, local SEO, and systematic client retention programs—all designed to get you more clients while reducing manual work.
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">

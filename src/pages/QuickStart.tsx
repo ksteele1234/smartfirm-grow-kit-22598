@@ -207,7 +207,7 @@ const QuickStart = () => {
             
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
-                This marketing package for CPA firms delivers a turnkey system in 30 days including website deployment, automated lead follow-up, client onboarding sequences, and review generation workflows.
+                Marketing package for CPA firms delivering a complete system in 30 days: website launch, automated lead follow-up, client onboarding sequences, review generation, and SEO foundation—all ready to drive growth.
               </p>
             </div>
             
