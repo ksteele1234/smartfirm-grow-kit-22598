@@ -1,6 +1,5 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 
 const QuickStartFeaturedCard = () => {
@@ -94,29 +93,17 @@ const QuickStartFeaturedCard = () => {
         </div>
       </div>
 
-      {/* CTA Buttons */}
+      {/* CTA Button */}
       <div className="flex flex-col gap-4">
         <Button 
           asChild
           className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift"
         >
-          <Link to="/quick-start-marketing-for-cpa-firms">
-            Start Your Quick Start
+          <Link to="/get-started">
+            Book a Free Call
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>
-
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button 
-              variant="outline"
-              className="w-full text-base font-semibold py-3.5 px-8 rounded-card"
-            >
-              Book a Free Call
-            </Button>
-          </DialogTrigger>
-...
-        </Dialog>
 
         {/* Urgency Note */}
         <p className="text-xs text-muted-foreground text-center mt-2">
