@@ -53,20 +53,6 @@ const BusinessAdvisory = () => {
         link: "/services/social-media-management"
       }
     ],
-    caseStudies: [
-      {
-        title: "Thought Leadership to $500K Practice",
-        client: "Strategic Business Advisors",
-        result: "Built advisory practice generating $500K annually through content marketing",
-        link: "/success-stories"
-      },
-      {
-        title: "Premium Advisory Positioning",
-        client: "Executive Financial Consulting",
-        result: "Positioned as premium advisor, average engagement $25K",
-        link: "/success-stories"
-      }
-    ],
     ctaTitle: "Build Your Advisory Practice",
     ctaDescription: "Learn how to establish thought leadership and attract high-value advisory clients.",
     faqs: industryFaqs

@@ -51,20 +51,6 @@ const AuditAssurance = () => {
         link: "/services/business-optimization"
       }
     ],
-    caseStudies: [
-      {
-        title: "Regional Audit Market Leadership",
-        client: "Regional CPA Firm",
-        result: "Became market leader for nonprofit audits in 3-state region",
-        link: "/success-stories"
-      },
-      {
-        title: "Specialized Industry Focus",
-        client: "Healthcare Audit Specialists",
-        result: "Built $2M practice specializing in healthcare audits",
-        link: "/success-stories"
-      }
-    ],
     ctaTitle: "Strengthen Your Audit Practice",
     ctaDescription: "Discover how to build trust, credibility, and a strong referral network for your audit practice."
   };

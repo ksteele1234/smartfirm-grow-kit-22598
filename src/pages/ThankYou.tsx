@@ -105,9 +105,6 @@ const ThankYou = () => {
               While you wait, check out:
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/case-studies" className="text-primary hover:underline">
-                Success Stories
-              </a>
               <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-primary hover:underline">
                 Solutions
               </a>

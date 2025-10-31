@@ -53,20 +53,6 @@ const BookkeepingServices = () => {
         link: "/services/seo-for-accountants"
       }
     ],
-    caseStudies: [
-      {
-        title: "200% Monthly Recurring Revenue Growth",
-        client: "QuickBooks Certified Bookkeeper",
-        result: "Built $25K MRR through systematic client acquisition",
-        link: "/success-stories"
-      },
-      {
-        title: "Premium Pricing Success",
-        client: "Business Bookkeeping Solutions",
-        result: "Increased rates 60% while improving client retention",
-        link: "/success-stories"
-      }
-    ],
     ctaTitle: "Build Your Bookkeeping Empire",
     ctaDescription: "Discover how to attract quality small business clients and build predictable recurring revenue.",
     faqs: industryFaqs

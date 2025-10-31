@@ -18,7 +18,6 @@ const Industries = lazy(() => import("./pages/Industries"));
 const Resources = lazy(() => import("./pages/Resources"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const GetStarted = lazy(() => import("./pages/GetStarted"));
 const QuickStart = lazy(() => import("./pages/QuickStart"));
 const ServerError = lazy(() => import("./pages/ServerError"));
@@ -109,7 +108,6 @@ const App = () => (
             <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/case-studies" element={<SuccessStories />} />
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
             

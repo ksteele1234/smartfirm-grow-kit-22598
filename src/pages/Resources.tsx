@@ -47,12 +47,6 @@ const Resources = () => {
       link: "/get-started"
     },
     {
-      icon: <BarChart3 className="h-8 w-8 text-accent" />,
-      title: "Case Studies",
-      description: "Real-world examples of client success and transformation stories.",
-      link: "/case-studies"
-    },
-    {
       icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
@@ -190,7 +184,7 @@ const Resources = () => {
                         {category.title === "Guides & Whitepapers" ? "View All Guides" :
                          category.title === "Tools & Calculators" ? "View All Tools" :
                          category.title === "Blog" ? "Read Our Blog" :
-                         category.title === "Case Studies" ? "View Success Stories" :
+                         category.title === "FAQ" ? "View FAQs" :
                          "Watch Webinars"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>

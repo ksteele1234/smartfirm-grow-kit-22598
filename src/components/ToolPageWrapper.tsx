@@ -116,8 +116,6 @@ export const ToolPageWrapper = ({
                   <span>•</span>
                   <span>View our <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
                   <span>•</span>
-                  <span>Read <a href="/success-stories" data-sf="internal-add" className="text-primary hover:underline">success stories</a></span>
-                  <span>•</span>
                   <span>Trusted by <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA members</a></span>
                 </div>
               </div>

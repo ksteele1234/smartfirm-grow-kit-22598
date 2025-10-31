@@ -38,7 +38,6 @@ const BREADCRUMB_NAME_MAP: Record<string, string> = {
   '/about': 'About Us',
   '/contact': 'Contact',
   '/get-started': 'Get Started',
-  '/success-stories': 'Success Stories',
   '/faq': 'FAQ',
   '/privacy': 'Privacy Policy',
   '/terms': 'Terms of Service',

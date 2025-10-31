@@ -53,20 +53,6 @@ const TaxPreparation = () => {
         link: "/solutions/get-more-referrals"
       }
     ],
-    caseStudies: [
-      {
-        title: "150% Revenue Increase During Tax Season",
-        client: "Midwest Tax Services",
-        result: "Generated 400+ new clients through targeted local marketing",
-        link: "/success-stories"
-      },
-      {
-        title: "Year-Round Revenue Streams",
-        client: "Family Tax Partners",
-        result: "Built bookkeeping services generating $8K monthly off-season",
-        link: "/success-stories"
-      }
-    ],
     ctaTitle: "Ready to Transform Your Tax Business?",
     ctaDescription: "Let's discuss strategies to maximize your tax season revenue and build sustainable year-round income streams.",
     faqs: industryFaqs

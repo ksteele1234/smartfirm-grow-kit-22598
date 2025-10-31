@@ -314,14 +314,6 @@ export const industryPages: Record<string, IndustryPageData> = {
         link: '/services/seo-for-accounting-firms'
       }
     ],
-    caseStudies: [
-      {
-        title: 'Regional CPA Firm Doubles Revenue',
-        client: 'Mid-sized CPA practice',
-        result: '127% revenue growth in 18 months',
-        link: '/success-stories'
-      }
-    ],
     ctaTitle: 'Ready to Transform Your CPA Firm?',
     ctaDescription: 'See how firms like yours are achieving predictable growth'
   }

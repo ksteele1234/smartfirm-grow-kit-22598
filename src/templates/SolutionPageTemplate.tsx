@@ -238,14 +238,8 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         </div>
           <div className="mt-7 flex flex-col items-center gap-3 text-center">
           <Button variant="coral" size="lg" className="hover-lift" asChild>
-            <a href="/get-started">Book Your Strategy Call</a>
+            <a href="/get-started">Book a Free Call</a>
           </Button>
-          <a
-            href="/case-studies"
-            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors story-link"
-          >
-            See how firms apply this ?
-          </a>
           <p className="text-xs text-muted-foreground max-w-container-sm mt-1">
             These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
           </p>

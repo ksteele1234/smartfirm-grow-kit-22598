@@ -86,7 +86,7 @@ export interface IndustryPageData extends CMSPageData {
     description: string;
     link: string;
   }>;
-  caseStudies: Array<{
+  caseStudies?: Array<{
     title: string;
     client: string;
     result: string;

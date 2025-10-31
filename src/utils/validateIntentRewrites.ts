@@ -365,12 +365,6 @@ export function validateIntentRewrites() {
       primaryKeyword: 'SmartFirm FAQ'
     },
     {
-      pageName: 'Success Stories',
-      url: '/success-stories',
-      firstSentence: 'Real results from accounting firms that transformed their practices with SmartFirm.',
-      primaryKeyword: 'accounting firm success stories'
-    },
-    {
       pageName: 'Privacy Policy',
       url: '/privacy',
       firstSentence: 'How SmartFirm collects, uses, and protects your personal information.',
