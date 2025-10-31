@@ -243,7 +243,7 @@ const QuickStart = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="py-16 md:py-section bg-muted/30">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -258,7 +258,7 @@ const QuickStart = () => {
               {packageIncludes.map((item, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
                   <CardHeader className="text-center pb-4">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
+                    <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-primary mb-4">
@@ -282,7 +282,7 @@ const QuickStart = () => {
         </section>
 
         {/* Outcomes Section */}
-        <section className="py-16 md:py-section bg-background">
+        <section className="py-16 md:py-section bg-background-light">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -295,9 +295,9 @@ const QuickStart = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-2xl mx-auto">
               {outcomes.map((outcome, index) => (
-                <Card key={index} className="text-center border-border bg-gradient-to-br from-background to-primary/5 card-interactive">
+                <Card key={index} className="text-center border-border bg-background card-interactive">
                   <CardHeader className="pb-4">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 w-fit">
+                    <div className="mx-auto mb-4 p-4 rounded-full bg-accent/10 w-fit">
                       <outcome.icon className="h-8 w-8 text-accent" />
                     </div>
                     <CardTitle className="text-lg text-primary mb-3">
@@ -314,7 +314,7 @@ const QuickStart = () => {
         </section>
 
         {/* Who This Is For Section */}
-        <section className="py-16 md:py-section bg-muted/30">
+        <section className="py-16 md:py-section bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -326,7 +326,7 @@ const QuickStart = () => {
               {idealFor.map((item, index) => (
                 <Card key={index} className="text-center border-border bg-background card-interactive">
                   <CardHeader className="pb-6">
-                    <div className="mx-auto mb-4 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 w-fit">
+                    <div className="mx-auto mb-4 p-4 rounded-full bg-primary/10 w-fit">
                       <item.icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl text-primary mb-3">

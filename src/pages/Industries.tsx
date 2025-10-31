@@ -302,7 +302,7 @@ const Industries = () => {
         </section>
 
         {/* Industry Spotlight */}
-        <section className="py-16 md:py-section bg-background-light">
+        <section className="py-16 md:py-section bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-text-lg mx-auto">
               <Card className="elevation-2 border card-interactive">

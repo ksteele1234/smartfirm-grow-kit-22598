@@ -220,7 +220,7 @@ const About = () => {
         </section>
 
         {/* Core Values */}
-        <section className="py-16 md:py-section bg-background-light">
+        <section className="py-16 md:py-section bg-background">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -417,7 +417,7 @@ const About = () => {
         </section>
 
         {/* Our Journey */}
-        <section className="py-16 md:py-section bg-background-light">
+        <section className="py-16 md:py-section bg-background">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -446,7 +446,7 @@ const About = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-section md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-text-md mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">

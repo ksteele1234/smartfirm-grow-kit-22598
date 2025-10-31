@@ -164,7 +164,7 @@ const Resources = () => {
         </section>
 
         {/* Resource Categories */}
-        <section className="py-section md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg">
               {resourceCategories.map((category, index) => (
@@ -259,7 +259,7 @@ const Resources = () => {
         </section>
 
         {/* Latest Blog Posts */}
-        <section className="py-section md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
@@ -348,7 +348,7 @@ const Resources = () => {
         </section>
 
         {/* Help Section */}
-        <section className="py-section md:py-28 bg-muted/30">
+        <section className="py-section md:py-28 bg-background-light">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
