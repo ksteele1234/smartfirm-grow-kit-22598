@@ -41,20 +41,20 @@ const Footer = () => {
                 className="h-36 w-auto max-w-[405px]"
               />
             </a>
-            <p className="text-sm text-white/70 leading-[1.6]">
+            <p className="text-base text-white/85 leading-[1.6]">
               Marketing and automation solutions designed specifically for ambitious accounting firms seeking consistent growth and operational excellence.
             </p>
           </div>
 
           {/* Column 2 - Services */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Services</h3>
+            <h3 className="text-base font-semibold text-white uppercase tracking-wide mb-4">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
                   <a 
                     href={`/services/${service.slug}`}
-                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                    className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {service.name}
                   </a>
@@ -65,13 +65,13 @@ const Footer = () => {
 
           {/* Column 3 - Solutions & Resources */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Solutions</h3>
+            <h3 className="text-base font-semibold text-white uppercase tracking-wide mb-4">Solutions</h3>
             <ul className="space-y-3 mb-8">
               {solutions.map((solution) => (
                 <li key={solution.slug}>
                   <a 
                     href={`/solutions/${solution.slug}`}
-                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                    className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {solution.name}
                   </a>
@@ -79,13 +79,13 @@ const Footer = () => {
               ))}
             </ul>
             
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Resources</h3>
+            <h3 className="text-base font-semibold text-white uppercase tracking-wide mb-4">Resources</h3>
             <ul className="space-y-3">
               {resources.map((resource) => (
                 <li key={resource.slug}>
                   <a 
                     href={resource.slug}
-                    className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                    className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {resource.name}
                   </a>
@@ -94,7 +94,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/quick-start-marketing-for-cpa-firms" 
-                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                  className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Quick Start Package
                 </a>
@@ -102,7 +102,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/faq" 
-                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                  className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   FAQ
                 </a>
@@ -110,7 +110,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="/about" 
-                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                  className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   About Us
                 </a>
@@ -120,28 +120,28 @@ const Footer = () => {
 
           {/* Column 4 - Contact */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
+            <h3 className="text-base font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
-                <a href="tel:+15416583789" className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200">
+                <Phone className="h-5 w-5 text-white/85 mt-0.5 flex-shrink-0" />
+                <a href="tel:+15416583789" className="text-base text-white/85 hover:text-primary transition-colors duration-200">
                   (541) 658-3789
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
-                <a href="mailto:contact@smartfirm.io" className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200">
+                <Mail className="h-5 w-5 text-white/85 mt-0.5 flex-shrink-0" />
+                <a href="mailto:contact@smartfirm.io" className="text-base text-white/85 hover:text-primary transition-colors duration-200">
                   contact@smartfirm.io
                 </a>
               </div>
               <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-on-dark-body mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-on-dark-body">Eugene, OR</span>
+                <MapPin className="h-5 w-5 text-white/85 mt-0.5 flex-shrink-0" />
+                <span className="text-base text-white/85">Eugene, OR</span>
               </div>
               <div>
                 <a 
                   href="/contact" 
-                  className="text-sm text-on-dark-body hover:text-primary transition-colors duration-200"
+                  className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Contact Us
                 </a>
@@ -172,10 +172,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-            <div className="text-xs text-white/50">
+            <div className="text-sm text-white/65">
               © 2025 SmartFirm.io. All rights reserved.
             </div>
-            <div className="flex gap-sm text-xs text-white/50">
+            <div className="flex gap-sm text-sm text-white/65">
               <a href="/privacy" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
               </a>

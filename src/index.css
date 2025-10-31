@@ -365,12 +365,12 @@
   }
 
   .text-small {
-    @apply text-sm;
+    @apply text-base;
     line-height: 1.6;
   }
 
   .text-xs-refined {
-    @apply text-xs;
+    @apply text-sm;
     line-height: 1.5;
     letter-spacing: 0.01em;
   }

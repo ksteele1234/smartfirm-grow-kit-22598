@@ -190,7 +190,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink href="/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   HOME
@@ -200,7 +200,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
@@ -251,7 +251,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
@@ -302,7 +302,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={cn(
                   "h-10 w-max bg-transparent px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
@@ -339,7 +339,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink href="/about" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   ABOUT US
@@ -349,7 +349,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink href="/contact" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
-                  "text-sm font-medium text-slate-700 transition-colors duration-200",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary focus:outline-none"
                 )}>
                   CONTACT
