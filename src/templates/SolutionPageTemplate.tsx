@@ -377,7 +377,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
                 <summary className="cursor-pointer font-semibold text-base md:text-lg text-secondary list-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
                   {faq.question}
                 </summary>
-                <div className="text-text-secondary mt-4 md:mt-6 space-y-4 max-w-[65ch]">
+                <div className="text-muted-foreground mt-4 md:mt-6 space-y-4 max-w-[65ch]">
                   <FaqAnswer
                     text={faq.answer}
                     paragraphClassName="text-base leading-[1.6] text-foreground"

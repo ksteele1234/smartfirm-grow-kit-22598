@@ -73,8 +73,8 @@ const PricingHeroCondensed = () => {
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle2 
-                    className="w-6 h-6 text-vibrant-teal flex-shrink-0 mt-0.5" 
-                    style={{ filter: 'drop-shadow(0 0 8px hsl(var(--vibrant-teal) / 0.4))' }}
+                    className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                    style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                   />
                   <span className="text-[16px] font-body text-slate-700 leading-relaxed">
                     {feature}

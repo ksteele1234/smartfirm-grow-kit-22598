@@ -18,19 +18,19 @@ const buttonVariants = cva(
         
         // Outline variants
         "outline-coral": "border-2 border-coral text-coral bg-white hover:bg-coral hover:text-white rounded-lg font-semibold transition-all",
-        outline: "border-2 border-vibrant-teal text-vibrant-teal bg-white hover:bg-vibrant-teal hover:text-white rounded-lg font-semibold transition-all",
+        outline: "border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white rounded-lg font-semibold transition-all",
         
         // Ghost and link
         ghost: "hover:bg-slate-100 text-slate-900 rounded-lg transition-all",
-        link: "text-vibrant-teal underline-offset-4 hover:underline font-medium",
+        link: "text-primary underline-offset-4 hover:underline font-medium",
         
         // Legacy variants for backward compatibility
         secondary: "bg-gradient-vibrant-teal text-white hover:opacity-90 rounded-lg font-semibold",
         destructive: "bg-red-600 text-white hover:bg-red-700 rounded-lg font-semibold",
         hero: "bg-gradient-coral text-white hover:opacity-90 shadow-md hover:shadow-glow-coral rounded-xl font-semibold transition-all",
-        "dark-teal": "bg-deep-teal text-white hover:bg-deep-teal-end shadow-lg hover:shadow-xl rounded-xl font-bold transition-all",
-        "white-on-dark": "bg-white text-vibrant-teal hover:bg-white/90 shadow-md rounded-lg font-semibold transition-all",
-        "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-vibrant-teal rounded-lg font-semibold transition-all",
+        "dark-teal": "bg-gradient-deep-teal text-white hover:opacity-90 shadow-lg hover:shadow-xl rounded-xl font-bold transition-all",
+        "white-on-dark": "bg-white text-primary hover:bg-white/90 shadow-md rounded-lg font-semibold transition-all",
+        "white-outline-on-dark": "border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary rounded-lg font-semibold transition-all",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm",

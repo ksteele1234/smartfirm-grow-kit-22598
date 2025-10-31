@@ -80,7 +80,7 @@ const PricingHeroFull = () => {
           {/* What's Included Section */}
           <div className="mb-10">
             <div className="flex items-center gap-2 mb-6">
-              <Sparkles className="w-6 h-6 text-vibrant-teal" />
+              <Sparkles className="w-6 h-6 text-primary" />
               <h3 className="text-[24px] font-heading font-bold text-slate-900">
                 What's Included
               </h3>
@@ -93,8 +93,8 @@ const PricingHeroFull = () => {
                 {featuresColumn1.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 
-                      className="w-6 h-6 text-vibrant-teal flex-shrink-0 mt-0.5" 
-                      style={{ filter: 'drop-shadow(0 0 8px hsl(var(--vibrant-teal) / 0.4))' }}
+                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                      style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                     />
                     <span className="text-[16px] font-body text-slate-700 leading-relaxed">
                       {feature}
@@ -108,8 +108,8 @@ const PricingHeroFull = () => {
                 {featuresColumn2.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 
-                      className="w-6 h-6 text-vibrant-teal flex-shrink-0 mt-0.5" 
-                      style={{ filter: 'drop-shadow(0 0 8px hsl(var(--vibrant-teal) / 0.4))' }}
+                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                      style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                     />
                     <span className="text-[16px] font-body text-slate-700 leading-relaxed">
                       {feature}
