@@ -4,14 +4,14 @@ import { ServicePageData } from "@/types/cms";
 const OnlineReputationManagement = () => {
   const serviceData: ServicePageData = {
     id: "online-reputation-management",
-    title: "Online Reputation Management for CPAs | SmartFirm",
+    title: "Reputation Management for CPAs | SmartFirm",
     slug: "online-reputation-management",
-    metaDescription: "Protect your practice with reputation management for CPAs monitoring reviews, responding to feedback, addressing negative comments, and promoting wins.",
+    metaDescription: "Reputation management for CPAs: 24/7 review monitoring, professional responses, and systematic five-star review generation. Protect and grow your online presence.",
     canonicalUrl: "https://smartfirm.io/services/online-reputation-management",
     content: {},
-    heroTitle: "Reputation Management For CPAs",
-    heroSubtitle: "One negative review can cost CPAs 10-20 lost prospects before you even know it exists. Reputation management for CPAs monitors reviews 24/7, alerts you within minutes, responds professionally to protect your pipeline, and systematically builds 50+ five-star reviews that convert prospects into clients.",
-    heroDescription: "Our reputation management service monitors reviews, responds professionally, and builds a 5-star presence that attracts more clients. We monitor all major review platforms, generate positive reviews from satisfied clients, respond professionally to feedback, and transform your online presence into a powerful trust signal.",
+    heroTitle: "Reputation Management for CPAs",
+    heroSubtitle: "Monitor reviews 24/7, respond professionally within minutes, and systematically build 50+ five-star reviews that convert prospects into clients.",
+    heroDescription: "Reputation management for CPAs monitors all review platforms 24/7, alerts you instantly to new feedback, and systematically builds five-star presence that converts prospects.",
     benefits: [
       {
         title: "Protect Your Pipeline from Negative Reviews",

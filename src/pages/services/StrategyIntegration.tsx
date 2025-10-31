@@ -4,12 +4,12 @@ import { ServicePageData } from "@/types/cms";
 const StrategyIntegration = () => {
   const serviceData: ServicePageData = {
     id: "strategy-integration",
-    title: "Foundation Setup: Strategy & Integration for Accounting Firms",
+    title: "Strategy & Integration for Accounting Firms | SmartFirm",
     slug: "strategy-integration",
     content: {},
-    heroTitle: "Foundation Setup: Strategy & Integration",
-    heroSubtitle: "Disconnected marketing tools waste 10+ hours weekly and lose 50% of leads in the gaps. Foundation setup strategy and integration connects your entire marketing infrastructure through custom roadmaps, seamless integrations, and white-glove onboarding that delivers measurable results within 30 days.",
-    heroDescription: "Our foundation setup service provides a comprehensive deep dive into your firm's unique position, ideal clients, and competitive landscape, then builds everything to work together seamlessly.",
+    heroTitle: "Strategy & Integration for Accounting Firms",
+    heroSubtitle: "Connect your marketing infrastructure with custom roadmaps, seamless integrations, and white-glove onboarding. Deliver measurable results within 30 days.",
+    heroDescription: "Strategy and integration for accounting firms aligns your marketing tools, builds custom roadmaps, and delivers seamless onboarding that produces measurable results within 30 days.",
     benefits: [
       {
         title: "Strategic Discovery",

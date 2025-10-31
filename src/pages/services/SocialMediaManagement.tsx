@@ -6,12 +6,12 @@ const SocialMediaManagement = () => {
     id: "social-media-management",
     title: "Social Media Management for CPAs | SmartFirm",
     slug: "social-media-management",
-    metaDescription: "Social media management for CPAs that builds authority, attracts ideal clients, and stays compliant with professional standards across LinkedIn, Facebook, and Twitter.",
+    metaDescription: "Social media management for CPAs: 12-16 compliant posts monthly that build thought leadership, drive referrals, and attract advisory clients. Done-for-you.",
     canonicalUrl: "https://smartfirm.io/services/social-media-management",
     content: {},
-    heroTitle: "Social Media Management For CPAs",
-    heroSubtitle: "CPAs with inconsistent social presence lose 30-50% of potential referrals to more visible competitors. Social media management for CPAs builds thought leadership through 12-16 compliant posts monthly that drive referrals, attract advisory clients, and keep you top-of-mind without time drain.",
-    heroDescription: "Our social media management for accounting firms helps you build authority, attract prospects, and nurture client relationships through strategic content and engagement.",
+    heroTitle: "Social Media Management for CPAs",
+    heroSubtitle: "Build thought leadership with 12-16 compliant posts monthly, drive 30-50% more referrals, and stay top-of-mind. Fully compliant, zero risk.",
+    heroDescription: "Social media management for CPAs delivers 12-16 compliant posts monthly across LinkedIn, Facebook, and Twitter that build authority and drive referrals without time drain.",
     benefits: [
       {
         title: "Establish Thought Leadership Without the Time Drain",

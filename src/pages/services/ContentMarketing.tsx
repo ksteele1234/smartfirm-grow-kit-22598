@@ -4,14 +4,14 @@ import { ServicePageData } from "@/types/cms";
 const ContentMarketing = () => {
   const serviceData: ServicePageData = {
     id: "content-marketing",
-    title: "Content Marketing For CPAs That Generates Leads | SmartFirm",
+    title: "Content Marketing for CPAs | SmartFirm",
     slug: "content-marketing",
-    metaDescription: "Strategic content marketing for CPAs that positions you as an expert, attracts ideal clients, and builds trust through blogs, guides, and educational resources.",
+    metaDescription: "Content marketing for CPAs: SEO-optimized blogs, guides, and resources that generate 20-30 leads monthly and position you as the trusted authority.",
     canonicalUrl: "https://smartfirm.io/services/content-marketing",
     content: {},
-    heroTitle: "Content Marketing For CPAs",
-    heroSubtitle: "Content marketing for CPAs positions you as a thought leader through SEO-optimized articles and guides: generate 20-30 qualified leads monthly and command 20-30% higher pricing without pushback when generic websites fail to attract premium clients.",
-    heroDescription: "Our content marketing services create blog posts, guides, and resources that educate prospects and establish your firm as the go-to authority. We deliver complete strategy: keyword research, editorial calendars, expert-written articles, and promotion across channels to nurture prospects and demonstrate your expertise.",
+    heroTitle: "Content Marketing for CPAs",
+    heroSubtitle: "Attract ideal clients with SEO-optimized content, generate 20-30 qualified leads monthly, and command premium fees. Done-for-you, compliance-approved.",
+    heroDescription: "Content marketing for CPAs delivers SEO-optimized articles, guides, and resources that attract qualified leads and establish your firm as the trusted authority.",
     benefits: [
       {
         title: "Attract Ideal Clients Through Education",

@@ -4,14 +4,14 @@ import { ServicePageData } from "@/types/cms";
 const BusinessOptimization = () => {
   const serviceData: ServicePageData = {
     id: "business-optimization",
-    title: "Business Optimization For Accounting Firms | SmartFirm",
+    title: "Business Optimization for Accounting Firms | SmartFirm",
     slug: "business-optimization",
-    metaDescription: "Streamline operations with business optimization for accounting firms analyzing workflows, identifying bottlenecks, and implementing process improvements.",
+    metaDescription: "Business optimization for accounting firms: identify revenue leaks, streamline operations, and increase profitability 20-30% through data-driven process improvements.",
     canonicalUrl: "https://smartfirm.io/services/business-optimization",
     content: {},
-    heroTitle: "Business Optimization For Accounting Firms",
-    heroSubtitle: "Inefficient operations cost accounting firms $50K-$100K annually through pricing leaks, scope creep, and underutilized capacity. Business optimization for accounting firms identifies revenue losses, systematizes growth processes, and increases profitability by 20-30% within 12 months through data-driven improvements.",
-    heroDescription: "Our business optimization services help accounting firms identify inefficiencies, streamline processes, and make data-driven decisions for sustainable growth.",
+    heroTitle: "Business Optimization for Accounting Firms",
+    heroSubtitle: "Identify revenue leaks, systematize growth processes, and increase profitability 20-30% within 12 months through operational audits and data-driven improvements.",
+    heroDescription: "Business optimization for accounting firms analyzes workflows, identifies bottlenecks, and implements process improvements that increase profitability by 20-30% within 12 months.",
     benefits: [
       {
         title: "Identify Hidden Revenue Leaks",

@@ -9,13 +9,13 @@ import { ServicePageData, SolutionPageData, IndustryPageData } from '@/types/cms
 export const servicePages: Record<string, ServicePageData> = {
   'marketing-automation': {
     id: 'marketing-automation',
-    title: 'Marketing Automation For Accounting Firms | SmartFirm',
+    title: 'Marketing Automation for Accounting Firms | SmartFirm',
     slug: 'marketing-automation-for-accounting-firms',
-    metaDescription: 'Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.',
+    metaDescription: 'Marketing automation for accounting firms: instant lead response, automated nurture campaigns, and 40% higher conversion rates. Trusted by 200+ practices.',
     canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms',
-    heroTitle: 'Marketing Automation For Accounting Firms',
-    heroSubtitle: 'Marketing automation for accounting firms solves manual follow-up and lost leads: instantly respond to inquiries, nurture prospects automatically, and convert 40% more clients without adding staff or burning 10+ hours weekly.',
-    heroDescription: 'Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.',
+    heroTitle: 'Marketing Automation for Accounting Firms',
+    heroSubtitle: 'Automate lead follow-up, nurture prospects automatically, and convert 40% more clients. Trusted by 200+ accounting practices.',
+    heroDescription: 'Marketing automation for accounting firms captures leads instantly, nurtures prospects through proven sequences, and converts more clients without manual effort.',
     content: {},
     benefits: [
       {
@@ -108,11 +108,11 @@ export const servicePages: Record<string, ServicePageData> = {
     id: 'seo-for-accountants',
     title: 'SEO for Accountants | SmartFirm',
     slug: 'seo-for-accounting-firms',
-    metaDescription: 'Specialized search engine optimization services designed to help accounting firms rank higher and attract qualified local clients.',
+    metaDescription: 'SEO for accountants: rank higher on Google, attract high-intent local clients, and generate 3x more qualified leads. Built for accounting practices.',
     canonicalUrl: 'https://smartfirm.io/services/seo-for-accounting-firms',
     heroTitle: 'SEO for Accountants',
-    heroSubtitle: 'Invisible firms lose 80% of potential clients to competitors on page one. SEO for accounting firms gets you found by high-intent prospects, dominates local search results, and delivers 3x more qualified leads without paid ads.',
-    heroDescription: 'Our SEO strategies are specifically designed for accounting firms to increase visibility and attract high-value clients in your area.',
+    heroSubtitle: 'Rank higher on Google, dominate local search, and attract qualified clients searching for your services. Proven SEO built for accountants.',
+    heroDescription: 'SEO for accountants delivers higher Google rankings, local search dominance, and 3x more qualified leads without paid advertising.',
     content: {},
     benefits: [
       {

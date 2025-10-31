@@ -6,12 +6,12 @@ const TechnologySolutions = () => {
     id: "technology-solutions",
     title: "Accounting Firm Technology Consulting | SmartFirm",
     slug: "technology-solutions",
-    metaDescription: "Accounting firm technology consulting that evaluates your tech stack, identifies inefficiencies, recommends solutions, and implements integrated systems.",
+    metaDescription: "Accounting firm technology consulting: integrate your tech stack, automate workflows, and serve 2-3x more clients. Implemented in 2-4 weeks.",
     canonicalUrl: "https://smartfirm.io/services/technology-solutions",
     content: {},
     heroTitle: "Accounting Firm Technology Consulting",
-    heroSubtitle: "Disconnected software costs accounting firms 5-8 hours weekly on manual data entry and causes 80% more errors. Accounting firm technology consulting integrates your entire tech stack, automates workflows, and enables 2-3x client capacity without adding headcount—implemented in 2-4 weeks, not months.",
-    heroDescription: "Our technology consulting services help accounting firms leverage the latest tools and integrations to streamline operations and deliver better client experiences.",
+    heroSubtitle: "Integrate your tech stack, eliminate manual data entry, and serve 2-3x more clients without adding headcount. Implemented in 2-4 weeks.",
+    heroDescription: "Accounting firm technology consulting integrates disconnected software, automates workflows, and enables your team to serve 2-3x more clients without additional headcount.",
     benefits: [
       {
         title: "Stop Juggling 10+ Disconnected Tools",

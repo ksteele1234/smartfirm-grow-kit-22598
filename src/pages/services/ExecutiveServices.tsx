@@ -4,14 +4,14 @@ import { ServicePageData } from "@/types/cms";
 const ExecutiveServices = () => {
   const serviceData: ServicePageData = {
     id: "executive-services",
-    title: "Fractional CIO Services for Accounting Firms",
+    title: "Fractional CIO for Accounting Firms | SmartFirm",
     slug: "executive-services",
-    metaDescription: "Access strategic guidance through fractional CIO for accounting firms: technology roadmaps, vendor management, security assessments, and digital planning.",
+    metaDescription: "Fractional CIO for accounting firms: strategic technology leadership, vendor management, security assessments, and digital transformation at a fraction of full-time cost.",
     canonicalUrl: "https://smartfirm.io/services/executive-services",
     content: {},
-    heroTitle: "Fractional CIO For Accounting Firms",
-    heroSubtitle: "Growing firms need strategic technology leadership but can't justify $150K+ CIO salaries. Fractional CIO for accounting firms delivers technology roadmaps, vendor management, security assessments, and digital transformation planning at fraction of full-time cost—enabling 2-3x faster growth through expert guidance.",
-    heroDescription: "Our fractional executive services provide accounting firms with senior-level strategic guidance, technology leadership, and financial expertise on a flexible, cost-effective basis.",
+    heroTitle: "Fractional CIO for Accounting Firms",
+    heroSubtitle: "Strategic technology leadership, vendor management, and digital transformation planning at a fraction of full-time CIO cost. Enable 2-3x faster growth.",
+    heroDescription: "Fractional CIO for accounting firms delivers technology roadmaps, vendor management, security assessments, and digital transformation planning without $150K+ salary commitment.",
     benefits: [
       {
         title: "Strategic Guidance from Former Practitioners",

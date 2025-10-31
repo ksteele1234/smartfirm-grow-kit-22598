@@ -140,8 +140,8 @@ const AddOns = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Growth Add-Ons & Custom Marketing Solutions | SmartFirm"
-        description="Expand your marketing with flexible add-on services for accounting firms: blog posts, paid ads, newsletters, chatbots, voice AI, social media, trade shows, retention programs, and custom campaigns."
+        title="Marketing Add-Ons for Accounting Firms | SmartFirm"
+        description="Marketing add-ons for accounting firms: blogs, paid ads, newsletters, chatbots, voice AI, social media, trade shows, and retention programs. Scale at your pace."
         canonicalUrl="https://smartfirm.io/services/add-ons"
         pageType="service"
         serviceName="Growth Add-Ons & Custom Marketing Solutions"
@@ -201,12 +201,12 @@ const AddOns = () => {
             </Badge>
             
             <h1 className="text-display font-bold text-primary mb-6">
-              Growth Add-Ons & Custom Marketing Solutions
+              Marketing Add-Ons for Accounting Firms
             </h1>
             
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
-                Expand your marketing capabilities with flexible add-on services designed for accounting firms. Choose what you need, when you need it—no long-term commitments required.
+                Scale your marketing with flexible add-on services: blogs, paid ads, newsletters, chatbots, social media, and more. No long-term commitments required.
               </p>
             </div>
             
