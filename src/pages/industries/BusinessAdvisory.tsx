@@ -3,16 +3,16 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const BusinessAdvisory = () => {
-  const industryFaqs = getFaqsForPath("/industries/business-advisory-marketing-services");
+  const industryFaqs = getFaqsForPath("/industries/marketing-for-business-advisors");
   const industryData: IndustryPageData = {
     id: "business-advisory",
-    title: "Custom Marketing Agency for Business Advisors",
-    slug: "business-advisory-marketing-services",
-    metaDescription: "Partner with a custom marketing agency for business advisors positioning you as a strategic advisor, attracting growth-focused clients, and commanding fees.",
-    canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services",
+    title: "Marketing For Business Advisors That Commands Premium Fees | SmartFirm",
+    slug: "marketing-for-business-advisors",
+    metaDescription: "Marketing for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees through thought leadership.",
+    canonicalUrl: "https://smartfirm.io/industries/marketing-for-business-advisors",
     content: {},
-    heroTitle: "Custom Marketing Agency For Business Advisors",
-    heroSubtitle: "Business advisors struggle to establish thought leadership and justify premium pricing for strategic advice. Our custom marketing agency for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees.",
+    heroTitle: "Marketing For Business Advisors",
+    heroSubtitle: "Marketing for business advisors positions you as a strategic growth partner and helps you command premium advisory fees: attract high-value entrepreneurial clients and establish thought leadership when business advisors struggle to justify premium pricing for strategic advice.",
     industryOverview: "Business advisory services command premium rates but require establishing deep trust and demonstrating expertise. Our marketing strategies help you position yourself as a trusted advisor and attract clients who value strategic guidance over commodity services.",
     challenges: [
       {

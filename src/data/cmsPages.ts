@@ -14,7 +14,7 @@ export const servicePages: Record<string, ServicePageData> = {
     metaDescription: 'Unlock 20+ hours weekly with marketing automation for accounting firms, boost ROI by 50%, and streamline client acquisition effortlessly.',
     canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms',
     heroTitle: 'Marketing Automation For Accounting Firms',
-    heroSubtitle: 'Manual follow-up costs accounting firms 10+ hours weekly and loses 40% of leads. Marketing automation for accounting firms solves this by instantly responding to inquiries, nurturing prospects automatically, and converting more clients without adding staff.',
+    heroSubtitle: 'Marketing automation for accounting firms solves manual follow-up and lost leads: instantly respond to inquiries, nurture prospects automatically, and convert 40% more clients without adding staff or burning 10+ hours weekly.',
     heroDescription: 'Our marketing automation platform integrates seamlessly with your existing systems to deliver personalized experiences at scale while you focus on serving clients.',
     content: {},
     benefits: [
@@ -282,12 +282,12 @@ export const solutionPages: Record<string, SolutionPageData> = {
 export const industryPages: Record<string, IndustryPageData> = {
   'cpa-firms': {
     id: 'cpa-firms',
-    title: 'Marketing Solutions for CPA Firms | SmartFirm.io',
+    title: 'Marketing For CPA Firms That Drives Growth | SmartFirm',
     slug: 'cpa-firms',
-    metaDescription: 'Specialized marketing and automation solutions designed specifically for CPA firms to attract and retain high-value clients.',
+    metaDescription: 'Marketing for CPA firms that attracts high-value clients, reduces manual follow-up, and positions you above competitors through automation, SEO, and strategic positioning.',
     canonicalUrl: 'https://smartfirm.io/industries/cpa-firms',
-    heroTitle: 'Marketing Solutions for CPA Firms',
-    heroSubtitle: 'Specialized strategies for CPA practices',
+    heroTitle: 'Marketing For CPA Firms',
+    heroSubtitle: 'Marketing for CPA firms attracts high-value clients and positions you above competitors through specialized automation, local SEO, and strategic campaigns that solve unique challenges like seasonal demand and big-firm competition.',
     industryOverview: 'CPA firms face unique challenges in client acquisition and retention. Our solutions are specifically designed for your needs.',
     content: {},
     challenges: [

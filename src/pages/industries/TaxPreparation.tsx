@@ -6,13 +6,13 @@ const TaxPreparation = () => {
   const industryFaqs = getFaqsForPath("/industries/tax-preparation");
   const industryData: IndustryPageData = {
     id: "tax-preparation",
-    title: "Digital Marketing Services for Tax Firms | SmartFirm",
+    title: "Marketing For Tax Preparation Firms | SmartFirm",
     slug: "tax-preparation-marketing-solutions",
-    metaDescription: "Discover digital marketing services for tax firms that attract year-round clients, reduce seasonal revenue swings, and position you as a strategic tax advisor.",
+    metaDescription: "Marketing for tax preparation firms solves seasonal revenue swings and manual lead follow-up through automation, local SEO, and year-round client acquisition strategies.",
     canonicalUrl: "https://smartfirm.io/industries/tax-preparation-marketing-solutions",
     content: {},
-    heroTitle: "Digital Marketing Services For Tax Firms",
-    heroSubtitle: "Tax firms waste 15+ hours weekly on manual lead follow-up during peak season and struggle with seasonal revenue swings. Digital marketing services for tax firms automate client acquisition, streamline onboarding, and fill your pipeline year-round—not just January through April.",
+    heroTitle: "Marketing For Tax Preparation Firms",
+    heroSubtitle: "Marketing for tax preparation firms solves seasonal revenue swings and manual lead follow-up: automate client acquisition, streamline onboarding, and fill your pipeline year-round—not just January through April—when tax firms waste 15+ hours weekly during peak season.",
     industryOverview: "Tax preparation businesses face unique seasonal challenges - intense demand during tax season followed by slower summer months. Our marketing solutions help you maximize tax season revenue while building services that generate income year-round.",
     challenges: [
       {

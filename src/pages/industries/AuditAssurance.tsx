@@ -4,11 +4,13 @@ import { IndustryPageData } from "@/types/cms";
 const AuditAssurance = () => {
   const industryData: IndustryPageData = {
     id: "audit-assurance",
-    title: "Marketing for Audit & Assurance Services",
-    slug: "audit-assurance-marketing-agency",
+    title: "Marketing For Audit Firms That Builds Trust | SmartFirm",
+    slug: "marketing-for-audit-firms",
+    metaDescription: "Marketing for audit firms establishes credibility, demonstrates competence and independence, and attracts organizations requiring financial statement audits and assurance engagements.",
+    canonicalUrl: "https://smartfirm.io/industries/marketing-for-audit-firms",
     content: {},
-    heroTitle: "Marketing Solutions for Audit & Assurance Services",
-    heroSubtitle: "Audit firms struggle to establish credibility and build the trust organizations need before engaging professional audit services. Marketing solutions for audit & assurance services help you demonstrate competence, independence, and reliability to attract organizations requiring financial statement audits and assurance engagements.",
+    heroTitle: "Marketing For Audit Firms",
+    heroSubtitle: "Marketing for audit firms establishes credibility and builds the trust organizations need before engaging professional audit services: demonstrate competence, independence, and reliability to attract audit and assurance engagements when audit firms struggle to establish credibility.",
     industryOverview: "Audit and assurance services require the highest levels of trust and credibility. Our marketing strategies help you demonstrate competence, independence, and reliability to attract organizations that need professional audit services.",
     challenges: [
       {

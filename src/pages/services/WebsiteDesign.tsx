@@ -4,13 +4,13 @@ import { ServicePageData } from "@/types/cms";
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {
     id: "website-design",
-    title: "Professional Website Design for Accounting Firms",
+    title: "Accounting Firm Website Design That Converts | SmartFirm",
     slug: "website-design",
-    metaDescription: "Professional website design for accounting firms that converts 3-5x more visitors into clients. Mobile-optimized, compliance-ready, and built for growth.",
+    metaDescription: "Accounting firm website design that converts 3-5x more visitors into clients through mobile-optimized layouts, strategic CTAs, and compliance-ready content that builds trust instantly.",
     canonicalUrl: "https://smartfirm.io/services/website-design",
     content: {},
-    heroTitle: "Professional Website Design For Accounting Firms",
-    heroSubtitle: "Outdated websites cost accounting firms 60% of potential clients who bounce within 10 seconds. Professional website design for accounting firms converts 3-5x more visitors into clients through mobile-optimized layouts, strategic CTAs, and compliance-ready content that builds trust instantly.",
+    heroTitle: "Accounting Firm Website Design",
+    heroSubtitle: "Accounting firm website design converts 3-5x more visitors into clients when outdated sites cost 60% of potential clients who bounce in 10 seconds: get mobile-optimized layouts, strategic CTAs, and compliance-ready content that builds trust instantly.",
     heroDescription: "Our website design service creates professional, conversion-optimized websites that establish credibility and generate leads for your accounting practice.",
     benefits: [
       {

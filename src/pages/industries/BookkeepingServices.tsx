@@ -3,16 +3,16 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const BookkeepingServices = () => {
-  const industryFaqs = getFaqsForPath("/industries/bookkeeping-services-marketing-automation");
+  const industryFaqs = getFaqsForPath("/industries/marketing-for-bookkeeping-firms");
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
-    title: "Marketing Services for Bookkeeping Firms | SmartFirm",
-    slug: "bookkeeping-services-marketing-automation", 
-    metaDescription: "Explore bookkeeping firms marketing services that differentiate your practice, attract ideal clients, and position you as a strategic financial partner.",
-    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation",
+    title: "Marketing For Bookkeeping Firms That Commands Premium Fees | SmartFirm",
+    slug: "marketing-for-bookkeeping-firms", 
+    metaDescription: "Marketing for bookkeeping firms differentiates your practice from commodity providers, attracts ideal small business clients, and positions you as a strategic financial partner commanding premium fees.",
+    canonicalUrl: "https://smartfirm.io/industries/marketing-for-bookkeeping-firms",
     content: {},
-    heroTitle: "Bookkeeping Firms Marketing Services",
-    heroSubtitle: "Bookkeeping firms lose clients to low-cost software and struggle to justify professional rates. Bookkeeping firms marketing services differentiate your practice from commodity providers, attract ideal small business clients, and position you as a strategic financial partner commanding premium fees.",
+    heroTitle: "Marketing For Bookkeeping Firms",
+    heroSubtitle: "Marketing for bookkeeping firms differentiates your practice from commodity providers and positions you as a strategic financial partner: attract ideal small business clients and command premium fees when bookkeepers lose clients to low-cost software and struggle to justify professional rates.",
     industryOverview: "Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.",
     challenges: [
       {
