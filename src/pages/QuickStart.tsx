@@ -293,9 +293,9 @@ const QuickStart = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-md max-w-container-2xl mx-auto">
               {outcomes.map((outcome, index) => (
-                <Card key={index} className="text-center border-border bg-background card-interactive">
+                <Card key={index} className={`text-center border-border bg-background card-interactive ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}`}>
                   <CardHeader className="pb-4">
                     <div className="mx-auto mb-4 p-4 rounded-full bg-accent/10 w-fit">
                       <outcome.icon className="h-8 w-8 text-accent" />
