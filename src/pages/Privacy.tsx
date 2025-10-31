@@ -71,8 +71,8 @@ const Privacy = () => {
       <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-text-lg mx-auto prose prose-lg">
-            <div className="text-text-secondary space-y-8">
-              <div className="text-sm text-text-light mb-8">
+            <div className="text-muted-foreground space-y-8">
+              <div className="text-sm text-white mb-8">
                 <p>Our Privacy Policy was last updated on June 28, 2025</p>
               </div>
 
@@ -312,7 +312,7 @@ const Privacy = () => {
                   </summary>
                   <FaqAnswer
                     text={faq.answer}
-                    paragraphClassName="mt-4 text-text-secondary leading-relaxed"
+                    paragraphClassName="mt-4 text-muted-foreground leading-relaxed"
                   />
                 </details>
               ))}

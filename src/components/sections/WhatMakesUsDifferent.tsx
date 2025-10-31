@@ -29,7 +29,7 @@ const WhatMakesUsDifferent = () => {
   ];
 
   return (
-    <section className="py-section bg-background-subtle">
+    <section className="py-section bg-background-light">
       <div className="container mx-auto px-6 max-w-container-2xl">
         {/* Section Header */}
         <div className="text-center mb-16">

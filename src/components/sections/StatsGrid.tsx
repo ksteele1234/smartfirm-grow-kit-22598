@@ -54,18 +54,18 @@ const StatsGrid = () => {
 
               {/* The Unit (for stats 3 & 4 only) */}
               {stat.unit && (
-                <div className="text-xl font-medium text-text-secondary -mt-1 mb-3">
+                <div className="text-xl font-medium text-muted-foreground -mt-1 mb-3">
                   {stat.unit}
                 </div>
               )}
 
               {/* The Label */}
-              <div className="text-base font-medium text-text-secondary leading-relaxed">
+              <div className="text-base font-medium text-muted-foreground leading-relaxed">
                 {stat.label}
               </div>
 
               {/* The Context */}
-              <div className="text-sm font-normal italic text-text-tertiary leading-relaxed mt-2">
+              <div className="text-sm font-normal italic text-muted-foreground opacity-70 leading-relaxed mt-2">
                 {stat.context}
               </div>
             </div>

@@ -394,7 +394,7 @@ const GetStarted = () => {
                     )}
                   </div>
                   <h3 className="font-heading font-semibold text-primary mb-2">{item.title}</h3>
-                  <p className="text-text-secondary text-sm">{item.description}</p>
+                  <p className="text-muted-foreground text-sm">{item.description}</p>
                 </div>
               ))}
             </div>

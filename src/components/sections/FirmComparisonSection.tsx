@@ -42,7 +42,7 @@ const FirmComparisonSection = () => {
           <h2 className="text-[32px] md:text-[36px] lg:text-[40px] font-bold text-primary leading-tight max-w-text-lg mx-auto mb-6 font-heading">
             What Separates Firms Stuck at or under $900K from Those Scaling to $2M+?
           </h2>
-          <p className="text-[18px] lg:text-[20px] text-text-secondary leading-relaxed max-w-text-md mx-auto mb-16">
+          <p className="text-[18px] lg:text-[20px] text-muted-foreground leading-relaxed max-w-text-md mx-auto mb-16">
             It's not about working harder. It's about having the right marketing infrastructure.
           </p>
         </motion.div>
@@ -56,11 +56,11 @@ const FirmComparisonSection = () => {
               animate={heading.isInView ? "visible" : "hidden"}
               variants={fadeInUpVariants}
               transition={{ delay: 0 }}
-              className="bg-background-subtle border border-border rounded-card-lg p-card elevation-1 hover-lift hover:elevation-2 color-transition"
+              className="bg-background-light border border-border rounded-card-lg p-card elevation-1 hover-lift hover:elevation-2 color-transition"
             >
               <div className="flex items-start gap-3 mb-6">
-                <XCircle className="w-10 h-10 flex-shrink-0 text-text-tertiary mt-1" />
-                <h3 className="text-[24px] lg:text-[28px] font-bold text-text-tertiary text-left">
+                <XCircle className="w-10 h-10 flex-shrink-0 text-muted-foreground opacity-70 mt-1" />
+                <h3 className="text-[24px] lg:text-[28px] font-bold text-muted-foreground opacity-70 text-left">
                   Firms Stuck at $400K-$900K
                 </h3>
               </div>
@@ -68,8 +68,8 @@ const FirmComparisonSection = () => {
               <div className="space-y-4">
                 {stuckCharacteristics.map((characteristic, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <X className="w-6 h-6 flex-shrink-0 text-text-tertiary mt-0.5" />
-                    <p className="text-base text-text-secondary leading-[1.7] text-left">
+                    <X className="w-6 h-6 flex-shrink-0 text-muted-foreground opacity-70 mt-0.5" />
+                    <p className="text-base text-muted-foreground leading-[1.7] text-left">
                       {characteristic}
                     </p>
                   </div>

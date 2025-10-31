@@ -45,7 +45,7 @@ const SolutionsSection = () => {
             Targeted Marketing Solutions for
             <span className="text-teal block">Accountants, CPAs, and Bookkeepers</span>
           </h2>
-          <p className="text-xl text-text-secondary max-w-text-md mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-text-md mx-auto leading-relaxed">
             From lead generation to client retention, SmartFirm provides automation and SEO solutions designed for accounting firms at every stage.
           </p>
         </div>
@@ -73,7 +73,7 @@ const SolutionsSection = () => {
                     </h4>
                     <ul className="space-y-2">
                       {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-text-secondary">
+                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
                           <div className="w-1.5 h-1.5 bg-teal rounded-full flex-shrink-0"></div>
                           <span>{feature}</span>
                         </li>
@@ -115,7 +115,7 @@ const SolutionsSection = () => {
                     </h4>
                     <ul className="space-y-2">
                       {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-text-secondary">
+                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-muted-foreground">
                           <div className="w-1.5 h-1.5 bg-teal rounded-full flex-shrink-0"></div>
                           <span>{feature}</span>
                         </li>
@@ -147,7 +147,7 @@ const SolutionsSection = () => {
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-primary mb-4">
               Ready to See Results?
             </h3>
-            <p className="text-text-secondary mb-8 max-w-text-sm mx-auto">
+            <p className="text-muted-foreground mb-8 max-w-text-sm mx-auto">
               Let's build a custom growth plan tailored to your firm's challenges and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

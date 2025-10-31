@@ -42,7 +42,7 @@ const GrowthAddOnsCard = () => {
         <div className="flex flex-col gap-1.5">
           {services.map((service, index) => (
             <div key={index} className="text-center">
-              <span className="text-[15px] text-text-secondary leading-[1.5]">
+              <span className="text-[15px] text-muted-foreground leading-[1.5]">
                 {service}
               </span>
             </div>
@@ -54,14 +54,14 @@ const GrowthAddOnsCard = () => {
       <div className="flex flex-col items-center">
         <Button 
           asChild
-          className="bg-white hover:bg-background-subtle text-secondary border-2 border-secondary hover:border-accent text-base font-semibold py-3.5 px-7 rounded-card-sm transition-colors inline-block"
+          className="bg-white hover:bg-background-light text-secondary border-2 border-secondary hover:border-accent text-base font-semibold py-3.5 px-7 rounded-card-sm transition-colors inline-block"
         >
           <Link to="/services/add-ons">
             Explore Add-On Services →
           </Link>
         </Button>
         
-        <p className="text-sm text-text-secondary text-center mt-3">
+        <p className="text-sm text-muted-foreground text-center mt-3">
           Not sure what you need?{" "}
           <Link 
             to="/get-started" 

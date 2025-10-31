@@ -71,7 +71,7 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
         </CardHeader>
         
         <CardContent className={cn("space-y-6 p-5 md:p-6 pt-0", contentWrapperClassName)}>
-          <CardDescription className={cn("text-base text-text-primary leading-relaxed text-center max-w-[65ch] mx-auto", descriptionClassName)}>
+          <CardDescription className={cn("text-base text-foreground leading-relaxed text-center max-w-[65ch] mx-auto", descriptionClassName)}>
             {description}
           </CardDescription>
           {children}

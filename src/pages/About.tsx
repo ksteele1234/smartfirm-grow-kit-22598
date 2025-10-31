@@ -368,7 +368,7 @@ const About = () => {
                         {member.name}
                       </CardTitle>
                       <p className="text-accent font-medium mb-4">{member.title}</p>
-                      <CardDescription className="text-text-secondary leading-relaxed">
+                      <CardDescription className="text-muted-foreground leading-relaxed">
                         {member.bio}
                       </CardDescription>
                     </CardHeader>
@@ -406,7 +406,7 @@ const About = () => {
                     <CardTitle className="text-xl text-primary mb-3">
                       {item.title}
                     </CardTitle>
-                    <CardDescription className="text-text-secondary leading-relaxed">
+                    <CardDescription className="text-muted-foreground leading-relaxed">
                       {item.description}
                     </CardDescription>
                   </CardHeader>
@@ -433,7 +433,7 @@ const About = () => {
                         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-teal/20 flex items-center justify-center">
                           <CheckCircle className="h-5 w-5 text-primary-teal" />
                         </div>
-                        <p className="text-lg text-text-secondary leading-relaxed flex-1">
+                        <p className="text-lg text-muted-foreground leading-relaxed flex-1">
                           {milestone}
                         </p>
                       </div>
@@ -458,7 +458,7 @@ const About = () => {
                     How do I get started?
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
                     Book a Free Call. We will learn about your goals and create a custom plan for your firm.
                   </p>
                 </details>
@@ -468,7 +468,7 @@ const About = () => {
                     What is your pricing structure?
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
                     Pricing is customized based on firm size, services, and objectives. We will provide a clear proposal after the strategy call.
                   </p>
                 </details>
@@ -478,7 +478,7 @@ const About = () => {
                     Do you offer guarantees?
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
                     We do not promise one-size-fits-all outcomes. We align on measurable success metrics and provide ongoing support to help you reach them.
                   </p>
                 </details>
@@ -488,7 +488,7 @@ const About = () => {
                     How fast can we launch?
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
                     We can have your core marketing automation up and running in under 30 days.
                   </p>
                 </details>
@@ -498,7 +498,7 @@ const About = () => {
                     Do you work with firms outside of accounting?
                     <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                   </summary>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="mt-4 text-muted-foreground leading-relaxed">
                     Our focus is accounting, CPA, bookkeeping, and tax practices. Our team has supported 50+ companies across industries, and we apply that experience to build systems that fit accounting workflows.
                   </p>
                 </details>

@@ -425,7 +425,7 @@ const SuccessStories = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-6">
               What Our Clients Say
             </h2>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Hear directly from accounting firm owners who have transformed their practices with SmartFirm.
             </p>
           </div>
@@ -433,14 +433,14 @@ const SuccessStories = () => {
           <Card className="max-w-4xl mx-auto elevation-1">
             <CardContent className="p-8 md:p-12 text-center">
               <Quote className="w-12 h-12 text-primary mx-auto mb-6" />
-              <blockquote className="text-xl md:text-2xl text-text-primary mb-8 italic">
+              <blockquote className="text-xl md:text-2xl text-foreground mb-8 italic">
                 "{testimonials[currentTestimonial].quote}"
               </blockquote>
               <div className="mb-8">
                 <h4 className="font-heading font-semibold text-primary text-lg">
                   {testimonials[currentTestimonial].name}
                 </h4>
-                <p className="text-text-secondary">
+                <p className="text-muted-foreground">
                   {testimonials[currentTestimonial].title}, {testimonials[currentTestimonial].firm}
                 </p>
               </div>
@@ -460,7 +460,7 @@ const SuccessStories = () => {
                     <button
                       key={index}
                       className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentTestimonial ? 'bg-primary' : 'bg-text-light'
+                        index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
                       }`}
                       onClick={() => setCurrentTestimonial(index)}
                     />
@@ -510,7 +510,7 @@ const SuccessStories = () => {
                   How do I get started?
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
+                <p className="mt-4 text-muted-foreground leading-relaxed">
                   Book a Free Call to discuss your firm's specific needs and goals. We'll evaluate your current situation and recommend the best path forward based on these success stories.
                 </p>
               </details>
@@ -520,7 +520,7 @@ const SuccessStories = () => {
                   What is the pricing structure?
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
+                <p className="mt-4 text-muted-foreground leading-relaxed">
                   Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote.
                 </p>
               </details>
@@ -530,7 +530,7 @@ const SuccessStories = () => {
                   Do you offer guarantees?
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p className="mt-4 text-text-secondary leading-relaxed">
+                <p className="mt-4 text-muted-foreground leading-relaxed">
                   We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. These success stories demonstrate our commitment to delivering measurable results.
                 </p>
               </details>

@@ -71,7 +71,7 @@ const Cookies = () => {
       <section className="py-section bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-text-lg mx-auto prose prose-lg">
-            <div className="text-text-secondary space-y-8">
+            <div className="text-muted-foreground space-y-8">
               <div>
                 <h2 className="text-xl font-semibold text-primary mb-4">What Are Cookies</h2>
                 <p>
@@ -136,7 +136,7 @@ const Cookies = () => {
                 </p>
               </div>
 
-              <div className="text-sm text-text-light">
+              <div className="text-sm text-white">
                 <p>Last updated: {new Date().toLocaleDateString()}</p>
               </div>
             </div>
@@ -160,7 +160,7 @@ const Cookies = () => {
                   </summary>
                   <FaqAnswer
                     text={faq.answer}
-                    paragraphClassName="mt-4 text-text-secondary leading-relaxed"
+                    paragraphClassName="mt-4 text-muted-foreground leading-relaxed"
                   />
                 </details>
               ))}
