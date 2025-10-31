@@ -6,13 +6,13 @@ const GrowWithoutPains = () => {
   const solutionFaqs = getFaqsForPath("/solutions/grow-accounting-firm-without-chaos");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
-    title: "Grow Accounting Firm Without Chaos | SmartFirm",
-    slug: "grow-accounting-firm-without-chaos",
-    metaDescription: "Grow accounting firm without chaos through scalable systems, quality automation, and capacity planning that prevent overwhelm while you expand.",
-    canonicalUrl: "https://smartfirm.io/solutions/grow-accounting-firm-without-chaos",
+    title: "Growth Feels Like Chaos? Grow Your Accounting Firm Without The Stress | SmartFirm",
+    slug: "grow-without-growing-pains",
+    metaDescription: "Adding clients feels like adding chaos? Grow your accounting firm without burnout, quality drops, or team breaking: implement systems and automation that scale revenue 2-3× while maintaining sanity.",
+    canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
     content: {},
-    heroTitle: "Grow Accounting Firm Without Chaos",
-    heroSubtitle: "Grow accounting firm without chaos: implement scalable systems, automated quality controls, and capacity planning that let you double revenue without breaking workflows or burning out staff.",
+    heroTitle: "Growth Feels Like Chaos? Scale Without The Stress",
+    heroSubtitle: "Every new client feels like breaking point? Grow your accounting firm without chaos: systematize delivery, automate repetitive work, and build leverage that doubles revenue without quality drops, staff burnout, or working more hours.",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
     problemSolutionPairs: [

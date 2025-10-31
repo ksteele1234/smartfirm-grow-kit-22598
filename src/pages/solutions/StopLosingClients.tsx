@@ -6,13 +6,13 @@ const StopLosingClients = () => {
   const solutionFaqs = getFaqsForPath("/solutions/stop-losing-clients-to-tech-savvy-cpas");
   const solutionData: SolutionPageData = {
     id: "stop-losing-clients",
-    title: "Stop Losing CPA Clients to Tech-Savvy Competitors | SmartFirm",
+    title: "Watching Clients Leave For Tech-Savvier CPAs? Stop The Loss | SmartFirm",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
-    metaDescription: "Stop losing CPA clients to competitors with automated follow-up, modern systems, and faster response times that keep clients loyal and engaged with your firm.",
+    metaDescription: "Frustrated watching clients leave for younger CPAs with better technology? Stop losing clients to tech-savvy competitors with modern automation and professional systems—no coding required.",
     canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas",
     content: {},
-    heroTitle: "Stop Losing CPA Clients To Tech-Savvy Competitors",
-    heroSubtitle: "Stop losing CPA clients to tech-savvy competitors with automated follow-up, modern systems, faster response times, and professional digital presence—all proven to keep clients loyal and engaged.",
+    heroTitle: "Watching Clients Leave For Tech-Savvier CPAs?",
+    heroSubtitle: "Frustrated watching prospects choose younger firms with slicker websites and faster responses? Stop losing clients to tech-savvy competitors: modernize your systems, automate communication, and compete without learning code or hiring specialists.",
     problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
     solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",
     problemSolutionPairs: [

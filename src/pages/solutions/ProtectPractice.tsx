@@ -6,13 +6,13 @@ const ProtectPractice = () => {
   const solutionFaqs = getFaqsForPath("/solutions/protect-accounting-practice-from-threats");
   const solutionData: SolutionPageData = {
     id: "protect-practice",
-    title: "Protect Accounting Practice From Cyber & Compliance Threats | SmartFirm",
-    slug: "protect-accounting-practice-from-threats",
-    metaDescription: "Protect accounting practice from cyber threats, regulatory changes, and disruptions through managed security, succession planning, and compliance monitoring.",
-    canonicalUrl: "https://smartfirm.io/solutions/protect-accounting-practice-from-threats",
+    title: "Worried About Data Breaches? Protect Your Accounting Practice | SmartFirm",
+    slug: "protect-practice-and-future",
+    metaDescription: "Losing sleep over data breaches and compliance violations? Protect your accounting practice with enterprise-grade security, automated monitoring, and risk management that safeguards client trust.",
+    canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
     content: {},
-    heroTitle: "Protect Accounting Practice From Threats",
-    heroSubtitle: "Protect accounting practice from devastating cyber threats, regulatory changes, and technology disruption with managed security protocols, succession planning, and automated compliance monitoring.",
+    heroTitle: "Worried About Data Breaches? Protect Your Practice",
+    heroSubtitle: "Losing sleep over cyber threats and compliance violations that could destroy your reputation? Protect your accounting practice: enterprise-grade security, automated monitoring, and disaster recovery planning safeguard client data and professional standing.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
     problemSolutionPairs: [

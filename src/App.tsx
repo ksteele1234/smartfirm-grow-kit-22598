@@ -28,8 +28,6 @@ const ThankYou = lazy(() => import("./pages/ThankYou"));
 
 // Solution Pages
 const ScaleFirm = lazy(() => import("./pages/solutions/ScaleFirm"));
-const ClientRetention = lazy(() => import("./pages/solutions/ClientRetention"));
-const RetentionStrategies = lazy(() => import("./pages/solutions/RetentionStrategies"));
 const StopLosingClients = lazy(() => import("./pages/solutions/StopLosingClients"));
 const GetMoreReferrals = lazy(() => import("./pages/solutions/GetMoreReferrals"));
 const WorkLessEarnMore = lazy(() => import("./pages/solutions/WorkLessEarnMore"));
@@ -119,10 +117,6 @@ const App = () => (
             
             {/* Solution Sub-pages */}
             <Route path="/solutions/scale-accounting-firm-successfully" element={<ScaleFirm />} />
-            <Route path="/solutions/client-retention-strategies-for-cpas" element={<ClientRetention />} />
-            <Route path="/solutions/advanced-retention-strategies-for-cpas" element={<RetentionStrategies />} />
-            
-            {/* Main Solution Categories */}
             <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
             <Route path="/solutions/get-more-referrals-without-asking" element={<GetMoreReferrals />} />
             <Route path="/solutions/work-less-earn-more" element={<WorkLessEarnMore />} />

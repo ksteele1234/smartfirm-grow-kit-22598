@@ -6,13 +6,13 @@ const ScaleFirm = () => {
   const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
-    title: "How To Scale An Accounting Firm Without Burnout | SmartFirm",
+    title: "Can't Scale Without Breaking? Grow Your Accounting Firm Successfully | SmartFirm",
     slug: "scale-accounting-firm-successfully",
-    metaDescription: "How to scale an accounting firm without burnout through systematized processes, delegation frameworks, and capacity planning that maintains quality while you grow.",
+    metaDescription: "Hit a capacity wall and can't scale without hiring? Scale your accounting firm successfully using automation and systematized delivery that doubles capacity without proportional headcount growth.",
     canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
     content: {},
-    heroTitle: "How To Scale An Accounting Firm",
-    heroSubtitle: "How to scale an accounting firm successfully: implement systematized client delivery, delegation frameworks, and capacity planning that let you handle 3x the clients without proportional increases in stress or hours.",
+    heroTitle: "Can't Scale Without Breaking? Grow Successfully Without Chaos",
+    heroSubtitle: "Hit a capacity wall where every new client means hiring more people? Scale your accounting firm successfully: automation handles routine work, systematized processes standardize delivery, and optimized workflows double revenue without proportional hiring.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
     problemSolutionPairs: [
