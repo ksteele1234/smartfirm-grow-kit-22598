@@ -22,13 +22,13 @@ const FinalCTASection = ({
   const content = useScrollAnimation();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-muted-blue section-padding">
+    <section className="relative overflow-hidden bg-background section-padding">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div 
           className="absolute top-0 left-0 w-full h-full" 
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A7265' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             backgroundRepeat: 'repeat'
           }}
         />
@@ -43,12 +43,12 @@ const FinalCTASection = ({
           className="mx-auto text-center"
         >
           {/* Main Headline */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-5">
             {title}
           </h2>
 
           {/* Subheadline */}
-          <p className="text-lead text-white/70 leading-relaxed max-w-text-sm mx-auto mb-10">
+          <p className="text-lead text-muted-foreground leading-relaxed max-w-text-sm mx-auto mb-10">
             {description}
           </p>
 
@@ -66,7 +66,7 @@ const FinalCTASection = ({
           </div>
 
           {/* Reassurance Text */}
-          <p className="text-sm text-white/60 text-center">
+          <p className="text-sm text-muted-foreground text-center">
             {reassuranceText}
           </p>
         </motion.div>
