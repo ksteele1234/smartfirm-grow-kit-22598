@@ -3,9 +3,10 @@ import { ServicePageData } from "@/types/cms";
 
 const StrategyIntegration = () => {
   const serviceData: ServicePageData = {
-    id: "strategy-integration",
+    id: "marketing-strategy-integration-for-accounting-firms",
     title: "Strategy & Integration for Accounting Firms | SmartFirm",
-    slug: "strategy-integration",
+    slug: "marketing-strategy-integration-for-accounting-firms",
+    canonicalUrl: "https://smartfirm.io/services/marketing-strategy-integration-for-accounting-firms",
     content: {},
     heroTitle: "Strategy & Integration for Accounting Firms",
     heroSubtitle: "Connect your marketing infrastructure with custom roadmaps, seamless integrations, and white-glove onboarding. Deliver measurable results within 30 days.",
