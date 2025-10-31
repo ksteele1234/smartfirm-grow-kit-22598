@@ -1,3 +1,6 @@
+# Redirect Netlify subdomain to custom domain
+https://newsmartfirmwebsite.netlify.app/* https://smartfirm.io/:splat 301!
+
 /solutions  /solutions-expert-marketing-agency-for-accounting-firms  301
 /services  /leading-marketing-services-for-accounting-firms  301
 /services/all  /services/all-professional-marketing-services-for-accounting-firms  301
