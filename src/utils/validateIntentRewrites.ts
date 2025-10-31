@@ -16,7 +16,7 @@ interface PageValidation {
 }
 
 export function validateIntentRewrites() {
-  console.log('\n🧪 Validating Intent Rewrites for 24 Pages...\n');
+  console.log('\n🧪 Validating Intent Rewrites for 25 Pages...\n');
   console.log('='.repeat(80));
   
   const results: PageValidation[] = [];
@@ -112,7 +112,7 @@ export function validateIntentRewrites() {
     });
   });
   
-  // Solution pages (7) - manually defined with updated heroSubtitle first sentences
+  // Solution pages (8) - manually defined with updated heroSubtitle first sentences
   const solutionPages = [
     {
       pageName: 'Modern Marketing Services For CPAs',
@@ -125,6 +125,12 @@ export function validateIntentRewrites() {
       url: '/solutions/client-retention',
       firstSentence: 'Losing even 5 clients per year costs $50K+ in recurring revenue and referrals.',
       primaryKeyword: 'client retention strategies for CPAs'
+    },
+    {
+      pageName: 'Advanced Retention Strategies for CPAs',
+      url: '/solutions/advanced-retention-strategies-for-cpas',
+      firstSentence: 'Poor communication costs accounting firms 20-30% of clients annually, losing $100K+ in recurring revenue.',
+      primaryKeyword: 'retention strategies for CPAs'
     },
     {
       pageName: 'Scale Your Accounting Firm Successfully',
@@ -236,7 +242,7 @@ export function validateIntentRewrites() {
   console.log('\n' + '='.repeat(80));
   console.log('📊 VALIDATION SUMMARY');
   console.log('='.repeat(80));
-  console.log(`Total Pages: ${results.length}/24`);
+  console.log(`Total Pages: ${results.length}/25`);
   console.log(`✅ Passed: ${passCount}`);
   console.log(`❌ Failed: ${failCount}`);
   console.log(`Average Score: ${(results.reduce((sum, r) => sum + r.validation.score, 0) / results.length).toFixed(1)}/100`);
