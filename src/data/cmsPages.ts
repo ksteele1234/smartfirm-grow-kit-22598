@@ -20,22 +20,22 @@ export const servicePages: Record<string, ServicePageData> = {
     benefits: [
       {
         title: 'Stop Losing Leads to Slow Follow-Up',
-        description: 'Every hour you wait to respond to a lead reduces your conversion rate by 10%. Our marketing automation responds to every inquiry within minutes—via email, SMS, and voicemail—nurturing prospects through personalized sequences while you focus on client work. Firms using our system convert 40% more leads without adding staff.',
+        description: "Every hour you wait to respond to a lead reduces your conversion rate by 10%. Our marketing automation responds to every inquiry within minutes—via email, SMS, and voicemail. It nurtures prospects through personalized sequences while you focus on client work. Firms using our system convert 40% more leads without adding staff.",
         icon: 'Rocket'
       },
       {
         title: 'Reclaim 10+ Hours Per Week',
-        description: 'Manual follow-up, appointment reminders, and client onboarding emails are eating your team\'s time. Our intelligent workflows handle lead nurturing, consultation scheduling, service reminders, and re-engagement campaigns automatically. You\'ll save 10-15 hours weekly that you can redirect to billable work or strategic growth.',
+        description: "Manual follow-up, appointment reminders, and client onboarding emails consume your team's time. Our intelligent workflows handle lead nurturing, consultation scheduling, service reminders, and re-engagement campaigns automatically. You'll save 10-15 hours weekly that you can redirect to billable work or strategic growth.",
         icon: 'Clock'
       },
       {
         title: 'Scale Without Hiring',
-        description: 'You can\'t grow from $400K to $1M by manually managing every lead and client touchpoint. Our automation platform handles 10x the volume of inquiries and clients without increasing your workload. Handle 200+ active leads and 100+ clients with the same 4-person team you have today.',
+        description: "You can't grow from $400K to $1M by manually managing every lead and client touchpoint. Our automation platform handles 10x the volume of inquiries and clients without increasing your workload. Handle 200+ active leads and 100+ clients with the same 4-person team you have today.",
         icon: 'TrendingUp'
       },
       {
         title: 'Get Clear ROI Reporting',
-        description: 'No more guessing what\'s working. Our dashboard shows exactly which campaigns generate leads, which sequences convert prospects, and what your cost-per-client is. You\'ll see pipeline stage metrics, conversion rates, and ROI tied directly to your utilization goals—in plain English, not marketing jargon.',
+        description: "No more guessing what's working. Our dashboard shows exactly which campaigns generate leads, which sequences convert prospects, and what your cost-per-client is. You'll see pipeline stage metrics, conversion rates, and ROI tied directly to your utilization goals—in plain English, not marketing jargon.",
         icon: 'BarChart'
       }
     ],
@@ -92,15 +92,15 @@ export const servicePages: Record<string, ServicePageData> = {
       },
       {
         question: 'Do I need to manage this daily, or is it truly hands-off?',
-        answer: 'It\'s designed to run on autopilot. After initial setup and approval of email templates, the system handles 90% of lead follow-up and client communication automatically. You\'ll review a weekly dashboard (5-10 minutes) and step in personally only when leads are ready to close.'
+        answer: "It's designed to run on autopilot. After initial setup and approval of email templates, the system handles 90% of lead follow-up and client communication automatically. You'll review a weekly dashboard (5-10 minutes) and step in personally only when leads are ready to close."
       },
       {
-        question: 'What if I don\'t have a CRM or email marketing platform yet?',
-        answer: 'No problem. We\'ll recommend the right tools for your firm size and budget, set them up, and configure all automations. Most firms start with a simple stack ($100-$200/month in software costs) and scale from there.'
+        question: "What if I don't have a CRM or email marketing platform yet?",
+        answer: "No problem. We'll recommend the right tools for your firm size and budget, set them up, and configure all automations. Most firms start with a simple stack ($100-$200/month in software costs) and scale from there."
       }
     ],
     ctaTitle: 'Ready to Automate Your Marketing?',
-    ctaDescription: 'Let\'s implement a marketing automation system that grows your firm while you focus on serving clients.',
+    ctaDescription: "Let's implement a marketing automation system that grows your firm while you focus on serving clients.",
     ctaButtonText: 'Get Started',
     ctaButtonLink: '/get-started'
   },

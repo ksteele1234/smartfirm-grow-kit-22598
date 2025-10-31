@@ -353,7 +353,7 @@ const GrowthPotentialScorecard = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Growth Scorecard | SmartFirm</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Growth Scorecard</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               This accounting firm growth scorecard evaluates your marketing effectiveness, operational efficiency, client experience quality, technology adoption, and team capabilities to pinpoint growth constraints.

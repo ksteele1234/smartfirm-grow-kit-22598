@@ -348,7 +348,7 @@ const ModernFirmQuiz = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Modern Accounting Firm Assessment | SmartFirm</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Modern Accounting Firm Assessment</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               This modern accounting firm assessment measures your technology adoption, client experience quality, service delivery methods, and competitive positioning to show how you compare to modern practices.

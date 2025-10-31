@@ -270,7 +270,7 @@ const ROICalculator = () => {
                   Back to Tools
                 </a>
               </Button>
-              <h1 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator</h1>
+              <h2 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator</h2>
               <p className="text-sm text-muted-foreground mt-2 text-center" data-sf="entities">
                 Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
                 <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and

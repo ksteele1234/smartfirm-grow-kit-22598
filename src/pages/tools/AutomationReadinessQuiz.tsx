@@ -204,7 +204,7 @@ const AutomationReadinessQuiz = () => {
             Back to Tools
           </Link>
           
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment For Accountants | SmartFirm</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment For Accountants</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               Our automation readiness assessment for accountants evaluates your current processes, technology infrastructure, team capabilities, and client base to determine your optimal automation strategy and implementation timeline.
