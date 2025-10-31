@@ -114,8 +114,8 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="secondary" className="group">
-            Get Industry-Specific Solutions
+          <Button size="lg" variant="coral" className="group">
+            Book a Free Call
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
