@@ -1,15 +1,13 @@
 # SmartFirm.io - Robots.txt Configuration
-# Allows all search engines to crawl the entire site
+# Allows search engines to crawl smartfirm.io
 
 User-agent: *
 Allow: /
 
-# Block utility pages from indexing (these have noindex meta tags too)
+# Block utility pages from indexing
 Disallow: /404
 Disallow: /500
 Disallow: /thank-you
-Disallow: /case-studies
-Disallow: /success-stories
 
 # Sitemap location
 Sitemap: https://smartfirm.io/sitemap.xml
