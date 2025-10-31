@@ -209,7 +209,7 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-card-sm w-[600px] grid-cols-1 bg-background border border-border elevation-3 z-50">
+                  <div className="grid gap-3 p-card-sm w-full max-w-[600px] lg:w-[600px] grid-cols-1 bg-background border border-border elevation-3 z-50">
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-primary mb-2">Main Service Categories</h4>
                       <div className="grid gap-2">
@@ -260,7 +260,7 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-card-sm w-[600px] grid-cols-1">
+                  <div className="grid gap-3 p-card-sm w-full max-w-[600px] lg:w-[600px] grid-cols-1">
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-primary mb-2">Main Solutions</h4>
                       <div className="grid gap-2">
@@ -311,7 +311,7 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-card-sm w-[400px] grid-cols-1">
+                  <div className="grid gap-3 p-card-sm w-full max-w-[400px] lg:w-[400px] grid-cols-1">
                     {industries.map((industry) => (
                       <NavigationMenuLink
                         key={industry.slug}
@@ -326,14 +326,6 @@ const Header = () => {
                     ))}
                   </div>
                 </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem className="hidden">
-                <NavigationMenuLink href="/case-studies" className={cn(
-                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2 text-sm font-medium transition-colors hover:text-primary focus:text-primary focus:outline-none"
-                )}>
-                  CASE STUDIES
-                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>

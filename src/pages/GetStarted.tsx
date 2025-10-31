@@ -295,9 +295,11 @@ const GetStarted = () => {
                   <p className="text-muted-foreground">
                     {option.description}
                   </p>
-                  <Button variant="outline" className="group">
-                    {option.cta}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="outline" className="group" asChild>
+                    <a href={option.title === "Client Support & Resources" ? "/resources" : "/contact"}>
+                      {option.cta}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
