@@ -6,13 +6,13 @@ const GetMoreReferrals = () => {
   const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-without-asking");
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
-    title: "Automated Client Referral System for CPAs | SmartFirm",
+    title: "Get More CPA Referrals Without Asking | SmartFirm",
     slug: "get-more-referrals-without-asking",
-    metaDescription: "Get more referrals without asking through a client referral system for CPAs delivering exceptional experiences and simplifying client introductions.",
+    metaDescription: "Get more CPA referrals without awkward asks through exceptional client experiences, automated review generation, and systems that make introductions effortless.",
     canonicalUrl: "https://smartfirm.io/solutions/get-more-referrals-without-asking",
     content: {},
-    heroTitle: "Client Referral System For CPAs",
-    heroSubtitle: "Most CPAs lose 50+ referral opportunities per year because they lack a systematic approach. Our automated client referral system for CPAs generates referrals naturally by delivering exceptional experiences, creating referral-worthy moments, and making introductions effortless for clients.",
+    heroTitle: "Get More CPA Referrals Without Asking",
+    heroSubtitle: "Get more CPA referrals without asking: deliver exceptional client experiences, automate review generation, and create referral-worthy moments that naturally generate 300% more qualified introductions.",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",
     problemSolutionPairs: [

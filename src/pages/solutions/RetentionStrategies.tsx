@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const RetentionStrategies = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/advanced-retention-strategies-for-cpas");
+  const solutionFaqs = getFaqsForPath("/solutions/how-to-retain-cpa-clients");
   const solutionData: SolutionPageData = {
     id: "retention-strategies",
-    title: "Advanced Retention Strategies for CPAs | SmartFirm",
-    slug: "advanced-retention-strategies-for-cpas",
-    metaDescription: "Implement retention strategies for CPAs featuring client success programs, regular business reviews, proactive tax planning, exclusive events, and incentives.",
-    canonicalUrl: "https://smartfirm.io/solutions/advanced-retention-strategies-for-cpas",
+    title: "How To Retain CPA Clients With Automated Touchpoints | SmartFirm",
+    slug: "how-to-retain-cpa-clients",
+    metaDescription: "How to retain CPA clients through automated touchpoints, satisfaction tracking, and proactive service delivery that maximizes client lifetime value and stops churn.",
+    canonicalUrl: "https://smartfirm.io/solutions/how-to-retain-cpa-clients",
     content: {},
-    heroTitle: "Retention Strategies For CPAs",
-    heroSubtitle: "Poor communication costs accounting firms 20-30% of clients annually, losing $100K+ in recurring revenue. Retention strategies for CPAs include automated touchpoints, satisfaction tracking, and proactive service delivery to maximize client lifetime value.",
+    heroTitle: "How To Retain CPA Clients",
+    heroSubtitle: "How to retain CPA clients: automated touchpoints, satisfaction tracking, and proactive service delivery reduce churn by 60% and maximize client lifetime value without adding staff.",
    problemStatement: "Even good accounting firms lose clients due to poor communication, lack of proactive service, and failure to demonstrate ongoing value. Without systematic retention efforts, client relationships deteriorate over time.",
     solutionOverview: "Our advanced retention strategies include automated client communication systems, review generation, upselling automation, and satisfaction tracking to maximize client lifetime value and loyalty.",
     problemSolutionPairs: [

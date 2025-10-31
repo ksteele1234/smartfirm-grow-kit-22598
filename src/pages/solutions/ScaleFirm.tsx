@@ -6,13 +6,13 @@ const ScaleFirm = () => {
   const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
-    title: "Scale Your Accounting Firm Successfully | SmartFirm",
+    title: "How To Scale An Accounting Firm Without Burnout | SmartFirm",
     slug: "scale-accounting-firm-successfully",
-    metaDescription: "Scale your accounting firm through systematized processes, delegation frameworks, service productization, pricing optimization, and capacity planning.",
+    metaDescription: "How to scale an accounting firm without burnout through systematized processes, delegation frameworks, and capacity planning that maintains quality while you grow.",
     canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
     content: {},
-    heroTitle: "Scale Accounting Firm",
-    heroSubtitle: "Most accounting firms hit a ceiling where more clients means more stress and longer hours. Scale your accounting firm successfully by implementing systematized client delivery, delegation frameworks, and capacity planning that maintains quality while you grow.",
+    heroTitle: "How To Scale An Accounting Firm",
+    heroSubtitle: "How to scale an accounting firm successfully: implement systematized client delivery, delegation frameworks, and capacity planning that let you handle 3x the clients without proportional increases in stress or hours.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
     problemSolutionPairs: [

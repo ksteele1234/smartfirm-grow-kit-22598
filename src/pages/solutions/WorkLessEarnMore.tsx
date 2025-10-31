@@ -6,13 +6,13 @@ const WorkLessEarnMore = () => {
   const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more");
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
-    title: "Increase Your Accounting Firm Revenue | SmartFirm",
+    title: "Work Less Earn More As A CPA | SmartFirm",
     slug: "work-less-earn-more",
-    metaDescription: "Increase accounting firm revenue while reducing hours through value pricing strategies, service mix optimization, automation, and high-margin advisory.",
+    metaDescription: "Work less earn more as a CPA through automation, value pricing, and service optimization that increase revenue 60% while reducing hours 40%.",
     canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more",
     content: {},
-    heroTitle: "Increase Accounting Firm Revenue",
-    heroSubtitle: "Too many CPAs work 60+ hours weekly for modest returns, trapped in time-for-money thinking. Increase accounting firm revenue while reducing hours through value pricing strategies, service mix optimization, process automation, and transitioning to high-margin advisory services.",
+    heroTitle: "Work Less Earn More As A CPA",
+    heroSubtitle: "Work less earn more as a CPA: value pricing strategies, process automation, and service optimization let you increase revenue by 60% while cutting your workweek from 60 to 36 hours.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
     problemSolutionPairs: [

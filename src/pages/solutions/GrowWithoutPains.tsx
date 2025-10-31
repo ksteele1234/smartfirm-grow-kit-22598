@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const GrowWithoutPains = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/grow-without-growing-pains");
+  const solutionFaqs = getFaqsForPath("/solutions/grow-accounting-firm-without-chaos");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
-    title: "Strategic Accounting Firm Growth Consulting",
-    slug: "grow-without-growing-pains",
-    metaDescription: "Grow without growing pains through accounting firm growth consulting addressing capacity constraints, delegation challenges, and service delivery systems.",
-    canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
+    title: "Grow Accounting Firm Without Chaos | SmartFirm",
+    slug: "grow-accounting-firm-without-chaos",
+    metaDescription: "Grow accounting firm without chaos through scalable systems, quality automation, and capacity planning that prevent overwhelm while you expand.",
+    canonicalUrl: "https://smartfirm.io/solutions/grow-accounting-firm-without-chaos",
     content: {},
-    heroTitle: "Accounting Firm Growth Consulting",
-    heroSubtitle: "Growing accounting firms struggle with chaos, quality control issues, and overwhelmed staff. Accounting firm growth consulting prevents growing pains by addressing capacity planning, building delegation systems, standardizing service delivery, and creating sustainable growth infrastructure.",
+    heroTitle: "Grow Accounting Firm Without Chaos",
+    heroSubtitle: "Grow accounting firm without chaos: implement scalable systems, automated quality controls, and capacity planning that let you double revenue without breaking workflows or burning out staff.",
     problemStatement: "Growing accounting firms often struggle with chaos, quality control issues, overwhelmed staff, and systems that break down under increased volume. Without AI-powered growth management, scaling becomes unpredictable and stressful.",
     solutionOverview: "Our AI-driven growth management systems ensure smooth scaling with predictive automated workflows, intelligent quality controls, and smart infrastructure that grows with you using data-driven insights without the typical growing pains.",
     problemSolutionPairs: [

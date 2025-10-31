@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const ProtectPractice = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/protect-practice-and-future");
+  const solutionFaqs = getFaqsForPath("/solutions/protect-accounting-practice-from-threats");
   const solutionData: SolutionPageData = {
     id: "protect-practice",
-    title: "CPA Practice Management & Planning Services",
-    slug: "protect-practice-and-future",
-    metaDescription: "Protect your practice and future with CPA practice management services covering succession planning, risk management, compliance requirements, and continuity.",
-    canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
+    title: "Protect Accounting Practice From Cyber & Compliance Threats | SmartFirm",
+    slug: "protect-accounting-practice-from-threats",
+    metaDescription: "Protect accounting practice from cyber threats, regulatory changes, and disruptions through managed security, succession planning, and compliance monitoring.",
+    canonicalUrl: "https://smartfirm.io/solutions/protect-accounting-practice-from-threats",
     content: {},
-    heroTitle: "CPA Practice Management Services",
-    heroSubtitle: "Unprepared accounting practices face devastating threats from cybersecurity risks, regulatory changes, and technology disruption. CPA practice management services protect your firm's future through succession planning, risk management protocols, compliance monitoring, and business continuity planning.",
+    heroTitle: "Protect Accounting Practice From Threats",
+    heroSubtitle: "Protect accounting practice from devastating cyber threats, regulatory changes, and technology disruption with managed security protocols, succession planning, and automated compliance monitoring.",
     problemStatement: "Accounting practices face increasing threats from cybersecurity risks, regulatory changes, economic uncertainty, and technology disruption that could devastate unprepared firms.",
     solutionOverview: "Our comprehensive protection strategy secures your practice against current threats while future-proofing your business for long-term success and sustainability.",
     problemSolutionPairs: [
