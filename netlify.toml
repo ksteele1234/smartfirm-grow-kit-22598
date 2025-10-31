@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Headers for security and caching
+# Security and SEO Headers - Production
 [[headers]]
   for = "/*"
   [headers.values]
@@ -13,7 +13,22 @@
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Robots-Tag = "all"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.leadconnectorhq.com https://link.msgsndr.com; frame-src https://api.leadconnectorhq.com; media-src 'self';"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
 
+# Block preview and deploy URLs from search engines
+[[context.deploy-preview.headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+[[context.branch-deploy.headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+
+# Asset Caching
 [[headers]]
   for = "/assets/*"
   [headers.values]

@@ -1,8 +1,0 @@
-<svg width="320" height="120" viewBox="0 0 320 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g fill="white">
-    <path d="M206.667 20H124c-23.046 0-41.667 16.294-41.667 36.333C82.333 76.38 100.954 92.667 124 92.667h32c23.046 0 41.667 16.294 41.667 36.333C197.667 149.046 179.046 165.333 156 165.333H60" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M206.667 72H256" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-  <text x="120" y="84" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="42" fill="white">SmartFirm</text>
-  <text x="120" y="108" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="14" letter-spacing=".08em" fill="white">Marketing and Automation for Finance Firms</text>
-</svg>

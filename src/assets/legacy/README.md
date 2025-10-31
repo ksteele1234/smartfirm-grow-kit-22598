@@ -1,12 +1,13 @@
 # Legacy Logo Assets
 
-This folder contains unused logo variations that were part of the original branding but are no longer actively used in the application.
+This folder contains archived logo variations that were part of the original branding but are no longer actively used in the application.
 
-## Archived Files
+## Status: CLEANED UP (2025-10-31)
 
-- `smartfirm-logo-gradient.svg` - Large complex SVG with gradient
-- `smartfirm-logo.svg` - Simple SVG variant
-- `smartfirm-logo-lockup.svg` - Text+logo combination
+All unused SVG logo files have been removed:
+- ~~`smartfirm-logo-gradient.svg`~~ - DELETED (unused)
+- ~~`smartfirm-logo.svg`~~ - DELETED (unused)
+- ~~`smartfirm-logo-lockup.svg`~~ - DELETED (unused)
 
 ## Current Active Logos
 
@@ -15,6 +16,7 @@ The following logos are actively used in the application:
 - `../smartfirm-logo-header.png` - Used in header navigation
 - `../smartfirm-logo-full.webp` - Used for general logo display
 - `../smartfirm-logo-gradient.webp` - Optimized gradient version
+- `../smartfirm-logo-white.png` - Used in footer
 
 ## Favicon
 
@@ -28,4 +30,5 @@ All favicons feature the professional teal circular design with white "SF" mark.
 ---
 
 **Archived:** 2025-10-30  
-**Reason:** Not referenced in active codebase
+**Cleaned:** 2025-10-31  
+**Reason:** SVG files not referenced in active codebase - switched to optimized WebP/PNG formats

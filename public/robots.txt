@@ -13,6 +13,19 @@ Disallow: /thank-you
 Sitemap: https://smartfirm.io/sitemap.xml
 
 # ============================================
+# PREVIEW & STAGING URL PROTECTION
+# ============================================
+#
+# Note: Preview and branch deploy URLs (*.netlify.app) are protected
+# via X-Robots-Tag HTTP headers in netlify.toml, not in robots.txt.
+# This ensures search engines cannot index preview/staging environments.
+#
+# Headers configured:
+# - deploy-preview: X-Robots-Tag = "noindex, nofollow, noarchive"
+# - branch-deploy: X-Robots-Tag = "noindex, nofollow, noarchive"
+# - production: X-Robots-Tag = "all"
+
+# ============================================
 # HOW TO MODIFY THIS FILE
 # ============================================
 # 
