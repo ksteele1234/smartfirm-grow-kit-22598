@@ -34,31 +34,31 @@
   </url>
   
   <url>
-    <loc>https://smartfirm.io/resources-digital-marketing-agency-for-cpa-firms</loc>
+    <loc>https://smartfirm.io/resources</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/case-studies-marketing-success-stories-for-accountants</loc>
+    <loc>https://smartfirm.io/case-studies</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/about-leading-marketing-agency-for-accountants</loc>
+    <loc>https://smartfirm.io/about</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/contact-custom-marketing-agency-for-accounting-firms</loc>
+    <loc>https://smartfirm.io/contact</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/get-started-expert-marketing-services-for-accounting-firms</loc>
+    <loc>https://smartfirm.io/get-started</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -155,27 +155,15 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://smartfirm.io/services/add-ons</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Solution Pages -->
   <url>
-    <loc>https://smartfirm.io/solutions/client-retention-strategies-for-cpas</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
     <loc>https://smartfirm.io/solutions/scale-accounting-firm-successfully</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/solutions/work-less-earn-more</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/solutions/advanced-retention-strategies-for-cpas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -188,6 +176,12 @@
   
   <url>
     <loc>https://smartfirm.io/solutions/get-more-referrals-without-asking</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://smartfirm.io/solutions/work-less-earn-more</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -316,25 +310,25 @@
   
   <!-- Legal & Informational Pages -->
   <url>
-    <loc>https://smartfirm.io/privacy-smartfirm-privacy-policy</loc>
+    <loc>https://smartfirm.io/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/terms-accounting-marketing-agency-terms-of-service</loc>
+    <loc>https://smartfirm.io/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/cookies-accounting-marketing-agency-cookie-policy</loc>
+    <loc>https://smartfirm.io/cookies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://smartfirm.io/faq-accounting-marketing-agency-faq</loc>
+    <loc>https://smartfirm.io/faq</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
