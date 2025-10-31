@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import SkipToContent from "./components/ui/skip-to-content";
 
@@ -138,6 +138,21 @@ const App = () => (
             <Route path="/services/reputation-management-for-cpas" element={<OnlineReputationManagement />} />
             <Route path="/services/marketing-strategy-integration-for-accounting-firms" element={<StrategyIntegration />} />
             <Route path="/services/add-ons" element={<AddOns />} />
+            
+            {/* Service page redirects for old slugs */}
+            <Route path="/services/marketing-automation" element={<Navigate to="/services/marketing-automation-for-accounting-firms" replace />} />
+            <Route path="/services/technology-solutions" element={<Navigate to="/services/accounting-firm-technology-consulting" replace />} />
+            <Route path="/services/business-optimization" element={<Navigate to="/services/business-optimization-for-accounting-firms" replace />} />
+            <Route path="/services/executive-services" element={<Navigate to="/services/fractional-cio-for-accounting-firms" replace />} />
+            <Route path="/services/automated-lead-follow-up" element={<Navigate to="/services/automated-lead-follow-up-for-cpas" replace />} />
+            <Route path="/services/client-review-generation" element={<Navigate to="/services/automated-review-generation-for-cpas" replace />} />
+            <Route path="/services/seo-for-accountants" element={<Navigate to="/services/seo-for-accounting-firms" replace />} />
+            <Route path="/services/social-media-management" element={<Navigate to="/services/social-media-management-for-cpas" replace />} />
+            <Route path="/services/email-marketing" element={<Navigate to="/services/email-marketing-for-cpas" replace />} />
+            <Route path="/services/website-design" element={<Navigate to="/services/professional-website-design-for-accounting-firms" replace />} />
+            <Route path="/services/content-marketing" element={<Navigate to="/services/strategic-content-marketing-for-cpas" replace />} />
+            <Route path="/services/online-reputation-management" element={<Navigate to="/services/reputation-management-for-cpas" replace />} />
+            <Route path="/services/strategy-integration" element={<Navigate to="/services/marketing-strategy-integration-for-accounting-firms" replace />} />
             
             {/* Industry Sub-pages */}
             <Route path="/industries/tax-preparation-marketing-solutions" element={<TaxPreparation />} />
