@@ -89,8 +89,8 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Expert Marketing Agency For Accounting Firms"
-        description="Partner with an expert marketing agency for accounting firms solving your biggest challenges: inconsistent leads, tech overwhelm, retention, and capacity."
+        title="Stop Feeling Overwhelmed: Solutions For Accounting Firms | SmartFirm"
+        description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
         canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
         faqs={faqsToRender}
@@ -133,11 +133,12 @@ const Solutions = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">
-              Expert Marketing Agency For Accounting Firms
+              Stop Feeling Overwhelmed:<br />
+              Solutions For Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Expert marketing agency for accounting firms solving inconsistent lead flow, technology overwhelm, client retention challenges, and scaling capacity—all without adding to your workload or budget stress.
+                Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks: automate what's slowing you down, reclaim your time, and grow without the stress.
               </p>
             </div>
             <div className="mt-12 flex justify-center">
@@ -152,11 +153,14 @@ const Solutions = () => {
         <section className="pt-12 md:pt-16 pb-20 md:pb-24 bg-background -mt-6">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-6">
+                You're Working Harder Than Ever—But Growth Feels Impossible
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Every accounting firm faces unique challenges in today's competitive marketplace. Whether you're struggling to attract new clients, retain existing ones, or scale your practice efficiently, SmartFirm provides targeted solutions designed specifically for accounting professionals.
+                Every day you're stuck doing marketing tasks that don't convert, losing prospects to firms with better websites, and watching referrals dry up while competitors seem to effortlessly attract ideal clients. You know you need better systems, but between client work and running the practice, there's no time to figure it out.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our proven methodologies combine marketing automation, technology integration, and strategic guidance to help you overcome obstacles and achieve sustainable growth. We understand the accounting industry inside and out, ensuring our solutions align with your professional standards and business objectives.
+                SmartFirm provides solutions for accounting firms that eliminate the overwhelm. Our proven systems automate lead follow-up, optimize your online presence, generate systematic referrals, and free up 15+ hours weekly—so you can focus on serving clients while your practice grows predictably in the background.
               </p>
             </div>
           </div>
