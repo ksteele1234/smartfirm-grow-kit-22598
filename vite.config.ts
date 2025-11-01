@@ -31,11 +31,28 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
+        manualChunks: (id) => {
           // Vendor chunks for better caching
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
-          'utils': ['clsx', 'tailwind-merge', 'date-fns'],
+          if (id.includes('node_modules')) {
+            // Core React libraries
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // Radix UI components
+            if (id.includes('@radix-ui')) {
+              return 'ui-vendor';
+            }
+            // Framer Motion for animations
+            if (id.includes('framer-motion')) {
+              return 'animation-vendor';
+            }
+            // Utilities
+            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('date-fns')) {
+              return 'utils';
+            }
+            // All other vendor code
+            return 'vendor';
+          }
         },
       },
     },
