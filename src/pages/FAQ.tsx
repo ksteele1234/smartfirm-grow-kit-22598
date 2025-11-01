@@ -91,7 +91,7 @@ const FAQ = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
+        <section className="py-section md:py-28 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-primary mb-8">
               Frequently Asked Questions for Accounting Firm Marketing Automation
@@ -205,20 +205,7 @@ const FAQ = () => {
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-md mb-12">
-                <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <MessageSquare className="h-6 w-6 text-accent" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Live Chat</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Chat with our experts in real-time
-                  </p>
-                  <Button variant="outline" className="w-full">
-                    Start Chat
-                  </Button>
-                </div>
-
+              <div className="grid md:grid-cols-2 gap-md mb-12">
                 <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Phone className="h-6 w-6 text-accent" />
