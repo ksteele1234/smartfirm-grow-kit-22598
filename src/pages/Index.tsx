@@ -1,22 +1,31 @@
+import { memo, lazy, Suspense } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import PricingHeroCondensed from "@/components/sections/PricingHeroCondensed";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
-import WhySmartFirmIsDifferent from "@/components/sections/WhySmartFirmIsDifferent";
-import FirmComparisonSection from "@/components/sections/FirmComparisonSection";
-import FinalCTASection from "@/components/sections/FinalCTASection";
-import HomepageFAQSection from "@/components/sections/HomepageFAQSection";
+import { useDeferredComponent } from "@/hooks/useDeferredComponent";
+
+// Lazy load below-the-fold components
+const PricingHeroCondensed = lazy(() => import("@/components/sections/PricingHeroCondensed"));
+const WhySmartFirmIsDifferent = lazy(() => import("@/components/sections/WhySmartFirmIsDifferent"));
+const FirmComparisonSection = lazy(() => import("@/components/sections/FirmComparisonSection"));
+const FinalCTASection = lazy(() => import("@/components/sections/FinalCTASection"));
+const HomepageFAQSection = lazy(() => import("@/components/sections/HomepageFAQSection"));
 
 import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
 import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarketingSolutions";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { CurvedSeparator } from "@/components/ui/curved-separator";
-import { ArrowRight, Play } from "lucide-react";
 
-const Index = () => {
+// Loading fallback component
+const SectionLoader = () => (
+  <div className="py-16 flex items-center justify-center">
+    <div className="animate-pulse text-muted-foreground">Loading...</div>
+  </div>
+);
+
+const Index = memo(() => {
+  // Defer non-critical sections to improve initial load
+  const shouldRenderBelowFold = useDeferredComponent(50);
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -58,26 +67,43 @@ const Index = () => {
         {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
         <CompleteMarketingSolutions />
 
-        {/* Section 4: Why SmartFirm is Different - Background A (White) */}
-        <WhySmartFirmIsDifferent />
+        {/* Defer below-the-fold sections */}
+        {shouldRenderBelowFold && (
+          <>
+            {/* Section 4: Why SmartFirm is Different - Background A (White) */}
+            <Suspense fallback={<SectionLoader />}>
+              <WhySmartFirmIsDifferent />
+            </Suspense>
 
-        {/* Section 5: Pricing Hero - Background B (Dark Gradient) */}
-        <PricingHeroCondensed />
+            {/* Section 5: Pricing Hero - Background B (Dark Gradient) */}
+            <Suspense fallback={<SectionLoader />}>
+              <PricingHeroCondensed />
+            </Suspense>
 
-        {/* Section 6: Firm Comparison - Background A (White) */}
-        <FirmComparisonSection />
+            {/* Section 6: Firm Comparison - Background A (White) */}
+            <Suspense fallback={<SectionLoader />}>
+              <FirmComparisonSection />
+            </Suspense>
 
-        {/* Section 7: FAQ - Background B (Soft Teal) */}
-        <HomepageFAQSection />
+            {/* Section 7: FAQ - Background B (Soft Teal) */}
+            <Suspense fallback={<SectionLoader />}>
+              <HomepageFAQSection />
+            </Suspense>
 
-        {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
-        <FinalCTASection />
+            {/* Section 8: Final CTA - Exception (Primary Blue Gradient) */}
+            <Suspense fallback={<SectionLoader />}>
+              <FinalCTASection />
+            </Suspense>
+          </>
+        )}
       </main>
       
       {/* Section 9: Footer - Background C (Soft Blue) */}
       <Footer />
     </div>
   );
-};
+});
+
+Index.displayName = 'Index';
 
 export default Index;

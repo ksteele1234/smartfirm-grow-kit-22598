@@ -1,13 +1,21 @@
+import { memo, useMemo } from 'react';
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 
-const StatsGrid = () => {
-  // Counter animations (trigger on load or scroll)
-  const stat1 = useCounterAnimation(73, { isPercentage: true, duration: 2000, triggerOnLoad: true });
-  const stat2 = useCounterAnimation(40, { isPercentage: true, duration: 2000, triggerOnLoad: true });
-  const stat3 = useCounterAnimation(14, { duration: 2000, triggerOnLoad: true });
-  const stat4 = useCounterAnimation(2, { duration: 2000, triggerOnLoad: true });
+const StatsGrid = memo(() => {
+  // Memoize counter configurations
+  const counterConfigs = useMemo(() => ({
+    stat1: { value: 73, options: { isPercentage: true, duration: 2000, triggerOnLoad: true } },
+    stat2: { value: 40, options: { isPercentage: true, duration: 2000, triggerOnLoad: true } },
+    stat3: { value: 14, options: { duration: 2000, triggerOnLoad: true } },
+    stat4: { value: 2, options: { duration: 2000, triggerOnLoad: true } }
+  }), []);
+  
+  const stat1 = useCounterAnimation(counterConfigs.stat1.value, counterConfigs.stat1.options);
+  const stat2 = useCounterAnimation(counterConfigs.stat2.value, counterConfigs.stat2.options);
+  const stat3 = useCounterAnimation(counterConfigs.stat3.value, counterConfigs.stat3.options);
+  const stat4 = useCounterAnimation(counterConfigs.stat4.value, counterConfigs.stat4.options);
 
-  const stats = [
+  const stats = useMemo(() => [
     {
       number: "73%",
       unit: null,
@@ -32,9 +40,9 @@ const StatsGrid = () => {
       label: "Monthly time after setup",
       context: "Initial onboarding requires more, then hands-off",
     },
-  ];
+  ], []);
 
-  const counters = [stat1, stat2, stat3, stat4];
+  const counters = useMemo(() => [stat1, stat2, stat3, stat4], [stat1.count, stat2.count, stat3.count, stat4.count]);
 
   return (
     <section className="pt-6 pb-8 md:pt-8 md:pb-8 bg-white" ref={stat1.ref || undefined}>
@@ -106,6 +114,8 @@ const StatsGrid = () => {
       `}</style>
     </section>
   );
-};
+});
+
+StatsGrid.displayName = 'StatsGrid';
 
 export default StatsGrid;

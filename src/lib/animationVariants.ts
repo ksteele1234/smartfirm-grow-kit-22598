@@ -1,80 +1,87 @@
 import { Variants } from 'framer-motion';
 
-// Check if device is mobile
+// Check if device is mobile (memoized to prevent recalculation)
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
-// Fade in from bottom
+// Check if user prefers reduced motion
+const prefersReducedMotion = typeof window !== 'undefined' 
+  && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Fade in from bottom (respects reduced motion)
 export const fadeInUpVariants: Variants = {
   hidden: { 
-    opacity: 0, 
-    y: isMobile ? 20 : 30 
+    opacity: prefersReducedMotion ? 1 : 0, 
+    y: prefersReducedMotion ? 0 : (isMobile ? 20 : 30) 
   },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: { 
-      duration: isMobile ? 0.4 : 0.6, 
+      duration: prefersReducedMotion ? 0 : (isMobile ? 0.4 : 0.6), 
       ease: 'easeOut' 
     }
   }
 };
 
-// Simple fade in
+// Simple fade in (respects reduced motion)
 export const fadeInVariants: Variants = {
   hidden: { 
-    opacity: 0 
+    opacity: prefersReducedMotion ? 1 : 0 
   },
   visible: { 
     opacity: 1,
     transition: { 
-      duration: isMobile ? 0.4 : 0.6, 
+      duration: prefersReducedMotion ? 0 : (isMobile ? 0.4 : 0.6), 
       ease: 'easeOut' 
     }
   }
 };
 
-// Scale in
+// Scale in (respects reduced motion)
 export const scaleInVariants: Variants = {
   hidden: { 
-    opacity: 0, 
-    scale: 0.95 
+    opacity: prefersReducedMotion ? 1 : 0, 
+    scale: prefersReducedMotion ? 1 : 0.95 
   },
   visible: { 
     opacity: 1, 
     scale: 1,
     transition: { 
-      duration: isMobile ? 0.3 : 0.4, 
+      duration: prefersReducedMotion ? 0 : (isMobile ? 0.3 : 0.4), 
       ease: 'easeOut' 
     }
   }
 };
 
-// Slide in from right
+// Slide in from right (respects reduced motion)
 export const slideInRightVariants: Variants = {
   hidden: { 
-    opacity: 0, 
-    x: 50 
+    opacity: prefersReducedMotion ? 1 : 0, 
+    x: prefersReducedMotion ? 0 : 50 
   },
   visible: { 
     opacity: 1, 
     x: 0,
     transition: { 
-      duration: isMobile ? 0.4 : 0.5, 
+      duration: prefersReducedMotion ? 0 : (isMobile ? 0.4 : 0.5), 
       ease: 'easeOut' 
     }
   }
 };
 
-// Helper function to create staggered variants
+// Helper function to create staggered variants (respects reduced motion)
 export const createStaggerVariants = (staggerDelay: number = 0.1): Variants => ({
-  hidden: { opacity: 0, y: isMobile ? 20 : 30 },
+  hidden: { 
+    opacity: prefersReducedMotion ? 1 : 0, 
+    y: prefersReducedMotion ? 0 : (isMobile ? 20 : 30) 
+  },
   visible: (custom: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: isMobile ? 0.4 : 0.6,
+      duration: prefersReducedMotion ? 0 : (isMobile ? 0.4 : 0.6),
       ease: 'easeOut',
-      delay: custom * staggerDelay
+      delay: prefersReducedMotion ? 0 : (custom * staggerDelay)
     }
   })
 });

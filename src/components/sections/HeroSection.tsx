@@ -1,3 +1,4 @@
+import { memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
@@ -95,14 +96,21 @@ const styles = `
   }
 `;
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
   const isMobile = useIsMobile();
   
-  // Counter animations (trigger on page load)
-  const leads = useCounterAnimation(147, { triggerOnLoad: true, duration: 2000 });
-  const retention = useCounterAnimation(94, { triggerOnLoad: true, duration: 2000, isPercentage: true });
-  const avgDeal = useCounterAnimation(4.2, { triggerOnLoad: true, duration: 2000, isDollar: true, decimals: 1 });
-  const roi = useCounterAnimation(340, { triggerOnLoad: true, duration: 2000, isPercentage: true });
+  // Memoize counter animations to prevent recalculation
+  const counterConfig = useMemo(() => ({
+    leads: { value: 147, options: { triggerOnLoad: true, duration: 2000 } },
+    retention: { value: 94, options: { triggerOnLoad: true, duration: 2000, isPercentage: true } },
+    avgDeal: { value: 4.2, options: { triggerOnLoad: true, duration: 2000, isDollar: true, decimals: 1 } },
+    roi: { value: 340, options: { triggerOnLoad: true, duration: 2000, isPercentage: true } }
+  }), []);
+  
+  const leads = useCounterAnimation(counterConfig.leads.value, counterConfig.leads.options);
+  const retention = useCounterAnimation(counterConfig.retention.value, counterConfig.retention.options);
+  const avgDeal = useCounterAnimation(counterConfig.avgDeal.value, counterConfig.avgDeal.options);
+  const roi = useCounterAnimation(counterConfig.roi.value, counterConfig.roi.options);
 
   return (
     <>
@@ -229,6 +237,8 @@ const HeroSection = () => {
       </section>
     </>
   );
-};
+});
+
+HeroSection.displayName = 'HeroSection';
 
 export default HeroSection;

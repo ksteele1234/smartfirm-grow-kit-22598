@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, memo, useMemo } from "react";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import danImage from "@/assets/testimonial-dan.webp";
 import joannaImage from "@/assets/testimonial-joanna.webp";
 import jennImage from "@/assets/testimonial-jenn.webp";
 
-const TestimonialsSection = () => {
+const TestimonialsSection = memo(() => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
+  // Memoize testimonials array to prevent recreation
+  const testimonials = useMemo(() => [
     {
       name: "Dan",
       firm: "CPA Firm Owner",
@@ -33,23 +34,25 @@ const TestimonialsSection = () => {
       rating: 5,
       logo: "Business Advisory LLC"
     }
-  ];
+  ], []);
 
+  // Memoize navigation functions
+  const nextTestimonial = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  }, [testimonials.length]);
+
+  const prevTestimonial = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  }, [testimonials.length]);
+
+  // Auto-rotate carousel
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const currentTestimonial = testimonials[currentIndex];
 
@@ -178,6 +181,8 @@ const TestimonialsSection = () => {
       </div>
     </section>
   );
-};
+});
+
+TestimonialsSection.displayName = 'TestimonialsSection';
 
 export default TestimonialsSection;
