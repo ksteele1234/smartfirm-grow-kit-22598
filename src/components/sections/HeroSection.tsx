@@ -161,7 +161,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button - Enhanced Coral */}
-            <div className="flex justify-start pb-10">
+            <div className="flex justify-start pb-20 lg:pb-10">
               <Button 
                 variant="coral" 
                 size="lg"
@@ -191,7 +191,7 @@ const HeroSection = () => {
             </div>
 
             {/* Card 2: 94% Client Retention - Middle Right (offset) */}
-            <div className="animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8 delay-1000">
+            <div className="hidden lg:block animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8 delay-1000">
               <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {retention.count}
@@ -202,7 +202,7 @@ const HeroSection = () => {
             </div>
 
             {/* Card 3: $4.2K Avg Deal - Bottom Left */}
-            <div className="animate-float animate-fade-in-up-delay-2 delay-2000">
+            <div className="hidden lg:block animate-float animate-fade-in-up-delay-2 delay-2000">
               <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {avgDeal.count}
