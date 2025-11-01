@@ -156,6 +156,12 @@ const App = () => (
             <Route path="/industries/business-advisory-marketing-services" element={<BusinessAdvisory />} />
             <Route path="/industries/audit-assurance-marketing-agency" element={<AuditAssurance />} />
             
+            {/* Industry page redirects for old slugs */}
+            <Route path="/industries/tax-preparation" element={<Navigate to="/industries/tax-preparation-marketing-solutions" replace />} />
+            <Route path="/industries/bookkeeping-services" element={<Navigate to="/industries/bookkeeping-services-marketing-automation" replace />} />
+            <Route path="/industries/marketing-for-business-advisors" element={<Navigate to="/industries/business-advisory-marketing-services" replace />} />
+            <Route path="/industries/marketing-for-audit-firms" element={<Navigate to="/industries/audit-assurance-marketing-agency" replace />} />
+            
             {/* Tools & Calculators */}
             <Route path="/tools" element={<ToolsCalculators />} />
             <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
