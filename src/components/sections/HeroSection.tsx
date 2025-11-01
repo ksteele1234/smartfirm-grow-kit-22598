@@ -161,7 +161,7 @@ const HeroSection = () => {
             </div>
 
             {/* CTA Button - Enhanced Coral */}
-            <div className="flex justify-start pb-20 lg:pb-10">
+            <div className="flex justify-start pb-10">
               <Button 
                 variant="coral" 
                 size="lg"
