@@ -137,7 +137,7 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-[55%_45%] gap-lg items-center">
           
           {/* Left Column - Content */}
-          <div className="order-2 lg:order-1 space-y-8">
+          <div className="order-1 space-y-8">
             
             {/* Headline - Solid White */}
             <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
@@ -177,10 +177,10 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column - Glassmorphism Metric Cards */}
-          <div className="order-1 lg:order-2 relative space-y-6">
+          <div className="order-2 lg:order-2 relative space-y-6">
             
             {/* Card 1: +147 New Leads - Top Left */}
-            <div className="animate-float animate-fade-in-up">
+            <div className="hidden lg:block animate-float animate-fade-in-up">
               <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
                 <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
                   {leads.count}
