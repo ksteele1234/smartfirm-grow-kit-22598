@@ -284,24 +284,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://smartfirm.io/tools/seo-audit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/tools/page-grader</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://smartfirm.io/tools/advanced-seo-qa</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
   <!-- Legal & Informational Pages -->
   <url>
     <loc>https://smartfirm.io/privacy</loc>

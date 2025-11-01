@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -783,18 +784,24 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     .slice(0, 10);
 
   return (
-    <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-3xl font-bold text-primary">Advanced SEO QA Tool</h2>
-          <p className="text-muted-foreground mt-2">
-            Comprehensive quality assurance audit with {routes.length} pages
-          </p>
+    <>
+      <SEO 
+        title="Advanced SEO QA | SmartFirm"
+        description="Internal advanced SEO quality assurance tool"
+        robots="noindex, nofollow"
+      />
+      <div className="space-y-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-primary">Advanced SEO QA Tool</h2>
+            <p className="text-muted-foreground mt-2">
+              Comprehensive quality assurance audit with {routes.length} pages
+            </p>
+          </div>
+          <Button variant="outline" onClick={onBack}>
+            ← Back to Basic Audit
+          </Button>
         </div>
-        <Button variant="outline" onClick={onBack}>
-          ← Back to Basic Audit
-        </Button>
-      </div>
 
       <Alert>
         <AlertDescription>
@@ -983,6 +990,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
         </Card>
       </div>
     </div>
+    </>
   );
 };
 

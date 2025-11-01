@@ -1,4 +1,5 @@
 import { useState, Fragment } from "react";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -1063,18 +1064,24 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
   );
 
   return (
-    <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-primary">SmartFirm Page Grader & Fix Suggestions</h2>
-          <p className="text-muted-foreground mt-2">
-            Rubric-based scoring with actionable, prioritized suggestions
-          </p>
+    <>
+      <SEO 
+        title="Page Grader | SmartFirm"
+        description="Internal page grading and analysis tool"
+        robots="noindex, nofollow"
+      />
+      <div className="space-y-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-2xl font-bold text-primary">SmartFirm Page Grader & Fix Suggestions</h2>
+            <p className="text-muted-foreground mt-2">
+              Rubric-based scoring with actionable, prioritized suggestions
+            </p>
+          </div>
+          <Button variant="outline" onClick={onBack}>
+            Back to Tools
+          </Button>
         </div>
-        <Button variant="outline" onClick={onBack}>
-          Back to Tools
-        </Button>
-      </div>
 
       {/* Controls */}
       <Card>
@@ -1592,6 +1599,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
         </>
       )}
     </div>
+    </>
   );
 };
 

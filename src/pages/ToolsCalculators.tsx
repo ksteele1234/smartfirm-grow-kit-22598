@@ -145,36 +145,6 @@ const ToolsCalculators = () => {
       results: "Growth analysis",
       link: "/tools/growth-potential-scorecard",
       color: "from-primary to-secondary"
-    },
-    {
-      id: "seo-audit",
-      title: "SEO Audit Tool",
-      description: "Analyze your website's SEO performance and get expert recommendations to improve search rankings.",
-      icon: <TrendingUp className="h-8 w-8 text-accent" />,
-      duration: "2 minutes",
-      results: "SEO report",
-      link: "/tools/seo-audit",
-      color: "from-primary to-accent"
-    },
-    {
-      id: "page-grader",
-      title: "Page Grader",
-      description: "Get a comprehensive grade for any page on your website with actionable SEO and performance insights.",
-      icon: <BarChart3 className="h-8 w-8 text-secondary" />,
-      duration: "1 minute",
-      results: "Page grade",
-      link: "/tools/page-grader",
-      color: "from-secondary to-blue-grey"
-    },
-    {
-      id: "advanced-seo-qa",
-      title: "Advanced SEO Q&A",
-      description: "Run a complete technical SEO audit across your entire site with detailed quality assurance reports.",
-      icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      duration: "3 minutes",
-      results: "Full site audit",
-      link: "/tools/advanced-seo-qa",
-      color: "from-primary to-secondary"
     }
   ];
 

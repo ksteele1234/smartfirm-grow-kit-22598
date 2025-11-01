@@ -277,18 +277,6 @@ export function validateIntentRewrites() {
       url: '/tools/workflow-bottleneck-finder',
       firstSentence: 'Pinpoint process bottlenecks limiting your accounting firm\'s capacity and growth.',
       primaryKeyword: 'workflow analysis'
-    },
-    {
-      pageName: 'SEO Audit Tool For Accountants',
-      url: '/tools/seo-audit',
-      firstSentence: 'Comprehensive SEO audit reveals how accounting firms rank and what needs improvement.',
-      primaryKeyword: 'SEO audit tool'
-    },
-    {
-      pageName: 'Website Page Grader',
-      url: '/tools/page-grader',
-      firstSentence: 'Grade your accounting website pages for SEO, performance, and conversion optimization.',
-      primaryKeyword: 'page grader'
     }
   ];
   
