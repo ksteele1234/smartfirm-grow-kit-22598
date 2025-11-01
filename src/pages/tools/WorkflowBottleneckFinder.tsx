@@ -64,6 +64,7 @@ const workflowAreas = [
 
 const WorkflowBottleneckFinder = () => {
   const [selectedTasks, setSelectedTasks] = useState<Set<string>>(new Set());
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   const handleTaskToggle = (taskId: string) => {
@@ -74,6 +75,15 @@ const WorkflowBottleneckFinder = () => {
       newSelected.add(taskId);
     }
     setSelectedTasks(newSelected);
+  };
+
+  const handleAnalyze = () => {
+    setShowEmailModal(true);
+  };
+
+  const handleContinueToResults = () => {
+    setShowEmailModal(false);
+    setShowResults(true);
   };
 
   const calculateTotalTimeWasted = () => {

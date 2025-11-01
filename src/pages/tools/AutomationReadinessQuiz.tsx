@@ -66,6 +66,7 @@ const questions = [
 const AutomationReadinessQuiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<number, boolean>>({});
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   const handleAnswer = (answer: boolean) => {

@@ -104,6 +104,7 @@ const questions = [
 const LeadGenerationScorecard = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   const handleAnswer = (points: number) => {
