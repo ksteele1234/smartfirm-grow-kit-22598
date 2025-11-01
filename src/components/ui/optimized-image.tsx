@@ -10,8 +10,6 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
   context?: string; // Page context for auto-generated alt text
   description?: string; // What is shown in the image
   sizes?: string; // Responsive sizes attribute
-  srcset?: string; // Custom srcset if needed
-  generateResponsive?: boolean; // Auto-generate responsive srcset
 }
 
 /**
@@ -39,8 +37,6 @@ export const OptimizedImage = ({
   context,
   description,
   sizes,
-  srcset,
-  generateResponsive = false,
   className = '',
   ...props 
 }: OptimizedImageProps) => {
@@ -58,26 +54,11 @@ export const OptimizedImage = ({
   // Default responsive sizes if not provided
   const responsiveSizes = sizes || '(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 1200px';
 
-  // Generate responsive srcset if enabled
-  const responsiveSrcset = generateResponsive && !srcset 
-    ? (() => {
-        const baseUrl = src.substring(0, src.lastIndexOf('.'));
-        const ext = src.substring(src.lastIndexOf('.'));
-        // Generate 3 sizes: 0.5x, 1x, 1.5x of original width
-        const sizes = [
-          Math.round(width * 0.5),
-          width,
-          Math.round(width * 1.5)
-        ];
-        return sizes.map(w => `${baseUrl}-${w}w${ext} ${w}w`).join(', ');
-      })()
-    : srcset;
-
   // Decorative images
   if (decorative) {
     return isWebP ? (
       <picture>
-        <source srcSet={responsiveSrcset || src} type="image/webp" sizes={responsiveSizes} />
+        <source srcSet={src} type="image/webp" />
         <img
           src={fallbackSrc}
           alt=""
@@ -94,7 +75,6 @@ export const OptimizedImage = ({
     ) : (
       <img
         src={src}
-        srcSet={responsiveSrcset}
         alt=""
         role="presentation"
         width={width}
@@ -111,7 +91,7 @@ export const OptimizedImage = ({
   // Regular images with WebP support
   return isWebP ? (
     <picture>
-      <source srcSet={responsiveSrcset || src} type="image/webp" sizes={responsiveSizes} />
+      <source srcSet={src} type="image/webp" />
       <img
         src={fallbackSrc}
         alt={generatedAlt}
@@ -127,7 +107,6 @@ export const OptimizedImage = ({
   ) : (
     <img
       src={src}
-      srcSet={responsiveSrcset}
       alt={generatedAlt}
       width={width}
       height={height}
