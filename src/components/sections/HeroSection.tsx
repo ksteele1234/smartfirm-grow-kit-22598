@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Helmet } from "react-helmet";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -106,6 +107,15 @@ const HeroSection = () => {
 
   return (
     <>
+      <Helmet>
+        <link 
+          rel="preload" 
+          as="image" 
+          href={heroWaveBackground}
+          fetchPriority="high"
+        />
+      </Helmet>
+      
       <style>{styles}</style>
 
       {/* Hidden SVG for clip-path definitions */}

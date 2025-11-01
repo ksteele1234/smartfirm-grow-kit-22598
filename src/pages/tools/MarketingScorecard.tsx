@@ -230,7 +230,7 @@ const MarketingScorecard = () => {
               </div>
 
               <div className="mt-8 text-center">
-                <Button size="lg" className="bg-coral hover:bg-coral/90 text-white" asChild>
+                <Button size="lg" variant="coral" asChild>
                   <a href="/get-started">
                     Book a Call
                     <ArrowRight className="ml-2 h-4 w-4" />

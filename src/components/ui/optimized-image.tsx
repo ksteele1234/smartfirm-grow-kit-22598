@@ -10,6 +10,7 @@ interface OptimizedImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, 
   context?: string; // Page context for auto-generated alt text
   description?: string; // What is shown in the image
   sizes?: string; // Responsive sizes attribute
+  srcSet?: string; // Manual srcSet override for responsive images
 }
 
 /**
@@ -37,6 +38,7 @@ export const OptimizedImage = ({
   context,
   description,
   sizes,
+  srcSet,
   className = '',
   ...props 
 }: OptimizedImageProps) => {
@@ -61,6 +63,7 @@ export const OptimizedImage = ({
         <source srcSet={src} type="image/webp" />
         <img
           src={fallbackSrc}
+          srcSet={srcSet}
           alt=""
           role="presentation"
           width={width}
@@ -75,6 +78,7 @@ export const OptimizedImage = ({
     ) : (
       <img
         src={src}
+        srcSet={srcSet}
         alt=""
         role="presentation"
         width={width}
@@ -94,6 +98,7 @@ export const OptimizedImage = ({
       <source srcSet={src} type="image/webp" />
       <img
         src={fallbackSrc}
+        srcSet={srcSet}
         alt={generatedAlt}
         width={width}
         height={height}
@@ -107,6 +112,7 @@ export const OptimizedImage = ({
   ) : (
     <img
       src={src}
+      srcSet={srcSet}
       alt={generatedAlt}
       width={width}
       height={height}

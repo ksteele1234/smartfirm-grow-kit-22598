@@ -32,8 +32,9 @@ export function EmailCaptureModal({ isOpen, onClose, onContinue }: EmailCaptureM
           />
           <Button 
             onClick={onContinue} 
-            className="w-full bg-coral hover:bg-coral/90 text-white"
+            variant="coral"
             size="lg"
+            className="w-full"
           >
             Continue to Results
           </Button>
