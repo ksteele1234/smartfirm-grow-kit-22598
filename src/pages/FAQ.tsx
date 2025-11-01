@@ -22,6 +22,7 @@ import {
   ChevronDown
 } from "lucide-react";
 import { useState } from "react";
+import heroWaveBackground from "@/assets/hero-wave-background.webp";
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -91,26 +92,43 @@ const FAQ = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="py-section md:py-28 bg-background">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-display font-bold text-primary mb-8">
+        <section 
+          className="relative py-16 md:py-section pb-32 md:pb-40 overflow-hidden"
+          style={{
+            backgroundImage: `url(${heroWaveBackground})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent z-0" />
+          
+          {/* Curved bottom edge */}
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 text-background">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="currentColor" />
+            </svg>
+          </div>
+          
+          <div className="container relative z-10 mx-auto px-4 text-center">
+            <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
               Frequently Asked Questions for Accounting Firm Marketing Automation
             </h1>
             <div id="sf-keyword-intro">
-              <p className="text-lead text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
+              <p className="text-lead text-white/95 max-w-text-lg mx-auto mb-10 leading-relaxed drop-shadow-md">
                 Get answers to common questions about marketing automation, SEO, PPC, and content marketing for accountants.
               </p>
             </div>
             
             {/* Search Bar */}
             <div className="max-w-text-sm mx-auto relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted h-5 w-5" />
               <Input
                 type="text"
                 placeholder="Search frequently asked questions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-3 text-lg"
+                className="pl-12 pr-4 py-3 text-lg bg-white/95 backdrop-blur-sm border-white/20"
               />
             </div>
           </div>
