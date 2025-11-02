@@ -43,6 +43,25 @@ const styles = `
       transform: translateY(0); 
     }
   }
+
+  /* Hero background images - responsive */
+  .hero-section {
+    background-image: url(${heroWaveBackgroundMobile});
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: 640px) {
+    .hero-section {
+      background-image: url(${heroWaveBackgroundTablet});
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-section {
+      background-image: url(${heroWaveBackgroundDesktop});
+    }
+  }
   
   @media (prefers-reduced-motion: no-preference) {
     .animate-float {
@@ -137,31 +156,8 @@ const HeroSection = memo(() => {
       </svg>
       
       <section
-      className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip"
+      className="hero-section relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip"
     >
-      {/* Hero background image with responsive sources */}
-      <picture>
-        <source 
-          media="(min-width: 1024px)" 
-          srcSet={heroWaveBackgroundDesktop}
-          type="image/webp"
-        />
-        <source 
-          media="(min-width: 640px)" 
-          srcSet={heroWaveBackgroundTablet}
-          type="image/webp"
-        />
-        <img
-          src={heroWaveBackgroundMobile}
-          alt=""
-          role="presentation"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-          style={{ objectPosition: 'center' }}
-        />
-      </picture>
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
         <div className="grid lg:grid-cols-[55%_45%] gap-lg items-center">
