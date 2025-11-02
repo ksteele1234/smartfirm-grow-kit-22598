@@ -101,18 +101,21 @@ const styles = `
 const HeroSection = memo(() => {
   const isMobile = useIsMobile();
   
-  // Memoize counter animations to prevent recalculation
+  // Memoize counter animations - defer to prevent blocking LCP
   const counterConfig = useMemo(() => ({
-    leads: { value: 147, options: { triggerOnLoad: true, duration: 2000 } },
-    retention: { value: 94, options: { triggerOnLoad: true, duration: 2000, isPercentage: true } },
-    avgDeal: { value: 4.2, options: { triggerOnLoad: true, duration: 2000, isDollar: true, decimals: 1 } },
-    roi: { value: 340, options: { triggerOnLoad: true, duration: 2000, isPercentage: true } }
+    leads: { value: 147, options: { triggerOnLoad: false, duration: 2000 } },
+    retention: { value: 94, options: { triggerOnLoad: false, duration: 2000, isPercentage: true } },
+    avgDeal: { value: 4.2, options: { triggerOnLoad: false, duration: 2000, isDollar: true, decimals: 1 } },
+    roi: { value: 340, options: { triggerOnLoad: false, duration: 2000, isPercentage: true } }
   }), []);
   
   const leads = useCounterAnimation(counterConfig.leads.value, counterConfig.leads.options);
   const retention = useCounterAnimation(counterConfig.retention.value, counterConfig.retention.options);
   const avgDeal = useCounterAnimation(counterConfig.avgDeal.value, counterConfig.avgDeal.options);
   const roi = useCounterAnimation(counterConfig.roi.value, counterConfig.roi.options);
+
+  // Use first counter ref for all cards (they're in same viewport)
+  const statsRef = leads.ref;
 
   return (
     <>
@@ -204,7 +207,7 @@ const HeroSection = memo(() => {
           </div>
 
           {/* Right Column - Glassmorphism Metric Cards */}
-          <div className="order-2 lg:order-2 relative space-y-6">
+          <div ref={statsRef} className="order-2 lg:order-2 relative space-y-6">
             
             {/* Card 1: +147 New Leads - Top Left */}
             <div className="hidden lg:block animate-float animate-fade-in-up">

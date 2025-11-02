@@ -16,16 +16,16 @@ const HomepageFAQSection = lazy(() => import("@/components/sections/HomepageFAQS
 import SEO from "@/components/SEO";
 import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarketingSolutions";
 
-// Loading fallback component
+// Loading fallback component with reserved space to prevent CLS
 const SectionLoader = () => (
-  <div className="py-16 flex items-center justify-center">
+  <div className="py-16 flex items-center justify-center" style={{ minHeight: '400px' }}>
     <div className="animate-pulse text-muted-foreground">Loading...</div>
   </div>
 );
 
 const Index = memo(() => {
-  // Defer non-critical sections to improve initial load
-  const shouldRenderBelowFold = useDeferredComponent(50);
+  // Defer non-critical sections to improve initial load (removed delay for LCP optimization)
+  const shouldRenderBelowFold = useDeferredComponent(0);
   return (
     <div className="min-h-screen bg-background">
       <SEO
