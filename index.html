@@ -72,26 +72,6 @@
       }
     </style>
     
-    <!-- Conditional hero image preload (only on pages with hero) -->
-    <script>
-      (function() {
-        const heroPages = ['/', '/services/', '/solutions/', '/industries/'];
-        const currentPath = window.location.pathname;
-        const hasHero = heroPages.some(page => currentPath === page || currentPath.startsWith(page));
-        
-        if (hasHero) {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'image';
-          link.href = '/assets/hero-wave-background.webp';
-          link.fetchpriority = 'high';
-          link.type = 'image/webp';
-          link.imagesrcset = '/assets/hero-wave-background.webp 640w, /assets/hero-wave-background.webp 1024w, /assets/hero-wave-background.webp 1920w';
-          link.imagesizes = '100vw';
-          document.head.appendChild(link);
-        }
-      })();
-    </script>
     
     <!-- Google Fonts (deferred) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">

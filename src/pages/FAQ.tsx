@@ -94,13 +94,17 @@ const FAQ = () => {
         {/* Hero Section */}
         <section 
           className="relative py-16 md:py-section pb-32 md:pb-40 overflow-hidden"
-          style={{
-            backgroundImage: `url(${heroWaveBackground})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
         >
+          {/* Hero background image with proper loading */}
+          <img
+            src={heroWaveBackground}
+            alt=""
+            role="presentation"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover -z-10"
+            style={{ objectPosition: 'center' }}
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent z-0" />
           
           {/* Curved bottom edge */}
