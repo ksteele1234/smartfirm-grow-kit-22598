@@ -141,7 +141,7 @@ const HeroSection = memo(() => {
         role="presentation"
         fetchPriority="high"
         loading="eager"
-        decoding="sync"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover -z-10"
         style={{ objectPosition: 'center' }}
       />

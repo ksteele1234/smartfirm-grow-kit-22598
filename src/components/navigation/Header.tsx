@@ -178,7 +178,7 @@ const Header = () => {
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
                 width={300}
                 height={63}
-                priority
+                loading="lazy"
                 className="h-[66px] w-auto"
               />
             </a>
