@@ -24,62 +24,127 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    </noscript>
+    <!-- Preload critical font files (WOFF2 format for best performance) -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriOZSCHBeHFl0.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- Critical CSS (Above-the-fold) -->
+    <!-- Critical CSS (Above-the-fold) - Comprehensive inlined styles -->
     <style>
       /* Base resets and critical layout */
       *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-      html{-webkit-text-size-adjust:100%;line-height:1.5;}
-      body{font-family:'DM Sans',sans-serif;color:hsl(215 19% 35%);background:hsl(0 0% 100%);-webkit-font-smoothing:antialiased;}
+      html{-webkit-text-size-adjust:100%;line-height:1.5;scroll-behavior:smooth;}
+      body{font-family:'DM Sans',sans-serif;color:hsl(215 19% 35%);background:hsl(0 0% 100%);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
       
-      /* Critical color tokens */
+      /* Critical color tokens - Complete palette */
       :root{
         --professional-teal:172 82% 24%;
         --ocean-blue:198 64% 30%;
+        --deep-navy:208 59% 16%;
+        --coral:347 89% 73%;
+        --gold:38 92% 50%;
         --white:0 0% 100%;
         --slate-dark:215 19% 35%;
+        --slate:215 16% 47%;
+        --slate-light:214 32% 91%;
         --primary:var(--professional-teal);
         --secondary:var(--ocean-blue);
         --foreground:var(--slate-dark);
+        --accent:var(--coral);
+        --accent-gold:var(--gold);
       }
       
       /* Header critical styles */
-      header{position:sticky;top:0;z-index:50;background:hsl(var(--white));height:72px;border-bottom:1px solid hsl(214 32% 91%);}
+      header{position:sticky;top:0;z-index:50;background:hsl(var(--white));height:72px;border-bottom:1px solid hsl(var(--slate-light));backdrop-filter:blur(8px);}
       .container{max-width:1400px;margin:0 auto;padding:0 1.5rem;}
       
       /* Hero section critical styles */
-      .hero-section{position:relative;min-height:600px;padding:4rem 0;background-size:cover;background-position:center;}
+      .hero-section{position:relative;min-height:600px;padding:4rem 0;background-size:cover;background-position:center;overflow:hidden;}
+      
+      /* Glass card styles for hero metrics */
+      .glass-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);box-shadow:0 8px 32px rgba(10,114,101,0.15);}
       
       /* Typography critical styles */
-      h1{font-family:'Poppins',sans-serif;font-size:3rem;font-weight:700;line-height:1.2;color:hsl(var(--primary));}
-      h2{font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:700;color:hsl(var(--primary));}
-      p{line-height:1.7;}
+      h1{font-family:'Poppins',sans-serif;font-size:clamp(2.25rem,5vw,3rem);font-weight:700;line-height:1.1;color:hsl(var(--white));margin-bottom:1.5rem;}
+      h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,2.5rem);font-weight:700;color:hsl(var(--primary));}
+      p{line-height:1.7;font-size:1.125rem;}
       
       /* Button critical styles */
-      .btn{display:inline-flex;align-items:center;justify-content:center;padding:0.625rem 1.5rem;font-weight:600;border-radius:0.5rem;transition:all 0.2s;}
+      .btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 2.5rem;font-weight:700;border-radius:0.5rem;transition:all 0.2s;font-size:1.125rem;}
+      .btn-coral{background:hsl(var(--coral));color:hsl(var(--white));box-shadow:0 4px 14px rgba(251,113,133,0.4);}
+      .btn-coral:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(251,113,133,0.5);}
       
-      /* Utility classes */
+      /* Gradient text utilities */
+      .text-gradient-gold{background:linear-gradient(135deg,hsl(var(--gold)),hsl(38 100% 60%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+      
+      /* Animation keyframes - Critical animations only */
+      @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+      @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+      @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+      @keyframes gentlePulse{0%,100%{opacity:1;}50%{opacity:0.95;}}
+      
+      @media(prefers-reduced-motion:no-preference){
+        .animate-fade-in{animation:fadeIn 0.5s ease-out;}
+        .animate-fade-in-up{animation:fadeInUp 0.6s ease-out;}
+        .animate-float{animation:float 3s ease-in-out infinite;}
+        .animate-gentle-pulse{animation:gentlePulse 3.5s ease-in-out infinite;}
+      }
+      
+      /* Layout utilities */
       .flex{display:flex;}
+      .grid{display:grid;}
       .hidden{display:none;}
       .items-center{align-items:center;}
+      .justify-center{justify-content:center;}
       .justify-between{justify-content:space-between;}
+      .gap-4{gap:1rem;}
+      .gap-6{gap:1.5rem;}
       
+      /* Spacing utilities */
+      .mb-6{margin-bottom:1.5rem;}
+      .mb-8{margin-bottom:2rem;}
+      .p-6{padding:1.5rem;}
+      .px-6{padding-left:1.5rem;padding-right:1.5rem;}
+      .py-4{padding-top:1rem;padding-bottom:1rem;}
+      
+      /* Text utilities */
+      .text-white{color:hsl(var(--white));}
+      .text-sm{font-size:0.875rem;}
+      .text-lg{font-size:1.125rem;}
+      .text-4xl{font-size:2.25rem;}
+      .font-bold{font-weight:700;}
+      .font-extrabold{font-weight:800;}
+      .font-medium{font-weight:500;}
+      
+      /* Rounded corners */
+      .rounded-card{border-radius:1rem;}
+      .rounded-card-lg{border-radius:1.5rem;}
+      
+      /* Shadow utilities */
+      .shadow-hero-card{box-shadow:0 20px 25px rgba(10,114,101,0.15),0 8px 10px rgba(10,114,101,0.08);}
+      
+      /* Positioning */
+      .relative{position:relative;}
+      .absolute{position:absolute;}
+      .inset-0{top:0;right:0;bottom:0;left:0;}
+      
+      /* Responsive breakpoints */
       @media(max-width:768px){
         h1{font-size:2.25rem;}
         h2{font-size:2rem;}
         .hero-section{min-height:500px;padding:3rem 0;}
+        .btn{padding:0.75rem 2rem;font-size:1rem;}
+        .p-6{padding:1.25rem;}
+      }
+      
+      @media(min-width:1024px){
+        .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+        .lg\:block{display:block;}
       }
     </style>
     
     
-    <!-- Google Fonts (deferred) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Google Fonts (optimized with font-display swap) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
     <noscript>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     </noscript>
