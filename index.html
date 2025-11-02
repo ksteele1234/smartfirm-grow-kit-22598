@@ -15,10 +15,89 @@
     <meta name="description" content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
     <meta name="author" content="SmartFirm.io" />
     
-    <!-- Google Fonts -->
+    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- Critical CSS (Above-the-fold) -->
+    <style>
+      /* Base resets and critical layout */
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+      html{-webkit-text-size-adjust:100%;line-height:1.5;}
+      body{font-family:'DM Sans',sans-serif;color:hsl(215 19% 35%);background:hsl(0 0% 100%);-webkit-font-smoothing:antialiased;}
+      
+      /* Critical color tokens */
+      :root{
+        --professional-teal:172 82% 24%;
+        --ocean-blue:198 64% 30%;
+        --white:0 0% 100%;
+        --slate-dark:215 19% 35%;
+        --primary:var(--professional-teal);
+        --secondary:var(--ocean-blue);
+        --foreground:var(--slate-dark);
+      }
+      
+      /* Header critical styles */
+      header{position:sticky;top:0;z-index:50;background:hsl(var(--white));height:72px;border-bottom:1px solid hsl(214 32% 91%);}
+      .container{max-width:1400px;margin:0 auto;padding:0 1.5rem;}
+      
+      /* Hero section critical styles */
+      .hero-section{position:relative;min-height:600px;padding:4rem 0;background-size:cover;background-position:center;}
+      
+      /* Typography critical styles */
+      h1{font-family:'Poppins',sans-serif;font-size:3rem;font-weight:700;line-height:1.2;color:hsl(var(--primary));}
+      h2{font-family:'Poppins',sans-serif;font-size:2.5rem;font-weight:700;color:hsl(var(--primary));}
+      p{line-height:1.7;}
+      
+      /* Button critical styles */
+      .btn{display:inline-flex;align-items:center;justify-content:center;padding:0.625rem 1.5rem;font-weight:600;border-radius:0.5rem;transition:all 0.2s;}
+      
+      /* Utility classes */
+      .flex{display:flex;}
+      .hidden{display:none;}
+      .items-center{align-items:center;}
+      .justify-between{justify-content:space-between;}
+      
+      @media(max-width:768px){
+        h1{font-size:2.25rem;}
+        h2{font-size:2rem;}
+        .hero-section{min-height:500px;padding:3rem 0;}
+      }
+    </style>
+    
+    <!-- Conditional hero image preload (only on pages with hero) -->
+    <script>
+      (function() {
+        const heroPages = ['/', '/services/', '/solutions/', '/industries/'];
+        const currentPath = window.location.pathname;
+        const hasHero = heroPages.some(page => currentPath === page || currentPath.startsWith(page));
+        
+        if (hasHero) {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = '/assets/hero-wave-background.webp';
+          link.fetchpriority = 'high';
+          link.type = 'image/webp';
+          link.imagesrcset = '/assets/hero-wave-background.webp 640w, /assets/hero-wave-background.webp 1024w, /assets/hero-wave-background.webp 1920w';
+          link.imagesizes = '100vw';
+          document.head.appendChild(link);
+        }
+      })();
+    </script>
+    
+    <!-- Google Fonts (deferred) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    </noscript>
     
     <!-- DNS Prefetch for external APIs -->
     <link rel="dns-prefetch" href="https://api.leadconnectorhq.com">
