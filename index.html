@@ -11,8 +11,10 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
     
-    <!-- Preload hero image for LCP optimization -->
-    <link rel="preload" as="image" href="/assets/hero-wave-background.webp" fetchpriority="high">
+    <!-- Preload hero image for LCP optimization (mobile-first) -->
+    <link rel="preload" as="image" href="/assets/hero-wave-background-mobile.webp" fetchpriority="high" media="(max-width: 639px)">
+    <link rel="preload" as="image" href="/assets/hero-wave-background-tablet.webp" fetchpriority="high" media="(min-width: 640px) and (max-width: 1023px)">
+    <link rel="preload" as="image" href="/assets/hero-wave-background-desktop.webp" fetchpriority="high" media="(min-width: 1024px)">
     
     <title>SmartFirm | Automation & AI for Accounting Firms</title>
     <meta name="description" content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
