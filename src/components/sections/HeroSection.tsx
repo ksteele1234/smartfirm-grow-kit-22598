@@ -1,9 +1,6 @@
 import { memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroWaveBackgroundMobile from "@/assets/hero-wave-background-mobile.webp";
-import heroWaveBackgroundTablet from "@/assets/hero-wave-background-tablet.webp";
-import heroWaveBackgroundDesktop from "@/assets/hero-wave-background-desktop.webp";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -119,30 +116,22 @@ const HeroSection = memo(() => {
       
       <section className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip">
       {/* Hero background image - responsive with priority loading */}
-      <picture>
-        <source 
-          media="(min-width: 1024px)" 
-          srcSet={heroWaveBackgroundDesktop}
-          type="image/webp"
-        />
-        <source 
-          media="(min-width: 640px)" 
-          srcSet={heroWaveBackgroundTablet}
-          type="image/webp"
-        />
-        <img
-          src={heroWaveBackgroundMobile}
-          alt=""
-          role="presentation"
-          fetchPriority="high"
-          loading="eager"
-          decoding="async"
-          width="1920"
-          height="700"
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-          style={{ objectPosition: 'center' }}
-        />
-      </picture>
+      <img
+        src="/assets/hero-wave-background-mobile.webp"
+        srcSet="/assets/hero-wave-background-mobile.webp 375w,
+                /assets/hero-wave-background-tablet.webp 768w,
+                /assets/hero-wave-background-desktop.webp 1920w"
+        sizes="100vw"
+        alt=""
+        role="presentation"
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+        width="1920"
+        height="700"
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+        style={{ objectPosition: 'center' }}
+      />
 
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>

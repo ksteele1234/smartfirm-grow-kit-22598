@@ -59,10 +59,12 @@ const Index = memo(() => {
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
 
-        {/* Hero Stats Cards - Positioned below hero */}
-        <div className="container mx-auto px-6 -mt-16 relative z-20">
-          <HeroStatsCards />
-        </div>
+        {/* Hero Stats Cards - Positioned below hero - deferred for LCP */}
+        {shouldRenderBelowFold && (
+          <div className="container mx-auto px-6 -mt-16 relative z-20">
+            <HeroStatsCards />
+          </div>
+        )}
 
         {/* Section 2: Unified Credibility Section - Background A (White) */}
         <section className="bg-white section-padding" style={{ paddingTop: 'calc(var(--section-padding-y) - 40px)' }}>
