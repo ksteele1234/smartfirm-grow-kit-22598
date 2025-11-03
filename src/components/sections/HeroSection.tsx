@@ -1,11 +1,9 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroWaveBackgroundMobile from "@/assets/hero-wave-background-mobile.webp";
 import heroWaveBackgroundTablet from "@/assets/hero-wave-background-tablet.webp";
 import heroWaveBackgroundDesktop from "@/assets/hero-wave-background-desktop.webp";
-import { useCounterAnimation } from "@/hooks/useCounterAnimation";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -41,25 +39,6 @@ const styles = `
     to { 
       opacity: 1; 
       transform: translateY(0); 
-    }
-  }
-
-  /* Hero background images - responsive */
-  .hero-section {
-    background-image: url(${heroWaveBackgroundMobile});
-    background-size: cover;
-    background-position: center;
-  }
-
-  @media (min-width: 640px) {
-    .hero-section {
-      background-image: url(${heroWaveBackgroundTablet});
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .hero-section {
-      background-image: url(${heroWaveBackgroundDesktop});
     }
   }
   
@@ -118,23 +97,6 @@ const styles = `
 `;
 
 const HeroSection = memo(() => {
-  const isMobile = useIsMobile();
-  
-  // Memoize counter animations - defer to prevent blocking LCP
-  const counterConfig = useMemo(() => ({
-    leads: { value: 147, options: { triggerOnLoad: false, duration: 2000 } },
-    retention: { value: 94, options: { triggerOnLoad: false, duration: 2000, isPercentage: true } },
-    avgDeal: { value: 4.2, options: { triggerOnLoad: false, duration: 2000, isDollar: true, decimals: 1 } },
-    roi: { value: 340, options: { triggerOnLoad: false, duration: 2000, isPercentage: true } }
-  }), []);
-  
-  const leads = useCounterAnimation(counterConfig.leads.value, counterConfig.leads.options);
-  const retention = useCounterAnimation(counterConfig.retention.value, counterConfig.retention.options);
-  const avgDeal = useCounterAnimation(counterConfig.avgDeal.value, counterConfig.avgDeal.options);
-  const roi = useCounterAnimation(counterConfig.roi.value, counterConfig.roi.options);
-
-  // Use first counter ref for all cards (they're in same viewport)
-  const statsRef = leads.ref;
 
   return (
     <>
@@ -155,101 +117,72 @@ const HeroSection = memo(() => {
         </defs>
       </svg>
       
-      <section
-      className="hero-section relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip"
-    >
+      <section className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip">
+      {/* Hero background image - responsive with priority loading */}
+      <picture>
+        <source 
+          media="(min-width: 1024px)" 
+          srcSet={heroWaveBackgroundDesktop}
+          type="image/webp"
+        />
+        <source 
+          media="(min-width: 640px)" 
+          srcSet={heroWaveBackgroundTablet}
+          type="image/webp"
+        />
+        <img
+          src={heroWaveBackgroundMobile}
+          alt=""
+          role="presentation"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="700"
+          className="absolute inset-0 w-full h-full object-cover -z-10"
+          style={{ objectPosition: 'center' }}
+        />
+      </picture>
+
       {/* Content Container */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
-        <div className="grid lg:grid-cols-[55%_45%] gap-lg items-center">
+        <div className="max-w-4xl mx-auto text-center lg:text-left">
           
-          {/* Left Column - Content */}
-          <div className="order-1 space-y-8">
-            
-            {/* Headline - Solid White */}
-            <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-              Predictable Growth for Accounting Firms Without Wasting Time on Marketing
-            </h1>
+          {/* Headline - Solid White */}
+          <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
+            Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+          </h1>
 
-            {/* Subheadline */}
-            <div id="sf-keyword-intro" className="animate-subhead">
-              <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md">
-                Digital marketing for accounting firms that actually works: Tired of lost leads, slow follow-ups, and clients slipping away? SmartFirm removes those roadblocks so your firm grows and retains clients effortlessly.
-              </p>
-            </div>
-
-            {/* Trust Badges with Gold Bullets */}
-            <div className="flex flex-wrap items-center gap-4 mb-10">
-              <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-              <span className="text-white text-sm font-medium">50+ Companies Supported</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-              <span className="text-white text-sm font-medium">Up in 30 Days</span>
-            </div>
-
-            {/* CTA Button - Enhanced Coral */}
-            <div className="flex justify-start pb-10">
-              <Button 
-                variant="coral" 
-                size="lg"
-                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
-                asChild
-              >
-                <a href="/get-started" className="inline-flex items-center justify-center gap-2">
-                  Book a Free Call
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-            </div>
+          {/* Subheadline */}
+          <div id="sf-keyword-intro" className="animate-subhead">
+            <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
+              Digital marketing for accounting firms that actually works: Tired of lost leads, slow follow-ups, and clients slipping away? SmartFirm removes those roadblocks so your firm grows and retains clients effortlessly.
+            </p>
           </div>
 
-          {/* Right Column - Glassmorphism Metric Cards */}
-          <div ref={statsRef} className="order-2 lg:order-2 relative space-y-6">
-            
-            {/* Card 1: +147 New Leads - Top Left */}
-            <div className="hidden lg:block animate-float animate-fade-in-up">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
-                <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
-                  {leads.count}
-                </p>
-                <p className="text-sm text-on-dark-muted font-medium mb-2">New Leads</p>
-                <p className="text-xs text-accent-light">+32% this month</p>
-              </div>
-            </div>
-
-            {/* Card 2: 94% Client Retention - Middle Right (offset) */}
-            <div className="hidden lg:block animate-float animate-fade-in-up-delay-1 ml-0 lg:ml-8 delay-1000">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
-                <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
-                  {retention.count}
-                </p>
-                <p className="text-sm text-on-dark-muted font-medium mb-2">Client Retention</p>
-                <p className="text-xs text-accent-light">+8% improvement</p>
-              </div>
-            </div>
-
-            {/* Card 3: $4.2K Avg Deal - Bottom Left */}
-            <div className="hidden lg:block animate-float animate-fade-in-up-delay-2 delay-2000">
-              <div className="stat-card glass-card rounded-card-lg p-5 lg:p-6 hover:shadow-hero-card">
-                <p className="stat-number text-4xl font-extrabold text-gradient-gold mb-1">
-                  {avgDeal.count}
-                </p>
-                <p className="text-sm text-on-dark-muted font-medium mb-2">Avg Deal Value</p>
-                <p className="text-xs text-accent-light">Per new client</p>
-              </div>
-            </div>
-
-            {/* Card 4: 340% ROI - Bottom Right (smaller, hidden on mobile) */}
-            <div className="hidden lg:block animate-float animate-fade-in-up-delay-3 lg:ml-4 delay-1500">
-              <div className="stat-card glass-card rounded-card p-4 hover:shadow-hero-card">
-                <p className="stat-number text-2xl font-extrabold text-gradient-gold mb-1">
-                  {roi.count}
-                </p>
-                <p className="text-xs text-on-dark-muted font-medium">ROI</p>
-              </div>
-            </div>
-
+          {/* Trust Badges with Gold Bullets */}
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+            <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+            <span className="text-white text-sm font-medium">50+ Companies Supported</span>
+            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+            <span className="text-white text-sm font-medium">Up in 30 Days</span>
           </div>
 
+          {/* CTA Button - Enhanced Coral */}
+          <div className="flex justify-center lg:justify-start pb-10">
+            <Button 
+              variant="coral" 
+              size="lg"
+              className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
+              asChild
+            >
+              <a href="/get-started" className="inline-flex items-center justify-center gap-2">
+                Book a Free Call
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
       </section>
