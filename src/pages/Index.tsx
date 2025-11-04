@@ -2,7 +2,6 @@ import { memo, lazy, Suspense } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import HeroStatsCards from "@/components/sections/HeroStatsCards";
 import StatsGrid from "@/components/sections/StatsGrid";
 import FounderStory from "@/components/sections/FounderStory";
 import { useDeferredComponent } from "@/hooks/useDeferredComponent";
@@ -58,13 +57,6 @@ const Index = memo(() => {
       <main id="main-content" role="main">
         {/* Hero Section - Using dedicated component */}
         <HeroSection />
-
-        {/* Hero Stats Cards - Positioned below hero - deferred for LCP */}
-        {shouldRenderBelowFold && (
-          <div className="container mx-auto px-6 -mt-16 relative z-20">
-            <HeroStatsCards />
-          </div>
-        )}
 
         {/* Section 2: Unified Credibility Section - Background A (White) */}
         <section className="bg-white section-padding" style={{ paddingTop: 'calc(var(--section-padding-y) - 40px)' }}>

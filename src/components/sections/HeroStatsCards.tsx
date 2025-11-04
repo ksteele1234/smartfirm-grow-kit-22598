@@ -37,7 +37,7 @@ const HeroStatsCards = memo(() => {
   });
 
   return (
-    <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+    <div className="grid grid-cols-1 gap-4 w-[280px]">
       <div
         ref={leads.ref}
         className="glass-card p-4 md:p-6 rounded-card-lg text-center transform hover:scale-105 transition-all duration-300 shadow-hero-card animate-fade-in"

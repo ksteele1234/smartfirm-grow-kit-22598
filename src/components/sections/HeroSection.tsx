@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import HeroStatsCards from "./HeroStatsCards";
 
 // Add keyframes for circle rotations and animations
 const styles = `
@@ -133,44 +134,52 @@ const HeroSection = memo(() => {
         style={{ objectPosition: 'center' }}
       />
 
-      {/* Content Container */}
+      {/* Content Container - 2 Column Grid */}
       <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
-        <div className="max-w-4xl mx-auto text-center lg:text-left">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center max-w-7xl mx-auto">
           
-          {/* Headline - Solid White */}
-          <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-            Predictable Growth for Accounting Firms Without Wasting Time on Marketing
-          </h1>
+          {/* Left Column: Headline, Subhead, CTA */}
+          <div className="text-center lg:text-left">
+            {/* Headline - Solid White */}
+            <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
+              Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+            </h1>
 
-          {/* Subheadline */}
-          <div id="sf-keyword-intro" className="animate-subhead">
-            <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
-              Digital marketing for accounting firms that actually works: Tired of lost leads, slow follow-ups, and clients slipping away? SmartFirm removes those roadblocks so your firm grows and retains clients effortlessly.
-            </p>
+            {/* Subheadline */}
+            <div id="sf-keyword-intro" className="animate-subhead">
+              <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
+                Digital marketing for accounting firms that actually works: Tired of lost leads, slow follow-ups, and clients slipping away? SmartFirm removes those roadblocks so your firm grows and retains clients effortlessly.
+              </p>
+            </div>
+
+            {/* Trust Badges with Gold Bullets */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+              <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+              <span className="text-white text-sm font-medium">50+ Companies Supported</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+              <span className="text-white text-sm font-medium">Up in 30 Days</span>
+            </div>
+
+            {/* CTA Button - Enhanced Coral */}
+            <div className="flex justify-center lg:justify-start pb-10">
+              <Button 
+                variant="coral" 
+                size="lg"
+                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
+                asChild
+              >
+                <a href="/get-started" className="inline-flex items-center justify-center gap-2">
+                  Book a Free Call
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
           </div>
 
-          {/* Trust Badges with Gold Bullets */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
-            <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-            <span className="text-white text-sm font-medium">50+ Companies Supported</span>
-            <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-            <span className="text-white text-sm font-medium">Up in 30 Days</span>
-          </div>
-
-          {/* CTA Button - Enhanced Coral */}
-          <div className="flex justify-center lg:justify-start pb-10">
-            <Button 
-              variant="coral" 
-              size="lg"
-              className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
-              asChild
-            >
-              <a href="/get-started" className="inline-flex items-center justify-center gap-2">
-                Book a Free Call
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
+          {/* Right Column: Stat Cards */}
+          <div className="hidden lg:block">
+            <HeroStatsCards />
           </div>
         </div>
       </div>
