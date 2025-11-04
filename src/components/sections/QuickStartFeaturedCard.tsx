@@ -24,13 +24,8 @@ const QuickStartFeaturedCard = () => {
 
   return (
     <div className="relative glass-card elevation-3 rounded-[24px] p-12 hover-lift self-start">
-      {/* Early Adopter Badge - Coral */}
-      <div className="inline-block bg-gradient-coral text-white text-xs font-semibold px-3 py-1.5 rounded mb-6">
-        Early Adopter Pricing*
-      </div>
-
       {/* Badge - Gold gradient */}
-      <div className="inline-block bg-gradient-gold px-4 py-2 rounded-card text-sm font-bold text-white mb-6 ml-2">
+      <div className="inline-block bg-gradient-gold px-4 py-2 rounded-card text-sm font-bold text-white mb-6">
         Start Here
       </div>
 
@@ -64,11 +59,8 @@ const QuickStartFeaturedCard = () => {
 
         {/* Setup Fee - Smaller */}
         <div>
-          <div className="text-xs text-muted-foreground line-through mb-1">
-            Regular: $9,999
-          </div>
           <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-1">
-            $6,999
+            $12,500
           </div>
           <div className="text-sm text-muted-foreground">One-time setup</div>
         </div>
@@ -105,10 +97,6 @@ const QuickStartFeaturedCard = () => {
           </Link>
         </Button>
 
-        {/* Urgency Note */}
-        <p className="text-xs text-muted-foreground text-center mt-2">
-          *for the next 3 firms only
-        </p>
       </div>
     </div>
   );

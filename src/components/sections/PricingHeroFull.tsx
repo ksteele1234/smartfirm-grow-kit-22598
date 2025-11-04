@@ -43,9 +43,6 @@ const PricingHeroFull = () => {
         <div className="max-w-5xl mx-auto bg-white rounded-[24px] p-[40px] md:p-[60px] shadow-2xl">
           {/* Badges */}
           <div className="flex flex-wrap gap-3 mb-8">
-            <Badge className="bg-gradient-coral text-white border-0 shadow-lg px-4 py-1.5 text-sm font-semibold">
-              Early Adopter Pricing
-            </Badge>
             <Badge className="bg-gradient-to-r from-amber-400 to-amber-600 text-white border-0 shadow-lg px-4 py-1.5 text-sm font-semibold">
               Start Here
             </Badge>
@@ -63,17 +60,14 @@ const PricingHeroFull = () => {
             </div>
             <div className="flex items-baseline gap-3 mb-3">
               <span className="text-[28px] md:text-[48px] font-[700] font-heading text-slate-900">
-                +$8,999
-              </span>
-              <span className="text-[24px] md:text-[36px] font-[700] font-heading text-slate-400 line-through">
-                $11,999
+                +$12,500
               </span>
               <span className="text-[18px] md:text-[20px] font-[500] text-slate-600">
                 setup
               </span>
             </div>
             <p className="text-[16px] text-slate-600 font-body">
-              One-time early adopter pricing • Limited availability
+              One-time setup fee
             </p>
           </div>
 
@@ -132,10 +126,6 @@ const PricingHeroFull = () => {
             </Link>
           </Button>
 
-          {/* Urgency Note */}
-          <p className="text-center text-[14px] text-slate-500 mt-6 font-body">
-            Early adopter pricing available for a limited time only
-          </p>
         </div>
       </div>
     </section>
