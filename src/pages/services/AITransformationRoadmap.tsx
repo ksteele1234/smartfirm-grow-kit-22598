@@ -81,8 +81,24 @@ const AITransformationRoadmap = () => {
     ],
     faqs: [
       {
-        question: "Investment",
+        question: "What is the investment for the AI Transformation Roadmap?",
         answer: "Starting at $7,500. Small business engagements available. Enterprise pricing upon consultation."
+      },
+      {
+        question: "How long does the engagement take?",
+        answer: "The AI Transformation Roadmap is a comprehensive 2-4 week engagement, with weekly deliverables and checkpoints throughout the process."
+      },
+      {
+        question: "What happens after I receive my roadmap?",
+        answer: "We become your ongoing transformation partner. You can choose to implement initiatives yourself, work with us on implementation, or take a hybrid approach. We provide continued guidance and support as needed."
+      },
+      {
+        question: "Do you work with firms of all sizes?",
+        answer: "Yes. We offer small business engagements for emerging firms and scalable solutions for enterprise organizations. Pricing and scope are customized based on your firm's size and needs."
+      },
+      {
+        question: "What if we're not ready to implement AI yet?",
+        answer: "That's exactly why the roadmap exists. It helps you understand where AI creates value, what resources you'll need, and when to start. Many firms use the roadmap for internal planning and budget allocation before beginning implementation."
       }
     ],
     ctaTitle: "Ready to Stop Guessing and Start Implementing?",

@@ -396,7 +396,55 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
         </div>
       </section>
 
-      {/* FAQs Section - White Background (Moved before Final CTA) */}
+      {/* Final CTA Section - Blue Gradient Background */}
+      <section 
+        id="sf-final-cta"
+        ref={finalCtaRef}
+        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
+      >
+        <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+            className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight"
+            style={{ fontFamily: "'Poppins', sans-serif" }}
+          >
+            {data.ctaTitle}
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
+            className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            {data.ctaDescription}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
+          >
+            <Button 
+              size="lg" 
+              variant="coral"
+              className="px-8 py-4 text-lg font-bold color-transition group"
+              asChild
+            >
+              <a href={data.ctaButtonLink}>
+                {data.ctaButtonText}
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQs Section - White Background (Moved after Final CTA) */}
       <section 
         id="sf-faqs"
         className="pt-[40px] md:pt-[60px] lg:pt-[40px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12"
@@ -498,54 +546,6 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             "description": data.heroDescription
           })}
         </script>
-      </section>
-
-      {/* Final CTA Section - Blue Gradient Background */}
-      <section 
-        id="sf-final-cta"
-        ref={finalCtaRef}
-        className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
-      >
-        <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight"
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
-            {data.ctaTitle}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
-            className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
-          >
-            {data.ctaDescription}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
-          >
-            <Button 
-              size="lg" 
-              variant="white-on-dark"
-              className="px-8 py-4 text-lg font-bold color-transition group"
-              asChild
-            >
-              <a href={data.ctaButtonLink}>
-                {data.ctaButtonText}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </motion.div>
-        </div>
       </section>
       </main>
 
