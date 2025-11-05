@@ -47,40 +47,40 @@ const AITransformationRoadmap = () => {
   const weeks = [
     {
       title: "WEEK 1: Discovery",
-      description: "Interview key stakeholders and map core business processes",
+      description: "We interview key stakeholders and map your core business processes to identify bottlenecks, inefficiencies, and opportunities.",
       details: [
+        "Interview key stakeholders",
+        "Map core business processes",
         "Identify bottlenecks and inefficiencies",
-        "Map current workflows and systems",
         "Document pain points and opportunities",
-        "Assess team capabilities and readiness",
-        "Review existing technology stack"
+        "Assess team capabilities and readiness"
       ]
     },
     {
       title: "WEEK 2: Opportunity Analysis",
-      description: "Create a database of AI solutions tailored to your operations",
+      description: "We create a database of AI solutions tailored to your operations, filtering for technical feasibility and business impact.",
       details: [
-        "Filter solutions by technical feasibility",
+        "Create database of AI solutions",
+        "Filter by technical feasibility",
         "Evaluate business impact potential",
-        "Identify high-ROI initiatives",
         "Match solutions to specific processes",
         "Prioritize by difficulty and value"
       ]
     },
     {
       title: "WEEK 3: Validation",
-      description: "Work with your team to validate solutions",
+      description: "We work with your team to validate solutions, ensuring recommendations align with on-the-ground reality.",
       details: [
-        "Ensure recommendations align with reality",
+        "Work directly with your team",
+        "Validate solution feasibility",
+        "Ensure alignment with reality",
         "Get stakeholder buy-in",
-        "Refine implementation approach",
-        "Address concerns and questions",
         "Finalize priority initiatives"
       ]
     },
     {
       title: "WEEK 4: Strategic Roadmap Delivery",
-      description: "Receive your complete 12-month implementation plan",
+      description: "You receive a 12-month implementation plan connecting quick wins with long-term transformation goals.",
       details: [
         "Detailed Process Maps — Visual documentation of your current workflows",
         "Opportunity Matrix — High-ROI initiatives ranked by impact and difficulty",
