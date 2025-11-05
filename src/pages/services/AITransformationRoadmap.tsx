@@ -413,44 +413,6 @@ const AITransformationRoadmap = () => {
           </div>
         </section>
 
-        {/* Final CTA Section */}
-        <section 
-          id="sf-final-cta"
-          ref={finalCtaRef}
-          className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
-        >
-          <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-              className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              Ready to Stop Guessing and Start Implementing?
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
-            >
-              <Button 
-                size="lg" 
-                variant="coral"
-                className="px-8 py-4 text-lg font-bold color-transition group"
-                asChild
-              >
-                <a href="/get-started">
-                  Book a Free Call
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-
         {/* FAQs Section */}
         <section className="pt-[40px] md:pt-[60px] lg:pt-[40px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
@@ -503,6 +465,44 @@ const AITransformationRoadmap = () => {
                 </motion.details>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section 
+          id="sf-final-cta"
+          ref={finalCtaRef}
+          className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
+        >
+          <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
+            <motion.h2 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Ready to Stop Guessing and Start Implementing?
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
+            >
+              <Button 
+                size="lg" 
+                variant="coral"
+                className="px-8 py-4 text-lg font-bold color-transition group"
+                asChild
+              >
+                <a href="/get-started">
+                  Book a Free Call
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </motion.div>
           </div>
         </section>
       </main>
