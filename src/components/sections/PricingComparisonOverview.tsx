@@ -2,6 +2,11 @@ const PricingComparisonOverview = () => {
   return (
     <section className="py-16 md:py-section bg-background">
       <div className="container mx-auto px-4 lg:px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Competitive Pricing Analysis
+          </h2>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-container-3xl mx-auto">
           {/* Left Column: Key Metrics */}
           <div className="flex flex-col justify-evenly gap-8">
