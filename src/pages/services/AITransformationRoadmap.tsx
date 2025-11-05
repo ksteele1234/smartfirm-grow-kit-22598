@@ -79,9 +79,15 @@ const AITransformationRoadmap = () => {
         ]
       }
     ],
-    ctaTitle: "The Challenge You're Facing",
+    faqs: [
+      {
+        question: "Investment",
+        answer: "Starting at $7,500. Small business engagements available. Enterprise pricing upon consultation."
+      }
+    ],
+    ctaTitle: "Ready to Stop Guessing and Start Implementing?",
     ctaDescription: "Your competitors are implementing AI. Your team is overwhelmed by tools and possibilities. Everyone's asking \"where do we start?\" — but no one has a clear answer. You don't need another tool. You need a strategic plan.",
-    ctaButtonText: "Get Your AI Roadmap",
+    ctaButtonText: "Book a Free Call",
     ctaButtonLink: "/get-started"
   };
 
