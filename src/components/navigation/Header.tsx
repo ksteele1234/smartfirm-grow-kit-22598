@@ -27,68 +27,84 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const services = [
-    // Main Service Categories
+  const marketingServices = [
     { 
       title: "Marketing Automation", 
-      href: "/services/marketing-automation",
+      href: "/services/marketing-automation-for-accounting-firms",
       description: "SmartFirm marketing automation for accountants, CPAs, and bookkeepers that attracts more leads and converts them into clients."
     },
     { 
-      title: "Technology Solutions", 
-      href: "/services/technology-solutions",
-      description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
-    },
-    { 
-      title: "Business Optimization", 
-      href: "/services/business-optimization",
-      description: "Drive firm growth with streamlined processes, KPI dashboards, and data-driven decisions."
-    },
-    { 
-      title: "Executive Services", 
-      href: "/services/executive-services",
-      description: "Fractional CIO and CFO expertise tailored to accounting firms that want growth without full-time costs."
-    },
-    // Individual Services
-    { 
-      title: "Automated Lead Follow-up", 
-      href: "/services/automated-lead-follow-up",
-      description: "Convert more leads with CPA-focused email and SMS automation that responds instantly."
-    },
-    { 
-      title: "Client Review Generation", 
-      href: "/services/client-review-generation",
-      description: "Boost your reputation with automated review requests that increase referrals and 5-star ratings."
+      title: "Strategy & Integration", 
+      href: "/services/marketing-strategy-integration-for-accounting-firms",
+      description: "Connect your marketing infrastructure with custom roadmaps and seamless integrations."
     },
     { 
       title: "SEO for Accountants", 
-      href: "/services/seo-for-accountants",
+      href: "/services/seo-for-accounting-firms",
       description: "SEO for accounting firms and CPAs that improves local rankings and drives qualified leads."
     },
     { 
-      title: "Social Media Management", 
-      href: "/services/social-media-management",
-      description: "Consistent, professional content that positions your firm as a trusted expert."
-    },
-    { 
-      title: "Email Marketing", 
-      href: "/services/email-marketing",
-      description: "Targeted campaigns that nurture leads, improve client retention, and drive repeat business."
-    },
-    { 
       title: "Website Design", 
-      href: "/services/website-design",
+      href: "/services/professional-website-design-for-accounting-firms",
       description: "Modern, SEO-optimized websites for CPAs and accountants that convert visitors into clients."
     },
     { 
       title: "Content Marketing", 
-      href: "/services/content-marketing",
+      href: "/services/strategic-content-marketing-for-cpas",
       description: "Strategic content that establishes thought leadership and attracts ideal clients through education."
     },
     { 
+      title: "Social Media Management", 
+      href: "/services/social-media-management-for-cpas",
+      description: "Consistent, professional content that positions your firm as a trusted expert."
+    },
+    { 
+      title: "Email Marketing", 
+      href: "/services/email-marketing-for-cpas",
+      description: "Targeted campaigns that nurture leads, improve client retention, and drive repeat business."
+    },
+    { 
+      title: "Automated Lead Follow-up", 
+      href: "/services/automated-lead-follow-up-for-cpas",
+      description: "Convert more leads with CPA-focused email and SMS automation that responds instantly."
+    },
+    { 
+      title: "Client Review Generation", 
+      href: "/services/automated-review-generation-for-cpas",
+      description: "Boost your reputation with automated review requests that increase referrals and 5-star ratings."
+    },
+    { 
       title: "Online Reputation Management", 
-      href: "/services/online-reputation-management",
+      href: "/services/reputation-management-for-cpas",
       description: "Monitor, protect, and elevate your firm's online reputation with automated review generation."
+    }
+  ];
+
+  const operationsServices = [
+    { 
+      title: "AI Transformation Roadmap", 
+      href: "/services/ai-transformation-roadmap",
+      description: "Strategic AI implementation plan for accounting firms ready to transform their operations."
+    },
+    { 
+      title: "Single Process AI Transformation", 
+      href: "/services/single-process-ai-transformation",
+      description: "Focus on one critical process and transform it completely with AI."
+    },
+    { 
+      title: "Technology Solutions", 
+      href: "/services/accounting-firm-technology-consulting",
+      description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
+    },
+    { 
+      title: "Business Optimization", 
+      href: "/services/business-optimization-for-accounting-firms",
+      description: "Drive firm growth with streamlined processes, KPI dashboards, and data-driven decisions."
+    },
+    { 
+      title: "Executive Services", 
+      href: "/services/fractional-cio-for-accounting-firms",
+      description: "Fractional CIO and CFO expertise tailored to accounting firms that want growth without full-time costs."
     }
   ];
 
@@ -209,11 +225,11 @@ const Header = () => {
                   </a>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="grid gap-3 p-card-sm w-full max-w-[600px] lg:w-[600px] grid-cols-1 bg-background border border-border elevation-3 z-50">
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Main Service Categories</h4>
+                  <div className="grid gap-3 p-card-sm w-full max-w-[700px] lg:w-[700px] grid-cols-2 bg-background border border-border elevation-3 z-50">
+                    <div>
+                      <h4 className="text-sm font-semibold text-primary mb-3">Marketing Services</h4>
                       <div className="grid gap-2">
-                        {services.slice(0, 4).map((service) => (
+                        {marketingServices.map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
@@ -227,10 +243,10 @@ const Header = () => {
                         ))}
                       </div>
                     </div>
-                    <div className="border-t pt-4">
-                      <h4 className="text-sm font-semibold text-primary mb-2">Individual Services</h4>
+                    <div>
+                      <h4 className="text-sm font-semibold text-primary mb-3">Operations & AI</h4>
                       <div className="grid gap-2">
-                        {services.slice(4).map((service) => (
+                        {operationsServices.map((service) => (
                           <NavigationMenuLink
                             key={service.title}
                             href={service.href}
