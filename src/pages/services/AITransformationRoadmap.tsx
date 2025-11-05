@@ -327,8 +327,52 @@ const AITransformationRoadmap = () => {
           </div>
         </section>
 
-        {/* The Outcome Section */}
+        {/* What You Receive Section */}
         <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-background-light px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-bold mb-8 text-primary leading-tight"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              What You Receive
+            </motion.h2>
+            
+            <div className="space-y-4">
+              {[
+                "Detailed Process Maps — Visual documentation of your current workflows",
+                "Opportunity Matrix — High-ROI initiatives ranked by impact and difficulty",
+                "12-Month Roadmap — Phased implementation plan with timelines and resource requirements",
+                "ROI Projections — Clear cost/benefit analysis for each initiative",
+                "Executive Presentation — Slide deck ready to share with leadership and stakeholders"
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: isMobile ? 0.35 : 0.5,
+                    delay: isMobile ? Math.min(index * 0.08, 0.32) : index * 0.1,
+                    ease: "easeOut"
+                  }}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle className="h-6 w-6 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-lg text-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                    {item}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* The Outcome Section */}
+        <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <motion.h2
