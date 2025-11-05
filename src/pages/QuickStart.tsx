@@ -31,6 +31,7 @@ import SEO from "@/components/SEO";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import PricingHeroFull from "@/components/sections/PricingHeroFull";
 import GrowthAddOnsCard from "@/components/sections/GrowthAddOnsCard";
+import PricingComparisonOverview from "@/components/sections/PricingComparisonOverview";
 
 const QuickStart = () => {
   const packageIncludes = [
@@ -272,6 +273,9 @@ const QuickStart = () => {
             </div>
           </div>
         </section>
+
+        {/* Pricing Comparison Overview */}
+        <PricingComparisonOverview />
 
         {/* Outcomes Section */}
         <section className="py-16 md:py-section bg-background-light">
