@@ -373,7 +373,7 @@ const AITransformationRoadmap = () => {
         </section>
 
         {/* The Outcome Section */}
-        <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12">
+        <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-gradient-deep-teal px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <motion.h2
@@ -381,7 +381,7 @@ const AITransformationRoadmap = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
-                className="text-3xl md:text-4xl font-bold mb-4 text-primary leading-tight"
+                className="text-3xl md:text-4xl font-bold mb-4 text-white leading-tight"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 The Outcome
