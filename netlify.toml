@@ -9,12 +9,12 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Robots-Tag = "all"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.leadconnectorhq.com; frame-src https://api.leadconnectorhq.com; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.leadconnectorhq.com; frame-src https://api.leadconnectorhq.com;"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
 
 # Block preview and deploy URLs from search engines (use full table paths so TOML doesn't see duplicate [headers.values])
