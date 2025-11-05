@@ -347,7 +347,8 @@ const AITransformationRoadmap = () => {
                 "Opportunity Matrix — High-ROI initiatives ranked by impact and difficulty",
                 "12-Month Roadmap — Phased implementation plan with timelines and resource requirements",
                 "ROI Projections — Clear cost/benefit analysis for each initiative",
-                "Executive Presentation — Slide deck ready to share with leadership and stakeholders"
+                "Executive Presentation — Slide deck ready to share with leadership and stakeholders",
+                "Next Steps Strategy & Advisory Meeting"
               ].map((item, index) => (
                 <motion.div
                   key={index}
