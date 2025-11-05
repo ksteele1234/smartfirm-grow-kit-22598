@@ -42,17 +42,17 @@ const PricingHeroCondensed = () => {
             {/* Pricing Display */}
             <div className="mb-8 pb-8 border-b border-slate-200">
               <div className="flex items-baseline gap-2 mb-2">
-                <span className="text-[48px] md:text-[72px] leading-none font-[800] font-heading text-slate-900">
-                  $999
-                </span>
+              <span className="text-[48px] md:text-[72px] leading-none font-[800] font-heading text-slate-900">
+                $1,200
+              </span>
                 <span className="text-[24px] md:text-[32px] font-[600] font-heading text-slate-600">
                   /month
                 </span>
               </div>
               <div className="flex items-baseline gap-3 mb-3">
-                <span className="text-[28px] md:text-[48px] font-[700] font-heading text-slate-900">
-                  +$12,500
-                </span>
+              <span className="text-[28px] md:text-[48px] font-[700] font-heading text-slate-900">
+                +$14,500
+              </span>
                 <span className="text-[18px] md:text-[20px] font-[500] text-slate-600">
                   setup
                 </span>

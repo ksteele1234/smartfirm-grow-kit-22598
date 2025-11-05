@@ -159,7 +159,7 @@ const QuickStart = () => {
           },
           {
             question: "What ongoing support is included?",
-            answer: "The Quick Start includes 30 days of implementation support. For ongoing optimization, consider our Monthly Growth Program at $999/month."
+            answer: "The Quick Start includes 30 days of implementation support. For ongoing optimization, consider our Monthly Growth Program at $1,200/month."
           },
           {
             question: "Do I need technical skills?",

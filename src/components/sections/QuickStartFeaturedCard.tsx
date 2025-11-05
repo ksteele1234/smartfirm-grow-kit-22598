@@ -49,7 +49,7 @@ const QuickStartFeaturedCard = () => {
         {/* Monthly Fee - Prominent */}
         <div className="mb-4">
           <div className="text-6xl md:text-7xl font-extrabold text-gradient-gold mb-1 animate-subtle-pulse">
-            $999
+            $1,200
           </div>
           <div className="text-base text-muted-foreground">per month</div>
         </div>
@@ -60,7 +60,7 @@ const QuickStartFeaturedCard = () => {
         {/* Setup Fee - Smaller */}
         <div>
           <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-1">
-            $12,500
+            $14,500
           </div>
           <div className="text-sm text-muted-foreground">One-time setup</div>
         </div>
