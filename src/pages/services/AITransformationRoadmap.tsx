@@ -345,7 +345,7 @@ const AITransformationRoadmap = () => {
               {[
                 "Detailed Process Maps — Visual documentation of your current workflows",
                 "Opportunity Matrix — High-ROI initiatives ranked by impact and difficulty",
-                "12-Month Roadmap — Phased implementation plan prioritized to meet your needs & goals",
+                "12-Month Roadmap — Phased implementation plan prioritized to meet your needs & goals, with timelines and resource requirements",
                 "ROI Projections — Clear cost/benefit analysis for each initiative",
                 "Executive Presentation — Slide deck ready to share with leadership and stakeholders",
                 "Next Steps Strategy & Advisory Meeting"
