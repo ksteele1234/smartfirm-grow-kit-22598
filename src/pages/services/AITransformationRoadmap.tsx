@@ -9,79 +9,79 @@ const AITransformationRoadmap = () => {
     canonicalUrl: "https://smartfirm.io/services/ai-transformation-roadmap",
     content: {},
     heroTitle: "AI Transformation Roadmap",
-    heroSubtitle: "Strategic AI implementation plan for accounting firms ready to transform their operations.",
-    heroDescription: "Comprehensive AI transformation roadmap that identifies opportunities, prioritizes initiatives, and delivers measurable results.",
+    heroSubtitle: "Stop Guessing Where AI Fits. Get a Clear 12-Month Strategy.",
+    heroDescription: "A comprehensive 2-4 week engagement that maps your business processes, identifies high-impact AI opportunities, and delivers a prioritized implementation plan with clear ROI projections. This isn't theory. It's a practical roadmap built for your business.",
     benefits: [
       {
-        title: "Strategic Assessment",
-        description: "Deep analysis of your current processes and AI readiness",
+        title: "Clarity",
+        description: "Know exactly where AI creates value in your business",
         icon: "Target"
       },
       {
-        title: "Custom Roadmap",
-        description: "Tailored implementation plan aligned with your firm's goals",
-        icon: "Map"
+        title: "Confidence",
+        description: "Move forward with validated, feasible solutions",
+        icon: "CheckCircle"
       },
       {
-        title: "Priority Framework",
-        description: "Clear prioritization of AI initiatives for maximum ROI",
+        title: "Competitive Advantage",
+        description: "Implement strategic AI before your competition",
         icon: "TrendingUp"
       },
       {
-        title: "Implementation Support",
-        description: "Guidance and support throughout your transformation journey",
+        title: "Partnership",
+        description: "We become your ongoing transformation partner, not just a vendor",
         icon: "Users"
       }
     ],
     features: [
       {
-        title: "Process Discovery",
-        description: "Comprehensive analysis of your firm's operations",
+        title: "WEEK 1: Discovery",
+        description: "Interview key stakeholders and map core business processes",
         details: [
-          "Current workflow assessment",
-          "Pain point identification",
-          "Opportunity mapping",
-          "Technology stack review",
-          "Team capability assessment"
+          "Identify bottlenecks and inefficiencies",
+          "Map current workflows and systems",
+          "Document pain points and opportunities",
+          "Assess team capabilities and readiness",
+          "Review existing technology stack"
         ]
       },
       {
-        title: "AI Opportunity Analysis",
-        description: "Identify high-impact AI use cases for your firm",
+        title: "WEEK 2: Opportunity Analysis",
+        description: "Create a database of AI solutions tailored to your operations",
         details: [
-          "Process automation opportunities",
-          "Client service enhancements",
-          "Internal efficiency improvements",
-          "Revenue generation opportunities",
-          "Risk mitigation strategies"
+          "Filter solutions by technical feasibility",
+          "Evaluate business impact potential",
+          "Identify high-ROI initiatives",
+          "Match solutions to specific processes",
+          "Prioritize by difficulty and value"
         ]
       },
       {
-        title: "Custom Implementation Roadmap",
-        description: "Phased plan for successful AI adoption",
+        title: "WEEK 3: Validation",
+        description: "Work with your team to validate solutions",
         details: [
-          "90-day quick wins",
-          "6-month strategic initiatives",
-          "12-month transformation goals",
-          "Resource allocation plan",
-          "Success metrics and KPIs"
+          "Ensure recommendations align with reality",
+          "Get stakeholder buy-in",
+          "Refine implementation approach",
+          "Address concerns and questions",
+          "Finalize priority initiatives"
         ]
       },
       {
-        title: "Ongoing Support",
-        description: "Partnership throughout your transformation",
+        title: "WEEK 4: Strategic Roadmap Delivery",
+        description: "Receive your complete 12-month implementation plan",
         details: [
-          "Monthly progress reviews",
-          "Quarterly strategy adjustments",
-          "Team training and enablement",
-          "Technology vendor selection",
-          "Change management support"
+          "Detailed Process Maps — Visual documentation of your current workflows",
+          "Opportunity Matrix — High-ROI initiatives ranked by impact and difficulty",
+          "12-Month Roadmap — Phased implementation plan with timelines and resources",
+          "ROI Projections — Clear cost/benefit analysis for each initiative",
+          "Executive Presentation — Slide deck ready to share with leadership"
         ]
       }
     ],
-    ctaTitle: "Start Your AI Transformation",
-    ctaDescription: "Schedule a consultation to discover how AI can transform your accounting firm's operations and client service.",
-    ctaButtonText: "Schedule Consultation",
+    ctaTitle: "The Challenge You're Facing",
+    ctaDescription: "Your competitors are implementing AI. Your team is overwhelmed by tools and possibilities. Everyone's asking \"where do we start?\" — but no one has a clear answer. You don't need another tool. You need a strategic plan.",
+    ctaButtonText: "Get Your AI Roadmap",
     ctaButtonLink: "/get-started"
   };
 
