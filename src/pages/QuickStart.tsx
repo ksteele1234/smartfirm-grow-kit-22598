@@ -32,6 +32,7 @@ import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accent
 import PricingHeroFull from "@/components/sections/PricingHeroFull";
 import GrowthAddOnsCard from "@/components/sections/GrowthAddOnsCard";
 import PricingComparisonOverview from "@/components/sections/PricingComparisonOverview";
+import DetailedPriceBreakdown from "@/components/sections/DetailedPriceBreakdown";
 
 const QuickStart = () => {
   const packageIncludes = [
@@ -276,6 +277,9 @@ const QuickStart = () => {
 
         {/* Pricing Comparison Overview */}
         <PricingComparisonOverview />
+
+        {/* Detailed Price Breakdown */}
+        <DetailedPriceBreakdown />
 
         {/* Outcomes Section */}
         <section className="py-16 md:py-section bg-background-light">
