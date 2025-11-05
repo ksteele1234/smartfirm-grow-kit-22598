@@ -15,10 +15,10 @@ const PricingComparisonOverview = () => {
                 Competitor Annual Cost
               </div>
               <div className="text-5xl font-extrabold text-foreground leading-tight">
-                $25K - $120K
+                $115K - $193K
               </div>
               <div className="text-base text-muted-foreground mt-2">
-                Per year (variable pricing)
+                Year 1 (upfront + 12 months)
               </div>
             </div>
             
@@ -27,10 +27,10 @@ const PricingComparisonOverview = () => {
                 SmartFirm Annual Cost
               </div>
               <div className="text-5xl font-extrabold text-foreground leading-tight">
-                $28,900
+                $27,700
               </div>
               <div className="text-base text-muted-foreground mt-2">
-                Year 1 ($14,500 + $14,400)
+                Year 1 ($14,500 + $13,200)
               </div>
             </div>
             
@@ -39,7 +39,7 @@ const PricingComparisonOverview = () => {
                 Estimated Annual Savings
               </div>
               <div className="text-5xl lg:text-[52px] font-extrabold text-primary leading-tight">
-                $86K - $164K
+                $87K - $165K
               </div>
               <div className="text-base text-muted-foreground mt-2">
                 Based on comparable service packages
