@@ -5,10 +5,28 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { CurvedSeparator } from "@/components/ui/curved-separator";
 
 const SingleProcessAITransformation = () => {
   const isMobile = useIsMobile();
+
+  const heroStyles = `
+    @keyframes bubble-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    @keyframes pulse-button {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.95; }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  `;
 
   return (
     <>
@@ -20,48 +38,69 @@ const SingleProcessAITransformation = () => {
       <Header />
       
       <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-muted-blue text-white overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              Single-Process AI Optimization
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-white/90 italic mb-8"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              Turn Your Biggest Bottleneck Into a Clear Action Plan.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <Button 
-                size="lg" 
-                variant="coral"
-                className="px-8 py-4 text-lg font-bold color-transition group"
-                asChild
+        {/* Hero Section - Blue Gradient Background */}
+        <section
+          className="hero-section relative pt-24 pb-32 min-h-[unset] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue"
+        >
+          <style>{heroStyles}</style>
+          
+          <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
+            {/* Hero Content - Centered */}
+            <div className="hero-content relative z-10 text-center max-w-container-lg px-4">
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                <a href="/get-started">
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-            </motion.div>
+                Single-Process AI Optimization
+              </motion.h1>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                className="text-lg md:text-xl text-white/90 leading-relaxed mb-8"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Turn Your Biggest Bottleneck Into a Clear Action Plan.
+              </motion.p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              >
+                <Button 
+                  size="lg"
+                  className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
+                  asChild
+                >
+                  <a href="/get-started">
+                    Book a Free Call
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+              </motion.div>
+            </div>
+            
+            {/* Hero Graphics - Orbital Circles */}
+            <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
+              {/* Glass Bubble with Settings Icon */}
+              <div 
+                className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] glass-card-light rounded-full flex items-center justify-center elevation-3 z-[15]"
+                style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
+              >
+                <Target className="w-[50px] h-[50px] md:w-[50px] md:h-[50px] sm:w-[40px] sm:h-[40px] text-primary glow-cyan" />
+              </div>
+            </div>
           </div>
-          <CurvedSeparator 
-            className="absolute bottom-0 left-0 w-full text-white"
-          />
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
+            </svg>
+          </div>
         </section>
 
         {/* The Challenge Section */}
