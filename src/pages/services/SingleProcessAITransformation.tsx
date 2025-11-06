@@ -5,6 +5,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { CurvedSeparator } from "@/components/ui/curved-separator";
 
 const SingleProcessAITransformation = () => {
   const isMobile = useIsMobile();
@@ -20,13 +21,13 @@ const SingleProcessAITransformation = () => {
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-subtle overflow-hidden">
+        <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-muted-blue text-white overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Single-Process AI Optimization
@@ -35,12 +36,32 @@ const SingleProcessAITransformation = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl md:text-2xl text-secondary italic mb-8"
+              className="text-xl md:text-2xl text-white/90 italic mb-8"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Turn Your Biggest Bottleneck Into a Clear Action Plan.
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <Button 
+                size="lg" 
+                variant="coral"
+                className="px-8 py-4 text-lg font-bold color-transition group"
+                asChild
+              >
+                <a href="/get-started">
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </motion.div>
           </div>
+          <CurvedSeparator 
+            className="absolute bottom-0 left-0 w-full text-white"
+          />
         </section>
 
         {/* The Challenge Section */}
@@ -74,7 +95,7 @@ const SingleProcessAITransformation = () => {
         </section>
 
         {/* What Is It Section */}
-        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-lighter">
           <div className="max-w-4xl mx-auto">
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
@@ -160,7 +181,7 @@ const SingleProcessAITransformation = () => {
         </section>
 
         {/* What You Receive Section */}
-        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-lighter">
           <div className="max-w-4xl mx-auto">
             <motion.h2 
               initial={{ opacity: 0, y: 30 }}
@@ -307,14 +328,14 @@ const SingleProcessAITransformation = () => {
         </section>
 
         {/* Investment Section */}
-        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-lighter">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-slate-50 rounded-2xl p-12 shadow-lg"
+              className="bg-white rounded-2xl p-12 shadow-lg"
             >
               <h2 className="text-2xl font-bold text-secondary mb-4">Investment</h2>
               <div className="text-5xl md:text-6xl font-bold text-primary mb-4">$1,500</div>
