@@ -105,6 +105,65 @@ function verifyAssets() {
   return allPresent;
 }
 
+function verifySitemap() {
+  console.log('\n🗺️  Verifying Generated Sitemap...');
+  
+  const distPath = resolve(__dirname, '../dist');
+  const sitemapPath = resolve(distPath, 'sitemap.xml');
+  
+  if (!existsSync(distPath)) {
+    console.log('  ⚠ dist folder not found - build may not be complete');
+    return false;
+  }
+  
+  if (!existsSync(sitemapPath)) {
+    console.log('  ✗ dist/sitemap.xml not found - plugin may not have run');
+    return false;
+  }
+  
+  const sitemap = readFileSync(sitemapPath, 'utf-8');
+  
+  // Count URLs in sitemap
+  const urlMatches = sitemap.match(/<loc>/g);
+  const urlCount = urlMatches ? urlMatches.length : 0;
+  
+  console.log(`  📊 Total URLs in sitemap: ${urlCount}`);
+  
+  // Verify minimum URL count (should have ~60+ routes)
+  if (urlCount < 50) {
+    console.log(`  ⚠ Expected at least 50 URLs, found ${urlCount}`);
+    return false;
+  } else {
+    console.log(`  ✓ Sitemap contains adequate number of URLs`);
+  }
+  
+  // Verify critical AI transformation pages are present
+  const criticalPages = [
+    'https://smartfirm.io/services/ai-transformation-roadmap',
+    'https://smartfirm.io/services/single-process-ai-transformation'
+  ];
+  
+  let allCriticalPresent = true;
+  criticalPages.forEach(page => {
+    if (sitemap.includes(page)) {
+      console.log(`  ✓ ${page.split('/').pop()}`);
+    } else {
+      console.log(`  ✗ MISSING: ${page.split('/').pop()}`);
+      allCriticalPresent = false;
+    }
+  });
+  
+  // Verify sitemap is valid XML
+  if (sitemap.includes('<?xml') && sitemap.includes('</urlset>')) {
+    console.log('  ✓ Sitemap is valid XML format');
+  } else {
+    console.log('  ✗ Sitemap XML format may be invalid');
+    return false;
+  }
+  
+  return allCriticalPresent && urlCount >= 50;
+}
+
 function verifyIndexHtml() {
   console.log('\n📄 Verifying index.html Configuration...');
   
@@ -142,6 +201,7 @@ function main() {
     favicons: verifyFavicons(),
     schemas: verifySchemaInjection(),
     assets: verifyAssets(),
+    sitemap: verifySitemap(),
     indexHtml: verifyIndexHtml()
   };
   

@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
+import sitemap from "vite-plugin-sitemap";
+import { sitemapRoutes } from "./src/config/sitemapRoutes";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -20,6 +22,11 @@ export default defineConfig(({ mode }) => ({
           quality: '80'
         });
       }
+    }),
+    sitemap({
+      hostname: 'https://smartfirm.io',
+      dynamicRoutes: sitemapRoutes.map(route => route.path),
+      readable: true, // Format XML for readability
     }),
     mode === "development" && componentTagger()
   ].filter(Boolean),
