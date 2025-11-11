@@ -84,4 +84,30 @@ https://newsmartfirmwebsite.netlify.app/* https://smartfirm.io/:splat 301!
 /growth-calculator-accounting-firm-growth-calculator  /growth-calculator  301
 /case-studies  /about  301
 /success-stories  /about  301
+
+# Legacy URL redirects from old site
+/home  /  301
+/about-us  /about  301
+/demo  /get-started  301
+/book-demo  /get-started  301
+/demo-call-calendar  /get-started  301
+/terms-of-service  /terms  301
+/smartfirm.io/privacy  /privacy  301
+/smartfirm.io/home  /  301
+/services/white-glove-onboarding-support  /services/add-ons  301
+/services/voice-ai  /services/ai-transformation-roadmap  301
+/services/funnels-and-automations  /services/marketing-automation-for-accounting-firms  301
+/services/automated-leadfollowup  /services/automated-lead-follow-up-for-cpas  301
+/services/social-media-content-plan-management  /services/social-media-management-for-cpas  301
+/services/ai-seo-optimization  /services/seo-for-accounting-firms  301
+/services/ai-review-management-for-accountants  /services/automated-review-generation-for-cpas  301
+/services/ai-review-management  /services/automated-review-generation-for-cpas  301
+/tmp/workspace/production-frozen/leadgen/common/builder-preview/locales/it.json  /  301
+/tmp/workspace/production/leadgen/common/builder-preview/locales/pt_BR.json  /  301
+
+# Subdomain redirects (solutions.smartfirm.io)
+https://solutions.smartfirm.io/solutions/test-page/  https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms  301!
+https://solutions.smartfirm.io/sample-page/  https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms  301!
+https://solutions.smartfirm.io/2025/07/31/hello-world/  https://smartfirm.io/resources  301!
+
 /* /index.html 200
