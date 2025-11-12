@@ -325,12 +325,12 @@ const AITransformationOffer = () => {
                 Join other forward-thinking firms who are implementing strategic AI before their competition.
               </p>
               
-              <div className="bg-gradient-to-br from-coral/10 to-gold/10 rounded-2xl p-8 mb-8 border-2 border-coral/20 text-center">
+              <div className="bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl p-8 mb-8 border-2 border-gold/30 text-center">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2.5">
+                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2.5 mt-[30px]">
                   <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
                   <p className="text-foreground font-semibold">PASBA Members - Through November Only</p>
                 </div>
