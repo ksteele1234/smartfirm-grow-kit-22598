@@ -57,7 +57,7 @@ const AITransformationOffer = () => {
       
       <main id="main-content" role="main">
         {/* Hero Section with Video */}
-        <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-primary via-secondary to-deep-navy">
+        <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-mesh-professional">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzAtMS4xLS45LTItMi0yaC04Yy0xLjEgMC0yIC45LTIgMnY4YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMnYtOHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
           
           <div className="max-w-5xl mx-auto relative z-10">
@@ -68,7 +68,7 @@ const AITransformationOffer = () => {
               transition={{ duration: 0.5 }}
               className="flex justify-center mb-6"
             >
-              <Badge className="bg-coral text-white px-4 py-2 text-sm font-semibold border-0">
+              <Badge className="bg-accent text-accent-foreground px-4 py-2 text-sm font-semibold border-0">
                 <Sparkles className="w-4 h-4 mr-2" />
                 PASBA Member Exclusive
               </Badge>
@@ -147,10 +147,10 @@ const AITransformationOffer = () => {
                 <p className="text-white/80 text-lg mb-2">Investment</p>
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-white/60 text-3xl line-through font-bold">$9,999</span>
-                  <span className="text-coral text-5xl md:text-6xl font-bold">$7,500</span>
+                  <span className="text-accent text-5xl md:text-6xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-coral/20 border border-coral/40 rounded-full px-4 py-2">
-                  <Sparkles className="w-5 h-5 text-coral" />
+                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2">
+                  <Sparkles className="w-5 h-5 text-accent" />
                   <p className="text-white font-semibold">PASBA Members Only - Through November</p>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const AITransformationOffer = () => {
             >
               <Button
                 size="lg"
-                className="px-12 py-6 text-xl font-bold bg-coral hover:bg-coral-dark text-white rounded-xl shadow-2xl hover:shadow-coral/50 transform hover:scale-105 transition-all duration-300"
+                className="px-12 py-6 text-xl font-bold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl shadow-2xl hover:shadow-accent/50 transform hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="/get-started">
@@ -233,7 +233,7 @@ const AITransformationOffer = () => {
                   className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-slate-light"
                 >
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-coral flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <span className="text-lg font-semibold text-secondary" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                       {item}
                     </span>
@@ -269,7 +269,7 @@ const AITransformationOffer = () => {
                   className="text-center"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-4 backdrop-blur-sm border border-white/20">
-                    <outcome.icon className="w-8 h-8 text-coral" />
+                    <outcome.icon className="w-8 h-8 text-accent" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
                     {outcome.title}
@@ -302,17 +302,17 @@ const AITransformationOffer = () => {
               <div className="bg-gradient-to-br from-coral/10 to-gold/10 rounded-2xl p-8 mb-8 border-2 border-coral/20">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
-                  <span className="text-coral text-5xl font-bold">$7,500</span>
+                  <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-coral/10 border border-coral/30 rounded-full px-4 py-2 mb-6">
-                  <Sparkles className="w-5 h-5 text-coral" />
+                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6">
+                  <Sparkles className="w-5 h-5 text-accent" />
                   <p className="text-foreground font-semibold">PASBA Members - Through November Only</p>
                 </div>
               </div>
 
               <Button
                 size="lg"
-                className="px-12 py-6 text-xl font-bold bg-coral hover:bg-coral-dark text-white rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="px-12 py-6 text-xl font-bold bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="/get-started">
