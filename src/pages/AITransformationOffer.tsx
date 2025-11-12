@@ -84,7 +84,7 @@ const AITransformationOffer = () => {
             >
               Get a Clear 12-Month
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-coral to-gold">
+              <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 AI Transformation Roadmap
               </span>
             </motion.h1>
