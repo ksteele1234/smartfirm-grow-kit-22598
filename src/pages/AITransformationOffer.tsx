@@ -13,32 +13,47 @@ const AITransformationOffer = () => {
   const outcomes = [
     {
       icon: Target,
-      title: "Clarity",
-      description: "Know exactly where AI creates value"
+      title: "Strategic Clarity",
+      description: "No more guessing. You'll know exactly which AI opportunities deliver the highest ROI and where to focus your resources first."
     },
     {
       icon: CheckCircle,
-      title: "Confidence",
-      description: "Move forward with validated solutions"
+      title: "Execution Confidence",
+      description: "Move forward with a validated, step-by-step plan that your team can actually implement—no wasted time or budget on wrong turns."
     },
     {
       icon: TrendingUp,
-      title: "Competitive Advantage",
-      description: "Implement strategic AI early"
+      title: "Competitive Edge",
+      description: "While competitors struggle with AI adoption, you'll have a clear advantage with strategic implementation that compounds over time."
     },
     {
       icon: Sparkles,
-      title: "Partnership",
-      description: "We become your transformation partner"
+      title: "Long-Term Partnership",
+      description: "This isn't just a report—it's the beginning of a partnership. We'll guide you through execution and optimization as your needs evolve."
     }
   ];
 
   const deliverables = [
-    "Detailed Process Maps",
-    "Opportunity Matrix",
-    "12-Month Roadmap",
-    "ROI Projections",
-    "Executive Presentation"
+    {
+      title: "Detailed Process Maps",
+      description: "Visual documentation of your current workflows identifying inefficiencies, manual touchpoints, and AI opportunities across every department."
+    },
+    {
+      title: "Opportunity Matrix",
+      description: "A prioritized assessment scoring each AI opportunity by impact potential, implementation complexity, and ROI timeline - so you know exactly where to start."
+    },
+    {
+      title: "Phased 12-Month Roadmap",
+      description: "Your complete implementation plan broken into quarterly phases with specific milestones, resource requirements, and success metrics for each stage."
+    },
+    {
+      title: "Detailed ROI Projections",
+      description: "Financial modeling showing expected cost savings, efficiency gains, and revenue impact with conservative, moderate, and aggressive scenarios."
+    },
+    {
+      title: "Executive Presentation Deck",
+      description: "A polished, board-ready presentation you can use to secure stakeholder buy-in, complete with visual roadmaps and financial justifications."
+    }
   ];
 
   return (
@@ -149,8 +164,8 @@ const AITransformationOffer = () => {
                   <span className="text-white/60 text-3xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl md:text-6xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2">
-                  <Sparkles className="w-5 h-5 text-accent" />
+                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2.5">
+                  <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
                   <p className="text-white font-semibold">PASBA Members Only - Through November</p>
                 </div>
               </div>
@@ -222,7 +237,7 @@ const AITransformationOffer = () => {
               What You Receive
             </motion.h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {deliverables.map((item, index) => (
                 <motion.div
                   key={index}
@@ -230,13 +245,18 @@ const AITransformationOffer = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow border border-slate-light"
+                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-slate-light"
                 >
                   <div className="flex items-start gap-4">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                    <span className="text-lg font-semibold text-secondary" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                      {item}
-                    </span>
+                    <div>
+                      <h3 className="text-xl font-bold text-secondary mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                        {item.title}
+                      </h3>
+                      <p className="text-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -258,7 +278,7 @@ const AITransformationOffer = () => {
               The Outcome
             </motion.h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {outcomes.map((outcome, index) => (
                 <motion.div
                   key={index}
@@ -266,17 +286,23 @@ const AITransformationOffer = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-4 backdrop-blur-sm border border-white/20">
-                    <outcome.icon className="w-8 h-8 text-accent" />
+                  <div className="flex items-start gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20">
+                        <outcome.icon className="w-8 h-8 text-accent" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                        {outcome.title}
+                      </h3>
+                      <p className="text-white/90 text-lg leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                        {outcome.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                    {outcome.title}
-                  </h3>
-                  <p className="text-white/80" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                    {outcome.description}
-                  </p>
                 </motion.div>
               ))}
             </div>
@@ -304,8 +330,8 @@ const AITransformationOffer = () => {
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6">
-                  <Sparkles className="w-5 h-5 text-accent" />
+                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2.5 mb-6">
+                  <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
                   <p className="text-foreground font-semibold">PASBA Members - Through November Only</p>
                 </div>
               </div>
