@@ -181,17 +181,17 @@ const AITransformationOffer = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/20"
+              className="bg-white rounded-2xl p-8 mb-8 border border-slate-light shadow-lg"
             >
               <div className="text-center">
-                <p className="text-white/80 text-lg mb-2">Investment</p>
+                <p className="text-foreground/80 text-lg mb-2">Investment</p>
                 <div className="flex items-center justify-center gap-4 mb-4">
-                  <span className="text-white/60 text-3xl line-through font-bold">$9,999</span>
+                  <span className="text-muted-foreground text-3xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl md:text-6xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2.5 mt-[30px]">
-                  <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
-                  <p className="text-white font-semibold leading-none">PASBA Members Only - Through November</p>
+                <div className="inline-flex items-center justify-center gap-2 bg-gradient-gold-transparent border border-gold/30 rounded-full px-4 py-2.5 mt-[30px]">
+                  <Sparkles className="w-5 h-5 text-foreground flex-shrink-0" />
+                  <p className="text-foreground font-semibold leading-none">PASBA Members Only - Through November</p>
                 </div>
               </div>
             </motion.div>
@@ -359,13 +359,13 @@ const AITransformationOffer = () => {
                 Join other forward-thinking firms who are implementing strategic AI before their competition.
               </p>
               
-              <div className="bg-gradient-gold rounded-2xl p-8 mb-8 border-2 border-border text-center">
+              <div className="bg-white rounded-2xl p-8 mb-8 border-2 border-slate-light shadow-lg text-center">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2.5 mt-[30px]">
-                  <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
+                <div className="inline-flex items-center justify-center gap-2 bg-gradient-gold-transparent border border-gold/30 rounded-full px-4 py-2.5 mt-[30px]">
+                  <Sparkles className="w-5 h-5 text-foreground flex-shrink-0" />
                   <p className="text-foreground font-semibold leading-none">PASBA Members - Through November Only</p>
                 </div>
               </div>

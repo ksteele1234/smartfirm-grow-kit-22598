@@ -470,6 +470,14 @@
     );
   }
 
+  /* Transparent gold gradient for badges */
+  .bg-gradient-gold-transparent {
+    background: linear-gradient(135deg, 
+      hsla(38, 92%, 50%, 0.15),
+      hsla(31, 94%, 43%, 0.25)
+    );
+  }
+
   /* Mesh gradients */
   .bg-gradient-mesh-professional {
     background: linear-gradient(135deg, 
