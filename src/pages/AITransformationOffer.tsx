@@ -14,45 +14,70 @@ const AITransformationOffer = () => {
     {
       icon: Target,
       title: "Strategic Clarity",
-      description: "No more guessing. You'll know exactly which AI opportunities deliver the highest ROI and where to focus your resources first."
+      description: "Prioritized backlog with clear ownership, dependencies mapped, and 30-60-90 day milestones. Know exactly what to automate first, which processes to rebuild, and where AI creates the most leverage for your business goals."
     },
     {
       icon: CheckCircle,
       title: "Execution Confidence",
-      description: "Move forward with a validated, step-by-step plan that your team can actually implement—no wasted time or budget on wrong turns."
+      description: "Complete enablement plan including training modules, acceptance criteria, and change management playbook. Your team will understand not just what to implement, but how to adopt it successfully with minimal disruption."
     },
     {
       icon: TrendingUp,
       title: "Competitive Edge",
-      description: "While competitors struggle with AI adoption, you'll have a clear advantage with strategic implementation that compounds over time."
+      description: "Faster lead handling, reduced turnaround times, and improved client experience. Example: Client onboarding reduced from 14 days to 6 days in Q2 pilots. While competitors talk about AI, you'll have measurable improvements in NPS and operational speed."
     },
     {
       icon: Sparkles,
       title: "Long-Term Partnership",
-      description: "This isn't just a report—it's the beginning of a partnership. We'll guide you through execution and optimization as your needs evolve."
+      description: "Quarterly business reviews, adoption scorecards, and ongoing optimization support. This roadmap evolves with your business—we track KPIs, adjust priorities, and help you scale AI capabilities as your team grows and market conditions shift."
     }
   ];
 
   const deliverables = [
     {
       title: "Detailed Process Maps",
-      description: "Visual documentation of your current workflows identifying inefficiencies, manual touchpoints, and AI opportunities across every department."
+      description: "Visual documentation of your current workflows identifying inefficiencies, manual touchpoints, and AI opportunities across every department.",
+      details: [
+        "Scope: Sales, Marketing, Client Services, Onboarding, Operations",
+        "Outputs: BPMN-style process maps, queue touchpoints, manual steps, wait states",
+        "Decisions: Which steps to automate, handoff points to improve, bottlenecks to eliminate"
+      ]
     },
     {
       title: "Opportunity Matrix",
-      description: "A prioritized assessment scoring each AI opportunity by impact potential, implementation complexity, and ROI timeline - so you know exactly where to start."
+      description: "A prioritized assessment scoring each AI opportunity by impact potential, implementation complexity, and ROI timeline.",
+      details: [
+        "Inputs: Transaction volume, error rates, cycle time, staff effort per process",
+        "Outputs: Impact × Effort × Time-to-Value scoring for each opportunity",
+        "Decisions: Top 3 quick wins and 2 foundational systems to prioritize first"
+      ]
     },
     {
       title: "Phased 12-Month Roadmap",
-      description: "Your complete implementation plan broken into quarterly phases with specific milestones, resource requirements, and success metrics for each stage."
+      description: "Your complete implementation plan broken into quarterly phases with specific milestones, resource requirements, and success metrics.",
+      details: [
+        "Q1–Q4 milestones with assigned roles, training schedules, adoption checkpoints",
+        "Dependencies mapped, risk flags identified, change management integrated",
+        "Resource requirements: technology, budget, team capacity per phase"
+      ]
     },
     {
       title: "Detailed ROI Projections",
-      description: "Financial modeling showing expected cost savings, efficiency gains, and revenue impact with conservative, moderate, and aggressive scenarios."
+      description: "Financial modeling showing expected cost savings, efficiency gains, and revenue impact with three scenarios.",
+      details: [
+        "Baseline vs projected: hours saved, error reduction, cycle time improvements",
+        "Conservative, moderate, and aggressive scenarios with probability weights",
+        "Break-even timeline and cumulative ROI projections over 12-36 months"
+      ]
     },
     {
       title: "Executive Presentation Deck",
-      description: "A polished, board-ready presentation you can use to secure stakeholder buy-in, complete with visual roadmaps and financial justifications."
+      description: "A polished, board-ready presentation you can use to secure stakeholder buy-in, complete with visual roadmaps and financial justifications.",
+      details: [
+        "Talking points: risk assessment, budget allocation, timeline, governance structure",
+        "Visuals: roadmap swimlanes, KPI dashboards, before/after process flows",
+        "Appendix: case studies, vendor comparisons, implementation checklist"
+      ]
     }
   ];
 
@@ -164,9 +189,9 @@ const AITransformationOffer = () => {
                   <span className="text-white/60 text-3xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl md:text-6xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2.5">
+                <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 rounded-full px-4 py-2.5 mt-[30px]">
                   <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
-                  <p className="text-white font-semibold">PASBA Members Only - Through November</p>
+                  <p className="text-white font-semibold leading-none">PASBA Members Only - Through November</p>
                 </div>
               </div>
             </motion.div>
@@ -253,9 +278,18 @@ const AITransformationOffer = () => {
                       <h3 className="text-xl font-bold text-secondary mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
                         {item.title}
                       </h3>
-                      <p className="text-foreground leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                       <p className="text-foreground leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {item.description}
                       </p>
+                      {item.details && (
+                        <ul className="mt-3 space-y-2 text-muted-foreground text-sm">
+                          {item.details.map((detail, idx) => (
+                            <li key={idx} className="list-disc ml-5 leading-relaxed">
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -325,14 +359,14 @@ const AITransformationOffer = () => {
                 Join other forward-thinking firms who are implementing strategic AI before their competition.
               </p>
               
-              <div className="bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl p-8 mb-8 border-2 border-gold/30 text-center">
+              <div className="bg-gradient-gold rounded-2xl p-8 mb-8 border-2 border-border text-center">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
                 <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2.5 mt-[30px]">
                   <Sparkles className="w-5 h-5 text-accent flex-shrink-0" />
-                  <p className="text-foreground font-semibold">PASBA Members - Through November Only</p>
+                  <p className="text-foreground font-semibold leading-none">PASBA Members - Through November Only</p>
                 </div>
               </div>
 
