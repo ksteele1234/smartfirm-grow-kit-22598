@@ -413,6 +413,56 @@ const AITransformationRoadmap = () => {
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-background-light px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-3xl md:text-4xl font-bold mb-8 text-primary leading-tight text-center"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              Investment & Pricing
+            </motion.h2>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.1, ease: "easeOut" }}
+              className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 border-2 border-primary/10"
+            >
+              <div className="text-center mb-6">
+                <p className="text-lg text-muted-foreground mb-3">Standard Investment</p>
+                <div className="flex items-center justify-center gap-4 mb-4">
+                  <span className="text-5xl md:text-6xl font-bold text-primary">$9,999</span>
+                </div>
+                <p className="text-base text-muted-foreground mb-6">Comprehensive 2-4 week engagement with full roadmap delivery</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-coral/10 to-gold/10 rounded-xl p-6 border-2 border-coral/20">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <CheckCircle className="h-6 w-6 text-coral" />
+                  <span className="text-xl font-bold text-secondary">PASBA Member Exclusive</span>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <span className="text-3xl text-muted-foreground line-through">$9,999</span>
+                    <span className="text-5xl font-bold text-coral">$7,500</span>
+                  </div>
+                  <p className="text-base text-foreground font-semibold">Available through November 30th</p>
+                </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-sm text-muted-foreground">Small business engagements and enterprise pricing available upon consultation</p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* FAQs Section */}
         <section className="pt-[40px] md:pt-[60px] lg:pt-[40px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
