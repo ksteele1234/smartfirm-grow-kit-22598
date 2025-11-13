@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { FunnelHeader } from "@/components/navigation/FunnelHeader";
 import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,13 @@ import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 const AITransformationOffer = () => {
+  const [showFallback, setShowFallback] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowFallback(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const outcomes = [
     {
       icon: Target,
@@ -156,16 +164,19 @@ const AITransformationOffer = () => {
                     loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
                     title="AI Transformation Roadmap Overview"
+                    onLoad={() => setShowFallback(false)}
                   />
                 </div>
-                <div className="flex justify-center mt-3">
-                  <Button variant="secondary" size="sm" asChild>
-                    <a href="https://youtu.be/3g9-hLt4kyU" target="_blank" rel="noopener noreferrer">
-                      Watch on YouTube
-                      <ArrowRight className="ml-2 h-4 w-4 inline-block" />
-                    </a>
-                  </Button>
-                </div>
+                {showFallback && (
+                  <div className="flex justify-center mt-3">
+                    <Button variant="secondary" size="sm" asChild>
+                      <a href="https://youtu.be/3g9-hLt4kyU" target="_blank" rel="noopener noreferrer">
+                        Watch on YouTube
+                        <ArrowRight className="ml-2 h-4 w-4 inline-block" />
+                      </a>
+                    </Button>
+                  </div>
+                )}
               </div>
             </motion.div>
 
