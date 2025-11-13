@@ -151,7 +151,7 @@ const AITransformationOffer = () => {
                   <iframe
                     src="https://www.youtube.com/embed/rJ-LI4A41EE"
                     className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     loading="lazy"
                     title="AI Transformation Roadmap Overview"
