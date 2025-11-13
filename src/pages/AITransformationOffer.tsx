@@ -274,16 +274,16 @@ const AITransformationOffer = () => {
                   className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-slate-light"
                 >
                   <div className="flex items-start gap-4">
-                    <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-7 w-7 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-xl font-bold text-secondary mb-2" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                      <h3 className="text-2xl font-extrabold text-primary mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
                         {item.title}
                       </h3>
-                       <p className="text-foreground leading-relaxed mb-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                       <p className="text-foreground text-base leading-relaxed mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {item.description}
                       </p>
                       {item.details && (
-                        <ul className="mt-3 space-y-2 text-muted-foreground text-sm">
+                        <ul className="mt-4 space-y-2 text-muted-foreground/75 text-sm">
                           {item.details.map((detail, idx) => (
                             <li key={idx} className="list-disc ml-5 leading-relaxed">
                               {detail}
