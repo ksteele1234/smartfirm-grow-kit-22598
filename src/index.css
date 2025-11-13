@@ -540,6 +540,8 @@
   .shadow-teal-sm { box-shadow: var(--shadow-teal-sm); }
   .shadow-teal-md { box-shadow: var(--shadow-teal-md); }
   .shadow-teal-lg { box-shadow: var(--shadow-teal-lg); }
+  .shadow-glow-coral { box-shadow: var(--shadow-glow-coral); }
+  .hover\:shadow-glow-coral-hover:hover { box-shadow: var(--shadow-glow-coral-hover); }
   .glow-teal { box-shadow: var(--glow-teal); }
   .glow-coral { box-shadow: var(--glow-coral); }
   .glow-cyan { filter: drop-shadow(0 0 8px hsl(var(--bright-teal) / 0.4)); }

@@ -189,9 +189,9 @@ const AITransformationOffer = () => {
                   <span className="text-muted-foreground text-3xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl md:text-6xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center justify-center gap-3 bg-gradient-gold-transparent border-2 border-gold-accent rounded-full px-8 py-3.5 mt-[30px]">
+                <div className="inline-flex items-center justify-center gap-3 bg-gradient-gold border-2 border-gold-accent rounded-full px-8 py-3.5 mt-[30px]">
                   <Sparkles className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <p className="text-foreground font-semibold leading-none">PASBA Members Only - Through November</p>
+                  <span className="text-foreground font-semibold leading-none m-0">PASBA Members Only - Through November</span>
                 </div>
               </div>
             </motion.div>
@@ -204,8 +204,9 @@ const AITransformationOffer = () => {
               className="text-center"
             >
               <Button
-                size="lg"
-                className="px-12 py-6 text-xl font-bold bg-accent hover:bg-accent-hover text-accent-foreground rounded-lg shadow-glow-coral hover:shadow-glow-coral-hover transform hover:scale-105 transition-all duration-300"
+                variant="coral"
+                size="hero"
+                className="transform hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="/get-started">
@@ -364,15 +365,16 @@ const AITransformationOffer = () => {
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>
                   <span className="text-accent text-5xl font-bold">$7,500</span>
                 </div>
-                <div className="inline-flex items-center justify-center gap-3 bg-gradient-gold-transparent border-2 border-gold-accent rounded-full px-8 py-3.5 mt-[30px]">
+                <div className="inline-flex items-center justify-center gap-3 bg-gradient-gold border-2 border-gold-accent rounded-full px-8 py-3.5 mt-[30px]">
                   <Sparkles className="w-5 h-5 text-foreground flex-shrink-0" />
-                  <p className="text-foreground font-semibold leading-none">PASBA Members - Through November Only</p>
+                  <span className="text-foreground font-semibold leading-none m-0">PASBA Members - Through November Only</span>
                 </div>
               </div>
 
               <Button
+                variant="coral"
                 size="lg"
-                className="px-12 py-6 text-xl font-bold bg-accent hover:bg-accent-hover text-accent-foreground rounded-lg shadow-glow-coral hover:shadow-glow-coral-hover transform hover:scale-105 transition-all duration-300"
+                className="transform hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="/get-started">
