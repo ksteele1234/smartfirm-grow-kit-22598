@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,12 @@ const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
 const AITransformationRoadmap = () => {
   const finalCtaRef = useRef<HTMLElement | null>(null);
+  const [showFallback, setShowFallback] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowFallback(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const faqs = [
     {
@@ -202,6 +208,50 @@ const AITransformationRoadmap = () => {
             <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
             </svg>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="py-[60px] md:py-[80px] lg:py-[100px] bg-background px-6 md:px-12">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: isMobile ? 0.4 : 0.6, ease: "easeOut" }}
+              className="text-center"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                See How It Works
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Watch this short overview to understand our AI transformation process
+              </p>
+              <div className="relative w-full max-w-3xl mx-auto">
+                <div className="relative w-full pb-[56.25%]">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                    src="https://www.youtube-nocookie.com/embed/3g9-hLt4kyU?rel=0&modestbranding=1&playsinline=1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    title="AI Transformation Roadmap Overview"
+                    onLoad={() => setShowFallback(false)}
+                  />
+                </div>
+                {showFallback && (
+                  <div className="flex justify-center mt-3">
+                    <Button variant="secondary" size="sm" asChild>
+                      <a href="https://youtu.be/3g9-hLt4kyU" target="_blank" rel="noopener noreferrer">
+                        Watch on YouTube
+                        <ArrowRight className="ml-2 h-4 w-4 inline-block" />
+                      </a>
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </motion.div>
           </div>
         </section>
 
