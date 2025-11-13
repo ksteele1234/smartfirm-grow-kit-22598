@@ -53,21 +53,21 @@ const AITransformationOffer = () => {
       ]
     },
     {
-      title: "Phased 12-Month Roadmap",
-      description: "Your complete implementation plan broken into quarterly phases with specific milestones, resource requirements, and success metrics.",
-      details: [
-        "Q1–Q4 milestones with assigned roles, training schedules, adoption checkpoints",
-        "Dependencies mapped, risk flags identified, change management integrated",
-        "Resource requirements: technology, budget, team capacity per phase"
-      ]
-    },
-    {
       title: "Detailed ROI Projections",
       description: "Financial modeling showing expected cost savings, efficiency gains, and revenue impact with three scenarios.",
       details: [
         "Baseline vs projected: hours saved, error reduction, cycle time improvements",
         "Conservative, moderate, and aggressive scenarios with probability weights",
         "Break-even timeline and cumulative ROI projections over 12-36 months"
+      ]
+    },
+    {
+      title: "Phased 12-Month Roadmap",
+      description: "Your complete implementation plan broken into quarterly phases with specific milestones, resource requirements, and success metrics.",
+      details: [
+        "Q1–Q4 milestones with assigned roles, training schedules, adoption checkpoints",
+        "Dependencies mapped, risk flags identified, change management integrated",
+        "Resource requirements: technology, budget, team capacity per phase"
       ]
     },
     {
@@ -263,7 +263,7 @@ const AITransformationOffer = () => {
               What You Receive
             </motion.h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-3xl mx-auto space-y-6">
               {deliverables.map((item, index) => (
                 <motion.div
                   key={index}
