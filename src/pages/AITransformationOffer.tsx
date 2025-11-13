@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FunnelHeader } from "@/components/navigation/FunnelHeader";
 import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
@@ -8,8 +7,6 @@ import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 const AITransformationOffer = () => {
-  const [videoError, setVideoError] = useState(false);
-
   const outcomes = [
     {
       icon: Target,
@@ -150,29 +147,16 @@ const AITransformationOffer = () => {
               className="mb-12"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 bg-white/10 backdrop-blur-sm">
-                {!videoError ? (
-                  <div className="aspect-video w-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    {/* Placeholder for video - user will add their video URL */}
-                    <div className="text-center p-8">
-                      <Zap className="w-16 h-16 mx-auto mb-4 text-coral animate-pulse" />
-                      <p className="text-white text-lg font-semibold mb-2">Video Coming Soon</p>
-                      <p className="text-white/70 text-sm">Add your video URL to embed it here</p>
-                    </div>
-                    {/* To add video, replace above div with:
-                    <iframe
-                      src="YOUR_VIDEO_URL"
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      title="AI Transformation Roadmap Overview"
-                    ></iframe>
-                    */}
-                  </div>
-                ) : (
-                  <div className="aspect-video w-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <p className="text-white">Video unavailable</p>
-                  </div>
-                )}
+                <div className="aspect-video w-full">
+                  <iframe
+                    src="https://www.youtube.com/embed/rJ-LI4A41EE"
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    title="AI Transformation Roadmap Overview"
+                  />
+                </div>
               </div>
             </motion.div>
 
