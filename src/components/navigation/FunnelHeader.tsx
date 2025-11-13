@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import OptimizedImage from "@/components/ui/optimized-image";
-import smartFirmLogo from "@/assets/smartfirm-logo-full.webp";
+import smartFirmLogo from "@/assets/smartfirm-logo-header.png";
 
 export const FunnelHeader = () => {
   return (

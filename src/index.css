@@ -473,9 +473,14 @@
   /* Transparent gold gradient for badges */
   .bg-gradient-gold-transparent {
     background: linear-gradient(135deg, 
-      hsla(38, 92%, 50%, 0.15),
-      hsla(31, 94%, 43%, 0.25)
+      hsla(38, 92%, 50%, 0.35),
+      hsla(31, 94%, 43%, 0.45)
     );
+  }
+
+  /* Gold border for badges */
+  .border-gold-accent {
+    border-color: hsla(38, 92%, 50%, 0.5);
   }
 
   /* Mesh gradients */
