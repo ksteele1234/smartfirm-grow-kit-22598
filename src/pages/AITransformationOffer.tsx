@@ -149,13 +149,22 @@ const AITransformationOffer = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 bg-white/10 backdrop-blur-sm">
                 <div className="aspect-video w-full">
                   <iframe
-                    src="https://www.youtube.com/embed/3g9-hLt4kyU"
+                    src="https://www.youtube-nocookie.com/embed/3g9-hLt4kyU?rel=0&modestbranding=1&playsinline=1"
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     title="AI Transformation Roadmap Overview"
                   />
+                </div>
+                <div className="flex justify-center mt-3">
+                  <Button variant="secondary" size="sm" asChild>
+                    <a href="https://youtu.be/3g9-hLt4kyU" target="_blank" rel="noopener noreferrer">
+                      Watch on YouTube
+                      <ArrowRight className="ml-2 h-4 w-4 inline-block" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </motion.div>
