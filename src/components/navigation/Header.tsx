@@ -391,7 +391,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="lg:hidden py-4 border-t border-border bg-background" aria-label="Mobile navigation">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 items-center">
               <a href="/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 HOME
               </a>
@@ -413,7 +413,7 @@ const Header = () => {
               <Button 
                 variant="coral" 
                 size="default" 
-                className="w-full mt-4 uppercase text-sm font-bold tracking-wide" 
+                className="mt-4 uppercase text-sm font-bold tracking-wide" 
                 asChild
               >
                 <a href="/get-started">BOOK A FREE CALL</a>
