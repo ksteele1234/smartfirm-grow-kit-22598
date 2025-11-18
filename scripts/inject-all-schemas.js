@@ -7,7 +7,6 @@ function main() {
   console.log('\n🚀 Starting Schema Injection Pipeline...\n');
   
   const scripts = [
-    'scripts/inject-faq-schema.js',
     'scripts/inject-organization-schema.js',
     'scripts/inject-website-schema.js',
     'scripts/inject-breadcrumb-schema.js',
