@@ -223,5 +223,21 @@
     
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Book a Free Call Button Click Tracking -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll("[id$='-book-call-btn']");
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            gtag('event', 'book_now_click', {
+              event_category: 'engagement',
+              event_label: btn.id // this will store the ID that was clicked
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
