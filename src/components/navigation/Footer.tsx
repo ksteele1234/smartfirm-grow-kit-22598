@@ -27,12 +27,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-[hsl(var(--deep-navy))] pb-8">
-      <div className="container mx-auto px-6 max-w-container-2xl pt-20">
+      <div className="container mx-auto px-6 max-w-container-2xl pt-8 md:pt-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg pb-12 border-b border-on-dark-subtle">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-lg pb-6 md:pb-12 border-b border-on-dark-subtle">
           {/* Column 1 - Logo & About */}
           <div>
-            <a href="/" className="inline-block mb-5">
+            <a href="/" className="inline-block mb-3 md:mb-5">
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
@@ -49,7 +49,7 @@ const Footer = () => {
           {/* Column 2 - Services */}
           <div>
             {/* Mobile: Clickable header */}
-            <a href="/all-professional-marketing-services" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide mb-4 hover:text-primary transition-colors">
+            <a href="/all-professional-marketing-services" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Services
             </a>
             {/* Desktop: Regular header with list */}
@@ -71,10 +71,10 @@ const Footer = () => {
           {/* Column 3 - Solutions & Resources */}
           <div>
             {/* Mobile: Clickable headers */}
-            <a href="/solutions" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide mb-4 hover:text-primary transition-colors">
+            <a href="/solutions" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Solutions
             </a>
-            <a href="/resources" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide mb-4 hover:text-primary transition-colors">
+            <a href="/resources" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Resources
             </a>
             
@@ -127,7 +127,7 @@ const Footer = () => {
           {/* Column 4 - Contact */}
           <div>
             {/* Mobile: Clickable header */}
-            <a href="/contact" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide mb-4 hover:text-primary transition-colors">
+            <a href="/contact" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Contact
             </a>
             
