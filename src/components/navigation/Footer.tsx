@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="bg-[hsl(var(--deep-navy))] pb-8">
       <div className="container mx-auto px-6 max-w-container-2xl pt-8 md:pt-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-lg pb-8 md:pb-12 border-b border-on-dark-subtle">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-lg pb-8 md:pb-12 border-b border-on-dark-subtle">
           {/* Column 1 - Logo & About */}
           <div>
             <a href="/" className="inline-block mb-3 md:mb-5">
