@@ -73,6 +73,7 @@ const SingleProcessAITransformation = () => {
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
                 <Button 
+                  id="single-process-ai-book-call-btn"
                   size="lg"
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild

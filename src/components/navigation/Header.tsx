@@ -368,6 +368,7 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center space-x-4">
             <Button 
+              id="header-book-call-btn"
               variant="coral" 
               size="default" 
               asChild
@@ -411,6 +412,7 @@ const Header = () => {
                 CONTACT
               </a>
               <Button 
+                id="mobile-header-book-call-btn"
                 variant="coral" 
                 size="default" 
                 className="mt-4 uppercase text-sm font-bold tracking-wide" 

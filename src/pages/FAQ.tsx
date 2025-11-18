@@ -255,7 +255,7 @@ const FAQ = () => {
                 </div>
               </div>
 
-              <Button size="lg" variant="hero" asChild>
+                <Button id="faq-book-call-btn" size="lg" variant="hero" asChild>
                 <a href="/get-started">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />

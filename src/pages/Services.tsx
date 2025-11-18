@@ -87,7 +87,7 @@ const Services = () => {
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
-              <Button variant="coral" size="hero" asChild>
+              <Button id="services-hero-book-call-btn" variant="coral" size="hero" asChild>
                 <Link to="/get-started">
                   Book a free call
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -301,7 +301,7 @@ const Services = () => {
               Discover how our tailored services can drive your growth and efficiency. Let's discuss your specific needs and create a custom solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
-              <Button variant="coral" size="lg" asChild>
+              <Button id="services-final-book-call-btn" variant="coral" size="lg" asChild>
                 <a href="/get-started">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />

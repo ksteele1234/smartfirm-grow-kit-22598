@@ -213,7 +213,7 @@ const QuickStart = () => {
               </p>
             </div>
             
-            <Button size="lg" variant="hero" className="group" asChild>
+            <Button id="quickstart-pricing-book-call-btn" size="lg" variant="hero" className="group" asChild>
               <a href="/get-started">
                 Book a Free Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -364,6 +364,7 @@ const QuickStart = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
+                id="quickstart-final-book-call-btn"
                 size="lg" 
                 variant="white-on-dark"
                 className="group font-semibold"

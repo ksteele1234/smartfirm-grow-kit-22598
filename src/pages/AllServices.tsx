@@ -254,7 +254,7 @@ const AllServices = () => {
             Let's create a customized growth plan for your firm. Book a Free Call to discover which services will have the biggest impact on your practice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="group" asChild>
+            <Button id="all-services-book-call-btn" variant="secondary" size="lg" className="group" asChild>
               <a href="/get-started">
                 <Phone className="mr-2 h-5 w-5" />
                 Book a Free Call

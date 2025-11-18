@@ -64,6 +64,7 @@ const GrowthAddOnsCard = () => {
         <p className="text-sm text-muted-foreground text-center mt-3">
           Not sure what you need?{" "}
           <Link 
+            id="growth-addons-book-call-btn"
             to="/get-started" 
             className="text-secondary underline hover:text-secondary-dark transition-colors"
           >
