@@ -29,7 +29,7 @@ const Footer = () => {
     <footer className="bg-[hsl(var(--deep-navy))] pb-8">
       <div className="container mx-auto px-6 max-w-container-2xl pt-8 md:pt-20">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-lg pb-6 md:pb-12 border-b border-on-dark-subtle">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-lg pb-8 md:pb-12 border-b border-on-dark-subtle">
           {/* Column 1 - Logo & About */}
           <div>
             <a href="/" className="inline-block mb-3 md:mb-5">
@@ -38,7 +38,7 @@ const Footer = () => {
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
                 width={320}
                 height={120}
-                className="h-36 w-auto max-w-[405px]"
+                className="h-20 md:h-36 w-auto max-w-[405px]"
               />
             </a>
             <p className="hidden md:block text-base text-white/85 leading-[1.6]">
