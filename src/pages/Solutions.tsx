@@ -326,6 +326,7 @@ const Solutions = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button 
+                id="solutions-overview-book-call-btn"
                 size="lg" 
                 variant="coral"
                 asChild

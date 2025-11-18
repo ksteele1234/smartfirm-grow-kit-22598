@@ -116,6 +116,7 @@ const PricingHeroFull = () => {
 
           {/* CTA Button */}
           <Button 
+            id="pricing-hero-book-call-btn"
             asChild
             size="lg"
             className="w-full bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"

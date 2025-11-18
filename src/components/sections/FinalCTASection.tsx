@@ -55,6 +55,7 @@ const FinalCTASection = ({
           {/* Primary CTA Button */}
           <div className="flex flex-col items-center mb-4">
             <Button
+              id="final-cta-book-call-btn"
               size="lg"
               asChild
               className="px-12 py-5 text-xl font-bold bg-gradient-coral text-white hover-lift glow-coral hover-shadow-coral rounded-card animate-gentle-pulse"

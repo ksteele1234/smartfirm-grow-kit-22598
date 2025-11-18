@@ -296,7 +296,7 @@ const Resources = () => {
             </div>
 
             <div className="text-center">
-              <Button variant="outline" asChild>
+              <Button id="resources-book-call-btn" variant="outline" asChild>
                 <a href="/get-started">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />

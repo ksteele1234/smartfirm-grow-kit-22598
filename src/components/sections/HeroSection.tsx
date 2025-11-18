@@ -164,6 +164,7 @@ const HeroSection = memo(() => {
             {/* CTA Button - Enhanced Coral */}
             <div className="flex justify-center lg:justify-start pb-20 md:pb-10">
               <Button 
+                id="hero-book-call-btn"
                 variant="coral" 
                 size="lg"
                 className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"

@@ -89,7 +89,7 @@ const HowItWorksSection = () => {
               Ready to Get Started?
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="hero" className="group" asChild>
+              <Button id="how-it-works-book-call-btn" variant="hero" size="hero" className="group" asChild>
                 <a href="/get-started">
                   <Rocket className="mr-2 h-5 w-5" />
                   Book a Free Call

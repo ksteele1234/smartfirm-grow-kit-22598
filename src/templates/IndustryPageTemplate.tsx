@@ -114,9 +114,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
               {data.heroSubtitle}
             </p>
           </div>
-          <Button size="lg" variant="coral" className="group">
+          <Button id="industry-hero-book-call-btn" size="lg" variant="coral" className="group" asChild>
+            <a href="/get-started">
             Book a Free Call
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
         </div>
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
@@ -262,9 +264,11 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           <h2 className="text-3xl font-heading font-bold text-on-dark-heading">{data.ctaTitle}</h2>
           <p className="text-xl font-sans text-on-dark-body leading-[1.6]">{data.ctaDescription}</p>
           <div className="flex justify-center">
-            <Button size="lg" variant="coral" className="group">
+            <Button id="industry-final-book-call-btn" size="lg" variant="coral" className="group" asChild>
+              <a href="/get-started">
               Book a Free Call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
