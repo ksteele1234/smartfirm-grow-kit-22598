@@ -390,7 +390,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-border" aria-label="Mobile navigation">
+          <nav className="lg:hidden py-4 border-t border-border bg-background" aria-label="Mobile navigation">
             <div className="flex flex-col space-y-4">
               <a href="/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 HOME
