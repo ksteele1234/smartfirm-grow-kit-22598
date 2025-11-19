@@ -76,6 +76,9 @@ export const sitemapRoutes: SitemapRoute[] = [
   // Funnel Pages
   { path: '/growth-calculator', changefreq: 'weekly', priority: 0.8 },
   
+  // Case Studies
+  { path: '/case-studies', changefreq: 'weekly', priority: 0.8 },
+  
   // Legal Pages
   { path: '/privacy', changefreq: 'yearly', priority: 0.3 },
   { path: '/terms', changefreq: 'yearly', priority: 0.3 },
