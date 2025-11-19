@@ -73,6 +73,9 @@ const PageGrader = lazy(() => import("./pages/tools/PageGrader"));
 const AdvancedSEOQA = lazy(() => import("./pages/tools/AdvancedSEOQA"));
 const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 
+// Other Pages
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+
 // Legal Pages
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -186,6 +189,9 @@ const App = () => (
             
             {/* Funnel Pages */}
             <Route path="/growth-calculator" element={<GrowthCalculator />} />
+            
+            {/* Case Studies */}
+            <Route path="/case-studies" element={<CaseStudies />} />
             
             {/* Legal Pages */}
             <Route path="/privacy" element={<Privacy />} />
