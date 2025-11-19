@@ -78,6 +78,7 @@ export const sitemapRoutes: SitemapRoute[] = [
   
   // Case Studies
   { path: '/case-studies', changefreq: 'weekly', priority: 0.8 },
+  { path: '/case-studies/payroll-automation-roi', changefreq: 'monthly', priority: 0.7 },
   
   // Legal Pages
   { path: '/privacy', changefreq: 'yearly', priority: 0.3 },

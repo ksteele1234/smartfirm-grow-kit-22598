@@ -11,63 +11,13 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "From Overwhelmed to Organized: 300% Lead Increase",
-      clientName: "Pinnacle Tax Solutions",
-      industry: "Tax Preparation",
-      metric: "300% Lead Increase",
-      firmSize: "Small Firm",
-      summary: "How a struggling tax prep firm tripled their qualified leads through strategic marketing automation and streamlined operations.",
-      slug: "300-percent-lead-increase"
-    },
-    {
-      id: 2,
-      title: "Scaling Smart: 40-Hour Workweek Achievement",
-      clientName: "Metro Bookkeeping Services",
-      industry: "Bookkeeping",
-      metric: "50% Time Savings",
-      firmSize: "Mid-sized Firm",
-      summary: "Transforming a chaotic practice into a well-oiled machine with streamlined processes and automation.",
-      slug: "40-hour-workweek-achievement"
-    },
-    {
-      id: 3,
-      title: "Client Retention Revolution: 85% Increase",
-      clientName: "Alpine Financial Advisors",
-      industry: "Financial Advisory",
-      metric: "85% Retention Increase",
-      firmSize: "Small Firm",
-      summary: "Building lasting client relationships through systematic follow-up and value delivery.",
-      slug: "85-percent-retention-increase"
-    },
-    {
-      id: 4,
-      title: "Solo to Team: Successful Practice Expansion",
-      clientName: "Peterson CPA",
-      industry: "General Accounting",
-      metric: "Team of 8 Built",
-      firmSize: "Solo to Team",
-      summary: "How a solo practitioner built a team of 8 while maintaining quality and profitability.",
-      slug: "solo-to-team-expansion"
-    },
-    {
-      id: 5,
-      title: "Digital Transformation: 50% Cost Reduction",
-      clientName: "Riverbank Accounting",
-      industry: "Bookkeeping",
-      metric: "50% Cost Reduction",
-      firmSize: "Mid-sized Firm",
-      summary: "Leveraging technology to cut operational costs while improving service quality.",
-      slug: "50-percent-cost-reduction"
-    },
-    {
-      id: 6,
-      title: "Niche Mastery: Becoming the Go-To Expert",
-      clientName: "Healthcare CPA Solutions",
-      industry: "Specialized Services",
-      metric: "Regional Market Leader",
-      firmSize: "Small Firm",
-      summary: "Positioning as the premier healthcare accounting firm in their region.",
-      slug: "niche-market-mastery"
+      title: "Payroll Automation ROI: $8,372 Saved & 94% Time Reduction",
+      clientName: "12-Person Accounting Firm",
+      industry: "Accounting Firm",
+      metric: "419% ROI",
+      firmSize: "Small to Mid-sized Firm",
+      summary: "How one firm cut payroll processing from 8 hours to 30 minutes, achieving a 419% ROI in the first year through strategic automation.",
+      slug: "payroll-automation-roi"
     }
   ];
 
@@ -105,10 +55,10 @@ const CaseStudies = () => {
                     <div className="mx-auto w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
                       <TrendingUp className="w-6 h-6 text-accent" />
                     </div>
-                    <CardTitle className="text-4xl font-bold text-accent">300%</CardTitle>
+                    <CardTitle className="text-4xl font-bold text-accent">1+</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Average Lead Growth</p>
+                    <p className="text-muted-foreground">Success Stories</p>
                   </CardContent>
                 </Card>
 
@@ -117,10 +67,10 @@ const CaseStudies = () => {
                     <div className="mx-auto w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
                       <Users className="w-6 h-6 text-accent" />
                     </div>
-                    <CardTitle className="text-4xl font-bold text-accent">85%</CardTitle>
+                    <CardTitle className="text-4xl font-bold text-accent">300%+</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Client Retention Increase</p>
+                    <p className="text-muted-foreground">Average ROI</p>
                   </CardContent>
                 </Card>
 
@@ -129,10 +79,10 @@ const CaseStudies = () => {
                     <div className="mx-auto w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
                       <Building2 className="w-6 h-6 text-accent" />
                     </div>
-                    <CardTitle className="text-4xl font-bold text-accent">50%</CardTitle>
+                    <CardTitle className="text-4xl font-bold text-accent">500+</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">Time Savings</p>
+                    <p className="text-muted-foreground">Firms Served</p>
                   </CardContent>
                 </Card>
               </div>
@@ -171,6 +121,12 @@ const CaseStudies = () => {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+
+              <div className="text-center mt-16">
+                <p className="text-xl text-muted-foreground">
+                  More case studies coming soon. Check back regularly for new success stories.
+                </p>
               </div>
             </div>
           </section>
