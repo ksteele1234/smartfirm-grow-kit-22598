@@ -75,6 +75,7 @@ const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 
 // Other Pages
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const PayrollAutomationROI = lazy(() => import("./pages/case-studies/PayrollAutomationROI"));
 
 // Legal Pages
 const Privacy = lazy(() => import("./pages/Privacy"));
@@ -192,6 +193,7 @@ const App = () => (
             
             {/* Case Studies */}
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/case-studies/payroll-automation-roi" element={<PayrollAutomationROI />} />
             
             {/* Legal Pages */}
             <Route path="/privacy" element={<Privacy />} />
