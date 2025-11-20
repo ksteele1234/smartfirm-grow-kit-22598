@@ -425,7 +425,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   <Link
                     to={footerCTAButtonLink}
                     id={footerCTAButtonId}
-                    className="inline-block px-10 py-5 bg-white text-primary font-bold rounded-lg text-lg hover:bg-slate-50 hover:scale-105 transition-all shadow-lg"
+                    className="inline-block px-10 py-5 bg-accent text-white font-bold rounded-lg text-lg hover:bg-accent/90 hover:scale-105 transition-all shadow-lg"
                   >
                     {footerCTAButtonText}
                   </Link>
