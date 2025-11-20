@@ -238,17 +238,17 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
               
               <div className="relative h-full min-h-[400px] bg-muted rounded-2xl border border-border p-8 flex flex-col items-center justify-center text-center shadow-inner">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-radial from-muted-foreground/20 to-transparent opacity-50 blur-2xl"></div>
-                <div className="grid grid-cols-2 gap-6 opacity-80 mb-8 max-w-md mx-auto">
-                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                <div className="grid grid-cols-2 gap-8 mb-8 max-w-lg mx-auto">
+                  <div className="h-28 bg-card rounded-xl shadow-sm flex items-center justify-center p-6">
                     <img src={adpLogo} alt="ADP" className="max-h-full max-w-full object-contain" />
                   </div>
-                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                  <div className="h-28 bg-card rounded-xl shadow-sm flex items-center justify-center p-6">
                     <img src={canopyLogo} alt="Canopy" className="max-h-full max-w-full object-contain" />
                   </div>
-                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                  <div className="h-28 bg-card rounded-xl shadow-sm flex items-center justify-center p-6">
                     <img src={qboLogo} alt="QuickBooks Online" className="max-h-full max-w-full object-contain" />
                   </div>
-                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                  <div className="h-28 bg-card rounded-xl shadow-sm flex items-center justify-center p-6">
                     <img src={excelLogo} alt="Excel" className="max-h-full max-w-full object-contain" />
                   </div>
                 </div>
