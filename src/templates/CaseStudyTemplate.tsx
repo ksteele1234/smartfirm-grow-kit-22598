@@ -183,7 +183,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         {/* ==================== EXECUTIVE SUMMARY STATS ==================== */}
         <section className="py-12 relative z-20 -mt-12">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
                 <div key={index} className="bg-card p-8 rounded-xl shadow-lg border border-border hover:-translate-y-1 transition-transform duration-300">
                   <div className="flex items-center gap-4 mb-4">
@@ -228,10 +228,19 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
               
               <div className="relative h-full min-h-[400px] bg-muted rounded-2xl border border-border p-8 flex flex-col items-center justify-center text-center shadow-inner">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-radial from-muted-foreground/20 to-transparent opacity-50 blur-2xl"></div>
-                <div className="grid grid-cols-3 gap-4 opacity-80 mb-8">
-                  <div className="w-20 h-20 bg-card rounded-xl shadow-sm flex items-center justify-center text-xs font-bold text-muted-foreground">Time App</div>
-                  <div className="w-20 h-20 bg-card rounded-xl shadow-sm flex items-center justify-center text-xs font-bold text-muted-foreground">Excel</div>
-                  <div className="w-20 h-20 bg-card rounded-xl shadow-sm flex items-center justify-center text-xs font-bold text-muted-foreground">Payroll</div>
+                <div className="grid grid-cols-2 gap-6 opacity-80 mb-8 max-w-md mx-auto">
+                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                    <img src="/src/assets/logos/adp-logo.png" alt="ADP" className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                    <img src="/src/assets/logos/canopy-logo.webp" alt="Canopy" className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                    <img src="/src/assets/logos/qbo-logo.png" alt="QuickBooks Online" className="max-h-full max-w-full object-contain" />
+                  </div>
+                  <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
+                    <img src="/src/assets/logos/excel-logo.svg" alt="Excel" className="max-h-full max-w-full object-contain" />
+                  </div>
                 </div>
                 <p className="text-muted-foreground font-medium">{challengeVisualDescription}</p>
               </div>
