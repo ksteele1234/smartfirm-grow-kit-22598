@@ -58,13 +58,13 @@ const CaseStudies = () => {
           <section className="section-padding bg-gradient-mesh-professional">
             <div className="container-default">
               <div className="max-w-4xl mx-auto text-center">
-                <Badge variant="secondary" className="mb-6 text-base px-6 py-2">
+                <Badge className="mb-6 text-base px-6 py-2 bg-white/20 text-white border-white/40 hover:bg-white/30">
                   Featured Success Story
                 </Badge>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
                   Real Results from Real Firms
                 </h1>
-                <p className="text-xl md:text-2xl text-on-accent-light/90 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-xl md:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto">
                   Deep-dive analysis of transformation strategies that deliver measurable outcomes
                 </p>
               </div>
@@ -191,7 +191,7 @@ const CaseStudies = () => {
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Ready to Write Your Success Story?
                 </h2>
-                <p className="text-xl text-on-accent-light/90 mb-10 leading-relaxed">
+                <p className="text-xl text-white/95 mb-10 leading-relaxed">
                   Join the growing number of accounting firms achieving measurable results with SmartFirm's 
                   comprehensive marketing and automation solutions.
                 </p>
