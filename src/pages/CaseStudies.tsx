@@ -195,16 +195,11 @@ const CaseStudies = () => {
                   Join the growing number of accounting firms achieving measurable results with SmartFirm's 
                   comprehensive marketing and automation solutions.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex justify-center">
                   <Link to="/get-started">
                     <Button size="lg" className="bg-gradient-coral hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg text-lg px-8" id="case-studies-cta-book-call-btn">
                       Book a Free Call
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </Link>
-                  <Link to="/resources">
-                    <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 transition-all duration-300">
-                      Explore Resources
                     </Button>
                   </Link>
                 </div>
