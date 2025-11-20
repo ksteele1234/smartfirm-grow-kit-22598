@@ -112,17 +112,17 @@ const CaseStudies = () => {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
                       {featuredCaseStudy.title}
                     </h2>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-lg text-foreground mb-6 leading-relaxed">
                       {featuredCaseStudy.summary}
                     </p>
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       <div className="p-4 bg-accent/5 rounded-lg border border-accent/20">
                         <p className="text-2xl font-bold text-gradient-coral">{featuredCaseStudy.metric}</p>
-                        <p className="text-sm text-muted-foreground mt-1">First Year ROI</p>
+                        <p className="text-sm text-foreground mt-1">First Year ROI</p>
                       </div>
                       <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
                         <p className="text-2xl font-bold text-primary">{featuredCaseStudy.timeReduction}</p>
-                        <p className="text-sm text-muted-foreground mt-1">Time Reduction</p>
+                        <p className="text-sm text-foreground mt-1">Time Reduction</p>
                       </div>
                     </div>
                     <Link to={`/case-studies/${featuredCaseStudy.slug}`}>
@@ -173,7 +173,7 @@ const CaseStudies = () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground/60 italic">
+                      <p className="text-sm text-muted-foreground italic">
                         Focus: {story.focus}
                       </p>
                     </CardContent>
