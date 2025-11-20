@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
 import SEO from '@/components/SEO';
+import adpLogo from '@/assets/logos/adp-logo.png';
+import canopyLogo from '@/assets/logos/canopy-logo.webp';
+import qboLogo from '@/assets/logos/qbo-logo.png';
+import excelLogo from '@/assets/logos/excel-logo.svg';
 
 export interface CaseStudyStat {
   icon: React.ReactNode;
@@ -175,6 +179,12 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 >
                   {heroCTAText}
                 </Link>
+                <Link 
+                  to="/services/ai-transformation-roadmap"
+                  className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-secondary text-secondary rounded-lg font-semibold text-lg hover:bg-secondary hover:text-white transition-all duration-300"
+                >
+                  Learn More about our process
+                </Link>
               </div>
             </div>
           </div>
@@ -230,16 +240,16 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-radial from-muted-foreground/20 to-transparent opacity-50 blur-2xl"></div>
                 <div className="grid grid-cols-2 gap-6 opacity-80 mb-8 max-w-md mx-auto">
                   <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
-                    <img src="/src/assets/logos/adp-logo.png" alt="ADP" className="max-h-full max-w-full object-contain" />
+                    <img src={adpLogo} alt="ADP" className="max-h-full max-w-full object-contain" />
                   </div>
                   <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
-                    <img src="/src/assets/logos/canopy-logo.webp" alt="Canopy" className="max-h-full max-w-full object-contain" />
+                    <img src={canopyLogo} alt="Canopy" className="max-h-full max-w-full object-contain" />
                   </div>
                   <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
-                    <img src="/src/assets/logos/qbo-logo.png" alt="QuickBooks Online" className="max-h-full max-w-full object-contain" />
+                    <img src={qboLogo} alt="QuickBooks Online" className="max-h-full max-w-full object-contain" />
                   </div>
                   <div className="h-16 bg-card rounded-xl shadow-sm flex items-center justify-center p-4">
-                    <img src="/src/assets/logos/excel-logo.svg" alt="Excel" className="max-h-full max-w-full object-contain" />
+                    <img src={excelLogo} alt="Excel" className="max-h-full max-w-full object-contain" />
                   </div>
                 </div>
                 <p className="text-muted-foreground font-medium">{challengeVisualDescription}</p>
@@ -365,12 +375,12 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <div className="absolute top-0 left-0 w-full h-full bg-white/5"></div>
                 <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
                   <div>
-                    <p className="text-blue-200 text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
-                    <p className="text-3xl font-bold">Total First-Year Savings: <span className="text-amber-400">{financialData.firstYearSavings}</span></p>
+                    <p className="text-white/90 text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
+                    <p className="text-3xl font-bold text-white">Total First-Year Savings: <span className="text-accent">{financialData.firstYearSavings}</span></p>
                   </div>
                   <div className="text-right">
                     <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
-                      <p className="text-sm text-blue-100 mb-1">First-Year ROI</p>
+                      <p className="text-sm text-white/90 mb-1">First-Year ROI</p>
                       <p className="text-4xl font-bold text-white">{financialData.firstYearROI}</p>
                     </div>
                   </div>
@@ -382,20 +392,20 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         </section>
 
         {/* ==================== QUOTE SECTION ==================== */}
-        <section className="py-20 bg-slate-900 text-white relative">
+        <section className="py-20 bg-muted relative">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="max-w-3xl mx-auto">
-              <div className="text-6xl text-primary opacity-30 font-serif mb-4">"</div>
-              <h3 className="text-3xl md:text-4xl font-bold leading-snug mb-8 text-white">
+              <div className="text-6xl text-primary opacity-50 font-serif mb-4">"</div>
+              <h3 className="text-3xl md:text-4xl font-bold leading-snug mb-8 text-foreground">
                 {quote.text} <br/>
-                <span className="text-amber-400">{quote.highlightedText}</span><br/>
+                <span className="text-accent">{quote.highlightedText}</span><br/>
                 {quote.remainingText}
               </h3>
               <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 bg-slate-700 rounded-full flex items-center justify-center font-bold text-slate-300">{quote.initial}</div>
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">{quote.initial}</div>
                 <div className="text-left">
-                  <p className="font-bold text-white">{quote.attribution}</p>
-                  <p className="text-slate-400 text-sm">{quote.attributionSubtitle}</p>
+                  <p className="font-bold text-foreground">{quote.attribution}</p>
+                  <p className="text-muted-foreground text-sm">{quote.attributionSubtitle}</p>
                 </div>
               </div>
             </div>
@@ -411,14 +421,22 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <p className="text-lg text-blue-100 mb-10">
                   {footerCTADescription}
                 </p>
-                <Link
-                  to={footerCTAButtonLink}
-                  id={footerCTAButtonId}
-                  className="inline-block px-10 py-5 bg-white text-primary font-bold rounded-lg text-lg hover:bg-slate-50 hover:scale-105 transition-all shadow-lg"
-                >
-                  {footerCTAButtonText}
-                </Link>
-                <p className="mt-6 text-sm text-blue-200/80">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                  <Link
+                    to={footerCTAButtonLink}
+                    id={footerCTAButtonId}
+                    className="inline-block px-10 py-5 bg-white text-primary font-bold rounded-lg text-lg hover:bg-slate-50 hover:scale-105 transition-all shadow-lg"
+                  >
+                    {footerCTAButtonText}
+                  </Link>
+                  <Link
+                    to="/services/ai-transformation-roadmap"
+                    className="inline-block px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/20 transition-all"
+                  >
+                    Learn More about our process
+                  </Link>
+                </div>
+                <p className="text-sm text-white/80">
                   {footerCTADisclaimer}
                 </p>
               </div>

@@ -13,7 +13,7 @@ const PayrollAutomationROI = () => {
     badgeText: "Case Study: Payroll Automation",
     heroTitle: "The Real ROI of Payroll Automation for Accounting Firms",
     heroSubtitle: "A 12-person accounting firm cut payroll processing from 8 hours to 30 minutes, achieving a 419% ROI in the first year.",
-    heroCTAText: "See The Breakdown",
+    heroCTAText: "Book a Free Call",
     heroCTALink: "/get-started",
     heroCTAId: "case-study-payroll-hero-book-call-btn",
     
@@ -135,7 +135,7 @@ const PayrollAutomationROI = () => {
     // Footer CTA
     footerCTATitle: "Invest in your future today.",
     footerCTADescription: "Small firms achieve large financial returns through targeted automation. Eliminating manual data movement immediately reduces errors and rework.",
-    footerCTAButtonText: "Get Your Automation ROI Analysis",
+    footerCTAButtonText: "Book a Free Call",
     footerCTAButtonLink: "/get-started",
     footerCTAButtonId: "case-study-payroll-footer-book-call-btn",
     footerCTADisclaimer: "Continuous incremental investments have massive cumulative benefits.",
