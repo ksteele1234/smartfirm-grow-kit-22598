@@ -182,14 +182,14 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <a
                   href="/case-studies/payroll-automation-roi.pdf"
                   download
-                  className="w-full sm:w-auto px-8 py-4 bg-gradient-gold text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-8 py-4 bg-white text-primary rounded-lg font-semibold text-lg hover:bg-white/90 hover:-translate-y-1 transition-all duration-300 shadow-lg flex items-center justify-center gap-2"
                 >
                   <Download size={20} />
                   Download PDF
                 </a>
                 <Link 
                   to="/services/ai-transformation-roadmap"
-                  className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-secondary text-secondary rounded-lg font-semibold text-lg hover:bg-secondary hover:text-white transition-all duration-300"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-gold text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
                 >
                   Learn More about our process
                 </Link>
