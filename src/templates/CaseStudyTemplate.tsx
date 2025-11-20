@@ -152,7 +152,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-body selection:bg-primary/10">
         
         {/* ==================== HERO SECTION ==================== */}
-        <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
+        <section className="relative pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-mesh-professional opacity-5 -z-10"></div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -191,7 +191,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         </section>
 
         {/* ==================== EXECUTIVE SUMMARY STATS ==================== */}
-        <section className="py-12 relative z-20 -mt-12">
+        <section className="py-8 relative z-20 -mt-16">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
@@ -299,8 +299,8 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
               <div className="relative">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                   
-                  {/* BEFORE CARD - Smaller & Flat */}
-                  <div className="bg-muted/30 border border-border/50 rounded-2xl p-6 md:p-8 opacity-75 scale-95 lg:scale-90 transition-all">
+                  {/* BEFORE CARD - Larger & More Readable */}
+                  <div className="bg-muted/30 border border-border/50 rounded-2xl p-6 md:p-8 opacity-75 scale-100 lg:scale-95 transition-all">
                     <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
                       <h3 className="text-xl font-bold text-muted-foreground">Before Automation</h3>
                       <span className="text-sm font-medium text-muted-foreground">Manual Process</span>
@@ -331,8 +331,10 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                     </div>
                   </div>
 
-                  {/* AFTER CARD - Larger & Elevated */}
+                  {/* AFTER CARD - Larger & Elevated with Spotlight */}
                   <div className="bg-gradient-to-br from-primary/5 via-accent-gold/5 to-primary/5 border-2 border-accent-gold/30 rounded-2xl p-8 md:p-10 shadow-2xl scale-105 lg:scale-110 transition-all relative">
+                    {/* Radial Gradient Spotlight Behind Card */}
+                    <div className="absolute inset-0 -z-10 bg-gradient-radial from-accent-gold/20 via-accent-gold/10 to-transparent blur-3xl rounded-2xl"></div>
                     <div className="absolute top-0 right-0 bg-accent-gold text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-xl">
                       OPTIMIZED
                     </div>
@@ -375,38 +377,20 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   </div>
                 </div>
 
-                {/* Giant "YOU SAVE" Badge - Positioned between cards on desktop, below on mobile */}
-                <div className="mt-8 lg:mt-0 lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-30 flex justify-center">
-                  <div className="relative">
-                    {/* Arrow - Desktop only */}
-                    <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-1 bg-gradient-to-r from-primary via-accent-gold to-primary -z-10">
-                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[16px] border-l-primary"></div>
-                    </div>
-                    
-                    {/* Savings Badge */}
-                    <div className="bg-gradient-to-br from-accent-gold via-accent-gold to-amber-500 text-white px-8 md:px-12 py-6 md:py-8 rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition-transform">
-                      <div className="text-center">
-                        <p className="text-sm md:text-base font-bold uppercase tracking-wider mb-2 opacity-90">You Save</p>
-                        <p className="text-4xl md:text-6xl font-black leading-none">{financialData.firstYearSavings}</p>
-                        <p className="text-sm md:text-base font-medium mt-2 opacity-90">Per Year</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
               
               {/* ROI BAR */}
               <div className="mt-12 bg-secondary rounded-xl p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-white/5"></div>
                 <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
                   <div>
-                    <p className="text-white/90 text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
-                    <p className="text-2xl md:text-3xl font-bold text-white">Total First-Year Savings: <span className="text-accent-gold">{financialData.firstYearSavings}</span></p>
+                    <p className="text-accent-gold text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
+                    <p className="text-2xl md:text-3xl font-bold text-white">Total First-Year Savings: <span className="text-accent">{financialData.firstYearSavings}</span></p>
                   </div>
                   <div className="text-center md:text-right">
                     <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
                       <p className="text-sm text-white/90 mb-1">First-Year ROI</p>
-                      <p className="text-4xl font-bold text-white">{financialData.firstYearROI}</p>
+                      <p className="text-4xl font-bold text-accent-gold">{financialData.firstYearROI}</p>
                     </div>
                   </div>
                 </div>
