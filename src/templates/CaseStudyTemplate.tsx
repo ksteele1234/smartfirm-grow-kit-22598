@@ -225,7 +225,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 
                 <div className="space-y-4">
                   {challengePainPoints.map((point, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-red-50 rounded-lg border border-red-100">
+                    <div key={index} className="flex items-start gap-4 p-4 bg-accent/10 rounded-lg border border-accent/20">
                       {point.icon}
                       <div>
                         <h4 className="font-bold text-foreground">{point.title}</h4>
@@ -259,23 +259,23 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         </section>
 
         {/* ==================== THE SOLUTION ==================== */}
-        <section className="py-20 lg:py-32 bg-muted/50 relative overflow-hidden">
+        <section className="py-20 lg:py-32 bg-secondary text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
           
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-4xl font-bold text-primary mb-4">{solutionTitle}</h2>
-              <p className="text-lg text-muted-foreground">{solutionDescription}</p>
+              <h2 className="text-4xl font-bold text-white mb-4">{solutionTitle}</h2>
+              <p className="text-lg text-white/80">{solutionDescription}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {solutionItems.map((item, idx) => (
-                <div key={idx} className="bg-card p-8 rounded-xl shadow-lg border border-border hover:shadow-xl transition-all duration-300 group">
-                  <div className="w-14 h-14 bg-gradient-mesh-professional rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div key={idx} className="bg-white/10 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+                  <div className="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-white">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-white/80 leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -320,7 +320,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                     <div className="pt-4 border-t border-border mt-4">
                       <p className="text-sm text-muted-foreground mb-1">Total Cost Per Period</p>
                       <p className="text-3xl font-bold text-foreground">{financialData.before.totalPerPeriod}</p>
-                      <p className="text-sm text-muted-foreground mt-1">Annual Cost: <span className="line-through decoration-red-400">{financialData.before.annualCost}</span></p>
+                      <p className="text-sm text-muted-foreground mt-1">Annual Cost: <span className="line-through decoration-accent">{financialData.before.annualCost}</span></p>
                     </div>
                   </div>
                 </div>
@@ -342,7 +342,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                         <p className="text-xs uppercase tracking-wider text-primary/70 font-semibold">Manager Time</p>
                         <p className="text-2xl font-bold text-primary">{financialData.after.managerTime}</p>
                       </div>
-                      <p className="text-green-600 font-bold text-sm">{financialData.after.managerCost}</p>
+                      <p className="text-accent font-bold text-sm">{financialData.after.managerCost}</p>
                     </div>
                     
                     <div className="flex justify-between items-end">
@@ -350,17 +350,17 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                         <p className="text-xs uppercase tracking-wider text-primary/70 font-semibold">Data Entry</p>
                         <p className="text-2xl font-bold text-primary">{financialData.after.dataEntryTime}</p>
                       </div>
-                      <p className="text-green-600 font-bold text-sm">{financialData.after.dataEntryCost}</p>
+                      <p className="text-accent font-bold text-sm">{financialData.after.dataEntryCost}</p>
                     </div>
 
-                    <div className="pt-4 border-t border-border mt-4 bg-green-50 -mx-8 px-8 -mb-8 py-6">
+                    <div className="pt-4 border-t border-border mt-4 bg-primary/5 -mx-8 px-8 -mb-8 py-6">
                       <div className="flex justify-between items-end">
                         <div>
-                          <p className="text-sm text-green-700 font-medium mb-1">Total Cost Per Period</p>
-                          <p className="text-4xl font-bold text-green-600">{financialData.after.totalPerPeriod}</p>
+                          <p className="text-sm text-primary font-medium mb-1">Total Cost Per Period</p>
+                          <p className="text-4xl font-bold text-accent">{financialData.after.totalPerPeriod}</p>
                         </div>
                         <div className="text-right">
-                          <p className="text-sm text-green-700 font-medium">Annual Cost</p>
+                          <p className="text-sm text-primary font-medium">Annual Cost</p>
                           <p className="text-2xl font-bold text-secondary">{financialData.after.annualCost}</p>
                         </div>
                       </div>
@@ -392,20 +392,20 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         </section>
 
         {/* ==================== QUOTE SECTION ==================== */}
-        <section className="py-20 bg-muted relative">
+        <section className="py-20 bg-secondary text-white relative">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="max-w-3xl mx-auto">
-              <div className="text-6xl text-primary opacity-50 font-serif mb-4">"</div>
-              <h3 className="text-3xl md:text-4xl font-bold leading-snug mb-8 text-foreground">
+              <div className="text-6xl text-white opacity-50 font-serif mb-4">"</div>
+              <h3 className="text-3xl md:text-4xl font-bold leading-snug mb-8 text-white">
                 {quote.text} <br/>
                 <span className="text-accent">{quote.highlightedText}</span><br/>
                 {quote.remainingText}
               </h3>
               <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center font-bold text-primary">{quote.initial}</div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center font-bold text-white">{quote.initial}</div>
                 <div className="text-left">
-                  <p className="font-bold text-foreground">{quote.attribution}</p>
-                  <p className="text-muted-foreground text-sm">{quote.attributionSubtitle}</p>
+                  <p className="font-bold text-white">{quote.attribution}</p>
+                  <p className="text-white/70 text-sm">{quote.attributionSubtitle}</p>
                 </div>
               </div>
             </div>
@@ -418,7 +418,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
             <div className="bg-gradient-mesh-professional rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-xl">
               <div className="relative z-10 max-w-2xl mx-auto">
                 <h2 className="text-4xl font-bold mb-6 text-white">{footerCTATitle}</h2>
-                <p className="text-lg text-blue-100 mb-10">
+                <p className="text-lg text-white/90 mb-10">
                   {footerCTADescription}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
