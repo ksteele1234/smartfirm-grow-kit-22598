@@ -175,7 +175,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <Link 
                   to={heroCTALink}
                   id={heroCTAId}
-                  className="w-full sm:w-auto px-8 py-4 bg-accent text-white rounded-lg font-semibold text-lg hover:bg-accent/90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-coral text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
                 >
                   {heroCTAText}
                 </Link>
@@ -335,7 +335,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   <div className="bg-gradient-to-br from-primary/5 via-accent-gold/5 to-primary/5 border-2 border-accent-gold/30 rounded-2xl p-8 md:p-10 shadow-2xl scale-105 lg:scale-110 transition-all relative">
                     {/* Radial Gradient Spotlight Behind Card */}
                     <div className="absolute inset-0 -z-10 bg-gradient-radial from-accent-gold/20 via-accent-gold/10 to-transparent blur-3xl rounded-2xl"></div>
-                    <div className="absolute top-0 right-0 bg-accent-gold text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-xl">
+                    <div className="absolute top-0 right-0 bg-gradient-gold text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-xl shadow-lg">
                       OPTIMIZED
                     </div>
 
@@ -384,13 +384,13 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                 <div className="absolute top-0 left-0 w-full h-full bg-white/5"></div>
                 <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
                   <div>
-                    <p className="text-accent-gold text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
+                    <p className="text-gradient-gold text-sm font-medium uppercase tracking-widest mb-2">Project Cost: {financialData.projectCost}</p>
                     <p className="text-2xl md:text-3xl font-bold text-white">Total First-Year Savings: <span className="text-accent">{financialData.firstYearSavings}</span></p>
                   </div>
                   <div className="text-center md:text-right">
                     <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
                       <p className="text-sm text-white/90 mb-1">First-Year ROI</p>
-                      <p className="text-4xl font-bold text-accent-gold">{financialData.firstYearROI}</p>
+                      <p className="text-4xl font-bold text-gradient-gold">{financialData.firstYearROI}</p>
                     </div>
                   </div>
                 </div>
@@ -434,7 +434,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   <Link
                     to={footerCTAButtonLink}
                     id={footerCTAButtonId}
-                    className="inline-block px-10 py-5 bg-accent text-white font-bold rounded-lg text-lg hover:bg-accent/90 hover:scale-105 transition-all shadow-lg"
+                    className="inline-block px-10 py-5 bg-gradient-coral text-white font-bold rounded-lg text-lg hover:opacity-90 hover:scale-105 transition-all shadow-lg"
                   >
                     {footerCTAButtonText}
                   </Link>
