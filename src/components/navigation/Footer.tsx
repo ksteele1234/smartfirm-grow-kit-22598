@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Youtube, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import OptimizedImage from "@/components/ui/optimized-image";
 import smartFirmLogo from "@/assets/smartfirm-logo-white.png";
 
@@ -33,7 +34,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-lg pb-8 md:pb-12 border-b border-on-dark-subtle">
           {/* Column 1 - Logo & About */}
           <div>
-            <a href="/" className="inline-block mb-3 md:mb-5">
+            <Link to="/" className="inline-block mb-3 md:mb-5">
               <OptimizedImage 
                 src={smartFirmLogo} 
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
@@ -41,7 +42,7 @@ const Footer = () => {
                 height={120}
                 className="h-20 md:h-36 w-auto max-w-[405px]"
               />
-            </a>
+            </Link>
             <p className="hidden md:block text-base text-white/85 leading-[1.6]">
               Marketing and automation solutions designed specifically for ambitious accounting firms seeking consistent growth and operational excellence.
             </p>
@@ -50,20 +51,20 @@ const Footer = () => {
           {/* Column 2 - Services */}
           <div>
             {/* Mobile: Clickable header */}
-            <a href="/all-professional-marketing-services" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/all-professional-marketing-services" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Services
-            </a>
+            </Link>
             {/* Desktop: Regular header with list */}
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Services</h3>
             <ul className="hidden md:block space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
-                  <a 
-                    href={`/services/${service.slug}`}
+                  <Link 
+                    to={`/services/${service.slug}`}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -72,24 +73,24 @@ const Footer = () => {
           {/* Column 3 - Solutions & Resources */}
           <div>
             {/* Mobile: Clickable headers */}
-            <a href="/solutions" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/solutions" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Solutions
-            </a>
-            <a href="/resources" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            </Link>
+            <Link to="/resources" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Resources
-            </a>
+            </Link>
             
             {/* Desktop: Regular headers with lists */}
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Solutions</h3>
             <ul className="hidden md:block space-y-3 mb-8">
               {solutions.map((solution) => (
                 <li key={solution.slug}>
-                  <a 
-                    href={`/solutions/${solution.slug}`}
+                  <Link 
+                    to={`/solutions/${solution.slug}`}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {solution.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,29 +99,29 @@ const Footer = () => {
             <ul className="hidden md:block space-y-3">
               {resources.map((resource) => (
                 <li key={resource.slug}>
-                  <a 
-                    href={resource.slug}
+                  <Link 
+                    to={resource.slug}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
                     {resource.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a 
-                  href="/quick-start-marketing-for-cpa-firms" 
+                <Link 
+                  to="/quick-start-marketing-for-cpa-firms" 
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Quick Start
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="/faq"
+                <Link 
+                  to="/faq"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -128,9 +129,9 @@ const Footer = () => {
           {/* Column 4 - Contact */}
           <div>
             {/* Mobile: Clickable header */}
-            <a href="/contact" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/contact" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Contact
-            </a>
+            </Link>
             
             {/* Desktop: Regular header with contact details */}
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
@@ -152,12 +153,12 @@ const Footer = () => {
                 <span className="text-base text-white/85">Eugene, OR</span>
               </div>
               <div>
-                <a 
-                  href="/contact" 
+                <Link 
+                  to="/contact" 
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -189,15 +190,15 @@ const Footer = () => {
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-sm text-sm text-white/65">
-              <a href="/privacy" className="hover:text-primary transition-colors duration-200">
+              <Link to="/privacy" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="hover:text-primary transition-colors duration-200">
+              </Link>
+              <Link to="/terms" className="hover:text-primary transition-colors duration-200">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="hover:text-primary transition-colors duration-200">
+              </Link>
+              <Link to="/cookies" className="hover:text-primary transition-colors duration-200">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
