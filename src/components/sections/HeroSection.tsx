@@ -142,13 +142,13 @@ const HeroSection = memo(() => {
           <div className="text-center lg:text-left">
             {/* Headline - Solid White */}
             <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-              Predictable Growth for Accounting Firms Without Wasting Time on Marketing
+              We build systems that run your client work and help your firm grow on autopilot.
             </h1>
 
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
               <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
-                Digital marketing for accounting firms that actually works: Tired of lost leads, slow follow-ups, and clients slipping away? SmartFirm removes those roadblocks so your firm grows and retains clients effortlessly.
+                You get cleaner workflows, faster responses, and hours back each week to focus on real client work.
               </p>
             </div>
 
