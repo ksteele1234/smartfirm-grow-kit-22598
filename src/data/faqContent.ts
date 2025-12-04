@@ -365,7 +365,11 @@ const pathToCategoryMap = new Map<string, string>([
   ["/solutions/protect-practice-and-future", "Protect Practice and Future"],
   ["/industries/tax-preparation", "Tax Preparation"],
   ["/industries/bookkeeping-services", "Bookkeeping Services"],
+  ["/industries/bookkeeping-services-marketing-automation", "Bookkeeping Services"],
   ["/industries/business-advisory", "Business Advisory"],
+  ["/industries/business-advisory-marketing-services", "Business Advisory"],
+  ["/industries/audit-assurance", "Industries"],
+  ["/industries/audit-assurance-marketing-agency", "Industries"],
   ["/tools", "Tools & Calculators"]
 ]);
 

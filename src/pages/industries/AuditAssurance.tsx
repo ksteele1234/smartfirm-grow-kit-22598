@@ -1,13 +1,15 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
+import { getFaqsForPath } from "@/data/faqContent";
 
 const AuditAssurance = () => {
+  const industryFaqs = getFaqsForPath("/industries/audit-assurance");
   const industryData: IndustryPageData = {
     id: "audit-assurance",
     title: "Marketing For Audit Firms That Builds Trust | SmartFirm",
-    slug: "marketing-for-audit-firms",
+    slug: "audit-assurance-marketing-agency",
     metaDescription: "Marketing for audit firms establishes credibility, demonstrates competence and independence, and attracts organizations requiring financial statement audits and assurance engagements.",
-    canonicalUrl: "https://smartfirm.io/industries/marketing-for-audit-firms",
+    canonicalUrl: "https://smartfirm.io/industries/audit-assurance-marketing-agency",
     content: {},
     heroTitle: "Marketing For Audit Firms",
     heroSubtitle: "Marketing for audit firms establishes credibility and builds the trust organizations need before engaging professional audit services: demonstrate competence, independence, and reliability to attract audit and assurance engagements when audit firms struggle to establish credibility.",
@@ -52,7 +54,8 @@ const AuditAssurance = () => {
       }
     ],
     ctaTitle: "Strengthen Your Audit Practice",
-    ctaDescription: "Discover how to build trust, credibility, and a strong referral network for your audit practice."
+    ctaDescription: "Discover how to build trust, credibility, and a strong referral network for your audit practice.",
+    faqs: industryFaqs
   };
 
   return <IndustryPageTemplate data={industryData} />;
