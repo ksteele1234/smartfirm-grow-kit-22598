@@ -49,6 +49,7 @@ const AddOns = lazy(() => import("./pages/services/AddOns"));
 const AITransformationRoadmap = lazy(() => import("./pages/services/AITransformationRoadmap"));
 const SingleProcessAITransformation = lazy(() => import("./pages/services/SingleProcessAITransformation"));
 const AITransformationOffer = lazy(() => import("./pages/AITransformationOffer"));
+const ListReactivationOffer = lazy(() => import("./pages/ListReactivationOffer"));
 
 // Industry Pages
 const TaxPreparation = lazy(() => import("./pages/industries/TaxPreparation"));
@@ -130,6 +131,7 @@ const App = () => (
           <Route path="/services/ai-transformation-roadmap" element={<AITransformationRoadmap />} />
           <Route path="/services/single-process-ai-transformation" element={<SingleProcessAITransformation />} />
           <Route path="/ai-transformation-offer" element={<AITransformationOffer />} />
+          <Route path="/list-reactivation-offer" element={<ListReactivationOffer />} />
             <Route path="/services/marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
             <Route path="/services/accounting-firm-technology-consulting" element={<TechnologySolutions />} />
             <Route path="/services/business-optimization-for-accounting-firms" element={<BusinessOptimization />} />
