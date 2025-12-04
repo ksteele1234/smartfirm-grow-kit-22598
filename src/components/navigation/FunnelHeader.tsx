@@ -18,12 +18,16 @@ export const FunnelHeader = () => {
             />
           </Link>
           
-          <a 
-            href="#qualification-form" 
-            className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
-          >
-            Check If My List Qualifies
-          </a>
+          <div className="flex-1 flex justify-center">
+            <a 
+              href="#qualification-form" 
+              className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
+            >
+              Check If My List Qualifies
+            </a>
+          </div>
+          
+          <div className="w-[240px] hidden md:block" />
         </div>
       </div>
     </header>
