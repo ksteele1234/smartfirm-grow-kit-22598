@@ -377,6 +377,31 @@ const ListReactivationOffer = () => {
           </div>
         </section>
 
+        {/* Final CTA */}
+        <section className="py-20 px-6 bg-gradient-mesh-professional">
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Ready to Reactivate Your Dead Files?
+              </h2>
+              <p className="text-xl text-white/90 mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Fill out the form above to check if your list qualifies.
+              </p>
+              <a 
+                href="#qualification-form" 
+                className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
+              >
+                Check If My List Qualifies
+              </a>
+            </motion.div>
+          </div>
+        </section>
+
       </main>
       
       <FunnelFooter />
