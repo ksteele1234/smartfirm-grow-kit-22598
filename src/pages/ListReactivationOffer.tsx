@@ -91,31 +91,15 @@ const ListReactivationOffer = () => {
               You don't need ads. You don't need cold outreach. You already paid to acquire these clients once. <span className="font-semibold text-secondary">We bring them back.</span>
             </motion.p>
 
-            {/* Form Embed */}
-            <motion.div
+            <motion.a
+              href="#qualification-form"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-lg border border-slate-light p-6 mb-8"
+              className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
             >
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/O8PIDZdjNiPu0dPgngSb"
-                style={{ width: "100%", height: "839px", border: "none", borderRadius: "3px" }}
-                id="inline-O8PIDZdjNiPu0dPgngSb"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="List Reactivation Offer"
-                data-height="839"
-                data-layout-iframe-id="inline-O8PIDZdjNiPu0dPgngSb"
-                data-form-id="O8PIDZdjNiPu0dPgngSb"
-                title="List Reactivation Offer"
-              />
-            </motion.div>
+              Check If My List Qualifies
+            </motion.a>
           </div>
         </section>
 
@@ -347,30 +331,52 @@ const ListReactivationOffer = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-20 px-6 bg-gradient-mesh-professional">
-          <div className="max-w-3xl mx-auto text-center">
+        {/* Form Section */}
+        <section id="qualification-form" className="py-16 px-6 bg-background-subtle">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="text-center mb-8"
             >
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                Ready to Reactivate Your Dead Files?
+              <h2 className="text-2xl md:text-4xl font-bold text-primary mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                Check If Your List Qualifies
               </h2>
-              <p className="text-xl text-white/90 mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                Fill out the form above to check if your list qualifies.
+              <p className="text-lg text-muted-foreground" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                Fill out the form below to get started.
               </p>
-              <a 
-                href="#main-content" 
-                className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
-              >
-                Check If My List Qualifies
-              </a>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white rounded-2xl shadow-lg border border-slate-light p-6"
+            >
+              <iframe
+                src="https://api.leadconnectorhq.com/widget/form/O8PIDZdjNiPu0dPgngSb"
+                style={{ width: "100%", height: "839px", border: "none", borderRadius: "3px" }}
+                id="inline-O8PIDZdjNiPu0dPgngSb"
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="List Reactivation Offer"
+                data-height="839"
+                data-layout-iframe-id="inline-O8PIDZdjNiPu0dPgngSb"
+                data-form-id="O8PIDZdjNiPu0dPgngSb"
+                title="List Reactivation Offer"
+              />
             </motion.div>
           </div>
         </section>
+
       </main>
       
       <FunnelFooter />
