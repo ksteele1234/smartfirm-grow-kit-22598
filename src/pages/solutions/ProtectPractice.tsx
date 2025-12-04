@@ -3,7 +3,7 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const ProtectPractice = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/protect-accounting-practice-from-threats");
+  const solutionFaqs = getFaqsForPath("/solutions/protect-practice-and-future");
   const solutionData: SolutionPageData = {
     id: "protect-practice",
     title: "Worried About Data Breaches? Protect Your Accounting Practice | SmartFirm",

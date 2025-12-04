@@ -3,7 +3,7 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const GrowWithoutPains = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/grow-accounting-firm-without-chaos");
+  const solutionFaqs = getFaqsForPath("/solutions/grow-without-growing-pains");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
     title: "Growth Feels Like Chaos? Grow Your Accounting Firm Without The Stress | SmartFirm",
