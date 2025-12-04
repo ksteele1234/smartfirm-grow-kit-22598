@@ -113,8 +113,9 @@ const SEO = ({
   const pageDescription = generatedDescription;
   const pageImageUrl = pageImage || image || defaultImage;
   const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
-  // Use provided canonical URL or generate from pathname
-  const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${pathname}`;
+  // Normalize pathname - remove trailing slash for consistency (except root)
+  const normalizedPath = pathname === '/' ? '' : pathname.replace(/\/$/, '');
+  const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${normalizedPath}`;
   
   // Auto-generate breadcrumbs if not provided and not homepage
   const autoBreadcrumbs = !breadcrumbsProp && pathname !== '/' 
@@ -170,6 +171,27 @@ const SEO = ({
       
       element.href = href;
     };
+
+    // Update canonical link tag
+    updateLinkTag('canonical', canonicalUrl);
+
+    // Update standard meta tags
+    updateMetaTag('description', pageDescription);
+    updateMetaTag('robots', noindex ? 'noindex, nofollow' : (robots || 'index, follow'));
+
+    // Open Graph tags
+    updateMetaTag('og:title', pageTitle, true);
+    updateMetaTag('og:description', pageDescription, true);
+    updateMetaTag('og:image', pageImageFull, true);
+    updateMetaTag('og:url', canonicalUrl, true);
+    updateMetaTag('og:type', 'website', true);
+    updateMetaTag('og:site_name', siteName, true);
+
+    // Twitter Card tags
+    updateMetaTag('twitter:card', 'summary_large_image');
+    updateMetaTag('twitter:title', pageTitle);
+    updateMetaTag('twitter:description', pageDescription);
+    updateMetaTag('twitter:image', pageImageFull);
 
     // Add or update consolidated JSON-LD structured data
     const updateConsolidatedStructuredData = () => {
