@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Mail } from "lucide-react";
 import OptimizedImage from "@/components/ui/optimized-image";
 import smartFirmLogo from "@/assets/smartfirm-logo-header.png";
 
@@ -20,11 +19,10 @@ export const FunnelHeader = () => {
           </Link>
           
           <a 
-            href="mailto:contact@smartfirm.io" 
-            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+            href="#qualification-form" 
+            className="inline-flex items-center justify-center bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-lg font-semibold transition-all shadow-md hover:shadow-lg"
           >
-            <Mail className="h-5 w-5" />
-            <span className="font-semibold text-lg">contact@smartfirm.io</span>
+            Check If My List Qualifies
           </a>
         </div>
       </div>
