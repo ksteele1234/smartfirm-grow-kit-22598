@@ -324,7 +324,7 @@ const ListReactivationOffer = () => {
               <p className="text-lg text-foreground mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 You might be a fit if:
               </p>
-              <ul className="text-lg text-foreground leading-relaxed mb-6 space-y-2 text-left" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+              <ul className="text-lg text-foreground leading-relaxed mb-6 space-y-2 inline-block text-left" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 <li className="flex items-start gap-2">
                   <span className="text-accent mt-1">✓</span>
                   <span>You have 100+ past clients in your system</span>
