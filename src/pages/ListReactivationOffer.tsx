@@ -321,11 +321,25 @@ const ListReactivationOffer = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 Do You Qualify?
               </h2>
-              <p className="text-xl text-foreground leading-relaxed mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                If you have <span className="font-bold">100+ past clients</span>, you qualify.
+              <p className="text-lg text-foreground mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                You might be a fit if:
               </p>
+              <ul className="text-lg text-foreground leading-relaxed mb-6 space-y-2 text-left" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">✓</span>
+                  <span>You have 100+ past clients in your system</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">✓</span>
+                  <span>You haven't emailed them in a while</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-accent mt-1">✓</span>
+                  <span>You have calendar availability in the next 30 days</span>
+                </li>
+              </ul>
               <p className="text-lg text-secondary font-semibold" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                If you qualify, this is the fastest money sitting in your firm.
+                Fill out the form and we'll confirm within 24 hours.
               </p>
             </motion.div>
           </div>
