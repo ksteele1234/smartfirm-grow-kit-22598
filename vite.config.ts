@@ -4,11 +4,10 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 import sitemap from "vite-plugin-sitemap";
-import { htmlPrerender } from "vite-plugin-html-prerender";
 import { sitemapRoutes } from "./src/config/sitemapRoutes";
 
-// SEO-critical routes to pre-render (canonical slugs only)
-const prerenderRoutes = [
+// SEO-critical routes (for future prerendering)
+export const prerenderRoutes = [
   "/",
   "/about",
   "/contact",
@@ -51,19 +50,8 @@ export default defineConfig(({ mode }) => ({
       dynamicRoutes: sitemapRoutes.map(route => route.path),
       readable: true, // Format XML for readability
     }),
-mode === "production" && htmlPrerender({
-      staticDir: path.resolve(__dirname, "dist"),
-      routes: prerenderRoutes,
-      selector: "#root",
-    }),
-    // Custom plugin to log prerender completion status
-    mode === "production" && {
-      name: 'prerender-status-logger',
-      closeBundle() {
-        console.log('[Prerender] Build pipeline completed. Check logs above for Chrome/Puppeteer errors.');
-        console.log('[Prerender] If Chrome missing, switch to puppeteer-core + @netlify/plugin-chromium');
-      }
-    },
+    // NOTE: Prerendering temporarily disabled - using post-build script instead
+    // Will be handled by scripts/prerender.js using puppeteer-core + Netlify chromium
     mode === "development" && componentTagger()
   ].filter(Boolean),
   resolve: {
