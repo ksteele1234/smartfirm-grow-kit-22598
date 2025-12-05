@@ -51,11 +51,19 @@ export default defineConfig(({ mode }) => ({
       dynamicRoutes: sitemapRoutes.map(route => route.path),
       readable: true, // Format XML for readability
     }),
-    mode === "production" && htmlPrerender({
+mode === "production" && htmlPrerender({
       staticDir: path.resolve(__dirname, "dist"),
       routes: prerenderRoutes,
       selector: "#root",
     }),
+    // Custom plugin to log prerender completion status
+    mode === "production" && {
+      name: 'prerender-status-logger',
+      closeBundle() {
+        console.log('[Prerender] Build pipeline completed. Check logs above for Chrome/Puppeteer errors.');
+        console.log('[Prerender] If Chrome missing, switch to puppeteer-core + @netlify/plugin-chromium');
+      }
+    },
     mode === "development" && componentTagger()
   ].filter(Boolean),
   resolve: {

@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  PUPPETEER_SKIP_DOWNLOAD = "true"
 
 # Security and SEO Headers - Production
 [[headers]]
