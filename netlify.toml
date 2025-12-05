@@ -1,10 +1,13 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && node scripts/prerender.js && node scripts/inject-all-schemas.js"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
-  PUPPETEER_SKIP_DOWNLOAD = "true"
+
+# Chromium plugin provides CHROME_PATH for puppeteer-core
+[[plugins]]
+  package = "@netlify/plugin-chromium"
 
 # Security and SEO Headers - Production
 [[headers]]
