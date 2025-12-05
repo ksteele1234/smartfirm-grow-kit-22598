@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /**
- * Post-build prerendering script using puppeteer-core with Netlify's Chromium
+ * Post-build prerendering script using puppeteer-core with @sparticuz/chromium
  * This runs after vite build to generate static HTML for SEO-critical routes
  */
 
 const puppeteer = require('puppeteer-core');
+const chromium = require('@sparticuz/chromium');
 const fs = require('fs');
 const path = require('path');
 
@@ -33,30 +34,18 @@ const prerenderRoutes = [
 const distPath = path.resolve(__dirname, '../dist');
 
 async function prerender() {
-  // Get Chrome path from Netlify plugin or skip if not available
-  const executablePath = process.env.CHROME_PATH || process.env.PUPPETEER_EXECUTABLE_PATH;
-  
-  if (!executablePath) {
-    console.log('[Prerender] No Chrome executable found (CHROME_PATH/PUPPETEER_EXECUTABLE_PATH not set)');
-    console.log('[Prerender] Skipping prerendering - site will use client-side rendering');
-    return;
-  }
-
-  console.log(`[Prerender] Using Chrome at: ${executablePath}`);
+  console.log('[Prerender] Starting prerender process...');
   
   let browser;
   try {
+    // Get Chrome executable path from @sparticuz/chromium
+    const executablePath = await chromium.executablePath();
+    console.log(`[Prerender] Using Chrome at: ${executablePath}`);
+    
     browser = await puppeteer.launch({
       executablePath,
-      headless: true,
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-gpu',
-        '--disable-web-security',
-        '--disable-features=IsolateOrigins,site-per-process',
-      ],
+      headless: chromium.headless,
+      args: chromium.args,
     });
 
     console.log(`[Prerender] Starting prerender for ${prerenderRoutes.length} routes...`);
@@ -122,9 +111,7 @@ async function prerender() {
     
   } catch (err) {
     console.error('[Prerender] Browser launch failed:', err.message);
-    if (err.message.includes('Chrome') || err.message.includes('chromium') || err.message.includes('executable')) {
-      console.error('[Prerender] Chrome executable not found or failed to launch');
-    }
+    console.log('[Prerender] Skipping prerendering - site will use client-side rendering');
   } finally {
     if (browser) {
       await browser.close();

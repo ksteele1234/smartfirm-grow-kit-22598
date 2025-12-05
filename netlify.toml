@@ -5,9 +5,7 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Chromium plugin provides CHROME_PATH for puppeteer-core
-[[plugins]]
-  package = "@netlify/plugin-chromium"
+# Note: @sparticuz/chromium provides Chrome binary for prerendering
 
 # Security and SEO Headers - Production
 [[headers]]
