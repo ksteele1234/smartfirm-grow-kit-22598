@@ -400,39 +400,6 @@ const Contact = () => {
             })}
           </div>
         </div>
-        <script id="sf-faq-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How do I get started?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Book a Free Call. We'll learn about your firm's goals, challenges, and needs, then create a custom plan tailored to your practice." }
-              },
-              {
-                "@type": "Question",
-                "name": "What is the pricing structure?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget." }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you offer guarantees?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them." }
-              },
-              {
-                "@type": "Question",
-                "name": "How quickly can we launch?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We can typically have your core marketing automation up and running in under 30 days. We'll start by optimizing your website and Google Business Profile to build the base you need to succeed." }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you only work with accounting firms?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Our focus is accountants, CPAs, bookkeepers, and tax preparers. However, our team's 40+ years of combined experience across multiple industries means we bring proven business and marketing expertise into every engagement." }
-              }
-            ]
-          })}
-        </script>
       </section>
 
       </main>
