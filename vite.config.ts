@@ -4,30 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 import sitemap from "vite-plugin-sitemap";
-import prerender from "vite-plugin-prerender";
 import { sitemapRoutes } from "./src/config/sitemapRoutes";
-
-// SEO-critical routes to pre-render (canonical slugs only)
-const prerenderRoutes = [
-  "/",
-  "/about",
-  "/contact",
-  "/get-started",
-  "/faq",
-  "/solutions-expert-marketing-agency-for-accounting-firms",
-  "/services/marketing-automation-for-accounting-firms",
-  "/services/seo-for-accounting-firms",
-  "/services/professional-website-design-for-accounting-firms",
-  "/services/email-marketing-for-cpas",
-  "/services/strategic-content-marketing-for-cpas",
-  "/services/social-media-management-for-cpas",
-  "/services/accounting-firm-technology-consulting",
-  "/services/business-optimization-for-accounting-firms",
-  "/services/ai-transformation-roadmap",
-  "/services/single-process-ai-transformation",
-  "/case-studies",
-  "/case-studies/payroll-automation-roi",
-];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -50,11 +27,6 @@ export default defineConfig(({ mode }) => ({
       hostname: 'https://smartfirm.io',
       dynamicRoutes: sitemapRoutes.map(route => route.path),
       readable: true, // Format XML for readability
-    }),
-    mode === "production" && prerender({
-      staticDir: path.resolve(__dirname, "dist"),
-      routes: prerenderRoutes,
-      captureAfterDocumentEvent: "app-rendered",
     }),
     mode === "development" && componentTagger()
   ].filter(Boolean),
