@@ -6,3 +6,6 @@ import "./index.css";
 import('./utils/validateIntentRewrites');
 
 createRoot(document.getElementById("root")!).render(<App />);
+
+// Signal to prerender plugin that app is ready for capture
+document.dispatchEvent(new Event("app-rendered"));
