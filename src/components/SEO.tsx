@@ -397,10 +397,12 @@ const SEO = ({
 
       // 6. FAQPage (when FAQs provided)
       if (faqs && faqs.length > 0) {
-        // Check if FAQ schema already exists in DOM (from build-time injection)
-        const existingFAQSchema = document.querySelector('script[type="application/ld+json"]');
-        const hasFAQSchemaAlready = existingFAQSchema?.textContent?.includes('"@type":"FAQPage"') || 
-                                     existingFAQSchema?.textContent?.includes('"@type": "FAQPage"');
+        // Check if FAQ schema already exists in DOM (from build-time injection or inline scripts)
+        const allJsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
+        const hasFAQSchemaAlready = Array.from(allJsonLdScripts).some(script => 
+          script.textContent?.includes('"@type":"FAQPage"') || 
+          script.textContent?.includes('"@type": "FAQPage"')
+        );
         
         if (!hasFAQSchemaAlready) {
           console.log('[SEO] Adding FAQ schema via React (no pre-rendered schema found)');
