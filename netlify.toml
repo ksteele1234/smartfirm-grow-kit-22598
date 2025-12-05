@@ -6,9 +6,8 @@
   NODE_VERSION = "20"
   PUPPETEER_SKIP_DOWNLOAD = "true"
 
-# Chromium plugin provides CHROME_PATH for puppeteer-core
-[[plugins]]
-  package = "@netlify/plugin-chromium"
+# Note: Install @netlify/plugin-chromium via Netlify UI (Site Settings → Build & deploy → Plugins)
+# The prerender script will auto-detect Chrome from CHROME_PATH or common locations
 
 # Security and SEO Headers - Production
 [[headers]]

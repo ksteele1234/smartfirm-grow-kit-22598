@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 /**
- * Post-build prerendering script using puppeteer-core with Netlify's Chromium plugin
+ * Post-build prerendering script using puppeteer-core
  * This runs after vite build to generate static HTML for SEO-critical routes
  * HARDENED: Fails build loudly if Chrome is missing or prerendering fails
+ * 
+ * Chrome detection order:
+ * 1. CHROME_PATH env var (set by @netlify/plugin-chromium)
+ * 2. Common Netlify/CI Chrome locations
+ * 3. Local Chrome installations
  */
 
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 // SEO-critical routes to pre-render
 const prerenderRoutes = [
@@ -33,13 +39,49 @@ const prerenderRoutes = [
 
 const distPath = path.resolve(__dirname, '../dist');
 
+// Try to find Chrome executable
+function findChrome() {
+  // 1. Check CHROME_PATH from Netlify plugin
+  if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
+    return process.env.CHROME_PATH;
+  }
+  
+  // 2. Check common Netlify/CI locations
+  const commonPaths = [
+    '/opt/chromium/chrome',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+  ];
+  
+  for (const chromePath of commonPaths) {
+    if (fs.existsSync(chromePath)) {
+      return chromePath;
+    }
+  }
+  
+  // 3. Try which command
+  try {
+    const chromePath = execSync('which chromium-browser || which chromium || which google-chrome', { encoding: 'utf-8' }).trim();
+    if (chromePath && fs.existsSync(chromePath)) {
+      return chromePath;
+    }
+  } catch (e) {
+    // which command failed
+  }
+  
+  return null;
+}
+
 async function prerender() {
   console.log('[Prerender] Starting prerender process...');
   
-  // FAIL FAST if Chrome not available - do not skip silently
-  const executablePath = process.env.CHROME_PATH;
+  // Find Chrome executable
+  const executablePath = findChrome();
+  
   if (!executablePath) {
-    throw new Error('[Prerender] CHROME_PATH not set. Chromium plugin missing or not loaded.');
+    throw new Error('[Prerender] No Chrome executable found. Install @netlify/plugin-chromium via Netlify UI or ensure Chrome is available.');
   }
   
   console.log(`[Prerender] Using Chrome at: ${executablePath}`);
