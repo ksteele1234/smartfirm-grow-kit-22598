@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
  * Service definitions for SmartFirm service pages
  */
 const serviceDefinitions = {
-  '/services/marketing-automation': {
+  '/services/marketing-automation-for-accounting-firms': {
     name: 'Marketing Automation for Accounting Firms',
     description: 'Comprehensive marketing automation solutions that help accounting firms attract, nurture, and convert clients on autopilot.',
     serviceType: 'Marketing Automation',
@@ -20,7 +20,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/seo-for-accountants': {
+  '/services/seo-for-accounting-firms': {
     name: 'SEO for Accountants',
     description: 'Specialized search engine optimization services designed to help accounting firms rank higher and attract qualified local clients.',
     serviceType: 'Search Engine Optimization',
@@ -31,7 +31,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Tax Preparers"
     }
   },
-  '/services/website-design': {
+  '/services/professional-website-design-for-accounting-firms': {
     name: 'Website Design for Accounting Firms',
     description: 'Professional website design and development services tailored for accounting firms to convert visitors into clients.',
     serviceType: 'Web Design',
@@ -42,7 +42,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/email-marketing': {
+  '/services/email-marketing-for-cpas': {
     name: 'Email Marketing for Accountants',
     description: 'Strategic email marketing campaigns that nurture prospects and keep your accounting firm top-of-mind with clients.',
     serviceType: 'Email Marketing',
@@ -53,7 +53,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/content-marketing': {
+  '/services/strategic-content-marketing-for-cpas': {
     name: 'Content Marketing for Accounting Firms',
     description: 'Expert content creation and strategy that positions your accounting firm as a trusted authority.',
     serviceType: 'Content Marketing',
@@ -64,7 +64,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs"
     }
   },
-  '/services/social-media-management': {
+  '/services/social-media-management-for-cpas': {
     name: 'Social Media Management for Accountants',
     description: 'Professional social media management services to build your accounting firm\'s online presence and engage prospects.',
     serviceType: 'Social Media Marketing',
@@ -75,7 +75,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/technology-solutions': {
+  '/services/accounting-firm-technology-consulting': {
     name: 'Technology Solutions for Accounting Firms',
     description: 'Advanced technology integration and automation solutions to streamline accounting firm operations.',
     serviceType: 'Technology Consulting',
@@ -86,7 +86,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs"
     }
   },
-  '/services/business-optimization': {
+  '/services/business-optimization-for-accounting-firms': {
     name: 'Business Optimization Services for Accounting Firms',
     description: 'Strategic business optimization and process improvement services to help accounting firms scale efficiently.',
     serviceType: 'Business Consulting',
@@ -95,6 +95,28 @@ const serviceDefinitions = {
     audience: {
       "@type": "Audience",
       "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/ai-transformation-roadmap': {
+    name: 'AI Transformation Roadmap for Accounting Firms',
+    description: 'Strategic AI implementation planning to help accounting firms leverage artificial intelligence for efficiency and growth.',
+    serviceType: 'AI Consulting',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/single-process-ai-transformation': {
+    name: 'Single Process AI Transformation',
+    description: 'Focused AI optimization for a single business process to deliver quick wins and measurable ROI.',
+    serviceType: 'AI Consulting',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   }
 };
