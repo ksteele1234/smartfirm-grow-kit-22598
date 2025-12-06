@@ -1,51 +1,574 @@
+headers = []
+
+[functions]
+[functions."*"]
+
 [build]
-  command = "npm run build && node scripts/prerender.cjs && node scripts/inject-all-schemas.js"
   publish = "dist"
+  command = "npm run build && node scripts/prerender.cjs && node scripts/inject-all-schemas.js"
 
 [build.environment]
   NODE_VERSION = "20"
   PUPPETEER_SKIP_DOWNLOAD = "true"
 
-# Note: Install @netlify/plugin-chromium via Netlify UI (Site Settings → Build & deploy → Plugins)
-# The prerender script will auto-detect Chrome from CHROME_PATH or common locations
+# Plugins installed/managed in Netlify UI
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  pinned_version = "6"
+  origin = "ui"
 
-# Security and SEO Headers - Production
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Robots-Tag = "all"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://link.msgsndr.com https://api.leadconnectorhq.com https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.facebook.com; connect-src 'self' https://api.leadconnectorhq.com https://www.googletagmanager.com; frame-src https://api.leadconnectorhq.com https://www.youtube.com https://www.youtube-nocookie.com;"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+  pinned_version = "0.8"
+  origin = "ui"
 
-# Block preview and deploy URLs from search engines (use full table paths so TOML doesn't see duplicate [headers.values])
-[[context.deploy-preview.headers]]
-  for = "/*"
-  [context.deploy-preview.headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive"
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+  pinned_version = "0.4"
+  origin = "ui"
 
-[[context.branch-deploy.headers]]
-  for = "/*"
-  [context.branch-deploy.headers.values]
-    X-Robots-Tag = "noindex, nofollow, noarchive"
+# Chromium plugin you installed in package.json
+[[plugins]]
+  package = "netlify-plugin-chromium"
+  origin = "config"
 
-# Asset Caching
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
 
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+from = "/solutions"
+to = "/solutions-expert-marketing-agency-for-accounting-firms"
+status = 301.0
+force = false
 
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[redirects.query]
 
-# Redirect rules are in public/_redirects
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services"
+to = "/leading-marketing-services-for-accounting-firms"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/all"
+to = "/services/all-professional-marketing-services-for-accounting-firms"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/all-services"
+to = "/services/all-professional-marketing-services-for-accounting-firms"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/industries"
+to = "/industries-expert-marketing-agency-for-accountants"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/i-want-to-scale-my-firm"
+to = "/solutions/scale-firm"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/scale-firm-scale-accounting-firm"
+to = "/solutions/scale-firm"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/i'm-losing-clients-to-competitors"
+to = "/solutions/client-retention"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/i%27m-losing-clients-to-competitors"
+to = "/solutions/client-retention"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/i-need-better-client-retention"
+to = "/solutions/retention-strategies"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/retention-strategies-advanced-retention-strategies-for-cpas"
+to = "/solutions/retention-strategies"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/stop-losing-clients-to-tech-savvy-cpas-modern-accounting-firm-services"
+to = "/solutions/stop-losing-clients-to-tech-savvy-cpas"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/compete-with-tech-savvy-cpas"
+to = "/solutions/stop-losing-clients-to-tech-savvy-cpas"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/get-more-referrals-without-asking-automated-client-referral-system-for-cpas"
+to = "/solutions/get-more-referrals-without-asking"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/increase-referrals"
+to = "/solutions/get-more-referrals-without-asking"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/work-less-earn-more-increase-accounting-firm-revenue"
+to = "/solutions/work-less-earn-more"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/grow-without-growing-pains-accounting-firm-growth-consulting"
+to = "/solutions/grow-without-growing-pains"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/sustainable-growth"
+to = "/solutions/grow-without-growing-pains"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/protect-your-practice"
+to = "/solutions/protect-practice-and-future"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/solutions/protect-your-practice-cpa-practice-management-services"
+to = "/solutions/protect-practice-and-future"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/quick-start-marketing-for-cpa-firms-marketing-package-for-cpa-firms"
+to = "/quick-start-marketing-for-cpa-firms"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/marketing-automation-marketing-automation-for-accounting-firms"
+to = "/services/marketing-automation"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/technology-solutions-accounting-firm-technology-consulting"
+to = "/services/technology-solutions"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/business-optimization-business-optimization-for-accounting-firms"
+to = "/services/business-optimization"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/executive-services-fractional-cio-for-accounting-firms"
+to = "/services/executive-services"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/automated-lead-follow-up-automated-lead-follow-up-for-cpas"
+to = "/services/automated-lead-follow-up"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/client-review-generation-automated-review-generation-for-cpas"
+to = "/services/client-review-generation"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/seo-for-accountants-seo-for-accounting-firms"
+to = "/services/seo-for-accountants"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/social-media-management-social-media-management-for-cpas"
+to = "/services/social-media-management"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/email-marketing-email-marketing-for-cpas"
+to = "/services/email-marketing"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/website-design-professional-website-design-for-accounting-firms"
+to = "/services/website-design"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/content-marketing-strategic-content-marketing-for-cpas"
+to = "/services/content-marketing"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/services/online-reputation-management-reputation-management-for-cpas"
+to = "/services/online-reputation-management"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools-marketing-tools-for-accounting-firms"
+to = "/tools"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/efficiency-quiz-accounting-firm-efficiency-assessment"
+to = "/tools/efficiency-quiz"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/marketing-scorecard-marketing-assessment-for-accountants"
+to = "/tools/marketing-scorecard"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/automation-readiness-quiz-automation-readiness-assessment-for-accountants"
+to = "/tools/automation-readiness-quiz"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/workflow-bottleneck-finder-accounting-firm-workflow-audit"
+to = "/tools/workflow-bottleneck-finder"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/tech-stack-roi-calculator-accounting-firm-technology-roi"
+to = "/tools/tech-stack-roi-calculator"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/modern-firm-quiz-modern-accounting-firm-assessment"
+to = "/tools/modern-firm-quiz"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/growth-potential-scorecard-accounting-firm-growth-scorecard"
+to = "/tools/growth-potential-scorecard"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/seo-audit-advanced-seo-assessment-for-cpas"
+to = "/tools/seo-audit"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/tools/page-grader-website-page-audit-for-accountants"
+to = "/tools/page-grader"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/growth-calculator-accounting-firm-growth-calculator"
+to = "/growth-calculator"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
