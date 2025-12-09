@@ -1,31 +1,46 @@
 import { memo, lazy, Suspense } from "react";
-import Header from "@/components/navigation/Header";
-import Footer from "@/components/navigation/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import StatsGrid from "@/components/sections/StatsGrid";
-import FounderStory from "@/components/sections/FounderStory";
+import SEO from "@/components/SEO";
 import { useDeferredComponent } from "@/hooks/useDeferredComponent";
 
-// Lazy load below-the-fold components
+// CRITICAL: Load immediately for LCP (Largest Contentful Paint)
+import HeroSection from "@/components/sections/HeroSection";
+
+// IMPORTANT: Lazy load header/footer - they're not part of LCP
+const Header = lazy(() => import("@/components/navigation/Header"));
+const Footer = lazy(() => import("@/components/navigation/Footer"));
+
+// ABOVE THE FOLD: Lazy load but prioritize (visible without scrolling)
+const StatsGrid = lazy(() => import("@/components/sections/StatsGrid"));
+const FounderStory = lazy(() => import("@/components/sections/FounderStory"));
+const CompleteMarketingSolutions = lazy(() => import("@/components/sections/CompleteMarketingSolutions").then(module => ({ default: module.CompleteMarketingSolutions })));
+
+
+// BELOW THE FOLD: Lazy load with lower priority (requires scrolling)
 const PricingHeroCondensed = lazy(() => import("@/components/sections/PricingHeroCondensed"));
 const WhySmartFirmIsDifferent = lazy(() => import("@/components/sections/WhySmartFirmIsDifferent"));
 const FirmComparisonSection = lazy(() => import("@/components/sections/FirmComparisonSection"));
 const FinalCTASection = lazy(() => import("@/components/sections/FinalCTASection"));
 const HomepageFAQSection = lazy(() => import("@/components/sections/HomepageFAQSection"));
 
-import SEO from "@/components/SEO";
-import { CompleteMarketingSolutions } from "@/components/sections/CompleteMarketingSolutions";
-
-// Loading fallback component with reserved space to prevent CLS
+// Minimal loading fallback to prevent layout shift
 const SectionLoader = () => (
   <div className="py-16 flex items-center justify-center" style={{ minHeight: '400px' }}>
     <div className="animate-pulse text-muted-foreground">Loading...</div>
   </div>
 );
 
+// Minimal header/footer loader
+const NavLoader = () => (
+  <div style={{ minHeight: '80px' }} className="bg-background" />
+);
+
 const Index = memo(() => {
-  // Defer non-critical sections to improve initial load (removed delay for LCP optimization)
-  const shouldRenderBelowFold = useDeferredComponent(0);
+  // Load above-the-fold content after hero renders (100ms delay)
+  const shouldRenderAboveFold = useDeferredComponent(100);
+  
+  // Load below-the-fold content when browser is idle (200ms delay)
+  const shouldRenderBelowFold = useDeferredComponent(200);
+  
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -52,22 +67,37 @@ const Index = memo(() => {
           { question: "What happens after the 30-day setup?", answer: "Your marketing infrastructure continues working on autopilot. We handle ongoing technical optimization: monitoring Google rankings, managing review responses, maintaining system integrations, and tracking performance. You receive monthly reports showing what's working and where we're focusing efforts." }
         ]}
       />
-      <Header />
+      
+      {/* Header - Lazy loaded to reduce initial JS */}
+      <Suspense fallback={<NavLoader />}>
+        <Header />
+      </Suspense>
 
       <main id="main-content" role="main">
-        {/* Hero Section - Using dedicated component */}
+        {/* CRITICAL: Hero Section loads immediately for optimal LCP */}
         <HeroSection />
 
-        {/* Section 2: Unified Credibility Section - Background A (White) */}
-        <section className="bg-white section-padding" style={{ paddingTop: 'calc(var(--section-padding-y) - 40px)' }}>
-          <StatsGrid />
-          <FounderStory />
-        </section>
+        {/* ABOVE FOLD: Load after hero renders (100ms delay) */}
+        {shouldRenderAboveFold && (
+          <>
+            {/* Section 2: Unified Credibility Section - Background A (White) */}
+            <section className="bg-white section-padding" style={{ paddingTop: 'calc(var(--section-padding-y) - 40px)' }}>
+              <Suspense fallback={<SectionLoader />}>
+                <StatsGrid />
+              </Suspense>
+              <Suspense fallback={<SectionLoader />}>
+                <FounderStory />
+              </Suspense>
+            </section>
 
-        {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
-        <CompleteMarketingSolutions />
+            {/* Section 3: Complete Marketing Solutions - Background B (Blue Gradient) */}
+            <Suspense fallback={<SectionLoader />}>
+              <CompleteMarketingSolutions />
+            </Suspense>
+          </>
+        )}
 
-        {/* Defer below-the-fold sections */}
+        {/* BELOW FOLD: Load when browser is idle (200ms delay) */}
         {shouldRenderBelowFold && (
           <>
             {/* Section 4: Why SmartFirm is Different - Background A (White) */}
@@ -98,8 +128,10 @@ const Index = memo(() => {
         )}
       </main>
       
-      {/* Section 9: Footer - Background C (Soft Blue) */}
-      <Footer />
+      {/* Footer - Lazy loaded to reduce initial JS */}
+      <Suspense fallback={<NavLoader />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 });
