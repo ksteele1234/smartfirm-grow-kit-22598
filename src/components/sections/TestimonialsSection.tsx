@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, memo, useMemo } from "react";
-import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import danImage from "@/assets/testimonial-dan.webp";
 import joannaImage from "@/assets/testimonial-joanna.webp";
@@ -15,7 +15,6 @@ const TestimonialsSection = memo(() => {
       firm: "CPA Firm Owner",
       image: danImage,
       content: "SmartFirm's automation saved us hours each week and helped us streamline client communication.",
-      rating: 5,
       logo: "CPA Firm A"
     },
     {
@@ -23,7 +22,6 @@ const TestimonialsSection = memo(() => {
       firm: "Accounting Practice Manager", 
       image: joannaImage,
       content: "The team brought clarity to our marketing and helped us attract consistent leads.",
-      rating: 5,
       logo: "TaxPro Services"
     },
     {
@@ -31,7 +29,6 @@ const TestimonialsSection = memo(() => {
       firm: "Tax Advisory Partner",
       image: jennImage, 
       content: "We've seen measurable improvements in client retention with their systems.",
-      rating: 5,
       logo: "Business Advisory LLC"
     }
   ], []);
@@ -106,15 +103,8 @@ const TestimonialsSection = memo(() => {
                   className="w-20 h-20 rounded-full object-cover border-3 border-on-dark-strong shadow-lg"
                 />
                 <div className="text-center">
-                  <div className="flex items-center justify-center space-x-3 mb-2">
-                    <div className="font-semibold text-lg text-white">
-                      {currentTestimonial.name}
-                    </div>
-                    <div className="flex space-x-1">
-                      {[...Array(currentTestimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-accent-muted text-accent-muted" />
-                      ))}
-                    </div>
+                  <div className="font-semibold text-lg text-white mb-2">
+                    {currentTestimonial.name}
                   </div>
                   <div className="text-white/80">
                     {currentTestimonial.firm}

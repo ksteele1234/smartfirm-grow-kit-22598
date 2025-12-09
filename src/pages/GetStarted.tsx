@@ -22,7 +22,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Quote,
-  Star,
   Clock,
   Target,
   ChevronDown
@@ -334,12 +333,6 @@ const GetStarted = () => {
                     <p className="text-muted-foreground">
                       Owner, Martinez Tax & Accounting Services
                     </p>
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
-                      <span className="text-muted-foreground text-sm ml-2">5.0 out of 5</span>
-                    </div>
                   </div>
                 </div>
                 <div className="bg-gradient-to-br from-primary/10 to-teal/10 rounded-lg p-8 text-center">

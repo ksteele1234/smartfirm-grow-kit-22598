@@ -4,7 +4,6 @@ import { FunnelHeader } from "@/components/navigation/FunnelHeader";
 import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
 import { CheckmarkIcon } from "@/components/ui/checkmark-icon";
-import { Star } from "lucide-react";
 import revenueChart from "@/assets/revenue-growth-chart.svg";
 import meetingPhoto from "@/assets/meeting-photo.webp";
 import danPhoto from "@/assets/testimonial-dan.webp";
@@ -227,11 +226,6 @@ const GrowthCalculator = () => {
                   <p className="font-semibold text-gray-800">- Dan</p>
                   <p className="text-sm text-gray-600">CPA, Managing Partner</p>
                 </div>
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -252,11 +246,6 @@ const GrowthCalculator = () => {
                   <p className="font-semibold text-gray-800">- Joanna</p>
                   <p className="text-sm text-gray-600">Registered Agent</p>
                 </div>
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -276,11 +265,6 @@ const GrowthCalculator = () => {
                 <div>
                   <p className="font-semibold text-gray-800">- Jenn S.</p>
                   <p className="text-sm text-gray-600">Bookkeeper</p>
-                </div>
-                <div className="flex justify-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@ import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Star, Target, BarChart3 } from "lucide-react";
+import { ArrowRight, Zap, Settings, TrendingUp, Users, Package, Mail, Target, BarChart3, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
@@ -191,7 +191,7 @@ const Services = () => {
               <Card className="elevation-3 border-border bg-background">
                 <CardHeader className="text-center pb-8 px-10 pt-10">
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
-                    <Star className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" />
                     Spotlight Service
                   </div>
                   <CardTitle className="text-3xl md:text-4xl text-foreground mb-6">
@@ -272,9 +272,6 @@ const Services = () => {
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-primary/5 to-teal/5 p-8 md:p-12 rounded-lg border border-border">
                 <div className="mb-6">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
-                  </div>
                   <blockquote className="text-lg md:text-xl text-muted-foreground italic mb-6">
                     "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours, 
                     and our client satisfaction has never been higher. We've grown 40% this year alone."
