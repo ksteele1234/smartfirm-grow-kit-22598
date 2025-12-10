@@ -65,7 +65,7 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           // Vendor chunks for better caching
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog'],
           'utils': ['clsx', 'tailwind-merge', 'date-fns'],
         },
       },
