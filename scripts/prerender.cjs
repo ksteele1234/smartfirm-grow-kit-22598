@@ -18,24 +18,13 @@ const { execSync } = require('child_process');
 // SEO-critical routes to pre-render
 const prerenderRoutes = [
   "/",
-  "/about",
-  "/contact",
-  "/get-started",
-  "/faq",
   "/solutions-expert-marketing-agency-for-accounting-firms",
-  "/services/marketing-automation-for-accounting-firms",
-  "/services/seo-for-accounting-firms",
-  "/services/professional-website-design-for-accounting-firms",
-  "/services/email-marketing-for-cpas",
-  "/services/strategic-content-marketing-for-cpas",
-  "/services/social-media-management-for-cpas",
-  "/services/accounting-firm-technology-consulting",
-  "/services/business-optimization-for-accounting-firms",
   "/services/ai-transformation-roadmap",
   "/services/single-process-ai-transformation",
   "/case-studies",
   "/case-studies/payroll-automation-roi",
 ];
+
 
 const distPath = path.resolve(__dirname, '../dist');
 
