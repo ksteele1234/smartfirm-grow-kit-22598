@@ -119,8 +119,8 @@ const HeroSection = memo(() => {
       {/* Hero background image - responsive with priority loading */}
       <img
         src="/assets/hero-wave-background-mobile.webp"
-        srcSet="/assets/hero-wave-background-mobile.webp 375w,
-                /assets/hero-wave-background-tablet.webp 768w,
+        srcSet="/assets/hero-wave-background-mobile.webp 640w,
+                /assets/hero-wave-background-tablet.webp 1024w,
                 /assets/hero-wave-background-desktop.webp 1920w"
         sizes="100vw"
         alt=""
