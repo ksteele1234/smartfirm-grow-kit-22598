@@ -19,11 +19,10 @@ const { execSync } = require('child_process');
 const prerenderRoutes = [
   "/",
   "/solutions-expert-marketing-agency-for-accounting-firms",
-  "/services/ai-transformation-roadmap",
-  "/services/single-process-ai-transformation",
   "/case-studies",
   "/case-studies/payroll-automation-roi",
 ];
+
 
 
 const distPath = path.resolve(__dirname, '../dist');
