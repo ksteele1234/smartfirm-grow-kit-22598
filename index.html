@@ -186,25 +186,7 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://api.leadconnectorhq.com">
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PJ55QDDX');</script>
-    <!-- End Google Tag Manager -->
-    
-    <!-- Meta Pixel -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1426639418489174'); 
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel -->
+    <!-- Analytics scripts are deferred - loaded 3s after page load for better performance -->
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website" />
@@ -248,19 +230,44 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Book a Free Call Button Click Tracking -->
+    <!-- Deferred Analytics Loading - Waits 3s after page load for better performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          // Load Google Tag Manager
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-PJ55QDDX');
+          
+          // Load Meta Pixel
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+          (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1426639418489174'); 
+          fbq('track', 'PageView');
+        }, 3000);
+      });
+      
+      // Book a Free Call Button Click Tracking (safe check for gtag)
       document.addEventListener("DOMContentLoaded", function () {
         const buttons = document.querySelectorAll("[id$='-book-call-btn']");
         buttons.forEach(function (btn) {
           btn.addEventListener("click", function () {
-            gtag('event', 'book_now_click', {
-              event_category: 'engagement',
-              event_label: btn.id,
-              page_path: window.location.pathname,
-              button_text: btn.textContent.trim()
-            });
+            if (typeof gtag === 'function') {
+              gtag('event', 'book_now_click', {
+                event_category: 'engagement',
+                event_label: btn.id,
+                page_path: window.location.pathname,
+                button_text: btn.textContent.trim()
+              });
+            }
           });
         });
       });
