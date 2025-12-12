@@ -83,6 +83,7 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -197,11 +198,12 @@ const App = () => (
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/payroll-automation-roi" element={<PayrollAutomationROI />} />
             
-            {/* Legal Pages */}
+{/* Legal Pages */}
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/reactivation-terms" element={<ReactivationTerms />} />
             
             {/* Utility Pages - Excluded from sitemap */}
             <Route path="/500" element={<ServerError />} />
