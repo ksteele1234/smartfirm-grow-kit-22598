@@ -124,7 +124,7 @@ export const HiddenRevenueCalculator = () => {
               <button
                 onClick={handleCalculate}
                 disabled={!clientCount}
-                className="w-full bg-accent text-white hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
+                className="w-full bg-gradient-coral text-white hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-glow-coral hover:shadow-glow-coral-hover"
               >
                 Calculate My Hidden Revenue
               </button>
