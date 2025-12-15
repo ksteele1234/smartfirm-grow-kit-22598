@@ -33,20 +33,28 @@ export const HiddenRevenueCalculator = () => {
     
     setIsSubmitting(true);
     
-    // Console.log for verification
-    console.log("Calculator Lead Payload:", {
+    const payload = {
       email: email,
       client_count: parseInt(clientCount) || 0,
       avg_fee: parseInt(avgFee) || 2500,
       calculated_revenue: calculatedRevenue,
       source: "calculator-lead-magnet"
-    });
+    };
 
-    // Webhook ready for later activation:
-    // POST to: https://services.leadconnectorhq.com/hooks/HWYLT2eSYyS0OaDGKN2O/webhook-trigger/e6d26e85-1ed3-4550-add5-2882f05329ef
-
-    // Simulate brief delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    try {
+      await fetch(
+        "https://services.leadconnectorhq.com/hooks/HWYLT2eSYyS0OaDGKN2O/webhook-trigger/e6d26e85-1ed3-4550-add5-2882f05329ef",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          mode: "no-cors" // GHL webhooks don't return CORS headers
+        }
+      );
+      console.log("Lead submitted to GHL:", payload);
+    } catch (error) {
+      console.error("Webhook error:", error);
+    }
     
     setIsSubmitting(false);
     setStep("complete");
