@@ -19,10 +19,32 @@ const { execSync } = require('child_process');
 const prerenderRoutes = [
   "/",
   "/solutions-expert-marketing-agency-for-accounting-firms",
+  "/leading-marketing-services-for-accounting-firms",
+  "/about",
+  "/contact",
+  "/get-started",
+  
+  // Service Pages - ALL service pages for SEO
+  "/services/ai-transformation-roadmap",
+  "/services/single-process-ai-transformation",
+  "/services/marketing-automation-for-accounting-firms",
+  "/services/accounting-firm-technology-consulting",
+  "/services/business-optimization-for-accounting-firms",
+  "/services/fractional-cio-for-accounting-firms",
+  "/services/automated-lead-follow-up-for-cpas",
+  "/services/automated-review-generation-for-cpas",
+  "/services/seo-for-accounting-firms",
+  "/services/social-media-management-for-cpas",
+  "/services/email-marketing-for-cpas",
+  "/services/professional-website-design-for-accounting-firms",
+  "/services/strategic-content-marketing-for-cpas",
+  "/services/reputation-management-for-cpas",
+  "/services/marketing-strategy-integration-for-accounting-firms",
+  
+  // Case Studies
   "/case-studies",
   "/case-studies/payroll-automation-roi",
 ];
-
 
 
 const distPath = path.resolve(__dirname, '../dist');
