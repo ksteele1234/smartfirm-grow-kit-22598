@@ -13,6 +13,11 @@ export const LEGAL_PAGE_DATES = {
     datePublished: '2025-01-01',
     lastReviewed: '2025-10-01',
     genre: 'Legal Document'
+  },
+  '/reactivation-terms': {
+    datePublished: '2025-12-01',
+    lastReviewed: '2025-12-01',
+    genre: 'Legal Document'
   }
 } as const;
 
