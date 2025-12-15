@@ -2,3 +2,6 @@ project_id = "ndjbkrzoreeoijxmkvdb"
 
 [functions.test-webhook]
 verify_jwt = false
+
+[functions.ghl-reactivation-webhook]
+verify_jwt = false

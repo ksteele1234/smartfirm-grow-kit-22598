@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Check } from "lucide-react";
+import { toast } from "sonner";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
+import { supabase } from "@/integrations/supabase/client";
 
 type Step = "input" | "result" | "complete" | "too-small";
 
@@ -40,32 +42,35 @@ export const HiddenRevenueCalculator = () => {
 
   const handleEmailSubmit = async () => {
     if (!isValidEmail(email)) return;
-    
+
     setIsSubmitting(true);
-    
+
     const payload = {
-      email: email,
+      email: email.trim(),
       client_count: parseInt(clientCount) || 0,
       avg_fee: parseInt(avgFee) || 2500,
       calculated_revenue: calculatedRevenue,
-      source: "calculator-lead-magnet"
+      source: "calculator-lead-magnet",
     };
 
     try {
-      await fetch(
-        "https://services.leadconnectorhq.com/hooks/HWYLT2eSYyS0OaDGKN2O/webhook-trigger/e6d26e85-1ed3-4550-add5-2882f05329ef",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-          mode: "no-cors" // GHL webhooks don't return CORS headers
-        }
+      const { data, error } = await supabase.functions.invoke(
+        "ghl-reactivation-webhook",
+        { body: payload },
       );
-      console.log("Lead submitted to GHL:", payload);
-    } catch (error) {
-      console.error("Webhook error:", error);
+
+      if (error) throw error;
+      if (!data?.success) {
+        throw new Error(data?.error || "Webhook rejected the request");
+      }
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Unknown error";
+      console.error("Calculator webhook failed:", message);
+      toast.error("Couldn’t send your email—please try again.");
+      setIsSubmitting(false);
+      return;
     }
-    
+
     setIsSubmitting(false);
     setStep("complete");
   };
