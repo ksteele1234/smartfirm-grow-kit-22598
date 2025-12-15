@@ -41,17 +41,32 @@ export const HiddenRevenueCalculator = () => {
   const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleEmailSubmit = async () => {
-    if (!isValidEmail(email)) return;
+    const cleanedEmail = email.trim();
+
+    if (!isValidEmail(cleanedEmail)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
 
     setIsSubmitting(true);
 
     const payload = {
-      email: email.trim(),
+      email: cleanedEmail,
       client_count: parseInt(clientCount) || 0,
       avg_fee: parseInt(avgFee) || 2500,
       calculated_revenue: calculatedRevenue,
       source: "calculator-lead-magnet",
     };
+
+    // Debug (avoid logging full email address)
+    const emailDomain = cleanedEmail.split("@")[1] || "";
+    console.log("[HiddenRevenueCalculator] submit", {
+      step,
+      client_count: payload.client_count,
+      avg_fee: payload.avg_fee,
+      calculated_revenue: payload.calculated_revenue,
+      email_domain: emailDomain,
+    });
 
     try {
       const { data, error } = await supabase.functions.invoke(
@@ -59,10 +74,18 @@ export const HiddenRevenueCalculator = () => {
         { body: payload },
       );
 
+      console.log("[HiddenRevenueCalculator] invoke result", {
+        ok: !error,
+        has_data: Boolean(data),
+        data_success: Boolean((data as { success?: boolean } | null)?.success),
+      });
+
       if (error) throw error;
       if (!data?.success) {
         throw new Error(data?.error || "Webhook rejected the request");
       }
+
+      toast.success("Sent — check your inbox.");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : "Unknown error";
       console.error("Calculator webhook failed:", message);
