@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Check } from "lucide-react";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 
-type Step = "input" | "result" | "complete";
+type Step = "input" | "result" | "complete" | "too-small";
 
 export const HiddenRevenueCalculator = () => {
   const [step, setStep] = useState<Step>("input");
@@ -17,6 +17,12 @@ export const HiddenRevenueCalculator = () => {
   const handleCalculate = () => {
     const clients = parseInt(clientCount) || 0;
     const fee = parseInt(avgFee) || 2500;
+    
+    if (clients < 100) {
+      setStep("too-small");
+      return;
+    }
+    
     const revenue = clients * 0.10 * fee;
     setCalculatedRevenue(revenue);
     setStep("result");
@@ -24,6 +30,10 @@ export const HiddenRevenueCalculator = () => {
     setTimeout(() => {
       resultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 100);
+  };
+  
+  const scrollToWhatThisIs = () => {
+    document.getElementById("what-this-is")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -90,7 +100,7 @@ export const HiddenRevenueCalculator = () => {
                     type="number"
                     value={clientCount}
                     onChange={(e) => setClientCount(e.target.value)}
-                    placeholder="e.g., 200"
+                    placeholder="Minimum 100 to qualify"
                     className="w-full rounded-lg border border-slate-light px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
                   />
                 </div>
@@ -117,6 +127,31 @@ export const HiddenRevenueCalculator = () => {
                 className="w-full bg-primary text-white hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Calculate My Hidden Revenue
+              </button>
+            </motion.div>
+          )}
+
+          {/* Too Small List */}
+          {step === "too-small" && (
+            <motion.div
+              key="too-small"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className="bg-white rounded-2xl p-8 shadow-lg border border-slate-light text-center"
+            >
+              <p 
+                className="text-lg text-foreground mb-6"
+                style={{ fontFamily: "'DM Sans', sans-serif" }}
+              >
+                The 9-word strategy works best with lists of 100+ past clients. If your list is smaller, focus on building it first — or scroll down to learn how we can help you grow.
+              </p>
+              <button
+                onClick={scrollToWhatThisIs}
+                className="bg-primary text-white hover:bg-primary/90 px-6 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl"
+              >
+                Scroll to learn more
               </button>
             </motion.div>
           )}
