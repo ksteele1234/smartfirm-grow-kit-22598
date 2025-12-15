@@ -11,7 +11,7 @@ serve(async (req) => {
   }
 
   try {
-    const webhookUrl = 'https://services.leadconnectorhq.com/hooks/HWYLT2eSYyS0OaDGKN2O/webhook-trigger/336f6923-4797-4b75-996d-11dba22a2c2c';
+    const webhookUrl = 'https://services.leadconnectorhq.com/hooks/HWYLT2eSYyS0OaDGKN2O/webhook-trigger/e6d26e85-1ed3-4550-add5-2882f05329ef';
     
     const testPayload = {
       email: 'test@example.com',
