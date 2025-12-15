@@ -97,7 +97,7 @@ const ListReactivationOffer = () => {
         </section>
 
         {/* What This Is */}
-        <section className="py-16 px-6 bg-background-subtle">
+        <section id="what-this-is" className="py-16 px-6 bg-background-subtle">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
