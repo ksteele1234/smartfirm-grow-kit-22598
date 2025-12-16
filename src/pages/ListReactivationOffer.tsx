@@ -354,6 +354,7 @@ const ListReactivationOffer = () => {
                 You've seen the math. You've got the script. Let us run it for you — 5 appointments in 14 days, guaranteed.
               </p>
               <a 
+                id="reactivation-bottom-book-call-btn"
                 href="https://api.leadconnectorhq.com/widget/bookings/15-min-reactivation-fit-call?utm_source=website&utm_medium=landing-page&utm_campaign=offer5-reactivation&utm_content=bottom-cta"
                 target="_blank"
                 rel="noopener noreferrer"
