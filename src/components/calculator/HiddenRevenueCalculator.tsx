@@ -16,18 +16,30 @@ export const HiddenRevenueCalculator = () => {
   const [calculatedRevenue, setCalculatedRevenue] = useState(0);
   const resultRef = useRef<HTMLDivElement>(null);
 
+  const pushDataLayer = (event: string, data?: Record<string, unknown>) => {
+    if (typeof window !== "undefined" && (window as unknown as { dataLayer?: unknown[] }).dataLayer) {
+      (window as unknown as { dataLayer: unknown[] }).dataLayer.push({ event, ...data });
+    }
+  };
+
   const handleCalculate = () => {
     const clients = parseInt(clientCount) || 0;
     const fee = parseInt(avgFee) || 2500;
     
     if (clients < 100) {
       setStep("too-small");
+      pushDataLayer("calculator_list_too_small", { client_count: clients });
       return;
     }
     
     const revenue = clients * 0.10 * fee;
     setCalculatedRevenue(revenue);
     setStep("result");
+    pushDataLayer("calculator_revenue_revealed", { 
+      client_count: clients, 
+      avg_fee: fee, 
+      calculated_revenue: revenue 
+    });
     
     setTimeout(() => {
       resultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -86,6 +98,10 @@ export const HiddenRevenueCalculator = () => {
       }
 
       toast.success("Sent — check your inbox.");
+      pushDataLayer("calculator_email_submitted", { 
+        client_count: payload.client_count,
+        calculated_revenue: payload.calculated_revenue 
+      });
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : "Unknown error";
       console.error("Calculator webhook failed:", message);
@@ -96,6 +112,7 @@ export const HiddenRevenueCalculator = () => {
 
     setIsSubmitting(false);
     setStep("complete");
+    pushDataLayer("calculator_script_revealed");
   };
 
   return (
