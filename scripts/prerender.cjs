@@ -175,8 +175,8 @@ async function prerender() {
       const url = `http://localhost:3000${route}`;
       
       await page.goto(url, { 
-        waitUntil: 'networkidle0',
-        timeout: 30000,
+        waitUntil: 'domcontentloaded',
+        timeout: 60000,
       });
 
       // Wait for React to render
