@@ -91,17 +91,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </Breadcrumb>
         </div>
       </nav>
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Industries", "item": `${window.location.origin}${industriesIndexPath}` },
-            { "@type": "ListItem", "position": 3, "name": data.title.replace(' | SmartFirm', ''), "item": window.location.href }
-          ]
-        })}
-      </script>
       
       {/* Hero Section */}
       <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue text-on-dark-body">
@@ -143,19 +132,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             </p>
           </div>
         </div>
-        <script id="sf-entity-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": data.title,
-            "provider": {
-              "@type": "Organization",
-              "name": "SmartFirm",
-              "url": window.location.origin
-            },
-            "description": data.industryOverview
-          })}
-        </script>
       </section>
 
       {/* Challenges & Solutions Section */}
@@ -242,17 +218,6 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
             ))}
           </div>
         </div>
-        <script id="sf-faq-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqsToRender.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-          })}
-        </script>
       </section>
       <CurvedSeparator variant="primary" className="text-background" />
 

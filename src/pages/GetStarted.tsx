@@ -142,16 +142,6 @@ const GetStarted = () => {
           </Breadcrumb>
         </div>
       </nav>
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Get Started", "item": window.location.href }
-          ]
-        })}
-      </script>
       
       <main>
       {/* Hero Section */}
@@ -458,29 +448,6 @@ const GetStarted = () => {
             })}
           </div>
         </div>
-        <script id="sf-faq-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "How do I get started?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Book a Free Call to discuss your firm's specific needs and goals." }
-              },
-              {
-                "@type": "Question",
-                "name": "What is the pricing structure?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote." }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you offer guarantees?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
-              }
-            ]
-          })}
-        </script>
       </section>
 
       {/* Final CTA Section */}

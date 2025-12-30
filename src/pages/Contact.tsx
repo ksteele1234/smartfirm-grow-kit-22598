@@ -89,16 +89,6 @@ const Contact = () => {
           </Breadcrumb>
         </div>
       </nav>
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": window.location.href }
-          ]
-        })}
-      </script>
       
       <main>
       {/* Hero Section */}

@@ -85,17 +85,6 @@ export const ToolPageWrapper = ({
           </Breadcrumb>
         </div>
       </nav>
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Free Tools & Calculators", "item": `${window.location.origin}/tools` },
-            { "@type": "ListItem", "position": 3, "name": pageTitle, "item": window.location.href }
-          ]
-        })}
-      </script>
 
       <main className="py-8">
         <section className="py-4">
@@ -148,35 +137,6 @@ export const ToolPageWrapper = ({
               </div>
             </div>
           </div>
-          <script id="sf-faq-jsonld" type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-              }))
-            })}
-          </script>
-          <script id="sf-entity-jsonld" type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              "name": title,
-              "applicationCategory": "BusinessApplication",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-              },
-              "provider": {
-                "@type": "Organization",
-                "name": "SmartFirm",
-                "url": typeof window !== 'undefined' ? window.location.origin : 'https://smartfirm.io'
-              }
-            })}
-          </script>
         </section>
       </main>
       
