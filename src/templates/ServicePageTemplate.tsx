@@ -523,44 +523,8 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
             ))}
           </div>
         </div>
-        <script id="sf-faq-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqsWithFallback.map(faq => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
-            }))
-          })}
-        </script>
-        <script id="sf-entity-jsonld" type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": data.title,
-            "provider": {
-              "@type": "Organization",
-              "name": "SmartFirm",
-              "url": window.location.origin
-            },
-            "description": data.heroDescription
-          })}
-        </script>
       </section>
       </main>
-
-      <script id="sf-breadcrumb-jsonld" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": `${window.location.origin}/` },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": `${window.location.origin}${servicesIndexPath}` },
-            { "@type": "ListItem", "position": 3, "name": data.title.replace(' for Accounting Firms', '').replace(' | SmartFirm', ''), "item": window.location.href }
-          ]
-        })}
-      </script>
 
       <Footer />
     </div>
