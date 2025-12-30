@@ -104,7 +104,13 @@ export default defineConfig(({ mode }) => ({
     sitemap({
       hostname: 'https://smartfirm.io',
       dynamicRoutes: sitemapRoutes.map(route => route.path),
-      readable: true, // Format XML for readability
+      readable: true,
+      priority: Object.fromEntries(
+        sitemapRoutes.map(route => [route.path, route.priority])
+      ),
+      changefreq: Object.fromEntries(
+        sitemapRoutes.map(route => [route.path, route.changefreq])
+      ),
     }),
     // NOTE: Prerendering temporarily disabled - using post-build script instead
     // Will be handled by scripts/prerender.js using puppeteer-core + Netlify chromium
