@@ -99,7 +99,7 @@ const TestimonialsSection = memo(() => {
               <div className="flex flex-col items-center space-y-4">
                 <img 
                   src={currentTestimonial.image} 
-                  alt={currentTestimonial.name}
+                  alt={`${currentTestimonial.name}, ${currentTestimonial.firm} - testimonial headshot`}
                   className="w-20 h-20 rounded-full object-cover border-3 border-on-dark-strong shadow-lg"
                 />
                 <div className="text-center">

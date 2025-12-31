@@ -60,7 +60,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
                 {data.author.image && (
                   <img 
                     src={data.author.image} 
-                    alt={data.author.name}
+                    alt={`${data.author.name} - author headshot`}
                     className="w-6 h-6 rounded-full object-cover"
                   />
                 )}
@@ -105,7 +105,7 @@ const ResourcePageTemplate = ({ data }: ResourcePageTemplateProps) => {
                   {data.author.image && (
                     <img 
                       src={data.author.image} 
-                      alt={data.author.name}
+                      alt={`${data.author.name} - author headshot`}
                       className="w-16 h-16 rounded-full object-cover"
                     />
                   )}
