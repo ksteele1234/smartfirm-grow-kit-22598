@@ -40,7 +40,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
                 {data.clientLogo && (
                   <img 
                     src={data.clientLogo} 
-                    alt={data.clientName}
+                    alt={`${data.clientName} company logo`}
                     className="h-12 object-contain"
                   />
                 )}
@@ -68,7 +68,7 @@ const SuccessStoryTemplate = ({ data }: SuccessStoryTemplateProps) => {
                     {data.testimonial.image && (
                       <img 
                         src={data.testimonial.image} 
-                        alt={data.testimonial.author}
+                        alt={`${data.testimonial.author}, ${data.testimonial.position} - testimonial headshot`}
                         className="w-12 h-12 rounded-full object-cover"
                       />
                     )}
