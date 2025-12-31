@@ -29,7 +29,7 @@ const NotFound = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO 
         title="Error 404: Depreciated Asset"
-        description="The page you're looking for couldn't be found. Return to SmartFirm's homepage to explore our marketing automation and technology solutions for accounting firms."
+        description="This page has been removed or relocated. Visit SmartFirm.io to explore our automation and marketing services for accounting firms."
         robots="noindex,follow"
       />
       <Header />
