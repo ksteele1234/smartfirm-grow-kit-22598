@@ -103,10 +103,9 @@ export default defineConfig(({ mode }) => ({
     }),
     sitemap({
       hostname: 'https://smartfirm.io',
-      outDir: 'dist',
-      robots: false, // Disable robots.txt generation to avoid build errors
       dynamicRoutes: sitemapRoutes.map(route => route.path),
       readable: true,
+      generateRobotsTxt: false, // Don't generate robots.txt (we have one in public/)
       priority: Object.fromEntries(
         sitemapRoutes.map(route => [route.path, route.priority])
       ),
