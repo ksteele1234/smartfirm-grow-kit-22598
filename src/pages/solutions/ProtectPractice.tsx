@@ -6,9 +6,9 @@ const ProtectPractice = () => {
   const solutionFaqs = getFaqsForPath("/solutions/protect-practice-and-future");
   const solutionData: SolutionPageData = {
     id: "protect-practice",
-    title: "Worried About Data Breaches? Protect Your Accounting Practice | SmartFirm",
+    title: "Protect Your Accounting Practice & Future | SmartFirm",
     slug: "protect-practice-and-future",
-    metaDescription: "Losing sleep over data breaches and compliance violations? Protect your accounting practice with enterprise-grade security, automated monitoring, and risk management that safeguards client trust.",
+    metaDescription: "Safeguard your accounting firm with succession planning and automation systems. Build transferable value, reduce key-person risk, and secure your practice for the future.",
     canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
     content: {},
     heroTitle: "Worried About Data Breaches? Protect Your Practice",

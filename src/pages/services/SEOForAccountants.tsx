@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const SEOForAccountants = () => {
   const serviceData: ServicePageData = {
     id: "seo-for-accountants",
-    title: "SEO For Accounting Firms That Dominates Local Search | SmartFirm",
+    title: "SEO for Accounting Firms | SmartFirm",
     slug: "seo-for-accountants",
-    metaDescription: "SEO for accounting firms gets you found by high-intent prospects searching 'CPA near me': dominate local search results and deliver 3x more qualified leads without paid ads.",
+    metaDescription: "Professional SEO for accounting firms that drives qualified leads. Rank higher for high-value services, attract ideal clients, and grow your practice with proven local SEO strategies.",
     canonicalUrl: "https://smartfirm.io/services/seo-for-accountants",
     content: {},
     heroTitle: "SEO For Accounting Firms",

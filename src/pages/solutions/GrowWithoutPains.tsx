@@ -6,9 +6,9 @@ const GrowWithoutPains = () => {
   const solutionFaqs = getFaqsForPath("/solutions/grow-without-growing-pains");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
-    title: "Growth Feels Like Chaos? Grow Your Accounting Firm Without The Stress | SmartFirm",
+    title: "Grow Your Accounting Firm Without Hiring | SmartFirm",
     slug: "grow-without-growing-pains",
-    metaDescription: "Adding clients feels like adding chaos? Grow your accounting firm without burnout, quality drops, or team breaking: implement systems and automation that scale revenue 2-3× while maintaining sanity.",
+    metaDescription: "Discover how to grow your accounting firm without hiring more staff. Automate workflows, streamline operations, and scale efficiently with proven systems that save 10+ hours weekly.",
     canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
     content: {},
     heroTitle: "Growth Feels Like Chaos? Scale Without The Stress",

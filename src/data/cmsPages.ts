@@ -11,7 +11,7 @@ export const servicePages: Record<string, ServicePageData> = {
     id: 'marketing-automation',
     title: 'Marketing Automation for Accounting Firms | SmartFirm',
     slug: 'marketing-automation-for-accounting-firms',
-    metaDescription: 'Marketing automation for accounting firms: instant lead response, automated nurture campaigns, and 40% higher conversion rates. Trusted by 200+ practices.',
+    metaDescription: 'Marketing automation for accounting firms that runs on autopilot. Nurture leads, retain clients, and generate reviews automatically—saving 10+ hours per week.',
     canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms',
     heroTitle: 'Marketing Automation for Accounting Firms',
     heroSubtitle: 'Automate lead follow-up, nurture prospects automatically, and convert 40% more clients. Trusted by 200+ accounting practices.',

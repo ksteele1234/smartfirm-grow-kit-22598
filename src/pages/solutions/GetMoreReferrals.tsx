@@ -6,9 +6,9 @@ const GetMoreReferrals = () => {
   const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-without-asking");
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
-    title: "Referrals Drying Up? Get Consistent Client Referrals For Your CPA Firm | SmartFirm",
+    title: "Get More Referrals for Your Accounting Firm",
     slug: "get-more-referrals-without-asking",
-    metaDescription: "Tired of unpredictable referrals and awkward asks? Get more referrals for your CPA firm with automated review generation and systematic follow-up that fills your pipeline—no pushy tactics required.",
+    metaDescription: "Learn how to get more referrals for your accounting firm with automated review generation and systematic client follow-up. Turn happy clients into advocates without awkward asks.",
     canonicalUrl: "https://smartfirm.io/solutions/get-more-referrals-without-asking",
     content: {},
     heroTitle: "Referrals Drying Up? Get Consistent Flow Without Awkward Asks",

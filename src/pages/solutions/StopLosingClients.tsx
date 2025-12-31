@@ -6,9 +6,9 @@ const StopLosingClients = () => {
   const solutionFaqs = getFaqsForPath("/solutions/stop-losing-clients-to-tech-savvy-cpas");
   const solutionData: SolutionPageData = {
     id: "stop-losing-clients",
-    title: "Watching Clients Leave For Tech-Savvier CPAs? Stop The Loss | SmartFirm",
+    title: "Stop Losing Clients to Tech-Savvy CPAs | SmartFirm",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
-    metaDescription: "Frustrated watching clients leave for younger CPAs with better technology? Stop losing clients to tech-savvy competitors with modern automation and professional systems—no coding required.",
+    metaDescription: "Learn how to retain accounting clients with modern technology and automated communication systems. Match tech-savvy competitors without the complexity or cost.",
     canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas",
     content: {},
     heroTitle: "Watching Clients Leave For Tech-Savvier CPAs?",

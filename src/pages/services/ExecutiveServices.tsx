@@ -6,7 +6,7 @@ const ExecutiveServices = () => {
     id: "executive-services",
     title: "Fractional CIO for Accounting Firms | SmartFirm",
     slug: "executive-services",
-    metaDescription: "Fractional CIO for accounting firms: strategic technology leadership, vendor management, security assessments, and digital transformation at a fraction of full-time cost.",
+    metaDescription: "Fractional CIO services for accounting firms. Get strategic technology leadership without full-time costs. Optimize systems, improve efficiency, and scale confidently.",
     canonicalUrl: "https://smartfirm.io/services/executive-services",
     content: {},
     heroTitle: "Fractional CIO for Accounting Firms",

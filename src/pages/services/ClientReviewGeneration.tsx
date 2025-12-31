@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const ClientReviewGeneration = () => {
   const serviceData: ServicePageData = {
     id: "client-review-generation",
-    title: "Automated Review Generation for CPAs | SmartFirm",
+    title: "Review Generation for Accountants | SmartFirm",
     slug: "client-review-generation", 
-    metaDescription: "Automated review generation for CPAs: collect 3-5x more five-star reviews, convert 2-3x more website visitors, and build trust on autopilot.",
+    metaDescription: "Automated review generation for accountants that builds trust and attracts clients. Get consistent 5-star reviews on Google without manual follow-up or awkward requests.",
     canonicalUrl: "https://smartfirm.io/services/client-review-generation",
     content: {},
     heroTitle: "Automated Review Generation for CPAs",

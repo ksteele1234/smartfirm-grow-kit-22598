@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {
     id: "website-design",
-    title: "Accounting Firm Website Design | SmartFirm",
+    title: "Website Design for Accounting Firms | SmartFirm",
     slug: "website-design",
-    metaDescription: "Accounting firm website design: mobile-optimized, conversion-focused, and SEO-ready. Launch in 2-4 weeks and convert 3-5x more visitors into clients.",
+    metaDescription: "Professional website design for accounting firms that converts visitors into clients. Mobile-optimized, SEO-ready, and built to showcase your expertise and attract ideal clients.",
     canonicalUrl: "https://smartfirm.io/services/website-design",
     content: {},
     heroTitle: "Accounting Firm Website Design",

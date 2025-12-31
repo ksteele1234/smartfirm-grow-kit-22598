@@ -6,9 +6,9 @@ const WorkLessEarnMore = () => {
   const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more");
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
-    title: "Exhausted From 60-Hour Weeks? Work Less & Earn More As A CPA | SmartFirm",
+    title: "Work Less, Earn More: Accounting Firm Efficiency",
     slug: "work-less-earn-more",
-    metaDescription: "Burned out working 60-hour weeks for the same income? Work less earn more as a CPA through automation, value-based pricing, and systematized delivery that doubles revenue while reducing hours by 30%.",
+    metaDescription: "Improve your accounting firm efficiency with automation systems that eliminate manual tasks. Work fewer hours while increasing revenue through streamlined client workflows.",
     canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more",
     content: {},
     heroTitle: "Exhausted From 60-Hour Weeks? Work Less & Earn More",

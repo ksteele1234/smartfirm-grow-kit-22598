@@ -6,9 +6,9 @@ const ScaleFirm = () => {
   const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
-    title: "Can't Scale Without Breaking? Grow Your Accounting Firm Successfully | SmartFirm",
+    title: "How to Scale Your Accounting Firm Successfully",
     slug: "scale-accounting-firm-successfully",
-    metaDescription: "Hit a capacity wall and can't scale without hiring? Scale your accounting firm successfully using automation and systematized delivery that doubles capacity without proportional headcount growth.",
+    metaDescription: "Master how to scale your accounting firm with proven automation systems. Grow revenue without proportionally increasing overhead, stress, or team size.",
     canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
     content: {},
     heroTitle: "Can't Scale Without Breaking? Grow Successfully Without Chaos",
