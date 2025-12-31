@@ -85,7 +85,7 @@ const Resources = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Accounting Firm Resources: Guides & Tools | SmartFirm"
-        description: "Free accounting firm resources including automation guides, efficiency tools, growth calculators, and expert insights to help you streamline operations and scale."
+        description="Free accounting firm resources including automation guides, efficiency tools, growth calculators, and expert insights to help you streamline operations and scale."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
