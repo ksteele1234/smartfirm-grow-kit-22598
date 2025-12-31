@@ -140,8 +140,8 @@ const AddOns = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Marketing Add-Ons for Accounting Firms | SmartFirm"
-        description="Marketing add-ons for accounting firms: blogs, paid ads, newsletters, chatbots, voice AI, social media, trade shows, and retention programs. Scale at your pace."
+        title="Additional Marketing Services for Accounting Firms"
+        description="Scale your marketing with flexible additional services: blogs, paid ads, newsletters, chatbots, and social media. No long-term commitments required."
         canonicalUrl="https://smartfirm.io/services/add-ons"
         pageType="service"
         serviceName="Growth Add-Ons & Custom Marketing Solutions"

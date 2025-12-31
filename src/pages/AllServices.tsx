@@ -103,8 +103,8 @@ const AllServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Professional Marketing Services For Accounting Firms"
-        description="Browse professional marketing services for accounting firms—from marketing automation, websites, and SEO to social media, content marketing, and optimization."
+        title="Complete Marketing Services for Accounting Firms"
+        description="Browse complete marketing services for accounting firms—from automation and websites to SEO, content, and optimization. Get everything you need in one place."
         canonicalUrl="https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms"
         pageType="service"
         noindex={false}
@@ -146,11 +146,11 @@ const AllServices = () => {
         <div className="max-w-container-3xl mx-auto relative">
           <div className="text-center max-w-text-lg mx-auto">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              Professional Marketing Services For Accounting Firms
+              Complete Marketing Services for Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground leading-relaxed">
-                SmartFirm's professional marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
+                SmartFirm's complete marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
               </p>
             </div>
           </div>

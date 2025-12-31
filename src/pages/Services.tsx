@@ -40,8 +40,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Leading Marketing Services For Accounting Firms | SmartFirm"
-        description="Explore leading marketing services for accounting firms: automation platforms, conversion-optimized websites, local SEO, retention, and growth systems."
+        title="Marketing Automation Services for Accounting Firms"
+        description="Explore marketing automation services for accounting firms: automated platforms, conversion-optimized websites, local SEO, retention, and growth systems."
         canonicalUrl="https://smartfirm.io/leading-marketing-services-for-accounting-firms"
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
@@ -80,10 +80,10 @@ const Services = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">Leading Marketing Services For Accounting Firms</h1>
+            <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">Marketing Automation Services for Accounting Firms</h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-                Leading marketing services for accounting firms include turnkey automation platforms, conversion-optimized website design, local SEO, and systematic client retention programs—all designed to get you more clients while reducing manual work.
+                Marketing automation services for accounting firms include turnkey automation platforms, conversion-optimized website design, local SEO, and systematic client retention programs—all designed to get you more qualified leads without manual work.
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">

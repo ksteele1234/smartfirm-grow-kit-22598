@@ -89,8 +89,8 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Stop Feeling Overwhelmed: Solutions For Accounting Firms | SmartFirm"
-        description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
+        title="Business Automation Solutions for Accounting Firms"
+        description="Business automation solutions for accounting firms drowning in manual work: automate what's slowing you down, reclaim your time, and grow without the stress."
         canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
         pageType="solution"
         faqs={faqsToRender}
@@ -133,12 +133,11 @@ const Solutions = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">
-              Stop Feeling Overwhelmed:<br />
-              Solutions For Accounting Firms
+              Business Automation Solutions for Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks: automate what's slowing you down, reclaim your time, and grow without the stress.
+                Business automation solutions for accounting firms address the challenges of manual work, tech-savvy competitors, and burnout from 60-hour weeks: automate what's slowing you down, reclaim your time, and grow without the chaos.
               </p>
             </div>
             <div className="mt-12 flex justify-center">
