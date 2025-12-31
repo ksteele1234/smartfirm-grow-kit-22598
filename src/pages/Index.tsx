@@ -29,8 +29,8 @@ const Index = memo(() => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Expert Digital Marketing For Accounting Firms | SmartFirm"
-        description="SmartFirm delivers expert digital marketing for accounting firms with done-for-you automation, SEO, websites, and retention systems to get & keep clients."
+        title="Accounting Firm Automation Systems | SmartFirm"
+        description="We build accounting firm automation systems that run your client work, streamline workflows, and help your practice grow on autopilot. Reclaim 10+ hours weekly."
         pageImage="/assets/hero-wave-background.webp"
         pageType="default"
         noindex={false}

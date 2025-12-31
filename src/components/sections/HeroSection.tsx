@@ -148,7 +148,7 @@ const HeroSection = memo(() => {
             {/* Subheadline */}
             <div id="sf-keyword-intro" className="animate-subhead">
               <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
-                You get cleaner workflows, faster responses, and hours back each week to focus on real client work.
+                At SmartFirm, we build accounting firm automation systems that handle your repetitive client work, freeing you to focus on high-value advisory services and growth.
               </p>
             </div>
 
