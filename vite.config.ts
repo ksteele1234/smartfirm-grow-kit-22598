@@ -103,6 +103,7 @@ export default defineConfig(({ mode }) => ({
     }),
     sitemap({
       hostname: 'https://smartfirm.io',
+      outDir: 'dist',
       dynamicRoutes: sitemapRoutes.map(route => route.path),
       readable: true,
       priority: Object.fromEntries(
