@@ -167,8 +167,8 @@ const GrowthPotentialScorecard = () => {
       return (
         <div className="min-h-screen bg-background">
           <SEO 
-            title="Growth Potential Scorecard | SmartFirm"
-            description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
+            title="Accounting Firm Growth Scorecard | SmartFirm"
+            description="Free accounting firm growth scorecard. Assess your marketing, operations, and client retention to identify growth opportunities and benchmark against peers."
             canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard"
             pageType="tool"
             toolName="Growth Potential Scorecard"

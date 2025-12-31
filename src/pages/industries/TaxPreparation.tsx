@@ -6,9 +6,9 @@ const TaxPreparation = () => {
   const industryFaqs = getFaqsForPath("/industries/tax-preparation");
   const industryData: IndustryPageData = {
     id: "tax-preparation",
-    title: "Marketing For Tax Preparation Firms | SmartFirm",
+    title: "Marketing for Tax Preparers | SmartFirm",
     slug: "tax-preparation-marketing-solutions",
-    metaDescription: "Marketing for tax preparation firms solves seasonal revenue swings and manual lead follow-up through automation, local SEO, and year-round client acquisition strategies.",
+    metaDescription: "Marketing for tax preparation firms that solves seasonal revenue swings. Automate client acquisition, streamline onboarding, and fill your pipeline year-round—not just tax season.",
     canonicalUrl: "https://smartfirm.io/industries/tax-preparation-marketing-solutions",
     content: {},
     heroTitle: "Marketing For Tax Preparation Firms",

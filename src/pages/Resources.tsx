@@ -84,8 +84,8 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="CPA Marketing Resources: Free Guides & Tools | SmartFirm"
-        description="CPA marketing resources including free guides, tools, calculators, and expert insights to help accounting professionals grow their firms with proven strategies."
+        title="Accounting Firm Resources: Guides & Tools | SmartFirm"
+        description: "Free accounting firm resources including automation guides, efficiency tools, growth calculators, and expert insights to help you streamline operations and scale."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}

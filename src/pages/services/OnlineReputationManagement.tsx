@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const OnlineReputationManagement = () => {
   const serviceData: ServicePageData = {
     id: "reputation-management-for-cpas",
-    title: "Reputation Management for CPAs | SmartFirm",
+    title: "Reputation Management for Accountants | SmartFirm",
     slug: "reputation-management-for-cpas",
-    metaDescription: "Reputation management for CPAs: 24/7 review monitoring, professional responses, and systematic five-star review generation. Protect and grow your online presence.",
+    metaDescription: "Reputation management for accountants that builds trust online. Get consistent 5-star reviews, monitor your reputation, and attract more clients through positive social proof.",
     canonicalUrl: "https://smartfirm.io/services/reputation-management-for-cpas",
     content: {},
     heroTitle: "Reputation Management for CPAs",

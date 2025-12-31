@@ -1066,8 +1066,8 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
   return (
     <>
       <SEO 
-        title="Page Grader | SmartFirm"
-        description="Internal page grading and analysis tool"
+        title="Website Page Grader for Accountants | SmartFirm"
+        description="Free website page grader for accountants. Analyze page speed, SEO, mobile-friendliness, and conversion optimization to improve your site performance."
         robots="noindex, nofollow"
       />
       <div className="space-y-8">

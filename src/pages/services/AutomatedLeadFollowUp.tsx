@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const AutomatedLeadFollowUp = () => {
   const serviceData: ServicePageData = {
     id: "automated-lead-follow-up",
-    title: "Automated Lead Follow-Up for CPAs | SmartFirm",
+    title: "Automated Lead Follow-Up for Accountants | SmartFirm",
     slug: "automated-lead-follow-up",
-    metaDescription: "Automated lead follow-up for CPAs: instant response, multi-touch nurture sequences, and 40% higher conversion rates. Never lose a lead again.",
+    metaDescription: "Automated lead follow-up for accountants that responds within minutes and nurtures prospects automatically. Convert 40% more leads without manual effort or adding staff.",
     canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up",
     content: {},
     heroTitle: "Automated Lead Follow-Up for CPAs",

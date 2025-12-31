@@ -31,8 +31,8 @@ const SingleProcessAITransformation = () => {
   return (
     <>
       <SEO 
-        title="Single-Process AI Optimization | SmartFirm"
-        description="Turn your biggest bottleneck into a clear action plan. Focused 1-week AI optimization that delivers real results."
+        title="Process Automation for Accounting Firms | SmartFirm"
+        description="Process automation for accounting firms that eliminates your biggest bottleneck. Focused 1-week AI optimization delivers a clear action plan and measurable results."
         canonicalUrl="https://smartfirm.io/services/single-process-ai-transformation"
       />
       <Header />

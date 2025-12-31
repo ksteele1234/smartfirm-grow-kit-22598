@@ -128,8 +128,8 @@ const AutomationReadinessQuiz = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Automation Readiness Quiz Results | SmartFirm"
-          description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
+          title="Automation Readiness Assessment | SmartFirm"
+          description="Free automation readiness assessment for accounting firms. Discover which processes to automate first and get a personalized roadmap to streamline operations."
           canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz"
           pageType="tool"
           toolName="Automation Readiness Quiz"

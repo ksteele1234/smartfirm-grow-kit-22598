@@ -151,8 +151,8 @@ const TechStackROICalculator = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Tech Stack ROI Calculator Results | SmartFirm"
-          description="Your tech stack analysis results with cost savings and efficiency recommendations."
+          title="Technology ROI Calculator for Accountants | SmartFirm"
+          description="Free technology ROI calculator for accounting firms. Calculate time savings, cost reduction, and revenue impact of automation and tech stack optimization."
           canonicalUrl="https://smartfirm.io/tools/tech-stack-roi-calculator"
           pageType="tool"
           toolName="Tech Stack ROI Calculator"

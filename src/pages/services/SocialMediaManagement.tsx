@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const SocialMediaManagement = () => {
   const serviceData: ServicePageData = {
     id: "social-media-management",
-    title: "Social Media Management for CPAs | SmartFirm",
+    title: "Social Media for Accountants | SmartFirm",
     slug: "social-media-management",
-    metaDescription: "Social media management for CPAs: 12-16 compliant posts monthly that build thought leadership, drive referrals, and attract advisory clients. Done-for-you.",
+    metaDescription: "Social media management for accountants that builds authority and attracts clients. Consistent, professional content that positions you as a trusted advisor without the time drain.",
     canonicalUrl: "https://smartfirm.io/services/social-media-management",
     content: {},
     heroTitle: "Social Media Management for CPAs",

@@ -4,9 +4,9 @@ import { ServicePageData } from "@/types/cms";
 const EmailMarketing = () => {
   const serviceData: ServicePageData = {
     id: "email-marketing",
-    title: "Email Marketing for CPAs | SmartFirm",
+    title: "Email Marketing for Accountants | SmartFirm",
     slug: "email-marketing",
-    metaDescription: "Email marketing for CPAs: automated newsletters, personalized campaigns, and strategic touchpoints that increase retention 25% and generate $20K-$50K in upsells.",
+    metaDescription: "Email marketing for accountants that nurtures leads and retains clients automatically. Stay top-of-mind year-round with proven campaigns that drive engagement and referrals.",
     canonicalUrl: "https://smartfirm.io/services/email-marketing",
     content: {},
     heroTitle: "Email Marketing for CPAs",

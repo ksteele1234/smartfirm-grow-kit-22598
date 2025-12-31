@@ -86,8 +86,8 @@ const ClientLifetimeValueCalculator = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Client Lifetime Value Calculator Results | SmartFirm"
-          description="Your client lifetime value analysis with retention recommendations for your accounting firm."
+          title="Client Lifetime Value Calculator | SmartFirm"
+          description="Free client lifetime value calculator for accounting firms. Calculate CLV, retention rates, and revenue potential to optimize your client acquisition strategy."
           canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator"
           pageType="tool"
           toolName="Client Lifetime Value Calculator"

@@ -6,9 +6,9 @@ const AuditAssurance = () => {
   const industryFaqs = getFaqsForPath("/industries/audit-assurance");
   const industryData: IndustryPageData = {
     id: "audit-assurance",
-    title: "Marketing For Audit Firms That Builds Trust | SmartFirm",
+    title: "Marketing for Audit Firms | SmartFirm",
     slug: "audit-assurance-marketing-agency",
-    metaDescription: "Marketing for audit firms establishes credibility, demonstrates competence and independence, and attracts organizations requiring financial statement audits and assurance engagements.",
+    metaDescription: "Marketing for audit firms that builds trust and credibility. Attract organizations seeking professional audit services with proven strategies that demonstrate competence and reliability.",
     canonicalUrl: "https://smartfirm.io/industries/audit-assurance-marketing-agency",
     content: {},
     heroTitle: "Marketing For Audit Firms",

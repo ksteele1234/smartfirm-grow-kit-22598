@@ -527,8 +527,8 @@ const SEOAudit = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="SEO Audit Tool"
-        description="Internal SEO audit tool for SmartFirm website analysis"
+        title="SEO Audit Tool for Accounting Firms | SmartFirm"
+        description="Free SEO audit tool for accounting firms. Analyze your website performance, identify technical issues, and get actionable recommendations to improve rankings."
         canonicalUrl="https://smartfirm.io/tools/seo-audit"
         pageType="tool"
         toolName="SEO Audit Tool"

@@ -137,8 +137,8 @@ const MarketingScorecard = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Marketing Scorecard Results | SmartFirm"
-          description="Your marketing assessment results with personalized recommendations for accounting firm growth."
+          title="Marketing Assessment for Accountants | SmartFirm"
+          description="Free marketing assessment for accountants. Evaluate your website, SEO, lead generation, and client retention to identify quick wins and growth opportunities."
           canonicalUrl="https://smartfirm.io/tools/marketing-scorecard"
           pageType="tool"
           toolName="Marketing Scorecard"

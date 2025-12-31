@@ -112,8 +112,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="About SmartFirm | Marketing Automation for Accountants"
-        description="Learn how SmartFirm empowers accountants, CPAs, bookkeepers, and tax preparers with marketing automation, SEO, and digital marketing for CPA firms."
+        title="About SmartFirm | Automation for Accountants"
+        description="Learn about SmartFirm: founded by a CPA and business turnaround specialist, we help accounting firms automate workflows, streamline operations, and grow without hiring."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}

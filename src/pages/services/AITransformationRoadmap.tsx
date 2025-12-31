@@ -126,8 +126,8 @@ const AITransformationRoadmap = () => {
         pageType="service"
         serviceName="AI Transformation Roadmap"
         audience="accounting firms"
-        title="AI Transformation Roadmap | SmartFirm"
-        description="Stop Guessing Where AI Fits. Get a Clear 12-Month Strategy. A comprehensive 2-4 week engagement that maps your business processes and delivers a prioritized implementation plan."
+        title="AI Transformation for Accounting Firms | SmartFirm"
+        description="AI transformation for accounting firms with a clear 12-month strategy. Comprehensive 2-4 week engagement that maps processes and delivers a prioritized AI implementation roadmap."
         canonicalUrl="https://smartfirm.io/services/ai-transformation-roadmap"
         noindex={false}
         dateModified={new Date().toISOString()}

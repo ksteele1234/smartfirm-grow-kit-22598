@@ -6,9 +6,9 @@ const BusinessAdvisory = () => {
   const industryFaqs = getFaqsForPath("/industries/business-advisory");
   const industryData: IndustryPageData = {
     id: "business-advisory",
-    title: "Marketing For Business Advisors That Commands Premium Fees | SmartFirm",
+    title: "Marketing for Business Advisors | SmartFirm",
     slug: "business-advisory-marketing-services",
-    metaDescription: "Marketing for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees through thought leadership.",
+    metaDescription: "Marketing for business advisors that commands premium advisory fees. Position as a strategic growth partner, attract high-value entrepreneurial clients, and establish thought leadership.",
     canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services",
     content: {},
     heroTitle: "Marketing For Business Advisors",

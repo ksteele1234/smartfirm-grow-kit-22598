@@ -228,8 +228,8 @@ const ModernFirmQuiz = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Modern Firm Quiz Results | SmartFirm"
-          description="Your firm modernization assessment with technology adoption recommendations for accounting firms."
+          title="Modern Accounting Firm Assessment | SmartFirm"
+          description="Free modern accounting firm assessment. Evaluate your technology, processes, and client experience to see how you compare to tech-savvy competitors."
           canonicalUrl="https://smartfirm.io/tools/modern-firm-quiz"
           pageType="tool"
           toolName="Modern Firm Quiz"

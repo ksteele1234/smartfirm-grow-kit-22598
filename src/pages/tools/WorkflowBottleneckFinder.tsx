@@ -166,8 +166,8 @@ const WorkflowBottleneckFinder = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Workflow Bottleneck Finder Results | SmartFirm"
-          description="Your workflow analysis results with time savings recommendations for your accounting firm."
+          title="Workflow Bottleneck Finder for Accountants | SmartFirm"
+          description="Free workflow bottleneck finder for accounting firms. Identify inefficiencies, measure process delays, and get recommendations to streamline operations."
           canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder"
           pageType="tool"
           toolName="Workflow Bottleneck Finder"

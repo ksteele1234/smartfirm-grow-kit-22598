@@ -6,9 +6,9 @@ const BookkeepingServices = () => {
   const industryFaqs = getFaqsForPath("/industries/bookkeeping-services");
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
-    title: "Marketing For Bookkeeping Firms That Commands Premium Fees | SmartFirm",
+    title: "Marketing for Bookkeepers | SmartFirm",
     slug: "bookkeeping-services-marketing-automation", 
-    metaDescription: "Marketing for bookkeeping firms differentiates your practice from commodity providers, attracts ideal small business clients, and positions you as a strategic financial partner commanding premium fees.",
+    metaDescription: "Marketing for bookkeepers that commands premium fees. Differentiate from commodity providers, attract ideal small business clients, and position as a strategic financial partner.",
     canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation",
     content: {},
     heroTitle: "Marketing For Bookkeeping Firms",

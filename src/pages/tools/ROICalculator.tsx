@@ -93,8 +93,8 @@ const ROICalculator = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Marketing ROI Calculator Results | SmartFirm"
-          description="Your marketing ROI analysis for accounting firms. See your return on investment and growth potential."
+          title="Marketing ROI Calculator for Accountants | SmartFirm"
+          description="Free marketing ROI calculator for accountants. Calculate the return on your marketing investment and see how automation can increase revenue per client."
           canonicalUrl="https://smartfirm.io/tools/roi-calculator"
           pageType="tool"
           toolName="Marketing ROI Calculator"

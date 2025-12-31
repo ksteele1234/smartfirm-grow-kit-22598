@@ -786,8 +786,8 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
   return (
     <>
       <SEO 
-        title="Advanced SEO QA | SmartFirm"
-        description="Internal advanced SEO quality assurance tool"
+        title="Advanced SEO Analysis for Accountants | SmartFirm"
+        description="Advanced SEO analysis for accounting firms. Deep-dive technical audit with keyword analysis, backlink review, and competitive benchmarking."
         robots="noindex, nofollow"
       />
       <div className="space-y-8">

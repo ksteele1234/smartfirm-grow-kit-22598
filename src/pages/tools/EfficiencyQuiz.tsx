@@ -167,8 +167,8 @@ const EfficiencyQuiz = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Efficiency Quiz | SmartFirm"
-          description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
+          title="Accounting Firm Efficiency Assessment | SmartFirm"
+          description="Free accounting firm efficiency assessment. Identify bottlenecks, measure productivity, and get actionable recommendations to reclaim 10+ hours weekly."
           canonicalUrl="https://smartfirm.io/tools/efficiency-quiz"
           pageType="tool"
           toolName="Efficiency Quiz"

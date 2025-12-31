@@ -195,8 +195,8 @@ const LeadGenerationScorecard = () => {
     return (
       <div className="min-h-screen bg-background">
         <SEO 
-          title="Lead Generation Scorecard Results | SmartFirm"
-          description="Your lead generation assessment results with recommendations to improve your accounting firm's marketing."
+          title="Lead Generation Scorecard for Accountants | SmartFirm"
+          description="Free lead generation scorecard for accounting firms. Assess your lead capture, follow-up, and conversion processes to identify growth opportunities."
           canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard"
           pageType="tool"
           toolName="Lead Generation Scorecard"
