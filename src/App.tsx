@@ -85,6 +85,15 @@ const Cookies = lazy(() => import("./pages/Cookies"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
+// Auth & Admin Pages
+const Auth = lazy(() => import("./pages/auth/Auth"));
+const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
+const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const PostList = lazy(() => import("./pages/admin/PostList"));
+const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
+const CategoryManager = lazy(() => import("./pages/admin/CategoryManager"));
+const TagManager = lazy(() => import("./pages/admin/TagManager"));
+
 // Loading fallback component
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -221,6 +230,17 @@ const App = () => (
             {/* Utility Pages - Excluded from sitemap */}
             <Route path="/500" element={<ServerError />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            
+            {/* Auth & Admin */}
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="posts" element={<PostList />} />
+              <Route path="posts/new" element={<PostEditor />} />
+              <Route path="posts/:id/edit" element={<PostEditor />} />
+              <Route path="categories" element={<CategoryManager />} />
+              <Route path="tags" element={<TagManager />} />
+            </Route>
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
