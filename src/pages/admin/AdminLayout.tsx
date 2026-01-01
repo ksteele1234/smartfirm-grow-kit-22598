@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Outlet, useNavigate, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import { 
   LayoutDashboard, 
   FileText, 
@@ -153,7 +154,9 @@ export default function AdminLayout() {
 
         {/* Main content */}
         <main className="flex-1 p-4 lg:p-8 min-h-screen">
-          <Outlet />
+          <ErrorBoundary title="Admin page error">
+            <Outlet />
+          </ErrorBoundary>
         </main>
       </div>
     </div>
