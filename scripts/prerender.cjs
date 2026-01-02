@@ -163,6 +163,39 @@ function ensureSpaFallbackPages(routes) {
 
 // Try to find Chrome executable
 function findChrome() {
+  // 1. Check CHROME_PATH from Netlify plugin
+  if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
+    return process.env.CHROME_PATH;
+  }
+  
+  // 2. Check common Netlify/CI locations
+  const commonPaths = [
+    '/opt/chromium/chrome',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+  ];
+  
+  for (const chromePath of commonPaths) {
+    if (fs.existsSync(chromePath)) {
+      return chromePath;
+    }
+  }
+  
+  // 3. Try which command
+  try {
+    const chromePath = execSync('which chromium-browser || which chromium || which google-chrome', { encoding: 'utf-8' }).trim();
+    if (chromePath && fs.existsSync(chromePath)) {
+      return chromePath;
+    }
+  } catch (e) {
+    // which command failed
+  }
+  
+  return null;
+}
+
 async function prerender() {
   console.log('[Prerender] Starting prerender process...');
 
