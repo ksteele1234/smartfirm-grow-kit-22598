@@ -428,9 +428,11 @@ export function RichTextEditor({
   }, [content, editor]);
 
   return (
-    <div className={cn('border border-input rounded-md bg-background', className)}>
+    <div className={cn('border border-input rounded-md bg-background flex flex-col', className)}>
       <MenuBar editor={editor} />
-      <EditorContent editor={editor} />
+      <div className="flex-1 overflow-y-auto max-h-[500px] min-h-[300px]">
+        <EditorContent editor={editor} />
+      </div>
     </div>
   );
 }
