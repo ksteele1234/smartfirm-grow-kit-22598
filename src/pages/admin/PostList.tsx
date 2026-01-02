@@ -19,7 +19,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Plus, Search, Pencil, Trash2, Loader2 } from 'lucide-react';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible';
+import { Plus, Search, Pencil, Trash2, Loader2, ChevronDown, ChevronUp, FileUp } from 'lucide-react';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
@@ -34,6 +39,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
+import PostCsvUploader from './PostCsvUploader';
 
 interface BlogPost {
   id: string;
@@ -51,6 +57,7 @@ export default function PostList() {
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [isImportOpen, setIsImportOpen] = useState(false);
   const { isAdmin } = useAuth();
 
   useEffect(() => {
@@ -124,6 +131,11 @@ export default function PostList() {
     return matchesSearch && matchesStatus;
   });
 
+  const handleImportSuccess = () => {
+    fetchPosts();
+    setIsImportOpen(false);
+  };
+
   return (
     <>
       <SEO
@@ -138,13 +150,26 @@ export default function PostList() {
             <h1 className="text-2xl font-bold text-primary">Posts</h1>
             <p className="text-muted-foreground">Manage your blog posts</p>
           </div>
-          <Button asChild>
-            <Link to="/admin/posts/new">
-              <Plus size={16} className="mr-2" />
-              New Post
-            </Link>
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={() => setIsImportOpen(!isImportOpen)}>
+              <FileUp size={16} className="mr-2" />
+              Import CSV
+            </Button>
+            <Button asChild>
+              <Link to="/admin/posts/new">
+                <Plus size={16} className="mr-2" />
+                New Post
+              </Link>
+            </Button>
+          </div>
         </div>
+
+        {/* CSV Import Section */}
+        <Collapsible open={isImportOpen} onOpenChange={setIsImportOpen}>
+          <CollapsibleContent>
+            <PostCsvUploader onSuccess={handleImportSuccess} />
+          </CollapsibleContent>
+        </Collapsible>
 
         {/* Filters */}
         <div className="flex flex-col sm:flex-row gap-4">
