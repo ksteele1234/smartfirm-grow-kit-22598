@@ -428,12 +428,23 @@ export function RichTextEditor({
   }, [content, editor]);
 
   return (
-    <div className={cn('border border-input rounded-md bg-background flex flex-col h-[60vh] min-h-[420px] max-h-[800px] overflow-hidden', className)}>
+    <div
+      className={cn(
+        'border border-input rounded-md bg-background flex flex-col h-[60vh] min-h-[420px] max-h-[800px] overflow-hidden',
+        className
+      )}
+    >
       <div className="flex-shrink-0 bg-background border-b border-border">
         <MenuBar editor={editor} />
       </div>
-      <div className="flex-1 min-h-0 overflow-y-auto">
-        <EditorContent editor={editor} />
+
+      {/* Make the *EditorContent element* the scroll container for reliable wheel/trackpad behavior */}
+      <div className="flex-1 min-h-0">
+        <EditorContent
+          editor={editor}
+          className="h-full overflow-y-auto"
+          style={{ WebkitOverflowScrolling: 'touch' }}
+        />
       </div>
     </div>
   );
