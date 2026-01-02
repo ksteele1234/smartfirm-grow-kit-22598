@@ -14,6 +14,7 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  Heading4,
   Link as LinkIcon,
   Image as ImageIcon,
   Undo,
@@ -201,6 +202,16 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
       >
         <Heading3 className="h-4 w-4" />
       </Button>
+      <Button
+        type="button"
+        variant="ghost"
+        size="sm"
+        onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
+        className={cn('h-8 w-8 p-0', editor.isActive('heading', { level: 4 }) && 'bg-muted')}
+        title="Heading 4"
+      >
+        <Heading4 className="h-4 w-4" />
+      </Button>
 
       <div className="w-px h-6 bg-border mx-1 self-center" />
 
@@ -379,7 +390,7 @@ export function RichTextEditor({
     extensions: [
       StarterKit.configure({
         heading: {
-          levels: [1, 2, 3],
+          levels: [1, 2, 3, 4],
         },
       }),
       Link.configure({
