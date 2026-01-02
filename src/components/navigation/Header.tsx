@@ -92,6 +92,11 @@ const Header = () => {
       description: "Focus on one critical process and transform it completely with AI."
     },
     { 
+      title: "Client Onboarding Automation", 
+      href: "/services/client-onboarding-automation",
+      description: "Streamline client intake with automated welcome emails, document collection, and reminders."
+    },
+    { 
       title: "Technology Solutions", 
       href: "/services/accounting-firm-technology-consulting",
       description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
