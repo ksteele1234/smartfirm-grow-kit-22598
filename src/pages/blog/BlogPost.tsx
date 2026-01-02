@@ -6,7 +6,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 
@@ -25,6 +25,12 @@ interface BlogPost {
     name: string;
     slug: string;
   } | null;
+}
+
+interface PostTag {
+  id: string;
+  name: string;
+  slug: string;
 }
 
 const BlogPost = () => {
@@ -60,6 +66,33 @@ const BlogPost = () => {
       return data as BlogPost;
     },
     enabled: !!slug,
+  });
+
+  // Fetch tags for this post
+  const { data: postTags = [] } = useQuery({
+    queryKey: ["blog-post-tags", post?.id],
+    queryFn: async () => {
+      if (!post?.id) return [];
+
+      const { data: tagLinks, error: tagLinksError } = await supabase
+        .from("blog_post_tags")
+        .select("tag_id")
+        .eq("post_id", post.id);
+
+      if (tagLinksError) throw tagLinksError;
+      if (!tagLinks || tagLinks.length === 0) return [];
+
+      const tagIds = tagLinks.map((tl) => tl.tag_id);
+
+      const { data, error } = await supabase
+        .from("blog_tags")
+        .select("id, name, slug")
+        .in("id", tagIds);
+
+      if (error) throw error;
+      return data as PostTag[];
+    },
+    enabled: !!post?.id,
   });
 
   if (isLoading) {
@@ -138,6 +171,23 @@ const BlogPost = () => {
             className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
             dangerouslySetInnerHTML={{ __html: post.content || "" }}
           />
+
+          {/* Tags */}
+          {postTags.length > 0 && (
+            <div className="mt-12 pt-8 border-t">
+              <div className="flex flex-wrap items-center gap-3">
+                <Tag className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground font-medium">Tags:</span>
+                {postTags.map((tag) => (
+                  <Link key={tag.id} to={`/blog/tags/${tag.slug}`}>
+                    <Badge variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                      {tag.name}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
 
         {/* CTA Section */}
