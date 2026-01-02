@@ -21,6 +21,7 @@ const Footer = () => {
   ];
 
   const resources = [
+    { name: "Blog", slug: "/blog" },
     { name: "Resources", slug: "/resources" },
     { name: "Tools & Calculators", slug: "/tools" },
     { name: "Case Studies", slug: "/case-studies" }
