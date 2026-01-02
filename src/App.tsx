@@ -48,6 +48,7 @@ const StrategyIntegration = lazy(() => import("./pages/services/StrategyIntegrat
 const AddOns = lazy(() => import("./pages/services/AddOns"));
 const AITransformationRoadmap = lazy(() => import("./pages/services/AITransformationRoadmap"));
 const SingleProcessAITransformation = lazy(() => import("./pages/services/SingleProcessAITransformation"));
+const ClientOnboardingAutomation = lazy(() => import("./pages/services/ClientOnboardingAutomation"));
 const AITransformationOffer = lazy(() => import("./pages/AITransformationOffer"));
 const ListReactivationOffer = lazy(() => import("./pages/ListReactivationOffer"));
 
@@ -169,6 +170,7 @@ const App = () => (
             <Route path="/services/reputation-management-for-cpas" element={<OnlineReputationManagement />} />
             <Route path="/services/marketing-strategy-integration-for-accounting-firms" element={<StrategyIntegration />} />
             <Route path="/services/add-ons" element={<AddOns />} />
+            <Route path="/services/client-onboarding-automation" element={<ClientOnboardingAutomation />} />
             
             {/* Service page redirects for old slugs */}
             <Route path="/services/marketing-automation" element={<Navigate to="/services/marketing-automation-for-accounting-firms" replace />} />

@@ -157,6 +157,75 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaDescription: 'Let\'s build an SEO strategy that brings qualified clients to your firm.',
     ctaButtonText: 'Get Started',
     ctaButtonLink: '/get-started'
+  },
+  'client-onboarding-automation': {
+    id: 'client-onboarding-automation',
+    title: 'Client Onboarding Automation for Accounting Firms | SmartFirm',
+    slug: 'client-onboarding-automation',
+    metaDescription: 'Client onboarding automation for accounting firms eliminates manual intake, creates a professional first impression, and saves 10+ hours weekly. Trusted by growth-focused firms.',
+    canonicalUrl: 'https://smartfirm.io/services/client-onboarding-automation',
+    heroTitle: 'Client Onboarding Automation for Accounting Firms',
+    heroSubtitle: 'Tired of the manual, time-consuming process of onboarding new clients? Client onboarding automation for accounting firms eliminates repetitive tasks, creates a seamless client experience, and frees your team to focus on billable work.',
+    heroDescription: 'Client onboarding automation for accounting firms streamlines intake, ensures consistency, and saves 10+ hours weekly while creating a professional first impression.',
+    content: {},
+    benefits: [
+      {
+        title: 'Save 10+ Hours Per Week',
+        description: 'Eliminate repetitive data entry, email drafting, and document chasing with automated onboarding workflows.',
+        icon: 'Clock'
+      },
+      {
+        title: 'Create a Professional First Impression',
+        description: 'Automated welcome sequences position your firm as organized, modern, and client-focused.',
+        icon: 'Star'
+      },
+      {
+        title: 'Ensure Consistency Across Every Client',
+        description: 'Every client gets the same high-quality experience with standardized welcome emails and document checklists.',
+        icon: 'CheckCircle'
+      },
+      {
+        title: 'Scale Without Adding Staff',
+        description: 'Handle 3x more new clients without increasing your admin workload.',
+        icon: 'TrendingUp'
+      }
+    ],
+    features: [
+      {
+        title: 'Automated Welcome Emails and Instructions',
+        description: 'New clients receive immediate, personalized welcome emails with clear next steps',
+        details: [
+          'Instant welcome email upon engagement signing',
+          'Personalized introduction with team member bios',
+          'Clear step-by-step onboarding instructions',
+          'Branded templates that reflect your firm\'s professionalism'
+        ]
+      },
+      {
+        title: 'Secure Document Collection Portal',
+        description: 'Clients upload documents through a secure, branded portal',
+        details: [
+          'Encrypted file upload with bank-level security',
+          'Customizable document checklists by service type',
+          'Real-time status tracking for both client and team',
+          'Automatic organization and filing of received documents'
+        ]
+      },
+      {
+        title: 'Practice Management Integration',
+        description: 'Seamlessly connect with Karbon, Canopy, and other tools',
+        details: [
+          'Two-way sync with Karbon, Canopy, and Financial Cents',
+          'Automatic task creation when onboarding begins',
+          'Client record updates without double data entry',
+          'Workflow triggers based on onboarding milestones'
+        ]
+      }
+    ],
+    ctaTitle: 'Ready to Automate Your Client Onboarding?',
+    ctaDescription: 'Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.',
+    ctaButtonText: 'Schedule a Free Consultation',
+    ctaButtonLink: '/get-started'
   }
 };
 
