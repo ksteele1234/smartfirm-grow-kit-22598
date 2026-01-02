@@ -78,6 +78,7 @@ export default function TagManager() {
   const [bulkInput, setBulkInput] = useState('');
   const [isBulkSaving, setIsBulkSaving] = useState(false);
   const csvInputRef = useRef<HTMLInputElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   const form = useForm<TagFormData>({
     resolver: zodResolver(tagSchema),
@@ -408,6 +409,39 @@ export default function TagManager() {
     }
   };
 
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleDragEnter = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      // Create a synthetic event to reuse handleCsvUpload
+      const syntheticEvent = {
+        target: { files: [file] },
+      } as unknown as React.ChangeEvent<HTMLInputElement>;
+      handleCsvUpload(syntheticEvent);
+    }
+  };
+
   // Parse a CSV line handling quoted fields
   const parseCSVLine = (line: string): string[] => {
     const result: string[] = [];
@@ -502,11 +536,21 @@ export default function TagManager() {
                       className="hidden"
                     />
                     <div 
-                      className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary/50 transition-colors cursor-pointer"
+                      className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
+                        isDragging 
+                          ? 'border-primary bg-primary/5' 
+                          : 'border-border hover:border-primary/50'
+                      }`}
                       onClick={() => csvInputRef.current?.click()}
+                      onDragOver={handleDragOver}
+                      onDragEnter={handleDragEnter}
+                      onDragLeave={handleDragLeave}
+                      onDrop={handleDrop}
                     >
-                      <FileUp className="h-10 w-10 mx-auto mb-3 text-muted-foreground" />
-                      <p className="text-sm font-medium">Click to upload CSV file</p>
+                      <FileUp className={`h-10 w-10 mx-auto mb-3 ${isDragging ? 'text-primary' : 'text-muted-foreground'}`} />
+                      <p className="text-sm font-medium">
+                        {isDragging ? 'Drop CSV file here' : 'Click to upload CSV file'}
+                      </p>
                       <p className="text-xs text-muted-foreground mt-1">or drag and drop</p>
                     </div>
                     <div className="flex justify-end">
