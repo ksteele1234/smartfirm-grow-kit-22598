@@ -231,6 +231,47 @@ export const servicePages: Record<string, ServicePageData> = {
 
 // Solution Pages with full CMS data
 export const solutionPages: Record<string, SolutionPageData> = {
+  'client-onboarding-problems': {
+    id: 'client-onboarding-problems',
+    title: 'Client Onboarding Problems? Stop Losing Clients | SmartFirm',
+    slug: 'client-onboarding-problems',
+    metaDescription: 'New clients falling through the cracks? A broken onboarding process costs you time, money, and reputation. Learn how to create a flawless first impression.',
+    canonicalUrl: 'https://smartfirm.io/solutions/client-onboarding-problems',
+    heroTitle: 'New Clients Falling Through the Cracks? It\'s Costing You More Than You Think.',
+    heroSubtitle: 'You just closed a great new client. You were excited, they were excited. But by the time you have everything you need, the initial excitement has evaporated—replaced by frustration.',
+    problemStatement: 'A clunky, manual, and confusing onboarding process silently sabotages new client relationships before they even begin.',
+    solutionOverview: 'Create a seamless, automated, and professional experience that wows new clients and sets your team up for success.',
+    content: {},
+    problemSolutionPairs: [
+      { problem: 'Email overload with confusing attachments', solution: 'Secure portal with clear, personalized checklists' },
+      { problem: 'Information scattered across email threads', solution: 'Central dashboard with complete visibility' },
+      { problem: 'Inconsistent experience per team member', solution: 'Standardized workflows for perfect consistency' }
+    ],
+    keyBenefits: [
+      { title: 'Save 10+ Hours Per Week', description: 'Free your team from manual follow-up with automated reminders.', icon: 'Clock' },
+      { title: 'Make a Stunning First Impression', description: 'Professional, branded onboarding that clients complete quickly.', icon: 'Star' },
+      { title: 'Ensure Consistency Every Time', description: 'Every client gets the same world-class experience.', icon: 'CheckCircle' },
+      { title: 'Scale Without Growing Pains', description: 'Handle 3x more clients without increasing admin workload.', icon: 'TrendingUp' }
+    ],
+    hearingSignals: [
+      'Team spends hours chasing documents',
+      'New clients seem confused during first weeks',
+      'Lost clients due to feeling disorganized'
+    ],
+    howItWorks: [
+      { step: 1, title: 'Initial Assessment', description: 'Audit your current onboarding process and identify bottlenecks.' },
+      { step: 2, title: 'System Design & Build', description: 'Design custom portal, templates, and automated sequences.' },
+      { step: 3, title: 'Integration & Testing', description: 'Connect to your practice management software and test workflows.' },
+      { step: 4, title: 'Launch & Optimization', description: 'Train your team, launch, and optimize based on real usage.' }
+    ],
+    results: [
+      { metric: '10+', value: 'Hours Saved Weekly', description: 'Time reclaimed from manual follow-up' },
+      { metric: '85%', value: 'Faster Onboarding', description: 'Reduction in time to work-ready' },
+      { metric: '100%', value: 'Consistency', description: 'Same professional experience for every client' }
+    ],
+    ctaTitle: 'Ready to Stop Losing Clients Before You Even Start?',
+    ctaDescription: 'Schedule a free 15-minute call to see how client onboarding automation would work for your firm.'
+  },
   'client-retention': {
     id: 'client-retention',
     title: 'Client Retention Strategies | SmartFirm',

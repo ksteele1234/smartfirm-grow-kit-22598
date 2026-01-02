@@ -30,6 +30,7 @@ const GetMoreReferrals = lazy(() => import("./pages/solutions/GetMoreReferrals")
 const WorkLessEarnMore = lazy(() => import("./pages/solutions/WorkLessEarnMore"));
 const GrowWithoutPains = lazy(() => import("./pages/solutions/GrowWithoutPains"));
 const ProtectPractice = lazy(() => import("./pages/solutions/ProtectPractice"));
+const ClientOnboardingProblems = lazy(() => import("./pages/solutions/ClientOnboardingProblems"));
 
 // Service Pages
 const AutomatedLeadFollowUp = lazy(() => import("./pages/services/AutomatedLeadFollowUp"));
@@ -150,6 +151,7 @@ const App = () => (
             <Route path="/solutions/work-less-earn-more" element={<WorkLessEarnMore />} />
             <Route path="/solutions/grow-without-growing-pains" element={<GrowWithoutPains />} />
             <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
+            <Route path="/solutions/client-onboarding-problems" element={<ClientOnboardingProblems />} />
             
             {/* Service Sub-pages */}
           <Route path="/services/ai-transformation-roadmap" element={<AITransformationRoadmap />} />

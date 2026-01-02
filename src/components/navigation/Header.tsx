@@ -155,6 +155,11 @@ const Header = () => {
       title: "Advanced Client Retention Strategies", 
       href: "/solutions/retention-strategies",
       description: "Protect your book of business with CPA-focused marketing automation and loyalty systems."
+    },
+    { 
+      title: "I'm losing clients during onboarding", 
+      href: "/solutions/client-onboarding-problems",
+      description: "Stop losing new clients to a broken onboarding process—create a flawless first impression every time."
     }
   ];
 
