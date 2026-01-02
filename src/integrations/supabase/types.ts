@@ -127,22 +127,61 @@ export type Database = {
           },
         ]
       }
+      blog_related_tags: {
+        Row: {
+          related_tag_id: string
+          tag_id: string
+        }
+        Insert: {
+          related_tag_id: string
+          tag_id: string
+        }
+        Update: {
+          related_tag_id?: string
+          tag_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_related_tags_related_tag_id_fkey"
+            columns: ["related_tag_id"]
+            isOneToOne: false
+            referencedRelation: "blog_tags"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "blog_related_tags_tag_id_fkey"
+            columns: ["tag_id"]
+            isOneToOne: false
+            referencedRelation: "blog_tags"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       blog_tags: {
         Row: {
           created_at: string
+          description: string | null
           id: string
+          meta_description: string | null
+          meta_title: string | null
           name: string
           slug: string
         }
         Insert: {
           created_at?: string
+          description?: string | null
           id?: string
+          meta_description?: string | null
+          meta_title?: string | null
           name: string
           slug: string
         }
         Update: {
           created_at?: string
+          description?: string | null
           id?: string
+          meta_description?: string | null
+          meta_title?: string | null
           name?: string
           slug?: string
         }
