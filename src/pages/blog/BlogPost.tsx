@@ -168,7 +168,16 @@ const BlogPost = () => {
         {/* Content */}
         <article className="container mx-auto px-4 max-w-4xl py-12 md:py-16">
           <div 
-            className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-primary prose-strong:text-foreground"
+            className="prose prose-lg max-w-none 
+              prose-headings:font-heading
+              prose-h1:text-[hsl(var(--heading-primary))] prose-h1:text-[2rem] prose-h1:lg:text-[2.5rem] prose-h1:font-extrabold
+              prose-h2:text-[hsl(var(--heading-primary))] prose-h2:text-[1.5rem] prose-h2:lg:text-[2rem] prose-h2:font-bold
+              prose-h3:text-[hsl(var(--heading-secondary))] prose-h3:text-[1.25rem] prose-h3:lg:text-[1.5rem] prose-h3:font-semibold
+              prose-h4:text-[hsl(var(--heading-secondary))] prose-h4:text-[1.125rem] prose-h4:lg:text-[1.25rem] prose-h4:font-semibold
+              prose-p:text-muted-foreground prose-p:text-lg prose-p:leading-relaxed
+              prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+              prose-strong:text-foreground
+              prose-li:text-muted-foreground"
             dangerouslySetInnerHTML={{ __html: post.content || "" }}
           />
 

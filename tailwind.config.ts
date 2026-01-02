@@ -2,6 +2,8 @@ import type { Config } from "tailwindcss";
 
 // @ts-ignore
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+// @ts-ignore
+const typography = require("@tailwindcss/typography");
 
 export default {
   darkMode: ["class"],
@@ -206,9 +208,81 @@ export default {
         "rotate-counter": "rotateCounterClockwise 40s linear infinite",
         "subtle-pulse": "subtlePulse 3.5s ease-in-out infinite"
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            '--tw-prose-headings': 'hsl(var(--heading-primary))',
+            '--tw-prose-body': 'hsl(var(--slate-dark))',
+            '--tw-prose-links': 'hsl(var(--primary))',
+            'h1': {
+              fontSize: '2rem',
+              fontFamily: 'var(--font-heading)',
+              fontWeight: '800',
+              lineHeight: '1.3',
+              marginTop: '1.5em',
+              marginBottom: '0.5em',
+              color: 'hsl(var(--heading-primary))',
+            },
+            'h2': {
+              fontSize: '1.5rem',
+              fontFamily: 'var(--font-heading)',
+              fontWeight: '700',
+              lineHeight: '1.35',
+              marginTop: '1.25em',
+              marginBottom: '0.5em',
+              color: 'hsl(var(--heading-primary))',
+            },
+            'h3': {
+              fontSize: '1.25rem',
+              fontFamily: 'var(--font-heading)',
+              fontWeight: '600',
+              lineHeight: '1.4',
+              marginTop: '1em',
+              marginBottom: '0.5em',
+              color: 'hsl(var(--heading-secondary))',
+            },
+            'h4': {
+              fontSize: '1.125rem',
+              fontFamily: 'var(--font-heading)',
+              fontWeight: '600',
+              lineHeight: '1.45',
+              marginTop: '1em',
+              marginBottom: '0.5em',
+              color: 'hsl(var(--heading-secondary))',
+            },
+            'h5, h6': {
+              fontSize: '1rem',
+              fontFamily: 'var(--font-heading)',
+              fontWeight: '600',
+              color: 'hsl(var(--heading-secondary))',
+            },
+            'p': {
+              marginTop: '1em',
+              marginBottom: '1em',
+              lineHeight: '1.7',
+            },
+            'a': {
+              color: 'hsl(var(--primary))',
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+          },
+        },
+        lg: {
+          css: {
+            'h1': { fontSize: '2.5rem' },
+            'h2': { fontSize: '2rem' },
+            'h3': { fontSize: '1.5rem' },
+            'h4': { fontSize: '1.25rem' },
+            'h5, h6': { fontSize: '1.125rem' },
+          },
+        },
+      },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+  plugins: [require("tailwindcss-animate"), typography, addVariablesForColors],
 } satisfies Config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
