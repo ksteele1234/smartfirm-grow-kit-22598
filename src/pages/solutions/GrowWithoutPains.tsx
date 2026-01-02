@@ -36,7 +36,7 @@ const GrowWithoutPains = () => {
         icon: "Building",
         points: [
           "Audit workflows to remove duplicate work across teams.",
-          "Implement standardized intake and delivery templates.",
+          "Implement standardized intake and delivery templates — including automated client onboarding.",
           "Integrate core apps so data syncs automatically."
         ]
       },

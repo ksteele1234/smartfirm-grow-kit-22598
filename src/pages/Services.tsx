@@ -31,6 +31,11 @@ const Services = () => {
     description: "Fractional CIO Services with AI strategy development and data-driven CFO Services leveraging predictive financial modeling and performance analytics.",
     link: "/services/fractional-cio-for-accounting-firms"
   }, {
+    icon: <Mail className="h-8 w-8 text-primary" />,
+    title: "Client Onboarding Automation",
+    description: "Streamline new client intake with automated welcome emails, secure document collection, and personalized intake forms that save 10+ hours weekly.",
+    link: "/services/client-onboarding-automation"
+  }, {
     icon: <Package className="h-8 w-8 text-primary" />,
     title: "AI-Enhanced Service Packages",
     description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",

@@ -49,7 +49,7 @@ const TechnologySolutions = () => {
         title: "Business Process Automation",
         description: "Streamline your operations with intelligent automation workflows",
         details: [
-          "Client onboarding automation",
+          "Client onboarding automation — see our dedicated solution",
           "Document management and workflow automation",
           "Automated reporting and analytics",
           "Communication and notification automation"
@@ -79,7 +79,7 @@ const TechnologySolutions = () => {
     faqs: [
       {
         question: "How long does implementation take?",
-        answer: "Most integrations and workflow automations are implemented in 2-4 weeks. Week 1: Audit and planning. Week 2: Configuration and testing. Week 3: Data migration and team training. Week 4: Go-live and support. We minimize disruption to your current operations."
+        answer: "Most integrations and workflow automations are implemented in 2-4 weeks. Week 1: Audit and planning. Week 2: Configuration and testing. Week 3: Data migration and team training. Week 4: Go-live and support. We minimize disruption to your current operations. For client onboarding specifically, check out our dedicated Client Onboarding Automation service."
       },
       {
         question: "Will this require changing all my existing tools?",

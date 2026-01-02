@@ -291,7 +291,7 @@ const SingleProcessAITransformation = () => {
             <div className="space-y-4">
               {[
                 "Testing AI optimization before committing to a full transformation",
-                "Addressing an urgent bottleneck that's costing you daily",
+                "Addressing an urgent bottleneck that's costing you daily—like manual client onboarding",
                 "Getting quick wins to build internal momentum for AI adoption",
                 "Small businesses with limited budgets but specific pain points"
               ].map((item, index) => (
