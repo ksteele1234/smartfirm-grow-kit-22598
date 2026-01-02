@@ -16,7 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ArrowRight, Shield, TrendingUp, Users, Zap, Star } from "lucide-react";
+import { ArrowRight, Shield, TrendingUp, Users, Zap, Star, UserX } from "lucide-react";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
 import FaqAnswer from "@/components/faq/FaqAnswer";
@@ -83,6 +83,12 @@ const Solutions = () => {
       title: "Protect Your Practice & Your Future",
       subtitle: "Secure Your Client Data Like a Big Firm, Plan Your Exit Strategy, Maximize Your Practice Value, Ensure Business Continuity.",
       link: "/solutions/protect-practice-and-future"
+    },
+    {
+      icon: <UserX className="h-8 w-8 text-accent" />,
+      title: "New Clients Falling Through the Cracks",
+      subtitle: "Stop Losing Clients During Onboarding, Automate Document Collection, Create Consistent First Impressions, Scale Without Chaos.",
+      link: "/solutions/client-onboarding-problems"
     }
   ];
 
