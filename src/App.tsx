@@ -113,6 +113,7 @@ const PostList = lazyWithRetry(() => import("./pages/admin/PostList"));
 const PostEditor = lazyWithRetry(() => import("./pages/admin/PostEditor"));
 const CategoryManager = lazyWithRetry(() => import("./pages/admin/CategoryManager"));
 const TagManager = lazyWithRetry(() => import("./pages/admin/TagManager"));
+const ProfileManager = lazyWithRetry(() => import("./pages/admin/ProfileManager"));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -267,6 +268,7 @@ const App = () => (
               <Route path="posts/:id/edit" element={<PostEditor />} />
               <Route path="categories" element={<CategoryManager />} />
               <Route path="tags" element={<TagManager />} />
+              <Route path="profiles" element={<ProfileManager />} />
             </Route>
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
