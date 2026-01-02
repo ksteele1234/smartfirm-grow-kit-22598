@@ -26,7 +26,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { ArrowLeft, Loader2, Save, Eye, CalendarIcon, Clock } from 'lucide-react';
+import { ArrowLeft, Loader2, Save, Eye, CalendarIcon, Clock, X } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 import SEO from '@/components/SEO';
 import { cn } from '@/lib/utils';
 import { format, setHours, setMinutes } from 'date-fns';
@@ -41,6 +42,7 @@ const postSchema = z.object({
   content: z.string().optional(),
   featured_image: z.string().url().optional().or(z.literal('')),
   category_id: z.string().optional(),
+  tag_ids: z.array(z.string()).optional(),
   status: z.enum(['draft', 'published', 'scheduled']),
   publish_date: z.date().optional().nullable(),
   meta_title: z.string().optional(),
@@ -54,6 +56,12 @@ interface Category {
   name: string;
 }
 
+interface Tag {
+  id: string;
+  name: string;
+  slug: string;
+}
+
 export default function PostEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -63,6 +71,7 @@ export default function PostEditor() {
   const [isLoading, setIsLoading] = useState(isEditing);
   const [isSaving, setIsSaving] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [tags, setTags] = useState<Tag[]>([]);
 
   const form = useForm<PostFormData>({
     resolver: zodResolver(postSchema),
@@ -73,6 +82,7 @@ export default function PostEditor() {
       content: '',
       featured_image: '',
       category_id: '',
+      tag_ids: [],
       status: 'draft',
       publish_date: null,
       meta_title: '',
@@ -82,6 +92,7 @@ export default function PostEditor() {
 
   useEffect(() => {
     fetchCategories();
+    fetchTags();
     if (isEditing && id) {
       fetchPost(id);
     }
@@ -100,6 +111,19 @@ export default function PostEditor() {
     }
   };
 
+  const fetchTags = async () => {
+    const { data, error } = await supabase
+      .from('blog_tags')
+      .select('id, name, slug')
+      .order('name');
+
+    if (error) {
+      console.error('Error fetching tags:', error);
+    } else {
+      setTags(data || []);
+    }
+  };
+
   const fetchPost = async (postId: string) => {
     try {
       const { data, error } = await supabase
@@ -110,6 +134,12 @@ export default function PostEditor() {
 
       if (error) throw error;
 
+      // Fetch post tags
+      const { data: postTags } = await supabase
+        .from('blog_post_tags')
+        .select('tag_id')
+        .eq('post_id', postId);
+
       if (data) {
         form.reset({
           title: data.title,
@@ -118,6 +148,7 @@ export default function PostEditor() {
           content: data.content || '',
           featured_image: data.featured_image || '',
           category_id: data.category_id || '',
+          tag_ids: postTags?.map((pt) => pt.tag_id) || [],
           status: data.status as 'draft' | 'published' | 'scheduled',
           publish_date: data.publish_date ? new Date(data.publish_date) : null,
           meta_title: data.meta_title || '',
@@ -142,6 +173,15 @@ export default function PostEditor() {
       .trim();
   };
 
+  const toggleTag = (tagId: string) => {
+    const currentTags = form.getValues('tag_ids') || [];
+    if (currentTags.includes(tagId)) {
+      form.setValue('tag_ids', currentTags.filter((id) => id !== tagId));
+    } else {
+      form.setValue('tag_ids', [...currentTags, tagId]);
+    }
+  };
+
   const onSubmit = async (data: PostFormData) => {
     if (!user) return;
     setIsSaving(true);
@@ -163,6 +203,8 @@ export default function PostEditor() {
         author_id: user.id,
       };
 
+      let postId = id;
+
       if (isEditing && id) {
         const { error } = await supabase
           .from('blog_posts')
@@ -170,13 +212,37 @@ export default function PostEditor() {
           .eq('id', id);
 
         if (error) throw error;
+
+        // Update post tags
+        await supabase.from('blog_post_tags').delete().eq('post_id', id);
+        if (data.tag_ids && data.tag_ids.length > 0) {
+          const tagInserts = data.tag_ids.map((tagId) => ({
+            post_id: id,
+            tag_id: tagId,
+          }));
+          await supabase.from('blog_post_tags').insert(tagInserts);
+        }
+
         toast.success('Post updated');
       } else {
-        const { error } = await supabase
+        const { data: newPost, error } = await supabase
           .from('blog_posts')
-          .insert([postData]);
+          .insert([postData])
+          .select()
+          .single();
 
         if (error) throw error;
+        postId = newPost?.id;
+
+        // Add post tags
+        if (data.tag_ids && data.tag_ids.length > 0 && postId) {
+          const tagInserts = data.tag_ids.map((tagId) => ({
+            post_id: postId,
+            tag_id: tagId,
+          }));
+          await supabase.from('blog_post_tags').insert(tagInserts);
+        }
+
         toast.success('Post created');
         navigate('/admin/posts');
       }
@@ -562,6 +628,35 @@ export default function PostEditor() {
                       </FormItem>
                     )}
                   />
+
+                  <div>
+                    <FormLabel className="block mb-2">Tags</FormLabel>
+                    {tags.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">
+                        No tags available. Create tags in the Tag Manager first.
+                      </p>
+                    ) : (
+                      <div className="flex flex-wrap gap-2 max-h-[150px] overflow-y-auto p-2 border rounded-md bg-background">
+                        {tags.map((tag) => {
+                          const isSelected = (form.watch('tag_ids') || []).includes(tag.id);
+                          return (
+                            <Badge
+                              key={tag.id}
+                              variant={isSelected ? 'default' : 'outline'}
+                              className="cursor-pointer hover:bg-primary/10"
+                              onClick={() => toggleTag(tag.id)}
+                            >
+                              {tag.name}
+                              {isSelected && <X size={12} className="ml-1" />}
+                            </Badge>
+                          );
+                        })}
+                      </div>
+                    )}
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Click to select/deselect tags
+                    </p>
+                  </div>
 
                   <FormField
                     control={form.control}
