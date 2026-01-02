@@ -9,7 +9,7 @@ const ClientOnboardingAutomation = () => {
     id: "client-onboarding-automation",
     title: "Client Onboarding Automation for Accounting Firms | SmartFirm",
     slug: "client-onboarding-automation",
-    metaDescription: "Client onboarding automation for accounting firms eliminates manual intake, creates a professional first impression, and saves 10+ hours weekly. Trusted by growth-focused firms.",
+    metaDescription: "Automate your client onboarding with secure portals, intake forms, and document collection. Reduce onboarding time by 70% and create a perfect first impression.",
     canonicalUrl: "https://smartfirm.io/services/client-onboarding-automation",
     content: {},
     heroTitle: "Client Onboarding Automation for Accounting Firms",
