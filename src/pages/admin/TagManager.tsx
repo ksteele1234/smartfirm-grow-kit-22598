@@ -35,10 +35,11 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Plus, Pencil, Trash2, Loader2, Upload, X } from 'lucide-react';
+import { Plus, Pencil, Trash2, Loader2, Upload, X, FileUp } from 'lucide-react';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import { Badge } from '@/components/ui/badge';
+import { useRef } from 'react';
 
 const tagSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -76,6 +77,7 @@ export default function TagManager() {
   const [isSaving, setIsSaving] = useState(false);
   const [bulkInput, setBulkInput] = useState('');
   const [isBulkSaving, setIsBulkSaving] = useState(false);
+  const csvInputRef = useRef<HTMLInputElement>(null);
 
   const form = useForm<TagFormData>({
     resolver: zodResolver(tagSchema),
@@ -313,6 +315,120 @@ export default function TagManager() {
     }
   };
 
+  const handleCsvUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    // Validate file type
+    if (!file.name.endsWith('.csv') && file.type !== 'text/csv') {
+      toast.error('Please upload a CSV file');
+      return;
+    }
+
+    setIsBulkSaving(true);
+    try {
+      const text = await file.text();
+      const lines = text.split('\n').filter((line) => line.trim());
+      
+      if (lines.length === 0) {
+        toast.error('CSV file is empty');
+        return;
+      }
+
+      // Check if first line is a header
+      const firstLine = lines[0].toLowerCase();
+      const hasHeader = firstLine.includes('name') || firstLine.includes('slug');
+      const dataLines = hasHeader ? lines.slice(1) : lines;
+
+      const tagsToInsert: Array<{
+        name: string;
+        slug: string;
+        description: string | null;
+        meta_title: string | null;
+        meta_description: string | null;
+      }> = [];
+
+      for (const line of dataLines) {
+        // Handle CSV with quoted fields
+        const parts = parseCSVLine(line);
+        const name = parts[0]?.trim();
+        if (!name) continue;
+
+        const slug = parts[1]?.trim() || generateSlug(name);
+        const description = parts[2]?.trim() || null;
+        const meta_title = parts[3]?.trim() || null;
+        const meta_description = parts[4]?.trim() || null;
+
+        tagsToInsert.push({
+          name,
+          slug,
+          description,
+          meta_title,
+          meta_description,
+        });
+      }
+
+      if (tagsToInsert.length === 0) {
+        toast.error('No valid tags found in CSV');
+        return;
+      }
+
+      // Insert tags
+      let successCount = 0;
+      let errorCount = 0;
+
+      for (const tag of tagsToInsert) {
+        const { error } = await supabase.from('blog_tags').insert([tag]);
+        if (error) {
+          console.error(`Error inserting tag "${tag.name}":`, error);
+          errorCount++;
+        } else {
+          successCount++;
+        }
+      }
+
+      if (successCount > 0) {
+        toast.success(`Created ${successCount} tag(s)`);
+      }
+      if (errorCount > 0) {
+        toast.warning(`${errorCount} tag(s) failed (may already exist)`);
+      }
+
+      setIsBulkDialogOpen(false);
+      fetchTags();
+    } catch (error) {
+      console.error('Error uploading CSV:', error);
+      toast.error('Failed to parse CSV file');
+    } finally {
+      setIsBulkSaving(false);
+      // Reset file input
+      if (csvInputRef.current) {
+        csvInputRef.current.value = '';
+      }
+    }
+  };
+
+  // Parse a CSV line handling quoted fields
+  const parseCSVLine = (line: string): string[] => {
+    const result: string[] = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"') {
+        inQuotes = !inQuotes;
+      } else if (char === ',' && !inQuotes) {
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    result.push(current.trim());
+    return result;
+  };
+
   const handleDelete = async (tagId: string) => {
     try {
       const { error } = await supabase
@@ -364,49 +480,90 @@ export default function TagManager() {
                 <DialogHeader>
                   <DialogTitle>Bulk Upload Tags</DialogTitle>
                 </DialogHeader>
-                <div className="space-y-4">
-                  <div className="text-sm text-muted-foreground space-y-2">
-                    <p>Enter one tag per line. Use CSV format for full control:</p>
-                    <code className="block bg-muted p-2 rounded text-xs">
-                      name,slug,description,meta_title,meta_description
-                    </code>
-                    <p>Or just enter tag names (slugs will be auto-generated):</p>
-                    <code className="block bg-muted p-2 rounded text-xs">
-                      Marketing Automation<br />
-                      Tax Planning<br />
-                      Client Retention
-                    </code>
-                  </div>
-                  <Textarea
-                    placeholder="Enter tags here..."
-                    rows={10}
-                    value={bulkInput}
-                    onChange={(e) => setBulkInput(e.target.value)}
-                    className="font-mono text-sm"
-                  />
-                  <div className="flex justify-end gap-2">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      onClick={() => setIsBulkDialogOpen(false)}
+                <Tabs defaultValue="file" className="w-full">
+                  <TabsList className="grid w-full grid-cols-2 mb-4">
+                    <TabsTrigger value="file">Upload CSV</TabsTrigger>
+                    <TabsTrigger value="paste">Paste Text</TabsTrigger>
+                  </TabsList>
+
+                  <TabsContent value="file" className="space-y-4">
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <p>Upload a CSV file with the following columns:</p>
+                      <code className="block bg-muted p-2 rounded text-xs">
+                        name,slug,description,meta_title,meta_description
+                      </code>
+                      <p className="text-xs">Only the <strong>name</strong> column is required. Other columns are optional.</p>
+                    </div>
+                    <input
+                      ref={csvInputRef}
+                      type="file"
+                      accept=".csv,text/csv"
+                      onChange={handleCsvUpload}
+                      className="hidden"
+                    />
+                    <div 
+                      className="border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary/50 transition-colors cursor-pointer"
+                      onClick={() => csvInputRef.current?.click()}
                     >
-                      Cancel
-                    </Button>
-                    <Button onClick={handleBulkUpload} disabled={isBulkSaving}>
-                      {isBulkSaving ? (
-                        <>
-                          <Loader2 size={16} className="mr-2 animate-spin" />
-                          Uploading...
-                        </>
-                      ) : (
-                        <>
-                          <Upload size={16} className="mr-2" />
-                          Upload Tags
-                        </>
-                      )}
-                    </Button>
-                  </div>
-                </div>
+                      <FileUp className="h-10 w-10 mx-auto mb-3 text-muted-foreground" />
+                      <p className="text-sm font-medium">Click to upload CSV file</p>
+                      <p className="text-xs text-muted-foreground mt-1">or drag and drop</p>
+                    </div>
+                    <div className="flex justify-end">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setIsBulkDialogOpen(false)}
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="paste" className="space-y-4">
+                    <div className="text-sm text-muted-foreground space-y-2">
+                      <p>Enter one tag per line. Use CSV format for full control:</p>
+                      <code className="block bg-muted p-2 rounded text-xs">
+                        name,slug,description,meta_title,meta_description
+                      </code>
+                      <p>Or just enter tag names (slugs will be auto-generated):</p>
+                      <code className="block bg-muted p-2 rounded text-xs">
+                        Marketing Automation<br />
+                        Tax Planning<br />
+                        Client Retention
+                      </code>
+                    </div>
+                    <Textarea
+                      placeholder="Enter tags here..."
+                      rows={10}
+                      value={bulkInput}
+                      onChange={(e) => setBulkInput(e.target.value)}
+                      className="font-mono text-sm"
+                    />
+                    <div className="flex justify-end gap-2">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => setIsBulkDialogOpen(false)}
+                      >
+                        Cancel
+                      </Button>
+                      <Button onClick={handleBulkUpload} disabled={isBulkSaving}>
+                        {isBulkSaving ? (
+                          <>
+                            <Loader2 size={16} className="mr-2 animate-spin" />
+                            Uploading...
+                          </>
+                        ) : (
+                          <>
+                            <Upload size={16} className="mr-2" />
+                            Upload Tags
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                  </TabsContent>
+                </Tabs>
               </DialogContent>
             </Dialog>
 
