@@ -25,15 +25,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { toast } from 'sonner';
-import { ArrowLeft, Loader2, Save, Eye } from 'lucide-react';
+import { ArrowLeft, Loader2, Save, Eye, CalendarIcon, Clock } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { cn } from '@/lib/utils';
-import { format } from 'date-fns';
+import { format, setHours, setMinutes } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { CalendarIcon } from 'lucide-react';
+import { RichTextEditor } from '@/components/ui/rich-text-editor';
 
 const postSchema = z.object({
   title: z.string().min(1, 'Title is required'),
@@ -326,16 +325,12 @@ export default function PostEditor() {
                       <FormItem>
                         <FormLabel>Content</FormLabel>
                         <FormControl>
-                          <Textarea
-                            placeholder="Write your post content here... (HTML supported)"
-                            rows={15}
-                            className="font-mono text-sm"
-                            {...field}
+                          <RichTextEditor
+                            content={field.value || ''}
+                            onChange={field.onChange}
+                            placeholder="Write your post content here..."
                           />
                         </FormControl>
-                        <FormDescription>
-                          Supports HTML formatting
-                        </FormDescription>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -421,46 +416,115 @@ export default function PostEditor() {
                   />
 
                   {form.watch('status') === 'scheduled' && (
-                    <FormField
-                      control={form.control}
-                      name="publish_date"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-col">
-                          <FormLabel>Publish Date</FormLabel>
-                          <Popover>
-                            <PopoverTrigger asChild>
-                              <FormControl>
-                                <Button
-                                  variant="outline"
-                                  className={cn(
-                                    'w-full pl-3 text-left font-normal',
-                                    !field.value && 'text-muted-foreground'
-                                  )}
-                                >
-                                  {field.value ? (
-                                    format(field.value, 'PPP')
-                                  ) : (
-                                    <span>Pick a date</span>
-                                  )}
-                                  <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                                </Button>
-                              </FormControl>
-                            </PopoverTrigger>
-                            <PopoverContent className="w-auto p-0" align="start">
-                              <Calendar
-                                mode="single"
-                                selected={field.value || undefined}
-                                onSelect={field.onChange}
-                                disabled={(date) => date < new Date()}
-                                initialFocus
-                                className={cn("p-3 pointer-events-auto")}
-                              />
-                            </PopoverContent>
-                          </Popover>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                    <>
+                      <FormField
+                        control={form.control}
+                        name="publish_date"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>Publish Date</FormLabel>
+                            <Popover>
+                              <PopoverTrigger asChild>
+                                <FormControl>
+                                  <Button
+                                    variant="outline"
+                                    className={cn(
+                                      'w-full pl-3 text-left font-normal',
+                                      !field.value && 'text-muted-foreground'
+                                    )}
+                                  >
+                                    {field.value ? (
+                                      format(field.value, 'PPP')
+                                    ) : (
+                                      <span>Pick a date</span>
+                                    )}
+                                    <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                                  </Button>
+                                </FormControl>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-auto p-0" align="start">
+                                <Calendar
+                                  mode="single"
+                                  selected={field.value || undefined}
+                                  onSelect={(date) => {
+                                    if (date && field.value) {
+                                      // Preserve the time from the existing value
+                                      date.setHours(field.value.getHours());
+                                      date.setMinutes(field.value.getMinutes());
+                                    } else if (date) {
+                                      // Default to 9:00 AM
+                                      date.setHours(9);
+                                      date.setMinutes(0);
+                                    }
+                                    field.onChange(date);
+                                  }}
+                                  disabled={(date) => {
+                                    const today = new Date();
+                                    today.setHours(0, 0, 0, 0);
+                                    return date < today;
+                                  }}
+                                  initialFocus
+                                  className={cn("p-3 pointer-events-auto")}
+                                />
+                              </PopoverContent>
+                            </Popover>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="publish_date"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col">
+                            <FormLabel>Publish Time</FormLabel>
+                            <div className="flex items-center gap-2">
+                              <Clock className="h-4 w-4 text-muted-foreground" />
+                              <Select
+                                value={field.value ? format(field.value, 'HH:mm') : '09:00'}
+                                onValueChange={(time) => {
+                                  const [hours, minutes] = time.split(':').map(Number);
+                                  const newDate = field.value ? new Date(field.value) : new Date();
+                                  newDate.setHours(hours);
+                                  newDate.setMinutes(minutes);
+                                  field.onChange(newDate);
+                                }}
+                              >
+                                <FormControl>
+                                  <SelectTrigger className="w-full">
+                                    <SelectValue placeholder="Select time" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  {Array.from({ length: 24 }, (_, hour) =>
+                                    ['00', '30'].map((minute) => {
+                                      const time = `${hour.toString().padStart(2, '0')}:${minute}`;
+                                      const displayTime = format(
+                                        setMinutes(setHours(new Date(), hour), parseInt(minute)),
+                                        'h:mm a'
+                                      );
+                                      return (
+                                        <SelectItem key={time} value={time}>
+                                          {displayTime}
+                                        </SelectItem>
+                                      );
+                                    })
+                                  ).flat()}
+                                </SelectContent>
+                              </Select>
+                            </div>
+                            <FormDescription>
+                              {field.value && (
+                                <span className="text-xs">
+                                  Scheduled for: {format(field.value, 'PPP')} at {format(field.value, 'h:mm a')}
+                                </span>
+                              )}
+                            </FormDescription>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </>
                   )}
                 </CardContent>
               </Card>
