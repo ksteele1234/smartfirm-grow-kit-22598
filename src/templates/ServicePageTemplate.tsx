@@ -33,6 +33,7 @@ const heroStyles = `
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
+  beforeFinalCta?: React.ReactNode;
 }
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
@@ -69,7 +70,7 @@ const inferFaqCategory = (question: string): string => {
   return "General";
 };
 
-const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
+const ServicePageTemplate = ({ data, beforeFinalCta }: ServicePageTemplateProps) => {
   const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
   const finalCtaRef = useRef<HTMLElement | null>(null);
 
@@ -396,6 +397,9 @@ const ServicePageTemplate = ({ data }: ServicePageTemplateProps) => {
           </div>
         </div>
       </section>
+
+      {/* Optional content before Final CTA */}
+      {beforeFinalCta}
 
       {/* Final CTA Section - Blue Gradient Background */}
       <section 
