@@ -415,7 +415,9 @@ export function RichTextEditor({
     editorProps: {
       attributes: {
         class:
-          'prose prose-sm sm:prose-base max-w-none min-h-[300px] p-4 focus:outline-none',
+          'prose prose-sm sm:prose-base max-w-none p-4 h-full overflow-y-auto focus:outline-none',
+        // Make the actual writing surface the scroll container (most reliable for contenteditable)
+        style: '-webkit-overflow-scrolling:touch; overscroll-behavior:contain;',
       },
     },
   });
@@ -438,13 +440,9 @@ export function RichTextEditor({
         <MenuBar editor={editor} />
       </div>
 
-      {/* Make the *EditorContent element* the scroll container for reliable wheel/trackpad behavior */}
-      <div className="flex-1 min-h-0">
-        <EditorContent
-          editor={editor}
-          className="h-full overflow-y-auto"
-          style={{ WebkitOverflowScrolling: 'touch' }}
-        />
+      {/* Constrain the editor to the remaining height; ProseMirror handles the internal scrolling */}
+      <div className="flex-1 min-h-0 overflow-hidden">
+        <EditorContent editor={editor} className="h-full min-h-0" />
       </div>
     </div>
   );
