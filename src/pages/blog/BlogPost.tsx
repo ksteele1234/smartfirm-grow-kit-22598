@@ -6,7 +6,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 
@@ -24,6 +24,10 @@ interface BlogPost {
   blog_categories: {
     name: string;
     slug: string;
+  } | null;
+  profiles: {
+    display_name: string | null;
+    avatar_url: string | null;
   } | null;
 }
 
@@ -55,6 +59,10 @@ const BlogPost = () => {
           blog_categories (
             name,
             slug
+          ),
+          profiles (
+            display_name,
+            avatar_url
           )
         `)
         .eq("slug", slug)
@@ -145,11 +153,25 @@ const BlogPost = () => {
               {post.title}
             </h1>
             
-            <div className="flex items-center gap-4 text-white/80">
+            <div className="flex flex-wrap items-center gap-6 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
                 <span>{publishDate}</span>
               </div>
+              {post.profiles?.display_name && (
+                <div className="flex items-center gap-2">
+                  {post.profiles.avatar_url ? (
+                    <img
+                      src={post.profiles.avatar_url}
+                      alt={post.profiles.display_name}
+                      className="w-6 h-6 rounded-full object-cover"
+                    />
+                  ) : (
+                    <User className="w-4 h-4" />
+                  )}
+                  <span>{post.profiles.display_name}</span>
+                </div>
+              )}
             </div>
           </div>
         </section>

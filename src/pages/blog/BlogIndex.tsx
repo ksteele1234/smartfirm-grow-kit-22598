@@ -8,7 +8,7 @@ import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, User } from "lucide-react";
 import { format } from "date-fns";
 
 interface BlogPost {
@@ -22,6 +22,10 @@ interface BlogPost {
   blog_categories: {
     name: string;
     slug: string;
+  } | null;
+  profiles: {
+    display_name: string | null;
+    avatar_url: string | null;
   } | null;
 }
 
@@ -50,6 +54,10 @@ const BlogIndex = () => {
           blog_categories (
             name,
             slug
+          ),
+          profiles (
+            display_name,
+            avatar_url
           )
         `)
         .eq("status", "published")
@@ -174,9 +182,25 @@ const BlogIndex = () => {
                         <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
                           {post.title}
                         </CardTitle>
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(post.publish_date, post.created_at)}</span>
+                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>{formatDate(post.publish_date, post.created_at)}</span>
+                          </div>
+                          {post.profiles?.display_name && (
+                            <div className="flex items-center gap-1">
+                              {post.profiles.avatar_url ? (
+                                <img
+                                  src={post.profiles.avatar_url}
+                                  alt={post.profiles.display_name}
+                                  className="w-5 h-5 rounded-full object-cover"
+                                />
+                              ) : (
+                                <User className="w-4 h-4" />
+                              )}
+                              <span className="truncate max-w-[100px]">{post.profiles.display_name}</span>
+                            </div>
+                          )}
                         </div>
                       </CardHeader>
                       <CardContent>
