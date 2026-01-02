@@ -96,43 +96,80 @@ const prerenderRoutes = [
 
 const distPath = path.resolve(__dirname, '../dist');
 
-// Try to find Chrome executable
-function findChrome() {
-  // 1. Check CHROME_PATH from Netlify plugin
-  if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
-    return process.env.CHROME_PATH;
-  }
-  
-  // 2. Check common Netlify/CI locations
-  const commonPaths = [
-    '/opt/chromium/chrome',
-    '/usr/bin/chromium-browser',
-    '/usr/bin/chromium',
-    '/usr/bin/google-chrome',
-    '/usr/bin/google-chrome-stable',
-  ];
-  
-  for (const chromePath of commonPaths) {
-    if (fs.existsSync(chromePath)) {
-      return chromePath;
-    }
-  }
-  
-  // 3. Try which command
-  try {
-    const chromePath = execSync('which chromium-browser || which chromium || which google-chrome', { encoding: 'utf-8' }).trim();
-    if (chromePath && fs.existsSync(chromePath)) {
-      return chromePath;
-    }
-  } catch (e) {
-    // which command failed
-  }
-  
-  return null;
+function getEnv(name) {
+  return process.env[name] || process.env[name.replace(/^VITE_/, '')];
 }
 
+async function fetchPublishedBlogSlugs() {
+  const baseUrl = getEnv('VITE_SUPABASE_URL');
+  const anonKey =
+    getEnv('VITE_SUPABASE_ANON_KEY') ||
+    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
+    getEnv('SUPABASE_ANON_KEY');
+
+  if (!baseUrl || !anonKey) {
+    console.log('[Prerender] Blog slugs: missing env vars, skipping dynamic blog routes');
+    return [];
+  }
+
+  try {
+    const url = new URL(`${baseUrl}/rest/v1/blog_posts`);
+    url.searchParams.set('select', 'slug');
+    url.searchParams.set('status', 'eq.published');
+
+    const res = await fetch(url.toString(), {
+      headers: {
+        apikey: anonKey,
+        authorization: `Bearer ${anonKey}`,
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const rows = await res.json();
+    return (Array.isArray(rows) ? rows : [])
+      .map((r) => (r && r.slug ? String(r.slug) : ''))
+      .filter(Boolean);
+  } catch (e) {
+    console.log(`[Prerender] Blog slugs: failed to fetch, skipping dynamic blog routes (${e.message || e})`);
+    return [];
+  }
+}
+
+function ensureSpaFallbackPages(routes) {
+  const sourceIndexPath = path.join(distPath, 'index.html');
+  if (!fs.existsSync(sourceIndexPath)) return;
+
+  const indexHtml = fs.readFileSync(sourceIndexPath, 'utf-8');
+
+  for (const route of routes) {
+    const outputPath =
+      route === '/' ? path.join(distPath, 'index.html') : path.join(distPath, route, 'index.html');
+
+    const outputDir = path.dirname(outputPath);
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // Only write if missing (don't overwrite real prerenders)
+    if (!fs.existsSync(outputPath)) {
+      fs.writeFileSync(outputPath, indexHtml);
+      console.log(`[Prerender] SPA fallback page created: ${route}`);
+    }
+  }
+}
+
+// Try to find Chrome executable
+function findChrome() {
 async function prerender() {
   console.log('[Prerender] Starting prerender process...');
+
+  // Ensure SPA fallback pages exist for blog routes (prevents 404 on static hosts)
+  const blogSlugs = await fetchPublishedBlogSlugs();
+  const blogRoutes = ['/blog', ...blogSlugs.map((s) => `/blog/${s}`)];
+  ensureSpaFallbackPages(blogRoutes);
   
   // Find Chrome executable
   const executablePath = findChrome();
