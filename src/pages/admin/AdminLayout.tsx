@@ -8,6 +8,7 @@ import {
   FileText, 
   FolderOpen, 
   Tags, 
+  Users,
   LogOut,
   Loader2,
   Menu,
@@ -22,6 +23,7 @@ const navItems = [
   { href: '/admin/posts', label: 'Posts', icon: FileText },
   { href: '/admin/categories', label: 'Categories', icon: FolderOpen },
   { href: '/admin/tags', label: 'Tags', icon: Tags },
+  { href: '/admin/profiles', label: 'Authors', icon: Users },
 ];
 
 export default function AdminLayout() {

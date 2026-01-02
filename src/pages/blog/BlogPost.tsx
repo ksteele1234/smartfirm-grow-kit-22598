@@ -27,7 +27,9 @@ interface BlogPost {
   } | null;
   profiles: {
     display_name: string | null;
+    email: string | null;
     avatar_url: string | null;
+    bio: string | null;
   } | null;
 }
 
@@ -62,7 +64,9 @@ const BlogPost = () => {
           ),
           profiles (
             display_name,
-            avatar_url
+            email,
+            avatar_url,
+            bio
           )
         `)
         .eq("slug", slug)
@@ -170,6 +174,9 @@ const BlogPost = () => {
                     <User className="w-4 h-4" />
                   )}
                   <span>{post.profiles.display_name}</span>
+                  {post.profiles.email && (
+                    <span className="text-white/60">• {post.profiles.email}</span>
+                  )}
                 </div>
               )}
             </div>
@@ -216,6 +223,33 @@ const BlogPost = () => {
                     </Badge>
                   </Link>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {/* Author Bio Section */}
+          {post.profiles?.display_name && post.profiles?.bio && (
+            <div className="mt-12 pt-8 border-t">
+              <div className="flex items-start gap-4">
+                {post.profiles.avatar_url ? (
+                  <img
+                    src={post.profiles.avatar_url}
+                    alt={post.profiles.display_name}
+                    className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                  />
+                ) : (
+                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
+                    <User className="w-8 h-8 text-muted-foreground" />
+                  </div>
+                )}
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {post.profiles.display_name}
+                  </h3>
+                  <p className="text-muted-foreground mt-1 leading-relaxed">
+                    {post.profiles.bio}
+                  </p>
+                </div>
               </div>
             </div>
           )}
