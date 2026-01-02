@@ -122,38 +122,37 @@ const ClientOnboardingAutomation = () => {
     ctaButtonLink: "/get-started"
   };
 
+  const relatedSolutionCallout = (
+    <section className="py-16 bg-muted/30">
+      <div className="container mx-auto px-4">
+        <Card className="max-w-4xl mx-auto border-border bg-gradient-to-br from-background to-accent/5 elevation-2">
+          <CardHeader className="text-center pb-4">
+            <div className="mx-auto mb-4 p-3 rounded-lg bg-accent/10 w-fit">
+              <AlertTriangle className="h-6 w-6 text-accent" />
+            </div>
+            <CardTitle className="text-xl md:text-2xl text-primary">
+              Is Your Onboarding Process Costing You Clients?
+            </CardTitle>
+            <CardDescription className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
+              A broken onboarding process doesn't just waste time—it damages relationships before they even start. 
+              Learn why clients fall through the cracks and what it's really costing your firm.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-center pt-0">
+            <Button variant="outline" asChild>
+              <a href="/solutions/client-onboarding-problems">
+                See the Real Cost of Poor Onboarding
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+
   return (
-    <>
-      <ServicePageTemplate data={serviceData} />
-      
-      {/* Related Solution Callout */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto border-border bg-gradient-to-br from-background to-accent/5 elevation-2">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto mb-4 p-3 rounded-lg bg-accent/10 w-fit">
-                <AlertTriangle className="h-6 w-6 text-accent" />
-              </div>
-              <CardTitle className="text-xl md:text-2xl text-primary">
-                Is Your Onboarding Process Costing You Clients?
-              </CardTitle>
-              <CardDescription className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
-                A broken onboarding process doesn't just waste time—it damages relationships before they even start. 
-                Learn why clients fall through the cracks and what it's really costing your firm.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center pt-0">
-              <Button variant="outline" asChild>
-                <a href="/solutions/client-onboarding-problems">
-                  See the Real Cost of Poor Onboarding
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-    </>
+    <ServicePageTemplate data={serviceData} beforeFinalCta={relatedSolutionCallout} />
   );
 };
 
