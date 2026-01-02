@@ -87,14 +87,27 @@ const Cookies = lazy(() => import("./pages/Cookies"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
+// Helper to handle chunk loading errors (e.g., after deployment)
+const lazyWithRetry = (componentImport: () => Promise<any>) =>
+  lazy(async () => {
+    try {
+      return await componentImport();
+    } catch (error) {
+      // Chunk failed to load (likely new deployment), reload page
+      console.warn('Chunk load failed, reloading...', error);
+      window.location.reload();
+      return { default: () => null };
+    }
+  });
+
 // Auth & Admin Pages
-const Auth = lazy(() => import("./pages/auth/Auth"));
-const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
-const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
-const PostList = lazy(() => import("./pages/admin/PostList"));
-const PostEditor = lazy(() => import("./pages/admin/PostEditor"));
-const CategoryManager = lazy(() => import("./pages/admin/CategoryManager"));
-const TagManager = lazy(() => import("./pages/admin/TagManager"));
+const Auth = lazyWithRetry(() => import("./pages/auth/Auth"));
+const AdminLayout = lazyWithRetry(() => import("./pages/admin/AdminLayout"));
+const AdminDashboard = lazyWithRetry(() => import("./pages/admin/AdminDashboard"));
+const PostList = lazyWithRetry(() => import("./pages/admin/PostList"));
+const PostEditor = lazyWithRetry(() => import("./pages/admin/PostEditor"));
+const CategoryManager = lazyWithRetry(() => import("./pages/admin/CategoryManager"));
+const TagManager = lazyWithRetry(() => import("./pages/admin/TagManager"));
 
 // Loading fallback component
 const PageLoader = () => (
