@@ -35,7 +35,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Plus, Pencil, Trash2, Loader2, Upload, X, FileUp } from 'lucide-react';
+import { Plus, Pencil, Trash2, Loader2, Upload, X, FileUp, Search } from 'lucide-react';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
 import { Badge } from '@/components/ui/badge';
@@ -79,6 +79,7 @@ export default function TagManager() {
   const [isBulkSaving, setIsBulkSaving] = useState(false);
   const csvInputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const form = useForm<TagFormData>({
     resolver: zodResolver(tagSchema),
@@ -801,8 +802,17 @@ export default function TagManager() {
 
         {/* Tags Display */}
         <Card>
-          <CardHeader>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
             <CardTitle className="text-lg">All Tags ({tags.length})</CardTitle>
+            <div className="relative w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-9"
+              />
+            </div>
           </CardHeader>
           <CardContent>
             {isLoading ? (
@@ -817,8 +827,24 @@ export default function TagManager() {
                 </Button>
               </div>
             ) : (
-              <div className="space-y-3">
-                {tags.map((tag) => (
+              (() => {
+                const filteredTags = tags.filter((tag) =>
+                  tag.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  tag.slug.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  tag.description?.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+                
+                if (filteredTags.length === 0) {
+                  return (
+                    <div className="text-center py-12">
+                      <p className="text-muted-foreground">No tags match "{searchQuery}"</p>
+                    </div>
+                  );
+                }
+                
+                return (
+                  <div className="space-y-3">
+                    {filteredTags.map((tag) => (
                   <div
                     key={tag.id}
                     className="group flex items-start justify-between gap-4 bg-slate-50 rounded-lg p-4 hover:bg-slate-100 transition-colors"
@@ -885,8 +911,10 @@ export default function TagManager() {
                       </AlertDialog>
                     </div>
                   </div>
-                ))}
-              </div>
+                    ))}
+                  </div>
+                );
+              })()
             )}
           </CardContent>
         </Card>
