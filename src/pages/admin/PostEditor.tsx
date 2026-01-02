@@ -42,6 +42,7 @@ const postSchema = z.object({
   content: z.string().optional(),
   featured_image: z.string().url().optional().or(z.literal('')),
   category_id: z.string().optional(),
+  author_id: z.string().optional(),
   tag_ids: z.array(z.string()).optional(),
   status: z.enum(['draft', 'published', 'scheduled']),
   publish_date: z.date().optional().nullable(),
@@ -62,6 +63,11 @@ interface Tag {
   slug: string;
 }
 
+interface Profile {
+  id: string;
+  display_name: string | null;
+}
+
 export default function PostEditor() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -72,6 +78,7 @@ export default function PostEditor() {
   const [isSaving, setIsSaving] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
+  const [authors, setAuthors] = useState<Profile[]>([]);
 
   const form = useForm<PostFormData>({
     resolver: zodResolver(postSchema),
@@ -82,6 +89,7 @@ export default function PostEditor() {
       content: '',
       featured_image: '',
       category_id: '',
+      author_id: '',
       tag_ids: [],
       status: 'draft',
       publish_date: null,
@@ -93,6 +101,7 @@ export default function PostEditor() {
   useEffect(() => {
     fetchCategories();
     fetchTags();
+    fetchAuthors();
     if (isEditing && id) {
       fetchPost(id);
     }
@@ -124,6 +133,19 @@ export default function PostEditor() {
     }
   };
 
+  const fetchAuthors = async () => {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('id, display_name')
+      .order('display_name');
+
+    if (error) {
+      console.error('Error fetching authors:', error);
+    } else {
+      setAuthors(data || []);
+    }
+  };
+
   const fetchPost = async (postId: string) => {
     try {
       const { data, error } = await supabase
@@ -148,6 +170,7 @@ export default function PostEditor() {
           content: data.content || '',
           featured_image: data.featured_image || '',
           category_id: data.category_id || '',
+          author_id: data.author_id || '',
           tag_ids: postTags?.map((pt) => pt.tag_id) || [],
           status: data.status as 'draft' | 'published' | 'scheduled',
           publish_date: data.publish_date ? new Date(data.publish_date) : null,
@@ -200,7 +223,7 @@ export default function PostEditor() {
           : data.publish_date?.toISOString() || null,
         meta_title: data.meta_title || null,
         meta_description: data.meta_description || null,
-        author_id: user.id,
+        author_id: data.author_id || user.id,
       };
 
       let postId = id;
@@ -588,8 +611,37 @@ export default function PostEditor() {
                             </FormDescription>
                             <FormMessage />
                           </FormItem>
-                        )}
-                      />
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="author_id"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Author</FormLabel>
+                        <Select 
+                          onValueChange={(value) => field.onChange(value === 'none' ? '' : value)} 
+                          value={field.value || 'none'}
+                        >
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select author" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="none">No author</SelectItem>
+                            {authors.map((author) => (
+                              <SelectItem key={author.id} value={author.id}>
+                                {author.display_name || 'Unnamed'}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                     </>
                   )}
                 </CardContent>
