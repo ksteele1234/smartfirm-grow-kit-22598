@@ -80,6 +80,10 @@ const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const PayrollAutomationROI = lazy(() => import("./pages/case-studies/PayrollAutomationROI"));
 
+// Blog Pages
+const BlogIndex = lazy(() => import("./pages/blog/BlogIndex"));
+const BlogPost = lazy(() => import("./pages/blog/BlogPost"));
+
 // Legal Pages
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -232,6 +236,10 @@ const App = () => (
             
             {/* Funnel Pages */}
             <Route path="/growth-calculator" element={<GrowthCalculator />} />
+            
+            {/* Blog */}
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             
             {/* Case Studies */}
             <Route path="/case-studies" element={<CaseStudies />} />
