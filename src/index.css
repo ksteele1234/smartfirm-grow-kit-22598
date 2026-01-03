@@ -610,22 +610,25 @@
    ============================================================================ */
 
 /* TL;DR Callout - Used in blog posts for summary sections */
+/* Uses !important to override Tailwind prose defaults */
 .tldr-callout {
-  font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  background-color: hsl(var(--light-teal-bg));
-  border-left: 4px solid hsl(var(--professional-teal));
-  padding: 1rem 1.25rem;
-  border-radius: 0 0.5rem 0.5rem 0;
-  margin: 1.5rem 0;
-  color: hsl(var(--slate-dark));
+  display: block !important;
+  font-style: italic !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.01em !important;
+  background-color: hsl(var(--light-teal-bg)) !important;
+  border-left: 4px solid hsl(var(--professional-teal)) !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  margin: 1.5rem 0 !important;
+  color: hsl(var(--slate-dark)) !important;
 }
 
 .tldr-callout strong {
-  font-style: normal;
-  color: hsl(var(--professional-teal));
+  font-style: normal !important;
+  color: hsl(var(--professional-teal)) !important;
+  font-weight: 600 !important;
 }
 
 /* Anchor targets for jump links */
