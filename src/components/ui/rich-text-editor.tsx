@@ -48,7 +48,12 @@ const TldrCallout = Node.create({
     return [{ tag: 'aside.tldr-callout' }, { tag: 'div.tldr-callout' }];
   },
   renderHTML({ HTMLAttributes }) {
-    return ['aside', mergeAttributes(HTMLAttributes, { class: 'tldr-callout' }), 0];
+    // `not-prose` prevents Tailwind Typography from flattening/overriding callout styles.
+    return [
+      'aside',
+      mergeAttributes(HTMLAttributes, { class: 'tldr-callout not-prose' }),
+      0,
+    ];
   },
 });
 
@@ -97,16 +102,31 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
   };
 
   const insertTldr = () => {
+    let debug = { empty: true, selectedLen: 0, inserted: false, hasNode: false };
+
     editor
       .chain()
-      .focus()
+      // NOTE: no `.focus()` here; focusing can collapse the current selection.
       .command(({ tr, state, dispatch }) => {
         const { from, to, empty } = state.selection;
         const selectedText = empty ? '' : state.doc.textBetween(from, to, ' ').trim();
         const bodyText = selectedText || 'Your summary here...';
 
-        // Insert the callout as a true block node after the selection's parent block.
-        // (Inserting a block node at an inline cursor position can fail and only delete text.)
+        const paragraph = state.schema.nodes.paragraph;
+        const tldrCallout = state.schema.nodes.tldrCallout;
+
+        debug = {
+          empty,
+          selectedLen: selectedText.length,
+          inserted: false,
+          hasNode: Boolean(tldrCallout),
+        };
+
+        if (!paragraph || !tldrCallout) {
+          return false;
+        }
+
+        // Insert as a true block node after the current parent block.
         const $to = state.selection.$to;
         const insertPosBefore = $to.after($to.depth);
 
@@ -117,27 +137,28 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
         const insertPos = tr.mapping.map(insertPosBefore);
 
         const bold = state.schema.marks.bold;
-        const paragraph = state.schema.nodes.paragraph;
-        const tldrCallout = state.schema.nodes.tldrCallout;
-
         const textNodes = [
           state.schema.text('TL;DR: ', bold ? [bold.create()] : undefined),
           state.schema.text(bodyText),
         ];
 
-        const calloutNode = tldrCallout.create(
-          null,
-          paragraph.create(null, textNodes)
-        );
-
+        const calloutNode = tldrCallout.create(null, paragraph.create(null, textNodes));
         tr.insert(insertPos, calloutNode);
+
+        debug.inserted = true;
 
         if (dispatch) dispatch(tr.scrollIntoView());
         return true;
       })
       .run();
 
-    toast.success('TL;DR block inserted');
+    console.debug('[TLDR]', debug);
+
+    if (debug.inserted) {
+      toast.success('TL;DR block inserted');
+    } else {
+      toast.error('TL;DR insert failed (see console debug log)');
+    }
   };
 
   const addImageFromUrl = () => {
