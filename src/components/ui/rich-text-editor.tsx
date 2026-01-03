@@ -97,31 +97,43 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
   };
 
   const insertTldr = () => {
-    const { from, to, empty } = editor.state.selection;
-    const selectedText = empty
-      ? ''
-      : editor.state.doc.textBetween(from, to, ' ').trim();
+    editor
+      .chain()
+      .focus()
+      .command(({ tr, state, dispatch }) => {
+        const { from, to, empty } = state.selection;
+        const selectedText = empty ? '' : state.doc.textBetween(from, to, ' ').trim();
+        const bodyText = selectedText || 'Your summary here...';
 
-    const bodyText = selectedText || 'Your summary here...';
+        // Insert the callout as a true block node after the selection's parent block.
+        // (Inserting a block node at an inline cursor position can fail and only delete text.)
+        const $to = state.selection.$to;
+        const insertPosBefore = $to.after($to.depth);
 
-    // Delete selection first if text was selected, then insert at cursor
-    const chain = editor.chain().focus();
-    if (!empty) {
-      chain.deleteSelection();
-    }
-    
-    chain
-      .insertContent({
-        type: 'tldrCallout',
-        content: [
-          {
-            type: 'paragraph',
-            content: [
-              { type: 'text', marks: [{ type: 'bold' }], text: 'TL;DR: ' },
-              { type: 'text', text: bodyText },
-            ],
-          },
-        ],
+        if (!empty) {
+          tr.delete(from, to);
+        }
+
+        const insertPos = tr.mapping.map(insertPosBefore);
+
+        const bold = state.schema.marks.bold;
+        const paragraph = state.schema.nodes.paragraph;
+        const tldrCallout = state.schema.nodes.tldrCallout;
+
+        const textNodes = [
+          state.schema.text('TL;DR: ', bold ? [bold.create()] : undefined),
+          state.schema.text(bodyText),
+        ];
+
+        const calloutNode = tldrCallout.create(
+          null,
+          paragraph.create(null, textNodes)
+        );
+
+        tr.insert(insertPos, calloutNode);
+
+        if (dispatch) dispatch(tr.scrollIntoView());
+        return true;
       })
       .run();
 
@@ -455,7 +467,11 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
         type="button"
         variant="ghost"
         size="sm"
-        onClick={insertTldr}
+        onMouseDown={(e) => {
+          // Prevent toolbar click from stealing focus and collapsing selection
+          e.preventDefault();
+          insertTldr();
+        }}
         className="h-8 px-2 gap-1"
         title="Insert TL;DR callout"
       >
