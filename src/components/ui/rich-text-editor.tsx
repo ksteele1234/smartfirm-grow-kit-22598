@@ -104,17 +104,21 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
 
     const bodyText = selectedText || 'Your summary here...';
 
-    editor
-      .chain()
-      .focus()
+    // Delete selection first if text was selected, then insert at cursor
+    const chain = editor.chain().focus();
+    if (!empty) {
+      chain.deleteSelection();
+    }
+    
+    chain
       .insertContent({
         type: 'tldrCallout',
         content: [
           {
             type: 'paragraph',
             content: [
-              { type: 'text', marks: [{ type: 'bold' }], text: 'TL;DR:' },
-              { type: 'text', text: ` ${bodyText}` },
+              { type: 'text', marks: [{ type: 'bold' }], text: 'TL;DR: ' },
+              { type: 'text', text: bodyText },
             ],
           },
         ],
