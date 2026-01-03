@@ -23,6 +23,8 @@ import {
   Minus,
   Upload,
   Loader2,
+  Hash,
+  FileText,
 } from 'lucide-react';
 import {
   Popover,
@@ -45,8 +47,10 @@ interface RichTextEditorProps {
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   const [linkUrl, setLinkUrl] = useState('');
   const [imageUrl, setImageUrl] = useState('');
+  const [anchorId, setAnchorId] = useState('');
   const [linkOpen, setLinkOpen] = useState(false);
   const [imageOpen, setImageOpen] = useState(false);
+  const [anchorOpen, setAnchorOpen] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -63,6 +67,25 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
       setLinkUrl('');
       setLinkOpen(false);
     }
+  };
+
+  const addAnchorId = () => {
+    if (anchorId) {
+      // Normalize anchor ID: lowercase, replace spaces with hyphens
+      const normalizedId = anchorId.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      // Insert an anchor span at the cursor position
+      editor.chain().focus().insertContent(`<span id="${normalizedId}" class="anchor-target"></span>`).run();
+      toast.success(`Anchor #${normalizedId} added. Link to it with #${normalizedId}`);
+      setAnchorId('');
+      setAnchorOpen(false);
+    }
+  };
+
+  const insertTldr = () => {
+    editor.chain().focus().insertContent(
+      `<div class="tldr-callout"><strong>TL;DR:</strong> Your summary here...</div>`
+    ).run();
+    toast.success('TL;DR block inserted');
   };
 
   const addImageFromUrl = () => {
@@ -351,6 +374,54 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
           </Tabs>
         </PopoverContent>
       </Popover>
+
+      <div className="w-px h-6 bg-border mx-1 self-center" />
+
+      {/* Anchor ID Button */}
+      <Popover open={anchorOpen} onOpenChange={setAnchorOpen}>
+        <PopoverTrigger asChild>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            className="h-8 w-8 p-0"
+            title="Add Anchor ID (for jump links)"
+          >
+            <Hash className="h-4 w-4" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent className="w-80 p-3" align="start">
+          <div className="space-y-2">
+            <p className="text-xs text-muted-foreground">
+              Add an anchor ID to create a jump link target. Link to it with #{anchorId || 'your-id'}
+            </p>
+            <div className="flex gap-2">
+              <Input
+                placeholder="section-name"
+                value={anchorId}
+                onChange={(e) => setAnchorId(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && addAnchorId()}
+              />
+              <Button type="button" size="sm" onClick={addAnchorId}>
+                Add
+              </Button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+
+      {/* TL;DR Button */}
+      <Button
+        type="button"
+        variant="ghost"
+        size="sm"
+        onClick={insertTldr}
+        className="h-8 px-2 gap-1"
+        title="Insert TL;DR callout"
+      >
+        <FileText className="h-4 w-4" />
+        <span className="text-xs">TL;DR</span>
+      </Button>
 
       <div className="w-px h-6 bg-border mx-1 self-center" />
 
