@@ -1,4 +1,5 @@
 import { useEditor, EditorContent, Editor } from '@tiptap/react';
+import { Node, mergeAttributes } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
@@ -36,6 +37,20 @@ import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+
+const TldrCallout = Node.create({
+  name: 'tldrCallout',
+  group: 'block',
+  content: 'block+',
+  defining: true,
+  isolating: true,
+  parseHTML() {
+    return [{ tag: 'aside.tldr-callout' }, { tag: 'div.tldr-callout' }];
+  },
+  renderHTML({ HTMLAttributes }) {
+    return ['aside', mergeAttributes(HTMLAttributes, { class: 'tldr-callout' }), 0];
+  },
+});
 
 interface RichTextEditorProps {
   content: string;
@@ -82,9 +97,30 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
   };
 
   const insertTldr = () => {
-    editor.chain().focus().insertContent(
-      `<div class="tldr-callout"><strong>TL;DR:</strong> Your summary here...</div>`
-    ).run();
+    const { from, to, empty } = editor.state.selection;
+    const selectedText = empty
+      ? ''
+      : editor.state.doc.textBetween(from, to, ' ').trim();
+
+    const bodyText = selectedText || 'Your summary here...';
+
+    editor
+      .chain()
+      .focus()
+      .insertContent({
+        type: 'tldrCallout',
+        content: [
+          {
+            type: 'paragraph',
+            content: [
+              { type: 'text', marks: [{ type: 'bold' }], text: 'TL;DR:' },
+              { type: 'text', text: ` ${bodyText}` },
+            ],
+          },
+        ],
+      })
+      .run();
+
     toast.success('TL;DR block inserted');
   };
 
@@ -459,6 +495,7 @@ export function RichTextEditor({
 }: RichTextEditorProps) {
   const editor = useEditor({
     extensions: [
+      TldrCallout,
       StarterKit.configure({
         heading: {
           levels: [1, 2, 3, 4],
