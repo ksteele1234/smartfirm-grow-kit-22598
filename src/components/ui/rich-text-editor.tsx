@@ -28,6 +28,7 @@ import {
   Loader2,
   Hash,
   FileText,
+  Wand2,
 } from 'lucide-react';
 import {
   Popover,
@@ -519,6 +520,70 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
       >
         <FileText className="h-4 w-4" />
         <span className="text-xs">TL;DR</span>
+      </Button>
+
+      {/* Auto-generate Anchor IDs for H2 headings */}
+      <Button
+        type="button"
+        variant="ghost"
+        size="sm"
+        onClick={() => {
+          // Generate slug from text
+          const generateSlug = (text: string): string => {
+            return text
+              .toLowerCase()
+              .replace(/['']/g, '') // Remove apostrophes
+              .replace(/[^a-z0-9\s-]/g, '') // Remove special chars
+              .replace(/\s+/g, '-') // Replace spaces with hyphens
+              .replace(/-+/g, '-') // Collapse multiple hyphens
+              .replace(/^-|-$/g, ''); // Trim hyphens from ends
+          };
+
+          // Track used IDs to avoid duplicates
+          const usedIds = new Set<string>();
+          let updatedCount = 0;
+
+          // Traverse the document and update H2 headings without IDs
+          editor.state.doc.descendants((node, pos) => {
+            if (node.type.name === 'heading' && node.attrs.level === 2) {
+              const currentId = node.attrs.id;
+              if (!currentId) {
+                const text = node.textContent;
+                let baseSlug = generateSlug(text);
+                let slug = baseSlug;
+                let counter = 1;
+                
+                // Ensure uniqueness
+                while (usedIds.has(slug)) {
+                  slug = `${baseSlug}-${counter}`;
+                  counter++;
+                }
+                usedIds.add(slug);
+
+                // Update the node with the new ID
+                const tr = editor.state.tr.setNodeMarkup(pos, undefined, {
+                  ...node.attrs,
+                  id: slug,
+                });
+                editor.view.dispatch(tr);
+                updatedCount++;
+              } else {
+                usedIds.add(currentId);
+              }
+            }
+          });
+
+          if (updatedCount > 0) {
+            toast.success(`Generated anchor IDs for ${updatedCount} H2 heading${updatedCount > 1 ? 's' : ''}`);
+          } else {
+            toast.info('All H2 headings already have anchor IDs');
+          }
+        }}
+        className="h-8 px-2 gap-1"
+        title="Auto-generate anchor IDs for all H2 headings"
+      >
+        <Wand2 className="h-4 w-4" />
+        <span className="text-xs">Auto IDs</span>
       </Button>
 
       <div className="w-px h-6 bg-border mx-1 self-center" />
