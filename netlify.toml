@@ -11,6 +11,13 @@ headers = []
   NODE_VERSION = "20"
   PUPPETEER_SKIP_DOWNLOAD = "true"
 
+# Enable Netlify prerendering for bots/crawlers
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
 # Plugins installed/managed in Netlify UI
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
