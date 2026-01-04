@@ -250,6 +250,7 @@ async function fetchPublishedBlogSlugs() {
     const url = new URL(`${baseUrl}/rest/v1/blog_posts`);
     url.searchParams.set('select', 'slug');
     url.searchParams.set('status', 'eq.published');
+    url.searchParams.set('publish_date', `lte.${new Date().toISOString()}`);
 
     const res = await fetch(url.toString(), {
       headers: {
