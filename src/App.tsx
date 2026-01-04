@@ -91,6 +91,7 @@ const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const FAQ = lazy(() => import("./pages/FAQ"));
+const FaqDetail = lazy(() => import("./pages/faq/FaqDetail"));
 const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
 // Helper to handle chunk loading errors (e.g., after deployment)
@@ -255,6 +256,7 @@ const App = () => (
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/faq/:slug" element={<FaqDetail />} />
             <Route path="/reactivation-terms" element={<ReactivationTerms />} />
             
             {/* Utility Pages - Excluded from sitemap */}
