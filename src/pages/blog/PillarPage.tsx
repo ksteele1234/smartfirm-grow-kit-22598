@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, Calendar, User, BookOpen, ChevronRight } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
+import { normalizeBlogHtml } from "@/lib/blogHtml";
 
 interface PillarPost {
   id: string;
@@ -288,7 +289,7 @@ const PillarPage = () => {
               prose-li:text-muted-foreground
               [&_.anchor-target]:scroll-mt-24 [&_.anchor-target]:invisible [&_.anchor-target]:absolute [&_.anchor-target]:w-0 [&_.anchor-target]:h-0
               prose-h2:scroll-mt-24 prose-h3:scroll-mt-24"
-            dangerouslySetInnerHTML={{ __html: pillar.content || "" }}
+            dangerouslySetInnerHTML={{ __html: normalizeBlogHtml(pillar.content || "") }}
           />
         </article>
 

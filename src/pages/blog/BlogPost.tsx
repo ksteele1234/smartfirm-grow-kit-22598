@@ -10,6 +10,7 @@ import { ArrowLeft, Calendar, Tag, User, BookOpen } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 import ClusterNavigator from "@/components/blog/ClusterNavigator";
+import { normalizeBlogHtml } from "@/lib/blogHtml";
 
 interface BlogPost {
   id: string;
@@ -270,7 +271,7 @@ const BlogPost = () => {
               [&_.tldr-callout]:rounded-r-lg [&_.tldr-callout]:my-6 [&_.tldr-callout]:text-[hsl(var(--slate-dark))]
               [&_.anchor-target]:scroll-mt-24 [&_.anchor-target]:invisible [&_.anchor-target]:absolute [&_.anchor-target]:w-0 [&_.anchor-target]:h-0
               prose-h2:scroll-mt-24 prose-h3:scroll-mt-24"
-            dangerouslySetInnerHTML={{ __html: post.content || "" }}
+            dangerouslySetInnerHTML={{ __html: normalizeBlogHtml(post.content || "") }}
           />
 
           {/* Tags */}
