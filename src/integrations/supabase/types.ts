@@ -74,11 +74,14 @@ export type Database = {
           category_id: string | null
           content: string | null
           created_at: string
+          display_order: number | null
           excerpt: string | null
           featured_image: string | null
           id: string
           meta_description: string | null
           meta_title: string | null
+          pillar_id: string | null
+          post_type: string | null
           publish_date: string | null
           slug: string
           status: Database["public"]["Enums"]["post_status"]
@@ -90,11 +93,14 @@ export type Database = {
           category_id?: string | null
           content?: string | null
           created_at?: string
+          display_order?: number | null
           excerpt?: string | null
           featured_image?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
+          pillar_id?: string | null
+          post_type?: string | null
           publish_date?: string | null
           slug: string
           status?: Database["public"]["Enums"]["post_status"]
@@ -106,11 +112,14 @@ export type Database = {
           category_id?: string | null
           content?: string | null
           created_at?: string
+          display_order?: number | null
           excerpt?: string | null
           featured_image?: string | null
           id?: string
           meta_description?: string | null
           meta_title?: string | null
+          pillar_id?: string | null
+          post_type?: string | null
           publish_date?: string | null
           slug?: string
           status?: Database["public"]["Enums"]["post_status"]
@@ -130,6 +139,13 @@ export type Database = {
             columns: ["category_id"]
             isOneToOne: false
             referencedRelation: "blog_categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "blog_posts_pillar_id_fkey"
+            columns: ["pillar_id"]
+            isOneToOne: false
+            referencedRelation: "blog_posts"
             referencedColumns: ["id"]
           },
         ]
