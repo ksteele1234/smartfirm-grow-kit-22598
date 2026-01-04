@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Dynamic Sitemap Generator
- * Generates sitemap.xml with static routes + dynamic blog posts from Supabase
+ * Generates sitemap.xml with static routes + dynamic blog posts, tags, categories, and FAQ pages
  */
 
 const fs = require('fs');
@@ -88,6 +88,173 @@ const staticRoutes = [
   { path: '/faq', changefreq: 'monthly', priority: 0.7 },
 ];
 
+// FAQ categories and questions (mirrors src/data/faqContent.ts)
+const faqCategories = [
+  {
+    slug: 'getting-started',
+    questions: [
+      'which-solution-right-for-accounting-firm',
+      'combine-marketing-workflow-automation',
+      'difference-smartfirm-vs-traditional-agencies',
+      'how-quickly-see-results',
+      'firms-of-all-sizes-minimum',
+      'how-to-get-started',
+      'pricing-structure',
+      'do-you-offer-guarantees',
+    ],
+  },
+  {
+    slug: 'industries',
+    questions: [
+      'why-industry-specialization-matters',
+      'firm-serves-multiple-industries',
+      'marketing-different-tax-bookkeeping-advisory',
+      'experience-with-specific-industry',
+      'switch-industries-add-specializations',
+    ],
+  },
+  {
+    slug: 'client-retention',
+    questions: [
+      'good-client-retention-rate-accounting-firm',
+      'common-reasons-accounting-firms-lose-clients',
+      'automation-help-client-retention',
+      'retention-strategies-seasonal-clients-tax',
+      'roi-client-retention-vs-acquisition',
+      'how-often-communicate-clients-retention',
+      'technology-role-modern-retention-strategies',
+      'measure-success-retention-efforts',
+    ],
+  },
+  {
+    slug: 'scale-firm',
+    questions: [
+      'biggest-mistake-accounting-firms-scale',
+      'scale-firm-without-hiring-staff',
+      'when-accounting-firm-start-scaling',
+      'systems-needed-scale-successfully',
+      'what-are-growing-pains-firm',
+      'grow-firm-without-sacrificing-quality-burnout',
+      'difference-growth-vs-scaling',
+      'when-firm-ready-to-grow',
+    ],
+  },
+  {
+    slug: 'work-less-earn-more',
+    questions: [
+      'work-less-earn-more-cpa-possible',
+      'tasks-automated-accounting-firm',
+      'transition-value-based-pricing-hourly',
+      'automation-less-personal-clients',
+    ],
+  },
+  {
+    slug: 'stop-losing-clients-tech-savvy',
+    questions: [
+      'technology-compete-tech-savvy-cpa',
+      'online-presence-client-attraction',
+      'catch-up-technology-competitors',
+      'differentiate-tech-savvy-competitors',
+    ],
+  },
+  {
+    slug: 'referrals-reviews',
+    questions: [
+      'increase-referrals-without-asking',
+      'how-many-google-reviews-needed',
+      'get-more-client-reviews',
+      'automate-review-collection-process',
+      'respond-negative-reviews',
+      'referral-vs-other-leads',
+    ],
+  },
+  {
+    slug: 'online-visibility-seo',
+    questions: [
+      'how-long-seo-results-accountants',
+      'local-seo-accounting-firms',
+      'should-accountant-blog',
+      'optimize-google-business-profile',
+      'seo-vs-paid-ads-accountants',
+      'most-important-seo-factors-accounting',
+    ],
+  },
+  {
+    slug: 'lead-generation',
+    questions: [
+      'how-many-leads-expect-monthly',
+      'best-lead-sources-accounting-firms',
+      'improve-website-conversion-rate',
+      'should-buy-leads',
+      'nurture-leads-not-ready',
+      'cost-per-lead-accounting-industry',
+    ],
+  },
+  {
+    slug: 'marketing-automation',
+    questions: [
+      'what-is-marketing-automation-accounting',
+      'automate-marketing-tasks',
+      'high-level-crm-accounting',
+      'email-marketing-automation-accountants',
+      'marketing-automation-roi',
+      'get-started-marketing-automation',
+    ],
+  },
+  {
+    slug: 'workflow-automation',
+    questions: [
+      'difference-marketing-workflow-automation',
+      'automate-client-onboarding',
+      'workflow-automation-tools-accountants',
+      'time-savings-workflow-automation',
+      'automate-document-collection',
+      'automation-replace-staff',
+    ],
+  },
+  {
+    slug: 'client-experience',
+    questions: [
+      'improve-client-experience-accounting',
+      'client-portal-benefits',
+      'communication-preferences-clients',
+      'client-satisfaction-measurement',
+      'onboarding-experience-matters',
+    ],
+  },
+  {
+    slug: 'pricing-billing',
+    questions: [
+      'value-based-pricing-accounting',
+      'price-accounting-services',
+      'raise-fees-without-losing-clients',
+      'offer-payment-plans',
+      'subscription-pricing-accountants',
+    ],
+  },
+  {
+    slug: 'technology-implementation',
+    questions: [
+      'essential-technology-modern-accounting',
+      'choose-practice-management-software',
+      'integrate-accounting-systems',
+      'cybersecurity-accounting-firms',
+      'cloud-vs-desktop-accounting-software',
+      'ai-accounting-profession',
+    ],
+  },
+  {
+    slug: 'business-advisory',
+    questions: [
+      'transition-compliance-advisory',
+      'advisory-services-offer',
+      'price-advisory-services',
+      'clients-need-advisory-services',
+      'advisory-skills-needed',
+    ],
+  },
+];
+
 const HOSTNAME = 'https://smartfirm.io';
 
 function getEnv(name) {
@@ -166,6 +333,65 @@ async function fetchBlogTags() {
   }
 }
 
+async function fetchBlogCategories() {
+  const baseUrl = getEnv('VITE_SUPABASE_URL');
+  const anonKey =
+    getEnv('VITE_SUPABASE_ANON_KEY') ||
+    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
+    getEnv('SUPABASE_ANON_KEY');
+
+  if (!baseUrl || !anonKey) {
+    console.log('[Sitemap] Blog categories: missing env vars, skipping category routes');
+    return [];
+  }
+
+  try {
+    const url = new URL(`${baseUrl}/rest/v1/blog_categories`);
+    url.searchParams.set('select', 'slug,created_at');
+
+    const res = await fetch(url.toString(), {
+      headers: {
+        apikey: anonKey,
+        authorization: `Bearer ${anonKey}`,
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const rows = await res.json();
+    return Array.isArray(rows) ? rows : [];
+  } catch (e) {
+    console.log(`[Sitemap] Blog categories: failed to fetch (${e.message || e})`);
+    return [];
+  }
+}
+
+function generateFaqRoutes() {
+  const routes = [];
+  
+  // Add FAQ category pages
+  faqCategories.forEach(category => {
+    routes.push({
+      path: `/faq/${category.slug}`,
+      changefreq: 'monthly',
+      priority: 0.6,
+    });
+    
+    // Add individual FAQ question pages
+    category.questions.forEach(questionSlug => {
+      routes.push({
+        path: `/faq/${category.slug}/${questionSlug}`,
+        changefreq: 'monthly',
+        priority: 0.5,
+      });
+    });
+  });
+  
+  return routes;
+}
+
 function generateSitemapXml(routes) {
   const urlEntries = routes.map(route => {
     const lastmod = route.lastmod || new Date().toISOString().split('T')[0];
@@ -194,6 +420,14 @@ async function main() {
   const blogTags = await fetchBlogTags();
   console.log(`[Sitemap] Found ${blogTags.length} blog tags`);
   
+  // Fetch blog categories
+  const blogCategories = await fetchBlogCategories();
+  console.log(`[Sitemap] Found ${blogCategories.length} blog categories`);
+  
+  // Generate FAQ routes
+  const faqRoutes = generateFaqRoutes();
+  console.log(`[Sitemap] Generated ${faqRoutes.length} FAQ routes`);
+  
   // Convert blog posts to sitemap routes
   const blogRoutes = blogPosts.map(post => ({
     path: `/blog/${post.slug}`,
@@ -210,8 +444,16 @@ async function main() {
     lastmod: tag.created_at ? tag.created_at.split('T')[0] : undefined,
   }));
   
+  // Convert categories to sitemap routes
+  const categoryRoutes = blogCategories.map(category => ({
+    path: `/blog/category/${category.slug}`,
+    changefreq: 'weekly',
+    priority: 0.6,
+    lastmod: category.created_at ? category.created_at.split('T')[0] : undefined,
+  }));
+  
   // Combine static + dynamic routes
-  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...categoryRoutes, ...faqRoutes];
   
   // Generate sitemap XML
   const sitemapXml = generateSitemapXml(allRoutes);
@@ -228,7 +470,12 @@ async function main() {
   fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
   
   console.log(`\n✅ Sitemap generated: ${sitemapPath}`);
-  console.log(`   Total URLs: ${allRoutes.length} (${staticRoutes.length} static + ${blogRoutes.length} blog + ${tagRoutes.length} tags)`);
+  console.log(`   Total URLs: ${allRoutes.length}`);
+  console.log(`   - Static: ${staticRoutes.length}`);
+  console.log(`   - Blog posts: ${blogRoutes.length}`);
+  console.log(`   - Tags: ${tagRoutes.length}`);
+  console.log(`   - Categories: ${categoryRoutes.length}`);
+  console.log(`   - FAQ pages: ${faqRoutes.length}`);
   console.log('');
 }
 
