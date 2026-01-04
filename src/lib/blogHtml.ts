@@ -1,17 +1,18 @@
 /**
  * Normalize blog HTML that comes from the editor/CMS.
  *
- * We have a known content issue where anchor spans are HTML-escaped
- * (e.g. "&lt;span ...&gt;&lt;/span&gt;") inside otherwise-valid HTML.
- * That makes the anchor markup visible on the page and breaks ToC jump links.
+ * Known content issues we fix:
+ * 1. Anchor spans are HTML-escaped (e.g. "&lt;span ...&gt;&lt;/span&gt;")
+ * 2. TOC links use wrong prefix (href="@section" instead of href="#section")
  */
 export function normalizeBlogHtml(html: string): string {
   if (!html) return "";
 
-  // Decode ONLY escaped anchor spans (keeps the rest of the HTML untouched).
-  // Example we fix:
-  //   &lt;span id=&quot;foo&quot; class=&quot;anchor-target&quot;&gt;&lt;/span&gt;
-  return html.replace(
+  let result = html;
+
+  // Fix 1: Decode escaped anchor spans
+  // Example: &lt;span id=&quot;foo&quot; class=&quot;anchor-target&quot;&gt;&lt;/span&gt;
+  result = result.replace(
     /&lt;span([\s\S]*?)anchor-target([\s\S]*?)&gt;&lt;\/span&gt;/g,
     (_match, a, b) => {
       const attrs = `${a}anchor-target${b}`
@@ -22,4 +23,12 @@ export function normalizeBlogHtml(html: string): string {
       return `<span${attrs}></span>`;
     }
   );
+
+  // Fix 2: Replace malformed TOC links (href="@..." → href="#...")
+  result = result.replace(/href="@([^"]+)"/g, 'href="#$1"');
+
+  // Fix 3: Also handle href='@...' with single quotes
+  result = result.replace(/href='@([^']+)'/g, "href='#$1'");
+
+  return result;
 }
