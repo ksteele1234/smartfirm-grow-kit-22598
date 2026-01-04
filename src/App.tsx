@@ -94,6 +94,9 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const FaqDetail = lazy(() => import("./pages/faq/FaqDetail"));
 const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
+// Debug Pages (excluded from sitemap)
+const DebugUrlProbe = lazy(() => import("./pages/DebugUrlProbe"));
+
 // Helper to handle chunk loading errors (e.g., after deployment)
 const lazyWithRetry = (componentImport: () => Promise<any>) =>
   lazy(async () => {
@@ -260,6 +263,7 @@ const App = () => (
             <Route path="/reactivation-terms" element={<ReactivationTerms />} />
             
             {/* Utility Pages - Excluded from sitemap */}
+            <Route path="/__debug/url-probe" element={<DebugUrlProbe />} />
             <Route path="/500" element={<ServerError />} />
             <Route path="/thank-you" element={<ThankYou />} />
             
