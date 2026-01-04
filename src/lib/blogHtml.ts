@@ -4,6 +4,7 @@
  * Known content issues we fix:
  * 1. Anchor spans are HTML-escaped (e.g. "&lt;span ...&gt;&lt;/span&gt;")
  * 2. TOC links use wrong prefix (href="@section" instead of href="#section")
+ * 3. Internal anchor links have target="_blank" which opens new tabs
  */
 export function normalizeBlogHtml(html: string): string {
   if (!html) return "";
@@ -29,6 +30,23 @@ export function normalizeBlogHtml(html: string): string {
 
   // Fix 3: Also handle href='@...' with single quotes
   result = result.replace(/href='@([^']+)'/g, "href='#$1'");
+
+  // Fix 4: Remove target="_blank" from internal anchor links (href="#...")
+  // This prevents them from opening in new tabs
+  result = result.replace(
+    /<a([^>]*?)target="_blank"([^>]*?)href="#([^"]+)"([^>]*)>/g,
+    '<a$1$2href="#$3"$4>'
+  );
+  result = result.replace(
+    /<a([^>]*?)href="#([^"]+)"([^>]*?)target="_blank"([^>]*)>/g,
+    '<a$1href="#$2"$3$4>'
+  );
+
+  // Fix 5: Also remove rel="noopener noreferrer nofollow" from internal anchor links
+  result = result.replace(
+    /<a([^>]*?)href="#([^"]+)"([^>]*?)rel="[^"]*"([^>]*)>/g,
+    '<a$1href="#$2"$3$4>'
+  );
 
   return result;
 }
