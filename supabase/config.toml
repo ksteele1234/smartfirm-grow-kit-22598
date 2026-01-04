@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.publish-scheduled-posts]
 verify_jwt = false
+
+[functions.url-probe]
+verify_jwt = false
