@@ -131,6 +131,41 @@ async function fetchPublishedBlogPosts() {
   }
 }
 
+async function fetchBlogTags() {
+  const baseUrl = getEnv('VITE_SUPABASE_URL');
+  const anonKey =
+    getEnv('VITE_SUPABASE_ANON_KEY') ||
+    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
+    getEnv('SUPABASE_ANON_KEY');
+
+  if (!baseUrl || !anonKey) {
+    console.log('[Sitemap] Blog tags: missing env vars, skipping tag routes');
+    return [];
+  }
+
+  try {
+    const url = new URL(`${baseUrl}/rest/v1/blog_tags`);
+    url.searchParams.set('select', 'slug,created_at');
+
+    const res = await fetch(url.toString(), {
+      headers: {
+        apikey: anonKey,
+        authorization: `Bearer ${anonKey}`,
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const rows = await res.json();
+    return Array.isArray(rows) ? rows : [];
+  } catch (e) {
+    console.log(`[Sitemap] Blog tags: failed to fetch (${e.message || e})`);
+    return [];
+  }
+}
+
 function generateSitemapXml(routes) {
   const urlEntries = routes.map(route => {
     const lastmod = route.lastmod || new Date().toISOString().split('T')[0];
@@ -155,6 +190,10 @@ async function main() {
   const blogPosts = await fetchPublishedBlogPosts();
   console.log(`[Sitemap] Found ${blogPosts.length} published blog posts`);
   
+  // Fetch blog tags
+  const blogTags = await fetchBlogTags();
+  console.log(`[Sitemap] Found ${blogTags.length} blog tags`);
+  
   // Convert blog posts to sitemap routes
   const blogRoutes = blogPosts.map(post => ({
     path: `/blog/${post.slug}`,
@@ -163,8 +202,16 @@ async function main() {
     lastmod: post.updated_at ? post.updated_at.split('T')[0] : post.publish_date?.split('T')[0],
   }));
   
+  // Convert tags to sitemap routes
+  const tagRoutes = blogTags.map(tag => ({
+    path: `/blog/tags/${tag.slug}`,
+    changefreq: 'weekly',
+    priority: 0.6,
+    lastmod: tag.created_at ? tag.created_at.split('T')[0] : undefined,
+  }));
+  
   // Combine static + dynamic routes
-  const allRoutes = [...staticRoutes, ...blogRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes];
   
   // Generate sitemap XML
   const sitemapXml = generateSitemapXml(allRoutes);
@@ -181,7 +228,7 @@ async function main() {
   fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
   
   console.log(`\n✅ Sitemap generated: ${sitemapPath}`);
-  console.log(`   Total URLs: ${allRoutes.length} (${staticRoutes.length} static + ${blogRoutes.length} blog)`);
+  console.log(`   Total URLs: ${allRoutes.length} (${staticRoutes.length} static + ${blogRoutes.length} blog + ${tagRoutes.length} tags)`);
   console.log('');
 }
 
