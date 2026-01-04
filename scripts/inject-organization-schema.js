@@ -22,7 +22,7 @@ function generateOrganizationSchema(baseUrl) {
       "width": 250,
       "height": 60
     },
-    "description": "SmartFirm empowers accounting firms to achieve significant growth and operational excellence through comprehensive marketing automation, technology solutions, and business optimization services.",
+    "description": "SmartFirm empowers accounting firms to achieve significant growth and operational excellence through comprehensive workflow automation, technology solutions, and business optimization services.",
     "foundingDate": "2020",
     "slogan": "Empowering Accounting Firms to Scale with Confidence",
     "sameAs": [
@@ -45,8 +45,8 @@ function generateOrganizationSchema(baseUrl) {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Marketing Automation for Accounting Firms",
-          "description": "Comprehensive marketing automation solutions designed specifically for accounting and bookkeeping firms"
+          "name": "Firm Automation for Accounting Firms",
+          "description": "Comprehensive workflow and marketing automation solutions designed specifically for accounting and bookkeeping firms"
         }
       },
       {
