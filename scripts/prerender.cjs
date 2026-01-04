@@ -138,6 +138,43 @@ async function fetchPublishedBlogSlugs() {
   }
 }
 
+async function fetchBlogTagSlugs() {
+  const baseUrl = getEnv('VITE_SUPABASE_URL');
+  const anonKey =
+    getEnv('VITE_SUPABASE_ANON_KEY') ||
+    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
+    getEnv('SUPABASE_ANON_KEY');
+
+  if (!baseUrl || !anonKey) {
+    console.log('[Prerender] Blog tags: missing env vars, skipping tag routes');
+    return [];
+  }
+
+  try {
+    const url = new URL(`${baseUrl}/rest/v1/blog_tags`);
+    url.searchParams.set('select', 'slug');
+
+    const res = await fetch(url.toString(), {
+      headers: {
+        apikey: anonKey,
+        authorization: `Bearer ${anonKey}`,
+      },
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const rows = await res.json();
+    return (Array.isArray(rows) ? rows : [])
+      .map((r) => (r && r.slug ? String(r.slug) : ''))
+      .filter(Boolean);
+  } catch (e) {
+    console.log(`[Prerender] Blog tags: failed to fetch, skipping tag routes (${e.message || e})`);
+    return [];
+  }
+}
+
 function ensureSpaFallbackPages(routes) {
   const sourceIndexPath = path.join(distPath, 'index.html');
   if (!fs.existsSync(sourceIndexPath)) return;
@@ -203,8 +240,12 @@ async function prerender() {
   const blogSlugs = await fetchPublishedBlogSlugs();
   const blogRoutes = ['/blog', ...blogSlugs.map((s) => `/blog/${s}`)];
   
-  // Combine static routes with dynamic blog routes
-  const allRoutes = [...prerenderRoutes, ...blogRoutes];
+  // Fetch blog tag slugs dynamically
+  const tagSlugs = await fetchBlogTagSlugs();
+  const tagRoutes = tagSlugs.map((s) => `/blog/tags/${s}`);
+  
+  // Combine static routes with dynamic blog and tag routes
+  const allRoutes = [...prerenderRoutes, ...blogRoutes, ...tagRoutes];
   
   // Ensure SPA fallback pages exist for all routes (prevents 404 on static hosts)
   ensureSpaFallbackPages(allRoutes);
@@ -224,7 +265,7 @@ async function prerender() {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
 
-  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${blogRoutes.length} blog)...`);
+  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${blogRoutes.length} blog + ${tagRoutes.length} tags)...`);
 
   // Start a simple static server for the dist folder
   const { createServer } = require('http');
