@@ -6,9 +6,10 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, User, BookOpen } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
+import ClusterNavigator from "@/components/blog/ClusterNavigator";
 
 interface BlogPost {
   id: string;
@@ -21,6 +22,8 @@ interface BlogPost {
   meta_description: string | null;
   publish_date: string | null;
   created_at: string;
+  post_type: string | null;
+  pillar_id: string | null;
   blog_categories: {
     name: string;
     slug: string;
@@ -36,6 +39,12 @@ interface BlogPost {
 interface PostTag {
   id: string;
   name: string;
+  slug: string;
+}
+
+interface PillarInfo {
+  id: string;
+  title: string;
   slug: string;
 }
 
@@ -58,6 +67,8 @@ const BlogPost = () => {
           meta_description,
           publish_date,
           created_at,
+          post_type,
+          pillar_id,
           blog_categories (
             name,
             slug
@@ -72,10 +83,10 @@ const BlogPost = () => {
         .eq("slug", slug)
         .eq("status", "published")
         .lte("publish_date", new Date().toISOString())
-        .single();
+        .maybeSingle();
 
       if (error) throw error;
-      return data as BlogPost;
+      return data as BlogPost | null;
     },
     enabled: !!slug,
   });
@@ -107,6 +118,24 @@ const BlogPost = () => {
     enabled: !!post?.id,
   });
 
+  // Fetch pillar info if this is a cluster post
+  const { data: pillarInfo } = useQuery({
+    queryKey: ["pillar-for-cluster", post?.pillar_id],
+    queryFn: async () => {
+      if (!post?.pillar_id) return null;
+      
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("id, title, slug")
+        .eq("id", post.pillar_id)
+        .maybeSingle();
+
+      if (error) throw error;
+      return data as PillarInfo | null;
+    },
+    enabled: !!post?.pillar_id,
+  });
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -122,6 +151,8 @@ const BlogPost = () => {
   if (error || !post) {
     return <NotFound />;
   }
+
+  const isCluster = post.post_type === 'cluster' && post.pillar_id;
 
   const publishDate = post.publish_date 
     ? format(new Date(post.publish_date), "MMMM d, yyyy")
@@ -140,18 +171,44 @@ const BlogPost = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-4xl">
-            <Link to="/blog">
-              <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-6">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Blog
-              </Button>
-            </Link>
-            
-            {post.blog_categories && (
-              <Badge className="bg-white/20 text-white hover:bg-white/30 mb-4">
-                {post.blog_categories.name}
-              </Badge>
+            {/* Breadcrumb for cluster posts */}
+            {isCluster && pillarInfo ? (
+              <div className="flex flex-wrap items-center gap-2 mb-6">
+                <Link to="/blog">
+                  <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Blog
+                  </Button>
+                </Link>
+                <span className="text-white/50">/</span>
+                <Link to={`/blog/${pillarInfo.slug}`}>
+                  <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
+                    <BookOpen className="w-4 h-4 mr-2" />
+                    {pillarInfo.title}
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <Link to="/blog">
+                <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-6">
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Blog
+                </Button>
+              </Link>
             )}
+            
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              {isCluster && (
+                <Badge className="bg-primary/20 text-white border border-white/20">
+                  Part of a guide
+                </Badge>
+              )}
+              {post.blog_categories && (
+                <Badge className="bg-white/20 text-white hover:bg-white/30">
+                  {post.blog_categories.name}
+                </Badge>
+              )}
+            </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {post.title}
@@ -230,6 +287,11 @@ const BlogPost = () => {
                 ))}
               </div>
             </div>
+          )}
+
+          {/* Cluster Navigator - shows related posts in the pillar */}
+          {isCluster && post.pillar_id && (
+            <ClusterNavigator currentPostId={post.id} pillarId={post.pillar_id} />
           )}
 
           {/* Author Bio Section */}

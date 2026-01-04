@@ -48,6 +48,9 @@ const postSchema = z.object({
   publish_date: z.date().optional().nullable(),
   meta_title: z.string().optional(),
   meta_description: z.string().optional(),
+  post_type: z.enum(['standard', 'pillar', 'cluster']).default('standard'),
+  pillar_id: z.string().optional(),
+  display_order: z.number().default(0),
 });
 
 type PostFormData = z.infer<typeof postSchema>;
@@ -61,6 +64,11 @@ interface Tag {
   id: string;
   name: string;
   slug: string;
+}
+
+interface PillarPost {
+  id: string;
+  title: string;
 }
 
 interface Profile {
@@ -79,6 +87,7 @@ export default function PostEditor() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [tags, setTags] = useState<Tag[]>([]);
   const [authors, setAuthors] = useState<Profile[]>([]);
+  const [pillarPosts, setPillarPosts] = useState<PillarPost[]>([]);
 
   const form = useForm<PostFormData>({
     resolver: zodResolver(postSchema),
@@ -95,6 +104,9 @@ export default function PostEditor() {
       publish_date: null,
       meta_title: '',
       meta_description: '',
+      post_type: 'standard',
+      pillar_id: '',
+      display_order: 0,
     },
   });
 
@@ -102,6 +114,7 @@ export default function PostEditor() {
     fetchCategories();
     fetchTags();
     fetchAuthors();
+    fetchPillarPosts();
     if (isEditing && id) {
       fetchPost(id);
     }
@@ -146,6 +159,20 @@ export default function PostEditor() {
     }
   };
 
+  const fetchPillarPosts = async () => {
+    const { data, error } = await supabase
+      .from('blog_posts')
+      .select('id, title')
+      .eq('post_type', 'pillar')
+      .order('title');
+
+    if (error) {
+      console.error('Error fetching pillar posts:', error);
+    } else {
+      setPillarPosts(data || []);
+    }
+  };
+
   const fetchPost = async (postId: string) => {
     try {
       const { data, error } = await supabase
@@ -176,6 +203,9 @@ export default function PostEditor() {
           publish_date: data.publish_date ? new Date(data.publish_date) : null,
           meta_title: data.meta_title || '',
           meta_description: data.meta_description || '',
+          post_type: (data.post_type as 'standard' | 'pillar' | 'cluster') || 'standard',
+          pillar_id: data.pillar_id || '',
+          display_order: data.display_order || 0,
         });
       }
     } catch (error) {
@@ -224,6 +254,9 @@ export default function PostEditor() {
         meta_title: data.meta_title || null,
         meta_description: data.meta_description || null,
         author_id: data.author_id || user.id,
+        post_type: data.post_type,
+        pillar_id: data.post_type === 'cluster' ? data.pillar_id || null : null,
+        display_order: data.post_type === 'cluster' ? data.display_order : 0,
       };
 
       let postId = id;
@@ -642,6 +675,103 @@ export default function PostEditor() {
                       </FormItem>
                     )}
                   />
+                    </>
+                  )}
+                </CardContent>
+              </Card>
+
+              {/* Content Structure Card */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>Content Structure</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <FormField
+                    control={form.control}
+                    name="post_type"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Post Type</FormLabel>
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <FormControl>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select post type" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="standard">Standard Post</SelectItem>
+                            <SelectItem value="pillar">Pillar Page (Hub)</SelectItem>
+                            <SelectItem value="cluster">Cluster Post (Supporting)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormDescription>
+                          {field.value === 'pillar' && 'Hub page that links to related cluster posts'}
+                          {field.value === 'cluster' && 'Supporting article linked to a pillar page'}
+                          {field.value === 'standard' && 'Standalone blog post'}
+                        </FormDescription>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {form.watch('post_type') === 'cluster' && (
+                    <>
+                      <FormField
+                        control={form.control}
+                        name="pillar_id"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Parent Pillar</FormLabel>
+                            <Select 
+                              onValueChange={(value) => field.onChange(value === 'none' ? '' : value)} 
+                              value={field.value || 'none'}
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select pillar page" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="none">Select a pillar...</SelectItem>
+                                {pillarPosts
+                                  .filter(p => p.id !== id) // Don't allow self-reference
+                                  .map((pillar) => (
+                                    <SelectItem key={pillar.id} value={pillar.id}>
+                                      {pillar.title}
+                                    </SelectItem>
+                                  ))
+                                }
+                              </SelectContent>
+                            </Select>
+                            <FormDescription>
+                              The pillar page this cluster post belongs to
+                            </FormDescription>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="display_order"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Display Order</FormLabel>
+                            <FormControl>
+                              <Input 
+                                type="number" 
+                                placeholder="0" 
+                                {...field}
+                                onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
+                              />
+                            </FormControl>
+                            <FormDescription>
+                              Order in which this post appears in the pillar's table of contents
+                            </FormDescription>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </>
                   )}
                 </CardContent>

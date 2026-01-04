@@ -83,6 +83,7 @@ const PayrollAutomationROI = lazy(() => import("./pages/case-studies/PayrollAuto
 // Blog Pages
 const BlogIndex = lazy(() => import("./pages/blog/BlogIndex"));
 const BlogPost = lazy(() => import("./pages/blog/BlogPost"));
+const PillarPage = lazy(() => import("./pages/blog/PillarPage"));
 const TagPage = lazy(() => import("./pages/blog/TagPage"));
 
 // Legal Pages
@@ -242,6 +243,7 @@ const App = () => (
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/tags/:slug" element={<TagPage />} />
+            <Route path="/blog/guide/:slug" element={<PillarPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             
             {/* Case Studies */}
