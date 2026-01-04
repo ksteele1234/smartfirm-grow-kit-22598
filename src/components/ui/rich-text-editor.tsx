@@ -29,6 +29,7 @@ import {
   Hash,
   FileText,
   Wand2,
+  ListTree,
 } from 'lucide-react';
 import {
   Popover,
@@ -584,6 +585,87 @@ const MenuBar = ({ editor }: { editor: Editor | null }) => {
       >
         <Wand2 className="h-4 w-4" />
         <span className="text-xs">Auto IDs</span>
+      </Button>
+
+      {/* Generate Table of Contents from H2 headings */}
+      <Button
+        type="button"
+        variant="ghost"
+        size="sm"
+        onClick={() => {
+          // Generate slug from text
+          const generateSlug = (text: string): string => {
+            return text
+              .toLowerCase()
+              .replace(/['']/g, '')
+              .replace(/[^a-z0-9\s-]/g, '')
+              .replace(/\s+/g, '-')
+              .replace(/-+/g, '-')
+              .replace(/^-|-$/g, '');
+          };
+
+          // Collect all H2 headings
+          const h2Headings: { text: string; id: string }[] = [];
+          const usedIds = new Set<string>();
+
+          editor.state.doc.descendants((node, pos) => {
+            if (node.type.name === 'heading' && node.attrs.level === 2) {
+              const text = node.textContent;
+              let id = node.attrs.id;
+
+              // Generate ID if missing
+              if (!id) {
+                let baseSlug = generateSlug(text);
+                let slug = baseSlug;
+                let counter = 1;
+                while (usedIds.has(slug)) {
+                  slug = `${baseSlug}-${counter}`;
+                  counter++;
+                }
+                id = slug;
+
+                // Update the heading with the new ID
+                const tr = editor.state.tr.setNodeMarkup(pos, undefined, {
+                  ...node.attrs,
+                  id: id,
+                });
+                editor.view.dispatch(tr);
+              }
+
+              usedIds.add(id);
+              h2Headings.push({ text, id });
+            }
+          });
+
+          if (h2Headings.length === 0) {
+            toast.error('No H2 headings found to create table of contents');
+            return;
+          }
+
+          // Build TOC HTML
+          const tocItems = h2Headings
+            .map(({ text, id }) => `<li><a href="#${id}">${text}</a></li>`)
+            .join('\n');
+
+          const tocHtml = `
+<nav class="toc-container">
+  <p><strong>Table of Contents</strong></p>
+  <ul>
+    ${tocItems}
+  </ul>
+</nav>
+<p></p>
+`;
+
+          // Insert TOC at cursor position
+          editor.chain().focus().insertContent(tocHtml).run();
+          toast.success(`Table of contents created with ${h2Headings.length} link${h2Headings.length > 1 ? 's' : ''}`);
+        }}
+        className="h-8 px-2 gap-1"
+        title="Generate table of contents from H2 headings"
+      >
+        <ListTree className="h-4 w-4" />
+        <span className="text-xs">TOC</span>
       </Button>
 
       <div className="w-px h-6 bg-border mx-1 self-center" />
