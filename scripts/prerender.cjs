@@ -199,10 +199,15 @@ function findChrome() {
 async function prerender() {
   console.log('[Prerender] Starting prerender process...');
 
-  // Ensure SPA fallback pages exist for blog routes (prevents 404 on static hosts)
+  // Fetch published blog slugs dynamically
   const blogSlugs = await fetchPublishedBlogSlugs();
   const blogRoutes = ['/blog', ...blogSlugs.map((s) => `/blog/${s}`)];
-  ensureSpaFallbackPages(blogRoutes);
+  
+  // Combine static routes with dynamic blog routes
+  const allRoutes = [...prerenderRoutes, ...blogRoutes];
+  
+  // Ensure SPA fallback pages exist for all routes (prevents 404 on static hosts)
+  ensureSpaFallbackPages(allRoutes);
   
   // Find Chrome executable
   const executablePath = findChrome();
@@ -219,7 +224,7 @@ async function prerender() {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
 
-  console.log(`[Prerender] Starting prerender for ${prerenderRoutes.length} routes...`);
+  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${blogRoutes.length} blog)...`);
 
   // Start a simple static server for the dist folder
   const { createServer } = require('http');
@@ -239,7 +244,7 @@ async function prerender() {
   let errorCount = 0;
   let skippedCount = 0;
 
-  for (const route of prerenderRoutes) {
+  for (const route of allRoutes) {
     try {
       const page = await browser.newPage();
       const url = `http://localhost:3000${route}`;
