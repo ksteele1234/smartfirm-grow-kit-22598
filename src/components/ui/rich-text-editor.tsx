@@ -1,9 +1,11 @@
 import { useEditor, EditorContent, Editor } from '@tiptap/react';
 import { Node, mergeAttributes } from '@tiptap/core';
+import { DOMParser as ProseMirrorDOMParser } from '@tiptap/pm/model';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import Placeholder from '@tiptap/extension-placeholder';
+import Heading from '@tiptap/extension-heading';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -37,6 +39,25 @@ import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+
+// Custom Heading extension that preserves ID attributes for anchors
+const CustomHeading = Heading.extend({
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      id: {
+        default: null,
+        parseHTML: element => element.getAttribute('id'),
+        renderHTML: attributes => {
+          if (!attributes.id) {
+            return {};
+          }
+          return { id: attributes.id };
+        },
+      },
+    };
+  },
+});
 
 const TldrCallout = Node.create({
   name: 'tldrCallout',
@@ -538,9 +559,12 @@ export function RichTextEditor({
     extensions: [
       TldrCallout,
       StarterKit.configure({
-        heading: {
-          levels: [1, 2, 3, 4],
-        },
+        // Disable built-in heading to use our custom one
+        heading: false,
+      }),
+      // Use custom heading that preserves ID attributes
+      CustomHeading.configure({
+        levels: [1, 2, 3, 4],
       }),
       Link.configure({
         openOnClick: false,
@@ -567,6 +591,69 @@ export function RichTextEditor({
           'prose prose-sm sm:prose-base max-w-none p-4 h-full overflow-y-auto focus:outline-none',
         // Make the actual writing surface the scroll container (most reliable for contenteditable)
         style: '-webkit-overflow-scrolling:touch; overscroll-behavior:contain;',
+      },
+      // Handle paste to convert markdown headings to proper HTML headings
+      handlePaste: (view, event) => {
+        const htmlData = event.clipboardData?.getData('text/html');
+        const text = event.clipboardData?.getData('text/plain');
+        
+        // If there's already HTML data with headings, let it paste normally
+        if (htmlData && (htmlData.includes('<h1') || htmlData.includes('<h2') || htmlData.includes('<h3') || htmlData.includes('<h4'))) {
+          return false; // Let default handling proceed
+        }
+        
+        // Convert markdown headings in plain text to HTML
+        if (text && text.includes('#')) {
+          // Check if it looks like markdown (has # at start of lines)
+          const hasMarkdownHeadings = /^#{1,4} /m.test(text);
+          
+          if (hasMarkdownHeadings) {
+            // Convert markdown headings to HTML
+            let html = text
+              .split('\n\n')
+              .map(block => {
+                // Process each block
+                return block
+                  .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+                  .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                  .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                  .replace(/^# (.+)$/gm, '<h1>$1</h1>');
+              })
+              .map(block => {
+                // Wrap non-heading blocks in paragraphs
+                if (!block.startsWith('<h')) {
+                  return `<p>${block.replace(/\n/g, '<br>')}</p>`;
+                }
+                return block;
+              })
+              .join('');
+            
+            event.preventDefault();
+            
+            // Use TipTap's insertContent command
+            const { state } = view;
+            const { from } = state.selection;
+            
+            // Parse and insert the HTML content
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            
+            // Insert content using the editor's command
+            const editorView = view;
+            const tr = state.tr;
+            
+            // Use ProseMirror's HTML parser
+            const pmDomParser = ProseMirrorDOMParser.fromSchema(state.schema);
+            const parsed = pmDomParser.parse(tempDiv);
+            
+            tr.replaceSelection(parsed.slice(0));
+            editorView.dispatch(tr);
+            
+            return true;
+          }
+        }
+        
+        return false; // Let default paste handling proceed
       },
     },
   });
