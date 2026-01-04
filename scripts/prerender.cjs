@@ -15,7 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// SEO-critical routes to pre-render (57 total - matches sitemap)
+// SEO-critical routes to pre-render (static pages)
 const prerenderRoutes = [
   // Homepage
   "/",
@@ -91,6 +91,140 @@ const prerenderRoutes = [
   "/terms",
   "/cookies",
   "/faq",
+];
+
+// FAQ detail pages (108 FAQs from faqContent.ts)
+const faqRoutes = [
+  // Getting Started with SmartFirm
+  "/faq/which-solution-right-for-accounting-firm",
+  "/faq/combine-marketing-workflow-automation",
+  "/faq/difference-smartfirm-vs-traditional-agencies",
+  "/faq/how-quickly-see-results",
+  "/faq/firms-of-all-sizes-minimum",
+  "/faq/how-to-get-started",
+  "/faq/pricing-structure",
+  "/faq/do-you-offer-guarantees",
+  // Industries We Serve
+  "/faq/why-industry-specialization-matters",
+  "/faq/firm-serves-multiple-industries",
+  "/faq/marketing-different-tax-bookkeeping-advisory",
+  "/faq/experience-with-specific-industry",
+  "/faq/switch-industries-add-specializations",
+  // Client Retention
+  "/faq/good-client-retention-rate-accounting-firm",
+  "/faq/common-reasons-accounting-firms-lose-clients",
+  "/faq/automation-help-client-retention",
+  "/faq/retention-strategies-seasonal-clients-tax",
+  "/faq/roi-client-retention-vs-acquisition",
+  "/faq/how-often-communicate-clients-retention",
+  "/faq/technology-role-modern-retention-strategies",
+  "/faq/measure-success-retention-efforts",
+  // Scaling Your Firm
+  "/faq/biggest-mistake-accounting-firms-scale",
+  "/faq/scale-firm-without-hiring-staff",
+  "/faq/when-accounting-firm-start-scaling",
+  "/faq/systems-needed-scale-successfully",
+  "/faq/what-are-growing-pains-firm",
+  "/faq/grow-firm-without-sacrificing-quality-burnout",
+  "/faq/difference-growth-vs-scaling",
+  "/faq/when-firm-ready-to-grow",
+  // Work Less, Earn More
+  "/faq/work-less-earn-more-cpa-possible",
+  "/faq/tasks-automated-accounting-firm",
+  "/faq/transition-value-based-pricing-hourly",
+  "/faq/automation-less-personal-clients",
+  // Competing with Tech-Savvy Firms
+  "/faq/technology-compete-tech-savvy-cpas",
+  "/faq/cost-modernize-accounting-firm-technology",
+  "/faq/existing-clients-care-new-technology",
+  "/faq/how-long-implement-modern-systems",
+  // Referrals & Reviews
+  "/faq/asking-referrals-uncomfortable-avoid",
+  "/faq/conversion-rate-referrals-vs-marketing",
+  "/faq/automated-referral-systems-without-pushy",
+  "/faq/how-long-build-referral-generation-system",
+  "/faq/review-system-timing",
+  "/faq/negative-review-response",
+  "/faq/review-requests-annoying",
+  "/faq/which-review-platforms",
+  // Protect Your Practice
+  "/faq/biggest-threats-accounting-firms-today",
+  "/faq/need-cybersecurity-small-firm",
+  "/faq/future-proof-practice-against-ai",
+  "/faq/business-continuity-plan-cpas",
+  // Tax Preparation Marketing
+  "/faq/generate-revenue-outside-tax-season",
+  "/faq/when-start-marketing-tax-season",
+  "/faq/compete-turbotax-diy-tax-software",
+  "/faq/marketing-strategies-attracting-tax-clients",
+  // Bookkeeping Services Marketing
+  "/faq/differentiate-bookkeeping-low-cost-competitors",
+  "/faq/attract-small-business-clients-bookkeeping",
+  "/faq/build-predictable-recurring-revenue-bookkeeping",
+  "/faq/focus-industry-niche-bookkeeping-practice",
+  // Business Advisory Marketing
+  "/faq/position-business-advisor-not-accountant",
+  "/faq/typical-pricing-business-advisory-services",
+  "/faq/how-long-establish-thought-leadership",
+  "/faq/content-attract-advisory-clients",
+  // Client Onboarding Automation
+  "/faq/implement-client-onboarding-automation",
+  "/faq/onboarding-automation-practice-management",
+  "/faq/customize-intake-forms-service-types",
+  "/faq/client-incomplete-onboarding",
+  "/faq/document-portal-security",
+  "/faq/onboarding-time-savings",
+  // Lead Follow-Up Automation
+  "/faq/automated-lead-response-time",
+  "/faq/lead-wants-real-person",
+  "/faq/customize-follow-up-messages",
+  "/faq/lead-unresponsive-sequence",
+  // SEO & Local Search
+  "/faq/seo-results-timeline",
+  "/faq/seo-vs-google-ads",
+  "/faq/blog-posts-seo-who-writes",
+  "/faq/seo-competitive-market",
+  // Website Design
+  "/faq/website-design-timeline",
+  "/faq/migrate-existing-content",
+  "/faq/website-aicpa-compliance",
+  "/faq/website-changes-after-launch",
+  // Content Marketing
+  "/faq/content-publishing-frequency",
+  "/faq/content-topics",
+  "/faq/content-planning-topics",
+  "/faq/content-marketing-lead-timeline",
+  // Email Marketing
+  "/faq/email-frequency",
+  "/faq/email-unsubscribe-complaints",
+  "/faq/email-list-segmentation",
+  "/faq/email-writing",
+  // Social Media Management
+  "/faq/social-platforms-managed",
+  "/faq/social-posting-frequency-content",
+  "/faq/social-content-creation",
+  "/faq/social-engagement-responses",
+  // Technology & Implementation
+  "/faq/technology-implementation-timeline",
+  "/faq/changing-existing-tools",
+  "/faq/team-technology-resistance",
+  "/faq/ongoing-technology-cost",
+  "/faq/business-optimization-timeline",
+  "/faq/major-changes-not-ready",
+  // Executive & Advisory Services
+  "/faq/difference-from-business-coach",
+  "/faq/executive-services-time-commitment",
+  "/faq/fractional-cio-services-included",
+  "/faq/try-executive-services-pilot",
+  // Add-On Services
+  "/faq/add-services-quickstart",
+  "/faq/add-on-pricing-options",
+  "/faq/add-on-contract-commitment",
+  // Tools & Calculators
+  "/faq/how-tools-help-accounting-firm-grow",
+  "/faq/assessments-really-free",
+  "/faq/how-long-assessments-take",
+  "/faq/what-happens-after-complete-assessment",
 ];
 
 
@@ -244,8 +378,8 @@ async function prerender() {
   const tagSlugs = await fetchBlogTagSlugs();
   const tagRoutes = tagSlugs.map((s) => `/blog/tags/${s}`);
   
-  // Combine static routes with dynamic blog and tag routes
-  const allRoutes = [...prerenderRoutes, ...blogRoutes, ...tagRoutes];
+  // Combine static routes with dynamic blog/tag routes and static FAQ routes
+  const allRoutes = [...prerenderRoutes, ...faqRoutes, ...blogRoutes, ...tagRoutes];
   
   // Ensure SPA fallback pages exist for all routes (prevents 404 on static hosts)
   ensureSpaFallbackPages(allRoutes);
@@ -265,7 +399,7 @@ async function prerender() {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
   });
 
-  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${blogRoutes.length} blog + ${tagRoutes.length} tags)...`);
+  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${faqRoutes.length} FAQ + ${blogRoutes.length} blog + ${tagRoutes.length} tags)...`);
 
   // Start a simple static server for the dist folder
   const { createServer } = require('http');
