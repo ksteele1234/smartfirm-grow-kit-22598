@@ -634,6 +634,52 @@
 /* Anchor targets for jump links */
 .anchor-target {
   scroll-margin-top: 6rem;
+  display: inline;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Table of contents styling */
+.toc-container {
+  background-color: hsl(var(--slate-lighter));
+  border-left: 4px solid hsl(var(--professional-teal));
+  padding: 1.5rem 2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 2rem 0;
+}
+
+.toc-container > p {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.toc-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-container li {
+  margin-bottom: 0.5rem;
+}
+
+.toc-container a {
+  color: hsl(var(--ocean-blue));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.toc-container a:hover {
+  color: hsl(var(--professional-teal));
+  text-decoration: underline;
+}
+
+/* Headings with IDs should also have scroll margin */
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+  scroll-margin-top: 6rem;
 }
 
 /* ============================================================================

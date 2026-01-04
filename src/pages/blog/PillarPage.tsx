@@ -286,7 +286,8 @@ const PillarPage = () => {
               prose-a:text-primary prose-a:no-underline hover:prose-a:underline
               prose-strong:text-foreground
               prose-li:text-muted-foreground
-              [&_.anchor-target]:scroll-mt-24"
+              [&_.anchor-target]:scroll-mt-24 [&_.anchor-target]:invisible [&_.anchor-target]:absolute [&_.anchor-target]:w-0 [&_.anchor-target]:h-0
+              prose-h2:scroll-mt-24 prose-h3:scroll-mt-24"
             dangerouslySetInnerHTML={{ __html: pillar.content || "" }}
           />
         </article>
