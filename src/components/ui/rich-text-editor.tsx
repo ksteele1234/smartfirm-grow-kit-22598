@@ -657,14 +657,40 @@ export function RichTextEditor({
         // Make the actual writing surface the scroll container (most reliable for contenteditable)
         style: '-webkit-overflow-scrolling:touch; overscroll-behavior:contain;',
       },
-      // Handle paste to convert markdown headings to proper HTML headings
+      // Handle paste to convert markdown/raw HTML to proper formatted content
       handlePaste: (view, event) => {
         const htmlData = event.clipboardData?.getData('text/html');
         const text = event.clipboardData?.getData('text/plain');
         
-        // If there's already HTML data with headings, let it paste normally
+        // If there's already proper HTML data with headings, let it paste normally
         if (htmlData && (htmlData.includes('<h1') || htmlData.includes('<h2') || htmlData.includes('<h3') || htmlData.includes('<h4'))) {
           return false; // Let default handling proceed
+        }
+        
+        // Check if plain text contains raw HTML tags (user copied code, not rendered content)
+        const looksLikeRawHtml = text && (
+          /<h[1-6][^>]*>/i.test(text) ||
+          /<p[^>]*>/i.test(text) ||
+          /<(ul|ol|li|blockquote|strong|em|a\s)/i.test(text)
+        );
+        
+        if (looksLikeRawHtml) {
+          event.preventDefault();
+          
+          // Parse the raw HTML text directly
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = text;
+          
+          // Use ProseMirror's HTML parser
+          const { state } = view;
+          const pmDomParser = ProseMirrorDOMParser.fromSchema(state.schema);
+          const parsed = pmDomParser.parse(tempDiv);
+          
+          const tr = state.tr.replaceSelection(parsed.slice(0));
+          view.dispatch(tr);
+          
+          toast.success('HTML content parsed and formatted');
+          return true;
         }
         
         // Convert markdown headings in plain text to HTML
@@ -695,24 +721,16 @@ export function RichTextEditor({
             
             event.preventDefault();
             
-            // Use TipTap's insertContent command
-            const { state } = view;
-            const { from } = state.selection;
-            
             // Parse and insert the HTML content
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = html;
             
-            // Insert content using the editor's command
-            const editorView = view;
-            const tr = state.tr;
-            
-            // Use ProseMirror's HTML parser
+            const { state } = view;
             const pmDomParser = ProseMirrorDOMParser.fromSchema(state.schema);
             const parsed = pmDomParser.parse(tempDiv);
             
-            tr.replaceSelection(parsed.slice(0));
-            editorView.dispatch(tr);
+            const tr = state.tr.replaceSelection(parsed.slice(0));
+            view.dispatch(tr);
             
             return true;
           }
