@@ -289,6 +289,21 @@ const PillarPage = () => {
               prose-li:text-muted-foreground
               [&_.anchor-target]:scroll-mt-24 [&_.anchor-target]:invisible [&_.anchor-target]:absolute [&_.anchor-target]:w-0 [&_.anchor-target]:h-0
               prose-h2:scroll-mt-24 prose-h3:scroll-mt-24"
+            onClick={(e) => {
+              const target = e.target as HTMLElement;
+              const anchor = target.closest('a');
+              if (anchor?.getAttribute('href')?.startsWith('#')) {
+                e.preventDefault();
+                const targetId = anchor.getAttribute('href')?.slice(1);
+                if (targetId) {
+                  const element = document.getElementById(targetId);
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.history.pushState(null, '', `#${targetId}`);
+                  }
+                }
+              }
+            }}
             dangerouslySetInnerHTML={{ __html: normalizeBlogHtml(pillar.content || "") }}
           />
         </article>
