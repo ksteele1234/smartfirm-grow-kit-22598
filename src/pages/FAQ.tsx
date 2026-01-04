@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
@@ -11,32 +12,20 @@ import {
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { faqCategories } from "@/data/faqContent";
-import FaqAnswer from "@/components/faq/FaqAnswer";
+import { faqCategories, getAllFaqs } from "@/data/faqContent";
 import { 
   ArrowRight,
   Search,
   MessageSquare,
   Phone,
   Mail,
-  ChevronDown
+  ChevronRight
 } from "lucide-react";
 import { useState } from "react";
 import heroWaveBackground from "@/assets/hero-wave-background.webp";
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [openItems, setOpenItems] = useState<{[key: string]: number[]}>({});
-
-  const toggleItem = (categoryIndex: number, itemIndex: number) => {
-    const key = `cat-${categoryIndex}`;
-    setOpenItems(prev => ({
-      ...prev,
-      [key]: prev[key]?.includes(itemIndex)
-        ? prev[key].filter(i => i !== itemIndex)
-        : [...(prev[key] || []), itemIndex]
-    }));
-  };
 
   const normalizedSearch = searchTerm.trim().toLowerCase();
 
@@ -54,8 +43,8 @@ const FAQ = () => {
     }))
     .filter(category => category.questions.length > 0);
 
-  // Flatten all FAQs for structured data
-  const allFAQs = faqCategories.flatMap(category => category.questions);
+  // All FAQs for structured data
+  const allFAQs = getAllFaqs();
 
   return (
     <div className="min-h-screen bg-background">
@@ -116,7 +105,7 @@ const FAQ = () => {
           
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
-              Frequently Asked Questions for Accounting Firm Marketing Automation
+              Frequently Asked Questions
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-text-lg mx-auto mb-10 leading-relaxed drop-shadow-md">
@@ -139,58 +128,29 @@ const FAQ = () => {
         </section>
 
 
-        {/* FAQ Content */}
-        <section className="py-[100px] md:py-[80px] bg-background">
+        {/* FAQ Content - Category-based Index */}
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-container-lg mx-auto">
-              {filteredFAQs.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="mb-16">
-                  <h2 className="text-3xl font-bold text-primary mb-6">
+              {filteredFAQs.map((category) => (
+                <div key={category.slug} id={category.slug} className="mb-12 scroll-mt-24">
+                  <h2 className="text-2xl md:text-3xl font-bold text-primary mb-6">
                     {category.category}
                   </h2>
 
-                  <div className="space-y-4">
-                    {category.questions.map((faq, index) => {
-                      const isOpen = openItems[`cat-${categoryIndex}`]?.includes(index);
-                      
-                      return (
-                        <div
-                          key={index}
-                          className="bg-background border rounded-xl elevation-1 hover:elevation-2 transition-shadow duration-200"
-                        >
-                          {/* Question (Clickable) */}
-                          <button
-                            onClick={() => toggleItem(categoryIndex, index)}
-                            className="w-full flex items-center justify-between gap-4 p-6 text-left cursor-pointer group"
-                          >
-                            <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors duration-200">
-                              {faq.question}
-                            </span>
-                            
-                            {/* Chevron Icon */}
-                            <ChevronDown 
-                              className={`w-5 h-5 text-accent flex-shrink-0 transition-transform duration-300 ${
-                                isOpen ? 'rotate-180' : ''
-                              }`}
-                            />
-                          </button>
-
-                          {/* Answer (Expandable) */}
-                          <div
-                            className={`overflow-hidden color-transition ${
-                              isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                            }`}
-                          >
-                   <div className="px-6 pb-6">
-                     <FaqAnswer
-                       text={faq.answer}
-                       paragraphClassName="text-base text-muted-foreground leading-[1.7]"
-                     />
-                   </div>
-                          </div>
-                        </div>
-                      );
-                    })}
+                  <div className="space-y-3">
+                    {category.questions.map((faq) => (
+                      <Link
+                        key={faq.slug}
+                        to={`/faq/${faq.slug}`}
+                        className="flex items-center justify-between gap-4 p-4 bg-background border rounded-lg hover:border-accent hover:bg-accent/5 transition-all duration-200 group"
+                      >
+                        <span className="text-foreground group-hover:text-accent transition-colors font-medium">
+                          {faq.question}
+                        </span>
+                        <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-accent flex-shrink-0 transition-colors" />
+                      </Link>
+                    ))}
                   </div>
                 </div>
               ))}
