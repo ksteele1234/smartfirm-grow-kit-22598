@@ -161,31 +161,35 @@ const BlogPostPreview = () => {
       
       const uniqueUrls = [...new Set(links.map(link => link.getAttribute('href') || '').filter(Boolean))];
       
-      const results: LinkValidationResult[] = uniqueUrls.map(url => ({
+      // Separate anchor links from other links - anchors don't need validation
+      const anchorLinks = uniqueUrls.filter(url => url.startsWith('#'));
+      const otherLinks = uniqueUrls.filter(url => !url.startsWith('#'));
+      
+      // Mark anchor links as valid immediately
+      const anchorResults: LinkValidationResult[] = anchorLinks.map(url => ({
+        url,
+        type: 'internal' as const,
+        status: 'valid' as const,
+      }));
+      
+      const results: LinkValidationResult[] = otherLinks.map(url => ({
         url,
         type: url.startsWith('http') && !url.includes('smartfirm.io') ? 'external' : 'internal',
         status: 'checking' as const,
       }));
       
-      setLinkResults(results);
+      // Show all results including pre-validated anchors
+      setLinkResults([...anchorResults, ...results]);
 
-      // Validate each link
+      // Validate only non-anchor links
       const validatedResults = await Promise.all(
         results.map(async (result) => {
           try {
-            // Anchor-only links (starting with #) are always valid - they reference page sections
-            if (result.url.startsWith('#')) {
-              return {
-                ...result,
-                status: 'valid' as const,
-              };
-            }
-
             if (result.type === 'internal') {
               // For internal links, check if the path exists in our routes
               const cleanUrl = result.url.replace(/^https?:\/\/[^/]+/, '').replace(/#.*$/, '');
               
-              // Simple validation: check if it starts with valid prefixes or is empty (anchor processed above)
+              // Simple validation: check if it starts with valid prefixes or is empty
               const validPrefixes = ['/', '/blog/', '/services/', '/solutions/', '/industries/', '/tools/', '/faq/', '/case-studies/', '/about', '/contact', '/get-started', '/resources', '/privacy', '/terms', '/cookies'];
               const isValid = cleanUrl === '' || validPrefixes.some(prefix => cleanUrl.startsWith(prefix));
               
@@ -195,21 +199,11 @@ const BlogPostPreview = () => {
                 error: isValid ? undefined : 'Path may not exist',
               } as LinkValidationResult;
             } else {
-              // For external links, try to fetch with HEAD request
-              try {
-                // We can't actually validate external links from the browser due to CORS
-                // So we'll mark them as valid but note they're external
-                return {
-                  ...result,
-                  status: 'valid' as const,
-                };
-              } catch {
-                return {
-                  ...result,
-                  status: 'invalid' as const,
-                  error: 'Unable to validate',
-                };
-              }
+              // External links - we can't validate due to CORS, mark as valid
+              return {
+                ...result,
+                status: 'valid' as const,
+              };
             }
           } catch {
             return {
@@ -221,7 +215,8 @@ const BlogPostPreview = () => {
         })
       );
 
-      setLinkResults(validatedResults);
+      // Combine anchor results (already valid) with validated results
+      setLinkResults([...anchorResults, ...validatedResults]);
       setIsValidating(false);
     };
 
