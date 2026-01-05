@@ -104,7 +104,7 @@ const AllServices = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Complete Automation & Marketing Services for Accounting Firms"
-        description="Browse professional marketing services for accounting firms—from marketing automation, websites, and SEO to social media, content marketing, and optimization."
+        description="Browse complete automation and marketing services for accounting firms—from workflow optimization and client systems to websites, SEO, and growth consulting."
         canonicalUrl="https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms"
         pageType="service"
         noindex={false}
@@ -146,7 +146,7 @@ const AllServices = () => {
         <div className="max-w-container-3xl mx-auto relative">
           <div className="text-center max-w-text-lg mx-auto">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              Professional Marketing Services For Accounting Firms
+              Complete Automation & Marketing Services for Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground leading-relaxed">

@@ -37,7 +37,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
         title="Contact SmartFirm | Firm Automation & Growth Systems"
-        description="Contact SmartFirm, a trusted CPA marketing agency, to learn about accounting firm marketing services pricing, consultations, and growth packages."
+        description="Contact SmartFirm to learn about firm automation, workflow optimization, and growth systems for accounting firms. Schedule a consultation today."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -103,7 +103,7 @@ const Contact = () => {
         </div>
         <div className="container relative z-10 mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8 drop-shadow-lg">
-            Contact SmartFirm for Marketing Automation for Accountants
+            Contact SmartFirm for Firm Automation & Growth Systems
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">

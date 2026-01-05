@@ -98,7 +98,7 @@ const GetStarted = () => {
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
         title="Get Started | Accounting Firm Automation & Growth Systems"
-        description="Get started with SmartFirm's marketing packages for CPA firms. Choose a free consultation, Quick Start program, or contact us directly."
+        description="Get started with SmartFirm's automation and growth systems for CPA firms. Choose a free consultation, Quick Start program, or contact us directly."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -148,7 +148,7 @@ const GetStarted = () => {
       <section className="bg-gradient-mesh-professional py-section pb-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-            Get Started with Marketing for Your Accounting Firm
+            Get Started with Firm Automation & Growth Systems
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-text-lg mx-auto mb-10">

@@ -143,7 +143,7 @@ const QuickStart = () => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Quick Start Automation Package for CPA Firms | SmartFirm"
-        description="Launch a complete marketing package for CPA firms in 30 days: website setup, lead capture forms, email automation, review requests, and SEO foundation—ready."
+        description="Launch firm automation in 30 days: client onboarding systems, workflow optimization, email automation, review requests, and operational foundation—ready to scale."
         canonicalUrl="https://smartfirm.io/quick-start-marketing-for-cpa-firms"
         pageType="service"
         serviceName="30-Day Quick Start Package"

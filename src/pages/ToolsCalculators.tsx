@@ -152,7 +152,7 @@ const ToolsCalculators = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Free Automation Assessment Tools for Accounting Firms"
-        description="Access free marketing tools for accounting firms including growth calculators, ROI assessments, workflow audits, marketing scorecards, quizzes, and benchmarks."
+        description="Access free automation tools for accounting firms including growth calculators, ROI assessments, workflow audits, efficiency scorecards, quizzes, and benchmarks."
         canonicalUrl="https://smartfirm.io/tools"
         pageType="default"
         faqs={faqsToRender}
