@@ -173,13 +173,21 @@ const BlogPostPreview = () => {
       const validatedResults = await Promise.all(
         results.map(async (result) => {
           try {
+            // Anchor-only links (starting with #) are always valid - they reference page sections
+            if (result.url.startsWith('#')) {
+              return {
+                ...result,
+                status: 'valid' as const,
+              };
+            }
+
             if (result.type === 'internal') {
               // For internal links, check if the path exists in our routes
               const cleanUrl = result.url.replace(/^https?:\/\/[^/]+/, '').replace(/#.*$/, '');
               
-              // Simple validation: check if it starts with valid prefixes
-              const validPrefixes = ['/', '/blog/', '/services/', '/solutions/', '/industries/', '/tools/', '/faq/', '/case-studies/'];
-              const isValid = validPrefixes.some(prefix => cleanUrl.startsWith(prefix)) || cleanUrl.startsWith('#');
+              // Simple validation: check if it starts with valid prefixes or is empty (anchor processed above)
+              const validPrefixes = ['/', '/blog/', '/services/', '/solutions/', '/industries/', '/tools/', '/faq/', '/case-studies/', '/about', '/contact', '/get-started', '/resources', '/privacy', '/terms', '/cookies'];
+              const isValid = cleanUrl === '' || validPrefixes.some(prefix => cleanUrl.startsWith(prefix));
               
               return {
                 ...result,

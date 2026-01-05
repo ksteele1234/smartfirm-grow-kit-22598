@@ -251,7 +251,6 @@ const App = () => (
             <Route path="/blog/tags/:slug" element={<TagPage />} />
             <Route path="/blog/guide/:slug" element={<PillarPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
             
             {/* Case Studies */}
             <Route path="/case-studies" element={<CaseStudies />} />
