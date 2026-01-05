@@ -127,7 +127,7 @@ const Industries = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Marketing for Accountants: Industry-Specific Solutions | SmartFirm"
+        title="Firm Automation by Industry | SmartFirm"
         description="Marketing for accountants including solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
         canonicalUrl="https://smartfirm.io/industries-expert-marketing-agency-for-accountants"
         pageType="industry"

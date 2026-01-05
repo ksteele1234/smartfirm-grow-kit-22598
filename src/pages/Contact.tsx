@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Contact SmartFirm | Marketing for Accounting Firms"
+        title="Contact SmartFirm | Firm Automation & Growth Systems"
         description="Contact SmartFirm, a trusted CPA marketing agency, to learn about accounting firm marketing services pricing, consultations, and growth packages."
         pageType="default"
         noindex={false}

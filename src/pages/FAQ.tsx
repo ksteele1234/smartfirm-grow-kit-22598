@@ -49,7 +49,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Frequently Asked Questions | Marketing Automation for Accounting Firms"
+        title="Frequently Asked Questions | Accounting Firm Automation"
         description="Explore SmartFirm FAQs on SEO agency for accountants, PPC services for accounting firms, accounting firm reputation management service, and more."
         pageType="faq"
         noindex={false}

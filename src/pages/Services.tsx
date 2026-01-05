@@ -45,7 +45,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Leading Marketing Services For Accounting Firms | SmartFirm"
+        title="Firm Automation & Growth Services for Accounting Firms"
         description="Explore leading marketing services for accounting firms: automation platforms, conversion-optimized websites, local SEO, retention, and growth systems."
         canonicalUrl="https://smartfirm.io/leading-marketing-services-for-accounting-firms"
         pageType="service"

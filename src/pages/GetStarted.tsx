@@ -97,7 +97,7 @@ const GetStarted = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Get Started with Marketing for Accounting Firms | SmartFirm"
+        title="Get Started | Accounting Firm Automation & Growth Systems"
         description="Get started with SmartFirm's marketing packages for CPA firms. Choose a free consultation, Quick Start program, or contact us directly."
         pageType="default"
         noindex={false}

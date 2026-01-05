@@ -94,7 +94,7 @@ const BlogIndex = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Blog | SmartFirm - Marketing Insights for Accounting Firms"
+        title="Blog | SmartFirm - Firm Automation Insights"
         description="Expert insights on marketing automation, client acquisition, and growth strategies for accounting and CPA firms. Stay ahead with the latest industry trends."
         canonicalUrl="https://smartfirm.io/blog"
       />
