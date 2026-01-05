@@ -148,9 +148,9 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/home-8804" element={<Navigate to="/" replace />} />
-            <Route path="/services" element={<Navigate to="/leading-marketing-services-for-accounting-firms" replace />} />
-            <Route path="/solutions" element={<Navigate to="/solutions-expert-marketing-agency-for-accounting-firms" replace />} />
-            <Route path="/industries" element={<Navigate to="/industries-expert-marketing-agency-for-accountants" replace />} />
+            <Route path="/leading-marketing-services-for-accounting-firms" element={<Navigate to="/services" replace />} />
+            <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Navigate to="/solutions" replace />} />
+            <Route path="/industries-expert-marketing-agency-for-accountants" element={<Navigate to="/industries" replace />} />
             <Route path="/about-us" element={<Navigate to="/about" replace />} />
             <Route path="/terms-of-service" element={<Navigate to="/terms" replace />} />
             <Route path="/demo" element={<Navigate to="/get-started" replace />} />
@@ -159,10 +159,11 @@ const App = () => (
             <Route path="/checkout" element={<Navigate to="/get-started" replace />} />
             <Route path="/audit-landingpage" element={<Navigate to="/get-started" replace />} />
             <Route path="/smartfirm-audit-landingpage" element={<Navigate to="/get-started" replace />} />
-            <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Solutions />} />
-            <Route path="/leading-marketing-services-for-accounting-firms" element={<Services />} />
-            <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<AllServices />} />
-            <Route path="/industries-expert-marketing-agency-for-accountants" element={<Industries />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/all-services" element={<AllServices />} />
+            <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<Navigate to="/all-services" replace />} />
+            <Route path="/industries" element={<Industries />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

@@ -129,3 +129,8 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions-expert-marketi
 
 # SPA fallback - MUST BE LAST
 /*    /index.html   200
+# Clean URL redirects - redirect old long slugs to new short URLs
+/leading-marketing-services-for-accounting-firms  /services  301
+/solutions-expert-marketing-agency-for-accounting-firms  /solutions  301
+/industries-expert-marketing-agency-for-accountants  /industries  301
+/services/all-professional-marketing-services-for-accounting-firms  /all-services  301
