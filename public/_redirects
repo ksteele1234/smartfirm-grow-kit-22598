@@ -122,5 +122,10 @@ https://solutions.smartfirm.io/sample-page/  https://smartfirm.io/solutions-expe
 https://solutions.smartfirm.io/2025/07/31/hello-world/  https://smartfirm.io/resources  301!
 https://solutions.smartfirm.io/*   https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms   301
 
+# Force trailing slashes for blog and FAQ routes (for bot crawlers)
+# Only redirect if the URL doesn't already end with a slash
+/blog/:slug  /blog/:slug/  301
+/faq/:slug   /faq/:slug/   301
+
 # SPA fallback - MUST BE LAST
 /*    /index.html   200
