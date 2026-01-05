@@ -26,7 +26,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-import { ArrowLeft, Loader2, Save, Eye, CalendarIcon, Clock, X } from 'lucide-react';
+import { ArrowLeft, Loader2, Save, Eye, CalendarIcon, Clock, X, FileSearch } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import SEO from '@/components/SEO';
 import { cn } from '@/lib/utils';
@@ -347,11 +347,21 @@ export default function PostEditor() {
               </h1>
             </div>
             <div className="flex items-center gap-2">
+              {/* Preview button - always available when editing */}
+              {isEditing && form.watch('slug') && (
+                <Button type="button" variant="outline" asChild>
+                  <a href={`/blog/preview/${form.watch('slug')}`} target="_blank" rel="noopener noreferrer">
+                    <FileSearch size={16} className="mr-2" />
+                    Preview
+                  </a>
+                </Button>
+              )}
+              {/* View live button - only for published posts */}
               {isEditing && form.watch('status') === 'published' && (
                 <Button type="button" variant="outline" asChild>
                   <a href={`/blog/${form.watch('slug')}`} target="_blank" rel="noopener noreferrer">
                     <Eye size={16} className="mr-2" />
-                    View
+                    View Live
                   </a>
                 </Button>
               )}
