@@ -25,6 +25,14 @@ import {
   CollapsibleContent,
 } from '@/components/ui/collapsible';
 import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import {
   Plus,
   Search,
   Pencil,
@@ -37,6 +45,8 @@ import {
   ArrowDown,
   Eye,
   EyeOff,
+  Columns,
+  FileSearch,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import SEO from '@/components/SEO';
@@ -53,6 +63,15 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import PostCsvUploader from './PostCsvUploader';
+
+interface ColumnVisibility {
+  type: boolean;
+  category: boolean;
+  pillar: boolean;
+  status: boolean;
+  updated: boolean;
+  published: boolean;
+}
 
 interface BlogPost {
   id: string;
@@ -97,7 +116,19 @@ export default function PostList() {
   const [sortField, setSortField] = useState<SortField>('updated_at');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
   const [isBulkActionLoading, setIsBulkActionLoading] = useState(false);
+  const [columnVisibility, setColumnVisibility] = useState<ColumnVisibility>({
+    type: true,
+    category: true,
+    pillar: true,
+    status: true,
+    updated: true,
+    published: true,
+  });
   const { isAdmin } = useAuth();
+
+  const toggleColumn = (column: keyof ColumnVisibility) => {
+    setColumnVisibility(prev => ({ ...prev, [column]: !prev[column] }));
+  };
 
   useEffect(() => {
     fetchData();
@@ -524,6 +555,55 @@ export default function PostList() {
                 </SelectContent>
               </Select>
             )}
+            {/* Column Visibility Toggle */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="default" className="ml-auto">
+                  <Columns size={16} className="mr-2" />
+                  Columns
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.type}
+                  onCheckedChange={() => toggleColumn('type')}
+                >
+                  Type
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.category}
+                  onCheckedChange={() => toggleColumn('category')}
+                >
+                  Category
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.pillar}
+                  onCheckedChange={() => toggleColumn('pillar')}
+                >
+                  Pillar
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.status}
+                  onCheckedChange={() => toggleColumn('status')}
+                >
+                  Status
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.updated}
+                  onCheckedChange={() => toggleColumn('updated')}
+                >
+                  Updated
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem
+                  checked={columnVisibility.published}
+                  onCheckedChange={() => toggleColumn('published')}
+                >
+                  Published
+                </DropdownMenuCheckboxItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
 
@@ -634,53 +714,65 @@ export default function PostList() {
                       <SortIcon field="title" />
                     </div>
                   </TableHead>
-                  <TableHead 
-                    className="cursor-pointer hover:bg-muted/50 transition-colors"
-                    onClick={() => handleSort('post_type')}
-                  >
-                    <div className="flex items-center">
-                      Type
-                      <SortIcon field="post_type" />
-                    </div>
-                  </TableHead>
-                  <TableHead 
-                    className="cursor-pointer hover:bg-muted/50 transition-colors"
-                    onClick={() => handleSort('category')}
-                  >
-                    <div className="flex items-center">
-                      Category
-                      <SortIcon field="category" />
-                    </div>
-                  </TableHead>
-                  <TableHead>Pillar</TableHead>
-                  <TableHead 
-                    className="cursor-pointer hover:bg-muted/50 transition-colors"
-                    onClick={() => handleSort('status')}
-                  >
-                    <div className="flex items-center">
-                      Status
-                      <SortIcon field="status" />
-                    </div>
-                  </TableHead>
-                  <TableHead 
-                    className="cursor-pointer hover:bg-muted/50 transition-colors"
-                    onClick={() => handleSort('updated_at')}
-                  >
-                    <div className="flex items-center">
-                      Updated
-                      <SortIcon field="updated_at" />
-                    </div>
-                  </TableHead>
-                  <TableHead 
-                    className="cursor-pointer hover:bg-muted/50 transition-colors"
-                    onClick={() => handleSort('publish_date')}
-                  >
-                    <div className="flex items-center">
-                      Published
-                      <SortIcon field="publish_date" />
-                    </div>
-                  </TableHead>
-                  <TableHead className="w-32">Actions</TableHead>
+                  {columnVisibility.type && (
+                    <TableHead 
+                      className="cursor-pointer hover:bg-muted/50 transition-colors"
+                      onClick={() => handleSort('post_type')}
+                    >
+                      <div className="flex items-center">
+                        Type
+                        <SortIcon field="post_type" />
+                      </div>
+                    </TableHead>
+                  )}
+                  {columnVisibility.category && (
+                    <TableHead 
+                      className="cursor-pointer hover:bg-muted/50 transition-colors"
+                      onClick={() => handleSort('category')}
+                    >
+                      <div className="flex items-center">
+                        Category
+                        <SortIcon field="category" />
+                      </div>
+                    </TableHead>
+                  )}
+                  {columnVisibility.pillar && (
+                    <TableHead>Pillar</TableHead>
+                  )}
+                  {columnVisibility.status && (
+                    <TableHead 
+                      className="cursor-pointer hover:bg-muted/50 transition-colors"
+                      onClick={() => handleSort('status')}
+                    >
+                      <div className="flex items-center">
+                        Status
+                        <SortIcon field="status" />
+                      </div>
+                    </TableHead>
+                  )}
+                  {columnVisibility.updated && (
+                    <TableHead 
+                      className="cursor-pointer hover:bg-muted/50 transition-colors"
+                      onClick={() => handleSort('updated_at')}
+                    >
+                      <div className="flex items-center">
+                        Updated
+                        <SortIcon field="updated_at" />
+                      </div>
+                    </TableHead>
+                  )}
+                  {columnVisibility.published && (
+                    <TableHead 
+                      className="cursor-pointer hover:bg-muted/50 transition-colors"
+                      onClick={() => handleSort('publish_date')}
+                    >
+                      <div className="flex items-center">
+                        Published
+                        <SortIcon field="publish_date" />
+                      </div>
+                    </TableHead>
+                  )}
+                  <TableHead className="w-36">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -696,28 +788,52 @@ export default function PostList() {
                     <TableCell className="font-medium max-w-[200px] truncate" title={post.title}>
                       {post.title}
                     </TableCell>
-                    <TableCell>{getPostTypeBadge(post.post_type)}</TableCell>
-                    <TableCell>
-                      {post.blog_categories?.name || (
-                        <span className="text-muted-foreground">Uncategorized</span>
-                      )}
-                    </TableCell>
-                    <TableCell className="max-w-[150px] truncate text-muted-foreground text-sm">
-                      {post.post_type === 'cluster' ? (
-                        getPillarTitle(post.pillar_id) || <span className="text-amber-600">No pillar</span>
-                      ) : (
-                        '—'
-                      )}
-                    </TableCell>
-                    <TableCell>{getStatusBadge(post.status)}</TableCell>
-                    <TableCell className="text-muted-foreground text-sm">
-                      {formatDate(post.updated_at)}
-                    </TableCell>
-                    <TableCell className="text-muted-foreground text-sm">
-                      {formatDate(post.publish_date)}
-                    </TableCell>
+                    {columnVisibility.type && (
+                      <TableCell>{getPostTypeBadge(post.post_type)}</TableCell>
+                    )}
+                    {columnVisibility.category && (
+                      <TableCell>
+                        {post.blog_categories?.name || (
+                          <span className="text-muted-foreground">Uncategorized</span>
+                        )}
+                      </TableCell>
+                    )}
+                    {columnVisibility.pillar && (
+                      <TableCell className="max-w-[150px] truncate text-muted-foreground text-sm">
+                        {post.post_type === 'cluster' ? (
+                          getPillarTitle(post.pillar_id) || <span className="text-amber-600">No pillar</span>
+                        ) : (
+                          '—'
+                        )}
+                      </TableCell>
+                    )}
+                    {columnVisibility.status && (
+                      <TableCell>{getStatusBadge(post.status)}</TableCell>
+                    )}
+                    {columnVisibility.updated && (
+                      <TableCell className="text-muted-foreground text-sm">
+                        {formatDate(post.updated_at)}
+                      </TableCell>
+                    )}
+                    {columnVisibility.published && (
+                      <TableCell className="text-muted-foreground text-sm">
+                        {formatDate(post.publish_date)}
+                      </TableCell>
+                    )}
                     <TableCell>
                       <div className="flex items-center gap-1">
+                        {/* Preview button - always available */}
+                        <Button 
+                          variant="ghost" 
+                          size="icon" 
+                          asChild 
+                          className="h-8 w-8"
+                          title="Preview post"
+                        >
+                          <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                            <FileSearch size={14} />
+                          </a>
+                        </Button>
                         <Button
                           variant="ghost"
                           size="icon"
@@ -727,13 +843,19 @@ export default function PostList() {
                         >
                           {post.status === 'published' ? <EyeOff size={14} /> : <Eye size={14} />}
                         </Button>
-                        <Button variant="ghost" size="icon" asChild className="h-8 w-8">
+                        <Button variant="ghost" size="icon" asChild className="h-8 w-8" title="Edit post">
                           <Link to={`/admin/posts/${post.id}/edit`}>
                             <Pencil size={14} />
                           </Link>
                         </Button>
                         {post.status === 'published' && (
-                          <Button variant="ghost" size="icon" asChild className="h-8 w-8">
+                          <Button 
+                            variant="ghost" 
+                            size="icon" 
+                            asChild 
+                            className="h-8 w-8"
+                            title="View live post"
+                          >
                             <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer">
                               <ExternalLink size={14} />
                             </a>
@@ -742,7 +864,7 @@ export default function PostList() {
                         {isAdmin && (
                           <AlertDialog>
                             <AlertDialogTrigger asChild>
-                              <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive">
+                              <Button variant="ghost" size="icon" className="h-8 w-8 text-destructive hover:text-destructive" title="Delete post">
                                 <Trash2 size={14} />
                               </Button>
                             </AlertDialogTrigger>
