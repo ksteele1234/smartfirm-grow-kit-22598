@@ -822,15 +822,15 @@ export default function PostList() {
                     )}
                     <TableCell>
                       <div className="flex items-center gap-1">
-                        {/* Preview button - always available */}
+                        {/* Preview button - opens dedicated preview page with link validation */}
                         <Button 
                           variant="ghost" 
                           size="icon" 
                           asChild 
                           className="h-8 w-8"
-                          title="Preview post"
+                          title="Preview post with link validation"
                         >
-                          <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                          <a href={`/blog/preview/${post.slug}`} target="_blank" rel="noopener noreferrer">
                             <FileSearch size={14} />
                           </a>
                         </Button>
