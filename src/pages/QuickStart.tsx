@@ -204,7 +204,7 @@ const QuickStart = () => {
             </Badge>
             
             <h1 className="text-display font-bold text-primary mb-6">
-              Quick Start Marketing Package for CPA Firms
+              Quick Start Automation Package for CPA Firms
             </h1>
             
             <div id="sf-keyword-intro">

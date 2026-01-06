@@ -140,7 +140,7 @@ const AddOns = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Automation & Marketing Add-Ons for Accounting Firms"
+        title="Automation & Automation & Marketing Add-Ons for Accounting Firms"
         description="Marketing add-ons for accounting firms: blogs, paid ads, newsletters, chatbots, voice AI, social media, trade shows, and retention programs. Scale at your pace."
         canonicalUrl="https://smartfirm.io/services/add-ons"
         pageType="service"
@@ -201,7 +201,7 @@ const AddOns = () => {
             </Badge>
             
             <h1 className="text-display font-bold text-primary mb-6">
-              Marketing Add-Ons for Accounting Firms
+              Automation & Marketing Add-Ons for Accounting Firms
             </h1>
             
             <div id="sf-keyword-intro">

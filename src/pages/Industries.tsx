@@ -171,7 +171,7 @@ const Industries = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
-              Marketing for Accountants: Solutions for Your Niche
+              Firm Automation by Industry: Solutions for Your Niche
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">

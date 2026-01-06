@@ -118,7 +118,7 @@ const Resources = () => {
         <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-primary mb-8">
-              CPA Marketing Resources to Grow Your Firm
+              Accounting Firm Automation Resources to Grow Your Firm
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-muted-foreground max-w-3xl mx-auto mb-10">
