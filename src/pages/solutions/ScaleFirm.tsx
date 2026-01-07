@@ -6,12 +6,12 @@ const ScaleFirm = () => {
   const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
     id: "scale-firm", 
-    title: "Can't Scale Without Breaking? Grow Your Accounting Firm Successfully | SmartFirm",
+    title: "Scale Your Accounting Firm Successfully | SmartFirm",
     slug: "scale-accounting-firm-successfully",
-    metaDescription: "Hit a capacity wall and can't scale without hiring? Scale your accounting firm successfully using automation and systematized delivery that doubles capacity without proportional headcount growth.",
+    metaDescription: "Scale your accounting firm without chaos. Use automation and systematized processes to double capacity without proportional hiring with SmartFirm's growth systems.",
     canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
     content: {},
-    heroTitle: "Can't Scale Without Breaking? Grow Successfully Without Chaos",
+    heroTitle: "Scale Your Firm: Grow Successfully Without Chaos or Burnout",
     heroSubtitle: "Hit a capacity wall where every new client means hiring more people? Scale your accounting firm successfully: automation handles routine work, systematized processes standardize delivery, and optimized workflows double revenue without proportional hiring.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",

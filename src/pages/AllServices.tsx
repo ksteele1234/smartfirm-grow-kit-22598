@@ -103,9 +103,9 @@ const AllServices = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Complete Automation & Marketing Services for Accounting Firms"
+        title="Automation & Marketing Services | SmartFirm"
         description="Browse complete automation and marketing services for accounting firms—from workflow optimization and client systems to websites, SEO, and growth consulting."
-        canonicalUrl="https://smartfirm.io/services/all-professional-marketing-services-for-accounting-firms"
+        canonicalUrl="https://smartfirm.io/all-services"
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}

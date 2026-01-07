@@ -1,15 +1,16 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
+import SEO from "@/components/SEO";
 
 const EmailMarketing = () => {
   const serviceData: ServicePageData = {
     id: "email-marketing",
-    title: "Email Marketing for CPAs | SmartFirm",
+    title: "Email Marketing for Accounting Firms | SmartFirm",
     slug: "email-marketing",
     metaDescription: "Email marketing for CPAs: automated newsletters, personalized campaigns, and strategic touchpoints that increase retention 25% and generate $20K-$50K in upsells.",
     canonicalUrl: "https://smartfirm.io/services/email-marketing",
     content: {},
-    heroTitle: "Email Marketing for CPAs",
+    heroTitle: "Email Marketing: Retain and Grow Your Accounting Firm's Client Base",
     heroSubtitle: "Keep clients engaged year-round, increase retention by 25%, and generate $20K-$50K in upsells through automated newsletters and personalized campaigns.",
     heroDescription: "Email marketing for CPAs delivers automated newsletters, tax reminders, and personalized campaigns that strengthen relationships, reduce churn, and create upsell opportunities.",
     benefits: [

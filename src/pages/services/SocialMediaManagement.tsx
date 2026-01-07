@@ -1,15 +1,16 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
+import SEO from "@/components/SEO";
 
 const SocialMediaManagement = () => {
   const serviceData: ServicePageData = {
     id: "social-media-management",
-    title: "Social Media Management for CPAs | SmartFirm",
+    title: "Social Media Management for Accounting Firms | SmartFirm",
     slug: "social-media-management",
     metaDescription: "Social media management for CPAs: 12-16 compliant posts monthly that build thought leadership, drive referrals, and attract advisory clients. Done-for-you.",
     canonicalUrl: "https://smartfirm.io/services/social-media-management",
     content: {},
-    heroTitle: "Social Media Management for CPAs",
+    heroTitle: "Social Media Management: Build Thought Leadership for Your Firm",
     heroSubtitle: "Build thought leadership with 12-16 compliant posts monthly, drive 30-50% more referrals, and stay top-of-mind. Fully compliant, zero risk.",
     heroDescription: "Social media management for CPAs delivers 12-16 compliant posts monthly across LinkedIn, Facebook, and Twitter that build authority and drive referrals without time drain.",
     benefits: [

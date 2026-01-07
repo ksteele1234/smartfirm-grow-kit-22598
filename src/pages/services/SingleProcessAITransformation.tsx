@@ -45,6 +45,10 @@ const SingleProcessAITransformation = () => {
           <style>{heroStyles}</style>
           
           <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
+            <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
+              Single Process AI Transformation: Start Small, See Big Results
+            </h1>
+
             {/* Hero Content - Centered */}
             <div className="hero-content relative z-10 text-center max-w-container-lg px-4">
               <motion.h1 

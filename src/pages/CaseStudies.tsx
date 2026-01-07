@@ -45,9 +45,12 @@ const CaseStudies = () => {
   return (
     <>
       <SEO 
-        title="Case Studies | Real Results from Accounting Firms | SmartFirm"
-        description="Explore real success stories from accounting firms that transformed their practice with SmartFirm's marketing automation and business optimization solutions."
+        title="Case Studies | Real Results | SmartFirm"
+        description="Explore real success stories from accounting firms that transformed their practice with SmartFirm's workflow automation, growth systems, and consulting services. See measurable results and ROI."
         canonicalUrl="https://smartfirm.io/case-studies"
+        pageType="page"
+        noindex={false}
+        dateModified={new Date().toISOString()}
       />
       
       <div className="min-h-screen bg-background flex flex-col">

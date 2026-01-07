@@ -16,7 +16,7 @@ const ThankYou = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO 
         title="Thank You"
-        description="Thank you for contacting SmartFirm. We've received your message and will get back to you shortly."
+        description="Thank you for contacting SmartFirm. We've received your message and will respond within 1 business day. Learn more about our workflow automation and growth systems for accounting firms."
         robots="noindex,nofollow"
       />
       <Header />

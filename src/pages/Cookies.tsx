@@ -31,7 +31,7 @@ const Cookies = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Cookie Policy | SmartFirm"
-        description="Learn how SmartFirm uses cookies to improve your website experience. Manage your cookie preferences and settings."
+        description="Learn how SmartFirm uses cookies to improve your website experience, remember your preferences, and analyze site usage. Manage your cookie preferences and settings for optimal privacy control."
         pageType="legal"
         noindex={false}
         faqs={faqs}

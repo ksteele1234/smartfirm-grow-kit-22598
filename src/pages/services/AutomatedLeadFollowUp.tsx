@@ -1,15 +1,16 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
+import SEO from "@/components/SEO";
 
 const AutomatedLeadFollowUp = () => {
   const serviceData: ServicePageData = {
     id: "automated-lead-follow-up",
-    title: "Automated Lead Follow-Up for CPAs | SmartFirm",
+    title: "Automated Lead Follow-Up for Accounting Firms | SmartFirm",
     slug: "automated-lead-follow-up",
-    metaDescription: "Automated lead follow-up for CPAs: instant response, multi-touch nurture sequences, and 40% higher conversion rates. Never lose a lead again.",
+    metaDescription: "Automated lead follow-up for accounting firms. Never miss a prospect with intelligent email and SMS sequences that convert inquiries into booked consultations.",
     canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up",
     content: {},
-    heroTitle: "Automated Lead Follow-Up for CPAs",
+    heroTitle: "Automated Lead Follow-Up: Convert More Prospects for Your Accounting Firm",
     heroSubtitle: "Respond instantly to every lead, nurture through proven 7-touch sequences, and convert 40% more prospects. Set it and forget it.",
     heroDescription: "Automated lead follow-up for CPAs responds within 60 seconds, nurtures prospects automatically, and converts more leads without manual effort.",
     benefits: [

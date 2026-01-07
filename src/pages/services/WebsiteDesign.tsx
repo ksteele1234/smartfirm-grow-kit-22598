@@ -1,5 +1,6 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
+import SEO from "@/components/SEO";
 
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {

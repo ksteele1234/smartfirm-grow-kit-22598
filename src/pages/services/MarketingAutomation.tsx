@@ -1,5 +1,6 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { servicePages } from "@/data/cmsPages";
+import SEO from "@/components/SEO";
 
 const MarketingAutomation = () => {
   const serviceData = servicePages['marketing-automation'];

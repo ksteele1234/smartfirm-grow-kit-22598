@@ -1,15 +1,16 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
+import SEO from "@/components/SEO";
 
 const BusinessOptimization = () => {
   const serviceData: ServicePageData = {
     id: "business-optimization",
     title: "Business Optimization for Accounting Firms | SmartFirm",
     slug: "business-optimization",
-    metaDescription: "Business optimization for accounting firms: identify revenue leaks, streamline operations, and increase profitability 20-30% through data-driven process improvements.",
+    metaDescription: "Business optimization for accounting firms. Streamline operations, improve workflows, and scale your practice with SmartFirm's strategic consulting and automation.",
     canonicalUrl: "https://smartfirm.io/services/business-optimization",
     content: {},
-    heroTitle: "Business Optimization for Accounting Firms",
+    heroTitle: "Business Optimization: Streamline Operations for Your Accounting Firm",
     heroSubtitle: "Identify revenue leaks, systematize growth processes, and increase profitability 20-30% within 12 months through operational audits and data-driven improvements.",
     heroDescription: "Business optimization for accounting firms analyzes workflows, identifies bottlenecks, and implements process improvements that increase profitability by 20-30% within 12 months.",
     benefits: [

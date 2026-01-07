@@ -95,9 +95,9 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Stop Feeling Overwhelmed: Solutions For Accounting Firms | SmartFirm"
+        title="Solutions For Accounting Firms | SmartFirm"
         description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
-        canonicalUrl="https://smartfirm.io/solutions-expert-marketing-agency-for-accounting-firms"
+        canonicalUrl="https://smartfirm.io/solutions"
         pageType="solution"
         faqs={faqsToRender}
         noindex={false}

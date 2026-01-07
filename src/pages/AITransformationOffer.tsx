@@ -92,7 +92,7 @@ const AITransformationOffer = () => {
         pageType="service"
         serviceName="AI Transformation Roadmap - Limited Time Offer"
         audience="accounting firms"
-        title="AI Transformation Roadmap - PASBA Member Exclusive | SmartFirm"
+        title="AI Transformation Roadmap | PASBA Exclusive"
         description="Get a clear 12-month AI strategy. Exclusive PASBA member pricing: $7,500 (regular $9,999) through November. Limited availability."
         canonicalUrl="https://smartfirm.io/ai-transformation-offer"
         noindex={true}
@@ -127,10 +127,10 @@ const AITransformationOffer = () => {
               className="text-4xl md:text-6xl font-bold text-white text-center mb-6 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Get a Clear 12-Month
+              AI Transformation Roadmap:
               <br />
               <span className="text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                AI Transformation Roadmap
+                Get a Clear 12-Month Strategy
               </span>
             </motion.h1>
 

@@ -3,6 +3,7 @@ import { ServicePageData } from "@/types/cms";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertTriangle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const ClientOnboardingAutomation = () => {
   const serviceData: ServicePageData = {

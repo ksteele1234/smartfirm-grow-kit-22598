@@ -31,7 +31,7 @@ const Terms = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Terms of Service | SmartFirm"
-        description="SmartFirm terms of service governing the use of our software, tools, and services. Updated for Oregon law compliance."
+        description="SmartFirm terms of service governing the use of our workflow automation software, tools, and consulting services for accounting firms. Updated for Oregon law compliance and industry standards."
         pageType="legal"
         noindex={false}
         faqs={faqs}
