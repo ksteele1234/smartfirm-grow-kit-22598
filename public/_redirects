@@ -131,9 +131,8 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions   301
 /tools/seo-audit-advanced-seo-assessment-for-cpas  /tools/seo-audit  301
 /tools/page-grader-website-page-audit-for-accountants  /tools/page-grader  301
 
-# Remove trailing slashes for ALL routes (match React Router expectations)
-# This must come BEFORE the SPA fallback
-/*/ /:splat 301!
+# Trailing slash handling removed - React Router handles both versions gracefully
+# The previous rule (/*/ /:splat 301!) was causing redirect loops
 
 # SPA fallback - MUST BE LAST
 /* /index.html 200
