@@ -6,7 +6,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Tag, User, BookOpen } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, User, BookOpen, Mail } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 import ClusterNavigator from "@/components/blog/ClusterNavigator";
@@ -338,13 +338,20 @@ const BlogPost = () => {
                     <User className="w-8 h-8 text-muted-foreground" />
                   </div>
                 )}
-                <div>
+                <div className="flex-1">
                   <h3 className="text-lg font-semibold text-foreground">
                     {authorProfile.display_name}
                   </h3>
                   <p className="text-muted-foreground mt-1 leading-relaxed">
                     {authorProfile.bio}
                   </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 font-medium transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    Contact {authorProfile.display_name?.split(' ')[0] || 'Author'}
+                  </Link>
                 </div>
               </div>
             </div>
