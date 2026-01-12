@@ -3,8 +3,9 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
-import sitemap from "vite-plugin-sitemap";
-import { sitemapRoutes } from "./src/config/sitemapRoutes";
+// Sitemap generation handled by scripts/generate-sitemap.cjs post-build
+// import sitemap from "vite-plugin-sitemap";
+// import { sitemapRoutes } from "./src/config/sitemapRoutes";
 
 // SEO-critical routes (for future prerendering) - 57 total, matches sitemap
 export const prerenderRoutes = [
@@ -101,17 +102,8 @@ export default defineConfig(({ mode }) => ({
         });
       }
     }),
-    sitemap({
-      hostname: 'https://smartfirm.io',
-      dynamicRoutes: sitemapRoutes.map(route => route.path),
-      readable: true,
-      priority: Object.fromEntries(
-        sitemapRoutes.map(route => [route.path, route.priority])
-      ),
-      changefreq: Object.fromEntries(
-        sitemapRoutes.map(route => [route.path, route.changefreq])
-      ),
-    }),
+    // Sitemap plugin removed - using post-build script instead (scripts/generate-sitemap.cjs)
+    // This prevents build failures from premature dist/ directory access
     // NOTE: Prerendering temporarily disabled - using post-build script instead
     // Will be handled by scripts/prerender.js using puppeteer-core + Netlify chromium
     mode === "development" && componentTagger()
