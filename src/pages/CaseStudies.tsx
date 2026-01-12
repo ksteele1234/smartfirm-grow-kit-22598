@@ -48,7 +48,7 @@ const CaseStudies = () => {
         title="Case Studies | Real Results | SmartFirm"
         description="Explore real success stories from accounting firms that transformed their practice with SmartFirm's workflow automation, growth systems, and consulting services. See measurable results and ROI."
         canonicalUrl="https://smartfirm.io/case-studies"
-        pageType="page"
+        pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
       />
