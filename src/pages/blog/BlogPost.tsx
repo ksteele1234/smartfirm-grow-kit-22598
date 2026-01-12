@@ -25,16 +25,18 @@ interface BlogPost {
   created_at: string;
   post_type: string | null;
   pillar_id: string | null;
+  author_id: string | null;
   blog_categories: {
     name: string;
     slug: string;
   } | null;
-  profiles: {
-    display_name: string | null;
-    email: string | null;
-    avatar_url: string | null;
-    bio: string | null;
-  } | null;
+}
+
+interface PublicProfile {
+  id: string;
+  display_name: string | null;
+  avatar_url: string | null;
+  bio: string | null;
 }
 
 interface PostTag {
@@ -70,15 +72,10 @@ const BlogPost = () => {
           created_at,
           post_type,
           pillar_id,
+          author_id,
           blog_categories (
             name,
             slug
-          ),
-          profiles (
-            display_name,
-            email,
-            avatar_url,
-            bio
           )
         `)
         .eq("slug", slug)
@@ -90,6 +87,24 @@ const BlogPost = () => {
       return data as BlogPost | null;
     },
     enabled: !!slug,
+  });
+
+  // Fetch author profile from public_profiles view (no email for public access)
+  const { data: authorProfile } = useQuery({
+    queryKey: ["public-profile", post?.author_id],
+    queryFn: async () => {
+      if (!post?.author_id) return null;
+      
+      const { data, error } = await supabase
+        .from("public_profiles" as any)
+        .select("id, display_name, avatar_url, bio")
+        .eq("id", post.author_id)
+        .maybeSingle();
+
+      if (error) throw error;
+      return data as unknown as PublicProfile | null;
+    },
+    enabled: !!post?.author_id,
   });
 
   // Fetch tags for this post
@@ -220,21 +235,18 @@ const BlogPost = () => {
                 <Calendar className="w-4 h-4" />
                 <span>{publishDate}</span>
               </div>
-              {post.profiles?.display_name && (
+              {authorProfile?.display_name && (
                 <div className="flex items-center gap-2">
-                  {post.profiles.avatar_url ? (
+                  {authorProfile.avatar_url ? (
                     <img
-                      src={post.profiles.avatar_url}
-                      alt={post.profiles.display_name}
+                      src={authorProfile.avatar_url}
+                      alt={authorProfile.display_name}
                       className="w-6 h-6 rounded-full object-cover"
                     />
                   ) : (
                     <User className="w-4 h-4" />
                   )}
-                  <span>{post.profiles.display_name}</span>
-                  {post.profiles.email && (
-                    <span className="text-white/60">• {post.profiles.email}</span>
-                  )}
+                  <span>{authorProfile.display_name}</span>
                 </div>
               )}
             </div>
@@ -312,13 +324,13 @@ const BlogPost = () => {
           )}
 
           {/* Author Bio Section */}
-          {post.profiles?.display_name && post.profiles?.bio && (
+          {authorProfile?.display_name && authorProfile?.bio && (
             <div className="mt-12 pt-8 border-t">
               <div className="flex items-start gap-4">
-                {post.profiles.avatar_url ? (
+                {authorProfile.avatar_url ? (
                   <img
-                    src={post.profiles.avatar_url}
-                    alt={post.profiles.display_name}
+                    src={authorProfile.avatar_url}
+                    alt={authorProfile.display_name}
                     className="w-16 h-16 rounded-full object-cover flex-shrink-0"
                   />
                 ) : (
@@ -328,10 +340,10 @@ const BlogPost = () => {
                 )}
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">
-                    {post.profiles.display_name}
+                    {authorProfile.display_name}
                   </h3>
                   <p className="text-muted-foreground mt-1 leading-relaxed">
-                    {post.profiles.bio}
+                    {authorProfile.bio}
                   </p>
                 </div>
               </div>
