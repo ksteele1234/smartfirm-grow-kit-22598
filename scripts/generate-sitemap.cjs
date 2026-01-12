@@ -268,6 +268,11 @@ async function fetchPublishedBlogPosts() {
     getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
     getEnv('SUPABASE_ANON_KEY');
 
+  // Debug logging
+  console.log('[Sitemap Debug] VITE_SUPABASE_URL:', baseUrl ? 'SET' : 'MISSING');
+  console.log('[Sitemap Debug] VITE_SUPABASE_PUBLISHABLE_KEY:', getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ? 'SET' : 'MISSING');
+  console.log('[Sitemap Debug] All env keys:', Object.keys(process.env).filter(k => k.includes('SUPABASE')).join(', '));
+
   if (!baseUrl || !anonKey) {
     console.log('[Sitemap] Blog posts: missing env vars, skipping dynamic blog routes');
     return [];
