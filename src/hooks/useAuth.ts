@@ -24,9 +24,26 @@ export function useAuth() {
   });
 
   useEffect(() => {
+    let isMounted = true;
+    
+    // Safety timeout to prevent infinite loading
+    const loadingTimeout = setTimeout(() => {
+      if (isMounted) {
+        setAuthState(prev => {
+          if (prev.isLoading) {
+            console.warn('Auth loading timeout - forcing completion');
+            return { ...prev, isLoading: false };
+          }
+          return prev;
+        });
+      }
+    }, 5000);
+
     // Set up auth state listener FIRST
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
+        if (!isMounted) return;
+        
         setAuthState(prev => ({
           ...prev,
           session,
@@ -36,7 +53,7 @@ export function useAuth() {
         // Defer role fetching to avoid deadlock
         if (session?.user) {
           setTimeout(() => {
-            fetchUserRoles(session.user.id);
+            if (isMounted) fetchUserRoles(session.user.id);
           }, 0);
         } else {
           setAuthState(prev => ({
@@ -52,6 +69,8 @@ export function useAuth() {
 
     // THEN check for existing session
     supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!isMounted) return;
+      
       setAuthState(prev => ({
         ...prev,
         session,
@@ -63,9 +82,18 @@ export function useAuth() {
       } else {
         setAuthState(prev => ({ ...prev, isLoading: false }));
       }
+    }).catch((error) => {
+      console.error('Error getting session:', error);
+      if (isMounted) {
+        setAuthState(prev => ({ ...prev, isLoading: false }));
+      }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      isMounted = false;
+      clearTimeout(loadingTimeout);
+      subscription.unsubscribe();
+    };
   }, []);
 
   const fetchUserRoles = async (userId: string) => {
