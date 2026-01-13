@@ -113,8 +113,8 @@ const SEO = ({
   const pageDescription = generatedDescription;
   const pageImageUrl = pageImage || image || defaultImage;
   const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
-  // Normalize pathname - remove trailing slash for consistency (except root)
-  const normalizedPath = pathname === '/' ? '' : pathname.replace(/\/$/, '');
+  // Ensure pathname has trailing slash for consistency with React Router
+  const normalizedPath = pathname === '/' ? '' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
   const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${normalizedPath}`;
   
   // Auto-generate breadcrumbs if not provided and not homepage
