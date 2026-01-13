@@ -17,10 +17,6 @@ headers = []
   pinned_version = "6"
   origin = "ui"
 
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  pinned_version = "0.8"
-  origin = "ui"
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
