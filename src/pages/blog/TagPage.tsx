@@ -158,7 +158,8 @@ const TagPage = () => {
       <SEO
         title={tag.meta_title || `${tag.name} | SmartFirm Blog`}
         description={tag.meta_description || tag.description || `Browse all articles tagged with ${tag.name}`}
-        canonicalUrl={`https://smartfirm.io/blog/tags/${tag.slug}`}
+        canonicalUrl={`https://smartfirm.io/blog/tags/${tag.slug}/`}
+        pageType="collection"
       />
       <Header />
 

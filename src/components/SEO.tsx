@@ -11,7 +11,7 @@ interface SEOProps {
   robots?: string;
   canonicalUrl?: string; // Override canonical URL for pages with multiple route aliases
   // Template fields
-  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'default';
+  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'collection' | 'default';
   serviceName?: string;
   audience?: string;
   topic?: string;
@@ -216,7 +216,7 @@ const SEO = ({
         "url": `https://${primaryDomain}`,
         "logo": {
           "@type": "ImageObject",
-          "url": `https://${primaryDomain}${defaultImage}`
+          "url": `https://${primaryDomain}/assets/smartfirm-logo-header.png`
         },
         "sameAs": [
           // Add LinkedIn/YouTube URLs here when available
@@ -263,8 +263,11 @@ const SEO = ({
       });
 
       // 3. WebPage (always present with enhancements)
+      // Determine specific WebPage type
+      const webPageType = pageType === 'collection' ? 'CollectionPage' : 'WebPage';
+
       const webPageSchema: any = {
-        "@type": "WebPage",
+        "@type": webPageType,
         "@id": `${canonicalUrl}#webpage`,
         "url": canonicalUrl,
         "name": pageTitle,
