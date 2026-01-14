@@ -5,18 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Block staging/preview sites from indexing - MUST be first -->
-    <script>
-      (function() {
-        var host = window.location.hostname;
-        var isProduction = host === 'smartfirm.io' || host === 'www.smartfirm.io';
-        if (!isProduction) {
-          var meta = document.createElement('meta');
-          meta.name = 'robots';
-          meta.content = 'noindex, nofollow, noarchive';
-          document.head.appendChild(meta);
-        }
-      })();
-    </script>
+    <!-- Staging protection is now handled via Netlify headers in netlify.toml -->
     
     <!-- Favicons -->
     <link rel="icon" type="image/webp" href="/favicon.webp">
