@@ -11,13 +11,13 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import { 
-  ArrowRight, 
-  Target, 
-  Eye, 
-  Lightbulb, 
-  Shield, 
-  Users, 
+import {
+  ArrowRight,
+  Target,
+  Eye,
+  Lightbulb,
+  Shield,
+  Users,
   Zap,
   Heart,
   TrendingUp,
@@ -111,9 +111,9 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="About SmartFirm | Accounting Firm Automation & Consulting"
-        description="Learn how SmartFirm helps accounting firms scale with workflow automation, growth systems, and consulting that improves efficiency without hiring."
+      <SEO
+        title="About SmartFirm | Marketing Agency for Accounting Firms"
+        description="SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation and growth systems to help firms scale without adding staff."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -124,23 +124,9 @@ const About = () => {
           { name: "Home", url: "/" },
           { name: "About Us", url: "/about" }
         ]}
-        faqs={[
-          {
-            question: "How do I get started?",
-            answer: "Book a Free Call to discuss your firm's specific needs and goals."
-          },
-          {
-            question: "What is the pricing structure?",
-            answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
-          },
-          {
-            question: "Do you offer guarantees?",
-            answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
-          }
-        ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -157,7 +143,7 @@ const About = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-16 md:py-section pb-32 md:pb-40 bg-gradient-deep-teal overflow-hidden">
@@ -175,7 +161,7 @@ const About = () => {
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed mb-4 drop-shadow-md">
-                SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation, SEO, and client growth systems to help firms thrive in a competitive market.
+                SmartFirm is an automation company for accountants, CPAs, and bookkeepers, providing automation and growth systems to help firms scale without adding staff.
               </p>
             </div>
           </div>
@@ -230,7 +216,7 @@ const About = () => {
                 These values guide how we work with every client and every solution we deliver.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
               {coreValues.map((value, index) => (
                 <Card key={index} className="text-center elevation-1 card-interactive group hover:elevation-2">
@@ -263,11 +249,11 @@ const About = () => {
                   Hey, I'm Katie!
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-md mb-12">
                 <div className="lg:col-span-1 flex justify-center items-start">
-                  <OptimizedImage 
-                    src={katieSteeleImage} 
+                  <OptimizedImage
+                    src={katieSteeleImage}
                     alt="Katie Steele, Founder & CEO"
                     width={256}
                     height={256}
@@ -276,7 +262,7 @@ const About = () => {
                     className="w-64 h-64 rounded-lg object-cover elevation-2"
                   />
                 </div>
-                
+
                 <div className="lg:col-span-2 space-y-6 text-muted-foreground">
                   <div>
                     <h3 className="text-2xl font-bold text-primary mb-4">About SmartFirm:</h3>
@@ -284,11 +270,11 @@ const About = () => {
                       I'm Katie Steele, founder of SmartFirm.
                     </p>
                   </div>
-                  
+
                   <p className="text-lg leading-relaxed">
                     I started SmartFirm because I saw how many accountants and CPAs were drowning in daily tasks, struggling to keep up with marketing, and missing out on growth. This happens because they are great at what they do, but don't have the right systems in place. Most firm owners aren't career marketers, or IT people, and they shouldn't have to be.
                   </p>
-                  
+
                   <p className="text-lg leading-relaxed">
                     Before SmartFirm, I spent 20+ years helping businesses transform. From turning around struggling hospitality brands, to guiding private equity investments, to implementing Microsoft Dynamics 365 at enterprise scale, I've built my career on helping companies unlock growth through smarter systems. Now, I bring that same expertise to accounting firms.
                   </p>
@@ -340,23 +326,23 @@ const About = () => {
                 Our team blends accounting knowledge with modern marketing and technology so your firm can grow with confidence.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
               {teamMembers.map((member, index) => {
                 // Apply specific positioning for team members
                 let imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover";
-                
+
                 if (member.name === "Yvonne Galicia") {
                   imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top";
                 } else if (member.name === "Grace Mendez") {
                   imageClasses = "w-32 h-32 rounded-full mx-auto mb-4 object-cover object-center scale-125";
                 }
-                
+
                 return (
                   <Card key={index} className="text-center elevation-1 card-interactive">
                     <CardHeader className="pb-4">
-                      <OptimizedImage 
-                        src={member.image} 
+                      <OptimizedImage
+                        src={member.image}
                         alt={member.name}
                         width={128}
                         height={128}
@@ -372,7 +358,7 @@ const About = () => {
                         {member.bio}
                       </CardDescription>
                     </CardHeader>
-                     <CardContent className="pt-0">
+                    <CardContent className="pt-0">
                       <Button variant="outline" size="sm" asChild>
                         <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                           <Linkedin className="h-4 w-4 mr-2" />
@@ -395,7 +381,7 @@ const About = () => {
                 What Makes SmartFirm Different
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-md">
               {differentiators.map((item, index) => (
                 <Card key={index} className="border elevation-2 card-interactive h-full">
@@ -514,12 +500,12 @@ const About = () => {
               Partner with a Team That Cares
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto">
-              We're committed to helping your accounting firm achieve its full potential. 
+              We're committed to helping your accounting firm achieve its full potential.
               Let's start a conversation about your growth goals and how we can help you reach them.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-on-dark"
                 asChild
               >
@@ -528,8 +514,8 @@ const About = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-outline-on-dark"
                 asChild
               >

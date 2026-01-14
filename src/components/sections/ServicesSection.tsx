@@ -8,44 +8,44 @@ const ServicesSection = () => {
       icon: Zap,
       title: "Automated Lead Follow-up",
       description: "Convert inquiries into clients with CPA-focused email & SMS automation.",
-      link: "/services/automated-lead-follow-up"
+      link: "/services/automated-lead-follow-up-for-cpas"
     },
     {
       icon: Star,
       title: "Client Review Generation",
       description: "Build trust and referrals with more 5-star reviews.",
-      link: "/services/client-review-generation"
+      link: "/services/automated-review-generation-for-cpas"
     },
     {
       icon: Search,
-      title: "SEO for Accounting Firms", 
+      title: "SEO for Accounting Firms",
       description: "Dominate local search and attract high-quality clients.",
-      link: "/services/seo-for-accountants"
+      link: "/services/seo-for-accounting-firms"
     },
     {
       icon: Users,
       title: "Social Media Management",
       description: "Professional content that positions your firm as a trusted authority.",
-      link: "/services/social-media-management"
+      link: "/services/social-media-management-for-cpas"
     },
     {
       icon: Globe,
       title: "Website Optimization",
       description: "Modern, SEO-friendly websites for accountants that convert.",
-      link: "/services/website-design"
+      link: "/services/professional-website-design-for-accounting-firms"
     },
     {
       icon: Phone,
       title: "Marketing Automation",
       description: "Save time and scale faster with automation tailored for accountants.",
-      link: "/services/marketing-automation"
+      link: "/services/marketing-automation-for-accounting-firms"
     }
   ];
 
   return (
     <section className="py-16 bg-background relative overflow-hidden">
       <div className="container relative mx-auto px-4 lg:px-6">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
@@ -63,7 +63,7 @@ const ServicesSection = () => {
             {services.slice(0, 3).map((service, index) => {
               const Icon = service.icon;
               return (
-                <Link 
+                <Link
                   key={index}
                   to={service.link}
                   className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 hover:elevation-3 border border-accent/20 color-transition"
@@ -87,7 +87,7 @@ const ServicesSection = () => {
             {services.slice(3, 6).map((service, index) => {
               const Icon = service.icon;
               return (
-                <Link 
+                <Link
                   key={index + 3}
                   to={service.link}
                   className="group bg-accent/10 hover:bg-accent/20 rounded-card-lg p-6 hover:elevation-3 border border-accent/20 color-transition"

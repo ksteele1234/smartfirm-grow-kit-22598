@@ -12,7 +12,7 @@ export const servicePages: Record<string, ServicePageData> = {
     title: 'Marketing Automation for Accounting Firms | SmartFirm',
     slug: 'marketing-automation-for-accounting-firms',
     metaDescription: 'Marketing automation for accounting firms. Streamline lead capture, client communication, and follow-up with integrated automation systems built for CPAs.',
-    canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms',
+    canonicalUrl: 'https://smartfirm.io/services/marketing-automation-for-accounting-firms/',
     heroTitle: 'Marketing Automation for Accounting Firms',
     heroSubtitle: 'Automate lead follow-up, nurture prospects automatically, and convert 40% more clients. Trusted by 200+ accounting practices.',
     heroDescription: 'Marketing automation for accounting firms captures leads instantly, nurtures prospects through proven sequences, and converts more clients without manual effort.',
@@ -102,14 +102,14 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Marketing?',
     ctaDescription: "Let's implement a marketing automation system that grows your firm while you focus on serving clients.",
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started'
+    ctaButtonLink: '/get-started/'
   },
   'seo-for-accountants': {
     id: 'seo-for-accountants',
-    title: 'SEO for Accountants | SmartFirm',
+    title: 'SEO for Accounting Firms | SmartFirm',
     slug: 'seo-for-accounting-firms',
     metaDescription: 'SEO for accountants: rank higher on Google, attract high-intent local clients, and generate 3x more qualified leads. Built for accounting practices.',
-    canonicalUrl: 'https://smartfirm.io/services/seo-for-accounting-firms',
+    canonicalUrl: 'https://smartfirm.io/services/seo-for-accounting-firms/',
     heroTitle: 'SEO for Accountants',
     heroSubtitle: 'Rank higher on Google, dominate local search, and attract qualified clients searching for your services. Proven SEO built for accountants.',
     heroDescription: 'SEO for accountants delivers higher Google rankings, local search dominance, and 3x more qualified leads without paid advertising.',
@@ -156,14 +156,14 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Rank Higher?',
     ctaDescription: 'Let\'s build an SEO strategy that brings qualified clients to your firm.',
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started'
+    ctaButtonLink: '/get-started/'
   },
   'client-onboarding-automation': {
     id: 'client-onboarding-automation',
     title: 'Client Onboarding Automation for Accounting Firms | SmartFirm',
     slug: 'client-onboarding-automation',
     metaDescription: 'Client onboarding automation for accounting firms eliminates manual intake, creates a professional first impression, and saves 10+ hours weekly. Trusted by growth-focused firms.',
-    canonicalUrl: 'https://smartfirm.io/services/client-onboarding-automation',
+    canonicalUrl: 'https://smartfirm.io/services/client-onboarding-automation/',
     heroTitle: 'Client Onboarding Automation for Accounting Firms',
     heroSubtitle: 'Tired of the manual, time-consuming process of onboarding new clients? Client onboarding automation for accounting firms eliminates repetitive tasks, creates a seamless client experience, and frees your team to focus on billable work.',
     heroDescription: 'Client onboarding automation for accounting firms streamlines intake, ensures consistency, and saves 10+ hours weekly while creating a professional first impression.',
@@ -225,7 +225,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Client Onboarding?',
     ctaDescription: 'Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.',
     ctaButtonText: 'Schedule a Free Consultation',
-    ctaButtonLink: '/get-started'
+    ctaButtonLink: '/get-started/'
   }
 };
 
@@ -236,7 +236,7 @@ export const solutionPages: Record<string, SolutionPageData> = {
     title: 'Client Onboarding Problems? Stop Losing Clients | SmartFirm',
     slug: 'client-onboarding-problems',
     metaDescription: 'New clients falling through the cracks? A broken onboarding process costs you time, money, and reputation. Learn how to create a flawless first impression.',
-    canonicalUrl: 'https://smartfirm.io/solutions/client-onboarding-problems',
+    canonicalUrl: 'https://smartfirm.io/solutions/client-onboarding-problems/',
     heroTitle: 'New Clients Falling Through the Cracks? It\'s Costing You More Than You Think.',
     heroSubtitle: 'You just closed a great new client. You were excited, they were excited. But by the time you have everything you need, the initial excitement has evaporated—replaced by frustration.',
     problemStatement: 'A clunky, manual, and confusing onboarding process silently sabotages new client relationships before they even begin.',
@@ -277,7 +277,7 @@ export const solutionPages: Record<string, SolutionPageData> = {
     title: 'Client Retention Strategies | SmartFirm',
     slug: 'client-retention-strategies-for-cpas',
     metaDescription: 'Strengthen client relationships with predictive analytics and intelligent automation for accounting firms.',
-    canonicalUrl: 'https://smartfirm.io/solutions/client-retention-strategies-for-cpas',
+    canonicalUrl: 'https://smartfirm.io/solutions/client-retention-strategies-for-cpas/',
     heroTitle: 'AI-Powered Client Retention Strategies',
     heroSubtitle: 'Losing even 5 clients per year costs $50K+ in recurring revenue and referrals. Client retention strategies for CPAs keep clients engaged through proactive communication, satisfaction tracking, and automated touchpoints that maximize lifetime value.',
     problemStatement: 'Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you\'re constantly replacing lost clients instead of growing your practice.',
@@ -395,7 +395,7 @@ export const industryPages: Record<string, IndustryPageData> = {
     title: 'Marketing For CPA Firms That Drives Growth | SmartFirm',
     slug: 'cpa-firms',
     metaDescription: 'Marketing for CPA firms that attracts high-value clients, reduces manual follow-up, and positions you above competitors through automation, SEO, and strategic positioning.',
-    canonicalUrl: 'https://smartfirm.io/industries/cpa-firms',
+    canonicalUrl: 'https://smartfirm.io/industries/cpa-firms/',
     heroTitle: 'Marketing For CPA Firms',
     heroSubtitle: 'Marketing for CPA firms attracts high-value clients and positions you above competitors through specialized automation, local SEO, and strategic campaigns that solve unique challenges like seasonal demand and big-firm competition.',
     industryOverview: 'CPA firms face unique challenges in client acquisition and retention. Our solutions are specifically designed for your needs.',
@@ -416,12 +416,12 @@ export const industryPages: Record<string, IndustryPageData> = {
       {
         title: 'CPA Marketing Automation',
         description: 'Automated client acquisition and retention systems',
-        link: '/services/marketing-automation-for-accounting-firms'
+        link: '/services/marketing-automation-for-accounting-firms/'
       },
       {
         title: 'SEO for CPAs',
         description: 'Rank higher for high-intent CPA searches',
-        link: '/services/seo-for-accounting-firms'
+        link: '/services/seo-for-accounting-firms/'
       }
     ],
     ctaTitle: 'Ready to Transform Your CPA Firm?',

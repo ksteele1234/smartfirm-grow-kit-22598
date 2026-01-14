@@ -30,7 +30,7 @@ const Index = memo(() => {
     <div className="min-h-screen bg-background">
       <SEO
         title="Accounting Firm Automation & Growth Systems | SmartFirm"
-        description="SmartFirm builds workflow automation and growth systems for accounting firms. Get cleaner operations, better client experiences, and scalable growth without hiring."
+        description="SmartFirm helps accounting firms scale with automation, not headcount. Automated lead follow-up, client onboarding, and review generation systems built for CPAs."
         pageImage="/assets/hero-wave-background.webp"
         pageType="default"
         noindex={false}
@@ -39,7 +39,7 @@ const Index = memo(() => {
         showContactInfo={true}
         showAddress={true}
         faqs={[
-          { question: "How is this different from other marketing agencies?", answer: "We only work with accounting firms: no restaurants, dentists, or tech startups. Our founder is a CPA who understands busy season, utilization rates, and the difference between $500 tax clients and $5K advisory retainers. We don't offer generic 'brand awareness' tactics. We build marketing infrastructure: websites that convert, Google profiles that rank, review systems that build trust, and dashboards that prove ROI." },
+          { question: "How is this different from a marketing agency?", answer: "We aren't a traditional agency that charges for hours or vibes. We are an automation partner. We build systems (websites, follow-up sequences, review engines) that you own. Once built, they run on autopilot. Agencies rent you their time; we build you assets that work while you sleep." },
           { question: "How much time will my team need to invest?", answer: "During the initial 30-day setup, expect to invest 4-6 hours total across a few strategy sessions where we nail down your positioning, ideal clients, and messaging. We handle all the technical execution: website build, GBP optimization, system integrations. After launch, your team invests approximately 2 hours per month for performance reviews and content approval." },
           { question: "What kind of clients will we attract?", answer: "We target CFO-level decision makers and business owners looking for $5K-$15K advisory relationships, not $500 tax-only clients. Our strategies position you as a trusted advisor through thought leadership content, strategic SEO targeting high-value services, and referral partner programs with attorneys and financial advisors." },
           { question: "We've tried marketing before and got mixed results. Why will this work?", answer: "Most DIY marketing fails because firms lack the infrastructure. Random LinkedIn posts don't work without a website that converts visitors. Google ads waste money if your Business Profile isn't optimized. Email campaigns flop without proper tracking. We build the foundation first (website, local SEO, review systems, analytics) then layer on tactics." },
@@ -97,7 +97,7 @@ const Index = memo(() => {
           </>
         )}
       </main>
-      
+
       {/* Section 9: Footer - Background C (Soft Blue) */}
       <Footer />
     </div>

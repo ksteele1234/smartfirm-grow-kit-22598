@@ -93,7 +93,7 @@ const PillarPage = () => {
     queryKey: ["cluster-posts", pillar?.id],
     queryFn: async () => {
       if (!pillar?.id) return [];
-      
+
       const { data, error } = await supabase
         .from("blog_posts")
         .select("id, title, slug, excerpt, featured_image, publish_date, display_order")
@@ -123,7 +123,7 @@ const PillarPage = () => {
     return <NotFound />;
   }
 
-  const publishDate = pillar.publish_date 
+  const publishDate = pillar.publish_date
     ? format(new Date(pillar.publish_date), "MMMM d, yyyy")
     : format(new Date(pillar.created_at), "MMMM d, yyyy");
 
@@ -149,19 +149,19 @@ const PillarPage = () => {
       <SEO
         title={pillar.meta_title || `${pillar.title} | SmartFirm Blog`}
         description={pillar.meta_description || pillar.excerpt || ""}
-        canonicalUrl={`https://smartfirm.io/blog/${pillar.slug}`}
+        canonicalUrl={`https://smartfirm.io/blog/${pillar.slug}/`}
       />
-      
+
       {/* ItemList Schema for cluster posts */}
       {itemListSchema && (
-        <script 
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
         />
       )}
-      
+
       <Header />
-      
+
       <main id="main-content" className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
@@ -172,7 +172,7 @@ const PillarPage = () => {
                 Back to Blog
               </Button>
             </Link>
-            
+
             <div className="flex items-center gap-3 mb-4">
               <Badge className="bg-[hsl(var(--coral))] text-white hover:bg-[hsl(var(--coral))]/90">
                 <BookOpen className="w-3 h-3 mr-1" />
@@ -184,17 +184,17 @@ const PillarPage = () => {
                 </Badge>
               )}
             </div>
-            
+
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {pillar.title}
             </h1>
-            
+
             {pillar.excerpt && (
               <p className="text-xl text-white/90 mb-6 leading-relaxed">
                 {pillar.excerpt}
               </p>
             )}
-            
+
             <div className="flex flex-wrap items-center gap-6 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -244,8 +244,8 @@ const PillarPage = () => {
               </h2>
               <div className="grid gap-4">
                 {clusterPosts.map((post, index) => (
-                  <Link 
-                    key={post.id} 
+                  <Link
+                    key={post.id}
                     to={`/blog/${post.slug}`}
                     className="group"
                   >
@@ -276,7 +276,7 @@ const PillarPage = () => {
 
         {/* Main Pillar Content */}
         <article className="container mx-auto px-4 max-w-4xl py-8 md:py-12">
-          <div 
+          <div
             className="prose prose-lg max-w-none 
               prose-headings:font-heading
               prose-h1:text-[hsl(var(--heading-primary))] prose-h1:text-[2rem] prose-h1:lg:text-[2.5rem] prose-h1:font-extrabold
@@ -370,7 +370,7 @@ const PillarPage = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

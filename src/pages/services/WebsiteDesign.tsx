@@ -8,7 +8,7 @@ const WebsiteDesign = () => {
     title: "Accounting Firm Website Design | SmartFirm",
     slug: "website-design",
     metaDescription: "Accounting firm website design: mobile-optimized, conversion-focused, and SEO-ready. Launch in 2-4 weeks and convert 3-5x more visitors into clients.",
-    canonicalUrl: "https://smartfirm.io/services/website-design",
+    canonicalUrl: "https://smartfirm.io/services/professional-website-design-for-accounting-firms",
     content: {},
     heroTitle: "Accounting Firm Website Design",
     heroSubtitle: "Convert 3-5x more visitors with mobile-optimized layouts, strategic CTAs, and compliance-ready content. Launch in 2-4 weeks, not months.",

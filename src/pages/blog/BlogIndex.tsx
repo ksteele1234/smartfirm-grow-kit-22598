@@ -35,6 +35,12 @@ interface Category {
   slug: string;
 }
 
+interface Tag {
+  id: string;
+  name: string;
+  slug: string;
+}
+
 const BlogIndex = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -86,6 +92,18 @@ const BlogIndex = () => {
     },
   });
 
+  const { data: tags = [] } = useQuery({
+    queryKey: ["blog-tags"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("blog_tags")
+        .select("id, name, slug")
+        .order("name");
+      if (error) throw error;
+      return data as Tag[];
+    },
+  });
+
   const formatDate = (dateString: string | null, fallback: string) => {
     const date = dateString || fallback;
     return format(new Date(date), "MMMM d, yyyy");
@@ -99,7 +117,7 @@ const BlogIndex = () => {
         canonicalUrl="https://smartfirm.io/blog"
       />
       <Header />
-      
+
       <main id="main-content" className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
@@ -221,6 +239,24 @@ const BlogIndex = () => {
           </div>
         </section>
 
+        {/* Browse by Topic Section */}
+        {tags.length > 0 && (
+          <section className="py-12 bg-slate-50 border-t">
+            <div className="container mx-auto px-4">
+              <h2 className="text-2xl font-bold text-center mb-8">Browse by Topic</h2>
+              <div className="flex flex-wrap justify-center gap-3">
+                {tags.map((tag) => (
+                  <Link key={tag.id} to={`/blog/tags/${tag.slug}/`}>
+                    <Badge variant="secondary" className="hover:bg-primary hover:text-white transition-colors cursor-pointer text-sm py-1 px-3">
+                      {tag.name}
+                    </Badge>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* CTA Section */}
         <section className="bg-muted py-16">
           <div className="container mx-auto px-4 text-center">
@@ -238,7 +274,7 @@ const BlogIndex = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

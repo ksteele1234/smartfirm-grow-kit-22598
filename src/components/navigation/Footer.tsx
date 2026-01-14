@@ -5,26 +5,26 @@ import smartFirmLogo from "@/assets/smartfirm-logo-white.png";
 
 const Footer = () => {
   const services = [
-    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up-for-cpas" },
-    { name: "Client Review Generation", slug: "automated-review-generation-for-cpas" },
-    { name: "SEO for Accountants", slug: "seo-for-accounting-firms" },
-    { name: "Email Marketing", slug: "email-marketing-for-cpas" },
-    { name: "Social Media Management", slug: "social-media-management-for-cpas" },
-    { name: "Website Design", slug: "professional-website-design-for-accounting-firms" }
+    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up-for-cpas/" },
+    { name: "Client Review Generation", slug: "automated-review-generation-for-cpas/" },
+    { name: "SEO for Accountants", slug: "seo-for-accounting-firms/" },
+    { name: "Email Marketing", slug: "email-marketing-for-cpas/" },
+    { name: "Social Media Management", slug: "social-media-management-for-cpas/" },
+    { name: "Website Design", slug: "professional-website-design-for-accounting-firms/" }
   ];
 
   const solutions = [
-    { name: "Lead Generation", slug: "lead-generation" },
-    { name: "Scale Your Firm", slug: "scale-accounting-firm-successfully" }, 
-    { name: "Client Retention", slug: "client-retention-strategies-for-cpas" },
-    { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas" }
+    { name: "Lead Generation", slug: "lead-generation/" },
+    { name: "Scale Your Firm", slug: "scale-accounting-firm-successfully/" },
+    { name: "Client Retention", slug: "client-retention-strategies-for-cpas/" },
+    { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas/" }
   ];
 
   const resources = [
-    { name: "Blog", slug: "/blog" },
-    { name: "Resources", slug: "/resources" },
-    { name: "Tools & Calculators", slug: "/tools" },
-    { name: "Case Studies", slug: "/case-studies" }
+    { name: "Blog", slug: "/blog/" },
+    { name: "Resources", slug: "/resources/" },
+    { name: "Tools & Calculators", slug: "/tools/" },
+    { name: "Case Studies", slug: "/case-studies/" }
   ];
 
 
@@ -36,8 +36,8 @@ const Footer = () => {
           {/* Column 1 - Logo & About */}
           <div>
             <Link to="/" className="inline-block mb-3 md:mb-5">
-              <OptimizedImage 
-                src={smartFirmLogo} 
+              <OptimizedImage
+                src={smartFirmLogo}
                 alt="SmartFirm - Marketing and Automation for Accounting Firms"
                 width={320}
                 height={120}
@@ -52,7 +52,7 @@ const Footer = () => {
           {/* Column 2 - Services */}
           <div>
             {/* Mobile: Clickable header */}
-            <Link to="/all-professional-marketing-services" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/all-professional-marketing-services/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Services
             </Link>
             {/* Desktop: Regular header with list */}
@@ -60,7 +60,7 @@ const Footer = () => {
             <ul className="hidden md:block space-y-3">
               {services.map((service) => (
                 <li key={service.slug}>
-                  <Link 
+                  <Link
                     to={`/services/${service.slug}`}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
@@ -74,19 +74,19 @@ const Footer = () => {
           {/* Column 3 - Solutions & Resources */}
           <div>
             {/* Mobile: Clickable headers */}
-            <Link to="/solutions" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/solutions/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Solutions
             </Link>
-            <Link to="/resources" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/resources/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Resources
             </Link>
-            
+
             {/* Desktop: Regular headers with lists */}
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Solutions</h3>
             <ul className="hidden md:block space-y-3 mb-8">
               {solutions.map((solution) => (
                 <li key={solution.slug}>
-                  <Link 
+                  <Link
                     to={`/solutions/${solution.slug}`}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
@@ -95,12 +95,12 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            
+
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Resources</h3>
             <ul className="hidden md:block space-y-3">
               {resources.map((resource) => (
                 <li key={resource.slug}>
-                  <Link 
+                  <Link
                     to={resource.slug}
                     className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                   >
@@ -109,16 +109,16 @@ const Footer = () => {
                 </li>
               ))}
               <li>
-                <Link 
-                  to="/quick-start-marketing-for-cpa-firms" 
+                <Link
+                  to="/quick-start-marketing-for-cpa-firms/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Quick Start
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/faq"
+                <Link
+                  to="/faq/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   FAQ
@@ -130,10 +130,10 @@ const Footer = () => {
           {/* Column 4 - Contact */}
           <div>
             {/* Mobile: Clickable header */}
-            <Link to="/contact" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/contact/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Contact
             </Link>
-            
+
             {/* Desktop: Regular header with contact details */}
             <h3 className="hidden md:block text-base font-semibold text-white uppercase tracking-wide mb-4">Contact</h3>
             <div className="hidden md:block space-y-3 mb-6">
@@ -154,8 +154,8 @@ const Footer = () => {
                 <span className="text-base text-white/85">Eugene, OR</span>
               </div>
               <div>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Contact Us
@@ -191,13 +191,13 @@ const Footer = () => {
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-sm text-sm text-white/65">
-              <Link to="/privacy" className="hover:text-primary transition-colors duration-200">
+              <Link to="/privacy/" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-primary transition-colors duration-200">
+              <Link to="/terms/" className="hover:text-primary transition-colors duration-200">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="hover:text-primary transition-colors duration-200">
+              <Link to="/cookies/" className="hover:text-primary transition-colors duration-200">
                 Cookie Policy
               </Link>
             </div>

@@ -8,7 +8,7 @@ const SEOForAccountants = () => {
     title: "SEO For Accounting Firms That Dominates Local Search | SmartFirm",
     slug: "seo-for-accountants",
     metaDescription: "SEO for accounting firms gets you found by high-intent prospects searching 'CPA near me': dominate local search results and deliver 3x more qualified leads without paid ads.",
-    canonicalUrl: "https://smartfirm.io/services/seo-for-accountants",
+    canonicalUrl: "https://smartfirm.io/services/seo-for-accounting-firms",
     content: {},
     heroTitle: "SEO For Accounting Firms",
     heroSubtitle: "SEO for accounting firms gets you found by high-intent prospects searching 'CPA near me': dominate local search results and deliver 3x more qualified leads without paid ads when 80% of invisible firms lose clients to page-one competitors.",

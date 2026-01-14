@@ -4,10 +4,10 @@ import SEO from "@/components/SEO";
 import FaqAnswer from "@/components/faq/FaqAnswer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  Calculator, 
-  CheckCircle, 
-  TrendingUp, 
+import {
+  Calculator,
+  CheckCircle,
+  TrendingUp,
   ArrowRight,
   Clock,
   Users,
@@ -73,7 +73,7 @@ const ToolsCalculators = () => {
       icon: <Calculator className="h-8 w-8 text-secondary" />,
       duration: "2 minutes",
       results: "ROI projections",
-      link: "/tools/roi-calculator", 
+      link: "/tools/roi-calculator",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -150,9 +150,9 @@ const ToolsCalculators = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
-        title="Free Automation Assessment Tools for Accounting Firms"
-        description="Access free automation tools for accounting firms including growth calculators, ROI assessments, workflow audits, efficiency scorecards, quizzes, and benchmarks."
+      <SEO
+        title="Free Accounting Firm Tools & Calculators | SmartFirm"
+        description="Accounting firm tools by SmartFirm include free calculators, scorecards, and assessments to measure growth and ROI for your practice."
         canonicalUrl="https://smartfirm.io/tools"
         pageType="default"
         faqs={faqsToRender}
@@ -164,7 +164,7 @@ const ToolsCalculators = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -187,12 +187,13 @@ const ToolsCalculators = () => {
         <section className="py-12 md:py-16 bg-gradient-to-br from-background to-muted">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                Automation Assessment Tools For Accounting Firms | SmartFirm
+              {/* Force H1 for SEO */}
+              <h1 className="text-display font-medium text-foreground mb-6">
+                Free Accounting Firm Tools & Calculators
               </h1>
               <div id="sf-keyword-intro">
-                <p className="text-lg md:text-xl text-muted-foreground mb-4">
-                  Our free marketing tools for accounting firms help you assess your current state, identify opportunities, and benchmark against competitors through interactive calculators and diagnostic assessments.
+                <p className="text-lead text-muted-foreground mb-8">
+                  Free accounting firm tools from SmartFirm help you assess your current state, identify opportunities, and benchmark against competitors through interactive calculators.
                 </p>
               </div>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -231,7 +232,7 @@ const ToolsCalculators = () => {
                         {tool.results}
                       </div>
                     </div>
-                    <Button 
+                    <Button
                       className="w-full group-hover:bg-primary group-hover:text-primary-foreground color-transition"
                       variant="outline"
                       asChild
@@ -303,7 +304,7 @@ const ToolsCalculators = () => {
                   Ready to Optimize Your Firm?
                 </CardTitle>
                 <CardDescription className="text-muted-foreground text-base md:text-lg">
-                  After completing our assessments, discover how SmartFirm can help you implement 
+                  After completing our assessments, discover how SmartFirm can help you implement
                   the strategies needed to achieve your growth goals.
                 </CardDescription>
               </CardHeader>
@@ -345,7 +346,7 @@ const ToolsCalculators = () => {
                   </details>
                 ))}
               </div>
-              </div>
+            </div>
           </div>
         </section>
       </main>

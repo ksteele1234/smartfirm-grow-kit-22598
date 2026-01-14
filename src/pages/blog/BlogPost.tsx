@@ -94,7 +94,7 @@ const BlogPost = () => {
     queryKey: ["public-profile", post?.author_id],
     queryFn: async () => {
       if (!post?.author_id) return null;
-      
+
       const { data, error } = await supabase
         .from("public_profiles" as any)
         .select("id, display_name, avatar_url, bio")
@@ -139,7 +139,7 @@ const BlogPost = () => {
     queryKey: ["pillar-for-cluster", post?.pillar_id],
     queryFn: async () => {
       if (!post?.pillar_id) return null;
-      
+
       const { data, error } = await supabase
         .from("blog_posts")
         .select("id, title, slug")
@@ -170,7 +170,7 @@ const BlogPost = () => {
 
   const isCluster = post.post_type === 'cluster' && post.pillar_id;
 
-  const publishDate = post.publish_date 
+  const publishDate = post.publish_date
     ? format(new Date(post.publish_date), "MMMM d, yyyy")
     : format(new Date(post.created_at), "MMMM d, yyyy");
 
@@ -179,10 +179,10 @@ const BlogPost = () => {
       <SEO
         title={post.meta_title || `${post.title} | SmartFirm Blog`}
         description={post.meta_description || post.excerpt || ""}
-        canonicalUrl={`https://smartfirm.io/blog/${post.slug}`}
+        canonicalUrl={`https://smartfirm.io/blog/${post.slug}/`}
       />
       <Header />
-      
+
       <main id="main-content" className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
@@ -212,7 +212,7 @@ const BlogPost = () => {
                 </Button>
               </Link>
             )}
-            
+
             <div className="flex flex-wrap items-center gap-3 mb-4">
               {isCluster && (
                 <Badge className="bg-primary/20 text-white border border-white/20">
@@ -225,11 +225,11 @@ const BlogPost = () => {
                 </Badge>
               )}
             </div>
-            
+
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {post.title}
             </h1>
-            
+
             <div className="flex flex-wrap items-center gap-6 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -266,7 +266,7 @@ const BlogPost = () => {
 
         {/* Content */}
         <article className="container mx-auto px-4 max-w-4xl py-12 md:py-16">
-          <div 
+          <div
             className="prose prose-lg max-w-none 
               prose-headings:font-heading
               prose-h1:text-[hsl(var(--heading-primary))] prose-h1:text-[2rem] prose-h1:lg:text-[2.5rem] prose-h1:font-extrabold
@@ -345,8 +345,8 @@ const BlogPost = () => {
                   <p className="text-muted-foreground mt-1 leading-relaxed">
                     {authorProfile.bio}
                   </p>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 font-medium transition-colors"
                   >
                     <Mail className="w-4 h-4" />
@@ -382,7 +382,7 @@ const BlogPost = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

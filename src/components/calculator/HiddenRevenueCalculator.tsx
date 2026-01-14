@@ -25,27 +25,27 @@ export const HiddenRevenueCalculator = () => {
   const handleCalculate = () => {
     const clients = parseInt(clientCount) || 0;
     const fee = parseInt(avgFee) || 2500;
-    
+
     if (clients < 100) {
       setStep("too-small");
       pushDataLayer("calculator_list_too_small", { client_count: clients });
       return;
     }
-    
+
     const revenue = clients * 0.10 * fee;
     setCalculatedRevenue(revenue);
     setStep("result");
-    pushDataLayer("calculator_revenue_revealed", { 
-      client_count: clients, 
-      avg_fee: fee, 
-      calculated_revenue: revenue 
+    pushDataLayer("calculator_revenue_revealed", {
+      client_count: clients,
+      avg_fee: fee,
+      calculated_revenue: revenue
     });
-    
+
     setTimeout(() => {
       resultRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }, 100);
   };
-  
+
   const scrollToWhatThisIs = () => {
     document.getElementById("what-this-is")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -71,14 +71,8 @@ export const HiddenRevenueCalculator = () => {
     };
 
     // Debug (avoid logging full email address)
+    // Debug (avoid logging full email address)
     const emailDomain = cleanedEmail.split("@")[1] || "";
-    console.log("[HiddenRevenueCalculator] submit", {
-      step,
-      client_count: payload.client_count,
-      avg_fee: payload.avg_fee,
-      calculated_revenue: payload.calculated_revenue,
-      email_domain: emailDomain,
-    });
 
     try {
       const { data, error } = await supabase.functions.invoke(
@@ -86,24 +80,20 @@ export const HiddenRevenueCalculator = () => {
         { body: payload },
       );
 
-      console.log("[HiddenRevenueCalculator] invoke result", {
-        ok: !error,
-        has_data: Boolean(data),
-        data_success: Boolean((data as { success?: boolean } | null)?.success),
-      });
-
       if (error) throw error;
       if (!data?.success) {
         throw new Error(data?.error || "Webhook rejected the request");
       }
 
       toast.success("Sent — check your inbox.");
-      pushDataLayer("calculator_email_submitted", { 
+      pushDataLayer("calculator_email_submitted", {
         client_count: payload.client_count,
-        calculated_revenue: payload.calculated_revenue 
+        calculated_revenue: payload.calculated_revenue
       });
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : "Unknown error";
+      // console.error("Calculator webhook failed:", message); // Keep internal error for now or remove? User asked to clear cleanup.
+      // I'll keep the error log for critical failures but remove the "submit" log.
       console.error("Calculator webhook failed:", message);
       toast.error("Couldn’t send your email—please try again.");
       setIsSubmitting(false);
@@ -129,13 +119,13 @@ export const HiddenRevenueCalculator = () => {
               transition={{ duration: 0.4 }}
               className="bg-white rounded-2xl p-8 shadow-lg border border-slate-light"
             >
-              <h3 
+              <h3
                 className="text-xl md:text-2xl font-bold text-primary text-center mb-6"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 How much revenue is hiding in your dead files?
               </h3>
-              
+
               <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div className="flex-1">
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -186,7 +176,7 @@ export const HiddenRevenueCalculator = () => {
               transition={{ duration: 0.4 }}
               className="bg-white rounded-2xl p-8 shadow-lg border border-slate-light text-center"
             >
-              <p 
+              <p
                 className="text-lg text-foreground mb-6"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
@@ -222,13 +212,13 @@ export const HiddenRevenueCalculator = () => {
               </div>
 
               <div className="bg-background-subtle rounded-xl p-6 border border-slate-light">
-                <p 
+                <p
                   className="text-lg font-semibold text-primary text-center mb-4"
                   style={{ fontFamily: "'Poppins', sans-serif" }}
                 >
                   Want the exact 9-word email that unlocks this?
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-3">
                   <input
                     type="email"
@@ -245,7 +235,7 @@ export const HiddenRevenueCalculator = () => {
                     {isSubmitting ? "Sending..." : "Send Me The Script"}
                   </button>
                 </div>
-                
+
                 <p className="text-sm text-muted-foreground text-center mt-3">
                   We'll also send you a list-cleaning breakdown
                 </p>
@@ -276,7 +266,7 @@ export const HiddenRevenueCalculator = () => {
                 </div>
               </div>
 
-              <p 
+              <p
                 className="text-center text-foreground mb-6"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
@@ -310,7 +300,7 @@ const RevenueCounter = ({ targetValue }: { targetValue: number }) => {
   const formattedValue = `$${Math.round(rawCount).toLocaleString()}`;
 
   return (
-    <p 
+    <p
       className="text-4xl md:text-5xl font-bold text-accent"
       style={{ fontFamily: "'Poppins', sans-serif" }}
     >

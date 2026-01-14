@@ -100,10 +100,10 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     }, 0);
 
     if (sentences.length === 0 || words.length === 0) return 0;
-    
+
     const avgWordsPerSentence = words.length / sentences.length;
     const avgSyllablesPerWord = syllables / words.length;
-    
+
     // Flesch-Kincaid Reading Ease
     const score = 206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
     return Math.max(0, Math.min(100, Math.round(score)));
@@ -116,25 +116,25 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       iframe.style.left = '-9999px';
       iframe.style.width = '1px';
       iframe.style.height = '1px';
-      
+
       let timeoutId: NodeJS.Timeout;
       let resolved = false;
       const startTime = performance.now();
-      
+
       const cleanup = () => {
         if (timeoutId) clearTimeout(timeoutId);
         if (iframe.parentNode) {
           document.body.removeChild(iframe);
         }
       };
-      
+
       const resolveAudit = (result: AdvancedPageAudit) => {
         if (resolved) return;
         resolved = true;
         cleanup();
         resolve(result);
       };
-      
+
       // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
         console.warn(`⏱️ Timeout loading ${url}`);
@@ -178,7 +178,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           totalChecks: 30
         });
       }, 15000);
-      
+
       iframe.onload = () => {
         // Wait longer for React hydration on complex pages
         setTimeout(() => {
@@ -186,7 +186,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             if (resolved) return; // Already resolved by timeout
             const endTime = performance.now();
             const pageLoadTimeMs = Math.round(endTime - startTime);
-            
+
             const doc = iframe.contentDocument;
             if (!doc) {
               resolveAudit({
@@ -230,19 +230,19 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               });
               return;
             }
-            
+
             // Extract basic data
             const title = doc.querySelector('title')?.textContent || '';
             const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
             const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
             const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
             const viewportMeta = doc.querySelector('meta[name="viewport"]')?.getAttribute('content') || '';
-            
+
             // Get body text for analysis
             const bodyText = doc.body?.textContent || '';
             const first100Words = bodyText.trim().split(/\s+/).slice(0, 100).join(' ');
             const wordCount = bodyText.trim().split(/\s+/).filter(w => w.length > 0).length;
-            
+
             // Headings analysis
             const h1Elements = doc.querySelectorAll('h1');
             const h2Elements = doc.querySelectorAll('h2');
@@ -250,7 +250,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             const h4Elements = doc.querySelectorAll('h4');
             const h5Elements = doc.querySelectorAll('h5');
             const h6Elements = doc.querySelectorAll('h6');
-            
+
             // Check heading order - only flag if there's a major skip (e.g., H1 to H4)
             const headings = Array.from(doc.querySelectorAll('h1, h2, h3, h4, h5, h6'));
             let hasValidHeadingOrder = true;
@@ -264,21 +264,21 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               }
               lastLevel = Math.max(lastLevel, level);
             }
-            
+
             // Primary keyword detection - extract meaningful keyword from title (skip common words)
             const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'for', 'with', 'our', 'your'];
             const titleWords = title.toLowerCase().split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
             const primaryKeyword = titleWords[0] || title.split(' ')[0].toLowerCase();
-            
+
             const primaryKeywordInTitle = title.toLowerCase().includes(primaryKeyword);
-            const primaryKeywordInH1 = h1Elements.length > 0 && Array.from(h1Elements).some(h => 
+            const primaryKeywordInH1 = h1Elements.length > 0 && Array.from(h1Elements).some(h =>
               h.textContent?.toLowerCase().includes(primaryKeyword)
             );
             const primaryKeywordInFirst100Words = first100Words.toLowerCase().includes(primaryKeyword);
-            
+
             // Readability - only calculate if there's substantial content
             const readabilityScore = wordCount > 50 ? calculateReadabilityScore(bodyText) : 50;
-            
+
             // Images analysis
             const images = doc.querySelectorAll('img');
             let imagesWithAlt = 0;
@@ -293,7 +293,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             });
             const altTextCoverage = images.length > 0 ? Math.round((imagesWithAlt / images.length) * 100) : 100;
             const descriptiveImageFilenames = images.length > 0 ? (descriptiveFilenames / images.length) >= 0.8 : true;
-            
+
             // Links analysis
             const allLinks = doc.querySelectorAll('a[href]');
             let internalLinks = 0;
@@ -303,18 +303,18 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             let noFollowExternalLinks = 0;
             let hasGenericAnchorText = false;
             let hasHTTPOutboundLinks = false;
-            
+
             const genericTexts = ['click here', 'read more', 'learn more', 'here', 'this', 'link'];
-            
+
             for (const link of Array.from(allLinks)) {
               const href = link.getAttribute('href') || '';
               const text = link.textContent?.toLowerCase().trim() || '';
               const rel = link.getAttribute('rel') || '';
-              
+
               if (genericTexts.includes(text)) {
                 hasGenericAnchorText = true;
               }
-              
+
               if (href.startsWith('/') || href.startsWith(window.location.origin)) {
                 internalLinks++;
                 // Extract path without hash or query params
@@ -332,15 +332,15 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
                 }
               }
             }
-            
-            const outboundNoFollowPercent = externalLinks > 0 
+
+            const outboundNoFollowPercent = externalLinks > 0
               ? Math.round((noFollowExternalLinks / externalLinks) * 100)
               : 0;
-            
+
             // Check if orphan page - in iframe context, check if page has outbound internal links
             // Note: True orphan detection would require checking if OTHER pages link to THIS page
             const isOrphanPage = false; // Can't reliably detect orphans from within iframe
-            
+
             // ARIA labels
             const navElements = doc.querySelectorAll('nav');
             const buttons = doc.querySelectorAll('button');
@@ -348,13 +348,13 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             navElements.forEach(nav => {
               if (!nav.getAttribute('aria-label')) ariaLabelsPresent = false;
             });
-            
+
             // JSON-LD analysis
             const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
             let hasValidJSONLD = false;
             let hasSchemasConflict = false;
             const schemaTypes: string[] = [];
-            
+
             jsonLDScripts.forEach(script => {
               try {
                 const data = JSON.parse(script.textContent || '{}');
@@ -366,17 +366,17 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
                 // Invalid JSON-LD
               }
             });
-            
+
             // Check for schema conflicts
             const typeCounts = schemaTypes.reduce((acc, type) => {
               acc[type] = (acc[type] || 0) + 1;
               return acc;
             }, {} as Record<string, number>);
             hasSchemasConflict = Object.values(typeCounts).some(count => count > 1);
-            
+
             // Required schema fields check
             const hasRequiredSchemaFields = hasValidJSONLD;
-            
+
             // Check for duplicate titles/descriptions against already audited pages
             const existingTitles = new Set(allResults.map(r => doc.querySelector('title')?.textContent?.trim() || ''));
             const existingDescriptions = new Set(allResults.map(r => {
@@ -392,45 +392,45 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
               return false;
             });
             const hasDuplicateMetaDescription = false; // Skip duplicate description check in iframe context
-            
+
             // Check for robots conflicts
             const isNoindex = robotsTag.toLowerCase().includes('noindex');
             const inSitemap = !url.includes('/404') && !url.includes('/500') && !url.includes('/thank-you');
             const hasRobotsConflict = isNoindex && inSitemap;
-            
+
             // Canonical check
             const hasCanonicalSelfReference = canonical.includes(url) || canonical.endsWith(url);
-            
+
             // Sitemap check
             const missingFromSitemap = !inSitemap && !isNoindex;
-            
+
             // HTTPS check
             const fullUrl = `${window.location.origin}${url}`;
             const isHTTPS = fullUrl.startsWith('https://');
-            
+
             // Redirect chain
             const redirectChainLength = 0;
-            
+
             // Duplicate URL check
             const isDuplicate = false;
-            
+
             // Core Web Vitals approximation
             const lcpApprox = pageLoadTimeMs * 1.5;
             const clsApprox = 0.05;
-            
+
             // Mobile responsive
             const isMobileResponsive = !!viewportMeta;
             const hasViewportMeta = !!viewportMeta;
-            
+
             // Contrast ratio
             const contrastRatio = "Pass";
-            
+
             // Build issues lists
             const criticalIssues: string[] = [];
             const warnings: string[] = [];
             let passedChecks = 0;
             const totalChecks = 30;
-            
+
             // Critical checks
             if (!isHTTPS) criticalIssues.push('Not HTTPS');
             if (h1Elements.length === 0) criticalIssues.push('Missing H1');
@@ -441,7 +441,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             if (isOrphanPage) criticalIssues.push('Orphan page (no internal links)');
             if (!hasViewportMeta) criticalIssues.push('Missing viewport meta tag');
             if (brokenInternalLinks > 0) criticalIssues.push(`${brokenInternalLinks} broken internal links`);
-            
+
             // Warnings - only add warnings that are actually problems
             if (title.length > 60) warnings.push('Title tag exceeds 60 characters');
             if (metaDescription.length > 160) warnings.push('Meta description exceeds 160 characters');
@@ -456,10 +456,10 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             if (!hasValidHeadingOrder) warnings.push('Invalid heading order');
             if (altTextCoverage < 80 && images.length > 0) warnings.push(`Low alt text coverage (${altTextCoverage}%)`);
             if (wordCount < 200 && !url.includes('/tools/') && !url.includes('/contact')) warnings.push(`Low word count (${wordCount})`);
-            
+
             // Count passed checks
             passedChecks = totalChecks - (criticalIssues.length + warnings.length);
-            
+
             resolveAudit({
               url,
               pageLoadTimeMs,
@@ -543,7 +543,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           }
         }, 6000); // Wait for route hydration & SEO meta updates
       };
-      
+
       iframe.onerror = () => {
         console.error(`❌ iframe error loading ${url}`);
         resolveAudit({
@@ -586,7 +586,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           totalChecks: 30
         });
       };
-      
+
       try {
         document.body.appendChild(iframe);
         iframe.src = `${window.location.origin}${url}`;
@@ -640,9 +640,9 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
     setIsAuditing(true);
     setProgress(0);
     setResults([]);
-    
+
     const auditResults: AdvancedPageAudit[] = [];
-    
+
     try {
       for (let i = 0; i < routes.length; i++) {
         // Check if still auditing (user didn't cancel)
@@ -650,11 +650,11 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           console.log('Audit cancelled by user');
           break;
         }
-        
+
         const route = routes[i];
         setCurrentPage(route);
         setProgress(((i + 1) / routes.length) * 100);
-        
+
         try {
           const result = await auditPageViaIframe(route, auditResults);
           auditResults.push(result);
@@ -701,7 +701,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             totalChecks: 30
           });
         }
-        
+
         // Small delay between pages
         await new Promise(resolve => setTimeout(resolve, 300));
       }
@@ -727,7 +727,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       'Contrast Ratio', 'ARIA Labels (Y/N)', 'Alt Text Coverage %', 'Viewport Meta (Y/N)',
       'Mobile Responsive (Y/N)', 'Critical Issues', 'Warnings', 'Passed Checks'
     ];
-    
+
     const rows = results.map(r => [
       r.url, r.pageLoadTimeMs, r.lcpApprox, r.clsApprox, r.isHTTPS ? 'Y' : 'N', r.redirectChainLength,
       r.isDuplicate ? 'Y' : 'N', r.wordCount, r.primaryKeywordInTitle ? 'Y' : 'N',
@@ -742,12 +742,12 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       r.altTextCoverage, r.hasViewportMeta ? 'Y' : 'N', r.isMobileResponsive ? 'Y' : 'N',
       r.criticalIssues.join('; '), r.warnings.join('; '), `${r.passedChecks}/${r.totalChecks}`
     ]);
-    
+
     const csvContent = [
       headers.join(','),
       ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
     ].join('\n');
-    
+
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -758,10 +758,10 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
   // Calculate summary stats
   const totalCriticalIssues = results.reduce((sum, r) => sum + r.criticalIssues.length, 0);
   const totalWarnings = results.reduce((sum, r) => sum + r.warnings.length, 0);
-  const avgPassRate = results.length > 0 
+  const avgPassRate = results.length > 0
     ? Math.round(results.reduce((sum, r) => sum + (r.passedChecks / r.totalChecks * 100), 0) / results.length)
     : 0;
-  
+
   // Top issues - normalize similar issues to prevent duplicates
   const normalizeIssue = (issue: string): string => {
     // Remove numbers in parentheses: "Low readability score (0)" -> "Low readability score"
@@ -785,7 +785,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Advanced SEO QA | SmartFirm"
         description="Internal advanced SEO quality assurance tool"
         robots="noindex, nofollow"
@@ -793,7 +793,7 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-primary">Advanced SEO QA Tool</h2>
+            <h1 className="text-3xl font-bold text-primary">Advanced SEO QA Tool</h1>
             <p className="text-muted-foreground mt-2">
               Comprehensive quality assurance audit with {routes.length} pages
             </p>
@@ -803,193 +803,193 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
           </Button>
         </div>
 
-      <Alert>
-        <AlertDescription>
-          This advanced tool performs 30+ checks per page including technical performance, content quality, 
-          internal/external linking, schema validation, indexability, accessibility, and mobile optimization. 
-          No external crawlers are used.
-        </AlertDescription>
-      </Alert>
+        <Alert>
+          <AlertDescription>
+            This advanced tool performs 30+ checks per page including technical performance, content quality,
+            internal/external linking, schema validation, indexability, accessibility, and mobile optimization.
+            No external crawlers are used.
+          </AlertDescription>
+        </Alert>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Run Advanced QA Audit</CardTitle>
-          <CardDescription>
-            Analyze all pages with comprehensive QA checks and export to CSV
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          {!isAuditing && results.length === 0 && (
-            <Button onClick={runAudit} size="lg" className="w-full">
-              <Play className="mr-2 h-5 w-5" />
-              Start Advanced QA Audit
-            </Button>
-          )}
+        <Card>
+          <CardHeader>
+            <CardTitle>Run Advanced QA Audit</CardTitle>
+            <CardDescription>
+              Analyze all pages with comprehensive QA checks and export to CSV
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            {!isAuditing && results.length === 0 && (
+              <Button onClick={runAudit} size="lg" className="w-full">
+                <Play className="mr-2 h-5 w-5" />
+                Start Advanced QA Audit
+              </Button>
+            )}
 
-          {isAuditing && (
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between text-sm mb-2">
-                  <span className="text-muted-foreground">Auditing: {currentPage}</span>
-                  <span className="font-semibold">{Math.round(progress)}%</span>
+            {isAuditing && (
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between text-sm mb-2">
+                    <span className="text-muted-foreground">Auditing: {currentPage}</span>
+                    <span className="font-semibold">{Math.round(progress)}%</span>
+                  </div>
+                  <Progress value={progress} />
                 </div>
-                <Progress value={progress} />
               </div>
-            </div>
-          )}
+            )}
 
-          {!isAuditing && results.length > 0 && (
-            <div className="space-y-6">
-              {/* Summary Dashboard */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {!isAuditing && results.length > 0 && (
+              <div className="space-y-6">
+                {/* Summary Dashboard */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Pass Rate</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-primary">{avgPassRate}%</div>
+                      <p className="text-xs text-muted-foreground mt-1">Average across all pages</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Critical Issues</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-destructive">{totalCriticalIssues}</div>
+                      <p className="text-xs text-muted-foreground mt-1">Must fix before launch</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-3">
+                      <CardTitle className="text-sm">Warnings</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-3xl font-bold text-orange-500">{totalWarnings}</div>
+                      <p className="text-xs text-muted-foreground mt-1">Recommended improvements</p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* Top Issues */}
                 <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Pass Rate</CardTitle>
+                  <CardHeader>
+                    <CardTitle>Top 10 Most Common Issues</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-3xl font-bold text-primary">{avgPassRate}%</div>
-                    <p className="text-xs text-muted-foreground mt-1">Average across all pages</p>
+                    <div className="space-y-2">
+                      {topIssues.map(([issue, count], index) => (
+                        <div key={index} className="flex items-center justify-between p-3 bg-muted/50 rounded">
+                          <div className="flex items-center gap-3">
+                            <Badge variant="secondary">{index + 1}</Badge>
+                            <span className="text-sm">{issue}</span>
+                          </div>
+                          <Badge variant="destructive">{count} pages</Badge>
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
 
+                {/* High Priority Fixes */}
                 <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Critical Issues</CardTitle>
+                  <CardHeader>
+                    <CardTitle>High Priority Fixes</CardTitle>
+                    <CardDescription>Pages with critical issues that must be addressed</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-3xl font-bold text-destructive">{totalCriticalIssues}</div>
-                    <p className="text-xs text-muted-foreground mt-1">Must fix before launch</p>
+                    <div className="space-y-3 max-h-96 overflow-y-auto">
+                      {results.filter(r => r.criticalIssues.length > 0).slice(0, 20).map((result, index) => (
+                        <div key={index} className="p-4 border rounded-lg">
+                          <div className="flex items-start justify-between mb-2">
+                            <div className="font-mono text-sm text-primary">{result.url}</div>
+                            <Badge variant="destructive">
+                              <XCircle className="h-3 w-3 mr-1" />
+                              {result.criticalIssues.length} critical
+                            </Badge>
+                          </div>
+                          <div className="space-y-1">
+                            {result.criticalIssues.map((issue, i) => (
+                              <div key={i} className="flex items-center gap-2 text-sm text-destructive">
+                                <AlertTriangle className="h-3 w-3" />
+                                {issue}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-sm">Warnings</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-3xl font-bold text-orange-500">{totalWarnings}</div>
-                    <p className="text-xs text-muted-foreground mt-1">Recommended improvements</p>
-                  </CardContent>
-                </Card>
+                {/* Export */}
+                <div className="flex gap-4">
+                  <Button onClick={exportToCSV} size="lg" className="flex-1">
+                    <Download className="mr-2 h-5 w-5" />
+                    Export Full Report to CSV
+                  </Button>
+                  <Button onClick={runAudit} variant="outline" size="lg">
+                    Re-run Audit
+                  </Button>
+                </div>
               </div>
-
-              {/* Top Issues */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>Top 10 Most Common Issues</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-2">
-                    {topIssues.map(([issue, count], index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-muted/50 rounded">
-                        <div className="flex items-center gap-3">
-                          <Badge variant="secondary">{index + 1}</Badge>
-                          <span className="text-sm">{issue}</span>
-                        </div>
-                        <Badge variant="destructive">{count} pages</Badge>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* High Priority Fixes */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>High Priority Fixes</CardTitle>
-                  <CardDescription>Pages with critical issues that must be addressed</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3 max-h-96 overflow-y-auto">
-                    {results.filter(r => r.criticalIssues.length > 0).slice(0, 20).map((result, index) => (
-                      <div key={index} className="p-4 border rounded-lg">
-                        <div className="flex items-start justify-between mb-2">
-                          <div className="font-mono text-sm text-primary">{result.url}</div>
-                          <Badge variant="destructive">
-                            <XCircle className="h-3 w-3 mr-1" />
-                            {result.criticalIssues.length} critical
-                          </Badge>
-                        </div>
-                        <div className="space-y-1">
-                          {result.criticalIssues.map((issue, i) => (
-                            <div key={i} className="flex items-center gap-2 text-sm text-destructive">
-                              <AlertTriangle className="h-3 w-3" />
-                              {issue}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Export */}
-              <div className="flex gap-4">
-                <Button onClick={exportToCSV} size="lg" className="flex-1">
-                  <Download className="mr-2 h-5 w-5" />
-                  Export Full Report to CSV
-                </Button>
-                <Button onClick={runAudit} variant="outline" size="lg">
-                  Re-run Audit
-                </Button>
-              </div>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-
-      {/* Audit Categories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Technical Checks</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground space-y-1">
-            <div>• Page load time & Core Web Vitals</div>
-            <div>• HTTPS verification</div>
-            <div>• Redirect chain analysis</div>
-            <div>• Duplicate URL detection</div>
+            )}
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Content Quality</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground space-y-1">
-            <div>• Word count & readability score</div>
-            <div>• Primary keyword placement</div>
-            <div>• Duplicate content detection</div>
-            <div>• Descriptive image filenames</div>
-          </CardContent>
-        </Card>
+        {/* Audit Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Technical Checks</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground space-y-1">
+              <div>• Page load time & Core Web Vitals</div>
+              <div>• HTTPS verification</div>
+              <div>• Redirect chain analysis</div>
+              <div>• Duplicate URL detection</div>
+            </CardContent>
+          </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Link Analysis</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground space-y-1">
-            <div>• Orphan page detection</div>
-            <div>• Broken internal/external links</div>
-            <div>• Generic anchor text flagging</div>
-            <div>• NoFollow analysis</div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Content Quality</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground space-y-1">
+              <div>• Word count & readability score</div>
+              <div>• Primary keyword placement</div>
+              <div>• Duplicate content detection</div>
+              <div>• Descriptive image filenames</div>
+            </CardContent>
+          </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Accessibility & Mobile</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground space-y-1">
-            <div>• Heading order validation</div>
-            <div>• ARIA labels verification</div>
-            <div>• Alt text coverage</div>
-            <div>• Mobile responsive checks</div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Link Analysis</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground space-y-1">
+              <div>• Orphan page detection</div>
+              <div>• Broken internal/external links</div>
+              <div>• Generic anchor text flagging</div>
+              <div>• NoFollow analysis</div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Accessibility & Mobile</CardTitle>
+            </CardHeader>
+            <CardContent className="text-sm text-muted-foreground space-y-1">
+              <div>• Heading order validation</div>
+              <div>• ARIA labels verification</div>
+              <div>• Alt text coverage</div>
+              <div>• Mobile responsive checks</div>
+            </CardContent>
+          </Card>
+        </div>
       </div>
-    </div>
     </>
   );
 };

@@ -9,18 +9,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const ThankYou = () => {
   useEffect(() => {
     // Track conversion if needed
-    console.log("Thank you page viewed");
   }, []);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEO 
+      <SEO
         title="Thank You"
         description="Thank you for contacting SmartFirm. We've received your message and will respond within 1 business day. Learn more about our workflow automation and growth systems for accounting firms."
         robots="noindex,nofollow"
       />
       <Header />
-      
+
       <main className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl w-full text-center">
           {/* Success Icon */}
@@ -34,7 +33,7 @@ const ThankYou = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
             Thank You!
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
             We've received your message and will get back to you within 24 hours.
           </p>
@@ -90,7 +89,7 @@ const ThankYou = () => {
                 Return to Home
               </a>
             </Button>
-            
+
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <a href="/resources">
                 Explore Resources

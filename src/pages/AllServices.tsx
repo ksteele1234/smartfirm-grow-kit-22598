@@ -2,13 +2,13 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { StandardCard } from "@/components/ui/standard-card";
 import { Button } from "@/components/ui/button";
-import { 
-  Zap, 
-  Star, 
-  Search, 
-  Mail, 
-  Users, 
-  Globe, 
+import {
+  Zap,
+  Star,
+  Search,
+  Mail,
+  Users,
+  Globe,
   Smartphone,
   Settings,
   TrendingUp,
@@ -18,8 +18,8 @@ import {
 } from "lucide-react";
 import { GeometricDivider, FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
 import SEO from "@/components/SEO";
-import { 
-  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+import {
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage
 } from "@/components/ui/breadcrumb";
 
 const AllServices = () => {
@@ -30,7 +30,7 @@ const AllServices = () => {
       icon: Smartphone,
       title: "Marketing Automation",
       description: "Comprehensive marketing automation platform designed specifically for accounting firms. Streamline your entire marketing process from lead capture to client conversion.",
-      href: "/services/marketing-automation"
+      href: "/services/marketing-automation-for-accounting-firms"
     },
     {
       icon: Settings,
@@ -54,55 +54,55 @@ const AllServices = () => {
       icon: Zap,
       title: "Automated Lead Follow-Up",
       description: "Intelligent follow-up sequences via email, SMS, and voicemail that convert inquiries into booked calls within 24-48 hours. Never lose a lead again.",
-      href: "/services/automated-lead-follow-up"
+      href: "/services/automated-lead-follow-up-for-cpas"
     },
     {
       icon: Star,
       title: "Client Review Generation",
       description: "Automated review request system that builds credibility and attracts more clients. Triple your 5-star reviews in 90 days with proven workflows.",
-      href: "/services/client-review-generation"
+      href: "/services/automated-review-generation-for-cpas"
     },
     {
       icon: Search,
       title: "SEO for Accountants",
       description: "Dominate local search results and Google Maps. Our accounting-specific SEO strategies bring in qualified leads actively searching for your services.",
-      href: "/services/seo-for-accountants"
+      href: "/services/seo-for-accounting-firms"
     },
     {
       icon: Users,
       title: "Social Media Management",
       description: "Done-for-you social media content and management. Establish thought leadership on LinkedIn, Facebook, and other platforms while we handle everything.",
-      href: "/services/social-media-management"
+      href: "/services/social-media-management-for-cpas"
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
       description: "Personalized email campaigns that keep clients engaged year-round. Improve retention rates and create upsell opportunities with strategic nurture sequences.",
-      href: "/services/email-marketing"
+      href: "/services/email-marketing-for-cpas"
     },
     {
       icon: Globe,
       title: "Website Design",
       description: "Conversion-optimized websites built specifically for accounting firms. Secure client portals, mobile-responsive design, and compliance-ready infrastructure.",
-      href: "/services/website-design"
+      href: "/services/professional-website-design-for-accounting-firms"
     },
     {
       icon: Mail,
       title: "Content Marketing",
       description: "Strategic content that positions your firm as the expert. Blog posts, guides, and resources that attract ideal clients and establish thought leadership.",
-      href: "/services/content-marketing"
+      href: "/services/strategic-content-marketing-for-cpas"
     },
     {
       icon: Star,
       title: "Online Reputation Management",
       description: "Protect and elevate your firm's online reputation. Monitor reviews, respond professionally, and build a 5-star presence that attracts more clients.",
-      href: "/services/online-reputation-management"
+      href: "/services/reputation-management-for-cpas"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Automation & Marketing Services | SmartFirm"
         description="Browse complete automation and marketing services for accounting firms—from workflow optimization and client systems to websites, SEO, and growth consulting."
         canonicalUrl="https://smartfirm.io/all-services"
@@ -116,7 +116,7 @@ const AllServices = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumbs */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -137,138 +137,138 @@ const AllServices = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
-      {/* Hero Section */}
-      <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
-        <FloatingShapes variant="circles" />
-        <BackgroundPattern pattern="dots" />
-        <div className="max-w-container-3xl mx-auto relative">
-          <div className="text-center max-w-text-lg mx-auto">
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              Complete Automation & Marketing Services for Accounting Firms
-            </h1>
-            <div id="sf-keyword-intro">
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                SmartFirm's professional marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
-              </p>
+        {/* Hero Section */}
+        <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
+          <FloatingShapes variant="circles" />
+          <BackgroundPattern pattern="dots" />
+          <div className="max-w-container-3xl mx-auto relative">
+            <div className="text-center max-w-text-lg mx-auto">
+              <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
+                Complete Automation & Marketing Services for Accounting Firms
+              </h1>
+              <div id="sf-keyword-intro">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  SmartFirm's professional marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-container-3xl mx-auto">
-          <GeometricDivider variant="lines" />
-          
-          <h2 className="text-3xl font-heading font-bold text-primary mt-8">Explore Our Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md mt-8">
-            {services.map((service, index) => (
-              <StandardCard
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                href={service.href}
-                variant={index === 0 ? "featured" : index === 5 ? "popular" : "default"}
-                className="scale-feedback color-transition h-full"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        {/* Services Grid */}
+        <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-container-3xl mx-auto">
+            <GeometricDivider variant="lines" />
 
-      {/* Benefits Section */}
-      <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-container-3xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
-          <div className="grid md:grid-cols-2 gap-md">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Predictable pipeline with automation that follows up 24/7</li>
-                <li>Higher close rates from faster response and better nurturing</li>
-                <li>Improved client retention through consistent touchpoints</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Operational Wins</h3>
-              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Less tool-juggling with integrated systems that your team will use</li>
-                <li>Clear reporting and dashboards in plain English</li>
-                <li>Processes that scale without adding headcount</li>
-              </ul>
+            <h2 className="text-3xl font-heading font-bold text-primary mt-8">Explore Our Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-md mt-8">
+              {services.map((service, index) => (
+                <StandardCard
+                  key={index}
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  href={service.href}
+                  variant={index === 0 ? "featured" : index === 5 ? "popular" : "default"}
+                  className="scale-feedback color-transition h-full"
+                />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process Section */}
-      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-background-light/50 border-t border-border/50">
-        <div className="max-w-container-3xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
-          <div className="grid md:grid-cols-3 gap-sm">
-            <div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</h3>
-              <p className="text-muted-foreground">We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">2) Implementation</h3>
-              <p className="text-muted-foreground">We configure automations, integrations, and content—done for you—to launch quickly.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">3) Optimize & Scale</h3>
-              <p className="text-muted-foreground">We measure results, refine campaigns, and expand what works across services and offices.</p>
+        {/* Benefits Section */}
+        <section className="pt-12 pb-4 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-container-3xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-6">Benefits of Working with SmartFirm</h2>
+            <div className="grid md:grid-cols-2 gap-md">
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Growth Outcomes</h3>
+                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                  <li>Predictable pipeline with automation that follows up 24/7</li>
+                  <li>Higher close rates from faster response and better nurturing</li>
+                  <li>Improved client retention through consistent touchpoints</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Operational Wins</h3>
+                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                  <li>Less tool-juggling with integrated systems that your team will use</li>
+                  <li>Clear reporting and dashboards in plain English</li>
+                  <li>Processes that scale without adding headcount</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQs */}
-      <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-container-3xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold text-primary mb-6">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <details className="border border-border rounded-lg p-4 bg-background">
-              <summary className="cursor-pointer font-medium text-foreground">How fast can we get live?</summary>
-              <div className="text-muted-foreground mt-2">Most firms launch within 2–4 weeks, with early wins often in the first 30 days.</div>
-            </details>
-            <details className="border border-border rounded-lg p-4 bg-background">
-              <summary className="cursor-pointer font-medium text-foreground">Will this integrate with our tools?</summary>
-              <div className="text-muted-foreground mt-2">Yes—QuickBooks, Xero, Google/Microsoft, and practice tools like Karbon and Canopy.</div>
-            </details>
-            <details className="border border-border rounded-lg p-4 bg-background">
-              <summary className="cursor-pointer font-medium text-foreground">Is training provided?</summary>
-              <div className="text-muted-foreground mt-2">We include team training and documentation so adoption sticks.</div>
-            </details>
+        {/* Process Section */}
+        <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8 bg-background-light/50 border-t border-border/50">
+          <div className="max-w-container-3xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-6">Our Process</h2>
+            <div className="grid md:grid-cols-3 gap-sm">
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">1) Strategy Call</h3>
+                <p className="text-muted-foreground">We assess your current funnel, tools, and goals to uncover the highest-impact opportunities.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">2) Implementation</h3>
+                <p className="text-muted-foreground">We configure automations, integrations, and content—done for you—to launch quickly.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">3) Optimize & Scale</h3>
+                <p className="text-muted-foreground">We measure results, refine campaigns, and expand what works across services and offices.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-vibrant-teal text-white">
-        <div className="max-w-text-lg mx-auto text-center">
-          <p className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</p>
-          <p className="text-xl opacity-90 mb-8 text-white/90">
-            Let's create a customized growth plan for your firm. Book a Free Call to discover which services will have the biggest impact on your practice.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button id="all-services-book-call-btn" variant="secondary" size="lg" className="group" asChild>
-              <a href="/get-started">
-                <Phone className="mr-2 h-5 w-5" />
-                Book a Free Call
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            <Button variant="white-outline-on-dark" size="lg" asChild>
-              <a href="/contact">
-                Contact Us
-              </a>
-            </Button>
+        {/* FAQs */}
+        <section className="pt-8 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-container-3xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <details className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">How fast can we get live?</summary>
+                <div className="text-muted-foreground mt-2">Most firms launch within 2–4 weeks, with early wins often in the first 30 days.</div>
+              </details>
+              <details className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">Will this integrate with our tools?</summary>
+                <div className="text-muted-foreground mt-2">Yes—QuickBooks, Xero, Google/Microsoft, and practice tools like Karbon and Canopy.</div>
+              </details>
+              <details className="border border-border rounded-lg p-4 bg-background">
+                <summary className="cursor-pointer font-medium text-foreground">Is training provided?</summary>
+                <div className="text-muted-foreground mt-2">We include team training and documentation so adoption sticks.</div>
+              </details>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="pt-12 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-vibrant-teal text-white">
+          <div className="max-w-text-lg mx-auto text-center">
+            <p className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Practice?</p>
+            <p className="text-xl opacity-90 mb-8 text-white/90">
+              Let's create a customized growth plan for your firm. Book a Free Call to discover which services will have the biggest impact on your practice.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button id="all-services-book-call-btn" variant="secondary" size="lg" className="group" asChild>
+                <a href="/get-started">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Book a Free Call
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button variant="white-outline-on-dark" size="lg" asChild>
+                <a href="/contact">
+                  Contact Us
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
 
       </main>
 

@@ -111,9 +111,11 @@ const SEO = ({
 
   const pageTitle = generatedTitle;
   const pageDescription = generatedDescription;
-  const pageImageUrl = pageImage || image || defaultImage;
-  const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
-  // Ensure pathname has trailing slash for consistency with React Router (and Netlify redirects)
+  // Handle absolute vs relative image URLs
+  const pageImageFull = (pageImage || image || defaultImage).startsWith('http')
+    ? (pageImage || image || defaultImage)
+    : `https://${primaryDomain}${pageImage || image || defaultImage}`;
+  // Ensure pathname has trailing slash for consistency with Netlify Pretty URLs
   const normalizedPath = pathname === '/' ? '' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
   const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${normalizedPath}`;
 
@@ -408,7 +410,6 @@ const SEO = ({
         );
 
         if (!hasFAQSchemaAlready) {
-          console.log('[SEO] Adding FAQ schema via React (no pre-rendered schema found)');
           graphItems.push({
             "@type": "FAQPage",
             "@id": `${canonicalUrl}#faqpage`,
@@ -422,8 +423,6 @@ const SEO = ({
               }
             }))
           });
-        } else {
-          console.log('[SEO] FAQ schema already exists in DOM (from build-time injection), skipping React injection');
         }
       }
 
@@ -460,7 +459,7 @@ const SEO = ({
 
     updateConsolidatedStructuredData();
 
-  }, [pageTitle, pageDescription, pageImageUrl, pageImageFull, canonicalUrl, pathname, noindex, robots, pageType, serviceName, topic, toolName, articleHeadline, genre, lastReviewed, speakableSelectors, datePublished, dateModified, author, autoBreadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
+  }, [pageTitle, pageDescription, pageImageFull, canonicalUrl, pathname, noindex, robots, pageType, serviceName, topic, toolName, articleHeadline, genre, lastReviewed, speakableSelectors, datePublished, dateModified, author, autoBreadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
 
   return null;
 };

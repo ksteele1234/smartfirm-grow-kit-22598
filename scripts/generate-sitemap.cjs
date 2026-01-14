@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Static routes from sitemapRoutes.ts
+// Static routes from sitemapRoutes.ts
 const staticRoutes = [
   // Homepage
   { path: '/', changefreq: 'weekly', priority: 1.0 },
@@ -67,9 +68,6 @@ const staticRoutes = [
   { path: '/tools/lead-generation-scorecard/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/modern-firm-quiz/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/growth-potential-scorecard/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/seo-audit/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/page-grader/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/advanced-seo-qa/', changefreq: 'monthly', priority: 0.7 },
 
   // Funnel Pages
   { path: '/growth-calculator/', changefreq: 'weekly', priority: 0.8 },
@@ -103,6 +101,7 @@ const faqCategories = [
       'do-you-offer-guarantees',
     ],
   },
+
   {
     slug: 'industries',
     questions: [
@@ -449,16 +448,8 @@ async function main() {
     lastmod: tag.created_at ? tag.created_at.split('T')[0] : undefined,
   }));
 
-  // Convert categories to sitemap routes
-  const categoryRoutes = blogCategories.map(category => ({
-    path: `/blog/category/${category.slug}/`,
-    changefreq: 'weekly',
-    priority: 0.6,
-    lastmod: category.created_at ? category.created_at.split('T')[0] : undefined,
-  }));
-
   // Combine static + dynamic routes
-  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...categoryRoutes, ...faqRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...faqRoutes];
 
   // Generate sitemap XML
   const sitemapXml = generateSitemapXml(allRoutes);
@@ -479,7 +470,6 @@ async function main() {
   console.log(`   - Static: ${staticRoutes.length}`);
   console.log(`   - Blog posts: ${blogRoutes.length}`);
   console.log(`   - Tags: ${tagRoutes.length}`);
-  console.log(`   - Categories: ${categoryRoutes.length}`);
   console.log(`   - FAQ pages: ${faqRoutes.length}`);
   console.log('');
 }
