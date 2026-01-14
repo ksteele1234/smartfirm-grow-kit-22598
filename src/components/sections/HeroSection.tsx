@@ -114,76 +114,76 @@ const HeroSection = memo(() => {
           </clipPath>
         </defs>
       </svg>
-      
+
       <section className="relative min-h-[600px] md:min-h-[700px] -mt-[72px] pt-[120px] pb-24 md:pb-32 overflow-hidden hero-wave-clip">
-      {/* Hero background image - responsive with priority loading */}
-      <img
-        src="/assets/hero-wave-background-mobile.webp"
-        srcSet="/assets/hero-wave-background-mobile.webp 640w,
+        {/* Hero background image - responsive with priority loading */}
+        <img
+          src="/assets/hero-wave-background-mobile.webp"
+          srcSet="/assets/hero-wave-background-mobile.webp 640w,
                 /assets/hero-wave-background-tablet.webp 1024w,
                 /assets/hero-wave-background-desktop.webp 1920w"
-        sizes="100vw"
-        alt=""
-        role="presentation"
-        fetchPriority="high"
-        loading="eager"
-        decoding="async"
-        width="1920"
-        height="700"
-        className="absolute inset-0 w-full h-full object-cover -z-10"
-        style={{ objectPosition: 'center' }}
-      />
+          sizes="100vw"
+          alt="Abstract blue wave background pattern representing workflow flow"
+          role="presentation"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="700"
+          className="absolute inset-0 w-full h-full object-cover -z-10"
+          style={{ objectPosition: 'center' }}
+        />
 
-      {/* Content Container - 2 Column Grid */}
-      <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center max-w-7xl mx-auto">
-          
-          {/* Left Column: Headline, Subhead, CTA */}
-          <div className="text-center lg:text-left">
-            {/* Headline - Solid White */}
-            <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-              We build systems that run your client work and help your firm grow on autopilot.
-            </h1>
+        {/* Content Container - 2 Column Grid */}
+        <div className="relative container mx-auto px-6 lg:px-12" style={{ zIndex: 10 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center max-w-7xl mx-auto">
 
-            {/* Subheadline */}
-            <div id="sf-keyword-intro" className="animate-subhead">
-              <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
-                You get cleaner workflows, faster responses, and hours back each week to focus on real client work.
-              </p>
+            {/* Left Column: Headline, Subhead, CTA */}
+            <div className="text-center lg:text-left">
+              {/* Headline - Solid White */}
+              <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
+                We build systems that run your client work and help your firm grow on autopilot.
+              </h1>
+
+              {/* Subheadline */}
+              <div id="sf-keyword-intro" className="animate-subhead">
+                <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
+                  You get cleaner workflows, faster responses, and hours back each week to focus on real client work.
+                </p>
+              </div>
+
+              {/* Trust Badges with Gold Bullets */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+                <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+                <span className="text-white text-sm font-medium">50+ Companies Supported</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
+                <span className="text-white text-sm font-medium">Up in 30 Days</span>
+              </div>
+
+              {/* CTA Button - Enhanced Coral */}
+              <div className="flex justify-center lg:justify-start pb-20 md:pb-10">
+                <Button
+                  id="hero-book-call-btn"
+                  variant="coral"
+                  size="lg"
+                  className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
+                  asChild
+                >
+                  <a href="/get-started" className="inline-flex items-center justify-center gap-2">
+                    Book a Free Call
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            {/* Trust Badges with Gold Bullets */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
-              <span className="text-white text-sm font-medium">40+ Years Combined Experience</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-              <span className="text-white text-sm font-medium">50+ Companies Supported</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
-              <span className="text-white text-sm font-medium">Up in 30 Days</span>
+            {/* Right Column: Stat Cards */}
+            <div className="hidden lg:block">
+              <HeroStatsCards />
             </div>
-
-            {/* CTA Button - Enhanced Coral */}
-            <div className="flex justify-center lg:justify-start pb-20 md:pb-10">
-              <Button 
-                id="hero-book-call-btn"
-                variant="coral" 
-                size="lg"
-                className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
-                asChild
-              >
-                <a href="/get-started" className="inline-flex items-center justify-center gap-2">
-                  Book a Free Call
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Column: Stat Cards */}
-          <div className="hidden lg:block">
-            <HeroStatsCards />
           </div>
         </div>
-      </div>
       </section>
     </>
   );
