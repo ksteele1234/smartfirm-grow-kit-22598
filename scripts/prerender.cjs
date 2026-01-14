@@ -397,7 +397,7 @@ async function prerender() {
   const browser = await puppeteer.launch({
     executablePath,
     headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-web-security'],
   });
 
   console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${faqRoutes.length} FAQ + ${blogRoutes.length} blog + ${tagRoutes.length} tags)...`);

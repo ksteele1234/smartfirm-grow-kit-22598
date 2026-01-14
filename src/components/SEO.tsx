@@ -38,8 +38,8 @@ interface SEOProps {
   showAddress?: boolean;
 }
 
-const SEO = ({ 
-  title, 
+const SEO = ({
+  title,
   description,
   image,
   noindex = false,
@@ -65,13 +65,13 @@ const SEO = ({
   showAddress = false
 }: SEOProps) => {
   const location = useLocation();
-  
+
   const defaultTitle = "SmartFirm | Automation & AI for Accounting Firms";
   const defaultDescription = "SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth.";
   const defaultImage = "/assets/og-default.webp";
   const siteName = "SmartFirm";
   const primaryDomain = "smartfirm.io";
-  
+
   // Generate title based on template or use custom
   let generatedTitle = defaultTitle;
   if (title) {
@@ -82,7 +82,7 @@ const SEO = ({
   } else if (pageType === 'blog' && topic) {
     generatedTitle = `${topic} | SmartFirm Blog`;
   }
-  
+
   // Generate description based on template or use custom
   let generatedDescription = defaultDescription;
   if (description) {
@@ -94,34 +94,34 @@ const SEO = ({
   } else if (pageType === 'blog' && topic) {
     generatedDescription = `Learn ${topic} for finance firms: actionable tips and tools from SmartFirm.`;
   }
-  
+
   // Auto-populate legal page data if applicable
   const pathname = location.pathname;
   const legalPageData = LEGAL_PAGE_DATES[pathname as keyof typeof LEGAL_PAGE_DATES];
-  
+
   let genre = genreProp;
   let lastReviewed = lastReviewedProp;
   let datePublished = datePublishedProp;
-  
+
   if (pageType === 'legal' && legalPageData) {
     genre = genre || legalPageData.genre;
     lastReviewed = lastReviewed || legalPageData.lastReviewed;
     datePublished = datePublished || legalPageData.datePublished;
   }
-  
+
   const pageTitle = generatedTitle;
   const pageDescription = generatedDescription;
   const pageImageUrl = pageImage || image || defaultImage;
   const pageImageFull = `https://${primaryDomain}${pageImageUrl}`;
-  // Ensure pathname has trailing slash for consistency with React Router
-  const normalizedPath = pathname === '/' ? '' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
+  // Ensure pathname has NO trailing slash for consistency (unless root)
+  const normalizedPath = pathname === '/' ? '' : (pathname.endsWith('/') ? pathname.slice(0, -1) : pathname);
   const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${normalizedPath}`;
-  
+
   // Auto-generate breadcrumbs if not provided and not homepage
-  const autoBreadcrumbs = !breadcrumbsProp && pathname !== '/' 
-    ? generateBreadcrumbs(pathname, title) 
+  const autoBreadcrumbs = !breadcrumbsProp && pathname !== '/'
+    ? generateBreadcrumbs(pathname, title)
     : breadcrumbsProp;
-  
+
   // Helper function to format tool names
   const formatToolName = (url: string): string => {
     const slug = url.split('/').pop() || '';
@@ -130,11 +130,11 @@ const SEO = ({
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
   };
-  
+
   useEffect(() => {
     // Update document title
     document.title = pageTitle;
-    
+
     // Debug logging for FAQ structured data
     if (pageType === 'faq' && faqs) {
       console.log('[SEO Debug] FAQ structured data:', {
@@ -144,31 +144,31 @@ const SEO = ({
         canonicalUrl
       });
     }
-    
+
     // Update standard meta tags
     const updateMetaTag = (property: string, content: string, useProperty = false) => {
       const attribute = useProperty ? 'property' : 'name';
       let element = document.querySelector(`meta[${attribute}="${property}"]`);
-      
+
       if (!element) {
         element = document.createElement('meta');
         element.setAttribute(attribute, property);
         document.head.appendChild(element);
       }
-      
+
       element.setAttribute('content', content);
     };
-    
+
     // Update or create link tags
     const updateLinkTag = (rel: string, href: string) => {
       let element = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
-      
+
       if (!element) {
         element = document.createElement('link');
         element.setAttribute('rel', rel);
         document.head.appendChild(element);
       }
-      
+
       element.href = href;
     };
 
@@ -197,7 +197,7 @@ const SEO = ({
     const updateConsolidatedStructuredData = () => {
       const schemaId = 'consolidated-schema';
       let script = document.querySelector(`script[data-schema="${schemaId}"]`);
-      
+
       if (!script) {
         script = document.createElement('script');
         script.setAttribute('type', 'application/ld+json');
@@ -289,7 +289,7 @@ const SEO = ({
           "@id": `https://${primaryDomain}/#organization`
         }
       };
-      
+
       // Add optional fields
       if (lastReviewed) {
         webPageSchema.lastReviewed = lastReviewed;
@@ -297,7 +297,7 @@ const SEO = ({
       if (genre) {
         webPageSchema.genre = genre;
       }
-      
+
       graphItems.push(webPageSchema);
 
       // 4. Service (for service pages)
@@ -343,7 +343,7 @@ const SEO = ({
           }
         });
       }
-      
+
       // Enhanced Article schema for success stories
       if (pageType === 'success-story') {
         graphItems.push({
@@ -367,11 +367,11 @@ const SEO = ({
           "image": pageImageFull,
           "description": pageDescription
         });
-        
+
         // Link to WebPage via mainEntity
         webPageSchema.mainEntity = { "@id": `${canonicalUrl}#article` };
       }
-      
+
       // 5b. SoftwareApplication (for tool pages)
       if (pageType === 'tool') {
         const toolDisplayName = toolName || formatToolName(canonicalUrl);
@@ -390,7 +390,7 @@ const SEO = ({
             "@id": `https://${primaryDomain}/#organization`
           }
         });
-        
+
         // Link to WebPage via mainEntity
         webPageSchema.mainEntity = { "@id": `${canonicalUrl}#software` };
       }
@@ -399,11 +399,11 @@ const SEO = ({
       if (faqs && faqs.length > 0) {
         // Check if FAQ schema already exists in DOM (from build-time injection or inline scripts)
         const allJsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
-        const hasFAQSchemaAlready = Array.from(allJsonLdScripts).some(script => 
-          script.textContent?.includes('"@type":"FAQPage"') || 
+        const hasFAQSchemaAlready = Array.from(allJsonLdScripts).some(script =>
+          script.textContent?.includes('"@type":"FAQPage"') ||
           script.textContent?.includes('"@type": "FAQPage"')
         );
-        
+
         if (!hasFAQSchemaAlready) {
           console.log('[SEO] Adding FAQ schema via React (no pre-rendered schema found)');
           graphItems.push({
@@ -456,9 +456,9 @@ const SEO = ({
     };
 
     updateConsolidatedStructuredData();
-    
+
   }, [pageTitle, pageDescription, pageImageUrl, pageImageFull, canonicalUrl, pathname, noindex, robots, pageType, serviceName, topic, toolName, articleHeadline, genre, lastReviewed, speakableSelectors, datePublished, dateModified, author, autoBreadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
-  
+
   return null;
 };
 

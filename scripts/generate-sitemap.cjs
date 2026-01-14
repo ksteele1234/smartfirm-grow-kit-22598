@@ -11,7 +11,7 @@ const path = require('path');
 const staticRoutes = [
   // Homepage
   { path: '/', changefreq: 'weekly', priority: 1.0 },
-  
+
   // Main Navigation Pages
   { path: '/solutions-expert-marketing-agency-for-accounting-firms/', changefreq: 'weekly', priority: 0.9 },
   { path: '/leading-marketing-services-for-accounting-firms/', changefreq: 'weekly', priority: 0.9 },
@@ -22,7 +22,7 @@ const staticRoutes = [
   { path: '/contact/', changefreq: 'monthly', priority: 0.8 },
   { path: '/get-started/', changefreq: 'weekly', priority: 0.9 },
   { path: '/quick-start-marketing-for-cpa-firms/', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Solution Pages
   { path: '/solutions/scale-accounting-firm-successfully/', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/stop-losing-clients-to-tech-savvy-cpas/', changefreq: 'weekly', priority: 0.8 },
@@ -30,7 +30,7 @@ const staticRoutes = [
   { path: '/solutions/work-less-earn-more/', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/grow-without-growing-pains/', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/protect-practice-and-future/', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Service Pages
   { path: '/services/ai-transformation-roadmap/', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/single-process-ai-transformation/', changefreq: 'weekly', priority: 0.8 },
@@ -48,13 +48,13 @@ const staticRoutes = [
   { path: '/services/reputation-management-for-cpas/', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/marketing-strategy-integration-for-accounting-firms/', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/add-ons/', changefreq: 'weekly', priority: 0.7 },
-  
+
   // Industry Pages
   { path: '/industries/tax-preparation-marketing-solutions/', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/bookkeeping-services-marketing-automation/', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/business-advisory-marketing-services/', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/audit-assurance-marketing-agency/', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Tools & Calculators
   { path: '/tools/', changefreq: 'weekly', priority: 0.8 },
   { path: '/tools/efficiency-quiz/', changefreq: 'monthly', priority: 0.7 },
@@ -70,17 +70,17 @@ const staticRoutes = [
   { path: '/tools/seo-audit/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/page-grader/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/advanced-seo-qa/', changefreq: 'monthly', priority: 0.7 },
-  
+
   // Funnel Pages
   { path: '/growth-calculator/', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Case Studies
   { path: '/case-studies/', changefreq: 'weekly', priority: 0.8 },
   { path: '/case-studies/payroll-automation-roi/', changefreq: 'monthly', priority: 0.7 },
-  
+
   // Blog index
   { path: '/blog/', changefreq: 'daily', priority: 0.8 },
-  
+
   // Legal Pages
   { path: '/privacy/', changefreq: 'yearly', priority: 0.3 },
   { path: '/terms/', changefreq: 'yearly', priority: 0.3 },
@@ -375,7 +375,7 @@ async function fetchBlogCategories() {
 
 function generateFaqRoutes() {
   const routes = [];
-  
+
   // Add FAQ category pages
   faqCategories.forEach(category => {
     routes.push({
@@ -383,17 +383,17 @@ function generateFaqRoutes() {
       changefreq: 'monthly',
       priority: 0.6,
     });
-    
+
     // Add individual FAQ question pages
     category.questions.forEach(questionSlug => {
       routes.push({
-        path: `/faq/${category.slug}/${questionSlug}/`,
+        path: `/faq/${questionSlug}/`,
         changefreq: 'monthly',
         priority: 0.5,
       });
     });
   });
-  
+
   return routes;
 }
 
@@ -416,23 +416,23 @@ ${urlEntries}
 
 async function main() {
   console.log('\n📍 Generating Dynamic Sitemap...\n');
-  
+
   // Fetch published blog posts
   const blogPosts = await fetchPublishedBlogPosts();
   console.log(`[Sitemap] Found ${blogPosts.length} published blog posts`);
-  
+
   // Fetch blog tags
   const blogTags = await fetchBlogTags();
   console.log(`[Sitemap] Found ${blogTags.length} blog tags`);
-  
+
   // Fetch blog categories
   const blogCategories = await fetchBlogCategories();
   console.log(`[Sitemap] Found ${blogCategories.length} blog categories`);
-  
+
   // Generate FAQ routes
   const faqRoutes = generateFaqRoutes();
   console.log(`[Sitemap] Generated ${faqRoutes.length} FAQ routes`);
-  
+
   // Convert blog posts to sitemap routes
   const blogRoutes = blogPosts.map(post => ({
     path: `/blog/${post.slug}/`,
@@ -440,7 +440,7 @@ async function main() {
     priority: 0.7,
     lastmod: post.updated_at ? post.updated_at.split('T')[0] : post.publish_date?.split('T')[0],
   }));
-  
+
   // Convert tags to sitemap routes
   const tagRoutes = blogTags.map(tag => ({
     path: `/blog/tags/${tag.slug}/`,
@@ -448,7 +448,7 @@ async function main() {
     priority: 0.6,
     lastmod: tag.created_at ? tag.created_at.split('T')[0] : undefined,
   }));
-  
+
   // Convert categories to sitemap routes
   const categoryRoutes = blogCategories.map(category => ({
     path: `/blog/category/${category.slug}/`,
@@ -456,24 +456,24 @@ async function main() {
     priority: 0.6,
     lastmod: category.created_at ? category.created_at.split('T')[0] : undefined,
   }));
-  
+
   // Combine static + dynamic routes
   const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...categoryRoutes, ...faqRoutes];
-  
+
   // Generate sitemap XML
   const sitemapXml = generateSitemapXml(allRoutes);
-  
+
   // Write to dist folder
   const distPath = path.resolve(__dirname, '../dist');
   const sitemapPath = path.join(distPath, 'sitemap.xml');
-  
+
   if (!fs.existsSync(distPath)) {
     console.log('[Sitemap] dist folder not found, creating...');
     fs.mkdirSync(distPath, { recursive: true });
   }
-  
+
   fs.writeFileSync(sitemapPath, sitemapXml, 'utf-8');
-  
+
   console.log(`\n✅ Sitemap generated: ${sitemapPath}`);
   console.log(`   Total URLs: ${allRoutes.length}`);
   console.log(`   - Static: ${staticRoutes.length}`);
