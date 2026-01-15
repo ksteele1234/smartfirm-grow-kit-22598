@@ -166,7 +166,7 @@ const PillarPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
           <div className="container mx-auto px-4 max-w-4xl">
-            <Link to="/blog">
+            <Link to="/blog/">
               <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-6">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
@@ -356,12 +356,12 @@ const PillarPage = () => {
               Discover how SmartFirm can help you automate your marketing, attract more clients, and grow your practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/get-started">
+              <Link to="/get-started/">
                 <Button size="lg" className="bg-[hsl(var(--coral))] hover:bg-[hsl(var(--coral))]/90 text-white">
                   Get Started Today
                 </Button>
               </Link>
-              <Link to="/blog">
+              <Link to="/blog/">
                 <Button size="lg" variant="outline">
                   Read More Articles
                 </Button>

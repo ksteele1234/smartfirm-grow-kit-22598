@@ -229,7 +229,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               <a href="/get-started/">Book a Free Call</a>
             </Button>
             <p className="text-xs text-muted-foreground max-w-container-sm mt-1">
-              These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
+              These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms/" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
             </p>
           </div>
         </section>

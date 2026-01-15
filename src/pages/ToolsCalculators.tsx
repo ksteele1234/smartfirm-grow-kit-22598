@@ -310,7 +310,7 @@ const ToolsCalculators = () => {
               </CardHeader>
               <CardContent className="text-center pt-0">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                  <a href="/get-started">
+                  <a href="/get-started/">
                     Get Your Free Strategy Session
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>

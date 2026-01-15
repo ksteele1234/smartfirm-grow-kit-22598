@@ -13,11 +13,11 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import { 
-  TrendingUp, 
-  Users, 
-  Calendar, 
-  Star, 
+import {
+  TrendingUp,
+  Users,
+  Calendar,
+  Star,
   Quote,
   ChevronLeft,
   ChevronRight,
@@ -137,7 +137,7 @@ const SuccessStories = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Success Stories | SmartFirm"
         description="Real results from accounting firms using SmartFirm. See how firms achieved significant growth and operational efficiency."
         pageType="default"
@@ -163,7 +163,7 @@ const SuccessStories = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -180,7 +180,7 @@ const SuccessStories = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       {/* Hero Section */}
       <section className="py-section md:py-28 bg-gradient-vibrant-teal">
         <div className="container mx-auto px-6 text-center">
@@ -197,7 +197,7 @@ const SuccessStories = () => {
               Read All Case Studies
             </Button>
             <Button id="success-stories-inline-book-call-btn" variant="hero" size="hero" asChild>
-              <a href="/get-started">Book a Free Call</a>
+              <a href="/get-started/">Book a Free Call</a>
             </Button>
           </div>
         </div>
@@ -211,7 +211,7 @@ const SuccessStories = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             These aren't just success stories—they're proof of what's possible when you partner with SmartFirm.
-            Every firm featured here started with challenges similar to yours and achieved transformational results 
+            Every firm featured here started with challenges similar to yours and achieved transformational results
             through our proven methodologies and dedicated support.
           </p>
         </div>
@@ -227,11 +227,11 @@ const SuccessStories = () => {
                 Featured Client Achievement
               </h2>
             </div>
-            
+
             <Card className="max-w-4xl mx-auto elevation-1">
               <CardContent className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-md items-center">
-                <div>
+                  <div>
                     <p className="text-2xl font-heading font-bold text-primary mb-4">
                       {featuredCaseStudy.title}
                     </p>
@@ -285,32 +285,32 @@ const SuccessStories = () => {
                 <TabsTrigger value="problem" onClick={() => setSelectedFilter("problem")}>By Challenge</TabsTrigger>
                 <TabsTrigger value="size" onClick={() => setSelectedFilter("size")}>By Firm Size</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="industry" className="mt-4">
                 <div className="flex flex-wrap gap-2 justify-center">
-                  <Button 
-                    variant={selectedCategory === "all" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "all" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("all")}
                   >
                     All Industries
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Tax Preparation" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Tax Preparation" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Tax Preparation")}
                   >
                     Tax Preparation
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Bookkeeping" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Bookkeeping" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Bookkeeping")}
                   >
                     Bookkeeping
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Financial Advisory" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Financial Advisory" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Financial Advisory")}
                   >
@@ -318,32 +318,32 @@ const SuccessStories = () => {
                   </Button>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="problem" className="mt-4">
                 <div className="flex flex-wrap gap-2 justify-center">
-                  <Button 
-                    variant={selectedCategory === "all" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "all" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("all")}
                   >
                     All Challenges
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Lead Generation" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Lead Generation" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Lead Generation")}
                   >
                     Lead Generation
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Operational Efficiency" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Operational Efficiency" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Operational Efficiency")}
                   >
                     Operations
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Client Retention" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Client Retention" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Client Retention")}
                   >
@@ -351,32 +351,32 @@ const SuccessStories = () => {
                   </Button>
                 </div>
               </TabsContent>
-              
+
               <TabsContent value="size" className="mt-4">
                 <div className="flex flex-wrap gap-2 justify-center">
-                  <Button 
-                    variant={selectedCategory === "all" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "all" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("all")}
                   >
                     All Sizes
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Solo" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Solo" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Solo")}
                   >
                     Solo Practice
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Small" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Small" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Small")}
                   >
                     Small Firm
                   </Button>
-                  <Button 
-                    variant={selectedCategory === "Mid-sized" ? "default" : "outline"} 
+                  <Button
+                    variant={selectedCategory === "Mid-sized" ? "default" : "outline"}
                     size="sm"
                     onClick={() => setSelectedCategory("Mid-sized")}
                   >
@@ -429,7 +429,7 @@ const SuccessStories = () => {
               Hear directly from accounting firm owners who have transformed their practices with SmartFirm.
             </p>
           </div>
-          
+
           <Card className="max-w-4xl mx-auto elevation-1">
             <CardContent className="p-8 md:p-12 text-center">
               <Quote className="w-12 h-12 text-primary mx-auto mb-6" />
@@ -444,31 +444,30 @@ const SuccessStories = () => {
                   {testimonials[currentTestimonial].title}, {testimonials[currentTestimonial].firm}
                 </p>
               </div>
-              
+
               <div className="flex items-center justify-center gap-4">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="icon"
                   onClick={prevTestimonial}
                   className="rounded-full"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </Button>
-                
+
                 <div className="flex gap-2">
                   {testimonials.map((_, index) => (
                     <button
                       key={index}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-colors ${index === currentTestimonial ? 'bg-primary' : 'bg-muted-foreground/30'
+                        }`}
                       onClick={() => setCurrentTestimonial(index)}
                     />
                   ))}
                 </div>
-                
-                <Button 
-                  variant="outline" 
+
+                <Button
+                  variant="outline"
                   size="icon"
                   onClick={nextTestimonial}
                   className="rounded-full"
@@ -492,7 +491,7 @@ const SuccessStories = () => {
           </p>
           <Button id="success-stories-final-book-call-btn" variant="white-on-dark" size="hero" asChild>
             <Calendar className="w-5 h-5 mr-2" />
-            <a href="/get-started">Book a Free Call</a>
+            <a href="/get-started/">Book a Free Call</a>
           </Button>
         </div>
       </section>

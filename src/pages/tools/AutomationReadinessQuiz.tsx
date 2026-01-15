@@ -71,7 +71,7 @@ const AutomationReadinessQuiz = () => {
 
   const handleAnswer = (answer: boolean) => {
     setAnswers(prev => ({ ...prev, [questions[currentQuestion].id]: answer }));
-    
+
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
     } else {
@@ -127,7 +127,7 @@ const AutomationReadinessQuiz = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Automation Readiness Quiz Results | SmartFirm"
           description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
           canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz"
@@ -138,11 +138,11 @@ const AutomationReadinessQuiz = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-2xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Automation Readiness Score</CardTitle>
@@ -189,7 +189,7 @@ const AutomationReadinessQuiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Automation Readiness Assessment for Accountants"
         description="Discover if you're ready for automation with our readiness assessment for accountants evaluating processes, technology, team, and client base for automation."
         canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz"
@@ -200,18 +200,18 @@ const AutomationReadinessQuiz = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment For Accountants</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               Our automation readiness assessment for accountants evaluates your current processes, technology infrastructure, team capabilities, and client base to determine your optimal automation strategy and implementation timeline.
             </p>
           </div>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Automation Readiness Quiz</CardTitle>
@@ -247,15 +247,15 @@ const AutomationReadinessQuiz = () => {
                 </RadioGroup>
 
                 <div className="flex space-x-3 pt-4">
-                  <Button 
+                  <Button
                     onClick={() => handleAnswer(true)}
                     className="flex-1 bg-green-600 hover:bg-green-700"
                   >
                     Yes
                   </Button>
-                  <Button 
+                  <Button
                     onClick={() => handleAnswer(false)}
-                    variant="outline" 
+                    variant="outline"
                     className="flex-1"
                   >
                     No

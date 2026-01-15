@@ -168,7 +168,7 @@ const AddOns = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -179,7 +179,7 @@ const AddOns = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms">Services</BreadcrumbLink>
+                <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms/">Services</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -189,7 +189,7 @@ const AddOns = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-section md:py-28 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
@@ -199,26 +199,26 @@ const AddOns = () => {
             <Badge className="mb-6 bg-gradient-vibrant-teal text-white">
               Flexible & Scalable
             </Badge>
-            
+
             <h1 className="text-display font-bold text-primary mb-6">
               Automation & Marketing Add-Ons for Accounting Firms
             </h1>
-            
+
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
                 Scale your marketing with flexible add-on services: blogs, paid ads, newsletters, chatbots, social media, and more. No long-term commitments required.
               </p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
-                <a href="/contact">
+                <a href="/contact/">
                   Request Custom Quote
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="group" asChild>
-                <a href="/quick-start-marketing-for-cpa-firms">
+                <a href="/quick-start-marketing-for-cpa-firms/">
                   View Quick Start Package
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -238,7 +238,7 @@ const AddOns = () => {
                 Scale your marketing at your own pace with specialized services that complement your existing foundation.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-md max-w-container-2xl mx-auto">
               {benefits.map((benefit, index) => (
                 <Card key={index} className="border-border bg-gradient-to-br from-background to-primary/5">
@@ -268,7 +268,7 @@ const AddOns = () => {
                 Choose from our comprehensive suite of specialized marketing services for accounting firms.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-3xl mx-auto">
               {addOnServices.map((service, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
@@ -310,23 +310,23 @@ const AddOns = () => {
               Let's discuss which add-on services will drive the best results for your accounting firm.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-on-dark"
                 className="group font-semibold"
                 asChild
               >
-                <a href="/contact">
+                <a href="/contact/">
                   Request Custom Quote
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book Strategy Call
                 </a>
               </Button>

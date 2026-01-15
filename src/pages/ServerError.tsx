@@ -17,13 +17,13 @@ const ServerError = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEO 
+      <SEO
         title="Error 500: Server Error"
         description="We're experiencing technical difficulties. Our team has been notified and is working to resolve the issue."
         robots="noindex,nofollow"
       />
       <Header />
-      
+
       <main className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl w-full text-center">
           {/* Error Icon */}
@@ -37,7 +37,7 @@ const ServerError = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Error 500: Internal Server Error
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
             Oops! Something went wrong on our end. We've been notified and are working to fix it.
           </p>
@@ -90,7 +90,7 @@ const ServerError = () => {
               <RefreshCw className="mr-2 h-5 w-5" />
               Refresh Page
             </Button>
-            
+
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
               <a href="/">
                 <Home className="mr-2 h-5 w-5" />
@@ -99,7 +99,7 @@ const ServerError = () => {
             </Button>
 
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/contact">
+              <a href="/contact/">
                 Contact Support
               </a>
             </Button>

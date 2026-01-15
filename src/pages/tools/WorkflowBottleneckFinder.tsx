@@ -88,13 +88,13 @@ const WorkflowBottleneckFinder = () => {
 
   const calculateTotalTimeWasted = () => {
     let totalMinutesPerWeek = 0;
-    
+
     workflowAreas.forEach(area => {
       area.tasks.forEach(task => {
         if (selectedTasks.has(task.id)) {
           const timeStr = task.timeWasted;
           let minutesPerWeek = 0;
-          
+
           if (timeStr.includes('hour')) {
             const hours = parseFloat(timeStr.match(/[\d.]+/)?.[0] || '0');
             if (timeStr.includes('/client')) {
@@ -116,12 +116,12 @@ const WorkflowBottleneckFinder = () => {
               minutesPerWeek = minutes * 20;
             }
           }
-          
+
           totalMinutesPerWeek += minutesPerWeek;
         }
       });
     });
-    
+
     return {
       hoursPerWeek: Math.round(totalMinutesPerWeek / 60 * 10) / 10,
       hoursPerMonth: Math.round(totalMinutesPerWeek / 60 * 4.33 * 10) / 10,
@@ -131,7 +131,7 @@ const WorkflowBottleneckFinder = () => {
 
   const getRecommendations = () => {
     const recommendations = [];
-    
+
     workflowAreas.forEach(area => {
       const areaSelectedTasks = area.tasks.filter(task => selectedTasks.has(task.id));
       if (areaSelectedTasks.length > 0) {
@@ -154,7 +154,7 @@ const WorkflowBottleneckFinder = () => {
         }
       }
     });
-    
+
     return recommendations;
   };
 
@@ -165,7 +165,7 @@ const WorkflowBottleneckFinder = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Workflow Bottleneck Finder Results | SmartFirm"
           description="Your workflow analysis results with time savings recommendations for your accounting firm."
           canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder"
@@ -176,11 +176,11 @@ const WorkflowBottleneckFinder = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Workflow Analysis Results</CardTitle>
@@ -251,7 +251,7 @@ const WorkflowBottleneckFinder = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Comprehensive SEO Audit for Accounting Firms"
         description="Complete our accounting firm workflow audit identifying bottlenecks, redundancies, manual tasks, and automation opportunities across your client delivery process."
         canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder"
@@ -262,18 +262,18 @@ const WorkflowBottleneckFinder = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Workflow Audit | SmartFirm</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               This accounting firm workflow audit maps your entire client delivery process, identifies bottlenecks and redundancies, highlights manual tasks ripe for automation, and recommends efficiency improvements.
             </p>
           </div>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Workflow Bottleneck Finder</CardTitle>
@@ -314,10 +314,10 @@ const WorkflowBottleneckFinder = () => {
                 ))}
 
                 <div className="pt-6 border-t">
-                  <Button 
+                  <Button
                     onClick={() => setShowResults(true)}
                     disabled={selectedTasks.size === 0}
-                    size="lg" 
+                    size="lg"
                     className="w-full bg-primary hover:bg-primary/90"
                   >
                     Analyze My Workflow ({selectedTasks.size} bottlenecks selected)

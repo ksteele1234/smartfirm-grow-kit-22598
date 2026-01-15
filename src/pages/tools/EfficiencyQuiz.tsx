@@ -35,7 +35,7 @@ const EfficiencyQuiz = () => {
       ]
     },
     {
-      id: "billing_2", 
+      id: "billing_2",
       category: "billing",
       question: "How often do you send invoices to clients?",
       options: [
@@ -47,7 +47,7 @@ const EfficiencyQuiz = () => {
     },
     {
       id: "client_1",
-      category: "client", 
+      category: "client",
       question: "How do you manage client communications and documents?",
       options: [
         { value: "email_folders", label: "Email folders and local file storage", score: 1 },
@@ -80,7 +80,7 @@ const EfficiencyQuiz = () => {
     },
     {
       id: "marketing_2",
-      category: "marketing", 
+      category: "marketing",
       question: "How do you follow up with potential clients?",
       options: [
         { value: "no_system", label: "No formal follow-up system", score: 1 },
@@ -163,10 +163,10 @@ const EfficiencyQuiz = () => {
 
   if (showResults) {
     const { categoryPercentages, overallScore } = calculateResults();
-    
+
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Efficiency Quiz | SmartFirm"
           description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
           canonicalUrl="https://smartfirm.io/tools/efficiency-quiz"
@@ -226,13 +226,13 @@ const EfficiencyQuiz = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                      <a href="/get-started">
+                      <a href="/get-started/">
                         Book Your Strategy Session
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
                     <Button size="lg" variant="outline" asChild>
-                      <a href="/tools">
+                      <a href="/tools/">
                         Take Another Assessment
                         <BarChart3 className="ml-2 h-4 w-4" />
                       </a>
@@ -263,56 +263,56 @@ const EfficiencyQuiz = () => {
         <div className="container mx-auto max-w-2xl">
           <div className="mb-8">
             <Button variant="ghost" asChild className="mb-4">
-              <a href="/tools">
+              <a href="/tools/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Tools
               </a>
             </Button>
             <h2 className="text-3xl font-bold text-primary mb-4">Answer These Questions</h2>
-              <Progress value={progress} className="mb-4" />
-              <p className="text-muted-foreground">
-                Question {currentQuestion + 1} of {questions.length}
-              </p>
-            </div>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">{currentQ.question}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <RadioGroup value={currentAnswer || ""} onValueChange={handleAnswerChange}>
-                  {currentQ.options.map((option) => (
-                    <div key={option.value} className="flex items-center space-x-2">
-                      <RadioGroupItem value={option.value} id={option.value} />
-                      <Label htmlFor={option.value} className="flex-1 cursor-pointer">
-                        {option.label}
-                      </Label>
-                    </div>
-                  ))}
-                </RadioGroup>
-
-                <div className="flex justify-between pt-4">
-                  <Button 
-                    variant="outline" 
-                    onClick={prevQuestion}
-                    disabled={currentQuestion === 0}
-                  >
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Previous
-                  </Button>
-                  <Button 
-                    onClick={nextQuestion}
-                    disabled={!currentAnswer}
-                    className="bg-primary hover:bg-primary/90"
-                  >
-                    {currentQuestion === questions.length - 1 ? "Get Results" : "Next"}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <Progress value={progress} className="mb-4" />
+            <p className="text-muted-foreground">
+              Question {currentQuestion + 1} of {questions.length}
+            </p>
           </div>
-        </section>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl">{currentQ.question}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <RadioGroup value={currentAnswer || ""} onValueChange={handleAnswerChange}>
+                {currentQ.options.map((option) => (
+                  <div key={option.value} className="flex items-center space-x-2">
+                    <RadioGroupItem value={option.value} id={option.value} />
+                    <Label htmlFor={option.value} className="flex-1 cursor-pointer">
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+
+              <div className="flex justify-between pt-4">
+                <Button
+                  variant="outline"
+                  onClick={prevQuestion}
+                  disabled={currentQuestion === 0}
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Previous
+                </Button>
+                <Button
+                  onClick={nextQuestion}
+                  disabled={!currentAnswer}
+                  className="bg-primary hover:bg-primary/90"
+                >
+                  {currentQuestion === questions.length - 1 ? "Get Results" : "Next"}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </ToolPageWrapper>
   );
 };

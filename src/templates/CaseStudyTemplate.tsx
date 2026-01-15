@@ -68,7 +68,7 @@ export interface CaseStudyTemplateProps {
   seoTitle: string;
   seoDescription: string;
   canonicalUrl: string;
-  
+
   // Hero
   badgeText: string;
   heroTitle: string;
@@ -76,30 +76,30 @@ export interface CaseStudyTemplateProps {
   heroCTAText: string;
   heroCTALink: string;
   heroCTAId: string;
-  
+
   // Stats
   stats: CaseStudyStat[];
-  
+
   // Challenge
   challengeTitle: string;
   challengeSubtitle: string;
   challengeDescription: string;
   challengePainPoints: ChallengePainPoint[];
   challengeVisualDescription: string;
-  
+
   // Solution
   solutionTitle: string;
   solutionDescription: string;
   solutionItems: SolutionItem[];
-  
+
   // Financial Impact
   financialTitle: string;
   financialSubtitle: string;
   financialData: FinancialData;
-  
+
   // Quote
   quote: CaseStudyQuote;
-  
+
   // Footer CTA
   footerCTATitle: string;
   footerCTADescription: string;
@@ -141,23 +141,23 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
 }) => {
   return (
     <>
-      <SEO 
+      <SEO
         title={seoTitle}
         description={seoDescription}
         canonicalUrl={canonicalUrl}
       />
-      
+
       <Header />
-      
+
       <div className="min-h-screen bg-background text-foreground overflow-x-hidden font-body selection:bg-primary/10">
-        
+
         {/* ==================== HERO SECTION ==================== */}
         <section className="relative pt-16 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-mesh-professional opacity-5 -z-10"></div>
-          
+
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              
+
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent border border-accent/20 mb-8">
                 <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
                 <span className="text-sm font-semibold tracking-wide uppercase">{badgeText}</span>
@@ -172,7 +172,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
+                <Link
                   to={heroCTALink}
                   id={heroCTAId}
                   className="w-full sm:w-auto px-8 py-4 bg-gradient-coral text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
@@ -187,8 +187,8 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   <Download size={20} />
                   Download PDF
                 </a>
-                <Link 
-                  to="/services/ai-transformation-roadmap"
+                <Link
+                  to="/services/ai-transformation-roadmap/"
                   className="w-full sm:w-auto px-8 py-4 bg-gradient-gold text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
                 >
                   Learn More about our process
@@ -224,13 +224,13 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-primary mb-6">
-                  {challengeTitle} <br/>
+                  {challengeTitle} <br />
                   <span className="text-secondary font-light">{challengeSubtitle}</span>
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   {challengeDescription}
                 </p>
-                
+
                 <div className="space-y-4">
                   {challengePainPoints.map((point, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-accent/10 rounded-lg border border-accent/20">
@@ -243,7 +243,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative h-full min-h-[400px] bg-muted rounded-2xl border border-border p-8 flex flex-col items-center justify-center text-center shadow-inner">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-radial from-muted-foreground/20 to-transparent opacity-50 blur-2xl"></div>
                 <div className="grid grid-cols-2 gap-8 mb-8 max-w-lg mx-auto">
@@ -269,7 +269,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         {/* ==================== THE SOLUTION ==================== */}
         <section className="py-20 lg:py-32 bg-secondary text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
-          
+
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">{solutionTitle}</h2>
@@ -306,14 +306,14 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
             <div className="max-w-6xl mx-auto">
               <div className="relative">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                  
+
                   {/* BEFORE CARD - Larger & More Readable */}
                   <div className="bg-muted/30 border border-border/50 rounded-2xl p-6 md:p-8 opacity-75 scale-100 lg:scale-95 transition-all">
                     <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
                       <h3 className="text-xl font-bold text-muted-foreground">Before Automation</h3>
                       <span className="text-sm font-medium text-muted-foreground">Manual Process</span>
                     </div>
-                    
+
                     <div className="space-y-6">
                       <div className="flex justify-between items-end">
                         <div>
@@ -322,7 +322,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                         </div>
                         <p className="text-muted-foreground text-sm">{financialData.before.managerCost}</p>
                       </div>
-                      
+
                       <div className="flex justify-between items-end">
                         <div>
                           <p className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Data Entry</p>
@@ -351,7 +351,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                       <h3 className="text-2xl font-bold text-primary">After Automation</h3>
                       <span className="text-sm font-medium text-primary">SmartFirm Flow</span>
                     </div>
-                    
+
                     <div className="space-y-6">
                       <div className="flex justify-between items-end">
                         <div>
@@ -360,7 +360,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                         </div>
                         <p className="text-accent-gold font-bold text-base">{financialData.after.managerCost}</p>
                       </div>
-                      
+
                       <div className="flex justify-between items-end">
                         <div>
                           <p className="text-xs uppercase tracking-wider text-primary/70 font-semibold">Data Entry</p>
@@ -385,8 +385,8 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   </div>
                 </div>
 
-                </div>
-              
+              </div>
+
               {/* ROI BAR */}
               <div className="mt-12 bg-secondary rounded-xl p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-white/5"></div>
@@ -414,8 +414,8 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
             <div className="max-w-3xl mx-auto">
               <div className="text-6xl text-white opacity-50 font-serif mb-4">"</div>
               <h3 className="text-3xl md:text-4xl font-bold leading-snug mb-8 text-white">
-                {quote.text} <br/>
-                <span className="text-accent">{quote.highlightedText}</span><br/>
+                {quote.text} <br />
+                <span className="text-accent">{quote.highlightedText}</span><br />
                 {quote.remainingText}
               </h3>
               <div className="flex items-center justify-center gap-4">
@@ -447,7 +447,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                     {footerCTAButtonText}
                   </Link>
                   <Link
-                    to="/services/ai-transformation-roadmap"
+                    to="/services/ai-transformation-roadmap/"
                     className="inline-block px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/20 transition-all"
                   >
                     Learn More about our process
@@ -461,7 +461,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
           </div>
         </section>
       </div>
-      
+
       <Footer />
     </>
   );

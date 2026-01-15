@@ -109,7 +109,7 @@ const LeadGenerationScorecard = () => {
 
   const handleAnswer = (points: number) => {
     setAnswers(prev => ({ ...prev, [questions[currentQuestion].id]: points }));
-    
+
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
     } else {
@@ -128,27 +128,27 @@ const LeadGenerationScorecard = () => {
   };
 
   const getScoreCategory = (percentage: number) => {
-    if (percentage >= 80) return { 
-      level: "Lead Generation Champion", 
-      color: "text-green-600", 
+    if (percentage >= 80) return {
+      level: "Lead Generation Champion",
+      color: "text-green-600",
       description: "You have a strong lead generation system!",
       emoji: "🚀"
     };
-    if (percentage >= 60) return { 
-      level: "Growing Pipeline", 
-      color: "text-blue-600", 
+    if (percentage >= 60) return {
+      level: "Growing Pipeline",
+      color: "text-blue-600",
       description: "Good foundation with room for optimization.",
       emoji: "📈"
     };
-    if (percentage >= 40) return { 
-      level: "Inconsistent Flow", 
-      color: "text-yellow-600", 
+    if (percentage >= 40) return {
+      level: "Inconsistent Flow",
+      color: "text-yellow-600",
       description: "Some lead generation happening, but inconsistent.",
       emoji: "⚠️"
     };
-    return { 
-      level: "Lead Generation Crisis", 
-      color: "text-red-600", 
+    return {
+      level: "Lead Generation Crisis",
+      color: "text-red-600",
       description: "Your growth is at risk without more leads.",
       emoji: "🚨"
     };
@@ -194,7 +194,7 @@ const LeadGenerationScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Lead Generation Scorecard Results | SmartFirm"
           description="Your lead generation assessment results with recommendations to improve your accounting firm's marketing."
           canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard"
@@ -205,11 +205,11 @@ const LeadGenerationScorecard = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-3xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Lead Generation Score</CardTitle>
@@ -239,7 +239,7 @@ const LeadGenerationScorecard = () => {
                       </p>
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="bg-green-50 border-green-200">
                     <CardContent className="p-6">
                       <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-3" />
@@ -273,7 +273,7 @@ const LeadGenerationScorecard = () => {
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-red-700 mb-3">⚠️ Growth Warning</h3>
                       <p className="text-sm text-red-700">
-                        Your current lead generation is insufficient for sustainable growth. Most successful firms generate 10-20 qualified leads per month with a 30%+ conversion rate. 
+                        Your current lead generation is insufficient for sustainable growth. Most successful firms generate 10-20 qualified leads per month with a 30%+ conversion rate.
                         Without improvement, you may struggle to replace departing clients and scale your practice.
                       </p>
                     </CardContent>
@@ -300,7 +300,7 @@ const LeadGenerationScorecard = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Lead Generation Scorecard | SmartFirm"
         description="Assess your accounting firm's lead generation effectiveness. Get scored recommendations for improvement."
         canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard"
@@ -311,18 +311,18 @@ const LeadGenerationScorecard = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Lead Generation Scorecard</h1>
           <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
             <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
             <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
           </p>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Lead Generation Scorecard</CardTitle>
@@ -356,10 +356,10 @@ const LeadGenerationScorecard = () => {
 
                 <div className="grid grid-cols-1 gap-3 pt-4">
                   {questions[currentQuestion].options.map((option) => (
-                    <Button 
+                    <Button
                       key={option.value}
                       onClick={() => handleAnswer(option.points)}
-                      variant="outline" 
+                      variant="outline"
                       className="text-left justify-start h-auto p-4 hover:bg-primary/5"
                     >
                       <div>

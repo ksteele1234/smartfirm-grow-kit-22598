@@ -86,8 +86,8 @@ const PricingHeroFull = () => {
               <div className="space-y-4">
                 {featuresColumn1.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 
-                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                    <CheckCircle2
+                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5"
                       style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                     />
                     <span className="text-[16px] font-body text-slate-700 leading-relaxed">
@@ -101,8 +101,8 @@ const PricingHeroFull = () => {
               <div className="space-y-4">
                 {featuresColumn2.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 
-                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                    <CheckCircle2
+                      className="w-6 h-6 text-primary flex-shrink-0 mt-0.5"
                       style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                     />
                     <span className="text-[16px] font-body text-slate-700 leading-relaxed">
@@ -115,13 +115,13 @@ const PricingHeroFull = () => {
           </div>
 
           {/* CTA Button */}
-          <Button 
+          <Button
             id="pricing-hero-book-call-btn"
             asChild
             size="lg"
             className="w-full bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
           >
-            <Link to="/get-started">
+            <Link to="/get-started/">
               Book a Free Call
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

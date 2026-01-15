@@ -41,10 +41,10 @@ const Services = () => {
     description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
     link: "/services/packages"
   }];
-  
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Firm Automation & Growth Services for Accounting Firms"
         description="Explore firm automation and growth services for accounting firms: workflow optimization, client systems, technology integration, and scalable operations."
         canonicalUrl="https://smartfirm.io/leading-marketing-services-for-accounting-firms"
@@ -93,13 +93,13 @@ const Services = () => {
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button id="services-hero-book-call-btn" variant="coral" size="hero" asChild>
-                <Link to="/get-started">
+                <Link to="/get-started/">
                   Book a free call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="secondary" size="hero" asChild>
-                <Link to="/services/all-professional-marketing-services-for-accounting-firms">
+                <Link to="/services/all-professional-marketing-services-for-accounting-firms/">
                   Explore all services
                 </Link>
               </Button>
@@ -114,8 +114,8 @@ const Services = () => {
               Our Core Service Areas
             </h2>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              SmartFirm takes a holistic approach to supporting accounting firms. Our comprehensive suite of services works together 
-              to create a unified growth strategy that addresses every aspect of your practice, from marketing and technology 
+              SmartFirm takes a holistic approach to supporting accounting firms. Our comprehensive suite of services works together
+              to create a unified growth strategy that addresses every aspect of your practice, from marketing and technology
               to business optimization and executive leadership.
             </p>
           </div>
@@ -125,51 +125,51 @@ const Services = () => {
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg mb-8">
               {serviceCategories.slice(0, 3).map((category, index) => <Card key={index} className="group card-interactive border-border h-full bg-gradient-to-br from-background to-primary/5">
-                  <CardHeader className="text-center pb-6 px-8 pt-8">
-                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
-                      {category.icon}
-                    </div>
-                    <CardTitle className="text-xl text-foreground mb-4">
-                      {category.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
-                      {category.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0 mt-auto px-8 pb-8">
-                    <Button variant="outline" className="w-full" asChild>
-                      <a href={category.link}>
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>)}
+                <CardHeader className="text-center pb-6 px-8 pt-8">
+                  <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-primary/20 to-teal/20 w-fit">
+                    {category.icon}
+                  </div>
+                  <CardTitle className="text-xl text-foreground mb-4">
+                    {category.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                    {category.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0 mt-auto px-8 pb-8">
+                  <Button variant="outline" className="w-full" asChild>
+                    <a href={category.link}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>)}
             </div>
-            
+
             {/* Second row - 2 cards taking full width */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-md lg:gap-lg">
               {serviceCategories.slice(3).map((category, index) => <Card key={index + 3} className="group card-interactive border-border h-full bg-gradient-to-br from-background to-teal/5">
-                  <CardHeader className="text-center pb-6 px-8 pt-8">
-                    <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
-                      {category.icon}
-                    </div>
-                    <CardTitle className="text-xl text-foreground mb-4">
-                      {category.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground leading-relaxed text-base">
-                      {category.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0 mt-auto px-8 pb-8">
-                    <Button variant="outline" className="w-full" asChild>
-                      <a href={category.link}>
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>)}
+                <CardHeader className="text-center pb-6 px-8 pt-8">
+                  <div className="mx-auto mb-6 p-4 rounded-lg bg-gradient-to-br from-teal/20 to-primary/20 w-fit">
+                    {category.icon}
+                  </div>
+                  <CardTitle className="text-xl text-foreground mb-4">
+                    {category.title}
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground leading-relaxed text-base">
+                    {category.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0 mt-auto px-8 pb-8">
+                  <Button variant="outline" className="w-full" asChild>
+                    <a href={category.link}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>)}
             </div>
           </div>
         </section>
@@ -203,8 +203,8 @@ const Services = () => {
                     AI-Powered Marketing Automation
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Transform your accounting firm's marketing with intelligent automation that works 24/7. From predictive lead scoring to 
-                    automated email campaigns and smart social media management, our AI-driven system helps you attract, nurture, and convert 
+                    Transform your accounting firm's marketing with intelligent automation that works 24/7. From predictive lead scoring to
+                    automated email campaigns and smart social media management, our AI-driven system helps you attract, nurture, and convert
                     more clients while you focus on serving them.
                   </CardDescription>
                 </CardHeader>
@@ -234,7 +234,7 @@ const Services = () => {
                         </li>
                       </ul>
                     </div>
-                    
+
                     <div className="bg-accent/30 p-8 rounded-lg">
                       <h4 className="font-semibold text-foreground mb-6 flex items-center text-lg">
                         <BarChart3 className="h-5 w-5 mr-2" />
@@ -256,10 +256,10 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="text-center pt-6">
                     <Button variant="hero" size="lg" asChild>
-                      <a href="/services/automated-lead-follow-up-for-cpas">
+                      <a href="/services/automated-lead-follow-up-for-cpas/">
                         Learn More About This Service
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -278,7 +278,7 @@ const Services = () => {
               <div className="bg-gradient-to-r from-primary/5 to-teal/5 p-8 md:p-12 rounded-lg border border-border">
                 <div className="mb-6">
                   <blockquote className="text-lg md:text-xl text-muted-foreground italic mb-6">
-                    "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours, 
+                    "SmartFirm's services transformed how we operate. Their automated systems handle tasks that used to take us hours,
                     and our client satisfaction has never been higher. We've grown 40% this year alone."
                   </blockquote>
                   <div className="flex items-center justify-center">
@@ -310,7 +310,7 @@ const Services = () => {
                 </a>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <a href="/solutions-expert-marketing-agency-for-accounting-firms">
+                <a href="/solutions-expert-marketing-agency-for-accounting-firms/">
                   Explore Our Solutions
                 </a>
               </Button>
@@ -330,7 +330,7 @@ const Services = () => {
                   Common questions accounting firms have about our marketing automation and technology solutions.
                 </p>
               </div>
-              
+
               <Accordion type="single" collapsible className="space-y-4">
                 <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
                   <AccordionTrigger className="text-left text-sm">

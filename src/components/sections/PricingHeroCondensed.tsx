@@ -42,17 +42,17 @@ const PricingHeroCondensed = () => {
             {/* Pricing Display */}
             <div className="mb-8 pb-8 border-b border-slate-200">
               <div className="flex items-baseline gap-2 mb-2">
-              <span className="text-[48px] md:text-[72px] leading-none font-[800] font-heading text-slate-900">
-                $1,200
-              </span>
+                <span className="text-[48px] md:text-[72px] leading-none font-[800] font-heading text-slate-900">
+                  $1,200
+                </span>
                 <span className="text-[24px] md:text-[32px] font-[600] font-heading text-slate-600">
                   /month
                 </span>
               </div>
               <div className="flex items-baseline gap-3 mb-3">
-              <span className="text-[28px] md:text-[48px] font-[700] font-heading text-slate-900">
-                +$14,500
-              </span>
+                <span className="text-[28px] md:text-[48px] font-[700] font-heading text-slate-900">
+                  +$14,500
+                </span>
                 <span className="text-[18px] md:text-[20px] font-[500] text-slate-600">
                   setup
                 </span>
@@ -66,8 +66,8 @@ const PricingHeroCondensed = () => {
             <ul className="space-y-4 mb-8">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <CheckCircle2 
-                    className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" 
+                  <CheckCircle2
+                    className="w-6 h-6 text-primary flex-shrink-0 mt-0.5"
                     style={{ filter: 'drop-shadow(var(--glow-teal))' }}
                   />
                   <span className="text-[16px] font-body text-slate-700 leading-relaxed">
@@ -78,12 +78,12 @@ const PricingHeroCondensed = () => {
             </ul>
 
             {/* CTA Button */}
-            <Button 
+            <Button
               asChild
               size="lg"
               className="w-full bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
             >
-              <Link to="/quick-start-marketing-for-cpa-firms">
+              <Link to="/quick-start-marketing-for-cpa-firms/">
                 Learn About the QuickStart Package
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

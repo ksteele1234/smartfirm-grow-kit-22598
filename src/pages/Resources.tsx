@@ -11,12 +11,12 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  ArrowRight, 
-  BookOpen, 
-  Calculator, 
-  FileText, 
-  BarChart3, 
+import {
+  ArrowRight,
+  BookOpen,
+  Calculator,
+  FileText,
+  BarChart3,
   Video,
   Download,
   Star,
@@ -83,7 +83,7 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Accounting Firm Automation Resources | SmartFirm"
         description="Accounting firm automation resources including free guides, tools, calculators, and expert insights to help you scale efficiently with proven strategies."
         pageType="default"
@@ -95,7 +95,7 @@ const Resources = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -112,7 +112,7 @@ const Resources = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
@@ -146,8 +146,8 @@ const Resources = () => {
                 Your Hub for Accounting Firm Success
               </h2>
               <p className="text-lg text-muted-foreground text-center leading-relaxed">
-                SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies. 
-                Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations, 
+                SmartFirm's resource library is your go-to destination for actionable insights, practical tools, and proven strategies.
+                Whether you're looking to automate your marketing, optimize your technology stack, or scale your operations,
                 our expert-curated content provides the guidance you need to succeed.
               </p>
               <p className="text-lg text-muted-foreground text-center leading-relaxed">
@@ -175,17 +175,17 @@ const Resources = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 mt-auto px-8 pb-8">
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        asChild
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      asChild
                     >
                       <a href={category.link}>
                         {category.title === "Guides & Whitepapers" ? "View All Guides" :
-                         category.title === "Tools & Calculators" ? "View All Tools" :
-                         category.title === "Blog" ? "Read Our Blog" :
-                         category.title === "FAQ" ? "View FAQs" :
-                         "Watch Webinars"}
+                          category.title === "Tools & Calculators" ? "View All Tools" :
+                            category.title === "Blog" ? "Read Our Blog" :
+                              category.title === "FAQ" ? "View FAQs" :
+                                "Watch Webinars"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
@@ -212,7 +212,7 @@ const Resources = () => {
                         The Ultimate Guide to Automated Lead Generation
                       </h3>
                       <p className="text-white/90 mb-8 text-lg leading-relaxed">
-                        A comprehensive 50-page guide covering everything from lead magnets to nurture sequences. 
+                        A comprehensive 50-page guide covering everything from lead magnets to nurture sequences.
                         Learn how top accounting firms are generating 3x more qualified leads with automation.
                       </p>
                       <div className="flex items-center text-white/80 mb-6">
@@ -263,7 +263,7 @@ const Resources = () => {
                 Stay up-to-date with the latest trends, strategies, and insights for growing your accounting practice.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md lg:gap-lg mb-16">
               {blogPosts.map((post, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
@@ -282,8 +282,8 @@ const Resources = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 px-8 pb-8">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       size="sm"
                       className="group-hover:bg-primary group-hover:text-primary-foreground color-transition border-primary text-primary"
                     >
@@ -297,7 +297,7 @@ const Resources = () => {
 
             <div className="text-center">
               <Button id="resources-book-call-btn" variant="outline" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -316,15 +316,15 @@ const Resources = () => {
                     Stay Ahead of the Curve
                   </CardTitle>
                   <CardDescription className="text-muted-foreground text-lg leading-relaxed">
-                    Get our latest resources and insights delivered straight to your inbox. 
+                    Get our latest resources and insights delivered straight to your inbox.
                     Join thousands of accounting professionals who trust SmartFirm for industry updates.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="px-10 pb-10">
                   <div className="flex flex-col sm:flex-row gap-sm">
-                    <Input 
-                      type="email" 
-                      placeholder="Enter your email address" 
+                    <Input
+                      type="email"
+                      placeholder="Enter your email address"
                       className="flex-1 h-12"
                     />
                     <Button size="lg" variant="hero">

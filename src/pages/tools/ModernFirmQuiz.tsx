@@ -12,7 +12,7 @@ import SEO from "@/components/SEO";
 
 const categories = {
   tech: "Technology Adoption",
-  marketing: "Marketing Sophistication", 
+  marketing: "Marketing Sophistication",
   efficiency: "Operational Efficiency"
 };
 
@@ -135,7 +135,7 @@ const ModernFirmQuiz = () => {
 
   const handleAnswer = (points: number) => {
     setAnswers(prev => ({ ...prev, [questions[currentQuestion].id]: points }));
-    
+
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
     } else {
@@ -168,27 +168,27 @@ const ModernFirmQuiz = () => {
   };
 
   const getModernityLevel = (score: number) => {
-    if (score >= 80) return { 
-      level: "Future-Ready Firm", 
-      color: "text-green-600", 
+    if (score >= 80) return {
+      level: "Future-Ready Firm",
+      color: "text-green-600",
       description: "You're ahead of the curve!",
       emoji: "🚀"
     };
-    if (score >= 60) return { 
-      level: "Modern Practice", 
-      color: "text-blue-600", 
+    if (score >= 60) return {
+      level: "Modern Practice",
+      color: "text-blue-600",
       description: "Good technology adoption with room to grow.",
       emoji: "💻"
     };
-    if (score >= 40) return { 
-      level: "Modernizing Firm", 
-      color: "text-yellow-600", 
+    if (score >= 40) return {
+      level: "Modernizing Firm",
+      color: "text-yellow-600",
       description: "Making progress but falling behind competitors.",
       emoji: "⚡"
     };
-    return { 
-      level: "Traditional Practice", 
-      color: "text-red-600", 
+    return {
+      level: "Traditional Practice",
+      color: "text-red-600",
       description: "Significant modernization needed to stay competitive.",
       emoji: "📋"
     };
@@ -227,7 +227,7 @@ const ModernFirmQuiz = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Modern Firm Quiz Results | SmartFirm"
           description="Your firm modernization assessment with technology adoption recommendations for accounting firms."
           canonicalUrl="https://smartfirm.io/tools/modern-firm-quiz"
@@ -238,11 +238,11 @@ const ModernFirmQuiz = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Firm Modernity Score</CardTitle>
@@ -267,7 +267,7 @@ const ModernFirmQuiz = () => {
                       <Progress value={scores.tech} className="mt-2" />
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="text-center">
                     <CardContent className="p-6">
                       <Zap className="h-8 w-8 text-purple-600 mx-auto mb-3" />
@@ -276,7 +276,7 @@ const ModernFirmQuiz = () => {
                       <Progress value={scores.marketing} className="mt-2" />
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="text-center">
                     <CardContent className="p-6">
                       <Clock className="h-8 w-8 text-green-600 mx-auto mb-3" />
@@ -306,7 +306,7 @@ const ModernFirmQuiz = () => {
                     <CardContent className="p-6">
                       <h3 className="font-semibold text-yellow-700 mb-3">⚠️ Competitive Risk</h3>
                       <p className="text-sm text-yellow-700">
-                        Your firm may be losing clients to more modern competitors. Today's clients expect digital convenience, 
+                        Your firm may be losing clients to more modern competitors. Today's clients expect digital convenience,
                         online access, and efficient processes. Modernizing your practice isn't just about efficiency—it's about survival and growth.
                       </p>
                     </CardContent>
@@ -333,7 +333,7 @@ const ModernFirmQuiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Modern Accounting Firm Assessment Tool | SmartFirm"
         description="Rate your practice with our modern accounting firm assessment measuring technology adoption, client experience, service delivery, and competitive positioning."
         canonicalUrl="https://smartfirm.io/tools/modern-firm-quiz"
@@ -344,18 +344,18 @@ const ModernFirmQuiz = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Modern Accounting Firm Assessment</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               This modern accounting firm assessment measures your technology adoption, client experience quality, service delivery methods, and competitive positioning to show how you compare to modern practices.
             </p>
           </div>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary">How Modern Is Your Firm?</CardTitle>
@@ -392,10 +392,10 @@ const ModernFirmQuiz = () => {
 
                 <div className="grid grid-cols-1 gap-3 pt-4">
                   {questions[currentQuestion].options.map((option) => (
-                    <Button 
+                    <Button
                       key={option.value}
                       onClick={() => handleAnswer(option.points)}
-                      variant="outline" 
+                      variant="outline"
                       className="text-left justify-start h-auto p-4 hover:bg-primary/5"
                     >
                       <div>

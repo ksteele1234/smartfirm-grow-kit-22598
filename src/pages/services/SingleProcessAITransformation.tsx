@@ -30,20 +30,20 @@ const SingleProcessAITransformation = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Single-Process AI Optimization | SmartFirm"
         description="Turn your biggest bottleneck into a clear action plan. Focused 1-week AI optimization that delivers real results."
         canonicalUrl="https://smartfirm.io/services/single-process-ai-transformation"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-white">
         {/* Hero Section - Blue Gradient Background */}
         <section
           className="hero-section relative pt-24 pb-32 min-h-[unset] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue"
         >
           <style>{heroStyles}</style>
-          
+
           <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
               Single Process AI Transformation: Start Small, See Big Results
@@ -51,7 +51,7 @@ const SingleProcessAITransformation = () => {
 
             {/* Hero Content - Centered */}
             <div className="hero-content relative z-10 text-center max-w-container-lg px-4">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -60,8 +60,8 @@ const SingleProcessAITransformation = () => {
               >
                 Single-Process AI Optimization
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
@@ -70,30 +70,30 @@ const SingleProcessAITransformation = () => {
               >
                 Turn Your Biggest Bottleneck Into a Clear Action Plan.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
-                <Button 
+                <Button
                   id="single-process-ai-book-call-btn"
                   size="lg"
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild
                 >
-                  <a href="/get-started">
+                  <a href="/get-started/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
               </motion.div>
             </div>
-            
+
             {/* Hero Graphics - Orbital Circles */}
             <div className="hero-graphics absolute inset-0 z-[1] pointer-events-none">
               {/* Glass Bubble with Settings Icon */}
-              <div 
+              <div
                 className="absolute top-10 left-[190px] w-[120px] h-[120px] md:w-[120px] md:h-[120px] sm:w-[100px] sm:h-[100px] glass-card-light rounded-full flex items-center justify-center elevation-3 z-[15]"
                 style={{ animation: 'bubble-float 4s ease-in-out infinite' }}
               >
@@ -111,7 +111,7 @@ const SingleProcessAITransformation = () => {
         {/* The Challenge Section */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -141,7 +141,7 @@ const SingleProcessAITransformation = () => {
         {/* What Is It Section */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-lighter">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -171,7 +171,7 @@ const SingleProcessAITransformation = () => {
         {/* How It Works Section */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -227,7 +227,7 @@ const SingleProcessAITransformation = () => {
         {/* What You Receive Section */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-slate-lighter">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -282,7 +282,7 @@ const SingleProcessAITransformation = () => {
         {/* Perfect For Section */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -318,7 +318,7 @@ const SingleProcessAITransformation = () => {
         {/* The Outcome Section - Dark Background */}
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-deep-teal text-white">
           <div className="max-w-4xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -393,7 +393,7 @@ const SingleProcessAITransformation = () => {
         {/* Final CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-muted-blue text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -418,13 +418,13 @@ const SingleProcessAITransformation = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="coral"
                 className="px-8 py-4 text-lg font-bold color-transition group"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>

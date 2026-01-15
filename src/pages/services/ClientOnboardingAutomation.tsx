@@ -135,13 +135,13 @@ const ClientOnboardingAutomation = () => {
               Is Your Onboarding Process Costing You Clients?
             </CardTitle>
             <CardDescription className="text-muted-foreground text-base leading-relaxed max-w-2xl mx-auto">
-              A broken onboarding process doesn't just waste time—it damages relationships before they even start. 
+              A broken onboarding process doesn't just waste time—it damages relationships before they even start.
               Learn why clients fall through the cracks and what it's really costing your firm.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-center pt-0">
             <Button variant="outline" asChild>
-              <a href="/solutions/client-onboarding-problems">
+              <a href="/solutions/client-onboarding-problems/">
                 See the Real Cost of Poor Onboarding
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>

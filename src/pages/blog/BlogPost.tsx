@@ -190,7 +190,7 @@ const BlogPost = () => {
             {/* Breadcrumb for cluster posts */}
             {isCluster && pillarInfo ? (
               <div className="flex flex-wrap items-center gap-2 mb-6">
-                <Link to="/blog">
+                <Link to="/blog/">
                   <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Blog
@@ -205,7 +205,7 @@ const BlogPost = () => {
                 </Link>
               </div>
             ) : (
-              <Link to="/blog">
+              <Link to="/blog/">
                 <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-6">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Blog
@@ -346,7 +346,7 @@ const BlogPost = () => {
                     {authorProfile.bio}
                   </p>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 font-medium transition-colors"
                   >
                     <Mail className="w-4 h-4" />
@@ -368,12 +368,12 @@ const BlogPost = () => {
               Discover how SmartFirm can help you automate your marketing, attract more clients, and grow your practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/get-started">
+              <Link to="/get-started/">
                 <Button size="lg" className="bg-[hsl(var(--coral))] hover:bg-[hsl(var(--coral))]/90 text-white">
                   Get Started Today
                 </Button>
               </Link>
-              <Link to="/blog">
+              <Link to="/blog/">
                 <Button size="lg" variant="outline">
                   Read More Articles
                 </Button>

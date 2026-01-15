@@ -44,7 +44,7 @@ const ClientLifetimeValueCalculator = () => {
   const calculateLossImpact = () => {
     const clv = calculateCLV();
     const clientsLostPerYear = churnRate > 0 ? Math.round(100 / churnRate) : 0;
-    
+
     return {
       singleClientLoss: clv,
       annualLossImpact: clv * clientsLostPerYear,
@@ -65,11 +65,11 @@ const ClientLifetimeValueCalculator = () => {
     const clv = calculateCLV();
     const currentChurn = churnRate / 100;
     const improvedChurn = Math.max(currentChurn * 0.7, 0.05); // 30% improvement, minimum 5%
-    
+
     const currentLifespan = 1 / currentChurn;
     const improvedLifespan = 1 / improvedChurn;
     const lifespanIncrease = improvedLifespan - currentLifespan;
-    
+
     return {
       currentAnnualValue: avgMonthlyValue * 12,
       additionalValue: Math.round(avgMonthlyValue * 12 * lifespanIncrease),
@@ -85,7 +85,7 @@ const ClientLifetimeValueCalculator = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Client Lifetime Value Calculator Results | SmartFirm"
           description="Your client lifetime value analysis with retention recommendations for your accounting firm."
           canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator"
@@ -96,11 +96,11 @@ const ClientLifetimeValueCalculator = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Client Lifetime Value Analysis</CardTitle>
@@ -137,7 +137,7 @@ const ClientLifetimeValueCalculator = () => {
                       )}
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="bg-green-50 border-green-200">
                     <CardHeader>
                       <CardTitle className="flex items-center text-green-700">
@@ -233,7 +233,7 @@ const ClientLifetimeValueCalculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Client Lifetime Value Calculator | SmartFirm"
         description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
         canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator"
@@ -241,21 +241,21 @@ const ClientLifetimeValueCalculator = () => {
         toolName="Client Lifetime Value Calculator"
         noindex={false}
       />
-        <Header />
+      <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Client Lifetime Value Calculator</h1>
           <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
             <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
             <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
           </p>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary flex items-center">
@@ -333,10 +333,10 @@ const ClientLifetimeValueCalculator = () => {
               </div>
 
               <div className="pt-6">
-                <Button 
+                <Button
                   onClick={() => setShowResults(true)}
                   disabled={avgMonthlyValue <= 0 || avgClientLifespan <= 0}
-                  size="lg" 
+                  size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
                 >
                   Calculate Client Lifetime Value

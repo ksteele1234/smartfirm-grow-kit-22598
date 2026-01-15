@@ -74,8 +74,8 @@ const QuickStartFeaturedCard = () => {
         <div className="flex flex-col gap-2">
           {includedItems.map((item, index) => (
             <div key={index} className="flex items-center gap-2.5">
-              <CheckCircle2 
-                className="w-[18px] h-[18px] text-primary flex-shrink-0 glow-cyan" 
+              <CheckCircle2
+                className="w-[18px] h-[18px] text-primary flex-shrink-0 glow-cyan"
               />
               <span className="text-[15px] text-foreground leading-[1.4]">
                 {item}
@@ -87,11 +87,11 @@ const QuickStartFeaturedCard = () => {
 
       {/* CTA Button */}
       <div className="flex flex-col gap-4">
-        <Button 
+        <Button
           asChild
           className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift"
         >
-          <Link to="/quick-start-marketing-for-cpa-firms">
+          <Link to="/quick-start-marketing-for-cpa-firms/">
             Learn About the QuickStart Package
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

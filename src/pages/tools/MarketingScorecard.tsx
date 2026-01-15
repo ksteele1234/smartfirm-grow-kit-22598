@@ -136,7 +136,7 @@ const MarketingScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Marketing Scorecard Results | SmartFirm"
           description="Your marketing assessment results with personalized recommendations for accounting firm growth."
           canonicalUrl="https://smartfirm.io/tools/marketing-scorecard"
@@ -231,7 +231,7 @@ const MarketingScorecard = () => {
 
               <div className="mt-8 text-center">
                 <Button size="lg" variant="coral" asChild>
-                  <a href="/get-started">
+                  <a href="/get-started/">
                     Book a Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
@@ -260,7 +260,7 @@ const MarketingScorecard = () => {
         <div className="container mx-auto max-w-2xl">
           <div className="mb-8">
             <Button variant="ghost" asChild className="mb-4">
-              <a href="/tools">
+              <a href="/tools/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Tools
               </a>
@@ -277,8 +277,8 @@ const MarketingScorecard = () => {
               <CardTitle className="text-xl">{currentQ.question}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <RadioGroup 
-                value={currentAnswer === undefined ? "" : currentAnswer ? "yes" : "no"} 
+              <RadioGroup
+                value={currentAnswer === undefined ? "" : currentAnswer ? "yes" : "no"}
                 onValueChange={handleAnswerChange}
               >
                 <div className="flex items-center space-x-2">
@@ -296,15 +296,15 @@ const MarketingScorecard = () => {
               </RadioGroup>
 
               <div className="flex justify-between pt-4">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={prevQuestion}
                   disabled={currentQuestion === 0}
                 >
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Previous
                 </Button>
-                <Button 
+                <Button
                   onClick={nextQuestion}
                   disabled={currentAnswer === undefined}
                   className="bg-primary hover:bg-primary/90"
@@ -317,7 +317,7 @@ const MarketingScorecard = () => {
           </Card>
         </div>
       </section>
-      
+
       <EmailCaptureModal
         isOpen={showEmailModal}
         onClose={() => setShowEmailModal(false)}

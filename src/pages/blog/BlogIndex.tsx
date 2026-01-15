@@ -173,7 +173,7 @@ const BlogIndex = () => {
                 <p className="text-muted-foreground mb-8">
                   Check back soon for new articles and insights.
                 </p>
-                <Link to="/get-started">
+                <Link to="/get-started/">
                   <Button>Get Started with SmartFirm</Button>
                 </Link>
               </div>
@@ -266,7 +266,7 @@ const BlogIndex = () => {
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Discover how SmartFirm can help you automate your marketing, attract more clients, and scale your practice.
             </p>
-            <Link to="/get-started">
+            <Link to="/get-started/">
               <Button size="lg" className="bg-[hsl(var(--coral))] hover:bg-[hsl(var(--coral))]/90 text-white">
                 Get Started Today
               </Button>

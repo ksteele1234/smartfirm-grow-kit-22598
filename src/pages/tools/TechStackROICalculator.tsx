@@ -57,7 +57,7 @@ const TechStackROICalculator = () => {
 
   const calculateCurrentCosts = () => {
     let monthlyCost = 0;
-    
+
     // Selected common tools
     selectedTools.forEach(toolId => {
       const tool = commonTools.find(t => t.id === toolId);
@@ -65,14 +65,14 @@ const TechStackROICalculator = () => {
         monthlyCost += tool.avgCost * teamSize;
       }
     });
-    
+
     // Custom tools
     customTools.forEach(tool => {
       if (tool.cost > 0) {
         monthlyCost += tool.cost;
       }
     });
-    
+
     return {
       monthly: monthlyCost,
       annual: monthlyCost * 12
@@ -87,13 +87,13 @@ const TechStackROICalculator = () => {
       growing: { monthly: 499, features: "Complete suite + custom integrations" },
       enterprise: { monthly: 799, features: "Enterprise features + dedicated support" }
     };
-    
+
     let recommendedTier;
     if (teamSize === 1) recommendedTier = pricing.solo;
     else if (teamSize <= 5) recommendedTier = pricing.small;
     else if (teamSize <= 15) recommendedTier = pricing.growing;
     else recommendedTier = pricing.enterprise;
-    
+
     return {
       monthly: recommendedTier.monthly,
       annual: recommendedTier.monthly * 12,
@@ -104,7 +104,7 @@ const TechStackROICalculator = () => {
   const calculateSavings = () => {
     const current = calculateCurrentCosts();
     const consolidated = calculateConsolidatedCosts();
-    
+
     return {
       monthlySavings: current.monthly - consolidated.monthly,
       annualSavings: current.annual - consolidated.annual,
@@ -114,7 +114,7 @@ const TechStackROICalculator = () => {
 
   const getEfficiencyGains = () => {
     const toolCount = selectedTools.size + customTools.filter(t => t.cost > 0).length;
-    
+
     if (toolCount >= 8) {
       return {
         timesSaved: "15-20 hours/week",
@@ -150,7 +150,7 @@ const TechStackROICalculator = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Tech Stack ROI Calculator Results | SmartFirm"
           description="Your tech stack analysis results with cost savings and efficiency recommendations."
           canonicalUrl="https://smartfirm.io/tools/tech-stack-roi-calculator"
@@ -161,11 +161,11 @@ const TechStackROICalculator = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Tech Stack ROI Analysis</CardTitle>
@@ -188,7 +188,7 @@ const TechStackROICalculator = () => {
                       </div>
                     </CardContent>
                   </Card>
-                  
+
                   <Card className="bg-green-50 border-green-200">
                     <CardHeader>
                       <CardTitle className="flex items-center text-green-700">
@@ -238,7 +238,7 @@ const TechStackROICalculator = () => {
                       </div>
                     </CardContent>
                   </Card>
-                  
+
                   <Card>
                     <CardHeader>
                       <CardTitle className="text-lg">Additional Benefits</CardTitle>
@@ -275,7 +275,7 @@ const TechStackROICalculator = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Accounting Firm Technology ROI Calculator | SmartFirm"
         description="Calculate your accounting firm technology ROI by inputting software costs, time savings, error reduction, and capacity gains to justify technology investments."
         canonicalUrl="https://smartfirm.io/tools/tech-stack-roi-calculator"
@@ -286,18 +286,18 @@ const TechStackROICalculator = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Technology Roi | SmartFirm</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               Our accounting firm technology ROI calculator helps you quantify the return on technology investments by measuring time savings, error reduction, capacity increases, and client satisfaction improvements.
             </p>
           </div>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary flex items-center">
@@ -369,8 +369,8 @@ const TechStackROICalculator = () => {
                         onChange={(e) => updateCustomTool(index, 'cost', parseFloat(e.target.value) || 0)}
                         className="w-32"
                       />
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         size="sm"
                         onClick={() => removeCustomTool(index)}
                       >
@@ -382,10 +382,10 @@ const TechStackROICalculator = () => {
               </div>
 
               <div className="pt-6 border-t">
-                <Button 
+                <Button
                   onClick={() => setShowResults(true)}
                   disabled={selectedTools.size === 0 && customTools.filter(t => t.cost > 0).length === 0}
-                  size="lg" 
+                  size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
                 >
                   Calculate My ROI

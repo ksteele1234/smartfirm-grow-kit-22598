@@ -37,7 +37,7 @@ const GrowthPotentialScorecard = () => {
   const calculateBenchmarks = () => {
     const firmTypeData = firmTypes[firmType as keyof typeof firmTypes];
     const locationData = locationTypes[location as keyof typeof locationTypes];
-    
+
     if (!firmTypeData || !locationData || teamSize === 0) return null;
 
     // Industry benchmarks (base values for suburban full-service accounting)
@@ -97,27 +97,27 @@ const GrowthPotentialScorecard = () => {
   };
 
   const getGrowthCategory = (score: number) => {
-    if (score >= 80) return { 
-      level: "High Growth Potential", 
-      color: "text-green-600", 
+    if (score >= 80) return {
+      level: "High Growth Potential",
+      color: "text-green-600",
       description: "Your firm is performing at or above industry standards",
       emoji: "🚀"
     };
-    if (score >= 60) return { 
-      level: "Moderate Growth Potential", 
-      color: "text-blue-600", 
+    if (score >= 60) return {
+      level: "Moderate Growth Potential",
+      color: "text-blue-600",
       description: "Good foundation with clear opportunities for improvement",
       emoji: "📈"
     };
-    if (score >= 40) return { 
-      level: "Untapped Potential", 
-      color: "text-yellow-600", 
+    if (score >= 40) return {
+      level: "Untapped Potential",
+      color: "text-yellow-600",
       description: "Significant room for growth and optimization",
       emoji: "⚡"
     };
-    return { 
-      level: "Major Growth Opportunity", 
-      color: "text-red-600", 
+    return {
+      level: "Major Growth Opportunity",
+      color: "text-red-600",
       description: "Substantial improvements needed to reach potential",
       emoji: "🎯"
     };
@@ -166,7 +166,7 @@ const GrowthPotentialScorecard = () => {
     if (!benchmarks) {
       return (
         <div className="min-h-screen bg-background">
-          <SEO 
+          <SEO
             title="Growth Potential Scorecard | SmartFirm"
             description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
             canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard"
@@ -190,7 +190,7 @@ const GrowthPotentialScorecard = () => {
 
     return (
       <div className="min-h-screen bg-background">
-        <SEO 
+        <SEO
           title="Growth Potential Scorecard Results | SmartFirm"
           description="Your growth potential analysis with benchmarking and recommendations for your accounting firm."
           canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard"
@@ -201,11 +201,11 @@ const GrowthPotentialScorecard = () => {
         <Header />
         <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
-            <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+            <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to Tools
             </Link>
-            
+
             <Card>
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl text-primary">Your Growth Potential Score</CardTitle>
@@ -337,7 +337,7 @@ const GrowthPotentialScorecard = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Accounting Firm Growth Scorecard Tool | SmartFirm"
         description="Use our accounting firm growth scorecard to rate your marketing, operations, client experience, technology, and team to identify growth constraints."
         canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard"
@@ -348,18 +348,18 @@ const GrowthPotentialScorecard = () => {
       <Header />
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-2xl mx-auto">
-          <Link to="/tools" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
+          <Link to="/tools/" className="inline-flex items-center text-primary hover:text-primary/80 mb-12">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Tools
           </Link>
-          
+
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Growth Scorecard</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
               This accounting firm growth scorecard evaluates your marketing effectiveness, operational efficiency, client experience quality, technology adoption, and team capabilities to pinpoint growth constraints.
             </p>
           </div>
-          
+
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl text-primary flex items-center">
@@ -465,10 +465,10 @@ const GrowthPotentialScorecard = () => {
               </div>
 
               <div className="pt-6">
-                <Button 
+                <Button
                   onClick={() => setShowResults(true)}
                   disabled={!firmType || !location || annualRevenue <= 0 || teamSize <= 0}
-                  size="lg" 
+                  size="lg"
                   className="w-full bg-primary hover:bg-primary/90"
                 >
                   Calculate Growth Potential

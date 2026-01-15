@@ -44,7 +44,7 @@ const CaseStudies = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Case Studies | Real Results | SmartFirm"
         description="Explore real success stories from accounting firms that transformed their practice with SmartFirm's workflow automation, growth systems, and consulting services. See measurable results and ROI."
         canonicalUrl="https://smartfirm.io/case-studies"
@@ -52,10 +52,10 @@ const CaseStudies = () => {
         noindex={false}
         dateModified={new Date().toISOString()}
       />
-      
+
       <div className="min-h-screen bg-background flex flex-col">
         <Header />
-        
+
         <main className="flex-grow">
           {/* Hero Section */}
           <section className="section-padding bg-gradient-mesh-professional">
@@ -195,11 +195,11 @@ const CaseStudies = () => {
                   Ready to Write Your Success Story?
                 </h2>
                 <p className="text-xl text-white/95 mb-10 leading-relaxed">
-                  Join the growing number of accounting firms achieving measurable results with SmartFirm's 
+                  Join the growing number of accounting firms achieving measurable results with SmartFirm's
                   comprehensive marketing and automation solutions.
                 </p>
                 <div className="flex justify-center">
-                  <Link to="/get-started">
+                  <Link to="/get-started/">
                     <Button size="lg" className="bg-gradient-coral hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg text-lg px-8" id="case-studies-cta-book-call-btn">
                       Book a Free Call
                       <ArrowRight className="ml-2 h-5 w-5" />

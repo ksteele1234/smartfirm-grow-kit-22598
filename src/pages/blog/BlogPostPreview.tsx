@@ -134,7 +134,7 @@ const BlogPostPreview = () => {
     queryKey: ["pillar-for-cluster-preview", post?.pillar_id],
     queryFn: async () => {
       if (!post?.pillar_id) return null;
-      
+
       const { data, error } = await supabase
         .from("blog_posts")
         .select("id, title, slug")
@@ -153,31 +153,31 @@ const BlogPostPreview = () => {
 
     const validateLinks = async () => {
       setIsValidating(true);
-      
+
       // Extract all links from HTML content
       const parser = new DOMParser();
       const doc = parser.parseFromString(post.content || '', 'text/html');
       const links = Array.from(doc.querySelectorAll('a[href]'));
-      
+
       const uniqueUrls = [...new Set(links.map(link => link.getAttribute('href') || '').filter(Boolean))];
-      
+
       // Separate anchor links from other links - anchors don't need validation
       const anchorLinks = uniqueUrls.filter(url => url.startsWith('#'));
       const otherLinks = uniqueUrls.filter(url => !url.startsWith('#'));
-      
+
       // Mark anchor links as valid immediately
       const anchorResults: LinkValidationResult[] = anchorLinks.map(url => ({
         url,
         type: 'internal' as const,
         status: 'valid' as const,
       }));
-      
+
       const results: LinkValidationResult[] = otherLinks.map(url => ({
         url,
         type: url.startsWith('http') && !url.includes('smartfirm.io') ? 'external' : 'internal',
         status: 'checking' as const,
       }));
-      
+
       // Show all results including pre-validated anchors
       setLinkResults([...anchorResults, ...results]);
 
@@ -188,11 +188,11 @@ const BlogPostPreview = () => {
             if (result.type === 'internal') {
               // For internal links, check if the path exists in our routes
               const cleanUrl = result.url.replace(/^https?:\/\/[^/]+/, '').replace(/#.*$/, '');
-              
+
               // Simple validation: check if it starts with valid prefixes or is empty
               const validPrefixes = ['/', '/blog/', '/services/', '/solutions/', '/industries/', '/tools/', '/faq/', '/case-studies/', '/about', '/contact', '/get-started', '/resources', '/privacy', '/terms', '/cookies'];
               const isValid = cleanUrl === '' || validPrefixes.some(prefix => cleanUrl.startsWith(prefix));
-              
+
               return {
                 ...result,
                 status: isValid ? 'valid' : 'invalid',
@@ -244,14 +244,14 @@ const BlogPostPreview = () => {
   const invalidLinks = linkResults.filter(r => r.status === 'invalid');
   const validLinks = linkResults.filter(r => r.status === 'valid');
 
-  const publishDate = post.publish_date 
+  const publishDate = post.publish_date
     ? format(new Date(post.publish_date), "MMMM d, yyyy")
     : format(new Date(post.created_at), "MMMM d, yyyy");
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
+
       {/* Draft Preview Banner */}
       <div className="bg-amber-500 text-white py-3 px-4 sticky top-0 z-50">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -302,7 +302,7 @@ const BlogPostPreview = () => {
               </span>
             </div>
           </div>
-          
+
           {invalidLinks.length > 0 && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-3 mt-2">
               <h4 className="text-sm font-medium text-red-800 mb-2">Links with potential issues:</h4>
@@ -332,7 +332,7 @@ const BlogPostPreview = () => {
           )}
         </div>
       </div>
-      
+
       <main id="main-content" className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
@@ -340,7 +340,7 @@ const BlogPostPreview = () => {
             {/* Breadcrumb for cluster posts */}
             {isCluster && pillarInfo ? (
               <div className="flex flex-wrap items-center gap-2 mb-6">
-                <Link to="/blog">
+                <Link to="/blog/">
                   <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     Blog
@@ -355,14 +355,14 @@ const BlogPostPreview = () => {
                 </Link>
               </div>
             ) : (
-              <Link to="/blog">
+              <Link to="/blog/">
                 <Button variant="ghost" className="text-white/80 hover:text-white hover:bg-white/10 mb-6">
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Back to Blog
                 </Button>
               </Link>
             )}
-            
+
             <div className="flex flex-wrap items-center gap-3 mb-4">
               {/* Status Badge */}
               <Badge className={`
@@ -384,11 +384,11 @@ const BlogPostPreview = () => {
                 </Badge>
               )}
             </div>
-            
+
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               {post.title}
             </h1>
-            
+
             <div className="flex flex-wrap items-center gap-6 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -425,7 +425,7 @@ const BlogPostPreview = () => {
 
         {/* Content */}
         <article className="container mx-auto px-4 max-w-4xl py-12 md:py-16">
-          <div 
+          <div
             className="prose prose-lg max-w-none 
               prose-headings:font-heading
               prose-h1:text-[hsl(var(--heading-primary))] prose-h1:text-[2rem] prose-h1:lg:text-[2.5rem] prose-h1:font-extrabold
@@ -510,7 +510,7 @@ const BlogPostPreview = () => {
           )}
         </article>
       </main>
-      
+
       <Footer />
     </div>
   );

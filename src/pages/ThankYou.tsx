@@ -91,7 +91,7 @@ const ThankYou = () => {
             </Button>
 
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/resources">
+              <a href="/resources/">
                 Explore Resources
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
@@ -104,16 +104,16 @@ const ThankYou = () => {
               While you wait, check out:
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-primary hover:underline">
+              <a href="/solutions-expert-marketing-agency-for-accounting-firms/" className="text-primary hover:underline">
                 Solutions
               </a>
-              <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline">
+              <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline">
                 Services
               </a>
-              <a href="/resources" className="text-primary hover:underline">
+              <a href="/resources/" className="text-primary hover:underline">
                 Resources
               </a>
-              <a href="/about" className="text-primary hover:underline">
+              <a href="/about/" className="text-primary hover:underline">
                 About Us
               </a>
             </div>

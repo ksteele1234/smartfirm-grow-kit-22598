@@ -52,20 +52,20 @@ const GrowthAddOnsCard = () => {
 
       {/* CTA Section */}
       <div className="flex flex-col items-center">
-        <Button 
+        <Button
           asChild
           className="bg-white hover:bg-background-light text-secondary border-2 border-secondary hover:border-accent text-base font-semibold py-3.5 px-7 rounded-card-sm transition-colors inline-block"
         >
-          <Link to="/services/add-ons">
+          <Link to="/services/add-ons/">
             Explore Add-On Services →
           </Link>
         </Button>
-        
+
         <p className="text-sm text-muted-foreground text-center mt-3">
           Not sure what you need?{" "}
-          <Link 
+          <Link
             id="growth-addons-book-call-btn"
-            to="/get-started" 
+            to="/get-started/"
             className="text-secondary underline hover:text-secondary-dark transition-colors"
           >
             Book a Free Call

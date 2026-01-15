@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Target, TrendingUp, Users } from "lucide-react";
 import { StandardCard } from "@/components/ui/standard-card";
 import {
-  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
@@ -139,7 +139,7 @@ const AITransformationRoadmap = () => {
         faqs={faqs}
       />
       <Header />
-      
+
       <main id="main-content" role="main">
         {/* Hero Section */}
         <section className="hero-section relative pt-24 pb-32 min-h-[unset] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue">
@@ -153,7 +153,7 @@ const AITransformationRoadmap = () => {
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms" className="hover:text-white/80">Services</BreadcrumbLink>
+                    <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms/" className="hover:text-white/80">Services</BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>
@@ -163,10 +163,10 @@ const AITransformationRoadmap = () => {
               </Breadcrumb>
             </div>
           </nav>
-          
+
           <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
             <div className="hero-content relative z-10 text-center max-w-container-lg px-4">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -175,8 +175,8 @@ const AITransformationRoadmap = () => {
               >
                 AI Transformation Roadmap: Strategic AI Implementation for Accounting Firms
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
@@ -185,19 +185,19 @@ const AITransformationRoadmap = () => {
               >
                 Stop Guessing Where AI Fits. Get a Clear 12-Month Strategy.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               >
-                <Button 
+                <Button
                   id="ai-roadmap-pricing-book-call-btn"
                   size="lg"
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild
                 >
-                  <a href="/get-started">
+                  <a href="/get-started/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -332,7 +332,7 @@ const AITransformationRoadmap = () => {
         <section className="pt-[40px] md:pt-[60px] lg:pt-[80px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-gradient-deep-teal px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -350,10 +350,10 @@ const AITransformationRoadmap = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ 
+                  transition={{
                     duration: isMobile ? 0.4 : 0.6,
                     delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
-                    ease: "easeOut" 
+                    ease: "easeOut"
                   }}
                 >
                   <StandardCard
@@ -391,7 +391,7 @@ const AITransformationRoadmap = () => {
             >
               What You Receive
             </motion.h2>
-            
+
             <div className="space-y-4">
               {[
                 "Detailed Process Maps — Visual documentation of your current workflows",
@@ -438,7 +438,7 @@ const AITransformationRoadmap = () => {
                 The Outcome
               </motion.h2>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-md">
               {outcomes.map((outcome, index) => (
                 <motion.div
@@ -446,10 +446,10 @@ const AITransformationRoadmap = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ 
+                  transition={{
                     duration: isMobile ? 0.4 : 0.6,
                     delay: isMobile ? Math.min(index * 0.1, 0.3) : index * 0.1,
-                    ease: "easeOut" 
+                    ease: "easeOut"
                   }}
                 >
                   <StandardCard
@@ -477,7 +477,7 @@ const AITransformationRoadmap = () => {
             >
               Investment & Pricing
             </motion.h2>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -517,15 +517,15 @@ const AITransformationRoadmap = () => {
         {/* FAQs Section */}
         <section className="pt-[40px] md:pt-[60px] lg:pt-[40px] pb-[60px] md:pb-[80px] lg:pb-[100px] bg-white px-6 md:px-12">
           <div className="max-w-4xl mx-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
               whileInView={{ opacity: 1, scaleX: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="w-32 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-8"
             />
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -535,7 +535,7 @@ const AITransformationRoadmap = () => {
             >
               Frequently Asked Questions
             </motion.h2>
-            
+
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <motion.details
@@ -570,13 +570,13 @@ const AITransformationRoadmap = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section 
+        <section
           id="sf-final-cta"
           ref={finalCtaRef}
           className="relative py-16 px-4 sm:px-6 lg:px-8 text-white overflow-hidden bg-gradient-muted-blue"
         >
           <div className="max-w-4xl mx-auto text-center pb-8 md:pb-12">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -592,14 +592,14 @@ const AITransformationRoadmap = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: isMobile ? 0.4 : 0.6, delay: 0.2, ease: "easeOut" }}
             >
-              <Button 
+              <Button
                 id="ai-roadmap-final-book-call-btn"
-                size="lg" 
+                size="lg"
                 variant="coral"
                 className="px-8 py-4 text-lg font-bold color-transition group"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>

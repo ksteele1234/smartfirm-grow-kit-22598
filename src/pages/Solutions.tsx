@@ -94,7 +94,7 @@ const Solutions = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Solutions For Accounting Firms | SmartFirm"
         description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
         canonicalUrl="https://smartfirm.io/solutions"
@@ -108,7 +108,7 @@ const Solutions = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -125,7 +125,7 @@ const Solutions = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 pb-36 md:pb-[180px] bg-gradient-deep-teal overflow-hidden">
@@ -149,7 +149,7 @@ const Solutions = () => {
             </div>
             <div className="mt-12 flex justify-center">
               <Button variant="coral" size="hero" asChild>
-                <a href="/get-started">Book Your Strategy Call</a>
+                <a href="/get-started/">Book Your Strategy Call</a>
               </Button>
             </div>
           </div>
@@ -178,8 +178,8 @@ const Solutions = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-16">
               Common Pain Points We Address
             </h2>
-            
-            
+
+
             {/* First row - 3 cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md lg:gap-lg mb-8">
               {solutionCategories.slice(0, 3).map((solution, index) => (
@@ -196,8 +196,8 @@ const Solutions = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 px-8 pb-8">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full"
                       asChild
                     >
@@ -210,7 +210,7 @@ const Solutions = () => {
                 </Card>
               ))}
             </div>
-            
+
             {/* Second row - 2 cards taking full width */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-md lg:gap-lg">
               {solutionCategories.slice(3).map((solution, index) => (
@@ -227,8 +227,8 @@ const Solutions = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0 px-8 pb-8">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full"
                       asChild
                     >
@@ -259,13 +259,13 @@ const Solutions = () => {
                     Get More Referrals Without Asking
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Turn satisfied clients into active advocates with automated systems that generate referrals naturally. 
+                    Turn satisfied clients into active advocates with automated systems that generate referrals naturally.
                     Our clients typically see 300% more referrals within 6 months without awkward conversations.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-8 px-6 md:px-10 pb-10">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-md">
-                  <div className="space-y-6">
+                    <div className="space-y-6">
                       <h3 className="font-semibold text-primary flex items-center text-lg">
                         <Users className="h-5 w-5 mr-2" />
                         Key Benefits:
@@ -289,15 +289,15 @@ const Solutions = () => {
                         </li>
                       </ul>
                     </div>
-                    
+
                     <div className="bg-gradient-to-br from-accent/10 to-primary/10 p-6 md:p-8 rounded-lg border">
                       <h3 className="font-semibold text-primary mb-6 flex items-center text-lg">
                         <TrendingUp className="h-5 w-5 mr-2" />
                         Client Success Story:
                       </h3>
                       <blockquote className="text-muted-foreground italic mb-4 leading-relaxed">
-                        "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a 
-                        systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love 
+                        "SmartFirm's referral system transformed our practice. We went from hoping for referrals to having a
+                        systematic approach that generated 25 new clients in just 4 months. The best part? Our clients love
                         sharing our services because the process makes it easy for them."
                       </blockquote>
                       <cite className="text-sm text-muted-foreground block">
@@ -305,10 +305,10 @@ const Solutions = () => {
                       </cite>
                     </div>
                   </div>
-                  
+
                   <div className="text-center pt-6">
                     <Button size="lg" variant="default" asChild>
-                      <a href="/solutions/get-more-referrals-without-asking">
+                      <a href="/solutions/get-more-referrals-without-asking/">
                         Learn About This Solution
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -331,23 +331,23 @@ const Solutions = () => {
               Let us help you implement the right strategies for sustainable growth. Book a Free Call to discuss your specific challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
-              <Button 
+              <Button
                 id="solutions-overview-book-call-btn"
-                size="lg" 
+                size="lg"
                 variant="coral"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="secondary"
                 asChild
               >
-                <a href="/leading-marketing-services-for-accounting-firms">
+                <a href="/leading-marketing-services-for-accounting-firms/">
                   View All Services
                 </a>
               </Button>
@@ -367,7 +367,7 @@ const Solutions = () => {
                   Get answers to the most common questions about overcoming accounting firm challenges and growing your practice.
                 </p>
               </div>
-              
+
               <Accordion type="single" collapsible className="space-y-4">
                 {faqsToRender.map((faq, index) => (
                   <AccordionItem
@@ -378,12 +378,12 @@ const Solutions = () => {
                     <AccordionTrigger className="text-left text-sm">
                       {faq.question}
                     </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  <FaqAnswer
-                    text={faq.answer}
-                    paragraphClassName="text-sm md:text-base leading-relaxed text-muted-foreground"
-                  />
-                </AccordionContent>
+                    <AccordionContent className="text-muted-foreground">
+                      <FaqAnswer
+                        text={faq.answer}
+                        paragraphClassName="text-sm md:text-base leading-relaxed text-muted-foreground"
+                      />
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
