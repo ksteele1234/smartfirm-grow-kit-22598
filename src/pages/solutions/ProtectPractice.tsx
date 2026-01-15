@@ -9,7 +9,7 @@ const ProtectPractice = () => {
     title: "Worried About Data Breaches? Protect Your Accounting Practice | SmartFirm",
     slug: "protect-practice-and-future",
     metaDescription: "Losing sleep over data breaches and compliance violations? Protect your accounting practice with enterprise-grade security, automated monitoring, and risk management that safeguards client trust.",
-    canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future",
+    canonicalUrl: "https://smartfirm.io/solutions/protect-practice-and-future/",
     content: {},
     heroTitle: "Worried About Data Breaches? Protect Your Practice",
     heroSubtitle: "Losing sleep over cyber threats and compliance violations that could destroy your reputation? Protect your accounting practice: enterprise-grade security, automated monitoring, and disaster recovery planning safeguard client data and professional standing.",

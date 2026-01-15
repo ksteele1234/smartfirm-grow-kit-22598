@@ -5,11 +5,11 @@ import { getFaqsForPath } from "@/data/faqContent";
 const ScaleFirm = () => {
   const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
   const solutionData: SolutionPageData = {
-    id: "scale-firm", 
+    id: "scale-firm",
     title: "Scale Your Accounting Firm Successfully | SmartFirm",
     slug: "scale-accounting-firm-successfully",
     metaDescription: "Scale your accounting firm without chaos. Use automation and systematized processes to double capacity without proportional hiring with SmartFirm's growth systems.",
-    canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully",
+    canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully/",
     content: {},
     heroTitle: "Scale Your Firm: Grow Successfully Without Chaos or Burnout",
     heroSubtitle: "Hit a capacity wall where every new client means hiring more people? Scale your accounting firm successfully: automation handles routine work, systematized processes standardize delivery, and optimized workflows double revenue without proportional hiring.",

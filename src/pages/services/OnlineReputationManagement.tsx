@@ -8,7 +8,7 @@ const OnlineReputationManagement = () => {
     title: "Reputation Management for CPAs | SmartFirm",
     slug: "reputation-management-for-cpas",
     metaDescription: "Reputation management for CPAs: 24/7 review monitoring, professional responses, and systematic five-star review generation. Protect and grow your online presence.",
-    canonicalUrl: "https://smartfirm.io/services/reputation-management-for-cpas",
+    canonicalUrl: "https://smartfirm.io/services/reputation-management-for-cpas/",
     content: {},
     heroTitle: "Reputation Management for CPAs",
     heroSubtitle: "Monitor reviews 24/7, respond professionally within minutes, and systematically build 50+ five-star reviews that convert prospects into clients.",

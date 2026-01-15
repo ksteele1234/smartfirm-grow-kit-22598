@@ -8,7 +8,7 @@ const AutomatedLeadFollowUp = () => {
     title: "Automated Lead Follow-Up for Accounting Firms | SmartFirm",
     slug: "automated-lead-follow-up",
     metaDescription: "Automated lead follow-up for accounting firms. Never miss a prospect with intelligent email and SMS sequences that convert inquiries into booked consultations.",
-    canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up-for-cpas",
+    canonicalUrl: "https://smartfirm.io/services/automated-lead-follow-up-for-cpas/",
     content: {},
     heroTitle: "Automated Lead Follow-Up: Convert More Prospects for Your Accounting Firm",
     heroSubtitle: "Respond instantly to every lead, nurture through proven 7-touch sequences, and convert 40% more prospects. Set it and forget it.",

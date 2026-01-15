@@ -9,7 +9,7 @@ const BusinessAdvisory = () => {
     title: "Marketing For Business Advisors That Commands Premium Fees | SmartFirm",
     slug: "business-advisory-marketing-services",
     metaDescription: "Marketing for business advisors positions you as a strategic growth partner, attracts high-value entrepreneurial clients, and helps you command premium advisory fees through thought leadership.",
-    canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services",
+    canonicalUrl: "https://smartfirm.io/industries/business-advisory-marketing-services/",
     content: {},
     heroTitle: "Marketing For Business Advisors",
     heroSubtitle: "Marketing for business advisors positions you as a strategic growth partner and helps you command premium advisory fees: attract high-value entrepreneurial clients and establish thought leadership when business advisors struggle to justify premium pricing for strategic advice.",

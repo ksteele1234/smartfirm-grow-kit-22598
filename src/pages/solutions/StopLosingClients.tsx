@@ -9,7 +9,7 @@ const StopLosingClients = () => {
     title: "Watching Clients Leave For Tech-Savvier CPAs? Stop The Loss | SmartFirm",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
     metaDescription: "Frustrated watching clients leave for younger CPAs with better technology? Stop losing clients to tech-savvy competitors with modern automation and professional systems—no coding required.",
-    canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas",
+    canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas/",
     content: {},
     heroTitle: "Watching Clients Leave For Tech-Savvier CPAs?",
     heroSubtitle: "Frustrated watching prospects choose younger firms with slicker websites and faster responses? Stop losing clients to tech-savvy competitors: modernize your systems, automate communication, and compete without learning code or hiring specialists.",

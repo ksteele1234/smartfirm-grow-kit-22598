@@ -9,7 +9,7 @@ const AuditAssurance = () => {
     title: "Marketing For Audit Firms That Builds Trust | SmartFirm",
     slug: "audit-assurance-marketing-agency",
     metaDescription: "Marketing for audit firms establishes credibility, demonstrates competence and independence, and attracts organizations requiring financial statement audits and assurance engagements.",
-    canonicalUrl: "https://smartfirm.io/industries/audit-assurance-marketing-agency",
+    canonicalUrl: "https://smartfirm.io/industries/audit-assurance-marketing-agency/",
     content: {},
     heroTitle: "Marketing For Audit Firms",
     heroSubtitle: "Marketing for audit firms establishes credibility and builds the trust organizations need before engaging professional audit services: demonstrate competence, independence, and reliability to attract audit and assurance engagements when audit firms struggle to establish credibility.",

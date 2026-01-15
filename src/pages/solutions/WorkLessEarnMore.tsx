@@ -9,7 +9,7 @@ const WorkLessEarnMore = () => {
     title: "Exhausted From 60-Hour Weeks? Work Less & Earn More As A CPA | SmartFirm",
     slug: "work-less-earn-more",
     metaDescription: "Burned out working 60-hour weeks for the same income? Work less earn more as a CPA through automation, value-based pricing, and systematized delivery that doubles revenue while reducing hours by 30%.",
-    canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more",
+    canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more/",
     content: {},
     heroTitle: "Exhausted From 60-Hour Weeks? Work Less & Earn More",
     heroSubtitle: "Burned out working endless hours for the same income? Work less earn more as a CPA: automation handles repetitive tasks, value pricing replaces hourly billing, and systematized workflows free 15+ hours weekly while increasing revenue 50-150%.",

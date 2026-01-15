@@ -8,7 +8,7 @@ const TechnologySolutions = () => {
     title: "Accounting Firm Technology Consulting | SmartFirm",
     slug: "technology-solutions",
     metaDescription: "Accounting firm technology consulting: integrate your tech stack, automate workflows, and serve 2-3x more clients. Implemented in 2-4 weeks.",
-    canonicalUrl: "https://smartfirm.io/services/technology-solutions",
+    canonicalUrl: "https://smartfirm.io/services/accounting-firm-technology-consulting/",
     content: {},
     heroTitle: "Accounting Firm Technology Consulting",
     heroSubtitle: "Integrate your tech stack, eliminate manual data entry, and serve 2-3x more clients without adding headcount. Implemented in 2-4 weeks.",

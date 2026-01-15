@@ -8,7 +8,7 @@ const SocialMediaManagement = () => {
     title: "Social Media Management for Accounting Firms | SmartFirm",
     slug: "social-media-management",
     metaDescription: "Social media management for CPAs: 12-16 compliant posts monthly that build thought leadership, drive referrals, and attract advisory clients. Done-for-you.",
-    canonicalUrl: "https://smartfirm.io/services/social-media-management",
+    canonicalUrl: "https://smartfirm.io/services/social-media-management-for-cpas/",
     content: {},
     heroTitle: "Social Media Management: Build Thought Leadership for Your Firm",
     heroSubtitle: "Build thought leadership with 12-16 compliant posts monthly, drive 30-50% more referrals, and stay top-of-mind. Fully compliant, zero risk.",

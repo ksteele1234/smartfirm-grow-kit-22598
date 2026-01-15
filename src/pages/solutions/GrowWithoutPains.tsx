@@ -9,7 +9,7 @@ const GrowWithoutPains = () => {
     title: "Growth Feels Like Chaos? Grow Your Accounting Firm Without The Stress | SmartFirm",
     slug: "grow-without-growing-pains",
     metaDescription: "Adding clients feels like adding chaos? Grow your accounting firm without burnout, quality drops, or team breaking: implement systems and automation that scale revenue 2-3× while maintaining sanity.",
-    canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains",
+    canonicalUrl: "https://smartfirm.io/solutions/grow-without-growing-pains/",
     content: {},
     heroTitle: "Growth Feels Like Chaos? Scale Without The Stress",
     heroSubtitle: "Every new client feels like breaking point? Grow your accounting firm without chaos: systematize delivery, automate repetitive work, and build leverage that doubles revenue without quality drops, staff burnout, or working more hours.",

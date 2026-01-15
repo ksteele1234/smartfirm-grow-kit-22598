@@ -8,7 +8,7 @@ const EmailMarketing = () => {
     title: "Email Marketing for Accounting Firms | SmartFirm",
     slug: "email-marketing",
     metaDescription: "Email marketing for CPAs: automated newsletters, personalized campaigns, and strategic touchpoints that increase retention 25% and generate $20K-$50K in upsells.",
-    canonicalUrl: "https://smartfirm.io/services/email-marketing",
+    canonicalUrl: "https://smartfirm.io/services/email-marketing-for-cpas/",
     content: {},
     heroTitle: "Email Marketing: Retain and Grow Your Accounting Firm's Client Base",
     heroSubtitle: "Keep clients engaged year-round, increase retention by 25%, and generate $20K-$50K in upsells through automated newsletters and personalized campaigns.",

@@ -9,7 +9,7 @@ const TaxPreparation = () => {
     title: "Automation For Tax Preparation Firms | SmartFirm",
     slug: "tax-preparation-marketing-solutions",
     metaDescription: "Automation for tax preparation firms. Streamline seasonal workflows, automate client acquisition, and smooth revenue fluctuations with SmartFirm's systems.",
-    canonicalUrl: "https://smartfirm.io/industries/tax-preparation-marketing-solutions",
+    canonicalUrl: "https://smartfirm.io/industries/tax-preparation-marketing-solutions/",
     content: {},
     heroTitle: "Automation For Tax Preparation Firms: Streamline Seasonal Workflows",
     heroSubtitle: "Marketing for tax preparation firms solves seasonal revenue swings and manual lead follow-up: automate client acquisition, streamline onboarding, and fill your pipeline year-round—not just January through April—when tax firms waste 15+ hours weekly during peak season.",

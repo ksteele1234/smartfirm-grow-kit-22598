@@ -8,7 +8,7 @@ const BusinessOptimization = () => {
     title: "Business Optimization for Accounting Firms | SmartFirm",
     slug: "business-optimization",
     metaDescription: "Business optimization for accounting firms. Streamline operations, improve workflows, and scale your practice with SmartFirm's strategic consulting and automation.",
-    canonicalUrl: "https://smartfirm.io/services/business-optimization",
+    canonicalUrl: "https://smartfirm.io/services/business-optimization-for-accounting-firms/",
     content: {},
     heroTitle: "Business Optimization: Streamline Operations for Your Accounting Firm",
     heroSubtitle: "Identify revenue leaks, systematize growth processes, and increase profitability 20-30% within 12 months through operational audits and data-driven improvements.",

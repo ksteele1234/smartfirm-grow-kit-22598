@@ -7,9 +7,9 @@ const BookkeepingServices = () => {
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
     title: "Marketing For Bookkeeping Firms That Commands Premium Fees | SmartFirm",
-    slug: "bookkeeping-services-marketing-automation", 
+    slug: "bookkeeping-services-marketing-automation",
     metaDescription: "Marketing for bookkeeping firms differentiates your practice from commodity providers, attracts ideal small business clients, and positions you as a strategic financial partner commanding premium fees.",
-    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation",
+    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation/",
     content: {},
     heroTitle: "Marketing For Bookkeeping Firms",
     heroSubtitle: "Marketing for bookkeeping firms differentiates your practice from commodity providers and positions you as a strategic financial partner: attract ideal small business clients and command premium fees when bookkeepers lose clients to low-cost software and struggle to justify professional rates.",
@@ -43,7 +43,7 @@ const BookkeepingServices = () => {
         link: "/services/marketing-automation"
       },
       {
-        title: "Recurring Revenue Optimization", 
+        title: "Recurring Revenue Optimization",
         description: "Maximize client lifetime value and reduce churn",
         link: "/solutions/retention-strategies"
       },
