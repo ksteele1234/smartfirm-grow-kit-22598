@@ -752,45 +752,45 @@ export const getFaqBySlug = (slug: string): { faq: FAQItem; category: FAQCategor
 export const getRelatedFaqs = (slug: string, limit: number = 3): FAQItem[] => {
   const result = getFaqBySlug(slug);
   if (!result) return [];
-  
+
   return result.category.questions
     .filter(q => q.slug !== slug)
     .slice(0, limit);
 };
 
 const pathToCategoryMap = new Map<string, string>([
-  ["/solutions-expert-marketing-agency-for-accounting-firms", "Getting Started with SmartFirm"],
-  ["/industries-expert-marketing-agency-for-accountants", "Industries We Serve"],
-  ["/solutions/client-retention", "Client Retention"],
-  ["/solutions/scale-firm", "Scaling Your Firm"],
-  ["/solutions/work-less-earn-more", "Work Less, Earn More"],
-  ["/solutions/retention-strategies", "Client Retention"],
-  ["/solutions/stop-losing-clients-to-tech-savvy-cpas", "Competing with Tech-Savvy Firms"],
-  ["/solutions/get-more-referrals-without-asking", "Referrals & Reviews"],
-  ["/solutions/grow-without-growing-pains", "Scaling Your Firm"],
-  ["/solutions/protect-practice-and-future", "Protect Your Practice"],
-  ["/solutions/client-onboarding-problems", "Client Onboarding Automation"],
-  ["/industries/tax-preparation", "Tax Preparation Marketing"],
-  ["/industries/bookkeeping-services", "Bookkeeping Services Marketing"],
-  ["/industries/bookkeeping-services-marketing-automation", "Bookkeeping Services Marketing"],
-  ["/industries/business-advisory", "Business Advisory Marketing"],
-  ["/industries/business-advisory-marketing-services", "Business Advisory Marketing"],
-  ["/industries/audit-assurance", "Industries We Serve"],
-  ["/industries/audit-assurance-marketing-agency", "Industries We Serve"],
-  ["/services/client-onboarding-automation", "Client Onboarding Automation"],
-  ["/services/automated-lead-follow-up", "Lead Follow-Up Automation"],
-  ["/services/seo-for-accountants", "SEO & Local Search"],
-  ["/services/website-design", "Website Design"],
-  ["/services/content-marketing", "Content Marketing"],
-  ["/services/email-marketing", "Email Marketing"],
-  ["/services/social-media-management", "Social Media Management"],
-  ["/services/technology-solutions", "Technology & Implementation"],
-  ["/services/business-optimization", "Technology & Implementation"],
-  ["/services/executive-services", "Executive & Advisory Services"],
-  ["/services/client-review-generation", "Referrals & Reviews"],
-  ["/services/online-reputation-management", "Referrals & Reviews"],
-  ["/services/add-ons", "Add-On Services"],
-  ["/tools", "Tools & Calculators"]
+  ["/solutions-expert-marketing-agency-for-accounting-firms/", "Getting Started with SmartFirm"],
+  ["/industries-expert-marketing-agency-for-accountants/", "Industries We Serve"],
+  ["/solutions/client-retention/", "Client Retention"],
+  ["/solutions/scale-firm/", "Scaling Your Firm"],
+  ["/solutions/work-less-earn-more/", "Work Less, Earn More"],
+  ["/solutions/retention-strategies/", "Client Retention"],
+  ["/solutions/stop-losing-clients-to-tech-savvy-cpas/", "Competing with Tech-Savvy Firms"],
+  ["/solutions/get-more-referrals-without-asking/", "Referrals & Reviews"],
+  ["/solutions/grow-without-growing-pains/", "Scaling Your Firm"],
+  ["/solutions/protect-practice-and-future/", "Protect Your Practice"],
+  ["/solutions/client-onboarding-problems/", "Client Onboarding Automation"],
+  ["/industries/tax-preparation/", "Tax Preparation Marketing"],
+  ["/industries/bookkeeping-services/", "Bookkeeping Services Marketing"],
+  ["/industries/bookkeeping-services-marketing-automation/", "Bookkeeping Services Marketing"],
+  ["/industries/business-advisory/", "Business Advisory Marketing"],
+  ["/industries/business-advisory-marketing-services/", "Business Advisory Marketing"],
+  ["/industries/audit-assurance/", "Industries We Serve"],
+  ["/industries/audit-assurance-marketing-agency/", "Industries We Serve"],
+  ["/services/client-onboarding-automation/", "Client Onboarding Automation"],
+  ["/services/automated-lead-follow-up/", "Lead Follow-Up Automation"],
+  ["/services/seo-for-accountants/", "SEO & Local Search"],
+  ["/services/website-design/", "Website Design"],
+  ["/services/content-marketing/", "Content Marketing"],
+  ["/services/email-marketing/", "Email Marketing"],
+  ["/services/social-media-management/", "Social Media Management"],
+  ["/services/technology-solutions/", "Technology & Implementation"],
+  ["/services/business-optimization/", "Technology & Implementation"],
+  ["/services/executive-services/", "Executive & Advisory Services"],
+  ["/services/client-review-generation/", "Referrals & Reviews"],
+  ["/services/online-reputation-management/", "Referrals & Reviews"],
+  ["/services/add-ons/", "Add-On Services"],
+  ["/tools/", "Tools & Calculators"]
 ]);
 
 const categoryToQuestionsMap = new Map(

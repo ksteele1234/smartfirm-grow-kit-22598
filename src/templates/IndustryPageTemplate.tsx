@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { IndustryPageData } from "@/types/cms";
 import { CheckCircle, ArrowRight, Building, Users, Shield } from "lucide-react";
 import {
-  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage 
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import FaqAnswer from "@/components/faq/FaqAnswer";
@@ -69,177 +69,177 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
         faqs={faqsToRender}
       />
       <Header />
-      
+
       <main id="main-content" role="main">
-      {/* Breadcrumbs */}
-      <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
-        <div className="container mx-auto px-4 lg:px-6 py-1.5">
-          <Breadcrumb>
-            <BreadcrumbList className="text-sm text-muted-foreground">
-              <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-                <BreadcrumbLink href={industriesIndexPath}>Industries</BreadcrumbLink>
-            </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        </div>
-      </nav>
-      
-      {/* Hero Section */}
-      <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue text-on-dark-body">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl lg:text-5xl font-heading font-bold text-on-dark-heading mb-6 drop-shadow-lg">
-            {data.heroTitle}
-          </h1>
-          <div id="sf-keyword-intro">
-            <p className="text-xl font-sans text-on-dark-body mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
-              {data.heroSubtitle}
-            </p>
+        {/* Breadcrumbs */}
+        <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
+          <div className="container mx-auto px-4 lg:px-6 py-1.5">
+            <Breadcrumb>
+              <BreadcrumbList className="text-sm text-muted-foreground">
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink href={industriesIndexPath}>Industries</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{data.title.replace(' | SmartFirm', '')}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
           </div>
-          <Button id="industry-hero-book-call-btn" size="lg" variant="coral" className="group" asChild>
-            <a href="/get-started">
-            Book a Free Call
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-        </div>
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-          <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
-          </svg>
-        </div>
-      </section>
+        </nav>
 
-      {/* Industry Overview Section */}
-      <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold mb-6">
-              Industry Overview
-            </h2>
-            <p className="text-lg font-sans text-foreground max-w-4xl mx-auto leading-[1.6]">
-              {data.industryOverview}
-            </p>
-            <p className="mt-4 font-sans text-foreground text-center leading-[1.6]">
-              View <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">our services</a> or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">AICPA best practices</a>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenges & Solutions Section */}
-      <section className="section-padding bg-muted">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold mb-4">
-              Common Challenges & Our Solutions
-            </h2>
-          </div>
-          <div className="grid gap-sm">
-            {data.challenges.map((challenge, index) => (
-              <Card key={index} className="elevation-1 card-interactive">
-                <CardHeader>
-                  <CardTitle className="text-xl font-heading flex items-start gap-3">
-                    <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-destructive font-bold">!</span>
-                    </div>
-                    {challenge.title}
-                  </CardTitle>
-                  <CardDescription className="text-base font-sans text-foreground ml-11 leading-[1.6]">
-                    {challenge.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="ml-11">
-                  <div className="bg-primary/5 p-4 rounded-lg">
-                    <h3 className="font-semibold mb-2">Our Solution:</h3>
-                    <p className="font-sans text-foreground leading-[1.6]">{challenge.solution}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CurvedSeparator variant="primary" className="text-background" />
-
-      {/* Services Section */}
-      <section className="section-padding bg-gradient-muted-blue">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold mb-4 text-on-dark-heading">
-              Specialized Services
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-sm">
-            {data.services.map((service, index) => (
-              <Card key={index} className="elevation-1 card-interactive hover:elevation-2">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <Building className="h-6 w-6 text-secondary" />
-                  </div>
-                  <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base font-sans text-foreground leading-[1.6]">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CurvedSeparator variant="primary" className="text-background" />
-
-      {/* FAQs Section */}
-      <section id="sf-faqs" className="section-padding bg-background">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-heading font-bold mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqsToRender.map((faq, index) => (
-              <details key={index} className="elevation-1 rounded-lg p-4 card-interactive">
-                <summary className="cursor-pointer font-semibold">{faq.question}</summary>
-                <div className="text-foreground mt-2 space-y-3 leading-[1.6]">
-                  <FaqAnswer
-                    text={faq.answer}
-                    paragraphClassName="text-base leading-[1.6] text-foreground"
-                  />
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-      <CurvedSeparator variant="primary" className="text-background" />
-
-      {/* Final CTA Section */}
-      <section 
-        className="relative bg-gradient-muted-blue section-padding"
-      >
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-heading font-bold text-on-dark-heading">{data.ctaTitle}</h2>
-          <p className="text-xl font-sans text-on-dark-body leading-[1.6]">{data.ctaDescription}</p>
-          <div className="flex justify-center">
-            <Button id="industry-final-book-call-btn" size="lg" variant="coral" className="group" asChild>
-              <a href="/get-started">
-              Book a Free Call
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        {/* Hero Section */}
+        <section className="relative pt-36 pb-[124px] px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-muted-blue text-on-dark-body">
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <h1 className="text-4xl lg:text-5xl font-heading font-bold text-on-dark-heading mb-6 drop-shadow-lg">
+              {data.heroTitle}
+            </h1>
+            <div id="sf-keyword-intro">
+              <p className="text-xl font-sans text-on-dark-body mb-8 max-w-3xl mx-auto drop-shadow-md leading-[1.6]">
+                {data.heroSubtitle}
+              </p>
+            </div>
+            <Button id="industry-hero-book-call-btn" size="lg" variant="coral" className="group" asChild>
+              <a href="/get-started/">
+                Book a Free Call
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </div>
-        </div>
-      </section>
+          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" className="fill-background" />
+            </svg>
+          </div>
+        </section>
+
+        {/* Industry Overview Section */}
+        <section className="section-padding relative bg-white -mt-6 pt-[20px] md:pt-[40px] lg:pt-[60px]">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-heading font-bold mb-6">
+                Industry Overview
+              </h2>
+              <p className="text-lg font-sans text-foreground max-w-4xl mx-auto leading-[1.6]">
+                {data.industryOverview}
+              </p>
+              <p className="mt-4 font-sans text-foreground text-center leading-[1.6]">
+                View <a href="/leading-marketing-services-for-accounting-firms/" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">our services</a> or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">AICPA best practices</a>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Challenges & Solutions Section */}
+        <section className="section-padding bg-muted">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-heading font-bold mb-4">
+                Common Challenges & Our Solutions
+              </h2>
+            </div>
+            <div className="grid gap-sm">
+              {data.challenges.map((challenge, index) => (
+                <Card key={index} className="elevation-1 card-interactive">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-heading flex items-start gap-3">
+                      <div className="w-8 h-8 bg-destructive/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-destructive font-bold">!</span>
+                      </div>
+                      {challenge.title}
+                    </CardTitle>
+                    <CardDescription className="text-base font-sans text-foreground ml-11 leading-[1.6]">
+                      {challenge.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="ml-11">
+                    <div className="bg-primary/5 p-4 rounded-lg">
+                      <h3 className="font-semibold mb-2">Our Solution:</h3>
+                      <p className="font-sans text-foreground leading-[1.6]">{challenge.solution}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        <CurvedSeparator variant="primary" className="text-background" />
+
+        {/* Services Section */}
+        <section className="section-padding bg-gradient-muted-blue">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-heading font-bold mb-4 text-on-dark-heading">
+                Specialized Services
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-sm">
+              {data.services.map((service, index) => (
+                <Card key={index} className="elevation-1 card-interactive hover:elevation-2">
+                  <CardHeader>
+                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                      <Building className="h-6 w-6 text-secondary" />
+                    </div>
+                    <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base font-sans text-foreground leading-[1.6]">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        <CurvedSeparator variant="primary" className="text-background" />
+
+        {/* FAQs Section */}
+        <section id="sf-faqs" className="section-padding bg-background">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              {faqsToRender.map((faq, index) => (
+                <details key={index} className="elevation-1 rounded-lg p-4 card-interactive">
+                  <summary className="cursor-pointer font-semibold">{faq.question}</summary>
+                  <div className="text-foreground mt-2 space-y-3 leading-[1.6]">
+                    <FaqAnswer
+                      text={faq.answer}
+                      paragraphClassName="text-base leading-[1.6] text-foreground"
+                    />
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+        <CurvedSeparator variant="primary" className="text-background" />
+
+        {/* Final CTA Section */}
+        <section
+          className="relative bg-gradient-muted-blue section-padding"
+        >
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h2 className="text-3xl font-heading font-bold text-on-dark-heading">{data.ctaTitle}</h2>
+            <p className="text-xl font-sans text-on-dark-body leading-[1.6]">{data.ctaDescription}</p>
+            <div className="flex justify-center">
+              <Button id="industry-final-book-call-btn" size="lg" variant="coral" className="group" asChild>
+                <a href="/get-started/">
+                  Book a Free Call
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
-      
+
       <Footer />
     </div>
   );
