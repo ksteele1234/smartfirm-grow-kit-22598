@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { faqCategories, getAllFaqs } from "@/data/faqContent";
-import { 
+import {
   ArrowRight,
   Search,
   MessageSquare,
@@ -48,7 +48,7 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Frequently Asked Questions | Accounting Firm Automation"
         description="Explore SmartFirm FAQs on SEO agency for accountants, PPC services for accounting firms, accounting firm reputation management service, and more."
         pageType="faq"
@@ -56,12 +56,12 @@ const FAQ = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "FAQ", url: "/faq" }
+          { name: "FAQ", url: "/faq/" }
         ]}
         faqs={allFAQs}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -78,10 +78,10 @@ const FAQ = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
-        <section 
+        <section
           className="relative py-16 md:py-section pb-32 md:pb-40 overflow-hidden"
         >
           {/* Hero background image with proper loading */}
@@ -95,14 +95,14 @@ const FAQ = () => {
             style={{ objectPosition: 'center' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent z-0" />
-          
+
           {/* Curved bottom edge */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-10 text-background">
             <svg className="relative block w-full h-[80px] md:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0 C300,80 900,80 1200,0 L1200,120 L0,120 Z" fill="currentColor" />
             </svg>
           </div>
-          
+
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
               Frequently Asked Questions
@@ -112,7 +112,7 @@ const FAQ = () => {
                 Get answers to common questions about marketing automation, SEO, PPC, and content marketing for accountants.
               </p>
             </div>
-            
+
             {/* Search Bar */}
             <div className="max-w-text-sm mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted h-5 w-5" />
@@ -142,7 +142,7 @@ const FAQ = () => {
                     {category.questions.map((faq) => (
                       <Link
                         key={faq.slug}
-                        to={`/faq/${faq.slug}`}
+                        to={`/faq/${faq.slug}/`}
                         className="flex items-center justify-between gap-4 p-4 bg-background border rounded-lg hover:border-accent hover:bg-accent/5 transition-all duration-200 group"
                       >
                         <span className="text-foreground group-hover:text-accent transition-colors font-medium">
@@ -186,7 +186,7 @@ const FAQ = () => {
               <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
                 Can't find the answer you're looking for? Our team of accounting firm marketing experts is here to help.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-md mb-12">
                 <div className="bg-background border rounded-xl p-6 text-center elevation-1 hover:elevation-2 transition-shadow">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -215,8 +215,8 @@ const FAQ = () => {
                 </div>
               </div>
 
-                <Button id="faq-book-call-btn" size="lg" variant="hero" asChild>
-                <a href="/get-started">
+              <Button id="faq-book-call-btn" size="lg" variant="hero" asChild>
+                <a href="/get-started/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
