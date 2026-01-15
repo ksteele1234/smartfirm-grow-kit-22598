@@ -166,7 +166,7 @@ export default function PostList() {
       const allPosts = postsRes.data || [];
       setPosts(allPosts);
       setCategories(categoriesRes.data || []);
-      
+
       // Extract pillars from posts
       const pillarPosts = allPosts
         .filter(p => p.post_type === 'pillar')
@@ -238,8 +238,8 @@ export default function PostList() {
 
       if (error) throw error;
       toast.success(`${selectedPosts.size} posts ${newStatus === 'published' ? 'published' : 'unpublished'}`);
-      setPosts(posts.map(p => 
-        selectedPosts.has(p.id) 
+      setPosts(posts.map(p =>
+        selectedPosts.has(p.id)
           ? { ...p, status: newStatus, publish_date: newStatus === 'published' ? new Date().toISOString() : p.publish_date }
           : p
       ));
@@ -267,8 +267,8 @@ export default function PostList() {
 
       if (error) throw error;
       toast.success(`Post ${newStatus === 'published' ? 'published' : 'unpublished'}`);
-      setPosts(posts.map(p => 
-        p.id === post.id 
+      setPosts(posts.map(p =>
+        p.id === post.id
           ? { ...p, status: newStatus, publish_date: newStatus === 'published' ? new Date().toISOString() : p.publish_date }
           : p
       ));
@@ -319,21 +319,21 @@ export default function PostList() {
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
       const searchLower = searchQuery.toLowerCase();
-      const matchesSearch = 
+      const matchesSearch =
         post.title.toLowerCase().includes(searchLower) ||
         post.slug.toLowerCase().includes(searchLower) ||
         (post.excerpt?.toLowerCase().includes(searchLower) ?? false);
       const matchesStatus = statusFilter === 'all' || post.status === statusFilter;
-      const matchesCategory = 
-        categoryFilter === 'all' || 
+      const matchesCategory =
+        categoryFilter === 'all' ||
         (categoryFilter === 'uncategorized' ? !post.category_id : post.category_id === categoryFilter);
-      const matchesPostType = 
-        postTypeFilter === 'all' || 
+      const matchesPostType =
+        postTypeFilter === 'all' ||
         (postTypeFilter === 'standard' ? (!post.post_type || post.post_type === 'standard') : post.post_type === postTypeFilter);
-      const matchesPillar = 
-        pillarFilter === 'all' || 
+      const matchesPillar =
+        pillarFilter === 'all' ||
         (pillarFilter === 'orphan' ? (post.post_type === 'cluster' && !post.pillar_id) : post.pillar_id === pillarFilter);
-      
+
       return matchesSearch && matchesStatus && matchesCategory && matchesPostType && matchesPillar;
     });
   }, [posts, searchQuery, statusFilter, categoryFilter, postTypeFilter, pillarFilter]);
@@ -379,7 +379,7 @@ export default function PostList() {
 
   const SortIcon = ({ field }: { field: SortField }) => {
     if (sortField !== field) return <ArrowUpDown size={14} className="ml-1 text-muted-foreground" />;
-    return sortDirection === 'asc' 
+    return sortDirection === 'asc'
       ? <ArrowUp size={14} className="ml-1" />
       : <ArrowDown size={14} className="ml-1" />;
   };
@@ -612,8 +612,8 @@ export default function PostList() {
           <div className="flex items-center gap-4 p-3 bg-muted/50 border rounded-lg">
             <span className="text-sm font-medium">{selectedPosts.size} selected</span>
             <div className="flex gap-2">
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant="outline"
                 onClick={() => handleBulkStatusChange('published')}
                 disabled={isBulkActionLoading}
@@ -621,8 +621,8 @@ export default function PostList() {
                 <Eye size={14} className="mr-1" />
                 Publish
               </Button>
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 variant="outline"
                 onClick={() => handleBulkStatusChange('draft')}
                 disabled={isBulkActionLoading}
@@ -633,9 +633,9 @@ export default function PostList() {
               {isAdmin && (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="text-destructive hover:text-destructive"
                       disabled={isBulkActionLoading}
                     >
@@ -663,9 +663,9 @@ export default function PostList() {
                 </AlertDialog>
               )}
             </div>
-            <Button 
-              size="sm" 
-              variant="ghost" 
+            <Button
+              size="sm"
+              variant="ghost"
               onClick={() => setSelectedPosts(new Set())}
               className="ml-auto"
             >
@@ -698,14 +698,14 @@ export default function PostList() {
               <TableHeader>
                 <TableRow>
                   <TableHead className="w-10">
-                    <Checkbox 
+                    <Checkbox
                       checked={allSelected}
                       onCheckedChange={handleSelectAll}
                       aria-label="Select all posts"
                       className={someSelected ? 'data-[state=checked]:bg-primary/50' : ''}
                     />
                   </TableHead>
-                  <TableHead 
+                  <TableHead
                     className="cursor-pointer hover:bg-muted/50 transition-colors"
                     onClick={() => handleSort('title')}
                   >
@@ -715,7 +715,7 @@ export default function PostList() {
                     </div>
                   </TableHead>
                   {columnVisibility.type && (
-                    <TableHead 
+                    <TableHead
                       className="cursor-pointer hover:bg-muted/50 transition-colors"
                       onClick={() => handleSort('post_type')}
                     >
@@ -726,7 +726,7 @@ export default function PostList() {
                     </TableHead>
                   )}
                   {columnVisibility.category && (
-                    <TableHead 
+                    <TableHead
                       className="cursor-pointer hover:bg-muted/50 transition-colors"
                       onClick={() => handleSort('category')}
                     >
@@ -740,7 +740,7 @@ export default function PostList() {
                     <TableHead>Pillar</TableHead>
                   )}
                   {columnVisibility.status && (
-                    <TableHead 
+                    <TableHead
                       className="cursor-pointer hover:bg-muted/50 transition-colors"
                       onClick={() => handleSort('status')}
                     >
@@ -751,7 +751,7 @@ export default function PostList() {
                     </TableHead>
                   )}
                   {columnVisibility.updated && (
-                    <TableHead 
+                    <TableHead
                       className="cursor-pointer hover:bg-muted/50 transition-colors"
                       onClick={() => handleSort('updated_at')}
                     >
@@ -762,7 +762,7 @@ export default function PostList() {
                     </TableHead>
                   )}
                   {columnVisibility.published && (
-                    <TableHead 
+                    <TableHead
                       className="cursor-pointer hover:bg-muted/50 transition-colors"
                       onClick={() => handleSort('publish_date')}
                     >
@@ -779,7 +779,7 @@ export default function PostList() {
                 {sortedPosts.map((post) => (
                   <TableRow key={post.id} className={selectedPosts.has(post.id) ? 'bg-muted/30' : ''}>
                     <TableCell>
-                      <Checkbox 
+                      <Checkbox
                         checked={selectedPosts.has(post.id)}
                         onCheckedChange={(checked) => handleSelectPost(post.id, !!checked)}
                         aria-label={`Select ${post.title}`}
@@ -823,14 +823,14 @@ export default function PostList() {
                     <TableCell>
                       <div className="flex items-center gap-1">
                         {/* Preview button - opens dedicated preview page with link validation */}
-                        <Button 
-                          variant="ghost" 
-                          size="icon" 
-                          asChild 
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          asChild
                           className="h-8 w-8"
                           title="Preview post with link validation"
                         >
-                          <a href={`/blog/preview/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                          <a href={`/blog/preview/${post.slug}/`} target="_blank" rel="noopener noreferrer">
                             <FileSearch size={14} />
                           </a>
                         </Button>
@@ -849,14 +849,14 @@ export default function PostList() {
                           </Link>
                         </Button>
                         {post.status === 'published' && (
-                          <Button 
-                            variant="ghost" 
-                            size="icon" 
-                            asChild 
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            asChild
                             className="h-8 w-8"
                             title="View live post"
                           >
-                            <a href={`/blog/${post.slug}`} target="_blank" rel="noopener noreferrer">
+                            <a href={`/blog/${post.slug}/`} target="_blank" rel="noopener noreferrer">
                               <ExternalLink size={14} />
                             </a>
                           </Button>

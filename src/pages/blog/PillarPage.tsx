@@ -139,7 +139,7 @@ const PillarPage = () => {
       "item": {
         "@type": "Article",
         "name": post.title,
-        "url": `https://smartfirm.io/blog/${post.slug}`
+        "url": `https://smartfirm.io/blog/${post.slug}/`
       }
     }))
   } : null;
@@ -246,7 +246,7 @@ const PillarPage = () => {
                 {clusterPosts.map((post, index) => (
                   <Link
                     key={post.id}
-                    to={`/blog/${post.slug}`}
+                    to={`/blog/${post.slug}/`}
                     className="group"
                   >
                     <Card className="transition-all hover:shadow-md hover:border-primary/30">
@@ -317,7 +317,7 @@ const PillarPage = () => {
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {clusterPosts.map((post) => (
-                  <Link key={post.id} to={`/blog/${post.slug}`} className="group">
+                  <Link key={post.id} to={`/blog/${post.slug}/`} className="group">
                     <Card className="h-full transition-all hover:shadow-lg hover:-translate-y-1">
                       {post.featured_image && (
                         <div className="aspect-video overflow-hidden rounded-t-lg">

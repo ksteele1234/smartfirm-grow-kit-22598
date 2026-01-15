@@ -30,7 +30,7 @@ const ClusterNavigator = ({ currentPostId, pillarId }: ClusterNavigatorProps) =>
         .select("id, title, slug")
         .eq("id", pillarId)
         .maybeSingle();
-      
+
       if (error) throw error;
       return data as PillarPost | null;
     },
@@ -48,7 +48,7 @@ const ClusterNavigator = ({ currentPostId, pillarId }: ClusterNavigatorProps) =>
         .eq("status", "published")
         .neq("id", currentPostId)
         .order("display_order", { ascending: true });
-      
+
       if (error) throw error;
       return data as SiblingPost[];
     },
@@ -62,8 +62,8 @@ const ClusterNavigator = ({ currentPostId, pillarId }: ClusterNavigatorProps) =>
       <div className="bg-muted/50 rounded-xl p-6">
         {/* Pillar Link */}
         <div className="mb-4">
-          <Link 
-            to={`/blog/${pillar.slug}`}
+          <Link
+            to={`/blog/${pillar.slug}/`}
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
           >
             <BookOpen className="w-4 h-4" />
@@ -79,8 +79,8 @@ const ClusterNavigator = ({ currentPostId, pillarId }: ClusterNavigatorProps) =>
           <ul className="space-y-2">
             {siblingPosts.map((post) => (
               <li key={post.id}>
-                <Link 
-                  to={`/blog/${post.slug}`}
+                <Link
+                  to={`/blog/${post.slug}/`}
                   className="group flex items-center gap-2 text-foreground hover:text-primary transition-colors"
                 >
                   <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />

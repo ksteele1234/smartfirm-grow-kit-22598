@@ -197,7 +197,7 @@ const BlogPost = () => {
                   </Button>
                 </Link>
                 <span className="text-white/50">/</span>
-                <Link to={`/blog/${pillarInfo.slug}`}>
+                <Link to={`/blog/${pillarInfo.slug}/`}>
                   <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                     <BookOpen className="w-4 h-4 mr-2" />
                     {pillarInfo.title}
@@ -308,7 +308,7 @@ const BlogPost = () => {
                 <Tag className="w-4 h-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground font-medium">Tags:</span>
                 {postTags.map((tag) => (
-                  <Link key={tag.id} to={`/blog/tags/${tag.slug}`}>
+                  <Link key={tag.id} to={`/blog/tags/${tag.slug}/`}>
                     <Badge variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                       {tag.name}
                     </Badge>

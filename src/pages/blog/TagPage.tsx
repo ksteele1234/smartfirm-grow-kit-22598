@@ -204,7 +204,7 @@ const TagPage = () => {
               <div className="flex flex-wrap items-center gap-3">
                 <span className="text-sm text-muted-foreground font-medium">Related topics:</span>
                 {relatedTags.map((relatedTag) => (
-                  <Link key={relatedTag.id} to={`/blog/tags/${relatedTag.slug}`}>
+                  <Link key={relatedTag.id} to={`/blog/tags/${relatedTag.slug}/`}>
                     <Badge variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                       {relatedTag.name}
                     </Badge>
@@ -237,7 +237,7 @@ const TagPage = () => {
             ) : (
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
-                  <Link key={post.id} to={`/blog/${post.slug}`}>
+                  <Link key={post.id} to={`/blog/${post.slug}/`}>
                     <Card className="h-full hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
                       {post.featured_image && (
                         <div className="aspect-video overflow-hidden">

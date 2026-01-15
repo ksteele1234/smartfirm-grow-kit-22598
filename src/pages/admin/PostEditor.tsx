@@ -81,7 +81,7 @@ export default function PostEditor() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const isEditing = Boolean(id);
-  
+
   const [isLoading, setIsLoading] = useState(isEditing);
   const [isSaving, setIsSaving] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -248,7 +248,7 @@ export default function PostEditor() {
         featured_image: data.featured_image || null,
         category_id: data.category_id || null,
         status: data.status,
-        publish_date: data.status === 'published' 
+        publish_date: data.status === 'published'
           ? new Date().toISOString()
           : data.publish_date?.toISOString() || null,
         meta_title: data.meta_title || null,
@@ -350,7 +350,7 @@ export default function PostEditor() {
               {/* Preview button - always available when editing */}
               {isEditing && form.watch('slug') && (
                 <Button type="button" variant="outline" asChild>
-                  <a href={`/blog/preview/${form.watch('slug')}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`/blog/preview/${form.watch('slug')}/`} target="_blank" rel="noopener noreferrer">
                     <FileSearch size={16} className="mr-2" />
                     Preview
                   </a>
@@ -359,7 +359,7 @@ export default function PostEditor() {
               {/* View live button - only for published posts */}
               {isEditing && form.watch('status') === 'published' && (
                 <Button type="button" variant="outline" asChild>
-                  <a href={`/blog/${form.watch('slug')}`} target="_blank" rel="noopener noreferrer">
+                  <a href={`/blog/${form.watch('slug')}/`} target="_blank" rel="noopener noreferrer">
                     <Eye size={16} className="mr-2" />
                     View Live
                   </a>
@@ -654,37 +654,37 @@ export default function PostEditor() {
                             </FormDescription>
                             <FormMessage />
                           </FormItem>
-                    )}
-                  />
+                        )}
+                      />
 
-                  <FormField
-                    control={form.control}
-                    name="author_id"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Author</FormLabel>
-                        <Select 
-                          onValueChange={(value) => field.onChange(value === 'none' ? '' : value)} 
-                          value={field.value || 'none'}
-                        >
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select author" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="none">No author</SelectItem>
-                            {authors.map((author) => (
-                              <SelectItem key={author.id} value={author.id}>
-                                {author.display_name || 'Unnamed'}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                      <FormField
+                        control={form.control}
+                        name="author_id"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Author</FormLabel>
+                            <Select
+                              onValueChange={(value) => field.onChange(value === 'none' ? '' : value)}
+                              value={field.value || 'none'}
+                            >
+                              <FormControl>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select author" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                <SelectItem value="none">No author</SelectItem>
+                                {authors.map((author) => (
+                                  <SelectItem key={author.id} value={author.id}>
+                                    {author.display_name || 'Unnamed'}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
                     </>
                   )}
                 </CardContent>
@@ -732,8 +732,8 @@ export default function PostEditor() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Parent Pillar</FormLabel>
-                            <Select 
-                              onValueChange={(value) => field.onChange(value === 'none' ? '' : value)} 
+                            <Select
+                              onValueChange={(value) => field.onChange(value === 'none' ? '' : value)}
                               value={field.value || 'none'}
                             >
                               <FormControl>
@@ -768,9 +768,9 @@ export default function PostEditor() {
                           <FormItem>
                             <FormLabel>Display Order</FormLabel>
                             <FormControl>
-                              <Input 
-                                type="number" 
-                                placeholder="0" 
+                              <Input
+                                type="number"
+                                placeholder="0"
                                 {...field}
                                 onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                               />
@@ -798,8 +798,8 @@ export default function PostEditor() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Category</FormLabel>
-                        <Select 
-                          onValueChange={(value) => field.onChange(value === 'none' ? '' : value)} 
+                        <Select
+                          onValueChange={(value) => field.onChange(value === 'none' ? '' : value)}
                           value={field.value || 'none'}
                         >
                           <FormControl>

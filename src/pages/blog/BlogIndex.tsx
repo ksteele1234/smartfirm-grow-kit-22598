@@ -114,7 +114,7 @@ const BlogIndex = () => {
       <SEO
         title="Blog | SmartFirm - Firm Automation Insights"
         description="Expert insights on marketing automation, client acquisition, and growth strategies for accounting and CPA firms. Stay ahead with the latest industry trends."
-        canonicalUrl="https://smartfirm.io/blog"
+        canonicalUrl="https://smartfirm.io/blog/"
       />
       <Header />
 
@@ -180,7 +180,7 @@ const BlogIndex = () => {
             ) : (
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
-                  <Link key={post.id} to={`/blog/${post.slug}`}>
+                  <Link key={post.id} to={`/blog/${post.slug}/`}>
                     <Card className="h-full hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
                       {post.featured_image && (
                         <div className="aspect-video overflow-hidden">
