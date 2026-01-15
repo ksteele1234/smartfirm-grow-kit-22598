@@ -95,8 +95,9 @@ const SEO = ({
     generatedDescription = `Learn ${topic} for finance firms: actionable tips and tools from SmartFirm.`;
   }
 
-  // Auto-populate legal page data if applicable
-  const pathname = location.pathname;
+  // Use window.location.pathname for canonical URLs - useLocation().pathname returns '/' during prerendering
+  // window.location.pathname is correctly set by Puppeteer during SSG
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : location.pathname;
   const legalPageData = LEGAL_PAGE_DATES[pathname as keyof typeof LEGAL_PAGE_DATES];
 
   let genre = genreProp;
