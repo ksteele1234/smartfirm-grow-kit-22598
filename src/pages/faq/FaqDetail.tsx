@@ -55,6 +55,7 @@ const FaqDetail = () => {
         title={`${faq.question} | SmartFirm FAQ`}
         description={faq.answer.slice(0, 155) + "..."}
         pageType="faq"
+        canonicalUrl={`https://smartfirm.io/faq/${slug}/`}
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[

@@ -19,18 +19,18 @@ const { execSync } = require('child_process');
 const prerenderRoutes = [
   // Homepage
   "/",
-  
+
   // Main Navigation Pages
-  "/solutions-expert-marketing-agency-for-accounting-firms",
-  "/leading-marketing-services-for-accounting-firms",
-  "/services/all-professional-marketing-services-for-accounting-firms",
-  "/industries-expert-marketing-agency-for-accountants",
+  "/solutions",
+  "/services",
+  "/all-services",
+  "/industries",
   "/resources",
   "/about",
   "/contact",
   "/get-started",
-  "/quick-start-marketing-for-cpa-firms",
-  
+  "/quick-start",
+
   // Solution Pages
   "/solutions/scale-accounting-firm-successfully",
   "/solutions/stop-losing-clients-to-tech-savvy-cpas",
@@ -38,7 +38,7 @@ const prerenderRoutes = [
   "/solutions/work-less-earn-more",
   "/solutions/grow-without-growing-pains",
   "/solutions/protect-practice-and-future",
-  
+
   // Service Pages
   "/services/ai-transformation-roadmap",
   "/services/single-process-ai-transformation",
@@ -56,13 +56,13 @@ const prerenderRoutes = [
   "/services/reputation-management-for-cpas",
   "/services/marketing-strategy-integration-for-accounting-firms",
   "/services/add-ons",
-  
+
   // Industry Pages
   "/industries/tax-preparation-marketing-solutions",
   "/industries/bookkeeping-services-marketing-automation",
   "/industries/business-advisory-marketing-services",
   "/industries/audit-assurance-marketing-agency",
-  
+
   // Tools & Calculators
   "/tools",
   "/tools/efficiency-quiz",
@@ -78,14 +78,14 @@ const prerenderRoutes = [
   "/tools/seo-audit",
   "/tools/page-grader",
   "/tools/advanced-seo-qa",
-  
+
   // Funnel Pages
   "/growth-calculator",
-  
+
   // Case Studies
   "/case-studies",
   "/case-studies/payroll-automation-roi",
-  
+
   // Legal Pages
   "/privacy",
   "/terms",
@@ -339,7 +339,7 @@ function findChrome() {
   if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
     return process.env.CHROME_PATH;
   }
-  
+
   // 2. Check common Netlify/CI locations
   const commonPaths = [
     '/opt/chromium/chrome',
@@ -348,13 +348,13 @@ function findChrome() {
     '/usr/bin/google-chrome',
     '/usr/bin/google-chrome-stable',
   ];
-  
+
   for (const chromePath of commonPaths) {
     if (fs.existsSync(chromePath)) {
       return chromePath;
     }
   }
-  
+
   // 3. Try which command
   try {
     const chromePath = execSync('which chromium-browser || which chromium || which google-chrome', { encoding: 'utf-8' }).trim();
@@ -364,7 +364,7 @@ function findChrome() {
   } catch (e) {
     // which command failed
   }
-  
+
   return null;
 }
 
@@ -374,26 +374,26 @@ async function prerender() {
   // Fetch published blog slugs dynamically
   const blogSlugs = await fetchPublishedBlogSlugs();
   const blogRoutes = ['/blog', ...blogSlugs.map((s) => `/blog/${s}`)];
-  
+
   // Fetch blog tag slugs dynamically
   const tagSlugs = await fetchBlogTagSlugs();
   const tagRoutes = tagSlugs.map((s) => `/blog/tags/${s}`);
-  
+
   // Combine static routes with dynamic blog/tag routes and static FAQ routes
   const allRoutes = [...prerenderRoutes, ...faqRoutes, ...blogRoutes, ...tagRoutes];
-  
+
   // Ensure SPA fallback pages exist for all routes (prevents 404 on static hosts)
   ensureSpaFallbackPages(allRoutes);
-  
+
   // Find Chrome executable
   const executablePath = findChrome();
-  
+
   if (!executablePath) {
     throw new Error('[Prerender] No Chrome executable found. Install @netlify/plugin-chromium via Netlify UI or ensure Chrome is available.');
   }
-  
+
   console.log(`[Prerender] Using Chrome at: ${executablePath}`);
-  
+
   const browser = await puppeteer.launch({
     executablePath,
     headless: 'new',
@@ -405,7 +405,7 @@ async function prerender() {
   // Start a simple static server for the dist folder
   const { createServer } = require('http');
   const handler = require('serve-handler');
-  
+
   const server = createServer((req, res) => {
     return handler(req, res, {
       public: distPath,
@@ -424,34 +424,34 @@ async function prerender() {
     try {
       const page = await browser.newPage();
       const url = `http://localhost:3000${route}`;
-      
-      await page.goto(url, { 
+
+      await page.goto(url, {
         waitUntil: 'domcontentloaded',
         timeout: 60000,
       });
 
       // Wait for React to render
       await page.waitForSelector('#root', { timeout: 10000 });
-      
+
       // Get the rendered HTML
       const html = await page.content();
-      
+
       // Determine output path - writes to dist/<route>/index.html
-      const outputPath = route === '/' 
+      const outputPath = route === '/'
         ? path.join(distPath, 'index.html')
         : path.join(distPath, route, 'index.html');
-      
+
       // Ensure directory exists
       const outputDir = path.dirname(outputPath);
       if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
       }
-      
+
       // Write the prerendered HTML
       fs.writeFileSync(outputPath, html);
       console.log(`[Prerender] ✓ ${route}`);
       successCount++;
-      
+
       await page.close();
     } catch (err) {
       // Special handling for homepage timeout - don't fail the build
@@ -468,13 +468,13 @@ async function prerender() {
 
   server.close();
   await browser.close();
-  
+
   console.log(`[Prerender] Complete: ${successCount} succeeded, ${skippedCount} skipped, ${errorCount} failed`);
-  
+
   if (skippedCount > 0) {
     console.log(`[Prerender] Note: Skipped routes will render client-side (normal for React SPAs)`);
   }
-  
+
   // Only fail build if non-homepage routes failed to prerender
   if (errorCount > 0) {
     throw new Error(`[Prerender] ${errorCount} routes failed to prerender`);

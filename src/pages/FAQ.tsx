@@ -52,6 +52,7 @@ const FAQ = () => {
         title="Frequently Asked Questions | Accounting Firm Automation"
         description="Explore SmartFirm FAQs on SEO agency for accountants, PPC services for accounting firms, accounting firm reputation management service, and more."
         pageType="faq"
+        canonicalUrl="https://smartfirm.io/faq/"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
