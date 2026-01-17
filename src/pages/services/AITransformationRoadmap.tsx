@@ -128,13 +128,13 @@ const AITransformationRoadmap = () => {
         audience="accounting firms"
         title="AI Transformation Roadmap for Accounting Firms | SmartFirm"
         description="Strategic AI implementation roadmap for accounting firms. Get a clear 12-month plan to automate workflows and improve efficiency with SmartFirm's AI consulting."
-        canonicalUrl="https://smartfirm.io/services/ai-transformation-roadmap"
+        canonicalUrl="https://smartfirm.io/services/ai-transformation-roadmap/"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/leading-marketing-services-for-accounting-firms" },
-          { name: "AI Transformation Roadmap", url: "/services/ai-transformation-roadmap" }
+          { name: "Services", url: "/services/" },
+          { name: "AI Transformation Roadmap", url: "/services/ai-transformation-roadmap/" }
         ]}
         faqs={faqs}
       />
@@ -153,7 +153,7 @@ const AITransformationRoadmap = () => {
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms/" className="hover:text-white/80">Services</BreadcrumbLink>
+                    <BreadcrumbLink href="/services/" className="hover:text-white/80">Services</BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>

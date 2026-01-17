@@ -27,19 +27,19 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <SEO 
+      <SEO
         title="Error 404: Depreciated Asset"
         description="This page has been removed or relocated. Visit SmartFirm.io to explore our automation and marketing services for accounting firms."
         robots="noindex,follow"
       />
       <Header />
-      
+
       <main className="flex-1 flex items-center justify-center px-4 py-16">
         <div className="max-w-2xl w-full text-center">
           {/* Piggy Bank Image */}
           <div className="mb-8 flex justify-center">
-            <OptimizedImage 
-              src={piggyBank} 
+            <OptimizedImage
+              src={piggyBank}
               alt="Cracked piggy bank smiling"
               width={192}
               height={192}
@@ -53,9 +53,9 @@ const NotFound = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Error 404: Depreciated Asset
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg mx-auto">
-            Looks like this page has been fully depreciated and no longer exists in our books. 
+            Looks like this page has been fully depreciated and no longer exists in our books.
             Time to reconcile your navigation!
           </p>
 
@@ -83,9 +83,9 @@ const NotFound = () => {
                 Return to Home
               </a>
             </Button>
-            
+
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/contact">
+              <a href="/contact/">
                 Contact Support
               </a>
             </Button>
@@ -97,10 +97,10 @@ const NotFound = () => {
               You might be looking for:
             </p>
             <div className="flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/solutions-expert-marketing-agency-for-accounting-firms" className="text-primary hover:underline">
+              <a href="/solutions/" className="text-primary hover:underline">
                 Solutions
               </a>
-              <a href="/leading-marketing-services-for-accounting-firms" className="text-primary hover:underline">
+              <a href="/services/" className="text-primary hover:underline">
                 Services
               </a>
               <a href="/case-studies" className="text-primary hover:underline">

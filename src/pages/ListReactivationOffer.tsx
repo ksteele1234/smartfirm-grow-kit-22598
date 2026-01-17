@@ -62,12 +62,12 @@ const ListReactivationOffer = () => {
         audience="accounting firms"
         title="Hidden Money Reactivation - Fill Your Calendar | SmartFirm"
         description="We'll fill your calendar with 5 qualified tax planning appointments from your dead files. No ads. No cold outreach. Done-for-you reactivation campaign."
-        canonicalUrl="https://smartfirm.io/list-reactivation-offer"
+        canonicalUrl="https://smartfirm.io/list-reactivation-offer/"
         noindex={true}
       />
-      
+
       <FunnelHeader />
-      
+
       <main id="main-content" role="main">
         {/* Hero Section */}
         <section className="relative pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-background">
@@ -134,7 +134,7 @@ const ListReactivationOffer = () => {
             >
               Core Deliverables
             </motion.h2>
-            
+
             <div className="space-y-4 mb-8">
               {coreDeliverables.map((item, index) => (
                 <motion.div
@@ -191,7 +191,7 @@ const ListReactivationOffer = () => {
               </h2>
               <p className="text-lg text-muted-foreground mt-2">We also include:</p>
             </motion.div>
-            
+
             <div className="space-y-4">
               {bonuses.map((item, index) => (
                 <motion.div
@@ -253,7 +253,7 @@ const ListReactivationOffer = () => {
               <h2 className="text-2xl md:text-4xl font-bold text-primary mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 Total Value vs Price
               </h2>
-              
+
               <div className="space-y-4 mb-8">
                 <p className="text-xl text-foreground">
                   Total value: <span className="font-bold text-accent-gold">$9,700</span>
@@ -353,7 +353,7 @@ const ListReactivationOffer = () => {
               <p className="text-xl text-white/90 mb-8" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 You've seen the math. You've got the script. Let us run it for you — 5 appointments in 14 days, guaranteed.
               </p>
-              <a 
+              <a
                 id="reactivation-bottom-book-call-btn"
                 href="https://api.leadconnectorhq.com/widget/bookings/15-min-reactivation-fit-call?utm_source=website&utm_medium=landing-page&utm_campaign=offer5-reactivation&utm_content=bottom-cta"
                 target="_blank"
@@ -370,7 +370,7 @@ const ListReactivationOffer = () => {
         </section>
 
       </main>
-      
+
       <FunnelFooter />
     </div>
   );

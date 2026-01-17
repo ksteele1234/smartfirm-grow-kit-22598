@@ -32,7 +32,7 @@ interface SolutionPageTemplateProps {
 }
 
 const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
-  const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
+  const solutionsIndexPath = "/solutions/";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
 
   const faqsToRender = data.faqs && data.faqs.length > 0 ? data.faqs : defaultSolutionFaqs;
@@ -229,7 +229,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               <a href="/get-started/">Book a Free Call</a>
             </Button>
             <p className="text-xs text-muted-foreground max-w-container-sm mt-1">
-              These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/leading-marketing-services-for-accounting-firms/" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
+              These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/services/" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
             </p>
           </div>
         </section>

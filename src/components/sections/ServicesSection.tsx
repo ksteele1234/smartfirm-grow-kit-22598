@@ -115,7 +115,7 @@ const ServicesSection = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="services-section-book-call-btn" variant="vibrant-teal" size="lg" className="group" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

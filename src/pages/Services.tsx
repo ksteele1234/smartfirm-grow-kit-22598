@@ -9,7 +9,7 @@ import SEO from "@/components/SEO";
 import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "@/components/ui/breadcrumb";
 
 const Services = () => {
-  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
+  const servicesIndexPath = "/services/";
   const serviceCategories = [{
     icon: <Zap className="h-8 w-8 text-primary" />,
     title: "AI-Powered Marketing Automation",
@@ -47,7 +47,7 @@ const Services = () => {
       <SEO
         title="Firm Automation & Growth Services for Accounting Firms"
         description="Explore firm automation and growth services for accounting firms: workflow optimization, client systems, technology integration, and scalable operations."
-        canonicalUrl="https://smartfirm.io/leading-marketing-services-for-accounting-firms"
+        canonicalUrl="https://smartfirm.io/services/"
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
         noindex={false}
@@ -304,7 +304,7 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button id="services-final-book-call-btn" variant="coral" size="lg" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

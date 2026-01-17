@@ -142,15 +142,15 @@ const AddOns = () => {
       <SEO
         title="Automation & Marketing Add-Ons | SmartFirm"
         description="Marketing add-ons for accounting firms: blogs, paid ads, newsletters, chatbots, voice AI, social media, trade shows, and retention programs. Scale at your pace."
-        canonicalUrl="https://smartfirm.io/services/add-ons"
+        canonicalUrl="https://smartfirm.io/services/add-ons/"
         pageType="service"
         serviceName="Growth Add-Ons & Custom Marketing Solutions"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Services", url: "/leading-marketing-services-for-accounting-firms" },
-          { name: "Add-Ons", url: "/services/add-ons" }
+          { name: "Services", url: "/services/" },
+          { name: "Add-Ons", url: "/services/add-ons/" }
         ]}
         faqs={[
           {
@@ -179,7 +179,7 @@ const AddOns = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms/">Services</BreadcrumbLink>
+                <BreadcrumbLink href="/services/">Services</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>

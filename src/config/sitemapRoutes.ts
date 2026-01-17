@@ -13,18 +13,18 @@ export interface SitemapRoute {
 export const sitemapRoutes: SitemapRoute[] = [
   // Homepage
   { path: '/', changefreq: 'weekly', priority: 1.0 },
-  
+
   // Main Navigation Pages
-  { path: '/solutions-expert-marketing-agency-for-accounting-firms', changefreq: 'weekly', priority: 0.9 },
-  { path: '/leading-marketing-services-for-accounting-firms', changefreq: 'weekly', priority: 0.9 },
-  { path: '/services/all-professional-marketing-services-for-accounting-firms', changefreq: 'weekly', priority: 0.8 },
-  { path: '/industries-expert-marketing-agency-for-accountants', changefreq: 'weekly', priority: 0.9 },
-  { path: '/resources', changefreq: 'weekly', priority: 0.8 },
-  { path: '/about', changefreq: 'monthly', priority: 0.7 },
-  { path: '/contact', changefreq: 'monthly', priority: 0.8 },
-  { path: '/get-started', changefreq: 'weekly', priority: 0.9 },
-  { path: '/quick-start-marketing-for-cpa-firms', changefreq: 'weekly', priority: 0.8 },
-  
+  { path: '/solutions/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/services/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/all-services/', changefreq: 'weekly', priority: 0.8 },
+  { path: '/industries/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/resources/', changefreq: 'weekly', priority: 0.8 },
+  { path: '/about/', changefreq: 'monthly', priority: 0.7 },
+  { path: '/contact/', changefreq: 'monthly', priority: 0.8 },
+  { path: '/get-started/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/quick-start/', changefreq: 'weekly', priority: 0.8 },
+
   // Solution Pages
   { path: '/solutions/scale-accounting-firm-successfully', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/stop-losing-clients-to-tech-savvy-cpas', changefreq: 'weekly', priority: 0.8 },
@@ -32,7 +32,7 @@ export const sitemapRoutes: SitemapRoute[] = [
   { path: '/solutions/work-less-earn-more', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/grow-without-growing-pains', changefreq: 'weekly', priority: 0.8 },
   { path: '/solutions/protect-practice-and-future', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Service Pages (including NEW AI transformation pages)
   { path: '/services/ai-transformation-roadmap', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/single-process-ai-transformation', changefreq: 'weekly', priority: 0.8 },
@@ -50,13 +50,13 @@ export const sitemapRoutes: SitemapRoute[] = [
   { path: '/services/reputation-management-for-cpas', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/marketing-strategy-integration-for-accounting-firms', changefreq: 'weekly', priority: 0.8 },
   { path: '/services/add-ons', changefreq: 'weekly', priority: 0.7 },
-  
+
   // Industry Pages
   { path: '/industries/tax-preparation-marketing-solutions', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/bookkeeping-services-marketing-automation', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/business-advisory-marketing-services', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/audit-assurance-marketing-agency', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Tools & Calculators
   { path: '/tools', changefreq: 'weekly', priority: 0.8 },
   { path: '/tools/efficiency-quiz', changefreq: 'monthly', priority: 0.7 },
@@ -72,14 +72,14 @@ export const sitemapRoutes: SitemapRoute[] = [
   { path: '/tools/seo-audit', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/page-grader', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/advanced-seo-qa', changefreq: 'monthly', priority: 0.7 },
-  
+
   // Funnel Pages
   { path: '/growth-calculator', changefreq: 'weekly', priority: 0.8 },
-  
+
   // Case Studies
   { path: '/case-studies', changefreq: 'weekly', priority: 0.8 },
   { path: '/case-studies/payroll-automation-roi', changefreq: 'monthly', priority: 0.7 },
-  
+
   // Legal Pages
   { path: '/privacy', changefreq: 'yearly', priority: 0.3 },
   { path: '/terms', changefreq: 'yearly', priority: 0.3 },

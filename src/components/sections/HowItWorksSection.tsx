@@ -12,14 +12,14 @@ const HowItWorksSection = () => {
     },
     {
       icon: FileText,
-      number: "02", 
+      number: "02",
       title: "Get a Custom Plan",
       description: "We'll map out a tailored strategy for accountants, CPAs, or bookkeepers."
     },
     {
       icon: Rocket,
       number: "03",
-      title: "Launch & Grow", 
+      title: "Launch & Grow",
       description: "Implement automation, SEO, and marketing systems that drive predictable growth."
     }
   ];
@@ -31,11 +31,11 @@ const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Your Path to Growth with 
+            Your Path to Growth with
             <span className="text-accent block">Marketing Automation for Accountants</span>
           </h2>
         </div>
-        
+
         <GeometricDivider variant="zigzag" />
         {/* Steps */}
         <div className="relative">
@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               const isEven = index % 2 === 0;
-              
+
               return (
                 <div key={index} className={`flex items-center gap-md ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
                   {/* Content */}
@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
                       {step.description}
                     </p>
                   </div>
-                  
+
                   {/* Icon Circle */}
                   <div className="relative flex-shrink-0">
                     <div className="w-24 h-24 bg-gradient-to-br from-primary to-teal rounded-full flex items-center justify-center elevation-1 group-hover:elevation-2 scale-feedback color-transition">
@@ -73,7 +73,7 @@ const HowItWorksSection = () => {
                       <span className="text-sm font-bold text-primary">{step.number}</span>
                     </div>
                   </div>
-                  
+
                   {/* Spacer for alignment */}
                   <div className="flex-1 hidden lg:block"></div>
                 </div>
@@ -90,7 +90,7 @@ const HowItWorksSection = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="how-it-works-book-call-btn" variant="hero" size="hero" className="group" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   <Rocket className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />

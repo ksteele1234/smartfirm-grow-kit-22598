@@ -16,13 +16,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { 
-  ArrowRight, 
-  User, 
-  Users, 
-  Building, 
-  Building2, 
-  Target, 
+import {
+  ArrowRight,
+  User,
+  Users,
+  Building,
+  Building2,
+  Target,
   Calculator,
   Star,
   TrendingUp,
@@ -62,7 +62,7 @@ const fallbackIndustryFaqs = [
 ];
 
 const Industries = () => {
-  const industriesIndexPath = "/industries-expert-marketing-agency-for-accountants";
+  const industriesIndexPath = "/industries/";
   const industriesFaqs = getFaqsForPath(industriesIndexPath);
   const faqsToRender = industriesFaqs.length ? industriesFaqs : fallbackIndustryFaqs;
   const industryCategories = [
@@ -126,10 +126,10 @@ const Industries = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Firm Automation by Industry | SmartFirm"
         description="Firm automation and growth solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
-        canonicalUrl="https://smartfirm.io/industries-expert-marketing-agency-for-accountants"
+        canonicalUrl="https://smartfirm.io/industries/"
         pageType="industry"
         faqs={faqsToRender}
         noindex={false}
@@ -140,7 +140,7 @@ const Industries = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -157,7 +157,7 @@ const Industries = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 pb-48 md:pb-[220px] bg-gradient-deep-teal overflow-hidden">
@@ -180,7 +180,7 @@ const Industries = () => {
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button variant="coral" size="hero" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book Your Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -202,8 +202,8 @@ const Industries = () => {
                 Serving a Spectrum of Accounting Professionals
               </h2>
               <p className="text-lg text-muted-foreground text-center leading-relaxed">
-                From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct 
-                challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align 
+                From solo practitioners to large firms, from traditional accounting to specialized niches, we understand the distinct
+                challenges each segment faces. Our deep industry expertise ensures your marketing and automation strategies align
                 perfectly with your practice area and growth stage.
               </p>
               <p className="text-lg text-muted-foreground text-center leading-relaxed">
@@ -219,7 +219,7 @@ const Industries = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
               How We Help
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-sm">
               {industryCategories.map((category, index) => (
                 <Card key={index} className="group hover:elevation-2 border card-interactive">
@@ -240,16 +240,16 @@ const Industries = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full group-hover:bg-primary group-hover:text-white color-transition"
                       asChild
                     >
                       <a href={category.link}>
-                        {category.title.includes("Solo") ? "Solutions for Solo CPAs" : 
-                         category.title.includes("Small") ? "Solutions for Small Firms" :
-                         category.title.includes("Mid-Sized") ? "Solutions for Mid-Sized Firms" :
-                         "Solutions for Large Firms"}
+                        {category.title.includes("Solo") ? "Solutions for Solo CPAs" :
+                          category.title.includes("Small") ? "Solutions for Small Firms" :
+                            category.title.includes("Mid-Sized") ? "Solutions for Mid-Sized Firms" :
+                              "Solutions for Large Firms"}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
@@ -271,7 +271,7 @@ const Industries = () => {
                 Tailored strategies for specialized accounting practices with unique market dynamics and client needs.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-sm">
               {specializedNiches.map((niche, index) => (
                 <Card key={index} className="group hover:elevation-2 border text-center card-interactive">
@@ -284,8 +284,8 @@ const Industries = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       size="sm"
                       className="w-full group-hover:bg-primary group-hover:text-white color-transition"
                       asChild
@@ -315,7 +315,7 @@ const Industries = () => {
                     Growth Strategies for Tax Preparation Firms
                   </CardTitle>
                   <CardDescription className="text-lg text-muted-foreground max-w-text-sm mx-auto">
-                    Tax season creates unique opportunities and challenges. Discover how seasonal firms are building 
+                    Tax season creates unique opportunities and challenges. Discover how seasonal firms are building
                     year-round revenue streams and scaling beyond traditional tax preparation.
                   </CardDescription>
                 </CardHeader>
@@ -345,7 +345,7 @@ const Industries = () => {
                         </li>
                       </ul>
                     </div>
-                    
+
                     <div className="bg-muted p-6 rounded-lg">
                       <h3 className="font-semibold text-primary mb-3 flex items-center">
                         <Calculator className="h-5 w-5 mr-2" />
@@ -367,7 +367,7 @@ const Industries = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="text-center pt-4">
                     <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
                       <a href="/industries/tax-preparation">
@@ -389,8 +389,8 @@ const Industries = () => {
               <div className="bg-accent/10 p-8 rounded-lg border">
                 <Building className="h-12 w-12 text-accent mx-auto mb-6" />
                 <blockquote className="text-xl text-foreground italic mb-6">
-                  "SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing 
-                  challenges that most agencies can't grasp. Their industry-specific approach helped us reach the right 
+                  "SmartFirm understood our niche from day one. As a forensic accounting firm, we have unique marketing
+                  challenges that most agencies can't grasp. Their industry-specific approach helped us reach the right
                   clients and establish thought leadership in our field."
                 </blockquote>
                 <cite className="text-muted-foreground">
@@ -408,12 +408,12 @@ const Industries = () => {
               Is Your Industry Ready for Smart Growth?
             </h2>
             <p className="text-xl mb-8 text-white/90 max-w-text-sm mx-auto">
-              Discover tailored strategies designed for your accounting specialization. Let's discuss how industry-specific 
+              Discover tailored strategies designed for your accounting specialization. Let's discuss how industry-specific
               solutions can accelerate your firm's growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-on-dark"
                 asChild
               >
@@ -422,8 +422,8 @@ const Industries = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-outline-on-dark"
                 asChild
               >
@@ -447,7 +447,7 @@ const Industries = () => {
                   Common questions about tailored marketing solutions for different types of accounting practices and specializations.
                 </p>
               </div>
-              
+
               <Accordion type="single" collapsible className="space-y-4">
                 {faqsToRender.map((faq, index) => (
                   <AccordionItem

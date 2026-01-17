@@ -169,7 +169,7 @@ const EfficiencyQuiz = () => {
         <SEO
           title="Efficiency Quiz | SmartFirm"
           description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
-          canonicalUrl="https://smartfirm.io/tools/efficiency-quiz"
+          canonicalUrl="https://smartfirm.io/tools/efficiency-quiz/"
           pageType="tool"
           toolName="Efficiency Quiz"
           noindex={false}

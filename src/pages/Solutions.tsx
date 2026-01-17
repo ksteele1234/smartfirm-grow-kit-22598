@@ -50,7 +50,7 @@ const fallbackSolutionsFaqs = [
 ];
 
 const Solutions = () => {
-  const solutionsIndexPath = "/solutions-expert-marketing-agency-for-accounting-firms";
+  const solutionsIndexPath = "/solutions/";
   const solutionsFaqs = getFaqsForPath(solutionsIndexPath);
   const faqsToRender = solutionsFaqs.length ? solutionsFaqs : fallbackSolutionsFaqs;
   const solutionCategories = [
@@ -97,7 +97,7 @@ const Solutions = () => {
       <SEO
         title="Solutions For Accounting Firms | SmartFirm"
         description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
-        canonicalUrl="https://smartfirm.io/solutions"
+        canonicalUrl="https://smartfirm.io/solutions/"
         pageType="solution"
         faqs={faqsToRender}
         noindex={false}

@@ -153,7 +153,7 @@ const ToolsCalculators = () => {
       <SEO
         title="Free Accounting Firm Tools & Calculators | SmartFirm"
         description="Accounting firm tools by SmartFirm include free calculators, scorecards, and assessments to measure growth and ROI for your practice."
-        canonicalUrl="https://smartfirm.io/tools"
+        canonicalUrl="https://smartfirm.io/tools/"
         pageType="default"
         faqs={faqsToRender}
         noindex={false}

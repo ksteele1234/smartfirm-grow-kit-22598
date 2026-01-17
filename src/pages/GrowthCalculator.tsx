@@ -32,10 +32,10 @@ const GrowthCalculator = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Free Accounting Firm Growth Calculator Tool | SmartFirm"
         description="Use our accounting firm growth calculator to input your client count, average fees, and capacity—then see how many clients you're leaving on the table."
-        canonicalUrl="https://smartfirm.io/growth-calculator"
+        canonicalUrl="https://smartfirm.io/growth-calculator/"
       />
       <FunnelHeader />
 
@@ -45,16 +45,16 @@ const GrowthCalculator = () => {
           <div className="grid lg:grid-cols-2 gap-lg items-start max-w-container-2xl mx-auto">
             {/* Left Column - Content */}
             <div className="space-y-6">
-              <img 
-                src={revenueChart} 
+              <img
+                src={revenueChart}
                 alt="Revenue growth chart showing upward trend"
                 className="w-64 h-auto"
               />
-              
+
               <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary leading-tight">
                 Accounting Firm Growth Calculator | SmartFirm
               </h1>
-              
+
               <div id="sf-keyword-intro">
                 <p className="text-lg text-gray-700">
                   This accounting firm growth calculator analyzes your existing client base, pricing structure, and available capacity to reveal your untapped revenue potential and optimal client mix.
@@ -102,8 +102,8 @@ const GrowthCalculator = () => {
             <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2" />
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <p className="text-primary font-medium text-sm leading-tight">
                   Client workload keeps increasing, but growth doesn't.
@@ -114,8 +114,8 @@ const GrowthCalculator = () => {
             <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2" />
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <p className="text-primary font-medium text-sm leading-tight">
                   Marketing feels overwhelming and eats up time you don't have.
@@ -126,8 +126,8 @@ const GrowthCalculator = () => {
             <div className="bg-background-light flex items-center justify-center" style={{ paddingTop: '10px', paddingLeft: '10px', paddingBottom: '10px', paddingRight: '5px' }}>
               <div className="flex items-center gap-3 w-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2"/>
-                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="12" cy="12" r="11" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" strokeWidth="2" />
+                  <path d="M8 8L16 16M16 8L8 16" stroke="hsl(var(--background-light))" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <p className="text-primary font-medium text-sm leading-tight">
                   Without a system, firms plateau and miss out on predictable revenue.
@@ -147,11 +147,11 @@ const GrowthCalculator = () => {
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-primary leading-tight">
                 A Calculator Built for Accountants Who Want Growth Without Guesswork
               </h2>
-              
+
               <p className="text-lg text-gray-700">
                 You already know your time is limited. This calculator gives you instant clarity on your growth potential using your numbers, not vague theory.
               </p>
-              
+
               <p className="text-lg text-gray-700">
                 In under a minute, you'll see exactly <span className="font-bold">how much revenue you're missing</span> and <span className="font-bold">what it would take to fix it</span>.
               </p>
@@ -159,28 +159,28 @@ const GrowthCalculator = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
-                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))" />
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="text-gray-800">100% free and instant</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
-                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))" />
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="text-gray-800">Personalized to your firm</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0 mt-1">
-                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))"/>
-                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="10" cy="10" r="10" fill="hsl(var(--primary))" />
+                    <path d="M6 10L8.5 12.5L14 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="text-gray-800">Built by marketing experts who understand accountants</span>
                 </div>
               </div>
 
-              <Button 
+              <Button
                 onClick={scrollToForm}
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg font-semibold rounded-lg"
@@ -191,8 +191,8 @@ const GrowthCalculator = () => {
 
             {/* Right Column - Image */}
             <div>
-              <img 
-                src={meetingPhoto} 
+              <img
+                src={meetingPhoto}
                 alt="Business professionals in a meeting discussing growth strategies"
                 className="w-full h-auto rounded-lg elevation-3"
               />
@@ -217,8 +217,8 @@ const GrowthCalculator = () => {
                 </p>
               </div>
               <div className="bg-background-light p-6 text-center space-y-4">
-                <img 
-                  src={danPhoto} 
+                <img
+                  src={danPhoto}
                   alt="Dan, CPA Managing Partner"
                   className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
@@ -237,8 +237,8 @@ const GrowthCalculator = () => {
                 </p>
               </div>
               <div className="bg-background-light p-6 text-center space-y-4">
-                <img 
-                  src={joannaPhoto} 
+                <img
+                  src={joannaPhoto}
                   alt="Joanna, Registered Agent"
                   className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
@@ -257,8 +257,8 @@ const GrowthCalculator = () => {
                 </p>
               </div>
               <div className="bg-background-light p-6 text-center space-y-4">
-                <img 
-                  src={jennPhoto} 
+                <img
+                  src={jennPhoto}
                   alt="Jenn S., Bookkeeper"
                   className="w-24 h-24 mx-auto object-cover border-4 border-background elevation-2 rounded-full -mt-12"
                 />
@@ -278,13 +278,13 @@ const GrowthCalculator = () => {
           <div className="relative w-full max-w-text-md">
             {/* Woman image - positioned absolutely to extend beyond gradient box */}
             <div className="absolute left-0 -top-20 md:-top-24 z-10 w-[240px] md:w-[260px]">
-              <img 
+              <img
                 src={womanPointingBlazer}
                 alt="Professional accountant pointing at growth calculator"
                 className="w-full h-auto"
               />
             </div>
-            
+
             {/* Gradient box with content */}
             <div className="relative h-[155px] rounded-xl overflow-hidden bg-gradient-to-r from-teal/80 via-teal/80 to-primary">
               <div className="absolute inset-0 flex items-center" style={{
@@ -301,7 +301,7 @@ const GrowthCalculator = () => {
                   <p className="text-white text-[15px] font-normal leading-snug">
                     Find out your growth potential today – it only takes 60 seconds
                   </p>
-                  <Button 
+                  <Button
                     onClick={scrollToForm}
                     className="mt-4 h-[42px] px-6 text-[14px] font-medium text-white rounded-lg elevation-2 hover:opacity-90 transition-opacity bg-gradient-deep-teal"
                     style={{

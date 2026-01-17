@@ -103,24 +103,24 @@ const SEOAudit = () => {
       iframe.style.left = '-9999px';
       iframe.style.width = '1px';
       iframe.style.height = '1px';
-      
+
       let timeoutId: NodeJS.Timeout;
       let resolved = false;
-      
+
       const cleanup = () => {
         if (timeoutId) clearTimeout(timeoutId);
         if (iframe.parentNode) {
           document.body.removeChild(iframe);
         }
       };
-      
+
       const resolveAudit = (result: PageAudit) => {
         if (resolved) return;
         resolved = true;
         cleanup();
         resolve(result);
       };
-      
+
       // Timeout fallback - increased for React hydration
       timeoutId = setTimeout(() => {
         console.warn(`⏱️ Timeout loading ${url}`);
@@ -146,7 +146,7 @@ const SEOAudit = () => {
           issues: ['Page load timeout']
         });
       }, 15000);
-      
+
       iframe.onload = () => {
         // Wait longer for React hydration on complex pages
         setTimeout(() => {
@@ -177,18 +177,18 @@ const SEOAudit = () => {
               });
               return;
             }
-            
+
             // Extract data from live DOM
             const title = doc.querySelector('title')?.textContent || '';
             const metaDescription = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
             const robotsTag = doc.querySelector('meta[name="robots"]')?.getAttribute('content') || '';
             const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href') || '';
             const ogImage = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
-            
+
             // H1 and H2
             const h1Elements = doc.querySelectorAll('h1');
             const h2Elements = doc.querySelectorAll('h2');
-            
+
             // JSON-LD
             const jsonLDScripts = doc.querySelectorAll('script[type="application/ld+json"]');
             const jsonLDTypes: string[] = [];
@@ -202,7 +202,7 @@ const SEOAudit = () => {
                 // Invalid JSON-LD
               }
             });
-            
+
             // Images without alt
             const images = doc.querySelectorAll('img');
             let imagesMissingAlt = 0;
@@ -213,12 +213,12 @@ const SEOAudit = () => {
                 imagesMissingAlt++;
               }
             });
-            
+
             // Links
             const allLinks = doc.querySelectorAll('a[href]');
             let internalLinks = 0;
             let externalLinks = 0;
-            
+
             allLinks.forEach(link => {
               const href = link.getAttribute('href') || '';
               if (href.startsWith('/') || href.startsWith(window.location.origin)) {
@@ -227,15 +227,15 @@ const SEOAudit = () => {
                 externalLinks++;
               }
             });
-            
+
             // HTML size
             const htmlSize = doc.documentElement.outerHTML.length;
             const htmlSizeKB = htmlSize / 1024;
-            
+
             // Determine indexability
             const isNoindex = robotsTag.toLowerCase().includes('noindex');
             const indexable = !isNoindex;
-            
+
             // Check for issues
             const issues: string[] = [];
             if (h1Elements.length > 1) issues.push('Multiple H1 tags');
@@ -246,7 +246,7 @@ const SEOAudit = () => {
             if (metaDescription.length > 160) issues.push('Description >160 chars');
             if (!ogImage) issues.push('Missing OG image');
             if (jsonLDTypes.length === 0) issues.push('Missing JSON-LD');
-            
+
             resolveAudit({
               url,
               title,
@@ -294,7 +294,7 @@ const SEOAudit = () => {
           }
         }, 3000); // Increased wait time for React hydration
       };
-      
+
       iframe.onerror = () => {
         resolveAudit({
           url,
@@ -318,7 +318,7 @@ const SEOAudit = () => {
           issues: ['Failed to load page']
         });
       };
-      
+
       try {
         document.body.appendChild(iframe);
         iframe.src = `${window.location.origin}${url}`;
@@ -355,9 +355,9 @@ const SEOAudit = () => {
     setProgress(0);
     setResults([]);
     setValidationResults([]);
-    
+
     const auditResults: PageAudit[] = [];
-    
+
     try {
       for (let i = 0; i < routes.length; i++) {
         // Check if still auditing
@@ -365,11 +365,11 @@ const SEOAudit = () => {
           console.log('Audit cancelled by user');
           break;
         }
-        
+
         const route = routes[i];
         setCurrentPage(route);
         setProgress(((i + 1) / routes.length) * 100);
-        
+
         try {
           const result = await auditPageViaIframe(route);
           auditResults.push(result);
@@ -398,7 +398,7 @@ const SEOAudit = () => {
             issues: ['Audit error: ' + (error instanceof Error ? error.message : 'Unknown error')]
           });
         }
-        
+
         // Small delay to prevent overwhelming the browser
         await new Promise(resolve => setTimeout(resolve, 300));
       }
@@ -415,9 +415,9 @@ const SEOAudit = () => {
     setIsValidating(true);
     setProgress(0);
     setValidationResults([]);
-    
+
     const auditResults: PageAudit[] = [];
-    
+
     try {
       for (let i = 0; i < routes.length; i++) {
         // Check if still validating
@@ -425,11 +425,11 @@ const SEOAudit = () => {
           console.log('Validation cancelled by user');
           break;
         }
-        
+
         const route = routes[i];
         setCurrentPage(route);
         setProgress(((i + 1) / routes.length) * 100);
-        
+
         try {
           const result = await auditPageViaIframe(route);
           auditResults.push(result);
@@ -458,7 +458,7 @@ const SEOAudit = () => {
             issues: ['Validation error: ' + (error instanceof Error ? error.message : 'Unknown error')]
           });
         }
-        
+
         // Small delay to prevent overwhelming the browser
         await new Promise(resolve => setTimeout(resolve, 300));
       }
@@ -488,7 +488,7 @@ const SEOAudit = () => {
       'HTML Size KB',
       'Issues'
     ];
-    
+
     const rows = results.map(result => [
       result.url,
       result.titleLength,
@@ -505,12 +505,12 @@ const SEOAudit = () => {
       result.htmlSizeKB,
       result.issues.join('; ')
     ]);
-    
+
     const csvContent = [
       headers.join(','),
       ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
     ].join('\n');
-    
+
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -520,22 +520,22 @@ const SEOAudit = () => {
 
   const totalIssues = results.reduce((sum, r) => sum + r.issues.length, 0);
   const pagesWithIssues = results.filter(r => r.issues.length > 0).length;
-  
+
   const validationTotalIssues = validationResults.reduce((sum, r) => sum + r.issues.length, 0);
   const validationPagesWithIssues = validationResults.filter(r => r.issues.length > 0).length;
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="SEO Audit Tool"
         description="Internal SEO audit tool for SmartFirm website analysis"
-        canonicalUrl="https://smartfirm.io/tools/seo-audit"
+        canonicalUrl="https://smartfirm.io/tools/seo-audit/"
         pageType="tool"
         toolName="SEO Audit Tool"
         robots="noindex,nofollow"
       />
       <Header />
-      
+
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
@@ -580,8 +580,8 @@ const SEOAudit = () => {
                         <p className="text-sm text-muted-foreground mb-3">
                           Need more comprehensive analysis?
                         </p>
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           onClick={() => setActiveTab("advanced")}
                           className="w-full"
                         >
@@ -858,7 +858,7 @@ const SEOAudit = () => {
           </Tabs>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

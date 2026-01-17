@@ -94,17 +94,17 @@ const AITransformationOffer = () => {
         audience="accounting firms"
         title="AI Transformation Roadmap | PASBA Exclusive"
         description="Get a clear 12-month AI strategy. Exclusive PASBA member pricing: $7,500 (regular $9,999) through November. Limited availability."
-        canonicalUrl="https://smartfirm.io/ai-transformation-offer"
+        canonicalUrl="https://smartfirm.io/ai-transformation-offer/"
         noindex={true}
       />
-      
+
       <FunnelHeader />
-      
+
       <main id="main-content" role="main">
         {/* Hero Section with Video */}
         <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-mesh-professional">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE4YzAtMS4xLS45LTItMi0yaC04Yy0xLjEgMC0yIC45LTIgMnY4YzAgMS4xLjkgMiAyIDJoOGMxLjEgMCAyLS45IDItMnYtOHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30"></div>
-          
+
           <div className="max-w-5xl mx-auto relative z-10">
             {/* Badge */}
             <motion.div
@@ -213,7 +213,7 @@ const AITransformationOffer = () => {
                 className="transform hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book Your Free Strategy Call
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </a>
@@ -266,7 +266,7 @@ const AITransformationOffer = () => {
             >
               What You Receive
             </motion.h2>
-            
+
             <div className="max-w-3xl mx-auto space-y-6">
               {deliverables.map((item, index) => (
                 <motion.div
@@ -283,7 +283,7 @@ const AITransformationOffer = () => {
                       <h3 className="text-2xl font-extrabold text-primary mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
                         {item.title}
                       </h3>
-                       <p className="text-foreground text-base leading-relaxed mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                      <p className="text-foreground text-base leading-relaxed mb-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                         {item.description}
                       </p>
                       {item.details && (
@@ -363,7 +363,7 @@ const AITransformationOffer = () => {
               <p className="text-xl text-foreground mb-8 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                 Join other forward-thinking firms who are implementing strategic AI before their competition.
               </p>
-              
+
               <div className="bg-white rounded-2xl p-8 mb-8 border-2 border-slate-light shadow-lg text-center">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <span className="text-muted-foreground text-2xl line-through font-bold">$9,999</span>

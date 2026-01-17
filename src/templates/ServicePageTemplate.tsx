@@ -71,7 +71,7 @@ const inferFaqCategory = (question: string): string => {
 };
 
 const ServicePageTemplate = ({ data, beforeFinalCta }: ServicePageTemplateProps) => {
-  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
+  const servicesIndexPath = "/services/";
   const finalCtaRef = useRef<HTMLElement | null>(null);
 
   const faqsWithFallback = useMemo(() => {
@@ -158,7 +158,7 @@ const ServicePageTemplate = ({ data, beforeFinalCta }: ServicePageTemplateProps)
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>
-                    <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms/" className="hover:text-white/80">Services</BreadcrumbLink>
+                    <BreadcrumbLink href="/services/" className="hover:text-white/80">Services</BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator className="text-white/40" />
                   <BreadcrumbItem>

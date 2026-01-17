@@ -14,7 +14,7 @@ const SolutionsSection = () => {
     },
     {
       icon: TrendingUp,
-      title: "I want to scale my firm", 
+      title: "I want to scale my firm",
       description: "Break growth limits with CPA marketing automation systems that run without your constant oversight.",
       features: ["Automation workflows", "Client onboarding systems", "Referral programs", "Strategic planning"],
       link: "/solutions/scale-firm"
@@ -80,9 +80,9 @@ const SolutionsSection = () => {
                       ))}
                     </ul>
                   </div>
-                  
-                  <Button 
-                    variant="ghost" 
+
+                  <Button
+                    variant="ghost"
                     className="w-full justify-between color-transition"
                     asChild
                   >
@@ -95,7 +95,7 @@ const SolutionsSection = () => {
               </StandardCard>
             ))}
           </div>
-          
+
           {/* Second row - 2 cards taking full width */}
           <div className="grid md:grid-cols-2 gap-md">
             {solutions.slice(2).map((solution, index) => (
@@ -122,9 +122,9 @@ const SolutionsSection = () => {
                       ))}
                     </ul>
                   </div>
-                  
-                  <Button 
-                    variant="ghost" 
+
+                  <Button
+                    variant="ghost"
                     className="w-full justify-between color-transition"
                     asChild
                   >
@@ -152,14 +152,14 @@ const SolutionsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   <BarChart3 className="mr-2 h-5 w-5" />
                   Get a Custom Growth Plan
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="group" asChild>
-                <a href="/solutions-expert-marketing-agency-for-accounting-firms">
+                <a href="/solutions/">
                   <Eye className="mr-2 h-5 w-5" />
                   Browse All Solutions
                 </a>

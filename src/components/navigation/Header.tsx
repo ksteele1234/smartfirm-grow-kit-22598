@@ -230,7 +230,7 @@ const Header = () => {
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
-                  <a href="/leading-marketing-services-for-accounting-firms/" className="flex items-center">
+                  <a href="/services/" className="flex items-center">
                     SERVICES
                   </a>
                 </NavigationMenuTrigger>
@@ -281,7 +281,7 @@ const Header = () => {
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
-                  <a href="/solutions-expert-marketing-agency-for-accounting-firms/" className="flex items-center">
+                  <a href="/solutions/" className="flex items-center">
                     SOLUTIONS
                   </a>
                 </NavigationMenuTrigger>
@@ -332,7 +332,7 @@ const Header = () => {
                   "hover:text-primary focus:text-primary",
                   "data-[state=open]:text-primary"
                 )}>
-                  <a href="/industries-expert-marketing-agency-for-accountants/" className="flex items-center">
+                  <a href="/industries/" className="flex items-center">
                     INDUSTRIES
                   </a>
                 </NavigationMenuTrigger>
@@ -406,13 +406,13 @@ const Header = () => {
               <a href="/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 HOME
               </a>
-              <a href="/leading-marketing-services-for-accounting-firms/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+              <a href="/services/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 SERVICES
               </a>
-              <a href="/solutions-expert-marketing-agency-for-accounting-firms/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+              <a href="/solutions/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 SOLUTIONS
               </a>
-              <a href="/industries-expert-marketing-agency-for-accountants/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+              <a href="/industries/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 INDUSTRIES
               </a>
               <a href="/about/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">

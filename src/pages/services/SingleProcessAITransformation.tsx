@@ -33,7 +33,7 @@ const SingleProcessAITransformation = () => {
       <SEO
         title="Single-Process AI Optimization | SmartFirm"
         description="Turn your biggest bottleneck into a clear action plan. Focused 1-week AI optimization that delivers real results."
-        canonicalUrl="https://smartfirm.io/services/single-process-ai-transformation"
+        canonicalUrl="https://smartfirm.io/services/single-process-ai-transformation/"
       />
       <Header />
 

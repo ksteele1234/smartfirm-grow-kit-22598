@@ -11,9 +11,9 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
+import {
+  ArrowRight,
+  CheckCircle2,
   Globe,
   MapPin,
   Cpu,
@@ -144,7 +144,7 @@ const QuickStart = () => {
       <SEO
         title="Quick Start Automation Package for CPA Firms | SmartFirm"
         description="Launch firm automation in 30 days: client onboarding systems, workflow optimization, email automation, review requests, and operational foundation—ready to scale."
-        canonicalUrl="https://smartfirm.io/quick-start-marketing-for-cpa-firms"
+        canonicalUrl="https://smartfirm.io/quick-start/"
         pageType="service"
         serviceName="30-Day Quick Start Package"
         noindex={false}
@@ -152,7 +152,7 @@ const QuickStart = () => {
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Get Started", url: "/get-started" },
-          { name: "Quick Start Package", url: "/quick-start-marketing-for-cpa-firms" }
+          { name: "Quick Start Package", url: "/quick-start/" }
         ]}
         faqs={[
           {
@@ -170,7 +170,7 @@ const QuickStart = () => {
         ]}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -181,7 +181,7 @@ const QuickStart = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/get-started">Get Started</BreadcrumbLink>
+                <BreadcrumbLink href="/get-started/">Get Started</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -191,7 +191,7 @@ const QuickStart = () => {
           </Breadcrumb>
         </div>
       </nav>
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-section md:py-28 bg-gradient-to-br from-primary/10 via-background to-accent/10 overflow-hidden">
@@ -202,17 +202,17 @@ const QuickStart = () => {
               <Clock className="h-4 w-4 mr-2" />
               30-Day Implementation
             </Badge>
-            
+
             <h1 className="text-display font-bold text-primary mb-6">
               Quick Start Automation Package for CPA Firms
             </h1>
-            
+
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
                 Marketing package for CPA firms delivering a complete system in 30 days: website launch, automated lead follow-up, client onboarding sequences, review generation, and SEO foundation—all ready to drive growth.
               </p>
             </div>
-            
+
             <Button id="quickstart-pricing-book-call-btn" size="lg" variant="hero" className="group" asChild>
               <a href="/get-started">
                 Book a Free Call
@@ -247,7 +247,7 @@ const QuickStart = () => {
                 Six essential components to transform your accounting firm's marketing
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md max-w-container-3xl mx-auto">
               {packageIncludes.map((item, index) => (
                 <Card key={index} className="group card-interactive border-border bg-background">
@@ -292,7 +292,7 @@ const QuickStart = () => {
                 Here's what you'll have operational after your Quick Start implementation
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-md max-w-container-2xl mx-auto">
               {outcomes.map((outcome, index) => (
                 <Card key={index} className={`text-center border-border bg-background card-interactive ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}`}>
@@ -321,7 +321,7 @@ const QuickStart = () => {
                 Who This Is For
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md max-w-container-2xl mx-auto">
               {idealFor.map((item, index) => (
                 <Card key={index} className="text-center border-border bg-background card-interactive">
@@ -363,9 +363,9 @@ const QuickStart = () => {
               Book a Free Call today and see how SmartFirm's Quick Start Package can transform your accounting practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
-              <Button 
+              <Button
                 id="quickstart-final-book-call-btn"
-                size="lg" 
+                size="lg"
                 variant="white-on-dark"
                 className="group font-semibold"
                 asChild
@@ -375,8 +375,8 @@ const QuickStart = () => {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white-outline-on-dark"
                 asChild
               >

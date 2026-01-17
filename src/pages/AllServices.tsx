@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const AllServices = () => {
-  const servicesIndexPath = "/leading-marketing-services-for-accounting-firms";
+  const servicesIndexPath = "/services/";
   const allServicesPath = "/services/all-professional-marketing-services-for-accounting-firms";
   const services = [
     {
@@ -105,7 +105,7 @@ const AllServices = () => {
       <SEO
         title="Automation & Marketing Services | SmartFirm"
         description="Browse complete automation and marketing services for accounting firms—from workflow optimization and client systems to websites, SEO, and growth consulting."
-        canonicalUrl="https://smartfirm.io/all-services"
+        canonicalUrl="https://smartfirm.io/all-services/"
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -127,7 +127,7 @@ const AllServices = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/leading-marketing-services-for-accounting-firms">Services</BreadcrumbLink>
+                <BreadcrumbLink href="/services/">Services</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -255,14 +255,14 @@ const AllServices = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="all-services-book-call-btn" variant="secondary" size="lg" className="group" asChild>
-                <a href="/get-started">
+                <a href="/get-started/">
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="white-outline-on-dark" size="lg" asChild>
-                <a href="/contact">
+                <a href="/contact/">
                   Contact Us
                 </a>
               </Button>

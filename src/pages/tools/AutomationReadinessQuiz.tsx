@@ -130,7 +130,7 @@ const AutomationReadinessQuiz = () => {
         <SEO
           title="Automation Readiness Quiz Results | SmartFirm"
           description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz"
+          canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz/"
           pageType="tool"
           toolName="Automation Readiness Quiz"
           noindex={false}
@@ -192,7 +192,7 @@ const AutomationReadinessQuiz = () => {
       <SEO
         title="Automation Readiness Assessment for Accountants"
         description="Discover if you're ready for automation with our readiness assessment for accountants evaluating processes, technology, team, and client base for automation."
-        canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz"
+        canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz/"
         pageType="tool"
         toolName="Automation Readiness Quiz"
         noindex={false}

@@ -88,7 +88,7 @@ const ClientLifetimeValueCalculator = () => {
         <SEO
           title="Client Lifetime Value Calculator Results | SmartFirm"
           description="Your client lifetime value analysis with retention recommendations for your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator"
+          canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator/"
           pageType="tool"
           toolName="Client Lifetime Value Calculator"
           noindex={false}
@@ -236,7 +236,7 @@ const ClientLifetimeValueCalculator = () => {
       <SEO
         title="Client Lifetime Value Calculator | SmartFirm"
         description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
-        canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator"
+        canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator/"
         pageType="tool"
         toolName="Client Lifetime Value Calculator"
         noindex={false}

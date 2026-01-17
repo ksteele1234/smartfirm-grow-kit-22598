@@ -17,7 +17,7 @@ interface IndustryPageTemplateProps {
 }
 
 const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
-  const industriesIndexPath = "/industries-expert-marketing-agency-for-accountants";
+  const industriesIndexPath = "/industries/";
   const defaultFAQs = [
     {
       question: "Do you work with firms like mine?",
@@ -128,7 +128,7 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
                 {data.industryOverview}
               </p>
               <p className="mt-4 font-sans text-foreground text-center leading-[1.6]">
-                View <a href="/leading-marketing-services-for-accounting-firms/" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">our services</a> or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">AICPA best practices</a>.
+                View <a href="/services/" data-sf="internal-add" className="text-primary hover:text-primary/80 underline">our services</a> or learn from <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 underline">AICPA best practices</a>.
               </p>
             </div>
           </div>

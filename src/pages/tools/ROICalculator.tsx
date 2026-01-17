@@ -95,7 +95,7 @@ const ROICalculator = () => {
         <SEO
           title="Marketing ROI Calculator Results | SmartFirm"
           description="Your marketing ROI analysis for accounting firms. See your return on investment and growth potential."
-          canonicalUrl="https://smartfirm.io/tools/roi-calculator"
+          canonicalUrl="https://smartfirm.io/tools/roi-calculator/"
           pageType="tool"
           toolName="Marketing ROI Calculator"
           noindex={false}
@@ -255,7 +255,7 @@ const ROICalculator = () => {
       <SEO
         title="Marketing ROI Calculator | SmartFirm"
         description="Calculate marketing ROI for your accounting firm. Estimate returns on ad spend and client lifetime value."
-        canonicalUrl="https://smartfirm.io/tools/roi-calculator"
+        canonicalUrl="https://smartfirm.io/tools/roi-calculator/"
         pageType="tool"
         toolName="Marketing ROI Calculator"
         noindex={false}

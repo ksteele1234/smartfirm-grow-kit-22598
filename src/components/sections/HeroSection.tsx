@@ -170,7 +170,7 @@ const HeroSection = memo(() => {
                   className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
                   asChild
                 >
-                  <a href="/get-started" className="inline-flex items-center justify-center gap-2">
+                  <a href="/get-started/" className="inline-flex items-center justify-center gap-2">
                     Book a Free Call
                     <ArrowRight className="w-5 h-5" />
                   </a>

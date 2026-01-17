@@ -64,7 +64,7 @@ export const ToolPageWrapper = ({
         faqs={faqs}
       />
       <Header />
-      
+
       {/* Breadcrumb */}
       <nav id="sf-breadcrumbs" className="bg-background-light border-b" aria-label="Breadcrumb">
         <div className="container mx-auto px-4 lg:px-6 py-1.5">
@@ -103,7 +103,7 @@ export const ToolPageWrapper = ({
                 <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm text-muted-foreground">
                   <span>Trusted by accounting professionals</span>
                   <span>•</span>
-                  <span>View our <a href="/leading-marketing-services-for-accounting-firms" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
+                  <span>View our <a href="/services/" data-sf="internal-add" className="text-primary hover:underline">services</a></span>
                   <span>•</span>
                   <span>Trusted by <a href="https://www.aicpa.org" data-sf="external-add" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AICPA members</a></span>
                 </div>
@@ -139,7 +139,7 @@ export const ToolPageWrapper = ({
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
