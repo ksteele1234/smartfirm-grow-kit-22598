@@ -18,7 +18,7 @@ headers = []
 
 [build]
   publish = "dist"
-  command = "npm run build && node scripts/prerender.cjs && node scripts/generate-sitemap.cjs && node scripts/inject-blog-article-schema.cjs && node scripts/inject-breadcrumb-collection-schema.cjs && node scripts/inject-all-schemas.js"
+  command = "npm run build && node scripts/prerender.cjs && node scripts/validate-prerender.cjs && node scripts/generate-sitemap.cjs && node scripts/inject-blog-article-schema.cjs && node scripts/inject-breadcrumb-collection-schema.cjs && node scripts/inject-all-schemas.js"
 
 [build.environment]
   NODE_VERSION = "20"

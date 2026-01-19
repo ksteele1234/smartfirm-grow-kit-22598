@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import { generateBreadcrumbs } from '@/utils/breadcrumbGenerator';
 import { LEGAL_PAGE_DATES } from '@/config/legalPageDates';
@@ -118,6 +118,9 @@ const SEO = ({
     : `https://${primaryDomain}${pageImage || image || defaultImage}`;
   // Ensure pathname has trailing slash for consistency with Netlify Pretty URLs
   const normalizedPath = pathname === '/' ? '' : (pathname.endsWith('/') ? pathname : `${pathname}/`);
+  
+  // CRITICAL: Prioritize explicit canonicalUrl prop over pathname detection
+  // This ensures pages that pass canonicalUrl get their correct canonical, not homepage
   const canonicalUrl = canonicalUrlProp || `https://${primaryDomain}${normalizedPath}`;
 
   // Auto-generate breadcrumbs if not provided and not homepage
@@ -134,335 +137,260 @@ const SEO = ({
       .join(' ');
   };
 
-  useEffect(() => {
-    // Update document title
-    document.title = pageTitle;
+  // Build consolidated JSON-LD schema
+  const buildConsolidatedSchema = () => {
+    const graphItems: any[] = [];
 
-    // Debug logging for FAQ structured data
-    if (pageType === 'faq' && faqs) {
-      console.log('[SEO Debug] FAQ structured data:', {
-        faqCount: faqs.length,
-        firstFaq: faqs[0],
-        pageType,
-        canonicalUrl
+    // 1. Organization/ProfessionalService (always present)
+    const organizationSchema: any = {
+      "@type": organizationType,
+      "@id": `https://${primaryDomain}/#organization`,
+      "name": "SmartFirm",
+      "url": `https://${primaryDomain}`,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `https://${primaryDomain}/assets/smartfirm-logo-header.png`
+      },
+      "sameAs": []
+    };
+
+    if (showContactInfo) {
+      organizationSchema.description = "Expert digital marketing for accounting firms";
+      organizationSchema.telephone = "+1-541-658-3789";
+      organizationSchema.email = "contact@smartfirm.io";
+    }
+
+    if (showAddress) {
+      organizationSchema.address = {
+        "@type": "PostalAddress",
+        "addressLocality": "Eugene",
+        "addressRegion": "OR",
+        "addressCountry": "US"
+      };
+      organizationSchema.areaServed = {
+        "@type": "Country",
+        "name": "United States"
+      };
+    }
+
+    graphItems.push(organizationSchema);
+
+    // 2. Website (always present)
+    graphItems.push({
+      "@type": "WebSite",
+      "@id": `https://${primaryDomain}/#website`,
+      "name": "SmartFirm",
+      "url": `https://${primaryDomain}`,
+      "publisher": {
+        "@id": `https://${primaryDomain}/#organization`
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `https://${primaryDomain}/resources?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    });
+
+    // 3. WebPage (always present with enhancements)
+    const webPageType = pageType === 'collection' ? 'CollectionPage' : 'WebPage';
+
+    const webPageSchema: any = {
+      "@type": webPageType,
+      "@id": `${canonicalUrl}#webpage`,
+      "url": canonicalUrl,
+      "name": pageTitle,
+      "description": pageDescription,
+      "inLanguage": "en-US",
+      "image": pageImageFull,
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": pageImageFull,
+        "width": 1200,
+        "height": 630
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": speakableSelectors || ["h1", "p:first-of-type", ".value-proposition"]
+      },
+      "dateModified": dateModified || new Date().toISOString(),
+      "isPartOf": {
+        "@id": `https://${primaryDomain}/#website`
+      },
+      "about": {
+        "@id": `https://${primaryDomain}/#organization`
+      }
+    };
+
+    if (lastReviewed) {
+      webPageSchema.lastReviewed = lastReviewed;
+    }
+    if (genre) {
+      webPageSchema.genre = genre;
+    }
+
+    graphItems.push(webPageSchema);
+
+    // 4. Service (for service pages)
+    if (pageType === 'service' && serviceName) {
+      graphItems.push({
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        "serviceType": serviceName,
+        "name": serviceName,
+        "provider": {
+          "@id": `https://${primaryDomain}/#organization`
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Accounting Firms, CPAs, Bookkeepers"
+        },
+        "description": pageDescription
       });
     }
 
-    // Update standard meta tags
-    const updateMetaTag = (property: string, content: string, useProperty = false) => {
-      const attribute = useProperty ? 'property' : 'name';
-      let element = document.querySelector(`meta[${attribute}="${property}"]`);
-
-      if (!element) {
-        element = document.createElement('meta');
-        element.setAttribute(attribute, property);
-        document.head.appendChild(element);
-      }
-
-      element.setAttribute('content', content);
-    };
-
-    // Update or create link tags
-    const updateLinkTag = (rel: string, href: string) => {
-      let element = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
-
-      if (!element) {
-        element = document.createElement('link');
-        element.setAttribute('rel', rel);
-        document.head.appendChild(element);
-      }
-
-      element.href = href;
-    };
-
-    // Update canonical link tag
-    updateLinkTag('canonical', canonicalUrl);
-
-    // Update standard meta tags
-    updateMetaTag('description', pageDescription);
-    updateMetaTag('robots', noindex ? 'noindex, nofollow' : (robots || 'index, follow'));
-
-    // Open Graph tags
-    updateMetaTag('og:title', pageTitle, true);
-    updateMetaTag('og:description', pageDescription, true);
-    updateMetaTag('og:image', pageImageFull, true);
-    updateMetaTag('og:url', canonicalUrl, true);
-    updateMetaTag('og:type', 'website', true);
-    updateMetaTag('og:site_name', siteName, true);
-
-    // Twitter Card tags
-    updateMetaTag('twitter:card', 'summary_large_image');
-    updateMetaTag('twitter:title', pageTitle);
-    updateMetaTag('twitter:description', pageDescription);
-    updateMetaTag('twitter:image', pageImageFull);
-
-    // Add or update consolidated JSON-LD structured data
-    const updateConsolidatedStructuredData = () => {
-      const schemaId = 'consolidated-schema';
-      let script = document.querySelector(`script[data-schema="${schemaId}"]`);
-
-      if (!script) {
-        script = document.createElement('script');
-        script.setAttribute('type', 'application/ld+json');
-        script.setAttribute('data-schema', schemaId);
-        document.head.appendChild(script);
-      }
-
-      // Build graph array with all schemas
-      const graphItems: any[] = [];
-
-      // 1. Organization/ProfessionalService (always present)
-      const organizationSchema: any = {
-        "@type": organizationType,
-        "@id": `https://${primaryDomain}/#organization`,
-        "name": "SmartFirm",
-        "url": `https://${primaryDomain}`,
-        "logo": {
-          "@type": "ImageObject",
-          "url": `https://${primaryDomain}/assets/smartfirm-logo-header.png`
-        },
-        "sameAs": [
-          // Add LinkedIn/YouTube URLs here when available
-        ]
-      };
-
-      // Add optional contact information
-      if (showContactInfo) {
-        organizationSchema.description = "Expert digital marketing for accounting firms";
-        organizationSchema.telephone = "+1-541-658-3789";
-        organizationSchema.email = "contact@smartfirm.io";
-      }
-
-      // Add optional address information
-      if (showAddress) {
-        organizationSchema.address = {
-          "@type": "PostalAddress",
-          "addressLocality": "Eugene",
-          "addressRegion": "OR",
-          "addressCountry": "US"
-        };
-        organizationSchema.areaServed = {
-          "@type": "Country",
-          "name": "United States"
-        };
-      }
-
-      graphItems.push(organizationSchema);
-
-      // 2. Website (always present)
+    // 5. Article (for blog and success story pages)
+    if (pageType === 'blog' && topic) {
       graphItems.push({
-        "@type": "WebSite",
-        "@id": `https://${primaryDomain}/#website`,
-        "name": "SmartFirm",
-        "url": `https://${primaryDomain}`,
+        "@type": "Article",
+        "@id": `${canonicalUrl}#article`,
+        "headline": topic,
+        "datePublished": datePublished || new Date().toISOString(),
+        "dateModified": dateModified || datePublished || new Date().toISOString(),
+        "author": {
+          "@id": `https://${primaryDomain}/#organization`
+        },
         "publisher": {
           "@id": `https://${primaryDomain}/#organization`
         },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": `https://${primaryDomain}/resources?q={search_term_string}`,
-          "query-input": "required name=search_term_string"
+        "image": pageImageFull,
+        "description": pageDescription,
+        "mainEntityOfPage": {
+          "@id": `${canonicalUrl}#webpage`
         }
       });
+    }
 
-      // 3. WebPage (always present with enhancements)
-      // Determine specific WebPage type
-      const webPageType = pageType === 'collection' ? 'CollectionPage' : 'WebPage';
-
-      const webPageSchema: any = {
-        "@type": webPageType,
-        "@id": `${canonicalUrl}#webpage`,
-        "url": canonicalUrl,
-        "name": pageTitle,
-        "description": pageDescription,
-        "inLanguage": "en-US",
+    if (pageType === 'success-story') {
+      graphItems.push({
+        "@type": "Article",
+        "@id": `${canonicalUrl}#article`,
+        "headline": articleHeadline || pageTitle,
+        "datePublished": datePublished || new Date().toISOString(),
+        "dateModified": dateModified || datePublished || new Date().toISOString(),
+        "author": {
+          "@type": "Organization",
+          "name": "SmartFirm"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "SmartFirm",
+          "logo": {
+            "@type": "ImageObject",
+            "url": `https://${primaryDomain}/assets/smartfirm-logo-full.webp`
+          }
+        },
         "image": pageImageFull,
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": pageImageFull,
-          "width": 1200,
-          "height": 630
+        "description": pageDescription
+      });
+
+      webPageSchema.mainEntity = { "@id": `${canonicalUrl}#article` };
+    }
+
+    // 5b. SoftwareApplication (for tool pages)
+    if (pageType === 'tool') {
+      const toolDisplayName = toolName || formatToolName(canonicalUrl);
+      graphItems.push({
+        "@type": "SoftwareApplication",
+        "@id": `${canonicalUrl}#software`,
+        "name": toolDisplayName,
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
         },
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": speakableSelectors || ["h1", "p:first-of-type", ".value-proposition"]
-        },
-        "dateModified": dateModified || new Date().toISOString(),
-        "isPartOf": {
-          "@id": `https://${primaryDomain}/#website`
-        },
-        "about": {
+        "provider": {
           "@id": `https://${primaryDomain}/#organization`
         }
-      };
-
-      // Add optional fields
-      if (lastReviewed) {
-        webPageSchema.lastReviewed = lastReviewed;
-      }
-      if (genre) {
-        webPageSchema.genre = genre;
-      }
-
-      graphItems.push(webPageSchema);
-
-      // 4. Service (for service pages)
-      if (pageType === 'service' && serviceName) {
-        graphItems.push({
-          "@type": "Service",
-          "@id": `${canonicalUrl}#service`,
-          "serviceType": serviceName,
-          "name": serviceName,
-          "provider": {
-            "@id": `https://${primaryDomain}/#organization`
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "United States"
-          },
-          "audience": {
-            "@type": "Audience",
-            "audienceType": "Accounting Firms, CPAs, Bookkeepers"
-          },
-          "description": pageDescription
-        });
-      }
-
-      // 5. Article (for blog and success story pages)
-      if (pageType === 'blog' && topic) {
-        graphItems.push({
-          "@type": "Article",
-          "@id": `${canonicalUrl}#article`,
-          "headline": topic,
-          "datePublished": datePublished || new Date().toISOString(),
-          "dateModified": dateModified || datePublished || new Date().toISOString(),
-          "author": {
-            "@id": `https://${primaryDomain}/#organization`
-          },
-          "publisher": {
-            "@id": `https://${primaryDomain}/#organization`
-          },
-          "image": pageImageFull,
-          "description": pageDescription,
-          "mainEntityOfPage": {
-            "@id": `${canonicalUrl}#webpage`
-          }
-        });
-      }
-
-      // Enhanced Article schema for success stories
-      if (pageType === 'success-story') {
-        graphItems.push({
-          "@type": "Article",
-          "@id": `${canonicalUrl}#article`,
-          "headline": articleHeadline || pageTitle,
-          "datePublished": datePublished || new Date().toISOString(),
-          "dateModified": dateModified || datePublished || new Date().toISOString(),
-          "author": {
-            "@type": "Organization",
-            "name": "SmartFirm"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "SmartFirm",
-            "logo": {
-              "@type": "ImageObject",
-              "url": `https://${primaryDomain}/assets/smartfirm-logo-full.webp`
-            }
-          },
-          "image": pageImageFull,
-          "description": pageDescription
-        });
-
-        // Link to WebPage via mainEntity
-        webPageSchema.mainEntity = { "@id": `${canonicalUrl}#article` };
-      }
-
-      // 5b. SoftwareApplication (for tool pages)
-      if (pageType === 'tool') {
-        const toolDisplayName = toolName || formatToolName(canonicalUrl);
-        graphItems.push({
-          "@type": "SoftwareApplication",
-          "@id": `${canonicalUrl}#software`,
-          "name": toolDisplayName,
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Web Browser",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "provider": {
-            "@id": `https://${primaryDomain}/#organization`
-          }
-        });
-
-        // Link to WebPage via mainEntity
-        webPageSchema.mainEntity = { "@id": `${canonicalUrl}#software` };
-      }
-
-      // 6. FAQPage (when FAQs provided)
-      if (faqs && faqs.length > 0) {
-        // Check if FAQ schema already exists in DOM (from build-time injection or inline scripts)
-        const allJsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
-        const hasFAQSchemaAlready = Array.from(allJsonLdScripts).some(script =>
-          script.textContent?.includes('"@type":"FAQPage"') ||
-          script.textContent?.includes('"@type": "FAQPage"')
-        );
-
-        if (!hasFAQSchemaAlready) {
-          graphItems.push({
-            "@type": "FAQPage",
-            "@id": `${canonicalUrl}#faqpage`,
-            "mainEntity": faqs.map((faq, index) => ({
-              "@type": "Question",
-              "@id": `${canonicalUrl}#question-${index + 1}`, // Unique ID for each question
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          });
-        }
-      }
-
-      // 7. BreadcrumbList (auto-generated or provided)
-      if (autoBreadcrumbs && autoBreadcrumbs.length > 0) {
-        graphItems.push({
-          "@type": "BreadcrumbList",
-          "@id": `${canonicalUrl}#breadcrumb`,
-          "itemListElement": autoBreadcrumbs.map((crumb, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": crumb.name,
-            "item": `https://${primaryDomain}${crumb.url}`
-          }))
-        });
-      }
-
-      // Create consolidated schema with @graph
-      const consolidatedSchema = {
-        "@context": "https://schema.org",
-        "@graph": graphItems
-      };
-
-      script.textContent = JSON.stringify(consolidatedSchema);
-
-      // Remove old individual schema scripts if they exist
-      ['organization', 'website', 'webpage', 'service', 'article', 'faq', 'breadcrumb'].forEach(id => {
-        const oldScript = document.querySelector(`script[data-schema="${id}"]`);
-        if (oldScript && oldScript !== script) {
-          oldScript.remove();
-        }
       });
+
+      webPageSchema.mainEntity = { "@id": `${canonicalUrl}#software` };
+    }
+
+    // 6. FAQPage (when FAQs provided)
+    if (faqs && faqs.length > 0) {
+      graphItems.push({
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faqpage`,
+        "mainEntity": faqs.map((faq, index) => ({
+          "@type": "Question",
+          "@id": `${canonicalUrl}#question-${index + 1}`,
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      });
+    }
+
+    // 7. BreadcrumbList (auto-generated or provided)
+    if (autoBreadcrumbs && autoBreadcrumbs.length > 0) {
+      graphItems.push({
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        "itemListElement": autoBreadcrumbs.map((crumb, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": crumb.name,
+          "item": `https://${primaryDomain}${crumb.url}`
+        }))
+      });
+    }
+
+    return {
+      "@context": "https://schema.org",
+      "@graph": graphItems
     };
+  };
 
-    updateConsolidatedStructuredData();
+  const consolidatedSchema = buildConsolidatedSchema();
+  const robotsContent = noindex ? 'noindex, nofollow' : (robots || 'index, follow');
 
-  }, [pageTitle, pageDescription, pageImageFull, canonicalUrl, pathname, noindex, robots, pageType, serviceName, topic, toolName, articleHeadline, genre, lastReviewed, speakableSelectors, datePublished, dateModified, author, autoBreadcrumbs, faqs, organizationType, showContactInfo, showAddress, primaryDomain, defaultImage]);
-
-  return null;
+  // Render all metadata via Helmet - this ensures metadata is present in initial render
+  // Critical for SSG/prerendering to capture correct metadata
+  return (
+    <Helmet>
+      <title>{pageTitle}</title>
+      <link rel="canonical" href={canonicalUrl} />
+      <meta name="description" content={pageDescription} />
+      <meta name="robots" content={robotsContent} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={pageDescription} />
+      <meta property="og:image" content={pageImageFull} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={siteName} />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:description" content={pageDescription} />
+      <meta name="twitter:image" content={pageImageFull} />
+      
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(consolidatedSchema)}
+      </script>
+    </Helmet>
+  );
 };
 
 export default SEO;
