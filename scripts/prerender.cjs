@@ -433,6 +433,30 @@ async function prerender() {
       // Wait for React to render
       await page.waitForSelector('#root', { timeout: 10000 });
 
+      // Wait for correct canonical URL to be present (ensures react-helmet has rendered)
+      // This is critical for SEO - we must have correct metadata before capturing HTML
+      if (route !== '/') {
+        const expectedCanonical = `https://smartfirm.io${route}`;
+        const expectedCanonicalWithSlash = `https://smartfirm.io${route}/`;
+        
+        try {
+          await page.waitForFunction(
+            (expected, expectedSlash) => {
+              const canonical = document.querySelector('link[rel="canonical"]');
+              if (!canonical) return false;
+              const href = canonical.getAttribute('href');
+              return href === expected || href === expectedSlash;
+            },
+            { timeout: 15000 },
+            expectedCanonical,
+            expectedCanonicalWithSlash
+          );
+        } catch (canonicalErr) {
+          // Log warning but continue - the validation script will catch any issues
+          console.log(`[Prerender] ⚠ ${route}: Canonical URL may not be correct`);
+        }
+      }
+
       // Get the rendered HTML
       const html = await page.content();
 
