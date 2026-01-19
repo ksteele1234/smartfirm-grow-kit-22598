@@ -381,7 +381,7 @@ const AITransformationOffer = () => {
                 className="transform hover:scale-105 transition-all duration-300"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book Your Free Strategy Call
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </a>

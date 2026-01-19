@@ -417,7 +417,7 @@ const Industries = () => {
                 variant="white-on-dark"
                 asChild
               >
-                <a href="/get-started">
+                <a href="/get-started/">
                   Book an Industry-Specific Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

@@ -148,28 +148,28 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/home-8804" element={<Navigate to="/" replace />} />
-            <Route path="/leading-marketing-services-for-accounting-firms" element={<Navigate to="/services" replace />} />
-            <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Navigate to="/solutions" replace />} />
-            <Route path="/industries-expert-marketing-agency-for-accountants" element={<Navigate to="/industries" replace />} />
-            <Route path="/about-us" element={<Navigate to="/about" replace />} />
-            <Route path="/terms-of-service" element={<Navigate to="/terms" replace />} />
-            <Route path="/demo" element={<Navigate to="/get-started" replace />} />
-            <Route path="/demo-call-calendar" element={<Navigate to="/get-started" replace />} />
-            <Route path="/book-demo" element={<Navigate to="/get-started" replace />} />
-            <Route path="/checkout" element={<Navigate to="/get-started" replace />} />
-            <Route path="/audit-landingpage" element={<Navigate to="/get-started" replace />} />
-            <Route path="/smartfirm-audit-landingpage" element={<Navigate to="/get-started" replace />} />
+            <Route path="/leading-marketing-services-for-accounting-firms" element={<Navigate to="/services/" replace />} />
+            <Route path="/solutions-expert-marketing-agency-for-accounting-firms" element={<Navigate to="/solutions/" replace />} />
+            <Route path="/industries-expert-marketing-agency-for-accountants" element={<Navigate to="/industries/" replace />} />
+            <Route path="/about-us" element={<Navigate to="/about/" replace />} />
+            <Route path="/terms-of-service" element={<Navigate to="/terms/" replace />} />
+            <Route path="/demo" element={<Navigate to="/get-started/" replace />} />
+            <Route path="/demo-call-calendar" element={<Navigate to="/get-started/" replace />} />
+            <Route path="/book-demo" element={<Navigate to="/get-started/" replace />} />
+            <Route path="/checkout" element={<Navigate to="/get-started/" replace />} />
+            <Route path="/audit-landingpage" element={<Navigate to="/get-started/" replace />} />
+            <Route path="/smartfirm-audit-landingpage" element={<Navigate to="/get-started/" replace />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/services" element={<Services />} />
             <Route path="/all-services" element={<AllServices />} />
-            <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<Navigate to="/all-services" replace />} />
+            <Route path="/services/all-professional-marketing-services-for-accounting-firms" element={<Navigate to="/all-services/" replace />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
-            
+
             {/* Solution Sub-pages */}
             <Route path="/solutions/scale-accounting-firm-successfully" element={<ScaleFirm />} />
             <Route path="/solutions/stop-losing-clients-to-tech-savvy-cpas" element={<StopLosingClients />} />
@@ -178,12 +178,12 @@ const App = () => (
             <Route path="/solutions/grow-without-growing-pains" element={<GrowWithoutPains />} />
             <Route path="/solutions/protect-practice-and-future" element={<ProtectPractice />} />
             <Route path="/solutions/client-onboarding-problems" element={<ClientOnboardingProblems />} />
-            
+
             {/* Service Sub-pages */}
-          <Route path="/services/ai-transformation-roadmap" element={<AITransformationRoadmap />} />
-          <Route path="/services/single-process-ai-transformation" element={<SingleProcessAITransformation />} />
-          <Route path="/ai-transformation-offer" element={<AITransformationOffer />} />
-          <Route path="/list-reactivation-offer" element={<ListReactivationOffer />} />
+            <Route path="/services/ai-transformation-roadmap" element={<AITransformationRoadmap />} />
+            <Route path="/services/single-process-ai-transformation" element={<SingleProcessAITransformation />} />
+            <Route path="/ai-transformation-offer" element={<AITransformationOffer />} />
+            <Route path="/list-reactivation-offer" element={<ListReactivationOffer />} />
             <Route path="/services/marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
             <Route path="/services/accounting-firm-technology-consulting" element={<TechnologySolutions />} />
             <Route path="/services/business-optimization-for-accounting-firms" element={<BusinessOptimization />} />
@@ -199,7 +199,7 @@ const App = () => (
             <Route path="/services/marketing-strategy-integration-for-accounting-firms" element={<StrategyIntegration />} />
             <Route path="/services/add-ons" element={<AddOns />} />
             <Route path="/services/client-onboarding-automation" element={<ClientOnboardingAutomation />} />
-            
+
             {/* Service page redirects for old slugs */}
             <Route path="/services/marketing-automation" element={<Navigate to="/services/marketing-automation-for-accounting-firms" replace />} />
             <Route path="/services/technology-solutions" element={<Navigate to="/services/accounting-firm-technology-consulting" replace />} />
@@ -214,19 +214,19 @@ const App = () => (
             <Route path="/services/content-marketing" element={<Navigate to="/services/strategic-content-marketing-for-cpas" replace />} />
             <Route path="/services/online-reputation-management" element={<Navigate to="/services/reputation-management-for-cpas" replace />} />
             <Route path="/services/strategy-integration" element={<Navigate to="/services/marketing-strategy-integration-for-accounting-firms" replace />} />
-            
+
             {/* Industry Sub-pages */}
             <Route path="/industries/tax-preparation-marketing-solutions" element={<TaxPreparation />} />
             <Route path="/industries/bookkeeping-services-marketing-automation" element={<BookkeepingServices />} />
             <Route path="/industries/business-advisory-marketing-services" element={<BusinessAdvisory />} />
             <Route path="/industries/audit-assurance-marketing-agency" element={<AuditAssurance />} />
-            
+
             {/* Industry page redirects for old slugs */}
             <Route path="/industries/tax-preparation" element={<Navigate to="/industries/tax-preparation-marketing-solutions" replace />} />
             <Route path="/industries/bookkeeping-services" element={<Navigate to="/industries/bookkeeping-services-marketing-automation" replace />} />
             <Route path="/industries/marketing-for-business-advisors" element={<Navigate to="/industries/business-advisory-marketing-services" replace />} />
             <Route path="/industries/marketing-for-audit-firms" element={<Navigate to="/industries/audit-assurance-marketing-agency" replace />} />
-            
+
             {/* Tools & Calculators */}
             <Route path="/tools" element={<ToolsCalculators />} />
             <Route path="/tools/efficiency-quiz" element={<EfficiencyQuiz />} />
@@ -242,34 +242,34 @@ const App = () => (
             <Route path="/tools/seo-audit" element={<SEOAudit />} />
             <Route path="/tools/page-grader" element={<PageGrader />} />
             <Route path="/tools/advanced-seo-qa" element={<AdvancedSEOQA />} />
-            
+
             {/* Funnel Pages */}
             <Route path="/growth-calculator" element={<GrowthCalculator />} />
-            
+
             {/* Blog */}
             <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/preview/:slug" element={<BlogPostPreview />} />
             <Route path="/blog/tags/:slug" element={<TagPage />} />
             <Route path="/blog/guide/:slug" element={<PillarPage />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            
+
             {/* Case Studies */}
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/payroll-automation-roi" element={<PayrollAutomationROI />} />
-            
-{/* Legal Pages */}
+
+            {/* Legal Pages */}
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/faq/:slug" element={<FaqDetail />} />
             <Route path="/reactivation-terms" element={<ReactivationTerms />} />
-            
+
             {/* Utility Pages - Excluded from sitemap */}
             <Route path="/__debug/url-probe" element={<DebugUrlProbe />} />
             <Route path="/500" element={<ServerError />} />
             <Route path="/thank-you" element={<ThankYou />} />
-            
+
             {/* Auth & Admin */}
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<AdminLayout />}>
@@ -281,7 +281,7 @@ const App = () => (
               <Route path="tags" element={<TagManager />} />
               <Route path="profiles" element={<ProfileManager />} />
             </Route>
-            
+
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

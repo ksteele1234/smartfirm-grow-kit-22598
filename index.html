@@ -1,268 +1,517 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Block staging/preview sites from indexing - MUST be first -->
-    <!-- Staging protection is now handled via Netlify headers in netlify.toml -->
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/webp" href="/favicon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-    
-    <!-- Preload hero image for LCP optimization - Responsive -->
-    <link 
-      rel="preload" 
-      as="image" 
-      href="/assets/hero-wave-background-desktop.webp"
-      imagesrcset="/assets/hero-wave-background-mobile.webp 640w,
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Block staging/preview sites from indexing - MUST be first -->
+  <!-- Staging protection is now handled via Netlify headers in netlify.toml -->
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" href="/favicon.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+
+  <!-- Preload hero image for LCP optimization - Responsive -->
+  <link rel="preload" as="image" href="/assets/hero-wave-background-desktop.webp" imagesrcset="/assets/hero-wave-background-mobile.webp 640w,
                    /assets/hero-wave-background-tablet.webp 1024w,
-                   /assets/hero-wave-background-desktop.webp 1920w"
-      imagesizes="100vw"
-      fetchpriority="high"
-      type="image/webp"
-    >
-    
-    <title>SmartFirm | Automation & AI for Accounting Firms</title>
-    <meta name="description" content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-    <meta name="author" content="SmartFirm.io" />
-    
-    <!-- Enhanced SEO Meta Tags -->
-    <meta name="keywords" content="accounting firm marketing, CPA marketing automation, AI marketing for accountants, accounting lead generation, automated marketing for CPAs, accounting firm growth, CPA client acquisition, bookkeeper marketing">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://smartfirm.io/">
-    <meta name="language" content="en-US">
-    <meta name="geo.region" content="US">
-    <meta name="geo.placename" content="United States">
-    
-    <!-- Preconnect for fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Preload critical font files (WOFF2 format for best performance) -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriOZSCHBeHFl0.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Critical CSS (Above-the-fold) - Comprehensive inlined styles -->
-    <style>
-      /* Base resets and critical layout */
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-      html{-webkit-text-size-adjust:100%;line-height:1.5;scroll-behavior:smooth;}
-      body{font-family:'DM Sans',sans-serif;color:hsl(215 19% 35%);background:hsl(0 0% 100%);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-      
-      /* Critical color tokens - Complete palette */
-      :root{
-        --professional-teal:172 82% 24%;
-        --ocean-blue:198 64% 30%;
-        --deep-navy:208 59% 16%;
-        --coral:347 89% 73%;
-        --gold:38 92% 50%;
-        --white:0 0% 100%;
-        --slate-dark:215 19% 35%;
-        --slate:215 16% 47%;
-        --slate-light:214 32% 91%;
-        --primary:var(--professional-teal);
-        --secondary:var(--ocean-blue);
-        --foreground:var(--slate-dark);
-        --accent:var(--coral);
-        --accent-gold:var(--gold);
-      }
-      
-      /* Header critical styles */
-      header{position:sticky;top:0;z-index:50;background:hsl(var(--white));height:72px;border-bottom:1px solid hsl(var(--slate-light));backdrop-filter:blur(8px);}
-      .container{max-width:1400px;margin:0 auto;padding:0 1.5rem;}
-      
-      /* Hero section critical styles */
-      .hero-section{position:relative;min-height:600px;padding:4rem 0;background-size:cover;background-position:center;overflow:hidden;}
-      
-      /* Glass card styles for hero metrics */
-      .glass-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.2);box-shadow:0 8px 32px rgba(10,114,101,0.15);}
-      
-      /* Typography critical styles */
-      h1{font-family:'Poppins',sans-serif;font-size:clamp(2.25rem,5vw,3rem);font-weight:700;line-height:1.1;color:hsl(var(--white));margin-bottom:1.5rem;}
-      h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,4vw,2.5rem);font-weight:700;color:hsl(var(--primary));}
-      p{line-height:1.7;font-size:1.125rem;}
-      
-      /* Button critical styles */
-      .btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 2.5rem;font-weight:700;border-radius:0.5rem;transition:all 0.2s;font-size:1.125rem;}
-      .btn-coral{background:hsl(var(--coral));color:hsl(var(--white));box-shadow:0 4px 14px rgba(251,113,133,0.4);}
-      .btn-coral:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(251,113,133,0.5);}
-      
-      /* Gradient text utilities */
-      .text-gradient-gold{background:linear-gradient(135deg,hsl(var(--gold)),hsl(38 100% 60%));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-      
-      /* Animation keyframes - Critical animations only */
-      @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
-      @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-      @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
-      @keyframes gentlePulse{0%,100%{opacity:1;}50%{opacity:0.95;}}
-      
-      @media(prefers-reduced-motion:no-preference){
-        .animate-fade-in{animation:fadeIn 0.5s ease-out;}
-        .animate-fade-in-up{animation:fadeInUp 0.6s ease-out;}
-        .animate-float{animation:float 3s ease-in-out infinite;}
-        .animate-gentle-pulse{animation:gentlePulse 3.5s ease-in-out infinite;}
-      }
-      
-      /* Layout utilities */
-      .flex{display:flex;}
-      .grid{display:grid;}
-      .hidden{display:none;}
-      .items-center{align-items:center;}
-      .justify-center{justify-content:center;}
-      .justify-between{justify-content:space-between;}
-      .gap-4{gap:1rem;}
-      .gap-6{gap:1.5rem;}
-      
-      /* Spacing utilities */
-      .mb-6{margin-bottom:1.5rem;}
-      .mb-8{margin-bottom:2rem;}
-      .p-6{padding:1.5rem;}
-      .px-6{padding-left:1.5rem;padding-right:1.5rem;}
-      .py-4{padding-top:1rem;padding-bottom:1rem;}
-      
-      /* Text utilities */
-      .text-white{color:hsl(var(--white));}
-      .text-sm{font-size:0.875rem;}
-      .text-lg{font-size:1.125rem;}
-      .text-4xl{font-size:2.25rem;}
-      .font-bold{font-weight:700;}
-      .font-extrabold{font-weight:800;}
-      .font-medium{font-weight:500;}
-      
-      /* Rounded corners */
-      .rounded-card{border-radius:1rem;}
-      .rounded-card-lg{border-radius:1.5rem;}
-      
-      /* Shadow utilities */
-      .shadow-hero-card{box-shadow:0 20px 25px rgba(10,114,101,0.15),0 8px 10px rgba(10,114,101,0.08);}
-      
-      /* Positioning */
-      .relative{position:relative;}
-      .absolute{position:absolute;}
-      .inset-0{top:0;right:0;bottom:0;left:0;}
-      
-      /* Responsive breakpoints */
-      @media(max-width:768px){
-        h1{font-size:2.25rem;}
-        h2{font-size:2rem;}
-        .hero-section{min-height:500px;padding:3rem 0;}
-        .btn{padding:0.75rem 2rem;font-size:1rem;}
-        .p-6{padding:1.25rem;}
-      }
-      
-      @media(min-width:1024px){
-        .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-        .lg\:block{display:block;}
-      }
-    </style>
-    
-    
-    <!-- Google Fonts (optimized with font-display swap) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    </noscript>
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://api.leadconnectorhq.com">
-    
-    <!-- Ahrefs Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="HfXP1KYpFY74ClFZicij2A" async></script>
-    
-    <!-- Note: GTM and Meta Pixel are deferred - loaded 3s after page load for better performance -->
+                   /assets/hero-wave-background-desktop.webp 1920w" imagesizes="100vw" fetchpriority="high"
+    type="image/webp">
 
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="SmartFirm" />
-    <meta property="og:title" content="SmartFirm | Automation & AI for Accounting Firms" />
-    <meta property="og:description" content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-    <meta property="og:url" content="https://smartfirm.io/" />
-    <meta property="og:image" content="https://smartfirm.io/assets/og-default.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:locale" content="en_US" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SmartFirm | Automation & AI for Accounting Firms" />
-    <meta name="twitter:description" content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-    <meta name="twitter:image" content="https://smartfirm.io/assets/og-default.png" />
-    <meta name="twitter:image:alt" content="SmartFirm AI Marketing Dashboard for Accounting Firms" />
-    
-    <!-- Optional LLM/AEO Descriptors -->
-    <meta name="ai:purpose" content="SmartFirm provides comprehensive AI-powered marketing automation solutions specifically designed for accounting firms, CPAs, and bookkeepers">
-    <meta name="ai:target_audience" content="Accounting professionals, CPAs, tax preparers, bookkeepers, accounting firm owners, solo practitioners">
-    <meta name="ai:key_benefits" content="24/7 lead capture, automated client follow-up, review management, social media automation, AI chatbots, voice AI phone system, sales funnel automation">
-    <meta name="ai:pricing_model" content="Monthly subscription plans starting at $999/month with $12,500 setup fee, done-for-you service model">
-    <meta name="ai:industry" content="Accounting services, CPA firms, tax preparation, bookkeeping, financial services">
-    <meta name="ai:service_type" content="Marketing automation platform, lead generation system, CRM for accountants">
-  </head>
+  <title>SmartFirm | Automation & AI for Accounting Firms</title>
+  <meta name="description"
+    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
+  <meta name="author" content="SmartFirm.io" />
 
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ55QDDX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
-    <!-- Meta Pixel (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1426639418489174&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel (noscript) -->
-    
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- Deferred Analytics Loading - Waits 3s after page load for better performance -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          // Load Google Tag Manager
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-PJ55QDDX');
-          
-          // Load Meta Pixel
-          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-          (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1426639418489174'); 
-          fbq('track', 'PageView');
-        }, 3000);
-      });
-      
-      // Book a Free Call Button Click Tracking (safe check for gtag)
-      document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll("[id$='-book-call-btn']");
-        buttons.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            if (typeof gtag === 'function') {
-              gtag('event', 'book_now_click', {
-                event_category: 'engagement',
-                event_label: btn.id,
-                page_path: window.location.pathname,
-                button_text: btn.textContent.trim()
-              });
-            }
-          });
+  <!-- Enhanced SEO Meta Tags -->
+  <meta name="keywords"
+    content="accounting firm marketing, CPA marketing automation, AI marketing for accountants, accounting lead generation, automated marketing for CPAs, accounting firm growth, CPA client acquisition, bookkeeper marketing">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <meta name="language" content="en-US">
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload critical font files (WOFF2 format for best performance) -->
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font"
+    type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.gstatic.com/s/dmsans/v15/rP2Hp2ywxg089UriOZSCHBeHFl0.woff2" as="font"
+    type="font/woff2" crossorigin>
+
+  <!-- Critical CSS (Above-the-fold) - Comprehensive inlined styles -->
+  <style>
+    /* Base resets and critical layout */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: hsl(215 19% 35%);
+      background: hsl(0 0% 100%);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Critical color tokens - Complete palette */
+    :root {
+      --professional-teal: 172 82% 24%;
+      --ocean-blue: 198 64% 30%;
+      --deep-navy: 208 59% 16%;
+      --coral: 347 89% 73%;
+      --gold: 38 92% 50%;
+      --white: 0 0% 100%;
+      --slate-dark: 215 19% 35%;
+      --slate: 215 16% 47%;
+      --slate-light: 214 32% 91%;
+      --primary: var(--professional-teal);
+      --secondary: var(--ocean-blue);
+      --foreground: var(--slate-dark);
+      --accent: var(--coral);
+      --accent-gold: var(--gold);
+    }
+
+    /* Header critical styles */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsl(var(--white));
+      height: 72px;
+      border-bottom: 1px solid hsl(var(--slate-light));
+      backdrop-filter: blur(8px);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Hero section critical styles */
+    .hero-section {
+      position: relative;
+      min-height: 600px;
+      padding: 4rem 0;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    /* Glass card styles for hero metrics */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(10, 114, 101, 0.15);
+    }
+
+    /* Typography critical styles */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.25rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: hsl(var(--white));
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: hsl(var(--primary));
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.125rem;
+    }
+
+    /* Button critical styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2.5rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+      font-size: 1.125rem;
+    }
+
+    .btn-coral {
+      background: hsl(var(--coral));
+      color: hsl(var(--white));
+      box-shadow: 0 4px 14px rgba(251, 113, 133, 0.4);
+    }
+
+    .btn-coral:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(251, 113, 133, 0.5);
+    }
+
+    /* Gradient text utilities */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, hsl(var(--gold)), hsl(38 100% 60%));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Animation keyframes - Critical animations only */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes gentlePulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.95;
+      }
+    }
+
+    @media(prefers-reduced-motion:no-preference) {
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out;
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .animate-gentle-pulse {
+        animation: gentlePulse 3.5s ease-in-out infinite;
+      }
+    }
+
+    /* Layout utilities */
+    .flex {
+      display: flex;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    /* Spacing utilities */
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mb-8 {
+      margin-bottom: 2rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    /* Text utilities */
+    .text-white {
+      color: hsl(var(--white));
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-extrabold {
+      font-weight: 800;
+    }
+
+    .font-medium {
+      font-weight: 500;
+    }
+
+    /* Rounded corners */
+    .rounded-card {
+      border-radius: 1rem;
+    }
+
+    .rounded-card-lg {
+      border-radius: 1.5rem;
+    }
+
+    /* Shadow utilities */
+    .shadow-hero-card {
+      box-shadow: 0 20px 25px rgba(10, 114, 101, 0.15), 0 8px 10px rgba(10, 114, 101, 0.08);
+    }
+
+    /* Positioning */
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Responsive breakpoints */
+    @media(max-width:768px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .hero-section {
+        min-height: 500px;
+        padding: 3rem 0;
+      }
+
+      .btn {
+        padding: 0.75rem 2rem;
+        font-size: 1rem;
+      }
+
+      .p-6 {
+        padding: 1.25rem;
+      }
+    }
+
+    @media(min-width:1024px) {
+      .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .lg\:block {
+        display: block;
+      }
+    }
+  </style>
+
+
+  <!-- Google Fonts (optimized with font-display swap) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all';this.onload=null;">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet">
+  </noscript>
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://connect.facebook.net">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://api.leadconnectorhq.com">
+
+  <!-- Ahrefs Analytics -->
+  <script src="https://analytics.ahrefs.com/analytics.js" data-key="HfXP1KYpFY74ClFZicij2A" async></script>
+
+  <!-- Note: GTM and Meta Pixel are deferred - loaded 3s after page load for better performance -->
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SmartFirm" />
+  <meta property="og:title" content="SmartFirm | Automation & AI for Accounting Firms" />
+  <meta property="og:description"
+    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
+  <meta property="og:url" content="https://smartfirm.io/" />
+  <meta property="og:image" content="https://smartfirm.io/assets/og-default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SmartFirm | Automation & AI for Accounting Firms" />
+  <meta name="twitter:description"
+    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
+  <meta name="twitter:image" content="https://smartfirm.io/assets/og-default.png" />
+  <meta name="twitter:image:alt" content="SmartFirm AI Marketing Dashboard for Accounting Firms" />
+
+  <!-- Optional LLM/AEO Descriptors -->
+  <meta name="ai:purpose"
+    content="SmartFirm provides comprehensive AI-powered marketing automation solutions specifically designed for accounting firms, CPAs, and bookkeepers">
+  <meta name="ai:target_audience"
+    content="Accounting professionals, CPAs, tax preparers, bookkeepers, accounting firm owners, solo practitioners">
+  <meta name="ai:key_benefits"
+    content="24/7 lead capture, automated client follow-up, review management, social media automation, AI chatbots, voice AI phone system, sales funnel automation">
+  <meta name="ai:pricing_model"
+    content="Monthly subscription plans starting at $999/month with $12,500 setup fee, done-for-you service model">
+  <meta name="ai:industry" content="Accounting services, CPA firms, tax preparation, bookkeeping, financial services">
+  <meta name="ai:service_type" content="Marketing automation platform, lead generation system, CRM for accountants">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ55QDDX" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Meta Pixel (noscript) -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1426639418489174&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel (noscript) -->
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Deferred Analytics Loading - Waits 3s after page load for better performance -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        // Load Google Tag Manager
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+          }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PJ55QDDX');
+
+        // Load Meta Pixel
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          }; if (!f._fbq) f._fbq = n;
+          n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+          t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }
+          (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1426639418489174');
+        fbq('track', 'PageView');
+      }, 3000);
+    });
+
+    // Book a Free Call Button Click Tracking (safe check for gtag)
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll("[id$='-book-call-btn']");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          if (typeof gtag === 'function') {
+            gtag('event', 'book_now_click', {
+              event_category: 'engagement',
+              event_label: btn.id,
+              page_path: window.location.pathname,
+              button_text: btn.textContent.trim()
+            });
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
