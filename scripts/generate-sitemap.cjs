@@ -13,16 +13,16 @@ const staticRoutes = [
   // Homepage
   { path: '/', changefreq: 'weekly', priority: 1.0 },
 
-  // Main Navigation Pages
-  { path: '/solutions-expert-marketing-agency-for-accounting-firms/', changefreq: 'weekly', priority: 0.9 },
-  { path: '/leading-marketing-services-for-accounting-firms/', changefreq: 'weekly', priority: 0.9 },
-  { path: '/services/all-professional-marketing-services-for-accounting-firms/', changefreq: 'weekly', priority: 0.8 },
-  { path: '/industries-expert-marketing-agency-for-accountants/', changefreq: 'weekly', priority: 0.9 },
+  // Main Navigation Pages (canonical URLs - not redirects)
+  { path: '/solutions/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/services/', changefreq: 'weekly', priority: 0.9 },
+  { path: '/all-services/', changefreq: 'weekly', priority: 0.8 },
+  { path: '/industries/', changefreq: 'weekly', priority: 0.9 },
   { path: '/resources/', changefreq: 'weekly', priority: 0.8 },
   { path: '/about/', changefreq: 'monthly', priority: 0.7 },
   { path: '/contact/', changefreq: 'monthly', priority: 0.8 },
   { path: '/get-started/', changefreq: 'weekly', priority: 0.9 },
-  { path: '/quick-start-marketing-for-cpa-firms/', changefreq: 'weekly', priority: 0.8 },
+  { path: '/quick-start/', changefreq: 'weekly', priority: 0.8 },
 
   // Solution Pages
   { path: '/solutions/scale-accounting-firm-successfully/', changefreq: 'weekly', priority: 0.8 },
@@ -375,15 +375,8 @@ async function fetchBlogCategories() {
 function generateFaqRoutes() {
   const routes = [];
 
-  // Add FAQ category pages
+  // Only add individual FAQ question pages (NOT category pages - they redirect/404)
   faqCategories.forEach(category => {
-    routes.push({
-      path: `/faq/${category.slug}/`,
-      changefreq: 'monthly',
-      priority: 0.6,
-    });
-
-    // Add individual FAQ question pages
     category.questions.forEach(questionSlug => {
       routes.push({
         path: `/faq/${questionSlug}/`,
@@ -393,6 +386,7 @@ function generateFaqRoutes() {
     });
   });
 
+  console.log(`[Sitemap] Generated ${routes.length} FAQ question routes`);
   return routes;
 }
 
