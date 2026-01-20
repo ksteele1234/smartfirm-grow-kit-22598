@@ -16,8 +16,8 @@ const Footer = () => {
   const solutions = [
     { name: "Lead Generation", slug: "lead-generation/" },
     { name: "Scale Your Firm", slug: "scale-accounting-firm-successfully/" },
-    { name: "Client Retention", slug: "client-retention-strategies-for-cpas/" },
-    { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas/" }
+    { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas/" },
+    { name: "Work Less, Earn More", slug: "work-less-earn-more/" }
   ];
 
   const resources = [
@@ -110,7 +110,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link
-                  to="/quick-start-marketing-for-cpa-firms/"
+                  to="/quick-start/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Quick Start

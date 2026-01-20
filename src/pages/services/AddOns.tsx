@@ -218,7 +218,7 @@ const AddOns = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="group" asChild>
-                <a href="/quick-start-marketing-for-cpa-firms/">
+                <a href="/quick-start/">
                   View Quick Start Package
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
