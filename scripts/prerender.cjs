@@ -88,12 +88,55 @@ const prerenderRoutes = [
   "/case-studies",
   "/case-studies/payroll-automation-roi",
 
+  // Blog (needs prerendering to get correct canonical)
+  "/blog",
+
   // Legal Pages
   "/privacy",
   "/terms",
   "/cookies",
   "/faq",
 ];
+
+/**
+ * Dynamically fetch blog tags from Supabase for prerendering
+ * This ensures tag pages get correct canonical URLs
+ */
+async function fetchBlogTagSlugs() {
+  const baseUrl = process.env.VITE_SUPABASE_URL;
+  const anonKey = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || 
+                  process.env.VITE_SUPABASE_ANON_KEY ||
+                  process.env.SUPABASE_ANON_KEY;
+  
+  if (!baseUrl || !anonKey) {
+    console.log('[Prerender] Blog tags: missing env vars, skipping tag routes');
+    return [];
+  }
+  
+  try {
+    const url = new URL(`${baseUrl}/rest/v1/blog_tags`);
+    url.searchParams.set('select', 'slug');
+    
+    const res = await fetch(url.toString(), {
+      headers: {
+        apikey: anonKey,
+        authorization: `Bearer ${anonKey}`,
+      },
+    });
+    
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    
+    const rows = await res.json();
+    const slugs = Array.isArray(rows) ? rows.map(r => r.slug) : [];
+    console.log(`[Prerender] Extracted ${slugs.length} blog tag slugs`);
+    return slugs.map(slug => `/blog/tags/${slug}`);
+  } catch (e) {
+    console.log(`[Prerender] Blog tags: failed to fetch (${e.message || e})`);
+    return [];
+  }
+}
 
 /**
  * Dynamically extract all FAQ slugs from faqContent.ts
@@ -216,39 +259,8 @@ async function fetchPublishedBlogSlugs() {
   }
 }
 
-/**
- * Fetch blog tag slugs from Supabase
- */
-async function fetchBlogTagSlugs() {
-  const supabaseUrl = getEnv('SUPABASE_URL');
-  const supabaseKey = getEnv('SUPABASE_PUBLISHABLE_KEY');
-
-  if (!supabaseUrl || !supabaseKey) {
-    console.log('[Prerender] Supabase credentials not found, skipping tag routes');
-    return [];
-  }
-
-  try {
-    const response = await fetch(`${supabaseUrl}/rest/v1/blog_tags?select=slug`, {
-      headers: {
-        apikey: supabaseKey,
-        Authorization: `Bearer ${supabaseKey}`,
-      },
-    });
-
-    if (!response.ok) {
-      console.log('[Prerender] Failed to fetch blog tags:', response.status);
-      return [];
-    }
-
-    const tags = await response.json();
-    console.log(`[Prerender] Found ${tags.length} blog tags`);
-    return tags.map((tag) => `/blog/tag/${tag.slug}`);
-  } catch (err) {
-    console.log('[Prerender] Error fetching blog tags:', err.message);
-    return [];
-  }
-}
+// NOTE: fetchBlogTagSlugs is defined earlier in the file (lines 107-139)
+// It uses /blog/tags/ (plural) which matches the actual route
 
 /**
  * Convert a route to a relative path safe for path.join
