@@ -3,6 +3,8 @@
  * Post-build prerendering script using puppeteer-core
  * This runs after vite build to generate static HTML for SEO-critical routes
  * UPDATED: Gracefully handles homepage timeout instead of failing entire build
+ * UPDATED: Dynamically generates FAQ routes from faqContent.ts source of truth
+ * UPDATED: Fixed path.join bug for routes starting with /
  * 
  * Chrome detection order:
  * 1. CHROME_PATH env var (set by @netlify/plugin-chromium)
@@ -11,11 +13,11 @@
  */
 
 const puppeteer = require('puppeteer-core');
-const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs');
+const http = require('http');
+const handler = require('serve-handler');
 
-// SEO-critical routes to pre-render (static pages)
 const prerenderRoutes = [
   // Homepage
   "/",
@@ -93,223 +95,143 @@ const prerenderRoutes = [
   "/faq",
 ];
 
-// FAQ detail pages (108 FAQs from faqContent.ts)
-const faqRoutes = [
-  // Getting Started with SmartFirm
-  "/faq/which-solution-right-for-accounting-firm",
-  "/faq/combine-marketing-workflow-automation",
-  "/faq/difference-smartfirm-vs-traditional-agencies",
-  "/faq/how-quickly-see-results",
-  "/faq/firms-of-all-sizes-minimum",
-  "/faq/how-to-get-started",
-  "/faq/pricing-structure",
-  "/faq/do-you-offer-guarantees",
-  // Industries We Serve
-  "/faq/why-industry-specialization-matters",
-  "/faq/firm-serves-multiple-industries",
-  "/faq/marketing-different-tax-bookkeeping-advisory",
-  "/faq/experience-with-specific-industry",
-  "/faq/switch-industries-add-specializations",
-  // Client Retention
-  "/faq/good-client-retention-rate-accounting-firm",
-  "/faq/common-reasons-accounting-firms-lose-clients",
-  "/faq/automation-help-client-retention",
-  "/faq/retention-strategies-seasonal-clients-tax",
-  "/faq/roi-client-retention-vs-acquisition",
-  "/faq/how-often-communicate-clients-retention",
-  "/faq/technology-role-modern-retention-strategies",
-  "/faq/measure-success-retention-efforts",
-  // Scaling Your Firm
-  "/faq/biggest-mistake-accounting-firms-scale",
-  "/faq/scale-firm-without-hiring-staff",
-  "/faq/when-accounting-firm-start-scaling",
-  "/faq/systems-needed-scale-successfully",
-  "/faq/what-are-growing-pains-firm",
-  "/faq/grow-firm-without-sacrificing-quality-burnout",
-  "/faq/difference-growth-vs-scaling",
-  "/faq/when-firm-ready-to-grow",
-  // Work Less, Earn More
-  "/faq/work-less-earn-more-cpa-possible",
-  "/faq/tasks-automated-accounting-firm",
-  "/faq/transition-value-based-pricing-hourly",
-  "/faq/automation-less-personal-clients",
-  // Competing with Tech-Savvy Firms
-  "/faq/technology-compete-tech-savvy-cpas",
-  "/faq/cost-modernize-accounting-firm-technology",
-  "/faq/existing-clients-care-new-technology",
-  "/faq/how-long-implement-modern-systems",
-  // Referrals & Reviews
-  "/faq/asking-referrals-uncomfortable-avoid",
-  "/faq/conversion-rate-referrals-vs-marketing",
-  "/faq/automated-referral-systems-without-pushy",
-  "/faq/how-long-build-referral-generation-system",
-  "/faq/review-system-timing",
-  "/faq/negative-review-response",
-  "/faq/review-requests-annoying",
-  "/faq/which-review-platforms",
-  // Protect Your Practice
-  "/faq/biggest-threats-accounting-firms-today",
-  "/faq/need-cybersecurity-small-firm",
-  "/faq/future-proof-practice-against-ai",
-  "/faq/business-continuity-plan-cpas",
-  // Tax Preparation Marketing
-  "/faq/generate-revenue-outside-tax-season",
-  "/faq/when-start-marketing-tax-season",
-  "/faq/compete-turbotax-diy-tax-software",
-  "/faq/marketing-strategies-attracting-tax-clients",
-  // Bookkeeping Services Marketing
-  "/faq/differentiate-bookkeeping-low-cost-competitors",
-  "/faq/attract-small-business-clients-bookkeeping",
-  "/faq/build-predictable-recurring-revenue-bookkeeping",
-  "/faq/focus-industry-niche-bookkeeping-practice",
-  // Business Advisory Marketing
-  "/faq/position-business-advisor-not-accountant",
-  "/faq/typical-pricing-business-advisory-services",
-  "/faq/how-long-establish-thought-leadership",
-  "/faq/content-attract-advisory-clients",
-  // Client Onboarding Automation
-  "/faq/implement-client-onboarding-automation",
-  "/faq/onboarding-automation-practice-management",
-  "/faq/customize-intake-forms-service-types",
-  "/faq/client-incomplete-onboarding",
-  "/faq/document-portal-security",
-  "/faq/onboarding-time-savings",
-  // Lead Follow-Up Automation
-  "/faq/automated-lead-response-time",
-  "/faq/lead-wants-real-person",
-  "/faq/customize-follow-up-messages",
-  "/faq/lead-unresponsive-sequence",
-  // SEO & Local Search
-  "/faq/seo-results-timeline",
-  "/faq/seo-vs-google-ads",
-  "/faq/blog-posts-seo-who-writes",
-  "/faq/seo-competitive-market",
-  // Website Design
-  "/faq/website-design-timeline",
-  "/faq/migrate-existing-content",
-  "/faq/website-aicpa-compliance",
-  "/faq/website-changes-after-launch",
-  // Content Marketing
-  "/faq/content-publishing-frequency",
-  "/faq/content-topics",
-  "/faq/content-planning-topics",
-  "/faq/content-marketing-lead-timeline",
-  // Email Marketing
-  "/faq/email-frequency",
-  "/faq/email-unsubscribe-complaints",
-  "/faq/email-list-segmentation",
-  "/faq/email-writing",
-  // Social Media Management
-  "/faq/social-platforms-managed",
-  "/faq/social-posting-frequency-content",
-  "/faq/social-content-creation",
-  "/faq/social-engagement-responses",
-  // Technology & Implementation
-  "/faq/technology-implementation-timeline",
-  "/faq/changing-existing-tools",
-  "/faq/team-technology-resistance",
-  "/faq/ongoing-technology-cost",
-  "/faq/business-optimization-timeline",
-  "/faq/major-changes-not-ready",
-  // Executive & Advisory Services
-  "/faq/difference-from-business-coach",
-  "/faq/executive-services-time-commitment",
-  "/faq/fractional-cio-services-included",
-  "/faq/try-executive-services-pilot",
-  // Add-On Services
-  "/faq/add-services-quickstart",
-  "/faq/add-on-pricing-options",
-  "/faq/add-on-contract-commitment",
-  // Tools & Calculators
-  "/faq/how-tools-help-accounting-firm-grow",
-  "/faq/assessments-really-free",
-  "/faq/how-long-assessments-take",
-  "/faq/what-happens-after-complete-assessment",
-];
+/**
+ * Dynamically extract all FAQ slugs from faqContent.ts
+ * This ensures prerendering stays in sync with the source of truth
+ */
+function extractFaqSlugsFromSource() {
+  const faqContentPath = path.resolve(__dirname, '../src/data/faqContent.ts');
+  
+  if (!fs.existsSync(faqContentPath)) {
+    console.error('[Prerender] ERROR: faqContent.ts not found at', faqContentPath);
+    process.exit(1);
+  }
+  
+  const content = fs.readFileSync(faqContentPath, 'utf-8');
+  
+  // Extract all slug values from the file using regex
+  // Matches: slug: "some-slug-value"
+  const slugRegex = /slug:\s*["']([^"']+)["']/g;
+  const slugs = [];
+  let match;
+  
+  while ((match = slugRegex.exec(content)) !== null) {
+    const slug = match[1];
+    // Filter out category slugs (they don't have hyphens typically or are short)
+    // FAQ slugs are longer and contain hyphens for questions
+    if (slug.includes('-') && slug.length > 10) {
+      slugs.push(slug);
+    }
+  }
+  
+  // Remove duplicates (in case any appear in multiple places)
+  const uniqueSlugs = [...new Set(slugs)];
+  
+  console.log(`[Prerender] Extracted ${uniqueSlugs.length} FAQ slugs from faqContent.ts`);
+  
+  return uniqueSlugs.map(slug => `/faq/${slug}`);
+}
 
+// Generate FAQ routes dynamically from source
+const faqRoutes = extractFaqSlugsFromSource();
 
 const distPath = path.resolve(__dirname, '../dist');
 
+/**
+ * Get environment variable, checking both with and without VITE_ prefix
+ */
 function getEnv(name) {
-  return process.env[name] || process.env[name.replace(/^VITE_/, '')];
+  return process.env[name] || process.env[`VITE_${name}`];
 }
 
+/**
+ * Fetch published blog post slugs from Supabase
+ */
 async function fetchPublishedBlogSlugs() {
-  const baseUrl = getEnv('VITE_SUPABASE_URL');
-  const anonKey =
-    getEnv('VITE_SUPABASE_ANON_KEY') ||
-    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
-    getEnv('SUPABASE_ANON_KEY');
+  const supabaseUrl = getEnv('SUPABASE_URL');
+  const supabaseKey = getEnv('SUPABASE_PUBLISHABLE_KEY');
 
-  if (!baseUrl || !anonKey) {
-    console.log('[Prerender] Blog slugs: missing env vars, skipping dynamic blog routes');
+  if (!supabaseUrl || !supabaseKey) {
+    console.log('[Prerender] Supabase credentials not found, skipping blog routes');
     return [];
   }
 
   try {
-    const url = new URL(`${baseUrl}/rest/v1/blog_posts`);
-    url.searchParams.set('select', 'slug');
-    url.searchParams.set('status', 'eq.published');
-    url.searchParams.set('publish_date', `lte.${new Date().toISOString()}`);
+    const today = new Date().toISOString().split('T')[0];
+    const response = await fetch(
+      `${supabaseUrl}/rest/v1/blog_posts?select=slug,publish_date&status=eq.published&publish_date=lte.${today}`,
+      {
+        headers: {
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+        },
+      }
+    );
 
-    const res = await fetch(url.toString(), {
-      headers: {
-        apikey: anonKey,
-        authorization: `Bearer ${anonKey}`,
-      },
-    });
-
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+    if (!response.ok) {
+      console.log('[Prerender] Failed to fetch blog posts:', response.status);
+      return [];
     }
 
-    const rows = await res.json();
-    return (Array.isArray(rows) ? rows : [])
-      .map((r) => (r && r.slug ? String(r.slug) : ''))
-      .filter(Boolean);
-  } catch (e) {
-    console.log(`[Prerender] Blog slugs: failed to fetch, skipping dynamic blog routes (${e.message || e})`);
+    const posts = await response.json();
+    console.log(`[Prerender] Found ${posts.length} published blog posts`);
+    return posts.map((post) => `/blog/${post.slug}`);
+  } catch (err) {
+    console.log('[Prerender] Error fetching blog posts:', err.message);
     return [];
   }
 }
 
+/**
+ * Fetch blog tag slugs from Supabase
+ */
 async function fetchBlogTagSlugs() {
-  const baseUrl = getEnv('VITE_SUPABASE_URL');
-  const anonKey =
-    getEnv('VITE_SUPABASE_ANON_KEY') ||
-    getEnv('VITE_SUPABASE_PUBLISHABLE_KEY') ||
-    getEnv('SUPABASE_ANON_KEY');
+  const supabaseUrl = getEnv('SUPABASE_URL');
+  const supabaseKey = getEnv('SUPABASE_PUBLISHABLE_KEY');
 
-  if (!baseUrl || !anonKey) {
-    console.log('[Prerender] Blog tags: missing env vars, skipping tag routes');
+  if (!supabaseUrl || !supabaseKey) {
+    console.log('[Prerender] Supabase credentials not found, skipping tag routes');
     return [];
   }
 
   try {
-    const url = new URL(`${baseUrl}/rest/v1/blog_tags`);
-    url.searchParams.set('select', 'slug');
-
-    const res = await fetch(url.toString(), {
+    const response = await fetch(`${supabaseUrl}/rest/v1/blog_tags?select=slug`, {
       headers: {
-        apikey: anonKey,
-        authorization: `Bearer ${anonKey}`,
+        apikey: supabaseKey,
+        Authorization: `Bearer ${supabaseKey}`,
       },
     });
 
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+    if (!response.ok) {
+      console.log('[Prerender] Failed to fetch blog tags:', response.status);
+      return [];
     }
 
-    const rows = await res.json();
-    return (Array.isArray(rows) ? rows : [])
-      .map((r) => (r && r.slug ? String(r.slug) : ''))
-      .filter(Boolean);
-  } catch (e) {
-    console.log(`[Prerender] Blog tags: failed to fetch, skipping tag routes (${e.message || e})`);
+    const tags = await response.json();
+    console.log(`[Prerender] Found ${tags.length} blog tags`);
+    return tags.map((tag) => `/blog/tag/${tag.slug}`);
+  } catch (err) {
+    console.log('[Prerender] Error fetching blog tags:', err.message);
     return [];
   }
 }
 
+/**
+ * Convert a route to a relative path safe for path.join
+ * Fixes the bug where routes starting with / are treated as absolute paths
+ */
+function routeToRelativePath(route) {
+  if (route === '/') {
+    return '';
+  }
+  // Remove leading slash to prevent path.join from treating it as absolute
+  return route.replace(/^\/+/, '');
+}
+
+/**
+ * Create SPA fallback pages for routes that might not get prerendered
+ * This ensures the routes work even if prerendering fails
+ */
 function ensureSpaFallbackPages(routes) {
   const sourceIndexPath = path.join(distPath, 'index.html');
   if (!fs.existsSync(sourceIndexPath)) return;
@@ -317,8 +239,10 @@ function ensureSpaFallbackPages(routes) {
   const indexHtml = fs.readFileSync(sourceIndexPath, 'utf-8');
 
   for (const route of routes) {
-    const outputPath =
-      route === '/' ? path.join(distPath, 'index.html') : path.join(distPath, route, 'index.html');
+    const relativePath = routeToRelativePath(route);
+    const outputPath = relativePath === '' 
+      ? path.join(distPath, 'index.html') 
+      : path.join(distPath, relativePath, 'index.html');
 
     const outputDir = path.dirname(outputPath);
     if (!fs.existsSync(outputDir)) {
@@ -333,61 +257,89 @@ function ensureSpaFallbackPages(routes) {
   }
 }
 
-// Try to find Chrome executable
+/**
+ * Find Chrome executable path
+ */
 function findChrome() {
-  // 1. Check CHROME_PATH from Netlify plugin
+  // Check environment variable first (set by @netlify/plugin-chromium)
   if (process.env.CHROME_PATH && fs.existsSync(process.env.CHROME_PATH)) {
     return process.env.CHROME_PATH;
   }
 
-  // 2. Check common Netlify/CI locations
-  const commonPaths = [
-    '/opt/chromium/chrome',
-    '/usr/bin/chromium-browser',
-    '/usr/bin/chromium',
-    '/usr/bin/google-chrome',
-    '/usr/bin/google-chrome-stable',
+  // Check common Netlify/CI Chrome locations
+  const netlifyPaths = [
+    '/opt/buildhome/.chromium-for-rendering/chrome',
+    '/opt/buildhome/.cache/puppeteer/chrome/linux-*/chrome-linux*/chrome',
+    '/opt/build/repo/node_modules/chromium/lib/chromium/chrome-linux/chrome',
   ];
 
-  for (const chromePath of commonPaths) {
+  for (const chromePath of netlifyPaths) {
+    if (chromePath.includes('*')) {
+      // Handle glob patterns
+      const dir = path.dirname(chromePath.split('*')[0]);
+      if (fs.existsSync(dir)) {
+        const entries = fs.readdirSync(dir);
+        for (const entry of entries) {
+          const fullPath = path.join(dir, entry);
+          if (fs.statSync(fullPath).isDirectory()) {
+            const subEntries = fs.readdirSync(fullPath);
+            for (const subEntry of subEntries) {
+              if (subEntry.startsWith('chrome-linux')) {
+                const chromeBin = path.join(fullPath, subEntry, 'chrome');
+                if (fs.existsSync(chromeBin)) {
+                  return chromeBin;
+                }
+              }
+            }
+          }
+        }
+      }
+    } else if (fs.existsSync(chromePath)) {
+      return chromePath;
+    }
+  }
+
+  // Check common local Chrome locations
+  const localPaths = [
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser',
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+    'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+  ];
+
+  for (const chromePath of localPaths) {
     if (fs.existsSync(chromePath)) {
       return chromePath;
     }
   }
 
-  // 3. Try which command
-  try {
-    const chromePath = execSync('which chromium-browser || which chromium || which google-chrome', { encoding: 'utf-8' }).trim();
-    if (chromePath && fs.existsSync(chromePath)) {
-      return chromePath;
-    }
-  } catch (e) {
-    // which command failed
-  }
-
   return null;
 }
 
+/**
+ * Main prerender function
+ */
 async function prerender() {
-  console.log('[Prerender] Starting prerender process...');
+  console.log('[Prerender] Starting prerendering process...');
+  console.log(`[Prerender] Static routes: ${prerenderRoutes.length}`);
+  console.log(`[Prerender] FAQ routes: ${faqRoutes.length}`);
 
-  // Fetch published blog slugs dynamically
-  const blogSlugs = await fetchPublishedBlogSlugs();
-  const blogRoutes = ['/blog', ...blogSlugs.map((s) => `/blog/${s}`)];
+  // Fetch dynamic routes from Supabase
+  const blogRoutes = await fetchPublishedBlogSlugs();
+  const tagRoutes = await fetchBlogTagSlugs();
 
-  // Fetch blog tag slugs dynamically
-  const tagSlugs = await fetchBlogTagSlugs();
-  const tagRoutes = tagSlugs.map((s) => `/blog/tags/${s}`);
-
-  // Combine static routes with dynamic blog/tag routes and static FAQ routes
+  // Combine all routes
   const allRoutes = [...prerenderRoutes, ...faqRoutes, ...blogRoutes, ...tagRoutes];
+  console.log(`[Prerender] Total routes to prerender: ${allRoutes.length}`);
 
-  // Ensure SPA fallback pages exist for all routes (prevents 404 on static hosts)
+  // Create SPA fallback pages first
   ensureSpaFallbackPages(allRoutes);
 
   // Find Chrome executable
   const executablePath = findChrome();
-
   if (!executablePath) {
     throw new Error('[Prerender] No Chrome executable found. Install @netlify/plugin-chromium via Netlify UI or ensure Chrome is available.');
   }
@@ -400,21 +352,17 @@ async function prerender() {
     args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-web-security'],
   });
 
-  console.log(`[Prerender] Starting prerender for ${allRoutes.length} routes (${prerenderRoutes.length} static + ${faqRoutes.length} FAQ + ${blogRoutes.length} blog + ${tagRoutes.length} tags)...`);
-
-  // Start a simple static server for the dist folder
-  const { createServer } = require('http');
-  const handler = require('serve-handler');
-
-  const server = createServer((req, res) => {
+  // Start local server to serve the built files
+  const server = http.createServer((req, res) => {
     return handler(req, res, {
       public: distPath,
-      rewrites: [{ source: '**', destination: '/index.html' }],
+      cleanUrls: true,
+      trailingSlash: true,
     });
   });
 
-  await new Promise(resolve => server.listen(3000, resolve));
-  console.log('[Prerender] Dev server started on port 3000');
+  await new Promise((resolve) => server.listen(3000, resolve));
+  console.log('[Prerender] Local server started on port 3000');
 
   let successCount = 0;
   let errorCount = 0;
@@ -460,10 +408,11 @@ async function prerender() {
       // Get the rendered HTML
       const html = await page.content();
 
-      // Determine output path - writes to dist/<route>/index.html
-      const outputPath = route === '/'
+      // Determine output path - use relative path to fix the bug
+      const relativePath = routeToRelativePath(route);
+      const outputPath = relativePath === ''
         ? path.join(distPath, 'index.html')
-        : path.join(distPath, route, 'index.html');
+        : path.join(distPath, relativePath, 'index.html');
 
       // Ensure directory exists
       const outputDir = path.dirname(outputPath);
@@ -490,24 +439,25 @@ async function prerender() {
     }
   }
 
-  server.close();
+  // Cleanup
   await browser.close();
+  server.close();
 
-  console.log(`[Prerender] Complete: ${successCount} succeeded, ${skippedCount} skipped, ${errorCount} failed`);
+  console.log(`\n[Prerender] Summary:`);
+  console.log(`  ✓ Successful: ${successCount}`);
+  console.log(`  ⚠ Skipped: ${skippedCount}`);
+  console.log(`  ✗ Failed: ${errorCount}`);
 
-  if (skippedCount > 0) {
-    console.log(`[Prerender] Note: Skipped routes will render client-side (normal for React SPAs)`);
-  }
-
-  // Only fail build if non-homepage routes failed to prerender
+  // Only fail the build if non-homepage routes failed
   if (errorCount > 0) {
     throw new Error(`[Prerender] ${errorCount} routes failed to prerender`);
   }
+
+  console.log('[Prerender] Prerendering complete!');
 }
 
-// FAIL THE BUILD only if critical routes fail (not homepage timeout)
-prerender().catch(err => {
+// Run the prerender function
+prerender().catch((err) => {
   console.error('[Prerender] Fatal error:', err.message);
   process.exit(1);
 });
-
