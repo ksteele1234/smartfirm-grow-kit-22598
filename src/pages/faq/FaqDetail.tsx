@@ -59,10 +59,10 @@ const FaqDetail = () => {
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
-          { name: "Home", url: "/" },
-          { name: "FAQ", url: "/faq/" },
-          { name: category.category, url: `/faq/#${category.slug}` },
-          { name: faq.question.slice(0, 50), url: `/faq/${slug}/` }
+          { name: "Home", url: "https://smartfirm.io/" },
+          { name: "FAQ", url: "https://smartfirm.io/faq/" },
+          { name: category.category, url: `https://smartfirm.io/faq/#${category.slug}` },
+          { name: faq.question.slice(0, 50), url: `https://smartfirm.io/faq/${slug}/` }
         ]}
       />
 

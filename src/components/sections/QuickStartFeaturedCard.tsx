@@ -91,7 +91,7 @@ const QuickStartFeaturedCard = () => {
           asChild
           className="w-full bg-gradient-coral hover:bg-gradient-animated text-white text-lg font-bold py-4 px-8 rounded-card glow-coral hover-lift"
         >
-          <Link to="/quick-start-marketing-for-cpa-firms/">
+          <Link to="/quick-start/">
             Learn About the QuickStart Package
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

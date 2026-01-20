@@ -277,7 +277,7 @@ export const solutionPages: Record<string, SolutionPageData> = {
     title: 'Client Retention Strategies | SmartFirm',
     slug: 'client-retention-strategies-for-cpas',
     metaDescription: 'Strengthen client relationships with predictive analytics and intelligent automation for accounting firms.',
-    canonicalUrl: 'https://smartfirm.io/solutions/client-retention-strategies-for-cpas/',
+    canonicalUrl: 'https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas/',
     heroTitle: 'AI-Powered Client Retention Strategies',
     heroSubtitle: 'Losing even 5 clients per year costs $50K+ in recurring revenue and referrals. Client retention strategies for CPAs keep clients engaged through proactive communication, satisfaction tracking, and automated touchpoints that maximize lifetime value.',
     problemStatement: 'Accounting firms are losing clients to competitors who leverage AI-powered communication, predictive client management, and proactive service automation. Without intelligent retention strategies, you\'re constantly replacing lost clients instead of growing your practice.',
