@@ -112,22 +112,56 @@ function extractFaqSlugsFromSource() {
   // Extract all slug values from the file using regex
   // Matches: slug: "some-slug-value"
   const slugRegex = /slug:\s*["']([^"']+)["']/g;
-  const slugs = [];
+  const allSlugs = [];
+  const filteredOut = [];
   let match;
+  
+  // Known category slugs to exclude (these are not individual FAQ pages)
+  const categorySlugs = new Set([
+    'getting-started',
+    'industries', 
+    'client-retention',
+    'scale-firm',
+    'work-less-earn-more',
+    'stop-losing-clients-tech-savvy',
+    'referrals',
+    'online-visibility',
+    'marketing-automation',
+    'technology',
+    'workflow-automation',
+    'ai-transformation',
+    'pricing-budgeting',
+    'advisory-services'
+  ]);
   
   while ((match = slugRegex.exec(content)) !== null) {
     const slug = match[1];
-    // Filter out category slugs (they don't have hyphens typically or are short)
-    // FAQ slugs are longer and contain hyphens for questions
-    if (slug.includes('-') && slug.length > 10) {
-      slugs.push(slug);
+    
+    // Skip known category slugs
+    if (categorySlugs.has(slug)) {
+      filteredOut.push({ slug, reason: 'category slug' });
+      continue;
+    }
+    
+    // All remaining slugs with hyphens are FAQ question slugs
+    if (slug.includes('-')) {
+      allSlugs.push(slug);
+    } else {
+      filteredOut.push({ slug, reason: 'no hyphen (likely not a question slug)' });
     }
   }
   
   // Remove duplicates (in case any appear in multiple places)
-  const uniqueSlugs = [...new Set(slugs)];
+  const uniqueSlugs = [...new Set(allSlugs)];
   
+  // Log extracted vs filtered for debugging
   console.log(`[Prerender] Extracted ${uniqueSlugs.length} FAQ slugs from faqContent.ts`);
+  if (filteredOut.length > 0) {
+    console.log(`[Prerender] Filtered out ${filteredOut.length} slugs:`);
+    filteredOut.forEach(({ slug, reason }) => {
+      console.log(`  - "${slug}" (${reason})`);
+    });
+  }
   
   return uniqueSlugs.map(slug => `/faq/${slug}`);
 }
