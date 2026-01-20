@@ -22,7 +22,7 @@ const staticRoutes = [
   { path: '/about/', changefreq: 'monthly', priority: 0.7 },
   { path: '/contact/', changefreq: 'monthly', priority: 0.8 },
   { path: '/get-started/', changefreq: 'weekly', priority: 0.9 },
-  { path: '/quick-start/', changefreq: 'weekly', priority: 0.8 },
+  // REMOVED: /quick-start/ - deprecated page shows 404 with noindex
 
   // Solution Pages
   { path: '/solutions/scale-accounting-firm-successfully/', changefreq: 'weekly', priority: 0.8 },
