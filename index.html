@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Block staging/preview sites from indexing - MUST be first -->
-  <!-- Staging protection is now handled via Netlify headers in netlify.toml -->
+  <!-- 
+    IMPORTANT: All SEO meta tags (title, description, og:*, twitter:*, canonical) 
+    are managed by React Helmet in SEO.tsx. Do NOT add them here or you'll get duplicates.
+  -->
 
   <!-- Favicons -->
   <link rel="icon" type="image/webp" href="/favicon.webp">
@@ -20,20 +22,6 @@
                    /assets/hero-wave-background-tablet.webp 1024w,
                    /assets/hero-wave-background-desktop.webp 1920w" imagesizes="100vw" fetchpriority="high"
     type="image/webp">
-
-  <title>SmartFirm | Automation & AI for Accounting Firms</title>
-  <meta name="description"
-    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-  <meta name="author" content="SmartFirm.io" />
-
-  <!-- Enhanced SEO Meta Tags -->
-  <meta name="keywords"
-    content="accounting firm marketing, CPA marketing automation, AI marketing for accountants, accounting lead generation, automated marketing for CPAs, accounting firm growth, CPA client acquisition, bookkeeper marketing">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-
-  <meta name="language" content="en-US">
-  <meta name="geo.region" content="US">
-  <meta name="geo.placename" content="United States">
 
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -412,41 +400,6 @@
 
   <!-- Ahrefs Analytics -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="HfXP1KYpFY74ClFZicij2A" async></script>
-
-  <!-- Note: GTM and Meta Pixel are deferred - loaded 3s after page load for better performance -->
-
-  <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="SmartFirm" />
-  <meta property="og:title" content="SmartFirm | Automation & AI for Accounting Firms" />
-  <meta property="og:description"
-    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-  <meta property="og:url" content="https://smartfirm.io/" />
-  <meta property="og:image" content="https://smartfirm.io/assets/og-default.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SmartFirm | Automation & AI for Accounting Firms" />
-  <meta name="twitter:description"
-    content="SmartFirm helps accounting, bookkeeping, and tax firms automate marketing and operations with AI. Get faster client intake, better follow-up, and measurable growth." />
-  <meta name="twitter:image" content="https://smartfirm.io/assets/og-default.png" />
-  <meta name="twitter:image:alt" content="SmartFirm AI Marketing Dashboard for Accounting Firms" />
-
-  <!-- Optional LLM/AEO Descriptors -->
-  <meta name="ai:purpose"
-    content="SmartFirm provides comprehensive AI-powered marketing automation solutions specifically designed for accounting firms, CPAs, and bookkeepers">
-  <meta name="ai:target_audience"
-    content="Accounting professionals, CPAs, tax preparers, bookkeepers, accounting firm owners, solo practitioners">
-  <meta name="ai:key_benefits"
-    content="24/7 lead capture, automated client follow-up, review management, social media automation, AI chatbots, voice AI phone system, sales funnel automation">
-  <meta name="ai:pricing_model"
-    content="Monthly subscription plans starting at $999/month with $12,500 setup fee, done-for-you service model">
-  <meta name="ai:industry" content="Accounting services, CPA firms, tax preparation, bookkeeping, financial services">
-  <meta name="ai:service_type" content="Marketing automation platform, lead generation system, CRM for accountants">
 </head>
 
 <body>
