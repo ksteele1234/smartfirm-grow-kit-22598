@@ -71,65 +71,59 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions/   301
 /solutions/i-need-better-client-retention  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
 /solutions/retention-strategies-advanced-retention-strategies-for-cpas  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
 /solutions/retention-strategies  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
-/solutions/keep-accounting-clients-from-leaving  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
-/solutions/how-to-retain-cpa-clients  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
-/solutions/stop-losing-clients-to-tech-savvy-cpas-modern-accounting-firm-services  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
-/solutions/compete-with-tech-savvy-cpas  /solutions/stop-losing-clients-to-tech-savvy-cpas/  301
-/solutions/get-more-referrals-without-asking-automated-client-referral-system-for-cpas  /solutions/get-more-referrals-without-asking/  301
-/solutions/increase-referrals  /solutions/get-more-referrals-without-asking/  301
-/solutions/work-less-earn-more-increase-accounting-firm-revenue  /solutions/work-less-earn-more/  301
+/solutions/work-less-earn-more-strategies-for-cpas  /solutions/work-less-earn-more/  301
+/solutions/work-less-earn-more-business-optimization-for-cpas  /solutions/work-less-earn-more/  301
+/solutions/referral-strategies-for-cpa-growth  /solutions/get-more-referrals-without-asking/  301
+/solutions/referral-generation-automated-referral-strategies-for-cpas  /solutions/get-more-referrals-without-asking/  301
+/solutions/referral-generation  /solutions/get-more-referrals-without-asking/  301
 
 # Industry page redirects
-/industries/marketing-for-bookkeeping-firms  /industries/bookkeeping-services-marketing-automation/  301
-/industries/marketing-for-audit-firms  /industries/audit-assurance-marketing-agency/  301
-/industries/marketing-for-business-advisors  /industries/business-advisory-marketing-services/  301
+/industries/tax-preparation-marketing  /industries/tax-preparation-marketing-solutions/  301
 /industries/tax-preparation  /industries/tax-preparation-marketing-solutions/  301
+/industries/marketing-for-tax-preparation-firms  /industries/tax-preparation-marketing-solutions/  301
+/industries/bookkeeping-services-marketing  /industries/bookkeeping-services-marketing-automation/  301
 /industries/bookkeeping-services  /industries/bookkeeping-services-marketing-automation/  301
+/industries/marketing-for-bookkeeping-firms  /industries/bookkeeping-services-marketing-automation/  301
+/industries/business-advisory-marketing  /industries/business-advisory-marketing-services/  301
 /industries/business-advisory  /industries/business-advisory-marketing-services/  301
+/industries/marketing-for-cfo-advisory-firms  /industries/business-advisory-marketing-services/  301
+/industries/audit-assurance-marketing  /industries/audit-assurance-marketing-agency/  301
 /industries/audit-assurance  /industries/audit-assurance-marketing-agency/  301
+/industries/marketing-for-audit-and-assurance-firms  /industries/audit-assurance-marketing-agency/  301
 
 # Service page redirects
-/services/marketing-automation-marketing-automation-for-accounting-firms  /services/marketing-automation-for-accounting-firms/  301
 /services/marketing-automation  /services/marketing-automation-for-accounting-firms/  301
-/services/technology-solutions-accounting-firm-technology-consulting  /services/accounting-firm-technology-consulting/  301
-/services/technology-solutions  /services/accounting-firm-technology-consulting/  301
-/services/business-optimization-business-optimization-for-accounting-firms  /services/business-optimization-for-accounting-firms/  301
+/services/technology-consulting  /services/accounting-firm-technology-consulting/  301
 /services/business-optimization  /services/business-optimization-for-accounting-firms/  301
-/services/executive-services-fractional-cio-for-accounting-firms  /services/fractional-cio-for-accounting-firms/  301
-/services/executive-services  /services/fractional-cio-for-accounting-firms/  301
-/services/strategy-integration  /services/marketing-strategy-integration-for-accounting-firms/  301
-/services/automated-lead-follow-up-automated-lead-follow-up-for-cpas  /services/automated-lead-follow-up-for-cpas/  301
+/services/fractional-cio  /services/fractional-cio-for-accounting-firms/  301
 /services/automated-lead-follow-up  /services/automated-lead-follow-up-for-cpas/  301
-/services/client-review-generation-automated-review-generation-for-cpas  /services/automated-review-generation-for-cpas/  301
-/services/client-review-generation  /services/automated-review-generation-for-cpas/  301
-/services/seo-for-accountants-seo-for-accounting-firms  /services/seo-for-accounting-firms/  301
-/services/seo-for-accountants  /services/seo-for-accounting-firms/  301
-/services/social-media-management-social-media-management-for-cpas  /services/social-media-management-for-cpas/  301
-/services/social-media-management  /services/social-media-management-for-cpas/  301
-/services/email-marketing-email-marketing-for-cpas  /services/email-marketing-for-cpas/  301
+/services/review-generation  /services/automated-review-generation-for-cpas/  301
+/services/seo  /services/seo-for-accounting-firms/  301
+/services/social-media  /services/social-media-management-for-cpas/  301
 /services/email-marketing  /services/email-marketing-for-cpas/  301
-/services/website-design-professional-website-design-for-accounting-firms  /services/professional-website-design-for-accounting-firms/  301
 /services/website-design  /services/professional-website-design-for-accounting-firms/  301
-/services/content-marketing-strategic-content-marketing-for-cpas  /services/strategic-content-marketing-for-cpas/  301
 /services/content-marketing  /services/strategic-content-marketing-for-cpas/  301
-/services/online-reputation-management-reputation-management-for-cpas  /services/reputation-management-for-cpas/  301
-/services/online-reputation-management  /services/reputation-management-for-cpas/  301
-/services/ai-chatbot  /services/add-ons/  301
-/services/meta-linkedin-ads-management  /services/add-ons/  301
-/services/ai-listing-manager  /services/add-ons/  301
-/quick-start-checkout  /get-started/  301
-/quick-start-thank-you  /get-started/  301
+/services/reputation-management  /services/reputation-management-for-cpas/  301
+/services/marketing-strategy  /services/marketing-strategy-integration-for-accounting-firms/  301
 
 # Tool page redirects
 /tools/efficiency-quiz-accounting-firm-efficiency-assessment  /tools/efficiency-quiz/  301
-/tools/marketing-scorecard-marketing-assessment-for-accountants  /tools/marketing-scorecard/  301
-/tools/automation-readiness-quiz-automation-readiness-assessment-for-accountants  /tools/automation-readiness-quiz/  301
-/tools/workflow-bottleneck-finder-accounting-firm-workflow-audit  /tools/workflow-bottleneck-finder/  301
+/tools/marketing-scorecard-cpa-marketing-assessment  /tools/marketing-scorecard/  301
+/tools/roi-calculator-marketing-roi-calculator-for-cpas  /tools/roi-calculator/  301
+/tools/automation-readiness-quiz-accounting-firm-automation-assessment  /tools/automation-readiness-quiz/  301
+/tools/workflow-bottleneck-finder-accounting-firm-workflow-assessment  /tools/workflow-bottleneck-finder/  301
+/tools/client-lifetime-value-calculator-accounting-client-ltv-calculator  /tools/client-lifetime-value-calculator/  301
+/tools/lead-generation-scorecard-accounting-firm-lead-gen-assessment  /tools/lead-generation-scorecard/  301
 /tools/tech-stack-roi-calculator-accounting-firm-technology-roi  /tools/tech-stack-roi-calculator/  301
 /tools/modern-firm-quiz-modern-accounting-firm-assessment  /tools/modern-firm-quiz/  301
 /tools/growth-potential-scorecard-accounting-firm-growth-scorecard  /tools/growth-potential-scorecard/  301
 /tools/seo-audit-advanced-seo-assessment-for-cpas  /tools/seo-audit/  301
 /tools/page-grader-website-page-audit-for-accountants  /tools/page-grader/  301
+
+# Trailing slash enforcement for blog and FAQ routes
+# Ensures crawlers consistently hit canonical URLs
+/blog/:slug  /blog/:slug/  301
+/faq/:slug   /faq/:slug/   301
 
 # Trailing slash consistency: Netlify Pretty URLs adds slashes, so all destinations now include them
 

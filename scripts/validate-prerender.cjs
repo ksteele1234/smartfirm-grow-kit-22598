@@ -3,12 +3,15 @@
  * Post-prerender validation script
  * Scans all generated HTML files and fails the build if any non-homepage page
  * has the homepage's canonical URL or title
+ * 
+ * UPDATED: Added specific FAQ page validation to ensure all FAQs are prerendered correctly
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const distPath = path.resolve(__dirname, '../dist');
+const faqContentPath = path.resolve(__dirname, '../src/data/faqContent.ts');
 const homepageTitle = 'SmartFirm | Automation & AI for Accounting Firms';
 const homepageCanonical = 'https://smartfirm.io/';
 const homepageCanonicalAlt = 'https://smartfirm.io';
@@ -24,11 +27,39 @@ function extractMetadata(html) {
   };
 }
 
+/**
+ * Extract FAQ slugs from faqContent.ts to validate all are prerendered
+ */
+function extractExpectedFaqSlugs() {
+  if (!fs.existsSync(faqContentPath)) {
+    console.log('[Validate] Warning: faqContent.ts not found, skipping FAQ-specific validation');
+    return [];
+  }
+  
+  const content = fs.readFileSync(faqContentPath, 'utf-8');
+  const slugRegex = /slug:\s*["']([^"']+)["']/g;
+  const slugs = [];
+  let match;
+  
+  while ((match = slugRegex.exec(content)) !== null) {
+    const slug = match[1];
+    // Filter out category slugs (FAQ slugs are longer and contain hyphens)
+    if (slug.includes('-') && slug.length > 10) {
+      slugs.push(slug);
+    }
+  }
+  
+  return [...new Set(slugs)];
+}
+
 function validatePrerenders() {
   const errors = [];
   const warnings = [];
   let totalPages = 0;
   let validPages = 0;
+  
+  // Track found FAQ pages for validation
+  const foundFaqSlugs = new Set();
   
   // Recursively find all index.html files
   function walkDir(dir) {
@@ -49,6 +80,12 @@ function validatePrerenders() {
         const route = relativePath === '' ? '/' : `/${relativePath}`;
         
         totalPages++;
+        
+        // Track FAQ pages
+        if (route.startsWith('/faq/') && route !== '/faq') {
+          const slug = route.replace('/faq/', '').replace(/\/$/, '');
+          foundFaqSlugs.add(slug);
+        }
         
         // Skip homepage
         if (route === '/') {
@@ -91,6 +128,24 @@ function validatePrerenders() {
   
   console.log('[Validate] Starting prerender validation...');
   walkDir(distPath);
+  
+  // Validate FAQ coverage
+  const expectedFaqSlugs = extractExpectedFaqSlugs();
+  const missingFaqSlugs = expectedFaqSlugs.filter(slug => !foundFaqSlugs.has(slug));
+  
+  if (expectedFaqSlugs.length > 0) {
+    console.log(`\n[Validate] FAQ Coverage: ${foundFaqSlugs.size}/${expectedFaqSlugs.length} FAQs prerendered`);
+    
+    if (missingFaqSlugs.length > 0) {
+      console.log(`[Validate] ⚠ Missing ${missingFaqSlugs.length} FAQ pages:`);
+      missingFaqSlugs.slice(0, 10).forEach(slug => console.log(`  - /faq/${slug}`));
+      if (missingFaqSlugs.length > 10) {
+        console.log(`  ... and ${missingFaqSlugs.length - 10} more`);
+      }
+      // Add as warnings, not errors (they will still work via SPA fallback)
+      missingFaqSlugs.forEach(slug => warnings.push(`/faq/${slug}: Not prerendered (will use SPA fallback)`));
+    }
+  }
   
   // Report warnings (non-blocking)
   if (warnings.length > 0) {
