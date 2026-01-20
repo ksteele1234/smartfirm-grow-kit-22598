@@ -168,7 +168,8 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-started" element={<GetStarted />} />
-            <Route path="/quick-start-marketing-for-cpa-firms" element={<QuickStart />} />
+            <Route path="/quick-start-marketing-for-cpa-firms" element={<Navigate to="/quick-start/" replace />} />
+            <Route path="/quick-start" element={<QuickStart />} />
 
             {/* Solution Sub-pages */}
             <Route path="/solutions/scale-accounting-firm-successfully" element={<ScaleFirm />} />
