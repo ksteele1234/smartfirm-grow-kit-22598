@@ -427,27 +427,44 @@ async function prerender() {
       // Wait for React to render
       await page.waitForSelector('#root', { timeout: 10000 });
 
-      // Wait for correct canonical URL to be present (ensures react-helmet has rendered)
+      // Wait for correct canonical URL AND title to be present (ensures react-helmet has rendered)
       // This is critical for SEO - we must have correct metadata before capturing HTML
+      // FAIL FAST: If metadata is wrong, throw an error instead of capturing bad HTML
+      const HOMEPAGE_TITLE = 'Accounting Firm Automation & Growth Systems | SmartFirm';
+      
       if (route !== '/') {
         const expectedCanonical = `https://smartfirm.io${route}`;
         const expectedCanonicalWithSlash = `https://smartfirm.io${route}/`;
         
         try {
           await page.waitForFunction(
-            (expected, expectedSlash) => {
+            (expected, expectedSlash, homepageTitle) => {
               const canonical = document.querySelector('link[rel="canonical"]');
+              const title = document.title;
+              
+              // Must have correct canonical
               if (!canonical) return false;
               const href = canonical.getAttribute('href');
-              return href === expected || href === expectedSlash;
+              const hasCorrectCanonical = href === expected || href === expectedSlash;
+              
+              // Must NOT have homepage title (ensures page-specific title rendered)
+              const hasUniqueTitle = title && title !== homepageTitle && title.trim() !== '';
+              
+              return hasCorrectCanonical && hasUniqueTitle;
             },
             { timeout: 15000 },
             expectedCanonical,
-            expectedCanonicalWithSlash
+            expectedCanonicalWithSlash,
+            HOMEPAGE_TITLE
           );
-        } catch (canonicalErr) {
-          // Log warning but continue - the validation script will catch any issues
-          console.log(`[Prerender] ⚠ ${route}: Canonical URL may not be correct`);
+        } catch (metadataErr) {
+          // FAIL the prerender for this route - don't capture wrong metadata
+          const actualTitle = await page.title();
+          const actualCanonical = await page.$eval('link[rel="canonical"]', el => el.getAttribute('href')).catch(() => 'not found');
+          console.error(`[Prerender] ❌ ${route}: Metadata not rendered correctly`);
+          console.error(`[Prerender]   → Title: "${actualTitle}" (expected: NOT "${HOMEPAGE_TITLE}")`);
+          console.error(`[Prerender]   → Canonical: "${actualCanonical}" (expected: "${expectedCanonicalWithSlash}")`);
+          throw new Error(`Metadata timeout for ${route}: Title or canonical is incorrect`);
         }
       }
 

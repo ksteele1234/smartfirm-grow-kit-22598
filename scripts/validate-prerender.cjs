@@ -12,9 +12,38 @@ const path = require('path');
 
 const distPath = path.resolve(__dirname, '../dist');
 const faqContentPath = path.resolve(__dirname, '../src/data/faqContent.ts');
-const homepageTitle = 'SmartFirm | Automation & AI for Accounting Firms';
+const homepageTitle = 'Accounting Firm Automation & Growth Systems | SmartFirm';
 const homepageCanonical = 'https://smartfirm.io/';
 const homepageCanonicalAlt = 'https://smartfirm.io';
+
+/**
+ * Validate that all sitemap URLs end with trailing slashes
+ */
+function validateSitemapTrailingSlashes() {
+  const sitemapPath = path.resolve(__dirname, '../dist/sitemap.xml');
+  if (!fs.existsSync(sitemapPath)) {
+    console.log('[Validate] Warning: sitemap.xml not found, skipping sitemap validation');
+    return [];
+  }
+  
+  const content = fs.readFileSync(sitemapPath, 'utf-8');
+  const urlRegex = /<loc>([^<]+)<\/loc>/g;
+  const errors = [];
+  let match;
+  
+  while ((match = urlRegex.exec(content)) !== null) {
+    const url = match[1];
+    // Skip homepage which is just https://smartfirm.io/
+    if (url === 'https://smartfirm.io/' || url === 'https://smartfirm.io') continue;
+    
+    // All other URLs must end with /
+    if (!url.endsWith('/')) {
+      errors.push(`Sitemap URL missing trailing slash: ${url}`);
+    }
+  }
+  
+  return errors;
+}
 
 function extractMetadata(html) {
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
@@ -156,16 +185,28 @@ function validatePrerenders() {
     }
   }
   
+  // Validate sitemap trailing slashes
+  const sitemapErrors = validateSitemapTrailingSlashes();
+  if (sitemapErrors.length > 0) {
+    console.error(`\n[Validate] ❌ Sitemap has ${sitemapErrors.length} URLs without trailing slashes:`);
+    sitemapErrors.slice(0, 10).forEach(e => console.error(`  - ${e}`));
+    if (sitemapErrors.length > 10) {
+      console.error(`  ... and ${sitemapErrors.length - 10} more`);
+    }
+    errors.push(...sitemapErrors);
+  } else {
+    console.log('[Validate] ✓ All sitemap URLs have trailing slashes');
+  }
+  
   // Report errors (blocking)
   if (errors.length > 0) {
-    console.error(`\n[Validate] ❌ Found ${errors.length} pages with incorrect metadata:`);
+    console.error(`\n[Validate] ❌ Found ${errors.length} total errors:`);
     errors.slice(0, 20).forEach(e => console.error(`  - ${e}`));
     if (errors.length > 20) {
       console.error(`  ... and ${errors.length - 20} more errors`);
     }
-    console.error(`\n[Validate] BUILD FAILED: ${errors.length} pages have homepage metadata`);
-    console.error('[Validate] This means the SEO component is not receiving correct props during prerendering.');
-    console.error('[Validate] Check that react-helmet is rendering metadata in the initial render, not via useEffect.');
+    console.error(`\n[Validate] BUILD FAILED: Prerender validation failed`);
+    console.error('[Validate] Fix the above issues before deploying.');
     process.exit(1);
   }
   

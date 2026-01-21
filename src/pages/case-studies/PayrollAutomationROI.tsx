@@ -7,7 +7,7 @@ const PayrollAutomationROI = () => {
     // SEO
     seoTitle: "Payroll Automation ROI: How Accounting Firms Save $8,372+ Annually",
     seoDescription: "Discover how a 12-person accounting firm cut payroll processing from 8 hours to 30 minutes and saved $8,372 annually through automation. See the real ROI and get your Automation Transformation AI Audit & Roadmap.",
-    canonicalUrl: "https://smartfirm.io/case-studies/payroll-automation-roi",
+    canonicalUrl: "https://smartfirm.io/case-studies/payroll-automation-roi/",
     
     // Hero
     badgeText: "Case Study: Payroll Automation",
