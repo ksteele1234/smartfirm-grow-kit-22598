@@ -1,4 +1,4 @@
-import { Phone, FileText, Rocket, CheckCircle, Eye } from "lucide-react";
+import { Phone, FileText, Rocket, CheckCircle, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GeometricDivider, FloatingShapes, AccentLine } from "@/components/ui/visual-accents";
 
@@ -97,9 +97,9 @@ const HowItWorksSection = () => {
                 </a>
               </Button>
               <Button variant="outline" size="hero" className="group" asChild>
-                <a href="#how-it-works">
-                  <Eye className="mr-2 h-5 w-5" />
-                  Show Me the System
+                <a href="/growth-calculator/">
+                  <Calculator className="mr-2 h-5 w-5" />
+                  Calculate Your Growth
                 </a>
               </Button>
             </div>

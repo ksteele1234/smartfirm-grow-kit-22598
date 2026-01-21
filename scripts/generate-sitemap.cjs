@@ -112,7 +112,12 @@ function extractFaqSlugsFromSource() {
     'workflow-automation', 'ai-transformation', 'pricing-budgeting',
     'advisory-services', 'referrals-reviews', 'online-visibility-seo',
     'lead-generation', 'client-experience', 'pricing-billing',
-    'technology-implementation', 'business-advisory'
+    'technology-implementation', 'business-advisory',
+    // Deprecated FAQ category slugs (added for sitemap cleanup)
+    'bookkeeping-services', 'add-ons', 'tax-preparation', 'website-design',
+    'social-media', 'protect-practice-future', 'email-marketing',
+    'seo-local-search', 'tools-calculators', 'content-marketing',
+    'lead-follow-up', 'executive-services', 'client-onboarding'
   ]);
   
   while ((match = slugRegex.exec(content)) !== null) {

@@ -10,6 +10,7 @@ import { ArrowLeft, Calendar, Tag, User, BookOpen, Mail } from "lucide-react";
 import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 import ClusterNavigator from "@/components/blog/ClusterNavigator";
+import RelatedPosts from "@/components/blog/RelatedPosts";
 import { normalizeBlogHtml } from "@/lib/blogHtml";
 
 interface BlogPost {
@@ -26,6 +27,7 @@ interface BlogPost {
   post_type: string | null;
   pillar_id: string | null;
   author_id: string | null;
+  category_id: string | null;
   blog_categories: {
     name: string;
     slug: string;
@@ -73,6 +75,7 @@ const BlogPost = () => {
           post_type,
           pillar_id,
           author_id,
+          category_id,
           blog_categories (
             name,
             slug
@@ -317,6 +320,13 @@ const BlogPost = () => {
               </div>
             </div>
           )}
+
+          {/* Related Posts - Creates internal links to reduce orphan pages */}
+          <RelatedPosts 
+            currentPostId={post.id} 
+            categoryId={post.category_id || undefined}
+            limit={3}
+          />
 
           {/* Cluster Navigator - shows related posts in the pillar */}
           {isCluster && post.pillar_id && (

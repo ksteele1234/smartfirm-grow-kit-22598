@@ -189,6 +189,21 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions/   301
 /faq/what-is-marketing-automation-accounting/  /gone.html  410
 /faq/workflow-automation-tools-accountants/  /gone.html  410
 
+# Deprecated FAQ category pages - return 410 Gone
+/faq/bookkeeping-services/  /gone.html  410
+/faq/add-ons/  /gone.html  410
+/faq/tax-preparation/  /gone.html  410
+/faq/website-design/  /gone.html  410
+/faq/social-media/  /gone.html  410
+/faq/protect-practice-future/  /gone.html  410
+/faq/email-marketing/  /gone.html  410
+/faq/seo-local-search/  /gone.html  410
+/faq/tools-calculators/  /gone.html  410
+/faq/content-marketing/  /gone.html  410
+/faq/lead-follow-up/  /gone.html  410
+/faq/executive-services/  /gone.html  410
+/faq/client-onboarding/  /gone.html  410
+
 # Generic 404 fallback for any OTHER unknown /faq/* routes
 /faq/*  /404.html  404
 
