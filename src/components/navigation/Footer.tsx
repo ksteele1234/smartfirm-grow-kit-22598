@@ -10,7 +10,8 @@ const Footer = () => {
     { name: "SEO for Accountants", slug: "seo-for-accounting-firms/" },
     { name: "Email Marketing", slug: "email-marketing-for-cpas/" },
     { name: "Social Media Management", slug: "social-media-management-for-cpas/" },
-    { name: "Website Design", slug: "professional-website-design-for-accounting-firms/" }
+    { name: "Website Design", slug: "professional-website-design-for-accounting-firms/" },
+    { name: "AI Transformation", slug: "single-process-ai-transformation/" }
   ];
 
   const solutions = [
@@ -24,7 +25,8 @@ const Footer = () => {
     { name: "Blog", slug: "/blog/" },
     { name: "Resources", slug: "/resources/" },
     { name: "Tools & Calculators", slug: "/tools/" },
-    { name: "Case Studies", slug: "/case-studies/" }
+    { name: "Case Studies", slug: "/case-studies/" },
+    { name: "Growth Calculator", slug: "/growth-calculator/" }
   ];
 
 
