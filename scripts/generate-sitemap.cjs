@@ -86,173 +86,58 @@ const staticRoutes = [
   { path: '/faq/', changefreq: 'monthly', priority: 0.7 },
 ];
 
-// FAQ categories and questions (mirrors src/data/faqContent.ts)
-const faqCategories = [
-  {
-    slug: 'getting-started',
-    questions: [
-      'which-solution-right-for-accounting-firm',
-      'combine-marketing-workflow-automation',
-      'difference-smartfirm-vs-traditional-agencies',
-      'how-quickly-see-results',
-      'firms-of-all-sizes-minimum',
-      'how-to-get-started',
-      'pricing-structure',
-      'do-you-offer-guarantees',
-    ],
-  },
+/**
+ * Dynamically extract all FAQ slugs from faqContent.ts
+ * This ensures sitemap stays in sync with the source of truth
+ */
+function extractFaqSlugsFromSource() {
+  const faqContentPath = path.resolve(__dirname, '../src/data/faqContent.ts');
+  
+  if (!fs.existsSync(faqContentPath)) {
+    console.error('[Sitemap] ERROR: faqContent.ts not found at', faqContentPath);
+    process.exit(1);
+  }
+  
+  const content = fs.readFileSync(faqContentPath, 'utf-8');
+  
+  const slugRegex = /slug:\s*["']([^"']+)["']/g;
+  const allSlugs = [];
+  let match;
+  
+  // Known category slugs to exclude (these are not individual FAQ pages)
+  const categorySlugs = new Set([
+    'getting-started', 'industries', 'client-retention', 'scale-firm',
+    'work-less-earn-more', 'stop-losing-clients-tech-savvy', 'referrals',
+    'online-visibility', 'marketing-automation', 'technology',
+    'workflow-automation', 'ai-transformation', 'pricing-budgeting',
+    'advisory-services', 'referrals-reviews', 'online-visibility-seo',
+    'lead-generation', 'client-experience', 'pricing-billing',
+    'technology-implementation', 'business-advisory'
+  ]);
+  
+  while ((match = slugRegex.exec(content)) !== null) {
+    const slug = match[1];
+    if (!categorySlugs.has(slug) && slug.includes('-')) {
+      allSlugs.push(slug);
+    }
+  }
+  
+  const uniqueSlugs = [...new Set(allSlugs)];
 
-  {
-    slug: 'industries',
-    questions: [
-      'why-industry-specialization-matters',
-      'firm-serves-multiple-industries',
-      'marketing-different-tax-bookkeeping-advisory',
-      'experience-with-specific-industry',
-      'switch-industries-add-specializations',
-    ],
-  },
-  {
-    slug: 'client-retention',
-    questions: [
-      'good-client-retention-rate-accounting-firm',
-      'common-reasons-accounting-firms-lose-clients',
-      'automation-help-client-retention',
-      'retention-strategies-seasonal-clients-tax',
-      'roi-client-retention-vs-acquisition',
-      'how-often-communicate-clients-retention',
-      'technology-role-modern-retention-strategies',
-      'measure-success-retention-efforts',
-    ],
-  },
-  {
-    slug: 'scale-firm',
-    questions: [
-      'biggest-mistake-accounting-firms-scale',
-      'scale-firm-without-hiring-staff',
-      'when-accounting-firm-start-scaling',
-      'systems-needed-scale-successfully',
-      'what-are-growing-pains-firm',
-      'grow-firm-without-sacrificing-quality-burnout',
-      'difference-growth-vs-scaling',
-      'when-firm-ready-to-grow',
-    ],
-  },
-  {
-    slug: 'work-less-earn-more',
-    questions: [
-      'work-less-earn-more-cpa-possible',
-      'tasks-automated-accounting-firm',
-      'transition-value-based-pricing-hourly',
-      'automation-less-personal-clients',
-    ],
-  },
-  {
-    slug: 'stop-losing-clients-tech-savvy',
-    questions: [
-      'technology-compete-tech-savvy-cpa',
-      'online-presence-client-attraction',
-      'catch-up-technology-competitors',
-      'differentiate-tech-savvy-competitors',
-    ],
-  },
-  {
-    slug: 'referrals-reviews',
-    questions: [
-      'increase-referrals-without-asking',
-      'how-many-google-reviews-needed',
-      'get-more-client-reviews',
-      'automate-review-collection-process',
-      'respond-negative-reviews',
-      'referral-vs-other-leads',
-    ],
-  },
-  {
-    slug: 'online-visibility-seo',
-    questions: [
-      'how-long-seo-results-accountants',
-      'local-seo-accounting-firms',
-      'should-accountant-blog',
-      'optimize-google-business-profile',
-      'seo-vs-paid-ads-accountants',
-      'most-important-seo-factors-accounting',
-    ],
-  },
-  {
-    slug: 'lead-generation',
-    questions: [
-      'how-many-leads-expect-monthly',
-      'best-lead-sources-accounting-firms',
-      'improve-website-conversion-rate',
-      'should-buy-leads',
-      'nurture-leads-not-ready',
-      'cost-per-lead-accounting-industry',
-    ],
-  },
-  {
-    slug: 'marketing-automation',
-    questions: [
-      'what-is-marketing-automation-accounting',
-      'automate-marketing-tasks',
-      'high-level-crm-accounting',
-      'email-marketing-automation-accountants',
-      'marketing-automation-roi',
-      'get-started-marketing-automation',
-    ],
-  },
-  {
-    slug: 'workflow-automation',
-    questions: [
-      'difference-marketing-workflow-automation',
-      'automate-client-onboarding',
-      'workflow-automation-tools-accountants',
-      'time-savings-workflow-automation',
-      'automate-document-collection',
-      'automation-replace-staff',
-    ],
-  },
-  {
-    slug: 'client-experience',
-    questions: [
-      'improve-client-experience-accounting',
-      'client-portal-benefits',
-      'communication-preferences-clients',
-      'client-satisfaction-measurement',
-      'onboarding-experience-matters',
-    ],
-  },
-  {
-    slug: 'pricing-billing',
-    questions: [
-      'value-based-pricing-accounting',
-      'price-accounting-services',
-      'raise-fees-without-losing-clients',
-      'offer-payment-plans',
-      'subscription-pricing-accountants',
-    ],
-  },
-  {
-    slug: 'technology-implementation',
-    questions: [
-      'essential-technology-modern-accounting',
-      'choose-practice-management-software',
-      'integrate-accounting-systems',
-      'cybersecurity-accounting-firms',
-      'cloud-vs-desktop-accounting-software',
-      'ai-accounting-profession',
-    ],
-  },
-  {
-    slug: 'business-advisory',
-    questions: [
-      'transition-compliance-advisory',
-      'advisory-services-offer',
-      'price-advisory-services',
-      'clients-need-advisory-services',
-      'advisory-skills-needed',
-    ],
-  },
-];
+  // Safeguard: fail build if no slugs extracted (indicates parsing error)
+  if (uniqueSlugs.length === 0) {
+    console.error('[Sitemap] ERROR: No FAQ slugs extracted from faqContent.ts - check regex parsing');
+    process.exit(1);
+  }
+
+  // Warning if fewer than expected (should be 100+)
+  if (uniqueSlugs.length < 50) {
+    console.warn(`[Sitemap] WARNING: Only ${uniqueSlugs.length} FAQ slugs found - expected 100+`);
+  }
+
+  console.log(`[Sitemap] Extracted ${uniqueSlugs.length} FAQ slugs from faqContent.ts`);
+  return uniqueSlugs;
+}
 
 const HOSTNAME = 'https://smartfirm.io';
 
@@ -373,21 +258,12 @@ async function fetchBlogCategories() {
 }
 
 function generateFaqRoutes() {
-  const routes = [];
-
-  // Only add individual FAQ question pages (NOT category pages - they redirect/404)
-  faqCategories.forEach(category => {
-    category.questions.forEach(questionSlug => {
-      routes.push({
-        path: `/faq/${questionSlug}/`,
-        changefreq: 'monthly',
-        priority: 0.5,
-      });
-    });
-  });
-
-  console.log(`[Sitemap] Generated ${routes.length} FAQ question routes`);
-  return routes;
+  const slugs = extractFaqSlugsFromSource();
+  return slugs.map(slug => ({
+    path: `/faq/${slug}/`,
+    changefreq: 'monthly',
+    priority: 0.5,
+  }));
 }
 
 function generateSitemapXml(routes) {
