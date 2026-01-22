@@ -5,6 +5,7 @@
  * UPDATED: Gracefully handles homepage timeout instead of failing entire build
  * UPDATED: Dynamically generates FAQ routes from faqContent.ts source of truth
  * UPDATED: Fixed path.join bug for routes starting with /
+ * UPDATED: Imports deprecated slugs from Single Source of Truth
  * 
  * Chrome detection order:
  * 1. CHROME_PATH env var (set by @netlify/plugin-chromium)
@@ -17,6 +18,9 @@ const path = require('path');
 const fs = require('fs');
 const http = require('http');
 const handler = require('serve-handler');
+
+// Import deprecated slugs from Single Source of Truth
+const { ALL_DEPRECATED_FAQ_SLUGS } = require('../src/config/deprecatedFaqSlugs.cjs');
 
 const prerenderRoutes = [
   // Homepage
@@ -159,8 +163,8 @@ function extractFaqSlugsFromSource() {
   const filteredOut = [];
   let match;
   
-  // Known category slugs to exclude (these are not individual FAQ pages)
-  const categorySlugs = new Set([
+  // Known ACTIVE category slugs to exclude (these are not individual FAQ pages)
+  const activeCategorySlugs = new Set([
     'getting-started',
     'industries', 
     'client-retention',
@@ -174,15 +178,28 @@ function extractFaqSlugsFromSource() {
     'workflow-automation',
     'ai-transformation',
     'pricing-budgeting',
-    'advisory-services'
+    'advisory-services',
+    'referrals-reviews',
+    'online-visibility-seo',
+    'lead-generation',
+    'client-experience',
+    'pricing-billing',
+    'technology-implementation',
+    'business-advisory',
+  ]);
+  
+  // Combine active categories + deprecated slugs for complete exclusion
+  const allExcludedSlugs = new Set([
+    ...activeCategorySlugs,
+    ...ALL_DEPRECATED_FAQ_SLUGS, // From Single Source of Truth
   ]);
   
   while ((match = slugRegex.exec(content)) !== null) {
     const slug = match[1];
     
-    // Skip known category slugs
-    if (categorySlugs.has(slug)) {
-      filteredOut.push({ slug, reason: 'category slug' });
+    // Skip all excluded slugs (active categories + deprecated)
+    if (allExcludedSlugs.has(slug)) {
+      filteredOut.push({ slug, reason: 'excluded (category or deprecated)' });
       continue;
     }
     
@@ -199,8 +216,8 @@ function extractFaqSlugsFromSource() {
   
   // Log extracted vs filtered for debugging
   console.log(`[Prerender] Extracted ${uniqueSlugs.length} FAQ slugs from faqContent.ts`);
-  if (filteredOut.length > 0) {
-    console.log(`[Prerender] Filtered out ${filteredOut.length} slugs:`);
+  console.log(`[Prerender] Excluded ${filteredOut.length} slugs (${ALL_DEPRECATED_FAQ_SLUGS.length} deprecated + active categories)`);
+  if (filteredOut.length > 0 && filteredOut.length <= 30) {
     filteredOut.forEach(({ slug, reason }) => {
       console.log(`  - "${slug}" (${reason})`);
     });
@@ -502,24 +519,17 @@ async function prerender() {
     }
   }
 
-  // Cleanup
   await browser.close();
   server.close();
 
-  console.log(`\n[Prerender] Summary:`);
-  console.log(`  ✓ Successful: ${successCount}`);
-  console.log(`  ⚠ Skipped: ${skippedCount}`);
-  console.log(`  ✗ Failed: ${errorCount}`);
+  console.log(`\n[Prerender] Complete: ${successCount} success, ${errorCount} errors, ${skippedCount} skipped`);
 
-  // Only fail the build if non-homepage routes failed
+  // Don't fail build for errors - routes will fall back to SPA
   if (errorCount > 0) {
-    throw new Error(`[Prerender] ${errorCount} routes failed to prerender`);
+    console.log('[Prerender] Note: Failed routes will use SPA fallback (client-side rendering)');
   }
-
-  console.log('[Prerender] Prerendering complete!');
 }
 
-// Run the prerender function
 prerender().catch((err) => {
   console.error('[Prerender] Fatal error:', err.message);
   process.exit(1);
