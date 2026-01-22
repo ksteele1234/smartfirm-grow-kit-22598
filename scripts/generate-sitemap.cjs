@@ -2,12 +2,16 @@
 /**
  * Dynamic Sitemap Generator
  * Generates sitemap.xml with static routes + dynamic blog posts, tags, categories, and FAQ pages
+ * 
+ * UPDATED: Imports deprecated slugs from Single Source of Truth
  */
 
 const fs = require('fs');
 const path = require('path');
 
-// Static routes from sitemapRoutes.ts
+// Import deprecated slugs from Single Source of Truth
+const { ALL_DEPRECATED_FAQ_SLUGS } = require('../src/config/deprecatedFaqSlugs.cjs');
+
 // Static routes from sitemapRoutes.ts
 const staticRoutes = [
   // Homepage
@@ -104,8 +108,8 @@ function extractFaqSlugsFromSource() {
   const allSlugs = [];
   let match;
   
-  // Known category slugs to exclude (these are not individual FAQ pages)
-  const categorySlugs = new Set([
+  // Known ACTIVE category slugs to exclude (these are not individual FAQ pages)
+  const activeCategorySlugs = new Set([
     'getting-started', 'industries', 'client-retention', 'scale-firm',
     'work-less-earn-more', 'stop-losing-clients-tech-savvy', 'referrals',
     'online-visibility', 'marketing-automation', 'technology',
@@ -113,16 +117,17 @@ function extractFaqSlugsFromSource() {
     'advisory-services', 'referrals-reviews', 'online-visibility-seo',
     'lead-generation', 'client-experience', 'pricing-billing',
     'technology-implementation', 'business-advisory',
-    // Deprecated FAQ category slugs (added for sitemap cleanup)
-    'bookkeeping-services', 'add-ons', 'tax-preparation', 'website-design',
-    'social-media', 'protect-practice-future', 'email-marketing',
-    'seo-local-search', 'tools-calculators', 'content-marketing',
-    'lead-follow-up', 'executive-services', 'client-onboarding'
+  ]);
+  
+  // Combine active categories + deprecated slugs for complete exclusion
+  const allExcludedSlugs = new Set([
+    ...activeCategorySlugs,
+    ...ALL_DEPRECATED_FAQ_SLUGS, // From Single Source of Truth
   ]);
   
   while ((match = slugRegex.exec(content)) !== null) {
     const slug = match[1];
-    if (!categorySlugs.has(slug) && slug.includes('-')) {
+    if (!allExcludedSlugs.has(slug) && slug.includes('-')) {
       allSlugs.push(slug);
     }
   }
@@ -141,6 +146,7 @@ function extractFaqSlugsFromSource() {
   }
 
   console.log(`[Sitemap] Extracted ${uniqueSlugs.length} FAQ slugs from faqContent.ts`);
+  console.log(`[Sitemap] Excluded ${ALL_DEPRECATED_FAQ_SLUGS.length} deprecated slugs from sitemap`);
   return uniqueSlugs;
 }
 

@@ -5,16 +5,37 @@
  * has the homepage's canonical URL or title
  * 
  * UPDATED: Added specific FAQ page validation to ensure all FAQs are prerendered correctly
+ * UPDATED: Added forbidden deprecated FAQ page detection - fails build if any exist
  */
 
 const fs = require('fs');
 const path = require('path');
+
+// Import deprecated slugs from Single Source of Truth
+const { ALL_DEPRECATED_FAQ_SLUGS } = require('../src/config/deprecatedFaqSlugs.cjs');
 
 const distPath = path.resolve(__dirname, '../dist');
 const faqContentPath = path.resolve(__dirname, '../src/data/faqContent.ts');
 const homepageTitle = 'Accounting Firm Automation & Growth Systems | SmartFirm';
 const homepageCanonical = 'https://smartfirm.io/';
 const homepageCanonicalAlt = 'https://smartfirm.io';
+
+/**
+ * CRITICAL: Fail build if any deprecated FAQ pages were prerendered
+ * This prevents 410 rules from being bypassed by static files
+ */
+function validateNoForbiddenFaqPages() {
+  const errors = [];
+  
+  for (const slug of ALL_DEPRECATED_FAQ_SLUGS) {
+    const forbiddenPath = path.join(distPath, 'faq', slug, 'index.html');
+    if (fs.existsSync(forbiddenPath)) {
+      errors.push(`FORBIDDEN: Deprecated FAQ page prerendered: /faq/${slug}/ - should return 410 Gone`);
+    }
+  }
+  
+  return errors;
+}
 
 /**
  * Validate that all sitemap URLs end with trailing slashes
@@ -58,6 +79,7 @@ function extractMetadata(html) {
 
 /**
  * Extract FAQ slugs from faqContent.ts to validate all are prerendered
+ * Uses the same exclusion logic as prerender.cjs for consistency
  */
 function extractExpectedFaqSlugs() {
   if (!fs.existsSync(faqContentPath)) {
@@ -70,10 +92,14 @@ function extractExpectedFaqSlugs() {
   const slugs = [];
   let match;
   
+  // Create a Set of deprecated slugs for fast lookup
+  const deprecatedSlugsSet = new Set(ALL_DEPRECATED_FAQ_SLUGS);
+  
   while ((match = slugRegex.exec(content)) !== null) {
     const slug = match[1];
-    // Filter out category slugs (FAQ slugs are longer and contain hyphens)
-    if (slug.includes('-') && slug.length > 10) {
+    // Filter out category slugs and deprecated slugs
+    // Use explicit check against deprecated list instead of weak length heuristic
+    if (slug.includes('-') && !deprecatedSlugsSet.has(slug)) {
       slugs.push(slug);
     }
   }
@@ -89,6 +115,20 @@ function validatePrerenders() {
   
   // Track found FAQ pages for validation
   const foundFaqSlugs = new Set();
+  
+  // FIRST: Check for forbidden deprecated FAQ pages
+  console.log('[Validate] Checking for forbidden deprecated FAQ pages...');
+  const forbiddenErrors = validateNoForbiddenFaqPages();
+  if (forbiddenErrors.length > 0) {
+    console.error(`\n[Validate] ❌ CRITICAL: ${forbiddenErrors.length} deprecated FAQ pages were prerendered:`);
+    forbiddenErrors.forEach(e => console.error(`  - ${e}`));
+    console.error('\n[Validate] These pages should return 410 Gone, not 200 OK');
+    console.error('[Validate] The cleanup-forbidden-faq.cjs script should have removed these');
+    console.error('[Validate] Check that scripts/prerender.cjs is excluding ALL_DEPRECATED_FAQ_SLUGS');
+    errors.push(...forbiddenErrors);
+  } else {
+    console.log(`[Validate] ✓ No forbidden deprecated FAQ pages found (checked ${ALL_DEPRECATED_FAQ_SLUGS.length} slugs)`);
+  }
   
   // Recursively find all index.html files
   function walkDir(dir) {
