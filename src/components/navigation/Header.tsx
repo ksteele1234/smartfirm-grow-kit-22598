@@ -177,7 +177,7 @@ const Header = () => {
     },
     {
       name: "Business Advisory",
-      slug: "business-advisory-marketing-services",
+      slug: "business-advisory",
       description: "Marketing strategies for advisory firms that position you as the go-to growth partner for business clients."
     },
     {
