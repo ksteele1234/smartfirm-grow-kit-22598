@@ -30,73 +30,73 @@ const AllServices = () => {
       icon: Smartphone,
       title: "Marketing Automation",
       description: "Comprehensive marketing automation platform designed specifically for accounting firms. Streamline your entire marketing process from lead capture to client conversion.",
-      href: "/services/marketing-automation-for-accounting-firms"
+      href: "/services/marketing-automation-for-accounting-firms/"
     },
     {
       icon: Settings,
       title: "Technology Solutions",
       description: "Modern technology infrastructure and integrations that connect your practice management tools, accounting software, and marketing systems seamlessly.",
-      href: "/services/technology-solutions"
+      href: "/services/technology-solutions/"
     },
     {
       icon: TrendingUp,
       title: "Business Optimization",
       description: "Strategic consulting and implementation services to optimize your firm's operations, workflows, and growth trajectory for maximum efficiency.",
-      href: "/services/business-optimization"
+      href: "/services/business-optimization/"
     },
     {
       icon: Award,
       title: "Executive Services",
       description: "High-touch strategic services for firm leaders including growth planning, market positioning, and executive coaching tailored to accounting practices.",
-      href: "/services/executive-services"
+      href: "/services/executive-services/"
     },
     {
       icon: Zap,
       title: "Automated Lead Follow-Up",
       description: "Intelligent follow-up sequences via email, SMS, and voicemail that convert inquiries into booked calls within 24-48 hours. Never lose a lead again.",
-      href: "/services/automated-lead-follow-up-for-cpas"
+      href: "/services/automated-lead-follow-up-for-cpas/"
     },
     {
       icon: Star,
       title: "Client Review Generation",
       description: "Automated review request system that builds credibility and attracts more clients. Triple your 5-star reviews in 90 days with proven workflows.",
-      href: "/services/automated-review-generation-for-cpas"
+      href: "/services/automated-review-generation-for-cpas/"
     },
     {
       icon: Search,
       title: "SEO for Accountants",
       description: "Dominate local search results and Google Maps. Our accounting-specific SEO strategies bring in qualified leads actively searching for your services.",
-      href: "/services/seo-for-accounting-firms"
+      href: "/services/seo-for-accounting-firms/"
     },
     {
       icon: Users,
       title: "Social Media Management",
       description: "Done-for-you social media content and management. Establish thought leadership on LinkedIn, Facebook, and other platforms while we handle everything.",
-      href: "/services/social-media-management-for-cpas"
+      href: "/services/social-media-management-for-cpas/"
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
       description: "Personalized email campaigns that keep clients engaged year-round. Improve retention rates and create upsell opportunities with strategic nurture sequences.",
-      href: "/services/email-marketing-for-cpas"
+      href: "/services/email-marketing-for-cpas/"
     },
     {
       icon: Globe,
       title: "Website Design",
       description: "Conversion-optimized websites built specifically for accounting firms. Secure client portals, mobile-responsive design, and compliance-ready infrastructure.",
-      href: "/services/professional-website-design-for-accounting-firms"
+      href: "/services/professional-website-design-for-accounting-firms/"
     },
     {
       icon: Mail,
       title: "Content Marketing",
       description: "Strategic content that positions your firm as the expert. Blog posts, guides, and resources that attract ideal clients and establish thought leadership.",
-      href: "/services/strategic-content-marketing-for-cpas"
+      href: "/services/strategic-content-marketing-for-cpas/"
     },
     {
       icon: Star,
       title: "Online Reputation Management",
       description: "Protect and elevate your firm's online reputation. Monitor reviews, respond professionally, and build a 5-star presence that attracts more clients.",
-      href: "/services/reputation-management-for-cpas"
+      href: "/services/reputation-management-for-cpas/"
     }
   ];
 

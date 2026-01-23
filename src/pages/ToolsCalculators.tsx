@@ -53,7 +53,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
       duration: "5 minutes",
       results: "Instant scoring",
-      link: "/tools/efficiency-quiz",
+      link: "/tools/efficiency-quiz/",
       color: "from-primary to-secondary"
     },
     {
@@ -63,7 +63,7 @@ const ToolsCalculators = () => {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "3 minutes",
       results: "Personalized report",
-      link: "/tools/marketing-scorecard",
+      link: "/tools/marketing-scorecard/",
       color: "from-primary to-accent"
     },
     {
@@ -73,7 +73,7 @@ const ToolsCalculators = () => {
       icon: <Calculator className="h-8 w-8 text-secondary" />,
       duration: "2 minutes",
       results: "ROI projections",
-      link: "/tools/roi-calculator",
+      link: "/tools/roi-calculator/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -83,7 +83,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
       duration: "4 minutes",
       results: "Readiness score",
-      link: "/tools/automation-readiness-quiz",
+      link: "/tools/automation-readiness-quiz/",
       color: "from-primary to-secondary"
     },
     {
@@ -93,7 +93,7 @@ const ToolsCalculators = () => {
       icon: <BarChart3 className="h-8 w-8 text-accent" />,
       duration: "5 minutes",
       results: "Bottleneck analysis",
-      link: "/tools/workflow-bottleneck-finder",
+      link: "/tools/workflow-bottleneck-finder/",
       color: "from-primary to-accent"
     },
     {
@@ -103,7 +103,7 @@ const ToolsCalculators = () => {
       icon: <Calculator className="h-8 w-8 text-secondary" />,
       duration: "3 minutes",
       results: "ROI analysis",
-      link: "/tools/tech-stack-roi-calculator",
+      link: "/tools/tech-stack-roi-calculator/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -113,7 +113,7 @@ const ToolsCalculators = () => {
       icon: <Users className="h-8 w-8 text-primary" />,
       duration: "3 minutes",
       results: "CLV metrics",
-      link: "/tools/client-lifetime-value-calculator",
+      link: "/tools/client-lifetime-value-calculator/",
       color: "from-primary to-secondary"
     },
     {
@@ -123,7 +123,7 @@ const ToolsCalculators = () => {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "4 minutes",
       results: "Lead gen score",
-      link: "/tools/lead-generation-scorecard",
+      link: "/tools/lead-generation-scorecard/",
       color: "from-primary to-accent"
     },
     {
@@ -133,7 +133,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-secondary" />,
       duration: "5 minutes",
       results: "Modernization score",
-      link: "/tools/modern-firm-quiz",
+      link: "/tools/modern-firm-quiz/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -143,7 +143,7 @@ const ToolsCalculators = () => {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       duration: "4 minutes",
       results: "Growth analysis",
-      link: "/tools/growth-potential-scorecard",
+      link: "/tools/growth-potential-scorecard/",
       color: "from-primary to-secondary"
     }
   ];

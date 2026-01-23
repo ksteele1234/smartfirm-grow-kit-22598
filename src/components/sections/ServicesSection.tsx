@@ -8,37 +8,37 @@ const ServicesSection = () => {
       icon: Zap,
       title: "Automated Lead Follow-up",
       description: "Convert inquiries into clients with CPA-focused email & SMS automation.",
-      link: "/services/automated-lead-follow-up-for-cpas"
+      link: "/services/automated-lead-follow-up-for-cpas/"
     },
     {
       icon: Star,
       title: "Client Review Generation",
       description: "Build trust and referrals with more 5-star reviews.",
-      link: "/services/automated-review-generation-for-cpas"
+      link: "/services/automated-review-generation-for-cpas/"
     },
     {
       icon: Search,
       title: "SEO for Accounting Firms",
       description: "Dominate local search and attract high-quality clients.",
-      link: "/services/seo-for-accounting-firms"
+      link: "/services/seo-for-accounting-firms/"
     },
     {
       icon: Users,
       title: "Social Media Management",
       description: "Professional content that positions your firm as a trusted authority.",
-      link: "/services/social-media-management-for-cpas"
+      link: "/services/social-media-management-for-cpas/"
     },
     {
       icon: Globe,
       title: "Website Optimization",
       description: "Modern, SEO-friendly websites for accountants that convert.",
-      link: "/services/professional-website-design-for-accounting-firms"
+      link: "/services/professional-website-design-for-accounting-firms/"
     },
     {
       icon: Phone,
       title: "Marketing Automation",
       description: "Save time and scale faster with automation tailored for accountants.",
-      link: "/services/marketing-automation-for-accounting-firms"
+      link: "/services/marketing-automation-for-accounting-firms/"
     }
   ];
 

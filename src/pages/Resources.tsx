@@ -32,31 +32,31 @@ const Resources = () => {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Guides & Whitepapers",
       description: "In-depth articles, e-books, and whitepapers on marketing, automation, and business growth.",
-      link: "/get-started"
+      link: "/get-started/"
     },
     {
       icon: <Calculator className="h-8 w-8 text-accent" />,
       title: "Tools & Calculators",
       description: "Interactive tools like ROI calculators, profit estimators, and workflow templates.",
-      link: "/tools"
+      link: "/tools/"
     },
     {
       icon: <FileText className="h-8 w-8 text-primary" />,
       title: "Blog",
       description: "Latest articles, industry news, and thought leadership posts.",
-      link: "/get-started"
+      link: "/blog/"
     },
     {
       icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
-      link: "/get-started"
+      link: "/get-started/"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-accent" />,
       title: "FAQ",
       description: "Frequently asked questions about our services and solutions for accounting firms.",
-      link: "/faq"
+      link: "/faq/"
     }
   ];
 
