@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, User } from "lucide-react";
 import { format } from "date-fns";
 import TagCloud from "@/components/blog/TagCloud";
+import BlogPostList from "@/components/blog/BlogPostList";
 
 interface BlogPost {
   id: string;
@@ -118,6 +119,12 @@ const BlogIndex = () => {
         canonicalUrl="https://smartfirm.io/blog/"
       />
       <Header />
+
+      {/* Static blog post links for SEO - ensures all posts are linked in prerendered HTML */}
+      <nav aria-label="All blog posts" className="sr-only" data-testid="static-blog-posts">
+        <h2>All Articles</h2>
+        <BlogPostList />
+      </nav>
 
       <main id="main-content" className="flex-grow">
         {/* Hero Section */}

@@ -488,6 +488,46 @@ async function prerender() {
       // NOTE: Blog post tags are now rendered via static TagCloud component
       // No need to wait for async tag fetching - all 70+ tags render immediately
 
+      // Wait for blog post grid to render on /blog/ page
+      const isBlogIndex = route === '/blog' || route === '/blog/';
+      if (isBlogIndex) {
+        try {
+          // Wait for blog post cards to appear in the grid
+          await page.waitForFunction(
+            () => {
+              // Look for blog post links in the posts grid
+              const postLinks = document.querySelectorAll('a[href^="/blog/"][href$="/"]');
+              // Filter to only actual post links (not /blog/ itself, not /blog/tags/)
+              const actualPostLinks = Array.from(postLinks).filter(link => {
+                const href = link.getAttribute('href');
+                return href && 
+                       href !== '/blog/' && 
+                       !href.includes('/blog/tags/') &&
+                       href.match(/^\/blog\/[a-z0-9-]+\/$/);
+              });
+              // We expect at least 5 posts (currently have 9)
+              return actualPostLinks.length >= 5;
+            },
+            { timeout: 15000 }
+          );
+          
+          // Count and log the blog post links
+          const postCount = await page.$$eval(
+            'a[href^="/blog/"][href$="/"]',
+            links => links.filter(l => {
+              const href = l.getAttribute('href');
+              return href && 
+                     href !== '/blog/' && 
+                     !href.includes('/blog/tags/') &&
+                     href.match(/^\/blog\/[a-z0-9-]+\/$/);
+            }).length
+          );
+          console.log(`[Prerender] ✓ /blog/: ${postCount} blog post link(s) captured`);
+        } catch (blogErr) {
+          console.log(`[Prerender] ⚠ /blog/: Blog posts wait timeout - capturing anyway`);
+        }
+      }
+
       // Get the rendered HTML
       const html = await page.content();
 
