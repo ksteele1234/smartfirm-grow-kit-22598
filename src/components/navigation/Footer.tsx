@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Column 2 - Services */}
           <div>
             {/* Mobile: Clickable header */}
-            <Link to="/all-professional-marketing-services/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/all-services/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Services
             </Link>
             {/* Desktop: Regular header with list */}

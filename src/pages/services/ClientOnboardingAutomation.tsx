@@ -120,7 +120,7 @@ const ClientOnboardingAutomation = () => {
     ctaTitle: "Ready to Automate Your Client Onboarding?",
     ctaDescription: "Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.",
     ctaButtonText: "Schedule a Free Consultation",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   const relatedSolutionCallout = (
