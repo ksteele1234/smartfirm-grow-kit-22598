@@ -163,25 +163,26 @@ const Header = () => {
     }
   ];
 
+  // Use canonical long-slug URLs to avoid redirects and ensure proper SEO linking
   const industries = [
     {
       name: "Tax Preparation",
-      slug: "tax-preparation",
+      slug: "tax-preparation-marketing-solutions",
       description: "Specialized marketing and SEO for tax preparers to generate leads and grow during peak seasons and beyond."
     },
     {
       name: "Bookkeeping Services",
-      slug: "bookkeeping-services",
+      slug: "bookkeeping-services-marketing-automation",
       description: "Proven digital marketing for bookkeepers that attracts clients, builds trust, and scales revenue."
     },
     {
       name: "Business Advisory",
-      slug: "business-advisory",
+      slug: "business-advisory-marketing-services",
       description: "Marketing strategies for advisory firms that position you as the go-to growth partner for business clients."
     },
     {
       name: "Audit & Assurance",
-      slug: "audit-assurance",
+      slug: "audit-assurance-marketing-services",
       description: "SEO and visibility campaigns for CPAs and audit firms designed to build authority and long-term trust."
     }
   ];
