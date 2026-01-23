@@ -11,6 +11,7 @@ import { format } from "date-fns";
 import NotFound from "@/pages/NotFound";
 import ClusterNavigator from "@/components/blog/ClusterNavigator";
 import RelatedPosts from "@/components/blog/RelatedPosts";
+import TagCloud from "@/components/blog/TagCloud";
 import { normalizeBlogHtml } from "@/lib/blogHtml";
 
 interface BlogPost {
@@ -334,6 +335,18 @@ const BlogPost = () => {
           {isCluster && post.pillar_id && (
             <ClusterNavigator currentPostId={post.id} pillarId={post.pillar_id} />
           )}
+
+          {/* Static Tag Cloud - ensures all tag pages have incoming links in SSR */}
+          <div className="mt-12 pt-8 border-t bg-muted/30 -mx-4 px-4 py-8 rounded-lg">
+            <TagCloud 
+              title="Browse All Topics" 
+              className=""
+              showIcon={true}
+            />
+            <p className="text-sm text-muted-foreground mt-4">
+              Explore our complete library of articles organized by topic.
+            </p>
+          </div>
 
           {/* Author Bio Section */}
           {authorProfile?.display_name && authorProfile?.bio && (
