@@ -103,13 +103,13 @@ const NotFound = () => {
               <a href="/services/" className="text-primary hover:underline">
                 Services
               </a>
-              <a href="/case-studies" className="text-primary hover:underline">
+              <a href="/case-studies/" className="text-primary hover:underline">
                 Case Studies
               </a>
-              <a href="/resources" className="text-primary hover:underline">
+              <a href="/resources/" className="text-primary hover:underline">
                 Resources
               </a>
-              <a href="/about" className="text-primary hover:underline">
+              <a href="/about/" className="text-primary hover:underline">
                 About Us
               </a>
             </div>

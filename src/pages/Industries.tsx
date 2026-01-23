@@ -186,7 +186,7 @@ const Industries = () => {
                 </a>
               </Button>
               <Button variant="white-outline-on-dark" size="hero" asChild>
-                <a href="/leading-marketing-services-for-accounting-firms">
+                <a href="/services/">
                   Explore Services
                 </a>
               </Button>

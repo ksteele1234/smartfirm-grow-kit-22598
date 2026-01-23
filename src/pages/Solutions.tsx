@@ -58,37 +58,37 @@ const Solutions = () => {
       icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Stop Losing Clients to Tech-Savvy CPAs",
       subtitle: "Get Found Online When Clients Search, Look Professional with Modern Systems, Respond Faster Than Your Competition, Automate What Younger CPAs Do Manually.",
-      link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
+      link: "/solutions/stop-losing-clients-to-tech-savvy-cpas/"
     },
     {
       icon: <Users className="h-8 w-8 text-accent" />,
       title: "Get More Referrals Without Asking",
       subtitle: "Turn Happy Clients into Advocates, Get Found by People Looking for CPAs, Build Trust Before You Meet, Stay Top-of-Mind Year-Round.",
-      link: "/solutions/get-more-referrals-without-asking"
+      link: "/solutions/get-more-referrals-without-asking/"
     },
     {
       icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Work Less, Earn More",
       subtitle: "Stop Chasing Clients for Documents, Eliminate Repetitive Tasks, Get Paid Faster Without Awkward Calls, Focus on High-Value Work Only.",
-      link: "/solutions/work-less-earn-more"
+      link: "/solutions/work-less-earn-more/"
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       title: "Grow Without the Growing Pains",
       subtitle: "Handle More Clients Without More Stress, Scale Without Hiring Full-Time Staff, Maintain Quality While Growing, Plan for Growth Without Guesswork.",
-      link: "/solutions/grow-without-growing-pains"
+      link: "/solutions/grow-without-growing-pains/"
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Protect Your Practice & Your Future",
       subtitle: "Secure Your Client Data Like a Big Firm, Plan Your Exit Strategy, Maximize Your Practice Value, Ensure Business Continuity.",
-      link: "/solutions/protect-practice-and-future"
+      link: "/solutions/protect-practice-and-future/"
     },
     {
       icon: <UserX className="h-8 w-8 text-accent" />,
       title: "New Clients Falling Through the Cracks",
       subtitle: "Stop Losing Clients During Onboarding, Automate Document Collection, Create Consistent First Impressions, Scale Without Chaos.",
-      link: "/solutions/client-onboarding-problems"
+      link: "/solutions/client-onboarding-problems/"
     }
   ];
 
