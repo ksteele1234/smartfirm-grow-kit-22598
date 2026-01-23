@@ -145,7 +145,7 @@ const SuccessStories = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Success Stories", url: "/case-studies" }
+          { name: "Success Stories", url: "/case-studies/" }
         ]}
         faqs={[
           {

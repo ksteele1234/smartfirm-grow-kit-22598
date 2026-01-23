@@ -98,7 +98,7 @@ const TechnologySolutions = () => {
     ctaTitle: "Transform Your Firm with Technology",
     ctaDescription: "Let's optimize your technology stack and automate your processes for maximum efficiency and growth.",
     ctaButtonText: "Book a Free Call",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

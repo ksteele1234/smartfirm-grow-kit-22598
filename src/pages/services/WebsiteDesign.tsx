@@ -98,7 +98,7 @@ const WebsiteDesign = () => {
     ctaTitle: "Get a Website That Converts",
     ctaDescription: "Let's design a professional website that establishes credibility and generates leads for your accounting firm.",
     ctaButtonText: "View Portfolio",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

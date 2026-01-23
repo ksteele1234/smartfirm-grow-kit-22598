@@ -98,7 +98,7 @@ const BusinessOptimization = () => {
     ctaTitle: "Optimize Your Firm's Performance",
     ctaDescription: "Let's analyze your operations and implement improvements that drive measurable results.",
     ctaButtonText: "Get Analysis",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

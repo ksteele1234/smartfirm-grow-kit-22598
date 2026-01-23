@@ -107,7 +107,7 @@ const GetStarted = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Get Started", url: "/get-started" }
+          { name: "Get Started", url: "/get-started/" }
         ]}
         faqs={[
           {
@@ -285,7 +285,7 @@ const GetStarted = () => {
                     {option.description}
                   </p>
                   <Button variant="outline" className="group" asChild>
-                    <a href={option.title === "Client Support & Resources" ? "/resources" : "/contact"}>
+                    <a href={option.title === "Client Support & Resources" ? "/resources/" : "/contact/"}>
                       {option.cta}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>

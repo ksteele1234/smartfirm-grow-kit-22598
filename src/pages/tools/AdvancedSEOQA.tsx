@@ -68,28 +68,26 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
 
   // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
-    "/", "/leading-marketing-services-for-accounting-firms", "/services/all-professional-marketing-services-for-accounting-firms", "/solutions-expert-marketing-agency-for-accounting-firms", "/industries-expert-marketing-agency-for-accountants", "/resources",
-    "/about", "/contact", "/case-studies", "/get-started", "/faq",
-    "/solutions/i-need-more-leads", "/solutions/lead-generation",
-    "/solutions/scale-firm", "/solutions/scale-firm",
-    "/solutions/client-retention", "/solutions/client-retention",
-    "/solutions/retention-strategies", "/solutions/retention-strategies",
-    "/solutions/stop-losing-clients-to-tech-savvy-cpas",
-    "/solutions/get-more-referrals-without-asking",
-    "/solutions/work-less-earn-more", "/solutions/grow-without-growing-pains",
-    "/solutions/protect-practice-and-future", "/services/marketing-automation",
-    "/services/technology-solutions", "/services/business-optimization",
-    "/services/executive-services", "/services/automated-lead-follow-up",
-    "/services/client-review-generation", "/services/seo-for-accountants",
-    "/services/social-media-management", "/services/email-marketing",
-    "/services/website-design", "/industries/tax-preparation",
-    "/industries/bookkeeping-services", "/industries/business-advisory",
-    "/industries/audit-assurance", "/tools",
-    "/tools/efficiency-quiz", "/tools/marketing-scorecard", "/tools/roi-calculator",
-    "/tools/automation-readiness-quiz", "/tools/workflow-bottleneck-finder",
-    "/tools/tech-stack-roi-calculator", "/tools/client-lifetime-value-calculator",
-    "/tools/lead-generation-scorecard", "/tools/modern-firm-quiz",
-    "/tools/growth-potential-scorecard", "/privacy", "/terms", "/cookies"
+    "/", "/services/", "/all-services/", "/solutions/", "/industries/", "/resources/",
+    "/about/", "/contact/", "/case-studies/", "/get-started/", "/faq/", "/quick-start/",
+    "/solutions/stop-losing-clients-to-tech-savvy-cpas/",
+    "/solutions/get-more-referrals-without-asking/",
+    "/solutions/work-less-earn-more/", "/solutions/grow-without-growing-pains/",
+    "/solutions/protect-practice-and-future/", "/solutions/client-onboarding-problems/",
+    "/services/marketing-automation-for-accounting-firms/",
+    "/services/technology-solutions/", "/services/business-optimization/",
+    "/services/executive-services/", "/services/automated-lead-follow-up-for-cpas/",
+    "/services/automated-review-generation-for-cpas/", "/services/seo-for-accounting-firms/",
+    "/services/social-media-management-for-cpas/", "/services/email-marketing-for-cpas/",
+    "/services/professional-website-design-for-accounting-firms/",
+    "/industries/tax-preparation-marketing-solutions/",
+    "/industries/bookkeeping-services-marketing-automation/", "/industries/business-advisory/",
+    "/industries/audit-assurance-marketing-services/", "/tools/",
+    "/tools/efficiency-quiz/", "/tools/marketing-scorecard/", "/tools/roi-calculator/",
+    "/tools/automation-readiness-quiz/", "/tools/workflow-bottleneck-finder/",
+    "/tools/tech-stack-roi-calculator/", "/tools/client-lifetime-value-calculator/",
+    "/tools/lead-generation-scorecard/", "/tools/modern-firm-quiz/",
+    "/tools/growth-potential-scorecard/", "/privacy/", "/terms/", "/cookies/"
   ];
 
   const calculateReadabilityScore = (text: string): number => {
