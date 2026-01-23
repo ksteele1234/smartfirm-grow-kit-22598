@@ -485,29 +485,8 @@ async function prerender() {
         }
       }
 
-      // Phase 1 & 3: Wait for blog post tags to render before capturing HTML
-      // This ensures tag links appear in prerendered output for SEO
-      const isBlogPost = route.startsWith('/blog/') && !route.startsWith('/blog/tags/') && route !== '/blog' && route !== '/blog/';
-      if (isBlogPost) {
-        try {
-          // Wait for "Tags:" label to appear (means tags section rendered)
-          await page.waitForFunction(
-            () => {
-              const tagsLabel = Array.from(document.querySelectorAll('span'))
-                .find(el => el.textContent?.includes('Tags:'));
-              return !!tagsLabel;
-            },
-            { timeout: 8000 }
-          );
-          
-          // Count tag links for logging
-          const tagCount = await page.$$eval('a[href^="/blog/tags/"]', links => links.length);
-          console.log(`[Prerender] ✓ ${route}: ${tagCount} tag link(s) found`);
-        } catch (tagsErr) {
-          // Don't fail - some posts may have no tags, but section should still render
-          console.log(`[Prerender] ⚠ ${route}: Tags section wait timeout (will still capture)`);
-        }
-      }
+      // NOTE: Blog post tags are now rendered via static TagCloud component
+      // No need to wait for async tag fetching - all 70+ tags render immediately
 
       // Get the rendered HTML
       const html = await page.content();

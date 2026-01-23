@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, User } from "lucide-react";
 import { format } from "date-fns";
+import TagCloud from "@/components/blog/TagCloud";
 
 interface BlogPost {
   id: string;
@@ -239,23 +240,17 @@ const BlogIndex = () => {
           </div>
         </section>
 
-        {/* Browse by Topic Section */}
-        {tags.length > 0 && (
-          <section className="py-12 bg-slate-50 border-t">
-            <div className="container mx-auto px-4">
-              <h2 className="text-2xl font-bold text-center mb-8">Browse by Topic</h2>
-              <div className="flex flex-wrap justify-center gap-3">
-                {tags.map((tag) => (
-                  <Link key={tag.id} to={`/blog/tags/${tag.slug}/`}>
-                    <Badge variant="secondary" className="hover:bg-primary hover:text-white transition-colors cursor-pointer text-sm py-1 px-3">
-                      {tag.name}
-                    </Badge>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        {/* Browse by Topic Section - Static for SEO */}
+        <section className="py-12 bg-muted/50 border-t">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-8">Browse by Topic</h2>
+            <TagCloud 
+              title="" 
+              className="justify-center" 
+              showIcon={false}
+            />
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="bg-muted py-16">
