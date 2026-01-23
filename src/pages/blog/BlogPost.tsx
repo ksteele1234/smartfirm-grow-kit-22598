@@ -304,22 +304,24 @@ const BlogPost = () => {
             dangerouslySetInnerHTML={{ __html: normalizeBlogHtml(post.content || "") }}
           />
 
-          {/* Tags */}
-          {postTags.length > 0 && (
-            <div className="mt-12 pt-8 border-t">
-              <div className="flex flex-wrap items-center gap-3">
-                <Tag className="w-4 h-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground font-medium">Tags:</span>
-                {postTags.map((tag) => (
+          {/* Tags - always render container for prerender detection */}
+          <div className="mt-12 pt-8 border-t" data-testid="tags-section">
+            <div className="flex flex-wrap items-center gap-3">
+              <Tag className="w-4 h-4 text-muted-foreground" />
+              <span className="text-sm text-muted-foreground font-medium">Tags:</span>
+              {postTags.length > 0 ? (
+                postTags.map((tag) => (
                   <Link key={tag.id} to={`/blog/tags/${tag.slug}/`}>
                     <Badge variant="outline" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                       {tag.name}
                     </Badge>
                   </Link>
-                ))}
-              </div>
+                ))
+              ) : (
+                <span className="text-sm text-muted-foreground italic">No tags</span>
+              )}
             </div>
-          )}
+          </div>
 
           {/* Related Posts - Creates internal links to reduce orphan pages */}
           <RelatedPosts 
