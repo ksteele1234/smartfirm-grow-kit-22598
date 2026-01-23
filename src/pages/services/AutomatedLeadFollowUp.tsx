@@ -98,7 +98,7 @@ const AutomatedLeadFollowUp = () => {
     ctaTitle: "Ready to Automate Your Lead Follow-Up?",
     ctaDescription: "Let's set up automated sequences that convert more prospects into clients for your accounting firm.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

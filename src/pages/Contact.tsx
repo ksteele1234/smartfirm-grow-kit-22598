@@ -46,7 +46,7 @@ const Contact = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Contact Us", url: "/contact" }
+          { name: "Contact Us", url: "/contact/" }
         ]}
         faqs={[
           {

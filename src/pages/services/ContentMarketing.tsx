@@ -74,7 +74,7 @@ const ContentMarketing = () => {
     ctaTitle: "Ready to Build Your Content Marketing Engine?",
     ctaDescription: "Book a Free Call to discover how content marketing can grow your firm's visibility and authority.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

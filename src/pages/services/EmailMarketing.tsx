@@ -98,7 +98,7 @@ const EmailMarketing = () => {
     ctaTitle: "Start Nurturing Client Relationships",
     ctaDescription: "Discover how strategic email marketing can strengthen client relationships and drive business growth.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

@@ -151,7 +151,7 @@ const QuickStart = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Get Started", url: "/get-started" },
+          { name: "Get Started", url: "/get-started/" },
           { name: "Quick Start Package", url: "/quick-start/" }
         ]}
         faqs={[
@@ -380,7 +380,7 @@ const QuickStart = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/contact">
+                <a href="/contact/">
                   Contact Us
                 </a>
               </Button>

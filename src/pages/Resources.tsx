@@ -91,7 +91,7 @@ const Resources = () => {
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Resources", url: "/resources" }
+          { name: "Resources", url: "/resources/" }
         ]}
       />
       <Header />

@@ -98,7 +98,7 @@ const ClientReviewGeneration = () => {
     ctaTitle: "Start Building Your Review Reputation",
     ctaDescription: "Discover how our automated review generation system can build trust and attract more clients to your accounting practice.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

@@ -74,7 +74,7 @@ const OnlineReputationManagement = () => {
     ctaTitle: "Ready to Strengthen Your Online Reputation?",
     ctaDescription: "Book a free reputation audit to see how we can transform your firm's online presence and attract more ideal clients.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

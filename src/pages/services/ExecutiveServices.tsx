@@ -98,7 +98,7 @@ const ExecutiveServices = () => {
     ctaTitle: "Access Executive-Level Expertise",
     ctaDescription: "Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.",
     ctaButtonText: "Explore Services",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

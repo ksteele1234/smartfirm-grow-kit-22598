@@ -16,7 +16,7 @@ const FinalCTASection = ({
   title = "Are You Serious About Scaling to $1M and Beyond?",
   description = "Join 40+ companies building the marketing foundation that drives consistent growth. Early adopter pricing ends soon—start now and see results in 30 days.",
   primaryButtonText = "Book a Free Call",
-  primaryButtonLink = "/get-started",
+  primaryButtonLink = "/get-started/",
   reassuranceText = "No commitment required • 30-minute consultation"
 }: FinalCTASectionProps = {}) => {
   const content = useScrollAnimation();

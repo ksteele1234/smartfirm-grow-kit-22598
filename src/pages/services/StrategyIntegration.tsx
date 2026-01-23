@@ -84,7 +84,7 @@ const StrategyIntegration = () => {
     ctaTitle: "Build Your Marketing Foundation Right",
     ctaDescription: "Let's start with a strategic discovery session and build a marketing infrastructure that actually works together.",
     ctaButtonText: "Schedule Discovery Session",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

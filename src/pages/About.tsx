@@ -122,7 +122,7 @@ const About = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "About Us", url: "/about" }
+          { name: "About Us", url: "/about/" }
         ]}
       />
       <Header />

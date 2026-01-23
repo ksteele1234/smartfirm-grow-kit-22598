@@ -98,7 +98,7 @@ const SocialMediaManagement = () => {
     ctaTitle: "Build Your Professional Social Media Presence",
     ctaDescription: "Let's establish your firm as a trusted authority on social media while generating new business opportunities.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started"
+    ctaButtonLink: "/get-started/"
   };
 
   return <ServicePageTemplate data={serviceData} />;
