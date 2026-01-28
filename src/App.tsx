@@ -226,7 +226,7 @@ const App = () => (
             <Route path="/industries/tax-preparation" element={<Navigate to="/industries/tax-preparation-marketing-solutions" replace />} />
             <Route path="/industries/bookkeeping-services" element={<Navigate to="/industries/bookkeeping-services-marketing-automation" replace />} />
             <Route path="/industries/marketing-for-business-advisors" element={<Navigate to="/industries/business-advisory" replace />} />
-            <Route path="/industries/business-advisory-marketing-services" element={<Navigate to="/industries/business-advisory" replace />} />
+            
             <Route path="/industries/marketing-for-audit-firms" element={<Navigate to="/industries/audit-assurance-marketing-agency" replace />} />
 
             {/* Tools & Calculators */}
