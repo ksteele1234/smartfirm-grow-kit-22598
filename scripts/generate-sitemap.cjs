@@ -57,7 +57,7 @@ const staticRoutes = [
   // Industry Pages
   { path: '/industries/tax-preparation-marketing-solutions/', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/bookkeeping-services-marketing-automation/', changefreq: 'weekly', priority: 0.8 },
-  { path: '/industries/business-advisory-marketing-services/', changefreq: 'weekly', priority: 0.8 },
+  
   { path: '/industries/audit-assurance-marketing-agency/', changefreq: 'weekly', priority: 0.8 },
 
   // Tools & Calculators

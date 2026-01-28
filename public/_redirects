@@ -85,7 +85,8 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions/   301
 /industries/bookkeeping-services  /industries/bookkeeping-services-marketing-automation/  301
 /industries/marketing-for-bookkeeping-firms  /industries/bookkeeping-services-marketing-automation/  301
 /industries/business-advisory-marketing  /industries/business-advisory/  301
-/industries/business-advisory-marketing-services  /industries/business-advisory/  301
+/industries/business-advisory-marketing-services  /gone.html  410!
+/industries/business-advisory-marketing-services/  /gone.html  410!
 /industries/marketing-for-cfo-advisory-firms  /industries/business-advisory/  301
 /industries/audit-assurance-marketing  /industries/audit-assurance-marketing-agency/  301
 /industries/audit-assurance  /industries/audit-assurance-marketing-agency/  301

@@ -48,7 +48,7 @@ const prerenderRoutes = [
     "/services/add-ons/",
     "/industries/tax-preparation-marketing-solutions/",
     "/industries/bookkeeping-services-marketing-automation/",
-    "/industries/business-advisory-marketing-services/",
+    
     "/industries/audit-assurance-marketing-agency/",
     "/tools/",
     "/tools/efficiency-quiz/",
