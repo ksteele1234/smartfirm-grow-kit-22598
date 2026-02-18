@@ -95,7 +95,7 @@ const ROICalculator = () => {
         <SEO
           title="Marketing ROI Calculator Results | SmartFirm"
           description="Your marketing ROI analysis for accounting firms. See your return on investment and growth potential."
-          canonicalUrl="https://smartfirm.io/tools/roi-calculator/"
+          canonicalUrl="https://smartfirm.io/tools/marketing-roi-calculator-for-accounting-firms/"
           pageType="tool"
           toolName="Marketing ROI Calculator"
           noindex={false}
@@ -222,7 +222,7 @@ const ROICalculator = () => {
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                    <a href="/get-started/">
+                    <a href="/get-started-accounting-firm-automation/">
                       Get Your Growth Strategy
                       <TrendingUp className="ml-2 h-4 w-4" />
                     </a>
@@ -253,9 +253,9 @@ const ROICalculator = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Marketing ROI Calculator | SmartFirm"
-        description="Calculate marketing ROI for your accounting firm. Estimate returns on ad spend and client lifetime value."
-        canonicalUrl="https://smartfirm.io/tools/roi-calculator/"
+        title="Marketing ROI Calculator for CPAs | SmartFirm.io"
+        description="Marketing ROI calculator for accounting firms — estimate returns on ad spend and calculate client lifetime value for your CPA practice."
+        canonicalUrl="https://smartfirm.io/tools/marketing-roi-calculator-for-accounting-firms/"
         pageType="tool"
         toolName="Marketing ROI Calculator"
         noindex={false}
@@ -270,14 +270,14 @@ const ROICalculator = () => {
                 Back to Tools
               </a>
             </Button>
-            <h2 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator</h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Marketing ROI Calculator for Accounting Firms</h2>
             <p className="text-sm text-muted-foreground mt-2 text-center" data-sf="entities">
-              Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+              Built by SmartFirm for accounting firms. See our <a href="/services/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
               <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
               <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
             </p>
             <p className="text-muted-foreground">
-              Enter your current marketing metrics to calculate your return on investment and identify optimization opportunities.
+              Calculate marketing ROI for your accounting firm — estimate returns on ad spend and client lifetime value for your CPA practice.
             </p>
           </div>
 

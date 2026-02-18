@@ -56,7 +56,7 @@ const GrowthAddOnsCard = () => {
           asChild
           className="bg-white hover:bg-background-light text-secondary border-2 border-secondary hover:border-accent text-base font-semibold py-3.5 px-7 rounded-card-sm transition-colors inline-block"
         >
-          <Link to="/services/add-ons/">
+          <Link to="/services/marketing-add-ons-for-accounting-firms/">
             Explore Add-On Services →
           </Link>
         </Button>
@@ -65,7 +65,7 @@ const GrowthAddOnsCard = () => {
           Not sure what you need?{" "}
           <Link
             id="growth-addons-book-call-btn"
-            to="/get-started/"
+            to="/get-started-accounting-firm-automation/"
             className="text-secondary underline hover:text-secondary-dark transition-colors"
           >
             Book a Free Call

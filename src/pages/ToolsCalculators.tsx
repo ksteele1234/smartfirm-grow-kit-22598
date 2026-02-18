@@ -53,7 +53,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
       duration: "5 minutes",
       results: "Instant scoring",
-      link: "/tools/efficiency-quiz/",
+      link: "/tools/accounting-firm-efficiency-assessment/",
       color: "from-primary to-secondary"
     },
     {
@@ -63,7 +63,7 @@ const ToolsCalculators = () => {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "3 minutes",
       results: "Personalized report",
-      link: "/tools/marketing-scorecard/",
+      link: "/tools/marketing-assessment-for-accountants/",
       color: "from-primary to-accent"
     },
     {
@@ -73,7 +73,7 @@ const ToolsCalculators = () => {
       icon: <Calculator className="h-8 w-8 text-secondary" />,
       duration: "2 minutes",
       results: "ROI projections",
-      link: "/tools/roi-calculator/",
+      link: "/tools/marketing-roi-calculator-for-accounting-firms/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -83,7 +83,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
       duration: "4 minutes",
       results: "Readiness score",
-      link: "/tools/automation-readiness-quiz/",
+      link: "/tools/automation-readiness-assessment-for-accountants/",
       color: "from-primary to-secondary"
     },
     {
@@ -93,7 +93,7 @@ const ToolsCalculators = () => {
       icon: <BarChart3 className="h-8 w-8 text-accent" />,
       duration: "5 minutes",
       results: "Bottleneck analysis",
-      link: "/tools/workflow-bottleneck-finder/",
+      link: "/tools/accounting-firm-workflow-audit-tool/",
       color: "from-primary to-accent"
     },
     {
@@ -103,7 +103,7 @@ const ToolsCalculators = () => {
       icon: <Calculator className="h-8 w-8 text-secondary" />,
       duration: "3 minutes",
       results: "ROI analysis",
-      link: "/tools/tech-stack-roi-calculator/",
+      link: "/tools/accounting-firm-technology-roi-calculator/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -113,7 +113,7 @@ const ToolsCalculators = () => {
       icon: <Users className="h-8 w-8 text-primary" />,
       duration: "3 minutes",
       results: "CLV metrics",
-      link: "/tools/client-lifetime-value-calculator/",
+      link: "/tools/client-lifetime-value-calculator-for-accountants/",
       color: "from-primary to-secondary"
     },
     {
@@ -123,7 +123,7 @@ const ToolsCalculators = () => {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       duration: "4 minutes",
       results: "Lead gen score",
-      link: "/tools/lead-generation-scorecard/",
+      link: "/tools/lead-generation-scorecard-for-accounting-firms/",
       color: "from-primary to-accent"
     },
     {
@@ -133,7 +133,7 @@ const ToolsCalculators = () => {
       icon: <CheckCircle className="h-8 w-8 text-secondary" />,
       duration: "5 minutes",
       results: "Modernization score",
-      link: "/tools/modern-firm-quiz/",
+      link: "/tools/modern-accounting-firm-assessment/",
       color: "from-secondary to-blue-grey"
     },
     {
@@ -143,7 +143,7 @@ const ToolsCalculators = () => {
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
       duration: "4 minutes",
       results: "Growth analysis",
-      link: "/tools/growth-potential-scorecard/",
+      link: "/tools/accounting-firm-growth-scorecard/",
       color: "from-primary to-secondary"
     }
   ];
@@ -151,8 +151,8 @@ const ToolsCalculators = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Free Accounting Firm Tools & Calculators | SmartFirm"
-        description="Accounting firm tools by SmartFirm include free calculators, scorecards, and assessments to measure growth and ROI for your practice."
+        title="Free Tools for Accounting Firms | SmartFirm.io"
+        description="Free tools for accounting firms — growth calculators, efficiency assessments, and scorecards to measure your practice and find opportunities."
         canonicalUrl="https://smartfirm.io/tools/"
         pageType="default"
         faqs={faqsToRender}
@@ -189,11 +189,11 @@ const ToolsCalculators = () => {
             <div className="max-w-4xl mx-auto text-center">
               {/* Force H1 for SEO */}
               <h1 className="text-display font-medium text-foreground mb-6">
-                Free Accounting Firm Tools & Calculators
+                Free Tools & Calculators for Accounting Firms
               </h1>
               <div id="sf-keyword-intro">
                 <p className="text-lead text-muted-foreground mb-8">
-                  Free accounting firm tools from SmartFirm help you assess your current state, identify opportunities, and benchmark against competitors through interactive calculators.
+                  Free tools for accounting firms — growth calculators, scorecards, and assessments to measure your practice and identify opportunities.
                 </p>
               </div>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -310,7 +310,7 @@ const ToolsCalculators = () => {
               </CardHeader>
               <CardContent className="text-center pt-0">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                  <a href="/get-started/">
+                  <a href="/get-started-accounting-firm-automation/">
                     Get Your Free Strategy Session
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>

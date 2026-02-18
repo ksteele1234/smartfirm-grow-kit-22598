@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const ScaleFirm = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-successfully");
+  const solutionFaqs = getFaqsForPath("/solutions/scale-accounting-firm-without-chaos");
   const solutionData: SolutionPageData = {
     id: "scale-firm",
-    title: "Scale Your Accounting Firm Successfully | SmartFirm",
-    slug: "scale-accounting-firm-successfully",
-    metaDescription: "Scale your accounting firm without chaos. Use automation and systematized processes to double capacity without proportional hiring with SmartFirm's growth systems.",
-    canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-successfully/",
+    title: "Scale Your Accounting Firm Without Chaos | SmartFirm.io",
+    slug: "scale-accounting-firm-without-chaos",
+    metaDescription: "Scale your accounting firm without chaos — automation and systematized processes that double capacity without proportional hiring.",
+    canonicalUrl: "https://smartfirm.io/solutions/scale-accounting-firm-without-chaos/",
     content: {},
-    heroTitle: "Scale Your Firm: Grow Successfully Without Chaos or Burnout",
-    heroSubtitle: "Hit a capacity wall where every new client means hiring more people? Scale your accounting firm successfully: automation handles routine work, systematized processes standardize delivery, and optimized workflows double revenue without proportional hiring.",
+    heroTitle: "Scale Your Accounting Firm Without the Chaos",
+    heroSubtitle: "Scale your accounting firm without chaos — use automation and systematized processes to double capacity without proportional hiring or burnout.",
     problemStatement: "Many accounting firm owners hit a ceiling where more clients means more stress, longer hours, and diminished quality. Without proper systems, scaling becomes overwhelming and unsustainable, leading to burnout and client dissatisfaction.",
     solutionOverview: "Our firm scaling solution provides the marketing automation, client onboarding systems, and operational frameworks needed to grow sustainably while maintaining service quality and work-life balance.",
     problemSolutionPairs: [

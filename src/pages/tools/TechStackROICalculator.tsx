@@ -153,7 +153,7 @@ const TechStackROICalculator = () => {
         <SEO
           title="Tech Stack ROI Calculator Results | SmartFirm"
           description="Your tech stack analysis results with cost savings and efficiency recommendations."
-          canonicalUrl="https://smartfirm.io/tools/tech-stack-roi-calculator/"
+          canonicalUrl="https://smartfirm.io/tools/accounting-firm-technology-roi-calculator/"
           pageType="tool"
           toolName="Tech Stack ROI Calculator"
           noindex={false}
@@ -276,9 +276,9 @@ const TechStackROICalculator = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Accounting Firm Technology ROI Calculator | SmartFirm"
-        description="Calculate your accounting firm technology ROI by inputting software costs, time savings, error reduction, and capacity gains to justify technology investments."
-        canonicalUrl="https://smartfirm.io/tools/tech-stack-roi-calculator/"
+        title="Technology ROI Calculator for CPAs | SmartFirm.io"
+        description="Technology ROI calculator for accounting firms — input software costs, time savings, and capacity gains to justify your tech investment."
+        canonicalUrl="https://smartfirm.io/tools/accounting-firm-technology-roi-calculator/"
         pageType="tool"
         toolName="Tech Stack ROI Calculator"
         noindex={false}
@@ -291,10 +291,10 @@ const TechStackROICalculator = () => {
             Back to Tools
           </Link>
 
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Technology Roi | SmartFirm</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Technology ROI Calculator</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-              Our accounting firm technology ROI calculator helps you quantify the return on technology investments by measuring time savings, error reduction, capacity increases, and client satisfaction improvements.
+              Calculate your accounting firm technology ROI by inputting software costs, time savings, error reduction, and capacity gains.
             </p>
           </div>
 

@@ -64,25 +64,25 @@ const Solutions = () => {
       icon: <Users className="h-8 w-8 text-accent" />,
       title: "Get More Referrals Without Asking",
       subtitle: "Turn Happy Clients into Advocates, Get Found by People Looking for CPAs, Build Trust Before You Meet, Stay Top-of-Mind Year-Round.",
-      link: "/solutions/get-more-referrals-without-asking/"
+      link: "/solutions/get-more-referrals-for-cpa-firm-without-asking/"
     },
     {
       icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Work Less, Earn More",
       subtitle: "Stop Chasing Clients for Documents, Eliminate Repetitive Tasks, Get Paid Faster Without Awkward Calls, Focus on High-Value Work Only.",
-      link: "/solutions/work-less-earn-more/"
+      link: "/solutions/work-less-earn-more-as-a-cpa/"
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
       title: "Grow Without the Growing Pains",
       subtitle: "Handle More Clients Without More Stress, Scale Without Hiring Full-Time Staff, Maintain Quality While Growing, Plan for Growth Without Guesswork.",
-      link: "/solutions/grow-without-growing-pains/"
+      link: "/solutions/grow-accounting-firm-without-growing-pains/"
     },
     {
       icon: <Shield className="h-8 w-8 text-primary" />,
       title: "Protect Your Practice & Your Future",
       subtitle: "Secure Your Client Data Like a Big Firm, Plan Your Exit Strategy, Maximize Your Practice Value, Ensure Business Continuity.",
-      link: "/solutions/protect-practice-and-future/"
+      link: "/solutions/protect-accounting-practice-from-data-breaches/"
     },
     {
       icon: <UserX className="h-8 w-8 text-accent" />,
@@ -95,8 +95,8 @@ const Solutions = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Solutions For Accounting Firms | SmartFirm"
-        description="Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks. Automate what's slowing you down and grow without the stress."
+        title="Solutions for Accounting Firms | SmartFirm.io"
+        description="Solutions for overwhelmed accounting firms drowning in manual work. Fix burnout, client churn, and inefficiency with proven automation."
         canonicalUrl="https://smartfirm.io/solutions/"
         pageType="solution"
         faqs={faqsToRender}
@@ -139,17 +139,16 @@ const Solutions = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">
-              Stop Feeling Overwhelmed:<br />
-              Solutions For Accounting Firms
+              Solutions for Overwhelmed Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
-                Solutions for accounting firms drowning in manual work, losing clients to tech-savvier competitors, and burning out from 60-hour weeks: automate what's slowing you down, reclaim your time, and grow without the stress.
+                Solutions for overwhelmed accounting firms drowning in manual work, losing clients, and burning out from 60-hour weeks — automate what's slowing you down.
               </p>
             </div>
             <div className="mt-12 flex justify-center">
               <Button variant="coral" size="hero" asChild>
-                <a href="/get-started/">Book Your Strategy Call</a>
+                <a href="/get-started-accounting-firm-automation/">Book Your Strategy Call</a>
               </Button>
             </div>
           </div>
@@ -308,7 +307,7 @@ const Solutions = () => {
 
                   <div className="text-center pt-6">
                     <Button size="lg" variant="default" asChild>
-                      <a href="/solutions/get-more-referrals-without-asking/">
+                      <a href="/solutions/get-more-referrals-for-cpa-firm-without-asking/">
                         Learn About This Solution
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -337,7 +336,7 @@ const Solutions = () => {
                 variant="coral"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -347,7 +346,7 @@ const Solutions = () => {
                 variant="secondary"
                 asChild
               >
-                <a href="/leading-marketing-services-for-accounting-firms/">
+                <a href="/services/">
                   View All Services
                 </a>
               </Button>

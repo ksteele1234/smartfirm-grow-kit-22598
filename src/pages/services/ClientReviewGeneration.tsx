@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const ClientReviewGeneration = () => {
   const serviceData: ServicePageData = {
     id: "client-review-generation",
-    title: "Automated Review Generation for CPAs | SmartFirm",
+    title: "Automated Review Generation for CPAs | SmartFirm.io",
     slug: "client-review-generation",
-    metaDescription: "Automated review generation for CPAs: collect 3-5x more five-star reviews, convert 2-3x more website visitors, and build trust on autopilot.",
+    metaDescription: "Automated review generation for CPAs — systematically request Google reviews at the right time. Triple five-star reviews with SmartFirm.io.",
     canonicalUrl: "https://smartfirm.io/services/automated-review-generation-for-cpas/",
     content: {},
     heroTitle: "Automated Review Generation for CPAs",
     heroSubtitle: "Collect 3-5x more five-star reviews through perfectly-timed requests, convert 2-3x more website visitors, and build trust on autopilot in 90 days.",
-    heroDescription: "Automated review generation for CPAs systematically requests Google reviews at optimal times, tripling five-star reviews and doubling website conversion rates within 90 days.",
+    heroDescription: "Automated review generation for CPAs systematically requests Google reviews at the right time — tripling five-star reviews and doubling conversion rates.",
     benefits: [
       {
         title: "Triple Your 5-Star Reviews in 90 Days",
@@ -98,7 +98,7 @@ const ClientReviewGeneration = () => {
     ctaTitle: "Start Building Your Review Reputation",
     ctaDescription: "Discover how our automated review generation system can build trust and attract more clients to your accounting practice.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

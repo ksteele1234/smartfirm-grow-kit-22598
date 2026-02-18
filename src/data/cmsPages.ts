@@ -102,7 +102,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Marketing?',
     ctaDescription: "Let's implement a marketing automation system that grows your firm while you focus on serving clients.",
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/'
   },
   'seo-for-accountants': {
     id: 'seo-for-accountants',
@@ -156,7 +156,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Rank Higher?',
     ctaDescription: 'Let\'s build an SEO strategy that brings qualified clients to your firm.',
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/'
   },
   'client-onboarding-automation': {
     id: 'client-onboarding-automation',
@@ -225,7 +225,7 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Client Onboarding?',
     ctaDescription: 'Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.',
     ctaButtonText: 'Schedule a Free Consultation',
-    ctaButtonLink: '/get-started/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/'
   }
 };
 

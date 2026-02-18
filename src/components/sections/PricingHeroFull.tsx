@@ -121,7 +121,7 @@ const PricingHeroFull = () => {
             size="lg"
             className="w-full bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
           >
-            <Link to="/get-started/">
+            <Link to="/get-started-accounting-firm-automation/">
               Book a Free Call
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>

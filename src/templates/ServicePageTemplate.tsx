@@ -205,7 +205,7 @@ const ServicePageTemplate = ({ data, beforeFinalCta }: ServicePageTemplateProps)
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild
                 >
-                  <a href="/get-started/">
+                  <a href="/get-started-accounting-firm-automation/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>

@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const EmailMarketing = () => {
   const serviceData: ServicePageData = {
     id: "email-marketing",
-    title: "Email Marketing for Accounting Firms | SmartFirm",
+    title: "Email Marketing for Accounting Firms | SmartFirm.io",
     slug: "email-marketing",
-    metaDescription: "Email marketing for CPAs: automated newsletters, personalized campaigns, and strategic touchpoints that increase retention 25% and generate $20K-$50K in upsells.",
-    canonicalUrl: "https://smartfirm.io/services/email-marketing-for-cpas/",
+    metaDescription: "Email marketing for accounting firms — automated newsletters, tax reminders, and personalized campaigns that reduce churn and drive referrals.",
+    canonicalUrl: "https://smartfirm.io/services/email-marketing-for-accounting-firms/",
     content: {},
-    heroTitle: "Email Marketing: Retain and Grow Your Accounting Firm's Client Base",
+    heroTitle: "Email Marketing for Accounting Firms",
     heroSubtitle: "Keep clients engaged year-round, increase retention by 25%, and generate $20K-$50K in upsells through automated newsletters and personalized campaigns.",
-    heroDescription: "Email marketing for CPAs delivers automated newsletters, tax reminders, and personalized campaigns that strengthen relationships, reduce churn, and create upsell opportunities.",
+    heroDescription: "Email marketing for accounting firms delivers automated newsletters, tax reminders, and personalized campaigns that strengthen relationships and reduce churn.",
     benefits: [
       {
         title: "Keep Clients Engaged Year-Round",
@@ -98,7 +98,7 @@ const EmailMarketing = () => {
     ctaTitle: "Start Nurturing Client Relationships",
     ctaDescription: "Discover how strategic email marketing can strengthen client relationships and drive business growth.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

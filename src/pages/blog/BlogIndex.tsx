@@ -114,8 +114,8 @@ const BlogIndex = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO
-        title="Blog | SmartFirm - Firm Automation Insights"
-        description="Expert insights on marketing automation, client acquisition, and growth strategies for accounting and CPA firms. Stay ahead with the latest industry trends."
+        title="Accounting Firm Automation Blog | SmartFirm.io"
+        description="Accounting firm automation systems, workflow optimization, and growth strategies. Expert insights to help CPAs scale with less manual work."
         canonicalUrl="https://smartfirm.io/blog/"
       />
       <Header />
@@ -131,10 +131,10 @@ const BlogIndex = () => {
         <section className="bg-gradient-to-br from-[hsl(var(--deep-navy))] via-[hsl(var(--ocean-blue))] to-[hsl(var(--professional-teal))] py-16 md:py-24">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              SmartFirm Blog
+              Accounting Firm Automation Systems & Insights
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-              Expert insights on marketing automation, client acquisition, and growth strategies for accounting firms.
+              Accounting firm automation systems are how modern CPAs reduce manual work, tighten workflows, and free up capacity to serve more clients.
             </p>
           </div>
         </section>
@@ -181,7 +181,7 @@ const BlogIndex = () => {
                 <p className="text-muted-foreground mb-8">
                   Check back soon for new articles and insights.
                 </p>
-                <Link to="/get-started/">
+                <Link to="/get-started-accounting-firm-automation/">
                   <Button>Get Started with SmartFirm</Button>
                 </Link>
               </div>
@@ -268,7 +268,7 @@ const BlogIndex = () => {
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Discover how SmartFirm can help you automate your marketing, attract more clients, and scale your practice.
             </p>
-            <Link to="/get-started/">
+            <Link to="/get-started-accounting-firm-automation/">
               <Button size="lg" className="bg-[hsl(var(--coral))] hover:bg-[hsl(var(--coral))]/90 text-white">
                 Get Started Today
               </Button>

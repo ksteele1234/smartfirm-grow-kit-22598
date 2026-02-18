@@ -65,7 +65,7 @@ const fetchPageData = async (type: string, slug: string): Promise<any> => {
     ctaTitle: "Ready to Transform Your Marketing?",
     ctaDescription: "Join hundreds of accounting firms already using our platform to grow their business.",
     ctaButtonText: "Get Started Today",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   // Return appropriate sample data based on type
@@ -122,7 +122,7 @@ const TemplateRouter = ({ type }: TemplateRouterProps) => {
       ctaTitle: "Ready to Transform Your Marketing?",
       ctaDescription: "Join hundreds of accounting firms already using our platform.",
       ctaButtonText: "Get Started Today",
-      ctaButtonLink: "/get-started/"
+      ctaButtonLink: "/get-started-accounting-firm-automation/"
     } as ServicePageData,
     
     solution: {

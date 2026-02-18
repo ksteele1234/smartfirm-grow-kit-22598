@@ -8,7 +8,7 @@ const ServicesSection = () => {
       icon: Zap,
       title: "Automated Lead Follow-up",
       description: "Convert inquiries into clients with CPA-focused email & SMS automation.",
-      link: "/services/automated-lead-follow-up-for-cpas/"
+      link: "/services/automated-lead-follow-up-for-accounting-firms/"
     },
     {
       icon: Star,
@@ -26,13 +26,13 @@ const ServicesSection = () => {
       icon: Users,
       title: "Social Media Management",
       description: "Professional content that positions your firm as a trusted authority.",
-      link: "/services/social-media-management-for-cpas/"
+      link: "/services/social-media-management-for-accounting-firms/"
     },
     {
       icon: Globe,
       title: "Website Optimization",
       description: "Modern, SEO-friendly websites for accountants that convert.",
-      link: "/services/professional-website-design-for-accounting-firms/"
+      link: "/services/website-design-for-accounting-firms/"
     },
     {
       icon: Phone,
@@ -115,7 +115,7 @@ const ServicesSection = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="services-section-book-call-btn" variant="vibrant-teal" size="lg" className="group" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

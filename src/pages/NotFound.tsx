@@ -85,7 +85,7 @@ const NotFound = () => {
             </Button>
 
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <a href="/contact/">
+              <a href="/accounting-firm-automation-consultation/">
                 Contact Support
               </a>
             </Button>
@@ -109,7 +109,7 @@ const NotFound = () => {
               <a href="/resources/" className="text-primary hover:underline">
                 Resources
               </a>
-              <a href="/about/" className="text-primary hover:underline">
+              <a href="/marketing-agency-for-accounting-firms/" className="text-primary hover:underline">
                 About Us
               </a>
             </div>

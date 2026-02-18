@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {
     id: "website-design",
-    title: "Accounting Firm Website Design | SmartFirm",
+    title: "Website Design for Accounting Firms | SmartFirm.io",
     slug: "website-design",
-    metaDescription: "Accounting firm website design: mobile-optimized, conversion-focused, and SEO-ready. Launch in 2-4 weeks and convert 3-5x more visitors into clients.",
-    canonicalUrl: "https://smartfirm.io/services/professional-website-design-for-accounting-firms/",
+    metaDescription: "Website design for accounting firms — mobile-optimized, conversion-focused sites with strategic CTAs and SEO foundations. Built by SmartFirm.io.",
+    canonicalUrl: "https://smartfirm.io/services/website-design-for-accounting-firms/",
     content: {},
-    heroTitle: "Accounting Firm Website Design",
+    heroTitle: "Website Design for Accounting Firms",
     heroSubtitle: "Convert 3-5x more visitors with mobile-optimized layouts, strategic CTAs, and compliance-ready content. Launch in 2-4 weeks, not months.",
-    heroDescription: "Accounting firm website design delivers mobile-optimized, conversion-focused websites with strategic CTAs and SEO foundations that convert visitors into qualified leads.",
+    heroDescription: "Website design for accounting firms delivers mobile-optimized, conversion-focused sites with strategic CTAs and SEO foundations that convert visitors into clients.",
     benefits: [
       {
         title: "Turn Visitors Into Qualified Leads",
@@ -98,7 +98,7 @@ const WebsiteDesign = () => {
     ctaTitle: "Get a Website That Converts",
     ctaDescription: "Let's design a professional website that establishes credibility and generates leads for your accounting firm.",
     ctaButtonText: "View Portfolio",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

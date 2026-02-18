@@ -97,7 +97,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.2 }}
           >
             <Link
-              to="/services/professional-website-design-for-accounting-firms/"
+              to="/services/website-design-for-accounting-firms/"
               onClick={() => window.scrollTo(0, 0)}
               className="block bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
             >
@@ -156,7 +156,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.4 }}
           >
             <Link
-              to="/services/email-marketing-for-cpas/"
+              to="/services/email-marketing-for-accounting-firms/"
               onClick={() => window.scrollTo(0, 0)}
               className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
             >
@@ -182,7 +182,7 @@ export const CompleteMarketingSolutions = () => {
             transition={{ delay: 0.4 }}
           >
             <Link
-              to="/services/accounting-firm-technology-consulting/"
+              to="/services/technology-consulting-for-accounting-firms/"
               onClick={() => window.scrollTo(0, 0)}
               className="block h-full bg-white/[0.08] backdrop-blur-[20px] border border-on-dark-subtle rounded-[20px] p-card elevation-2 hover-lift hover:elevation-3 color-transition"
             >

@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const WorkLessEarnMore = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more");
+  const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more-as-a-cpa");
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
-    title: "Exhausted From 60-Hour Weeks? Work Less & Earn More As A CPA | SmartFirm",
-    slug: "work-less-earn-more",
-    metaDescription: "Burned out working 60-hour weeks for the same income? Work less earn more as a CPA through automation, value-based pricing, and systematized delivery that doubles revenue while reducing hours by 30%.",
-    canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more/",
+    title: "Work Less, Earn More as a CPA | SmartFirm.io",
+    slug: "work-less-earn-more-as-a-cpa",
+    metaDescription: "Work less, earn more as a CPA — automation, value-based pricing, and systematized delivery that cuts your hours while growing revenue.",
+    canonicalUrl: "https://smartfirm.io/solutions/work-less-earn-more-as-a-cpa/",
     content: {},
-    heroTitle: "Exhausted From 60-Hour Weeks? Work Less & Earn More",
-    heroSubtitle: "Burned out working endless hours for the same income? Work less earn more as a CPA: automation handles repetitive tasks, value pricing replaces hourly billing, and systematized workflows free 15+ hours weekly while increasing revenue 50-150%.",
+    heroTitle: "Exhausted From 60-Hour Weeks? Work Less, Earn More as a CPA",
+    heroSubtitle: "Work less, earn more as a CPA through automation, value-based pricing, and systematized delivery that cuts your hours while growing your revenue.",
     problemStatement: "Too many CPAs work long hours for modest returns, trapped in time-for-money thinking without systems to scale efficiency and profitability.",
     solutionOverview: "Transform your practice into a highly efficient, profitable business that generates more revenue with fewer hours through automation, premium positioning, and optimized workflows.",
     problemSolutionPairs: [

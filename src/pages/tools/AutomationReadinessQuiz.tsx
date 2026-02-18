@@ -130,7 +130,7 @@ const AutomationReadinessQuiz = () => {
         <SEO
           title="Automation Readiness Quiz Results | SmartFirm"
           description="Your automation readiness score with recommendations to improve efficiency in your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz/"
+          canonicalUrl="https://smartfirm.io/tools/automation-readiness-assessment-for-accountants/"
           pageType="tool"
           toolName="Automation Readiness Quiz"
           noindex={false}
@@ -190,9 +190,9 @@ const AutomationReadinessQuiz = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Automation Readiness Assessment for Accountants"
-        description="Discover if you're ready for automation with our readiness assessment for accountants evaluating processes, technology, team, and client base for automation."
-        canonicalUrl="https://smartfirm.io/tools/automation-readiness-quiz/"
+        title="Automation Readiness Assessment | SmartFirm.io"
+        description="Automation readiness assessment for accountants — evaluate your processes, technology, team, and client base for automation potential."
+        canonicalUrl="https://smartfirm.io/tools/automation-readiness-assessment-for-accountants/"
         pageType="tool"
         toolName="Automation Readiness Quiz"
         noindex={false}
@@ -205,10 +205,10 @@ const AutomationReadinessQuiz = () => {
             Back to Tools
           </Link>
 
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment For Accountants</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Automation Readiness Assessment for Accountants</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-              Our automation readiness assessment for accountants evaluates your current processes, technology infrastructure, team capabilities, and client base to determine your optimal automation strategy and implementation timeline.
+              Discover if you're ready for automation with our readiness assessment — evaluating your processes, technology, team, and client base.
             </p>
           </div>
 

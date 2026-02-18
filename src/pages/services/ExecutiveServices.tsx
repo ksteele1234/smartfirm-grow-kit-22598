@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const ExecutiveServices = () => {
   const serviceData: ServicePageData = {
     id: "executive-services",
-    title: "Fractional CIO for Accounting Firms | SmartFirm",
+    title: "Fractional CIO for Accounting Firms | SmartFirm.io",
     slug: "executive-services",
-    metaDescription: "Fractional CIO for accounting firms: strategic technology leadership, vendor management, security assessments, and digital transformation at a fraction of full-time cost.",
+    metaDescription: "Fractional CIO for accounting firms — technology roadmaps, vendor management, and digital transformation without a $150K+ full-time hire.",
     canonicalUrl: "https://smartfirm.io/services/fractional-cio-for-accounting-firms/",
     content: {},
     heroTitle: "Fractional CIO for Accounting Firms",
     heroSubtitle: "Strategic technology leadership, vendor management, and digital transformation planning at a fraction of full-time CIO cost. Enable 2-3x faster growth.",
-    heroDescription: "Fractional CIO for accounting firms delivers technology roadmaps, vendor management, security assessments, and digital transformation planning without $150K+ salary commitment.",
+    heroDescription: "Fractional CIO for accounting firms delivers technology roadmaps, vendor management, security assessments, and digital transformation planning — without a $150K hire.",
     benefits: [
       {
         title: "Strategic Guidance from Former Practitioners",
@@ -98,7 +98,7 @@ const ExecutiveServices = () => {
     ctaTitle: "Access Executive-Level Expertise",
     ctaDescription: "Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.",
     ctaButtonText: "Explore Services",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

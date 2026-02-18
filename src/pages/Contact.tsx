@@ -36,8 +36,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Contact SmartFirm | Firm Automation & Growth Systems"
-        description="Contact SmartFirm to learn about firm automation, workflow optimization, and growth systems for accounting firms. Schedule a consultation today."
+        title="Contact SmartFirm.io | Accounting Firm Automation"
+        description="Contact SmartFirm.io for an accounting firm automation consultation. Discuss workflow optimization, AI, and growth systems for your practice."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -46,7 +46,7 @@ const Contact = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Contact Us", url: "/contact/" }
+          { name: "Contact Us", url: "/accounting-firm-automation-consultation/" }
         ]}
         faqs={[
           {
@@ -103,11 +103,11 @@ const Contact = () => {
         </div>
         <div className="container relative z-10 mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-8 drop-shadow-lg">
-            Contact SmartFirm for Firm Automation & Growth Systems
+            Schedule Your Accounting Firm Automation Consultation
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">
-              Ready to hire a marketing agency for accounting firms that understands compliance, deadlines, and growth? Contact SmartFirm today.
+              Contact SmartFirm.io to discuss automation, workflow optimization, AI implementation, and growth systems for your accounting firm.
             </p>
           </div>
         </div>

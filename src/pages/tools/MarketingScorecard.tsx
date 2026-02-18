@@ -139,7 +139,7 @@ const MarketingScorecard = () => {
         <SEO
           title="Marketing Scorecard Results | SmartFirm"
           description="Your marketing assessment results with personalized recommendations for accounting firm growth."
-          canonicalUrl="https://smartfirm.io/tools/marketing-scorecard/"
+          canonicalUrl="https://smartfirm.io/tools/marketing-assessment-for-accountants/"
           pageType="tool"
           toolName="Marketing Scorecard"
           noindex={false}
@@ -231,7 +231,7 @@ const MarketingScorecard = () => {
 
               <div className="mt-8 text-center">
                 <Button size="lg" variant="coral" asChild>
-                  <a href="/get-started/">
+                  <a href="/get-started-accounting-firm-automation/">
                     Book a Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>

@@ -3,16 +3,16 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const TaxPreparation = () => {
-  const industryFaqs = getFaqsForPath("/industries/tax-preparation");
+  const industryFaqs = getFaqsForPath("/industries/automation-for-tax-preparation-firms");
   const industryData: IndustryPageData = {
     id: "tax-preparation",
-    title: "Automation For Tax Preparation Firms | SmartFirm",
-    slug: "tax-preparation-marketing-solutions",
-    metaDescription: "Automation for tax preparation firms. Streamline seasonal workflows, automate client acquisition, and smooth revenue fluctuations with SmartFirm's systems.",
-    canonicalUrl: "https://smartfirm.io/industries/tax-preparation-marketing-solutions/",
+    title: "Automation for Tax Preparation Firms | SmartFirm.io",
+    slug: "automation-for-tax-preparation-firms",
+    metaDescription: "Automation for tax preparation firms — solve seasonal revenue swings, automate client acquisition, streamline onboarding, and fill off-season.",
+    canonicalUrl: "https://smartfirm.io/industries/automation-for-tax-preparation-firms/",
     content: {},
-    heroTitle: "Automation For Tax Preparation Firms: Streamline Seasonal Workflows",
-    heroSubtitle: "Marketing for tax preparation firms solves seasonal revenue swings and manual lead follow-up: automate client acquisition, streamline onboarding, and fill your pipeline year-round—not just January through April—when tax firms waste 15+ hours weekly during peak season.",
+    heroTitle: "Automation for Tax Preparation Firms",
+    heroSubtitle: "Automation for tax preparation firms solves seasonal revenue swings and manual lead follow-up — streamline client acquisition and fill your off-season.",
     industryOverview: "Tax preparation businesses face unique seasonal challenges - intense demand during tax season followed by slower summer months. Our marketing solutions help you maximize tax season revenue while building services that generate income year-round.",
     challenges: [
       {
@@ -35,22 +35,22 @@ const TaxPreparation = () => {
       {
         title: "Seasonal Marketing Campaigns",
         description: "Maximize visibility and client acquisition during peak tax season",
-        link: "/services/marketing-automation"
+        link: "/services/marketing-automation-for-accounting-firms"
       },
       {
         title: "Year-Round Revenue Development",
         description: "Build additional services to generate consistent monthly income",
-        link: "/services/business-optimization"
+        link: "/services/business-optimization-for-accounting-firms"
       },
       {
         title: "Local SEO Optimization",
         description: "Dominate local search results for tax preparation services",
-        link: "/services/seo-for-accountants"
+        link: "/services/seo-for-accounting-firms"
       },
       {
         title: "Referral Program Management",
         description: "Systematic referral generation from satisfied clients",
-        link: "/solutions/get-more-referrals"
+        link: "/solutions/get-more-referrals-for-cpa-firm-without-asking"
       }
     ],
     ctaTitle: "Ready to Transform Your Tax Business?",

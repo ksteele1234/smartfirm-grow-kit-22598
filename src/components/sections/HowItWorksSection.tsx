@@ -90,14 +90,14 @@ const HowItWorksSection = () => {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="how-it-works-book-call-btn" variant="hero" size="hero" className="group" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   <Rocket className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <Phone className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 </a>
               </Button>
               <Button variant="outline" size="hero" className="group" asChild>
-                <a href="/growth-calculator/">
+                <a href="/accounting-firm-growth-calculator/">
                   <Calculator className="mr-2 h-5 w-5" />
                   Calculate Your Growth
                 </a>

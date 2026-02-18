@@ -112,8 +112,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="About SmartFirm | Marketing Agency for Accounting Firms"
-        description="SmartFirm is a marketing company for accountants, CPAs, and bookkeepers, providing automation and growth systems to help firms scale without adding staff."
+        title="About SmartFirm.io | Agency for Accounting Firms"
+        description="SmartFirm.io is a marketing agency and automation consultancy for accounting firms, CPAs, and bookkeepers. Scale without adding staff."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -122,7 +122,7 @@ const About = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "About Us", url: "/about/" }
+          { name: "About Us", url: "/marketing-agency-for-accounting-firms/" }
         ]}
       />
       <Header />
@@ -157,11 +157,11 @@ const About = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
-              About SmartFirm: Firm Automation & Consulting for Accountants
+              About SmartFirm.io: Agency for Accounting Firms
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed mb-4 drop-shadow-md">
-                SmartFirm is an automation company for accountants, CPAs, and bookkeepers, providing automation and growth systems to help firms scale without adding staff.
+                SmartFirm.io is a marketing agency and automation consultancy for accountants, CPAs, and bookkeepers — providing systems to help firms scale without adding staff.
               </p>
             </div>
           </div>
@@ -509,7 +509,7 @@ const About = () => {
                 variant="white-on-dark"
                 asChild
               >
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Contact Us Today
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -519,7 +519,7 @@ const About = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Start Your Growth Journey
                 </a>
               </Button>

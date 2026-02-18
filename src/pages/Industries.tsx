@@ -70,28 +70,28 @@ const Industries = () => {
       icon: <User className="h-8 w-8 text-primary" />,
       title: "Solo CPAs Like You",
       description: "The Solo CPA's Survival Guide, Solo Practice Optimization, Personal Productivity Solutions, Growth Without Complexity.",
-      link: "/get-started",
+      link: "/get-started-accounting-firm-automation",
       size: "Solo Practice"
     },
     {
       icon: <Users className="h-8 w-8 text-accent" />,
       title: "Small Accounting Firms (2-10 employees)",
       description: "Small Firm Challenges, Team Collaboration Solutions, Workflow Standardization.",
-      link: "/get-started",
+      link: "/get-started-accounting-firm-automation",
       size: "2-10 Employees"
     },
     {
       icon: <Building className="h-8 w-8 text-primary" />,
       title: "Mid-Sized Accounting Firms (11-50 employees)",
       description: "Growth & Scalability, Advanced Automation, Leadership & Management.",
-      link: "/get-started",
+      link: "/get-started-accounting-firm-automation",
       size: "11-50 Employees"
     },
     {
       icon: <Building2 className="h-8 w-8 text-accent" />,
       title: "Large Accounting Firms (50+ employees)",
       description: "Enterprise Solutions, Strategic Partnerships, Innovation & Future-Proofing.",
-      link: "/get-started",
+      link: "/get-started-accounting-firm-automation",
       size: "50+ Employees"
     }
   ];
@@ -100,35 +100,35 @@ const Industries = () => {
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
       title: "Forensic Accounting",
-      link: "/get-started"
+      link: "/get-started-accounting-firm-automation"
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-accent" />,
       title: "Wealth Management",
-      link: "/get-started"
+      link: "/get-started-accounting-firm-automation"
     },
     {
       icon: <FileText className="h-6 w-6 text-primary" />,
       title: "Audit & Assurance",
-      link: "/industries/audit-assurance"
+      link: "/industries/marketing-for-audit-firms"
     },
     {
       icon: <PieChart className="h-6 w-6 text-accent" />,
       title: "Bookkeeping Services",
-      link: "/industries/bookkeeping-services"
+      link: "/industries/marketing-for-bookkeeping-firms"
     },
     {
       icon: <Calculator className="h-6 w-6 text-primary" />,
       title: "Tax Preparation",
-      link: "/industries/tax-preparation"
+      link: "/industries/automation-for-tax-preparation-firms/"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Firm Automation by Industry | SmartFirm"
-        description="Firm automation and growth solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices with proven results."
+        title="Firm Automation by Industry | SmartFirm.io"
+        description="Accounting firm automation by industry — solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices."
         canonicalUrl="https://smartfirm.io/industries/"
         pageType="industry"
         faqs={faqsToRender}
@@ -171,16 +171,16 @@ const Industries = () => {
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-white mb-6 drop-shadow-lg">
-              Firm Automation by Industry: Solutions for Your Niche
+              Accounting Firm Automation by Industry
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-text-lg mx-auto leading-relaxed drop-shadow-md">
-                Marketing for accountants requires understanding unique challenges and opportunities in each specialization. SmartFirm delivers AI-driven, customized solutions with predictive analytics that understand your specific industry needs, intelligent client targeting, and data-driven growth potential.
+                Accounting firm automation by industry — tailored solutions for solo CPAs, small firms, bookkeepers, tax prep, and business advisory practices.
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button variant="coral" size="hero" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book Your Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -370,7 +370,7 @@ const Industries = () => {
 
                   <div className="text-center pt-4">
                     <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                      <a href="/industries/tax-preparation">
+                      <a href="/industries/automation-for-tax-preparation-firms/">
                         Explore Tax Firm Strategies
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -417,7 +417,7 @@ const Industries = () => {
                 variant="white-on-dark"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book an Industry-Specific Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -427,7 +427,7 @@ const Industries = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/leading-marketing-services-for-accounting-firms">
+                <a href="/services/">
                   View All Services
                 </a>
               </Button>

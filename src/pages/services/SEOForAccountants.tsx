@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const SEOForAccountants = () => {
   const serviceData: ServicePageData = {
     id: "seo-for-accountants",
-    title: "SEO For Accounting Firms That Dominates Local Search | SmartFirm",
+    title: "SEO for Accounting Firms | SmartFirm.io",
     slug: "seo-for-accountants",
-    metaDescription: "SEO for accounting firms gets you found by high-intent prospects searching 'CPA near me': dominate local search results and deliver 3x more qualified leads without paid ads.",
+    metaDescription: "SEO for accounting firms — AI-powered local search optimization that helps CPAs rank higher on Google and attract qualified prospects.",
     canonicalUrl: "https://smartfirm.io/services/seo-for-accounting-firms/",
     content: {},
-    heroTitle: "SEO For Accounting Firms",
+    heroTitle: "SEO for Accounting Firms That Dominates Local Search",
     heroSubtitle: "SEO for accounting firms gets you found by high-intent prospects searching 'CPA near me': dominate local search results and deliver 3x more qualified leads without paid ads when 80% of invisible firms lose clients to page-one competitors.",
-    heroDescription: "Our AI-powered SEO for accounting firms uses predictive analytics to help you rank higher on Google, attract qualified prospects through data-driven optimization, and grow your practice with intelligent organic search strategies.",
+    heroDescription: "SEO for accounting firms uses AI-powered local search optimization to help CPAs rank higher on Google and attract qualified prospects.",
     benefits: [
       {
         title: "Dominate 'CPA Near Me' Searches",
@@ -98,7 +98,7 @@ const SEOForAccountants = () => {
     ctaTitle: "Ready to Dominate Local Search Results?",
     ctaDescription: "Let's optimize your website to attract more qualified prospects from Google search.",
     ctaButtonText: "Talk to Us",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

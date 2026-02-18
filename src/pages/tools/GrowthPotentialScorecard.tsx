@@ -169,7 +169,7 @@ const GrowthPotentialScorecard = () => {
           <SEO
             title="Growth Potential Scorecard | SmartFirm"
             description="Calculate your firm's growth potential. Analyze revenue, team size, and market positioning for accounting firms."
-            canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard/"
+            canonicalUrl="https://smartfirm.io/tools/accounting-firm-growth-scorecard/"
             pageType="tool"
             toolName="Growth Potential Scorecard"
             noindex={false}
@@ -193,7 +193,7 @@ const GrowthPotentialScorecard = () => {
         <SEO
           title="Growth Potential Scorecard Results | SmartFirm"
           description="Your growth potential analysis with benchmarking and recommendations for your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard/"
+          canonicalUrl="https://smartfirm.io/tools/accounting-firm-growth-scorecard/"
           pageType="tool"
           toolName="Growth Potential Scorecard"
           noindex={false}
@@ -338,9 +338,9 @@ const GrowthPotentialScorecard = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Accounting Firm Growth Scorecard Tool | SmartFirm"
-        description="Use our accounting firm growth scorecard to rate your marketing, operations, client experience, technology, and team to identify growth constraints."
-        canonicalUrl="https://smartfirm.io/tools/growth-potential-scorecard/"
+        title="Accounting Firm Growth Scorecard | SmartFirm.io"
+        description="Accounting firm growth scorecard — rate your marketing, operations, client experience, technology, and team to find growth constraints."
+        canonicalUrl="https://smartfirm.io/tools/accounting-firm-growth-scorecard/"
         pageType="tool"
         toolName="Growth Potential Scorecard"
         noindex={false}
@@ -356,7 +356,7 @@ const GrowthPotentialScorecard = () => {
           <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Growth Scorecard</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-              This accounting firm growth scorecard evaluates your marketing effectiveness, operational efficiency, client experience quality, technology adoption, and team capabilities to pinpoint growth constraints.
+              Use our accounting firm growth scorecard to rate your marketing, operations, client experience, technology, and team — then find your growth constraints.
             </p>
           </div>
 

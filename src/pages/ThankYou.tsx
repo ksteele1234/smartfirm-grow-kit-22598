@@ -113,7 +113,7 @@ const ThankYou = () => {
               <a href="/resources/" className="text-primary hover:underline">
                 Resources
               </a>
-              <a href="/about/" className="text-primary hover:underline">
+              <a href="/marketing-agency-for-accounting-firms/" className="text-primary hover:underline">
                 About Us
               </a>
             </div>

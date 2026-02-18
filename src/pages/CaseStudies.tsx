@@ -16,7 +16,7 @@ const CaseStudies = () => {
     metric: "419% ROI",
     firmSize: "Small to Mid-sized Firm",
     summary: "How one firm cut payroll processing from 8 hours to 30 minutes, achieving a 419% ROI in the first year through strategic automation.",
-    slug: "payroll-automation-roi",
+    slug: "payroll-automation-roi-for-accounting-firms",
     timeReduction: "94% Time Saved",
     savings: "$8,372 Saved"
   };
@@ -45,8 +45,8 @@ const CaseStudies = () => {
   return (
     <>
       <SEO
-        title="Case Studies | Real Results | SmartFirm"
-        description="Explore real success stories from accounting firms that transformed their practice with SmartFirm's workflow automation, growth systems, and consulting services. See measurable results and ROI."
+        title="Accounting Firm Automation Case Studies | SmartFirm.io"
+        description="Accounting firm automation case studies with real ROI data. See how CPA firms improved margins, cut errors, and scaled without hiring."
         canonicalUrl="https://smartfirm.io/case-studies/"
         pageType="default"
         noindex={false}
@@ -65,10 +65,10 @@ const CaseStudies = () => {
                   Featured Success Story
                 </Badge>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
-                  Real Results from Real Firms
+                  Accounting Firm Automation Case Studies
                 </h1>
                 <p className="text-xl md:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto">
-                  Deep-dive analysis of transformation strategies that deliver measurable outcomes
+                  Accounting firm automation case studies — real results from firms that transformed their practice with SmartFirm.io's workflow and growth systems.
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ const CaseStudies = () => {
                   comprehensive marketing and automation solutions.
                 </p>
                 <div className="flex justify-center">
-                  <Link to="/get-started/">
+                  <Link to="/get-started-accounting-firm-automation/">
                     <Button size="lg" className="bg-gradient-coral hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg text-lg px-8" id="case-studies-cta-book-call-btn">
                       Book a Free Call
                       <ArrowRight className="ml-2 h-5 w-5" />

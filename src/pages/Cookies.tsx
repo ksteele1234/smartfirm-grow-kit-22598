@@ -30,8 +30,8 @@ const Cookies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Cookie Policy | SmartFirm"
-        description="Learn how SmartFirm uses cookies to improve your website experience, remember your preferences, and analyze site usage. Manage your cookie preferences and settings for optimal privacy control."
+        title="Cookie Policy | SmartFirm.io"
+        description="SmartFirm.io cookie policy. Learn how we use cookies and manage your preferences for optimal privacy control."
         pageType="legal"
         noindex={false}
         faqs={faqs}
@@ -62,7 +62,7 @@ const Cookies = () => {
             Cookie Policy
           </h1>
           <p className="text-xl text-white/90 max-w-text-md mx-auto">
-            Learn about how we use cookies to improve your experience on our website.
+            SmartFirm.io cookie policy — learn how we use cookies to improve your experience, remember preferences, and analyze site usage.
           </p>
         </div>
       </section>

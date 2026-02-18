@@ -45,27 +45,27 @@ const Header = () => {
     },
     {
       title: "Website Design",
-      href: "/services/professional-website-design-for-accounting-firms/",
+      href: "/services/website-design-for-accounting-firms/",
       description: "Modern, SEO-optimized websites for CPAs and accountants that convert visitors into clients."
     },
     {
       title: "Content Marketing",
-      href: "/services/strategic-content-marketing-for-cpas/",
+      href: "/services/content-marketing-for-accounting-firms/",
       description: "Strategic content that establishes thought leadership and attracts ideal clients through education."
     },
     {
       title: "Social Media Management",
-      href: "/services/social-media-management-for-cpas/",
+      href: "/services/social-media-management-for-accounting-firms/",
       description: "Consistent, professional content that positions your firm as a trusted expert."
     },
     {
       title: "Email Marketing",
-      href: "/services/email-marketing-for-cpas/",
+      href: "/services/email-marketing-for-accounting-firms/",
       description: "Targeted campaigns that nurture leads, improve client retention, and drive repeat business."
     },
     {
       title: "Automated Lead Follow-up",
-      href: "/services/automated-lead-follow-up-for-cpas/",
+      href: "/services/automated-lead-follow-up-for-accounting-firms/",
       description: "Convert more leads with CPA-focused email and SMS automation that responds instantly."
     },
     {
@@ -75,7 +75,7 @@ const Header = () => {
     },
     {
       title: "Online Reputation Management",
-      href: "/services/reputation-management-for-cpas/",
+      href: "/services/reputation-management-for-cpa-firms/",
       description: "Monitor, protect, and elevate your firm's online reputation with automated review generation."
     }
   ];
@@ -83,12 +83,12 @@ const Header = () => {
   const operationsServices = [
     {
       title: "AI Transformation Roadmap",
-      href: "/services/ai-transformation-roadmap/",
+      href: "/services/ai-transformation-roadmap-for-accounting-firms/",
       description: "Strategic AI implementation plan for accounting firms ready to transform their operations."
     },
     {
       title: "Single Process AI Transformation",
-      href: "/services/single-process-ai-transformation/",
+      href: "/services/ai-process-optimization-for-accounting-firms/",
       description: "Focus on one critical process and transform it completely with AI."
     },
     {
@@ -98,7 +98,7 @@ const Header = () => {
     },
     {
       title: "Technology Solutions",
-      href: "/services/accounting-firm-technology-consulting/",
+      href: "/services/technology-consulting-for-accounting-firms/",
       description: "Optimize your CPA tech stack with automation tools and smarter workflows that scale."
     },
     {
@@ -122,39 +122,34 @@ const Header = () => {
     },
     {
       title: "Get More Referrals Without Asking",
-      href: "/solutions/get-more-referrals-without-asking/",
+      href: "/solutions/get-more-referrals-for-cpa-firm-without-asking/",
       description: "Transform satisfied clients into steady referrals with review generation and social media marketing for accountants."
     },
     {
       title: "Work Less, Earn More",
-      href: "/solutions/work-less-earn-more/",
+      href: "/solutions/work-less-earn-more-as-a-cpa/",
       description: "Boost profitability through CPA marketing automation that cuts busywork and frees your team's time."
     },
     {
       title: "Grow Without the Growing Pains",
-      href: "/solutions/grow-without-growing-pains/",
+      href: "/solutions/grow-accounting-firm-without-growing-pains/",
       description: "Scale your accounting firm with proven lead generation strategies and efficient tech automation."
     },
     {
       title: "Protect Your Practice & Your Future",
-      href: "/solutions/protect-practice-and-future/",
+      href: "/solutions/protect-accounting-practice-from-data-breaches/",
       description: "Safeguard your firm with secure systems, SEO visibility, and future-ready marketing strategies."
     },
     // Specific Areas
     {
       title: "I want to scale my firm",
-      href: "/solutions/scale-firm/",
+      href: "/solutions/scale-accounting-firm-without-chaos/",
       description: "Grow capacity and revenue using automation for accountants and CPAs without ballooning overhead."
     },
     {
       title: "I need better client retention",
-      href: "/solutions/client-retention/",
+      href: "/solutions/stop-losing-clients-to-tech-savvy-cpas/",
       description: "Improve retention with email marketing, client review generation, and proactive engagement strategies."
-    },
-    {
-      title: "Advanced Client Retention Strategies",
-      href: "/solutions/retention-strategies/",
-      description: "Protect your book of business with CPA-focused marketing automation and loyalty systems."
     },
     {
       title: "I'm losing clients during onboarding",
@@ -167,12 +162,12 @@ const Header = () => {
   const industries = [
     {
       name: "Tax Preparation",
-      slug: "tax-preparation-marketing-solutions",
+      slug: "automation-for-tax-preparation-firms",
       description: "Specialized marketing and SEO for tax preparers to generate leads and grow during peak seasons and beyond."
     },
     {
       name: "Bookkeeping Services",
-      slug: "bookkeeping-services-marketing-automation",
+      slug: "marketing-for-bookkeeping-firms",
       description: "Proven digital marketing for bookkeepers that attracts clients, builds trust, and scales revenue."
     },
     {
@@ -182,7 +177,7 @@ const Header = () => {
     },
     {
       name: "Audit & Assurance",
-      slug: "audit-assurance-marketing-services",
+      slug: "marketing-for-audit-firms",
       description: "SEO and visibility campaigns for CPAs and audit firms designed to build authority and long-term trust."
     }
   ];
@@ -356,7 +351,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink href="/about/" className={cn(
+                <NavigationMenuLink href="/marketing-agency-for-accounting-firms/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary focus:outline-none"
@@ -366,7 +361,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink href="/contact/" className={cn(
+                <NavigationMenuLink href="/accounting-firm-automation-consultation/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-base font-medium text-slate-700 transition-colors duration-200",
                   "hover:text-primary focus:text-primary focus:outline-none"
@@ -385,7 +380,7 @@ const Header = () => {
               asChild
               className="uppercase text-sm font-bold tracking-wide px-6 py-2.5"
             >
-              <a href="/get-started/">BOOK A FREE CALL</a>
+              <a href="/get-started-accounting-firm-automation/">BOOK A FREE CALL</a>
             </Button>
           </div>
 
@@ -416,10 +411,10 @@ const Header = () => {
               <a href="/industries/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 INDUSTRIES
               </a>
-              <a href="/about/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+              <a href="/marketing-agency-for-accounting-firms/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 ABOUT US
               </a>
-              <a href="/contact/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+              <a href="/accounting-firm-automation-consultation/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 CONTACT
               </a>
               <Button
@@ -429,7 +424,7 @@ const Header = () => {
                 className="mt-4 uppercase text-sm font-bold tracking-wide"
                 asChild
               >
-                <a href="/get-started/">BOOK A FREE CALL</a>
+                <a href="/get-started-accounting-firm-automation/">BOOK A FREE CALL</a>
               </Button>
             </div>
           </nav>

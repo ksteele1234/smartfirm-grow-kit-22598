@@ -3,16 +3,16 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const BookkeepingServices = () => {
-  const industryFaqs = getFaqsForPath("/industries/bookkeeping-services");
+  const industryFaqs = getFaqsForPath("/industries/marketing-for-bookkeeping-firms");
   const industryData: IndustryPageData = {
     id: "bookkeeping-services",
-    title: "Marketing For Bookkeeping Firms That Commands Premium Fees | SmartFirm",
-    slug: "bookkeeping-services-marketing-automation",
-    metaDescription: "Marketing for bookkeeping firms differentiates your practice from commodity providers, attracts ideal small business clients, and positions you as a strategic financial partner commanding premium fees.",
-    canonicalUrl: "https://smartfirm.io/industries/bookkeeping-services-marketing-automation/",
+    title: "Marketing for Bookkeeping Firms | SmartFirm.io",
+    slug: "marketing-for-bookkeeping-firms",
+    metaDescription: "Marketing for bookkeeping firms — differentiate from commodity providers, attract ideal small business clients, and command premium fees.",
+    canonicalUrl: "https://smartfirm.io/industries/marketing-for-bookkeeping-firms/",
     content: {},
-    heroTitle: "Marketing For Bookkeeping Firms",
-    heroSubtitle: "Marketing for bookkeeping firms differentiates your practice from commodity providers and positions you as a strategic financial partner: attract ideal small business clients and command premium fees when bookkeepers lose clients to low-cost software and struggle to justify professional rates.",
+    heroTitle: "Marketing for Bookkeeping Firms That Commands Premium Fees",
+    heroSubtitle: "Marketing for bookkeeping firms differentiates your practice from commodity providers and positions you as a strategic financial partner.",
     industryOverview: "Bookkeeping services offer the opportunity for predictable monthly revenue through ongoing client relationships. Our marketing strategies help you attract the right small business clients and position your services as essential business infrastructure.",
     challenges: [
       {
@@ -35,22 +35,22 @@ const BookkeepingServices = () => {
       {
         title: "Small Business Lead Generation",
         description: "Target and attract growing small businesses that need bookkeeping services",
-        link: "/solutions/lead-generation"
+        link: "/solutions/get-more-referrals-for-cpa-firm-without-asking"
       },
       {
         title: "Value-Based Positioning",
         description: "Position your expertise above price competition",
-        link: "/services/marketing-automation"
+        link: "/services/marketing-automation-for-accounting-firms"
       },
       {
         title: "Recurring Revenue Optimization",
         description: "Maximize client lifetime value and reduce churn",
-        link: "/solutions/retention-strategies"
+        link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
       },
       {
         title: "Local Market Domination",
         description: "Become the go-to bookkeeper in your local market",
-        link: "/services/seo-for-accountants"
+        link: "/services/seo-for-accounting-firms"
       }
     ],
     ctaTitle: "Build Your Bookkeeping Empire",

@@ -30,8 +30,8 @@ const Terms = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Terms of Service | SmartFirm"
-        description="SmartFirm terms of service governing the use of our workflow automation software, tools, and consulting services for accounting firms. Updated for Oregon law compliance and industry standards."
+        title="Terms of Service | SmartFirm.io"
+        description="SmartFirm.io terms of service for workflow automation software, tools, and consulting services for accounting firms."
         pageType="legal"
         noindex={false}
         faqs={faqs}
@@ -62,7 +62,7 @@ const Terms = () => {
             Terms of Service
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services.
+            SmartFirm.io terms of service governing the use of our workflow automation software, tools, and consulting services for accounting firms.
           </p>
         </div>
       </section>

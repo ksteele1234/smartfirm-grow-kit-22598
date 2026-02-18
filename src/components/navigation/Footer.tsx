@@ -5,20 +5,20 @@ import smartFirmLogo from "@/assets/smartfirm-logo-white.png";
 
 const Footer = () => {
   const services = [
-    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up-for-cpas/" },
+    { name: "Automated Lead Follow-up", slug: "automated-lead-follow-up-for-accounting-firms/" },
     { name: "Client Review Generation", slug: "automated-review-generation-for-cpas/" },
     { name: "SEO for Accountants", slug: "seo-for-accounting-firms/" },
-    { name: "Email Marketing", slug: "email-marketing-for-cpas/" },
-    { name: "Social Media Management", slug: "social-media-management-for-cpas/" },
-    { name: "Website Design", slug: "professional-website-design-for-accounting-firms/" },
-    { name: "AI Transformation", slug: "single-process-ai-transformation/" }
+    { name: "Email Marketing", slug: "email-marketing-for-accounting-firms/" },
+    { name: "Social Media Management", slug: "social-media-management-for-accounting-firms/" },
+    { name: "Website Design", slug: "website-design-for-accounting-firms/" },
+    { name: "AI Transformation", slug: "ai-process-optimization-for-accounting-firms/" }
   ];
 
   const solutions = [
-    { name: "Lead Generation", slug: "lead-generation/" },
-    { name: "Scale Your Firm", slug: "scale-accounting-firm-successfully/" },
+    { name: "Get More Referrals", slug: "get-more-referrals-for-cpa-firm-without-asking/" },
+    { name: "Scale Your Firm", slug: "scale-accounting-firm-without-chaos/" },
     { name: "Stop Losing Clients", slug: "stop-losing-clients-to-tech-savvy-cpas/" },
-    { name: "Work Less, Earn More", slug: "work-less-earn-more/" }
+    { name: "Work Less, Earn More", slug: "work-less-earn-more-as-a-cpa/" }
   ];
 
   const resources = [
@@ -26,7 +26,7 @@ const Footer = () => {
     { name: "Resources", slug: "/resources/" },
     { name: "Tools & Calculators", slug: "/tools/" },
     { name: "Case Studies", slug: "/case-studies/" },
-    { name: "Growth Calculator", slug: "/growth-calculator/" }
+    { name: "Growth Calculator", slug: "/accounting-firm-growth-calculator/" }
   ];
 
 
@@ -54,7 +54,7 @@ const Footer = () => {
           {/* Column 2 - Services */}
           <div>
             {/* Mobile: Clickable header */}
-            <Link to="/all-services/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/automation-and-marketing-services-for-accounting-firms/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Services
             </Link>
             {/* Desktop: Regular header with list */}
@@ -112,7 +112,7 @@ const Footer = () => {
               ))}
               <li>
                 <Link
-                  to="/quick-start/"
+                  to="/quick-start-automation-package-for-cpa-firms/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Quick Start
@@ -132,7 +132,7 @@ const Footer = () => {
           {/* Column 4 - Contact */}
           <div>
             {/* Mobile: Clickable header */}
-            <Link to="/contact/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
+            <Link to="/accounting-firm-automation-consultation/" className="block md:hidden text-base font-semibold text-white uppercase tracking-wide hover:text-primary transition-colors">
               Contact
             </Link>
 
@@ -157,7 +157,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  to="/contact/"
+                  to="/accounting-firm-automation-consultation/"
                   className="text-base text-white/85 hover:text-primary transition-colors duration-200"
                 >
                   Contact Us
@@ -193,13 +193,13 @@ const Footer = () => {
               © 2025 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-sm text-sm text-white/65">
-              <Link to="/privacy/" className="hover:text-primary transition-colors duration-200">
+              <Link to="/privacy-policy/" className="hover:text-primary transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms/" className="hover:text-primary transition-colors duration-200">
+              <Link to="/terms-of-service/" className="hover:text-primary transition-colors duration-200">
                 Terms of Service
               </Link>
-              <Link to="/cookies/" className="hover:text-primary transition-colors duration-200">
+              <Link to="/cookie-policy/" className="hover:text-primary transition-colors duration-200">
                 Cookie Policy
               </Link>
             </div>

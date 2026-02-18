@@ -106,7 +106,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </div>
             <div className="mt-12 flex justify-center">
               <Button variant="coral" size="hero" asChild>
-                <a href="/get-started/" aria-label="Book your strategy call">
+                <a href="/get-started-accounting-firm-automation/" aria-label="Book your strategy call">
                   Book Your Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </a>
@@ -226,7 +226,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
           </div>
           <div className="mt-7 flex flex-col items-center gap-3 text-center">
             <Button variant="coral" size="lg" className="hover-lift" asChild>
-              <a href="/get-started/">Book a Free Call</a>
+              <a href="/get-started-accounting-firm-automation/">Book a Free Call</a>
             </Button>
             <p className="text-xs text-muted-foreground max-w-container-sm mt-1">
               These snapshots come from documented client engagements&mdash;ask us about the full stories during your discovery call. Curious how we structure delivery? Explore <a href="/services/" className="underline underline-offset-2 hover:text-primary story-link">our service playbooks</a>.
@@ -368,7 +368,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
               {data.ctaDescription}
             </p>
             <Button size="lg" variant="coral" className="px-10" asChild>
-              <a href="/get-started/">Book Your Strategy Call</a>
+              <a href="/get-started-accounting-firm-automation/">Book Your Strategy Call</a>
             </Button>
           </div>
         </section>
@@ -377,7 +377,7 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
         {showStickyFAB && (
           <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-border elevation-3 p-4 animate-fade-in">
             <Button size="lg" variant="coral" className="group w-full" asChild>
-              <a href="/get-started/" aria-label="Book a free call">
+              <a href="/get-started-accounting-firm-automation/" aria-label="Book a free call">
                 Book a Free Call
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </a>

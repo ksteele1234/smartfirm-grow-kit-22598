@@ -24,7 +24,7 @@ import {
 
 const AllServices = () => {
   const servicesIndexPath = "/services/";
-  const allServicesPath = "/services/all-professional-marketing-services-for-accounting-firms";
+  const allServicesPath = "/automation-and-marketing-services-for-accounting-firms";
   const services = [
     {
       icon: Smartphone,
@@ -36,25 +36,25 @@ const AllServices = () => {
       icon: Settings,
       title: "Technology Solutions",
       description: "Modern technology infrastructure and integrations that connect your practice management tools, accounting software, and marketing systems seamlessly.",
-      href: "/services/technology-solutions/"
+      href: "/services/technology-consulting-for-accounting-firms/"
     },
     {
       icon: TrendingUp,
       title: "Business Optimization",
       description: "Strategic consulting and implementation services to optimize your firm's operations, workflows, and growth trajectory for maximum efficiency.",
-      href: "/services/business-optimization/"
+      href: "/services/business-optimization-for-accounting-firms/"
     },
     {
       icon: Award,
       title: "Executive Services",
       description: "High-touch strategic services for firm leaders including growth planning, market positioning, and executive coaching tailored to accounting practices.",
-      href: "/services/executive-services/"
+      href: "/services/fractional-cio-for-accounting-firms/"
     },
     {
       icon: Zap,
       title: "Automated Lead Follow-Up",
       description: "Intelligent follow-up sequences via email, SMS, and voicemail that convert inquiries into booked calls within 24-48 hours. Never lose a lead again.",
-      href: "/services/automated-lead-follow-up-for-cpas/"
+      href: "/services/automated-lead-follow-up-for-accounting-firms/"
     },
     {
       icon: Star,
@@ -72,40 +72,40 @@ const AllServices = () => {
       icon: Users,
       title: "Social Media Management",
       description: "Done-for-you social media content and management. Establish thought leadership on LinkedIn, Facebook, and other platforms while we handle everything.",
-      href: "/services/social-media-management-for-cpas/"
+      href: "/services/social-media-management-for-accounting-firms/"
     },
     {
       icon: Mail,
       title: "Email Marketing for CPAs",
       description: "Personalized email campaigns that keep clients engaged year-round. Improve retention rates and create upsell opportunities with strategic nurture sequences.",
-      href: "/services/email-marketing-for-cpas/"
+      href: "/services/email-marketing-for-accounting-firms/"
     },
     {
       icon: Globe,
       title: "Website Design",
       description: "Conversion-optimized websites built specifically for accounting firms. Secure client portals, mobile-responsive design, and compliance-ready infrastructure.",
-      href: "/services/professional-website-design-for-accounting-firms/"
+      href: "/services/website-design-for-accounting-firms/"
     },
     {
       icon: Mail,
       title: "Content Marketing",
       description: "Strategic content that positions your firm as the expert. Blog posts, guides, and resources that attract ideal clients and establish thought leadership.",
-      href: "/services/strategic-content-marketing-for-cpas/"
+      href: "/services/content-marketing-for-accounting-firms/"
     },
     {
       icon: Star,
       title: "Online Reputation Management",
       description: "Protect and elevate your firm's online reputation. Monitor reviews, respond professionally, and build a 5-star presence that attracts more clients.",
-      href: "/services/reputation-management-for-cpas/"
+      href: "/services/reputation-management-for-cpa-firms/"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Automation & Marketing Services | SmartFirm"
-        description="Browse complete automation and marketing services for accounting firms—from workflow optimization and client systems to websites, SEO, and growth consulting."
-        canonicalUrl="https://smartfirm.io/all-services/"
+        title="All Automation & Marketing Services | SmartFirm.io"
+        description="All automation and marketing services for accounting firms — workflow optimization, AI, client systems, SEO, websites, and growth consulting."
+        canonicalUrl="https://smartfirm.io/automation-and-marketing-services-for-accounting-firms/"
         pageType="service"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -150,7 +150,7 @@ const AllServices = () => {
               </h1>
               <div id="sf-keyword-intro">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  SmartFirm's professional marketing services for accounting firms span the entire client lifecycle: automated lead capture, website design, SEO, email campaigns, review generation, and operational consulting.
+                  Automation and marketing services for accounting firms — from workflow optimization and client systems to websites, SEO, AI, and growth consulting.
                 </p>
               </div>
             </div>
@@ -255,14 +255,14 @@ const AllServices = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button id="all-services-book-call-btn" variant="secondary" size="lg" className="group" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Free Call
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button variant="white-outline-on-dark" size="lg" asChild>
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Contact Us
                 </a>
               </Button>

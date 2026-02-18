@@ -3,16 +3,16 @@ import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const GetMoreReferrals = () => {
-  const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-without-asking");
+  const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-for-cpa-firm-without-asking");
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
-    title: "Referrals Drying Up? Get Consistent Client Referrals For Your CPA Firm | SmartFirm",
-    slug: "get-more-referrals-without-asking",
-    metaDescription: "Tired of unpredictable referrals and awkward asks? Get more referrals for your CPA firm with automated review generation and systematic follow-up that fills your pipeline—no pushy tactics required.",
-    canonicalUrl: "https://smartfirm.io/solutions/get-more-referrals-without-asking/",
+    title: "Get More CPA Referrals Without Asking | SmartFirm.io",
+    slug: "get-more-referrals-for-cpa-firm-without-asking",
+    metaDescription: "Get more referrals for your CPA firm without awkward asks — automated review generation and systematic follow-up that fills your pipeline.",
+    canonicalUrl: "https://smartfirm.io/solutions/get-more-referrals-for-cpa-firm-without-asking/",
     content: {},
-    heroTitle: "Referrals Drying Up? Get Consistent Flow Without Awkward Asks",
-    heroSubtitle: "Tired of unpredictable referrals and feeling awkward asking clients? Get more referrals for your CPA firm: automated review generation, systematic outreach, and strategic follow-up produce 3-5× more qualified prospects—without pushy tactics.",
+    heroTitle: "Referrals Drying Up? Get Consistent Referrals Without Asking",
+    heroSubtitle: "Get more referrals for your CPA firm without awkward asks — automated review generation and systematic follow-up that fills your pipeline consistently.",
     problemStatement: "Most CPAs struggle to get referrals because they're uncomfortable asking, don't have systems to identify satisfied clients, or fail to stay top-of-mind consistently.",
     solutionOverview: "Our referral generation system automatically identifies happy clients, nurtures them into advocates, builds your reputation online, and keeps you top-of-mind year-round.",
     problemSolutionPairs: [

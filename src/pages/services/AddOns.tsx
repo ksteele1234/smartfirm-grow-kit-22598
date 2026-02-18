@@ -140,9 +140,9 @@ const AddOns = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Automation & Marketing Add-Ons | SmartFirm"
-        description="Marketing add-ons for accounting firms: blogs, paid ads, newsletters, chatbots, voice AI, social media, trade shows, and retention programs. Scale at your pace."
-        canonicalUrl="https://smartfirm.io/services/add-ons/"
+        title="Marketing Add-Ons for Accounting Firms | SmartFirm.io"
+        description="Marketing add-ons for accounting firms — blogs, paid ads, newsletters, chatbots, voice AI, social media, and retention programs at your pace."
+        canonicalUrl="https://smartfirm.io/services/marketing-add-ons-for-accounting-firms/"
         pageType="service"
         serviceName="Growth Add-Ons & Custom Marketing Solutions"
         noindex={false}
@@ -150,7 +150,7 @@ const AddOns = () => {
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Services", url: "/services/" },
-          { name: "Add-Ons", url: "/services/add-ons/" }
+          { name: "Add-Ons", url: "/services/marketing-add-ons-for-accounting-firms/" }
         ]}
         faqs={[
           {
@@ -201,24 +201,24 @@ const AddOns = () => {
             </Badge>
 
             <h1 className="text-display font-bold text-primary mb-6">
-              Automation & Marketing Add-Ons for Accounting Firms
+              Marketing & Automation Add-Ons for Accounting Firms
             </h1>
 
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
-                Scale your marketing with flexible add-on services: blogs, paid ads, newsletters, chatbots, social media, and more. No long-term commitments required.
+                Marketing add-ons for accounting firms — blogs, paid ads, newsletters, chatbots, voice AI, social media, and retention programs you can add at your pace.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button size="lg" variant="hero" className="group" asChild>
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Request Custom Quote
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="group" asChild>
-                <a href="/quick-start/">
+                <a href="/quick-start-automation-package-for-cpa-firms/">
                   View Quick Start Package
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -316,7 +316,7 @@ const AddOns = () => {
                 className="group font-semibold"
                 asChild
               >
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Request Custom Quote
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
@@ -326,7 +326,7 @@ const AddOns = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book Strategy Call
                 </a>
               </Button>
