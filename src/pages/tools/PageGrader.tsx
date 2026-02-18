@@ -80,50 +80,50 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
   const routes = [
     { path: "/", type: "core" },
     { path: "/services/", type: "core" },
-    { path: "/all-services/", type: "core" },
+    { path: "/automation-and-marketing-services-for-accounting-firms/", type: "core" },
     { path: "/solutions/", type: "core" },
     { path: "/industries/", type: "core" },
     { path: "/resources/", type: "core" },
-    { path: "/about/", type: "core" },
-    { path: "/contact/", type: "core" },
+    { path: "/marketing-agency-for-accounting-firms/", type: "core" },
+    { path: "/accounting-firm-automation-consultation/", type: "core" },
     { path: "/case-studies/", type: "core" },
-    { path: "/get-started/", type: "core" },
+    { path: "/get-started-accounting-firm-automation/", type: "core" },
     { path: "/faq/", type: "core" },
-    { path: "/quick-start/", type: "core" },
+    { path: "/quick-start-automation-package-for-cpa-firms/", type: "core" },
     { path: "/solutions/stop-losing-clients-to-tech-savvy-cpas/", type: "solution" },
-    { path: "/solutions/get-more-referrals-without-asking/", type: "solution" },
-    { path: "/solutions/work-less-earn-more/", type: "solution" },
-    { path: "/solutions/grow-without-growing-pains/", type: "solution" },
-    { path: "/solutions/protect-practice-and-future/", type: "solution" },
+    { path: "/solutions/get-more-referrals-for-cpa-firm-without-asking/", type: "solution" },
+    { path: "/solutions/work-less-earn-more-as-a-cpa/", type: "solution" },
+    { path: "/solutions/grow-accounting-firm-without-growing-pains/", type: "solution" },
+    { path: "/solutions/protect-accounting-practice-from-data-breaches/", type: "solution" },
     { path: "/solutions/client-onboarding-problems/", type: "solution" },
     { path: "/services/marketing-automation-for-accounting-firms/", type: "service" },
-    { path: "/services/technology-solutions/", type: "service" },
-    { path: "/services/business-optimization/", type: "service" },
-    { path: "/services/executive-services/", type: "service" },
-    { path: "/services/automated-lead-follow-up-for-cpas/", type: "service" },
+    { path: "/services/technology-consulting-for-accounting-firms/", type: "service" },
+    { path: "/services/business-optimization-for-accounting-firms/", type: "service" },
+    { path: "/services/fractional-cio-for-accounting-firms/", type: "service" },
+    { path: "/services/automated-lead-follow-up-for-accounting-firms/", type: "service" },
     { path: "/services/automated-review-generation-for-cpas/", type: "service" },
     { path: "/services/seo-for-accounting-firms/", type: "service" },
-    { path: "/services/social-media-management-for-cpas/", type: "service" },
-    { path: "/services/email-marketing-for-cpas/", type: "service" },
-    { path: "/services/professional-website-design-for-accounting-firms/", type: "service" },
-    { path: "/industries/tax-preparation-marketing-solutions/", type: "industry" },
-    { path: "/industries/bookkeeping-services-marketing-automation/", type: "industry" },
+    { path: "/services/social-media-management-for-accounting-firms/", type: "service" },
+    { path: "/services/email-marketing-for-accounting-firms/", type: "service" },
+    { path: "/services/website-design-for-accounting-firms/", type: "service" },
+    { path: "/industries/automation-for-tax-preparation-firms/", type: "industry" },
+    { path: "/industries/marketing-for-bookkeeping-firms/", type: "industry" },
     { path: "/industries/business-advisory/", type: "industry" },
     { path: "/industries/audit-assurance-marketing-services/", type: "industry" },
     { path: "/tools/", type: "core" },
-    { path: "/tools/efficiency-quiz/", type: "tool" },
-    { path: "/tools/marketing-scorecard/", type: "tool" },
-    { path: "/tools/roi-calculator/", type: "tool" },
-    { path: "/tools/automation-readiness-quiz/", type: "tool" },
-    { path: "/tools/workflow-bottleneck-finder/", type: "tool" },
-    { path: "/tools/tech-stack-roi-calculator/", type: "tool" },
-    { path: "/tools/client-lifetime-value-calculator/", type: "tool" },
-    { path: "/tools/lead-generation-scorecard/", type: "tool" },
-    { path: "/tools/modern-firm-quiz/", type: "tool" },
-    { path: "/tools/growth-potential-scorecard/", type: "tool" },
-    { path: "/privacy/", type: "legal" },
-    { path: "/terms/", type: "legal" },
-    { path: "/cookies/", type: "legal" },
+    { path: "/tools/accounting-firm-efficiency-assessment/", type: "tool" },
+    { path: "/tools/marketing-assessment-for-accountants/", type: "tool" },
+    { path: "/tools/marketing-roi-calculator-for-accounting-firms/", type: "tool" },
+    { path: "/tools/automation-readiness-assessment-for-accountants/", type: "tool" },
+    { path: "/tools/accounting-firm-workflow-audit-tool/", type: "tool" },
+    { path: "/tools/accounting-firm-technology-roi-calculator/", type: "tool" },
+    { path: "/tools/client-lifetime-value-calculator-for-accountants/", type: "tool" },
+    { path: "/tools/lead-generation-scorecard-for-accounting-firms/", type: "tool" },
+    { path: "/tools/modern-accounting-firm-assessment/", type: "tool" },
+    { path: "/tools/accounting-firm-growth-scorecard/", type: "tool" },
+    { path: "/privacy-policy/", type: "legal" },
+    { path: "/terms-of-service/", type: "legal" },
+    { path: "/cookie-policy/", type: "legal" },
   ];
 
   const gradePageViaIframe = async (url: string, pageType: string): Promise<PageScore> => {
@@ -769,11 +769,11 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
     const suggestions: string[] = [];
     
     if (pageType === 'service') {
-      suggestions.push('/case-studies', '/resources', '/get-started');
+      suggestions.push('/case-studies', '/resources', '/get-started-accounting-firm-automation');
     } else if (pageType === 'solution') {
-      suggestions.push('/leading-marketing-services-for-accounting-firms', '/case-studies', '/get-started');
+      suggestions.push('/services/', '/case-studies', '/get-started-accounting-firm-automation');
     } else if (pageType === 'industry') {
-      suggestions.push('/leading-marketing-services-for-accounting-firms', '/solutions-expert-marketing-agency-for-accounting-firms', '/get-started');
+      suggestions.push('/services/', '/solutions/', '/get-started-accounting-firm-automation');
     }
     
     return suggestions.slice(0, 3);

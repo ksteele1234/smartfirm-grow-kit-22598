@@ -188,7 +188,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                   Download PDF
                 </a>
                 <Link
-                  to="/services/ai-transformation-roadmap/"
+                  to="/services/ai-transformation-roadmap-for-accounting-firms/"
                   className="w-full sm:w-auto px-8 py-4 bg-gradient-gold text-white rounded-lg font-semibold text-lg hover:opacity-90 hover:-translate-y-1 transition-all duration-300 shadow-lg"
                 >
                   Learn More about our process
@@ -447,7 +447,7 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
                     {footerCTAButtonText}
                   </Link>
                   <Link
-                    to="/services/ai-transformation-roadmap/"
+                    to="/services/ai-transformation-roadmap-for-accounting-firms/"
                     className="inline-block px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white/20 transition-all"
                   >
                     Learn More about our process

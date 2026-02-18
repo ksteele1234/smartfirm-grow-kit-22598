@@ -6,13 +6,13 @@ const StopLosingClients = () => {
   const solutionFaqs = getFaqsForPath("/solutions/stop-losing-clients-to-tech-savvy-cpas");
   const solutionData: SolutionPageData = {
     id: "stop-losing-clients",
-    title: "Watching Clients Leave For Tech-Savvier CPAs? Stop The Loss | SmartFirm",
+    title: "Stop Losing Clients to Tech-Savvy CPAs | SmartFirm.io",
     slug: "stop-losing-clients-to-tech-savvy-cpas",
-    metaDescription: "Frustrated watching clients leave for younger CPAs with better technology? Stop losing clients to tech-savvy competitors with modern automation and professional systems—no coding required.",
+    metaDescription: "Stop losing clients to tech-savvy CPAs. Modernize your firm with automation and professional systems that keep clients from leaving.",
     canonicalUrl: "https://smartfirm.io/solutions/stop-losing-clients-to-tech-savvy-cpas/",
     content: {},
-    heroTitle: "Watching Clients Leave For Tech-Savvier CPAs?",
-    heroSubtitle: "Frustrated watching prospects choose younger firms with slicker websites and faster responses? Stop losing clients to tech-savvy competitors: modernize your systems, automate communication, and compete without learning code or hiring specialists.",
+    heroTitle: "Watching Clients Leave for Tech-Savvier CPAs?",
+    heroSubtitle: "Stop losing clients to tech-savvy CPAs — modernize your firm with automation and professional systems that keep clients from walking out the door.",
     problemStatement: "Tech-savvy CPAs are winning clients with CPA marketing automation, faster responses, and professional digital marketing for CPAs while traditional firms lose ground with outdated processes and slow communication.",
     solutionOverview: "Our comprehensive CPA marketing automation platform ensures you never lose another client to a more modern competitor. Get found online, look professional, respond faster, and automate everything with proven marketing automation for CPAs.",
     problemSolutionPairs: [

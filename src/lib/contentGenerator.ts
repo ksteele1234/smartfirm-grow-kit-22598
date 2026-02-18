@@ -226,24 +226,24 @@ export function generateCTAForPersona(
 ): { label: string; url: string } {
   const ctaMap: Record<string, Record<string, { label: string; url: string }>> = {
     grace_icp_growth_cpa_owner: {
-      problem: { label: 'Book Strategy Call', url: '/get-started' },
-      technical: { label: 'See How It Works', url: '/get-started' },
-      industry: { label: 'Request Pilot', url: '/get-started' }
+      problem: { label: 'Book Strategy Call', url: '/get-started-accounting-firm-automation' },
+      technical: { label: 'See How It Works', url: '/get-started-accounting-firm-automation' },
+      industry: { label: 'Request Pilot', url: '/get-started-accounting-firm-automation' }
     },
     betty_bookkeeper: {
-      problem: { label: 'Start with Starter Plan', url: '/get-started' },
+      problem: { label: 'Start with Starter Plan', url: '/get-started-accounting-firm-automation' },
       technical: { label: 'See Templates', url: '/resources' },
-      industry: { label: 'View Simple Setup', url: '/get-started' }
+      industry: { label: 'View Simple Setup', url: '/get-started-accounting-firm-automation' }
     },
     nick_nashville_cpa: {
-      problem: { label: 'See 10-Min Demo', url: '/get-started' },
-      technical: { label: 'Audit My Funnel', url: '/tools-calculators' },
-      industry: { label: 'Book Quick Call', url: '/get-started' }
+      problem: { label: 'See 10-Min Demo', url: '/get-started-accounting-firm-automation' },
+      technical: { label: 'Audit My Funnel', url: '/tools' },
+      industry: { label: 'Book Quick Call', url: '/get-started-accounting-firm-automation' }
     }
   };
   
   return ctaMap[personaId]?.[pageType] || {
     label: 'Get Started Today',
-    url: '/get-started'
+    url: '/get-started-accounting-firm-automation'
   };
 }

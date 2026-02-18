@@ -5,13 +5,14 @@ import SEO from "@/components/SEO";
 const StrategyIntegration = () => {
   const serviceData: ServicePageData = {
     id: "marketing-strategy-integration-for-accounting-firms",
-    title: "Strategy & Integration for Accounting Firms | SmartFirm",
+    title: "Strategy & Integration for Accounting Firms | SmartFirm.io",
     slug: "marketing-strategy-integration-for-accounting-firms",
+    metaDescription: "Strategy and integration for accounting firms — align your marketing tools, build custom roadmaps, and deliver seamless systems onboarding.",
     canonicalUrl: "https://smartfirm.io/services/marketing-strategy-integration-for-accounting-firms/",
     content: {},
-    heroTitle: "Strategy & Integration: Connect Your Firm's Systems Seamlessly",
+    heroTitle: "Strategy & Integration for Accounting Firms",
     heroSubtitle: "Connect your marketing infrastructure with custom roadmaps, seamless integrations, and white-glove onboarding. Deliver measurable results within 30 days.",
-    heroDescription: "Strategy and integration for accounting firms aligns your marketing tools, builds custom roadmaps, and delivers seamless onboarding that produces measurable results within 30 days.",
+    heroDescription: "Marketing strategy and integration for accounting firms aligns your tools, builds custom roadmaps, and delivers seamless onboarding that produces results.",
     benefits: [
       {
         title: "Strategic Discovery",
@@ -84,7 +85,7 @@ const StrategyIntegration = () => {
     ctaTitle: "Build Your Marketing Foundation Right",
     ctaDescription: "Let's start with a strategic discovery session and build a marketing infrastructure that actually works together.",
     ctaButtonText: "Schedule Discovery Session",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

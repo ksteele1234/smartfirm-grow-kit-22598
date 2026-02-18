@@ -83,7 +83,7 @@ const PricingHeroCondensed = () => {
               size="lg"
               className="w-full bg-gradient-coral text-white border-0 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02] text-[16px] font-semibold py-6"
             >
-              <Link to="/quick-start/">
+              <Link to="/quick-start-automation-package-for-cpa-firms/">
                 Learn About the QuickStart Package
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

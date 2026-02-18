@@ -68,26 +68,26 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
 
   // Routes to audit (from App.tsx and sitemap.xml)
   const routes = [
-    "/", "/services/", "/all-services/", "/solutions/", "/industries/", "/resources/",
-    "/about/", "/contact/", "/case-studies/", "/get-started/", "/faq/", "/quick-start/",
+    "/", "/services/", "/automation-and-marketing-services-for-accounting-firms/", "/solutions/", "/industries/", "/resources/",
+    "/marketing-agency-for-accounting-firms/", "/accounting-firm-automation-consultation/", "/case-studies/", "/get-started-accounting-firm-automation/", "/faq/", "/quick-start-automation-package-for-cpa-firms/",
     "/solutions/stop-losing-clients-to-tech-savvy-cpas/",
-    "/solutions/get-more-referrals-without-asking/",
-    "/solutions/work-less-earn-more/", "/solutions/grow-without-growing-pains/",
-    "/solutions/protect-practice-and-future/", "/solutions/client-onboarding-problems/",
+    "/solutions/get-more-referrals-for-cpa-firm-without-asking/",
+    "/solutions/work-less-earn-more-as-a-cpa/", "/solutions/grow-accounting-firm-without-growing-pains/",
+    "/solutions/protect-accounting-practice-from-data-breaches/", "/solutions/client-onboarding-problems/",
     "/services/marketing-automation-for-accounting-firms/",
-    "/services/technology-solutions/", "/services/business-optimization/",
-    "/services/executive-services/", "/services/automated-lead-follow-up-for-cpas/",
+    "/services/technology-consulting-for-accounting-firms/", "/services/business-optimization-for-accounting-firms/",
+    "/services/fractional-cio-for-accounting-firms/", "/services/automated-lead-follow-up-for-accounting-firms/",
     "/services/automated-review-generation-for-cpas/", "/services/seo-for-accounting-firms/",
-    "/services/social-media-management-for-cpas/", "/services/email-marketing-for-cpas/",
-    "/services/professional-website-design-for-accounting-firms/",
-    "/industries/tax-preparation-marketing-solutions/",
-    "/industries/bookkeeping-services-marketing-automation/", "/industries/business-advisory/",
-    "/industries/audit-assurance-marketing-services/", "/tools/",
-    "/tools/efficiency-quiz/", "/tools/marketing-scorecard/", "/tools/roi-calculator/",
-    "/tools/automation-readiness-quiz/", "/tools/workflow-bottleneck-finder/",
-    "/tools/tech-stack-roi-calculator/", "/tools/client-lifetime-value-calculator/",
-    "/tools/lead-generation-scorecard/", "/tools/modern-firm-quiz/",
-    "/tools/growth-potential-scorecard/", "/privacy/", "/terms/", "/cookies/"
+    "/services/social-media-management-for-accounting-firms/", "/services/email-marketing-for-accounting-firms/",
+    "/services/website-design-for-accounting-firms/",
+    "/industries/automation-for-tax-preparation-firms/",
+    "/industries/marketing-for-bookkeeping-firms/", "/industries/business-advisory/",
+    "/industries/marketing-for-audit-firms/", "/tools/",
+    "/tools/accounting-firm-efficiency-assessment/", "/tools/marketing-assessment-for-accountants/", "/tools/marketing-roi-calculator-for-accounting-firms/",
+    "/tools/automation-readiness-assessment-for-accountants/", "/tools/accounting-firm-workflow-audit-tool/",
+    "/tools/accounting-firm-technology-roi-calculator/", "/tools/client-lifetime-value-calculator-for-accountants/",
+    "/tools/lead-generation-scorecard-for-accounting-firms/", "/tools/modern-accounting-firm-assessment/",
+    "/tools/accounting-firm-growth-scorecard/", "/privacy-policy/", "/terms-of-service/", "/cookie-policy/"
   ];
 
   const calculateReadabilityScore = (text: string): number => {

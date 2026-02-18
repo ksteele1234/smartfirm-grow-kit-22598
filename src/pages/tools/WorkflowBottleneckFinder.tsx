@@ -168,7 +168,7 @@ const WorkflowBottleneckFinder = () => {
         <SEO
           title="Workflow Bottleneck Finder Results | SmartFirm"
           description="Your workflow analysis results with time savings recommendations for your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder/"
+          canonicalUrl="https://smartfirm.io/tools/accounting-firm-workflow-audit-tool/"
           pageType="tool"
           toolName="Workflow Bottleneck Finder"
           noindex={false}
@@ -252,9 +252,9 @@ const WorkflowBottleneckFinder = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Comprehensive SEO Audit for Accounting Firms"
-        description="Complete our accounting firm workflow audit identifying bottlenecks, redundancies, manual tasks, and automation opportunities across your client delivery process."
-        canonicalUrl="https://smartfirm.io/tools/workflow-bottleneck-finder/"
+        title="Accounting Firm Workflow Audit Tool | SmartFirm.io"
+        description="Accounting firm workflow audit tool — identify bottlenecks, redundancies, and automation opportunities across your client delivery process."
+        canonicalUrl="https://smartfirm.io/tools/accounting-firm-workflow-audit-tool/"
         pageType="tool"
         toolName="Workflow Bottleneck Finder"
         noindex={false}
@@ -267,10 +267,10 @@ const WorkflowBottleneckFinder = () => {
             Back to Tools
           </Link>
 
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Workflow Audit | SmartFirm</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Accounting Firm Workflow Audit Tool</h1>
           <div id="sf-keyword-intro">
             <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-              This accounting firm workflow audit maps your entire client delivery process, identifies bottlenecks and redundancies, highlights manual tasks ripe for automation, and recommends efficiency improvements.
+              Use our accounting firm workflow audit tool to identify bottlenecks, redundancies, and automation opportunities across your client delivery process.
             </p>
           </div>
 

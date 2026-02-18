@@ -169,7 +169,7 @@ const EfficiencyQuiz = () => {
         <SEO
           title="Efficiency Quiz | SmartFirm"
           description="How efficient is your accounting firm? Take our quiz to assess billing, client management, and marketing efficiency."
-          canonicalUrl="https://smartfirm.io/tools/efficiency-quiz/"
+          canonicalUrl="https://smartfirm.io/tools/accounting-firm-efficiency-assessment/"
           pageType="tool"
           toolName="Efficiency Quiz"
           noindex={false}
@@ -226,7 +226,7 @@ const EfficiencyQuiz = () => {
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                      <a href="/get-started/">
+                      <a href="/get-started-accounting-firm-automation/">
                         Book Your Strategy Session
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -254,10 +254,10 @@ const EfficiencyQuiz = () => {
 
   return (
     <ToolPageWrapper
-      title="Accounting Firm Efficiency Assessment Tool | SmartFirm"
-      description="Take our accounting firm efficiency assessment to identify time-wasting processes, automation opportunities, and workflow improvements saving 10+ hours weekly."
-      pageTitle="Accounting Firm Efficiency Assessment | SmartFirm"
-      intro="This accounting firm efficiency assessment identifies time-consuming manual processes, automation opportunities, workflow bottlenecks, and system integration gaps that could save you 10+ hours per week."
+      title="Accounting Firm Efficiency Assessment | SmartFirm.io"
+      description="Accounting firm efficiency assessment — identify time-wasting processes and automation opportunities saving 10+ hours weekly."
+      pageTitle="Accounting Firm Efficiency Assessment"
+      intro="Take our accounting firm efficiency assessment to identify time-wasting processes, automation opportunities, and workflow improvements saving 10+ hours weekly."
     >
       <section className="section-padding">
         <div className="container mx-auto max-w-2xl">

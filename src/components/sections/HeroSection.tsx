@@ -142,13 +142,13 @@ const HeroSection = memo(() => {
             <div className="text-center lg:text-left">
               {/* Headline - Solid White */}
               <h1 className="text-display font-bold leading-[1.1] tracking-tight text-white mb-6 animate-fade-in">
-                Firm Automation & Consulting for Accountants
+                Automation for Accounting Firms That Actually Scales
               </h1>
 
               {/* Subheadline */}
               <div id="sf-keyword-intro" className="animate-subhead">
                 <p className="text-lead leading-relaxed max-w-[600px] mb-8 font-medium text-on-dark-body drop-shadow-md mx-auto lg:mx-0">
-                  SmartFirm is the leading automation consulting firm for accountants that helps you get cleaner workflows, faster responses, and hours back each week to focus on real client work.
+                  Automation for accounting firms is how SmartFirm.io helps CPAs eliminate manual work, streamline client onboarding, and scale without adding headcount.
                 </p>
               </div>
 
@@ -170,7 +170,7 @@ const HeroSection = memo(() => {
                   className="px-10 py-4 text-lg font-bold rounded-card animate-gentle-pulse hover-lift w-full sm:w-auto"
                   asChild
                 >
-                  <a href="/get-started/" className="inline-flex items-center justify-center gap-2">
+                  <a href="/get-started-accounting-firm-automation/" className="inline-flex items-center justify-center gap-2">
                     Book a Free Call
                     <ArrowRight className="w-5 h-5" />
                   </a>

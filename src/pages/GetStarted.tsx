@@ -97,8 +97,8 @@ const GetStarted = () => {
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
       <SEO
-        title="Get Started | Accounting Firm Automation & Growth Systems"
-        description="Get started with SmartFirm's workflow automation and growth systems for accounting firms. Schedule a free consultation, explore our Quick Start program, or contact us to discuss your firm's needs."
+        title="Get Started With Firm Automation | SmartFirm.io"
+        description="Get started with SmartFirm.io accounting firm automation. Schedule a free consultation or explore our Quick Start automation package."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -107,7 +107,7 @@ const GetStarted = () => {
         showAddress={true}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Get Started", url: "/get-started/" }
+          { name: "Get Started", url: "/get-started-accounting-firm-automation/" }
         ]}
         faqs={[
           {
@@ -148,11 +148,11 @@ const GetStarted = () => {
       <section className="bg-gradient-mesh-professional py-section pb-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-            Get Started with Firm Automation & Growth Systems
+            Get Started With Accounting Firm Automation
           </h1>
           <div id="sf-keyword-intro">
             <p className="text-xl text-white/90 max-w-text-lg mx-auto mb-10">
-              Whether you're exploring digital marketing for CPA firms or ready for automation, SmartFirm makes it simple to get started.
+              Get started with SmartFirm.io's workflow automation and growth systems for accounting firms — schedule a free consultation or explore our Quick Start program.
             </p>
           </div>
         </div>
@@ -245,7 +245,7 @@ const GetStarted = () => {
                     size="lg"
                     asChild
                   >
-                    <a href={option.title === "Quick Start Program" ? "/quick-start/" : option.title === "Contact Us Directly" ? "/contact/" : "/get-started/"}>
+                    <a href={option.title === "Quick Start Program" ? "/quick-start-automation-package-for-cpa-firms/" : option.title === "Contact Us Directly" ? "/accounting-firm-automation-consultation/" : "/get-started-accounting-firm-automation/"}>
                       {option.cta}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>
@@ -285,7 +285,7 @@ const GetStarted = () => {
                     {option.description}
                   </p>
                   <Button variant="outline" className="group" asChild>
-                    <a href={option.title === "Client Support & Resources" ? "/resources/" : "/contact/"}>
+                    <a href={option.title === "Client Support & Resources" ? "/resources/" : "/accounting-firm-automation-consultation/"}>
                       {option.cta}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </a>

@@ -5,16 +5,16 @@ import CaseStudyTemplate, { CaseStudyTemplateProps } from '@/templates/CaseStudy
 const PayrollAutomationROI = () => {
   const caseStudyData: CaseStudyTemplateProps = {
     // SEO
-    seoTitle: "Payroll Automation ROI: How Accounting Firms Save $8,372+ Annually",
-    seoDescription: "Discover how a 12-person accounting firm cut payroll processing from 8 hours to 30 minutes and saved $8,372 annually through automation. See the real ROI and get your Automation Transformation AI Audit & Roadmap.",
-    canonicalUrl: "https://smartfirm.io/case-studies/payroll-automation-roi/",
+    seoTitle: "Payroll Automation ROI for Accounting Firms | SmartFirm.io",
+    seoDescription: "Payroll automation ROI for accounting firms — see how one firm cut payroll processing from 8 hours to 30 minutes, saving $8,372 annually.",
+    canonicalUrl: "https://smartfirm.io/case-studies/payroll-automation-roi-for-accounting-firms/",
     
     // Hero
     badgeText: "Case Study: Payroll Automation",
     heroTitle: "The Real ROI of Payroll Automation for Accounting Firms",
-    heroSubtitle: "A 12-person accounting firm cut payroll processing from 8 hours to 30 minutes, achieving a 419% ROI in the first year.",
+    heroSubtitle: "Payroll automation ROI for accounting firms — see how one 12-person firm cut payroll processing from 8 hours to 30 minutes, saving $8,372 annually.",
     heroCTAText: "Book a Free Call",
-    heroCTALink: "/get-started/",
+    heroCTALink: "/get-started-accounting-firm-automation/",
     heroCTAId: "case-study-payroll-hero-book-call-btn",
     
     // Stats
@@ -136,7 +136,7 @@ const PayrollAutomationROI = () => {
     footerCTATitle: "Invest in your future today.",
     footerCTADescription: "Small firms achieve large financial returns through targeted automation. Eliminating manual data movement immediately reduces errors and rework.",
     footerCTAButtonText: "Book a Free Call",
-    footerCTAButtonLink: "/get-started/",
+    footerCTAButtonLink: "/get-started-accounting-firm-automation/",
     footerCTAButtonId: "case-study-payroll-footer-book-call-btn",
     footerCTADisclaimer: "Continuous incremental investments have massive cumulative benefits.",
   };

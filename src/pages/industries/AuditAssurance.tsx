@@ -3,13 +3,13 @@ import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
 
 const AuditAssurance = () => {
-  const industryFaqs = getFaqsForPath("/industries/audit-assurance");
+  const industryFaqs = getFaqsForPath("/industries/marketing-for-audit-firms");
   const industryData: IndustryPageData = {
     id: "audit-assurance",
     title: "Marketing For Audit Firms That Builds Trust | SmartFirm",
-    slug: "audit-assurance-marketing-agency",
+    slug: "marketing-for-audit-firms",
     metaDescription: "Marketing for audit firms establishes credibility, demonstrates competence and independence, and attracts organizations requiring financial statement audits and assurance engagements.",
-    canonicalUrl: "https://smartfirm.io/industries/audit-assurance-marketing-agency/",
+    canonicalUrl: "https://smartfirm.io/industries/marketing-for-audit-firms/",
     content: {},
     heroTitle: "Marketing For Audit Firms",
     heroSubtitle: "Marketing for audit firms establishes credibility and builds the trust organizations need before engaging professional audit services: demonstrate competence, independence, and reliability to attract audit and assurance engagements when audit firms struggle to establish credibility.",
@@ -35,22 +35,22 @@ const AuditAssurance = () => {
       {
         title: "Professional Credibility Building",
         description: "Establish your firm's reputation for excellence and reliability",
-        link: "/services/website-design"
+        link: "/services/website-design-for-accounting-firms"
       },
       {
         title: "Industry Specialization Marketing",
         description: "Position your expertise in specific industries or audit types",
-        link: "/services/marketing-automation"
+        link: "/services/marketing-automation-for-accounting-firms"
       },
       {
         title: "Referral Network Development",
         description: "Build relationships with attorneys, banks, and other professional referral sources",
-        link: "/solutions/get-more-referrals"
+        link: "/solutions/get-more-referrals-for-cpa-firm-without-asking"
       },
       {
         title: "Proposal Process Optimization",
         description: "Improve your success rate in competitive audit proposal situations",
-        link: "/services/business-optimization"
+        link: "/services/business-optimization-for-accounting-firms"
       }
     ],
     ctaTitle: "Strengthen Your Audit Practice",

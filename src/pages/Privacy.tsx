@@ -30,8 +30,8 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Privacy Policy | SmartFirm"
-        description="Learn how SmartFirm collects, uses, and protects your information. Updated to comply with Oregon Consumer Privacy Act (OCPA)."
+        title="Privacy Policy | SmartFirm.io"
+        description="SmartFirm.io privacy policy. Learn how we collect, use, and protect your information. Updated for Oregon Consumer Privacy Act compliance."
         pageType="legal"
         noindex={false}
         faqs={faqs}
@@ -62,7 +62,7 @@ const Privacy = () => {
             Privacy Policy
           </h1>
           <p className="text-xl text-white/90 max-w-text-md mx-auto">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+            SmartFirm.io privacy policy — learn how we collect, use, and protect your information, updated to comply with the Oregon Consumer Privacy Act (OCPA).
           </p>
         </div>
       </section>

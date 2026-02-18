@@ -217,7 +217,7 @@ const FAQ = () => {
               </div>
 
               <Button id="faq-book-call-btn" size="lg" variant="hero" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

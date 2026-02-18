@@ -19,7 +19,7 @@ const Services = () => {
     icon: <Settings className="h-8 w-8 text-accent" />,
     title: "AI-Ready Technology Solutions",
     description: "Intelligent Tech Stack Optimization and AI-enhanced Business Process Automation to streamline your firm's operations with predictive analytics and automated workflows.",
-    link: "/services/accounting-firm-technology-consulting"
+    link: "/services/technology-consulting-for-accounting-firms"
   }, {
     icon: <TrendingUp className="h-8 w-8 text-primary" />,
     title: "AI-Driven Business Intelligence",
@@ -39,14 +39,14 @@ const Services = () => {
     icon: <Package className="h-8 w-8 text-primary" />,
     title: "AI-Enhanced Service Packages",
     description: "Intelligent Marketing Starter Package, AI-Ready Tech Optimizer, Predictive Business Growth Package, Smart Executive Suite, Complete AI Transformation Package.",
-    link: "/services/packages"
+    link: "/automation-and-marketing-services-for-accounting-firms/"
   }];
 
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Firm Automation & Growth Services for Accounting Firms"
-        description="Explore firm automation and growth services for accounting firms: workflow optimization, client systems, technology integration, and scalable operations."
+        title="Firm Automation Services | SmartFirm.io"
+        description="Firm automation services for accountants: workflow optimization, client onboarding, technology integration, and scalable growth systems."
         canonicalUrl="https://smartfirm.io/services/"
         pageType="service"
         serviceName="Marketing Automation & Technology Solutions"
@@ -85,21 +85,21 @@ const Services = () => {
             </svg>
           </div>
           <div className="container relative z-10 mx-auto px-4 text-center">
-            <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">Firm Automation & Growth Services for Accounting Firms</h1>
+            <h1 className="text-display font-bold text-white mb-8 drop-shadow-lg">Firm Automation & Growth Services for Accountants</h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed drop-shadow-md">
-                Leading marketing services for accounting firms include turnkey automation platforms, conversion-optimized website design, local SEO, and systematic client retention programs—all designed to get you more clients while reducing manual work.
+                Firm automation services for accountants cover workflow optimization, client onboarding, technology integration, and scalable operations.
               </p>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row gap-sm justify-center">
               <Button id="services-hero-book-call-btn" variant="coral" size="hero" asChild>
-                <Link to="/get-started/">
+                <Link to="/get-started-accounting-firm-automation/">
                   Book a free call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="secondary" size="hero" asChild>
-                <Link to="/services/all-professional-marketing-services-for-accounting-firms/">
+                <Link to="/automation-and-marketing-services-for-accounting-firms/">
                   Explore all services
                 </Link>
               </Button>
@@ -259,7 +259,7 @@ const Services = () => {
 
                   <div className="text-center pt-6">
                     <Button variant="hero" size="lg" asChild>
-                      <a href="/services/automated-lead-follow-up-for-cpas/">
+                      <a href="/services/automated-lead-follow-up-for-accounting-firms/">
                         Learn More About This Service
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
@@ -304,13 +304,13 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
               <Button id="services-final-book-call-btn" variant="coral" size="lg" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <a href="/solutions-expert-marketing-agency-for-accounting-firms/">
+                <a href="/solutions/">
                   Explore Our Solutions
                 </a>
               </Button>

@@ -52,8 +52,8 @@ const FaqDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={`${faq.question} | SmartFirm FAQ`}
-        description={faq.answer.slice(0, 155) + "..."}
+        title={faq.metaTitle || `${faq.question} | SmartFirm FAQ`}
+        description={faq.metaDescription || faq.answer.slice(0, 155) + "..."}
         pageType="faq"
         canonicalUrl={`https://smartfirm.io/faq/${slug}/`}
         noindex={false}
@@ -62,7 +62,7 @@ const FaqDetail = () => {
           { name: "Home", url: "https://smartfirm.io/" },
           { name: "FAQ", url: "https://smartfirm.io/faq/" },
           { name: category.category, url: `https://smartfirm.io/faq/#${category.slug}` },
-          { name: faq.question.slice(0, 50), url: `https://smartfirm.io/faq/${slug}/` }
+          { name: (faq.h1Override || faq.question).slice(0, 50), url: `https://smartfirm.io/faq/${slug}/` }
         ]}
       />
 
@@ -118,10 +118,26 @@ const FaqDetail = () => {
               </span>
             </div>
 
-            {/* Question */}
+            {/* H1 - uses h1Override for SEO if available, falls back to question */}
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8 leading-tight">
-              {faq.question}
+              {faq.h1Override || faq.question}
             </h1>
+
+            {/* First sentence intro - shown when firstSentence is available */}
+            {faq.firstSentence && (
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                {faq.firstSentence}
+              </p>
+            )}
+
+            {/* Original question displayed when H1 differs */}
+            {faq.h1Override && faq.h1Override !== faq.question && (
+              <div className="mb-8 p-4 bg-accent/5 border-l-4 border-accent rounded-r-lg">
+                <p className="text-foreground font-medium italic">
+                  {faq.question}
+                </p>
+              </div>
+            )}
 
             {/* Answer */}
             <div className="prose prose-lg max-w-none mb-12">
@@ -165,7 +181,7 @@ const FaqDetail = () => {
                   Book a free strategy call to discuss your accounting firm's unique needs.
                 </p>
                 <Button size="lg" variant="hero" asChild>
-                  <Link to="/get-started/">
+                  <Link to="/get-started-accounting-firm-automation/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

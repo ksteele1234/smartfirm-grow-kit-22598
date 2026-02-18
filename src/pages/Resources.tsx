@@ -32,7 +32,7 @@ const Resources = () => {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       title: "Guides & Whitepapers",
       description: "In-depth articles, e-books, and whitepapers on marketing, automation, and business growth.",
-      link: "/get-started/"
+      link: "/get-started-accounting-firm-automation/"
     },
     {
       icon: <Calculator className="h-8 w-8 text-accent" />,
@@ -50,7 +50,7 @@ const Resources = () => {
       icon: <Video className="h-8 w-8 text-primary" />,
       title: "Webinars & Events",
       description: "Recordings of past webinars and upcoming event schedules.",
-      link: "/get-started/"
+      link: "/get-started-accounting-firm-automation/"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-accent" />,
@@ -84,8 +84,8 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Accounting Firm Automation Resources | SmartFirm"
-        description="Accounting firm automation resources including free guides, tools, calculators, and expert insights to help you scale efficiently with proven strategies."
+        title="Accounting Firm Automation Resources | SmartFirm.io"
+        description="Accounting firm automation resources — free guides, tools, calculators, and expert insights to help you scale your CPA practice efficiently."
         pageType="default"
         noindex={false}
         dateModified={new Date().toISOString()}
@@ -118,11 +118,11 @@ const Resources = () => {
         <section className="py-section md:py-28 bg-gradient-to-br from-background to-accent/10">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-display font-bold text-primary mb-8">
-              Accounting Firm Automation Resources to Grow Your Firm
+              Accounting Firm Automation Resources
             </h1>
             <div id="sf-keyword-intro">
               <p className="text-lead text-muted-foreground max-w-3xl mx-auto mb-10">
-                CPA marketing resources designed for accounting professionals include comprehensive guides, interactive calculators, and proven strategies to help your firm thrive and grow efficiently.
+                Accounting firm automation resources — free guides, tools, calculators, and expert insights to help you scale your CPA practice efficiently.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-sm justify-center">
@@ -297,7 +297,7 @@ const Resources = () => {
 
             <div className="text-center">
               <Button id="resources-book-call-btn" variant="outline" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
@@ -352,7 +352,7 @@ const Resources = () => {
                 Our experts are here to help. Contact us for personalized advice and guidance tailored to your firm's specific needs.
               </p>
               <Button size="lg" variant="hero" asChild>
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Speak to an Expert
                   <MessageSquare className="ml-2 h-4 w-4" />
                 </a>

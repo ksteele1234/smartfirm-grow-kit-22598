@@ -142,17 +142,17 @@ const QuickStart = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Quick Start Automation Package for CPA Firms | SmartFirm"
-        description="Launch firm automation in 30 days: client onboarding systems, workflow optimization, email automation, review requests, and operational foundation—ready to scale."
-        canonicalUrl="https://smartfirm.io/quick-start/"
+        title="Quick Start Automation for CPA Firms | SmartFirm.io"
+        description="Quick start automation for CPA firms — client onboarding, workflow optimization, email automation, and reviews live in 30 days."
+        canonicalUrl="https://smartfirm.io/quick-start-automation-package-for-cpa-firms/"
         pageType="service"
         serviceName="30-Day Quick Start Package"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
-          { name: "Get Started", url: "/get-started/" },
-          { name: "Quick Start Package", url: "/quick-start/" }
+          { name: "Get Started", url: "/get-started-accounting-firm-automation/" },
+          { name: "Quick Start Package", url: "/quick-start-automation-package-for-cpa-firms/" }
         ]}
         faqs={[
           {
@@ -181,7 +181,7 @@ const QuickStart = () => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/get-started/">Get Started</BreadcrumbLink>
+                <BreadcrumbLink href="/get-started-accounting-firm-automation/">Get Started</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -209,12 +209,12 @@ const QuickStart = () => {
 
             <div id="sf-keyword-intro">
               <p className="text-xl text-muted-foreground max-w-text-lg mx-auto mb-10 leading-relaxed">
-                Marketing package for CPA firms delivering a complete system in 30 days: website launch, automated lead follow-up, client onboarding sequences, review generation, and SEO foundation—all ready to drive growth.
+                Quick start automation for CPA firms — launch client onboarding systems, workflow optimization, email automation, and review requests in 30 days.
               </p>
             </div>
 
             <Button id="quickstart-pricing-book-call-btn" size="lg" variant="hero" className="group" asChild>
-              <a href="/get-started/">
+              <a href="/get-started-accounting-firm-automation/">
                 Book a Free Call
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -370,7 +370,7 @@ const QuickStart = () => {
                 className="group font-semibold"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
@@ -380,7 +380,7 @@ const QuickStart = () => {
                 variant="white-outline-on-dark"
                 asChild
               >
-                <a href="/contact/">
+                <a href="/accounting-firm-automation-consultation/">
                   Contact Us
                 </a>
               </Button>

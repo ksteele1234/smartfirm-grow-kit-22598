@@ -88,7 +88,7 @@ const ClientLifetimeValueCalculator = () => {
         <SEO
           title="Client Lifetime Value Calculator Results | SmartFirm"
           description="Your client lifetime value analysis with retention recommendations for your accounting firm."
-          canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator/"
+          canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator-for-accountants/"
           pageType="tool"
           toolName="Client Lifetime Value Calculator"
           noindex={false}
@@ -234,9 +234,9 @@ const ClientLifetimeValueCalculator = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Client Lifetime Value Calculator | SmartFirm"
-        description="Calculate client lifetime value for your accounting firm. Understand retention impact and marketing budgets."
-        canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator/"
+        title="Client Lifetime Value Calculator | SmartFirm.io"
+        description="Client lifetime value calculator for accountants — understand retention impact and set informed marketing budgets for your CPA firm."
+        canonicalUrl="https://smartfirm.io/tools/client-lifetime-value-calculator-for-accountants/"
         pageType="tool"
         toolName="Client Lifetime Value Calculator"
         noindex={false}
@@ -249,9 +249,9 @@ const ClientLifetimeValueCalculator = () => {
             Back to Tools
           </Link>
 
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Client Lifetime Value Calculator</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Client Lifetime Value Calculator for Accountants</h1>
           <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+            Built by SmartFirm for accounting firms. See our <a href="/services/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
             <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
             <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
           </p>

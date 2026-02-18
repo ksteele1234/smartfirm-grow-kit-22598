@@ -35,22 +35,22 @@ const BusinessAdvisory = () => {
       {
         title: "Thought Leadership Development",
         description: "Establish yourself as a recognized expert in business strategy",
-        link: "/services/marketing-automation"
+        link: "/services/marketing-automation-for-accounting-firms"
       },
       {
         title: "High-Value Client Attraction",
         description: "Target and attract businesses ready to invest in strategic guidance",
-        link: "/solutions/lead-generation"
+        link: "/solutions/get-more-referrals-for-cpa-firm-without-asking"
       },
       {
         title: "Content Marketing Strategy",
         description: "Educational content that demonstrates expertise and builds trust",
-        link: "/services/email-marketing"
+        link: "/services/email-marketing-for-accounting-firms"
       },
       {
         title: "Speaking & Events",
         description: "Position yourself as an expert through speaking opportunities",
-        link: "/services/social-media-management"
+        link: "/services/social-media-management-for-accounting-firms"
       }
     ],
     ctaTitle: "Build Your Advisory Practice",

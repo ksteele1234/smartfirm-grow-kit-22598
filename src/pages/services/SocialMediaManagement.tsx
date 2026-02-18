@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const SocialMediaManagement = () => {
   const serviceData: ServicePageData = {
     id: "social-media-management",
-    title: "Social Media Management for Accounting Firms | SmartFirm",
+    title: "Social Media Management for CPAs | SmartFirm.io",
     slug: "social-media-management",
-    metaDescription: "Social media management for CPAs: 12-16 compliant posts monthly that build thought leadership, drive referrals, and attract advisory clients. Done-for-you.",
-    canonicalUrl: "https://smartfirm.io/services/social-media-management-for-cpas/",
+    metaDescription: "Social media management for accounting firms — 12-16 compliant posts monthly on LinkedIn and Facebook that build authority and drive referrals.",
+    canonicalUrl: "https://smartfirm.io/services/social-media-management-for-accounting-firms/",
     content: {},
-    heroTitle: "Social Media Management: Build Thought Leadership for Your Firm",
+    heroTitle: "Social Media Management for Accounting Firms",
     heroSubtitle: "Build thought leadership with 12-16 compliant posts monthly, drive 30-50% more referrals, and stay top-of-mind. Fully compliant, zero risk.",
-    heroDescription: "Social media management for CPAs delivers 12-16 compliant posts monthly across LinkedIn, Facebook, and Twitter that build authority and drive referrals without time drain.",
+    heroDescription: "Social media management for accounting firms delivers 12-16 compliant posts monthly across LinkedIn and Facebook that build authority and drive referrals.",
     benefits: [
       {
         title: "Establish Thought Leadership Without the Time Drain",
@@ -98,7 +98,7 @@ const SocialMediaManagement = () => {
     ctaTitle: "Build Your Professional Social Media Presence",
     ctaDescription: "Let's establish your firm as a trusted authority on social media while generating new business opportunities.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

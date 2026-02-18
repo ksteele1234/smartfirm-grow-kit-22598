@@ -10,28 +10,28 @@ const SolutionsSection = () => {
       title: "I need more leads",
       description: "Stop waiting for referrals. Generate qualified accounting firm leads with SEO, PPC, and content marketing.",
       features: ["SEO for accountants & CPAs", "Local listing optimization", "PPC campaigns", "Content marketing"],
-      link: "/solutions/lead-generation"
+      link: "/solutions/get-more-referrals-for-cpa-firm-without-asking"
     },
     {
       icon: TrendingUp,
       title: "I want to scale my firm",
       description: "Break growth limits with CPA marketing automation systems that run without your constant oversight.",
       features: ["Automation workflows", "Client onboarding systems", "Referral programs", "Strategic planning"],
-      link: "/solutions/scale-firm"
+      link: "/solutions/scale-accounting-firm-without-chaos"
     },
     {
       icon: Shield,
       title: "Stop Losing Clients to Competitors",
       description: "Keep clients loyal with retention campaigns and brand positioning that make your firm the obvious choice.",
       features: ["Competitive analysis", "Client retention campaigns", "Differentiation strategies", "Brand positioning"],
-      link: "/solutions/client-retention"
+      link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
     },
     {
       icon: Users,
       title: "I need better client retention",
       description: "Strengthen relationships with automated follow-ups and proactive client engagement.",
       features: ["Communication systems", "Automated review requests", "Upsell and cross-sell campaigns", "Satisfaction tracking"],
-      link: "/solutions/retention-strategies"
+      link: "/solutions/stop-losing-clients-to-tech-savvy-cpas"
     }
   ];
 
@@ -152,7 +152,7 @@ const SolutionsSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   <BarChart3 className="mr-2 h-5 w-5" />
                   Get a Custom Growth Plan
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

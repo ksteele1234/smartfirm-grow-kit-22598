@@ -4,15 +4,15 @@ import SEO from "@/components/SEO";
 
 const OnlineReputationManagement = () => {
   const serviceData: ServicePageData = {
-    id: "reputation-management-for-cpas",
-    title: "Reputation Management for CPAs | SmartFirm",
-    slug: "reputation-management-for-cpas",
-    metaDescription: "Reputation management for CPAs: 24/7 review monitoring, professional responses, and systematic five-star review generation. Protect and grow your online presence.",
-    canonicalUrl: "https://smartfirm.io/services/reputation-management-for-cpas/",
+    id: "reputation-management-for-cpa-firms",
+    title: "Reputation Management for CPA Firms | SmartFirm.io",
+    slug: "reputation-management-for-cpa-firms",
+    metaDescription: "Reputation management for CPA firms — 24/7 review monitoring, instant alerts, and systematic five-star review building from SmartFirm.io.",
+    canonicalUrl: "https://smartfirm.io/services/reputation-management-for-cpa-firms/",
     content: {},
-    heroTitle: "Reputation Management for CPAs",
+    heroTitle: "Reputation Management for CPA Firms",
     heroSubtitle: "Monitor reviews 24/7, respond professionally within minutes, and systematically build 50+ five-star reviews that convert prospects into clients.",
-    heroDescription: "Reputation management for CPAs monitors all review platforms 24/7, alerts you instantly to new feedback, and systematically builds five-star presence that converts prospects.",
+    heroDescription: "Reputation management for CPA firms monitors all review platforms 24/7, alerts you instantly to new feedback, and systematically builds your five-star presence.",
     benefits: [
       {
         title: "Protect Your Pipeline from Negative Reviews",
@@ -74,7 +74,7 @@ const OnlineReputationManagement = () => {
     ctaTitle: "Ready to Strengthen Your Online Reputation?",
     ctaDescription: "Book a free reputation audit to see how we can transform your firm's online presence and attract more ideal clients.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

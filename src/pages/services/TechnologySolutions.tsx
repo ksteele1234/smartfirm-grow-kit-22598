@@ -5,14 +5,14 @@ import SEO from "@/components/SEO";
 const TechnologySolutions = () => {
   const serviceData: ServicePageData = {
     id: "technology-solutions",
-    title: "Accounting Firm Technology Consulting | SmartFirm",
+    title: "Technology Consulting for Accounting Firms | SmartFirm.io",
     slug: "technology-solutions",
-    metaDescription: "Accounting firm technology consulting: integrate your tech stack, automate workflows, and serve 2-3x more clients. Implemented in 2-4 weeks.",
-    canonicalUrl: "https://smartfirm.io/services/accounting-firm-technology-consulting/",
+    metaDescription: "Technology consulting for accounting firms — integrate disconnected software, automate workflows, and serve 2-3x more clients without hiring.",
+    canonicalUrl: "https://smartfirm.io/services/technology-consulting-for-accounting-firms/",
     content: {},
-    heroTitle: "Accounting Firm Technology Consulting",
+    heroTitle: "Technology Consulting for Accounting Firms",
     heroSubtitle: "Integrate your tech stack, eliminate manual data entry, and serve 2-3x more clients without adding headcount. Implemented in 2-4 weeks.",
-    heroDescription: "Accounting firm technology consulting integrates disconnected software, automates workflows, and enables your team to serve 2-3x more clients without additional headcount.",
+    heroDescription: "Technology consulting for accounting firms integrates disconnected software, automates workflows, and enables your team to serve 2-3x more clients.",
     benefits: [
       {
         title: "Stop Juggling 10+ Disconnected Tools",
@@ -98,7 +98,7 @@ const TechnologySolutions = () => {
     ctaTitle: "Transform Your Firm with Technology",
     ctaDescription: "Let's optimize your technology stack and automate your processes for maximum efficiency and growth.",
     ctaButtonText: "Book a Free Call",
-    ctaButtonLink: "/get-started/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/"
   };
 
   return <ServicePageTemplate data={serviceData} />;

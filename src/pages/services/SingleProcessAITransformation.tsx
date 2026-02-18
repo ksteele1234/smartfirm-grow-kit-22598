@@ -31,9 +31,9 @@ const SingleProcessAITransformation = () => {
   return (
     <>
       <SEO
-        title="Single-Process AI Optimization | SmartFirm"
-        description="Turn your biggest bottleneck into a clear action plan. Focused 1-week AI optimization that delivers real results."
-        canonicalUrl="https://smartfirm.io/services/single-process-ai-transformation/"
+        title="AI Process Optimization for Accounting Firms | SmartFirm.io"
+        description="AI process optimization for accounting firms — turn your biggest bottleneck into a clear action plan with a focused 1-week engagement."
+        canonicalUrl="https://smartfirm.io/services/ai-process-optimization-for-accounting-firms/"
       />
       <Header />
 
@@ -46,7 +46,7 @@ const SingleProcessAITransformation = () => {
 
           <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
             <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              Single Process AI Transformation: Start Small, See Big Results
+              AI Process Optimization for Accounting Firms
             </h1>
 
             {/* Hero Content - Centered */}
@@ -68,7 +68,7 @@ const SingleProcessAITransformation = () => {
                 className="text-lg md:text-xl text-white/90 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Turn Your Biggest Bottleneck Into a Clear Action Plan.
+                AI process optimization for accounting firms turns your biggest bottleneck into a clear action plan with a focused 1-week engagement from SmartFirm.io.
               </motion.p>
 
               <motion.div
@@ -82,7 +82,7 @@ const SingleProcessAITransformation = () => {
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild
                 >
-                  <a href="/get-started/">
+                  <a href="/get-started-accounting-firm-automation/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -424,7 +424,7 @@ const SingleProcessAITransformation = () => {
                 className="px-8 py-4 text-lg font-bold color-transition group"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>

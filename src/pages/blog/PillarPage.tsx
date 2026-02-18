@@ -356,7 +356,7 @@ const PillarPage = () => {
               Discover how SmartFirm can help you automate your marketing, attract more clients, and grow your practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/get-started/">
+              <Link to="/get-started-accounting-firm-automation/">
                 <Button size="lg" className="bg-[hsl(var(--coral))] hover:bg-[hsl(var(--coral))]/90 text-white">
                   Get Started Today
                 </Button>

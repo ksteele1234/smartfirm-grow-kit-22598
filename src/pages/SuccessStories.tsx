@@ -197,7 +197,7 @@ const SuccessStories = () => {
               Read All Case Studies
             </Button>
             <Button id="success-stories-inline-book-call-btn" variant="hero" size="hero" asChild>
-              <a href="/get-started/">Book a Free Call</a>
+              <a href="/get-started-accounting-firm-automation/">Book a Free Call</a>
             </Button>
           </div>
         </div>
@@ -491,7 +491,7 @@ const SuccessStories = () => {
           </p>
           <Button id="success-stories-final-book-call-btn" variant="white-on-dark" size="hero" asChild>
             <Calendar className="w-5 h-5 mr-2" />
-            <a href="/get-started/">Book a Free Call</a>
+            <a href="/get-started-accounting-firm-automation/">Book a Free Call</a>
           </Button>
         </div>
       </section>

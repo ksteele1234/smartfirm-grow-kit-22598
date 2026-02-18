@@ -126,15 +126,15 @@ const AITransformationRoadmap = () => {
         pageType="service"
         serviceName="AI Transformation Roadmap"
         audience="accounting firms"
-        title="AI Transformation Roadmap for Accounting Firms | SmartFirm"
-        description="Strategic AI implementation roadmap for accounting firms. Get a clear 12-month plan to automate workflows and improve efficiency with SmartFirm's AI consulting."
-        canonicalUrl="https://smartfirm.io/services/ai-transformation-roadmap/"
+        title="AI Transformation Roadmap for CPA Firms | SmartFirm.io"
+        description="AI transformation roadmap for accounting firms — a clear 12-month plan to automate workflows and improve efficiency with SmartFirm.io."
+        canonicalUrl="https://smartfirm.io/services/ai-transformation-roadmap-for-accounting-firms/"
         noindex={false}
         dateModified={new Date().toISOString()}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Services", url: "/services/" },
-          { name: "AI Transformation Roadmap", url: "/services/ai-transformation-roadmap/" }
+          { name: "AI Transformation Roadmap", url: "/services/ai-transformation-roadmap-for-accounting-firms/" }
         ]}
         faqs={faqs}
       />
@@ -173,7 +173,7 @@ const AITransformationRoadmap = () => {
                 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
                 style={{ fontFamily: "'Poppins', sans-serif" }}
               >
-                AI Transformation Roadmap: Strategic AI Implementation for Accounting Firms
+                AI Transformation Roadmap for Accounting Firms
               </motion.h1>
 
               <motion.p
@@ -183,7 +183,7 @@ const AITransformationRoadmap = () => {
                 className="text-lg md:text-xl text-white/90 leading-relaxed mb-8"
                 style={{ fontFamily: "'DM Sans', sans-serif" }}
               >
-                Stop Guessing Where AI Fits. Get a Clear 12-Month Strategy.
+                AI transformation roadmap for accounting firms — get a clear 12-month plan to automate workflows and improve efficiency with SmartFirm.io's AI consulting.
               </motion.p>
 
               <motion.div
@@ -197,7 +197,7 @@ const AITransformationRoadmap = () => {
                   className="px-8 py-4 md:px-8 md:py-4 text-lg font-bold bg-gradient-coral text-white rounded-xl glow-coral hover-lift"
                   asChild
                 >
-                  <a href="/get-started/">
+                  <a href="/get-started-accounting-firm-automation/">
                     Book a Free Call
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -599,7 +599,7 @@ const AITransformationRoadmap = () => {
                 className="px-8 py-4 text-lg font-bold color-transition group"
                 asChild
               >
-                <a href="/get-started/">
+                <a href="/get-started-accounting-firm-automation/">
                   Book a Free Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>

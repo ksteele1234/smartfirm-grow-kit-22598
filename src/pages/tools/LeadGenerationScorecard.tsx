@@ -197,7 +197,7 @@ const LeadGenerationScorecard = () => {
         <SEO
           title="Lead Generation Scorecard Results | SmartFirm"
           description="Your lead generation assessment results with recommendations to improve your accounting firm's marketing."
-          canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard/"
+          canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard-for-accounting-firms/"
           pageType="tool"
           toolName="Lead Generation Scorecard"
           noindex={false}
@@ -301,9 +301,9 @@ const LeadGenerationScorecard = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Lead Generation Scorecard | SmartFirm"
-        description="Assess your accounting firm's lead generation effectiveness. Get scored recommendations for improvement."
-        canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard/"
+        title="Lead Generation Scorecard for CPAs | SmartFirm.io"
+        description="Lead generation scorecard for accounting firms — assess your lead gen effectiveness and get scored recommendations for improvement."
+        canonicalUrl="https://smartfirm.io/tools/lead-generation-scorecard-for-accounting-firms/"
         pageType="tool"
         toolName="Lead Generation Scorecard"
         noindex={false}
@@ -316,9 +316,9 @@ const LeadGenerationScorecard = () => {
             Back to Tools
           </Link>
 
-          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Lead Generation Scorecard</h1>
+          <h1 className="text-4xl font-heading font-bold text-primary mb-8 text-center">Lead Generation Scorecard for Accounting Firms</h1>
           <p className="text-sm text-muted-foreground -mt-6 mb-8 text-center" data-sf="entities">
-            Built by SmartFirm for accounting firms. See our <a href="/leading-marketing-services-for-accounting-firms/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
+            Built by SmartFirm for accounting firms. See our <a href="/services/" className="text-primary hover:underline" data-sf="internal-add">services</a>. Learn more from
             <a href="https://www.aicpa.org" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> AICPA</a> and
             <a href="https://quickbooks.intuit.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline" data-sf="external-add"> QuickBooks</a>.
           </p>

@@ -25,79 +25,79 @@ export function validateIntentRewrites() {
   const servicePages = [
     {
       pageName: 'Marketing Automation For Accounting Firms',
-      url: '/services/marketing-automation',
+      url: '/services/marketing-automation-for-accounting-firms',
       firstSentence: 'Manual follow-up costs accounting firms 10+ hours weekly and loses 40% of leads.',
       primaryKeyword: 'marketing automation for accounting firms'
     },
     {
       pageName: 'SEO for Accountants',
-      url: '/services/seo-for-accountants',
+      url: '/services/seo-for-accounting-firms',
       firstSentence: 'Invisible firms lose 80% of potential clients to competitors on page one.',
       primaryKeyword: 'SEO for accounting firms'
     },
     {
       pageName: 'Professional Website Design for Accounting Firms',
-      url: '/services/website-design',
+      url: '/services/website-design-for-accounting-firms',
       firstSentence: 'Outdated websites cost accounting firms 60% of potential clients who bounce within 10 seconds.',
       primaryKeyword: 'accounting firm website design'
     },
     {
       pageName: 'Email Marketing For CPAs',
-      url: '/services/email-marketing',
+      url: '/services/email-marketing-for-accounting-firms',
       firstSentence: 'Clients who only hear from CPAs at tax season are 70% more likely to leave.',
       primaryKeyword: 'email marketing for accountants'
     },
     {
       pageName: 'Strategic Content Marketing For CPAs',
-      url: '/services/content-marketing',
+      url: '/services/content-marketing-for-accounting-firms',
       firstSentence: 'Generic CPA websites fail to attract premium clients or command higher fees.',
       primaryKeyword: 'content marketing for CPAs'
     },
     {
       pageName: 'Automated Lead Follow Up For CPAs',
-      url: '/services/automated-lead-follow-up',
+      url: '/services/automated-lead-follow-up-for-accounting-firms',
       firstSentence: 'Slow follow-up costs CPAs 40% of potential clients within the first 24 hours.',
       primaryKeyword: 'automated lead follow-up'
     },
     {
       pageName: 'Social Media Management For CPAs',
-      url: '/services/social-media-management',
+      url: '/services/social-media-management-for-accounting-firms',
       firstSentence: 'CPAs with inconsistent social presence lose 30-50% of potential referrals to more visible competitors.',
       primaryKeyword: 'social media for accounting firms'
     },
     {
       pageName: 'Automated Review Generation For CPAs',
-      url: '/services/client-review-generation',
+      url: '/services/automated-review-generation-for-cpas',
       firstSentence: 'CPAs with fewer than 30 Google reviews lose 60% of prospects to better-reviewed competitors.',
       primaryKeyword: 'client review generation'
     },
     {
       pageName: 'Reputation Management For CPAs',
-      url: '/services/online-reputation-management',
+      url: '/services/reputation-management-for-cpa-firms',
       firstSentence: 'One negative review can cost CPAs 10-20 lost prospects before you even know it exists.',
       primaryKeyword: 'online reputation management'
     },
     {
       pageName: 'Business Optimization For Accounting Firms',
-      url: '/services/business-optimization',
+      url: '/services/business-optimization-for-accounting-firms',
       firstSentence: 'Inefficient operations cost accounting firms $50K-$100K annually through pricing leaks, scope creep, and underutilized capacity.',
       primaryKeyword: 'business optimization services'
     },
     {
       pageName: 'Accounting Firm Technology Consulting',
-      url: '/services/technology-solutions',
+      url: '/services/technology-consulting-for-accounting-firms',
       firstSentence: 'Disconnected software costs accounting firms 5-8 hours weekly on manual data entry and causes 80% more errors.',
       primaryKeyword: 'technology solutions'
     },
     {
       pageName: 'Foundation Setup: Strategy & Integration',
-      url: '/services/strategy-integration',
+      url: '/services/marketing-strategy-integration-for-accounting-firms',
       firstSentence: 'Disconnected marketing tools waste 10+ hours weekly and lose 50% of leads in the gaps.',
       primaryKeyword: 'strategy and integration'
     },
     {
       pageName: 'Fractional CIO For Accounting Firms',
-      url: '/services/executive-services',
+      url: '/services/fractional-cio-for-accounting-firms',
       firstSentence: 'Growing firms need strategic technology leadership but can\'t justify $150K+ CIO salaries.',
       primaryKeyword: 'executive services'
     }
@@ -116,49 +116,49 @@ export function validateIntentRewrites() {
   const solutionPages = [
     {
       pageName: 'Modern Marketing Services For CPAs',
-      url: '/solutions/stop-losing-clients',
+      url: '/solutions/stop-losing-clients-to-tech-savvy-cpas',
       firstSentence: 'Tech-savvy CPAs are winning your clients with faster responses and modern systems.',
       primaryKeyword: 'modern marketing services for CPAs'
     },
     {
       pageName: 'Client Retention Strategies',
-      url: '/solutions/client-retention',
+      url: '/solutions/stop-losing-clients-to-tech-savvy-cpas',
       firstSentence: 'Losing even 5 clients per year costs $50K+ in recurring revenue and referrals.',
       primaryKeyword: 'client retention strategies for CPAs'
     },
     {
       pageName: 'Advanced Retention Strategies for CPAs',
-      url: '/solutions/advanced-retention-strategies-for-cpas',
+      url: '/solutions/stop-losing-clients-to-tech-savvy-cpas',
       firstSentence: 'Poor communication costs accounting firms 20-30% of clients annually, losing $100K+ in recurring revenue.',
       primaryKeyword: 'retention strategies for CPAs'
     },
     {
       pageName: 'Scale Your Accounting Firm Successfully',
-      url: '/solutions/scale-firm',
+      url: '/solutions/scale-accounting-firm-without-chaos',
       firstSentence: 'Most accounting firms hit a ceiling where more clients means more stress and longer hours.',
       primaryKeyword: 'accounting firm scaling strategies'
     },
     {
       pageName: 'Client Referral System For CPAs',
-      url: '/solutions/get-more-referrals',
+      url: '/solutions/get-more-referrals-for-cpa-firm-without-asking',
       firstSentence: 'Most CPAs lose 50+ referral opportunities per year because they lack a systematic approach.',
       primaryKeyword: 'CPA referral generation'
     },
     {
       pageName: 'Accounting Firm Growth Consulting',
-      url: '/solutions/grow-without-pains',
+      url: '/solutions/grow-accounting-firm-without-growing-pains',
       firstSentence: 'Growing accounting firms struggle with chaos, quality control issues, and overwhelmed staff.',
       primaryKeyword: 'accounting firm growth'
     },
     {
       pageName: 'CPA Practice Management Services',
-      url: '/solutions/protect-practice',
+      url: '/solutions/protect-accounting-practice-from-data-breaches',
       firstSentence: 'Unprepared accounting practices face devastating threats from cybersecurity risks, regulatory changes, and technology disruption.',
       primaryKeyword: 'CPA practice protection'
     },
     {
       pageName: 'Increase Your Accounting Firm Revenue',
-      url: '/solutions/work-less-earn-more',
+      url: '/solutions/work-less-earn-more-as-a-cpa',
       firstSentence: 'Too many CPAs work 60+ hours weekly for modest returns, trapped in time-for-money thinking.',
       primaryKeyword: 'accounting firm efficiency'
     }
@@ -177,13 +177,13 @@ export function validateIntentRewrites() {
   const industryPages = [
     {
       pageName: 'Tax Preparation Marketing',
-      url: '/industries/tax-preparation',
+      url: '/industries/automation-for-tax-preparation-firms',
       firstSentence: 'Tax firms waste 15+ hours weekly on manual lead follow-up during peak season.',
       primaryKeyword: 'tax preparation marketing'
     },
     {
       pageName: 'Bookkeeping Services Marketing',
-      url: '/industries/bookkeeping-services',
+      url: '/industries/marketing-for-bookkeeping-firms',
       firstSentence: 'Small bookkeeping firms lose 60% of leads to larger competitors with automated systems.',
       primaryKeyword: 'bookkeeping marketing'
     },
@@ -195,7 +195,7 @@ export function validateIntentRewrites() {
     },
     {
       pageName: 'Audit & Assurance Marketing',
-      url: '/industries/audit-assurance',
+      url: '/industries/marketing-for-audit-firms',
       firstSentence: 'Audit firms waste 25+ hours monthly chasing leads and managing referral relationships manually.',
       primaryKeyword: 'audit firm marketing'
     }
@@ -214,67 +214,67 @@ export function validateIntentRewrites() {
   const toolPages = [
     {
       pageName: 'Marketing ROI Calculator For Accountants',
-      url: '/tools/roi-calculator',
+      url: '/tools/marketing-roi-calculator-for-accounting-firms',
       firstSentence: 'Calculate your expected return on investment from accounting firm marketing campaigns.',
       primaryKeyword: 'marketing ROI calculator'
     },
     {
       pageName: 'Growth Calculator For Accounting Firms',
-      url: '/growth-calculator',
+      url: '/accounting-firm-growth-calculator',
       firstSentence: 'Estimate your firm\'s growth potential with automated marketing systems.',
       primaryKeyword: 'accounting firm growth calculator'
     },
     {
       pageName: 'Client Lifetime Value Calculator',
-      url: '/tools/client-lifetime-value-calculator',
+      url: '/tools/client-lifetime-value-calculator-for-accountants',
       firstSentence: 'Calculate the total value each client brings to your accounting practice over time.',
       primaryKeyword: 'client lifetime value calculator'
     },
     {
       pageName: 'Tech Stack ROI Calculator',
-      url: '/tools/tech-stack-roi-calculator',
+      url: '/tools/accounting-firm-technology-roi-calculator',
       firstSentence: 'Measure the return on investment from your accounting technology stack.',
       primaryKeyword: 'tech stack ROI'
     },
     {
       pageName: 'Marketing Scorecard For CPAs',
-      url: '/tools/marketing-scorecard',
+      url: '/tools/marketing-assessment-for-accountants',
       firstSentence: 'Evaluate your current CPA marketing effectiveness across 12 key dimensions.',
       primaryKeyword: 'marketing scorecard'
     },
     {
       pageName: 'Lead Generation Scorecard',
-      url: '/tools/lead-generation-scorecard',
+      url: '/tools/lead-generation-scorecard-for-accounting-firms',
       firstSentence: 'Assess your firm\'s lead generation systems and identify improvement opportunities.',
       primaryKeyword: 'lead generation scorecard'
     },
     {
       pageName: 'Growth Potential Scorecard',
-      url: '/tools/growth-potential-scorecard',
+      url: '/tools/accounting-firm-growth-scorecard',
       firstSentence: 'Discover your accounting firm\'s growth readiness across operations, marketing, and technology.',
       primaryKeyword: 'growth potential assessment'
     },
     {
       pageName: 'Automation Readiness Quiz',
-      url: '/tools/automation-readiness-quiz',
+      url: '/tools/automation-readiness-assessment-for-accountants',
       firstSentence: 'Determine if your firm is ready to implement marketing automation systems.',
       primaryKeyword: 'automation readiness'
     },
     {
       pageName: 'Modern Firm Assessment Quiz',
-      url: '/tools/modern-firm-quiz',
+      url: '/tools/modern-accounting-firm-assessment',
       firstSentence: 'Rate your firm\'s adoption of modern technology and best practices.',
       primaryKeyword: 'modern firm assessment'
     },
     {
       pageName: 'Efficiency Assessment Quiz',
-      url: '/tools/efficiency-quiz',
+      url: '/tools/accounting-firm-efficiency-assessment',
       firstSentence: 'Identify operational inefficiencies costing your firm time and money.',
       primaryKeyword: 'efficiency assessment'
     },
     {
       pageName: 'Workflow Bottleneck Finder',
-      url: '/tools/workflow-bottleneck-finder',
+      url: '/tools/accounting-firm-workflow-audit-tool',
       firstSentence: 'Pinpoint process bottlenecks limiting your accounting firm\'s capacity and growth.',
       primaryKeyword: 'workflow analysis'
     }
@@ -317,7 +317,7 @@ export function validateIntentRewrites() {
     },
     {
       pageName: 'Tools & Calculators',
-      url: '/tools-calculators',
+      url: '/tools',
       firstSentence: 'Free calculators and assessment tools to evaluate your firm\'s marketing and operations.',
       primaryKeyword: 'accounting tools'
     }
@@ -391,27 +391,15 @@ export function validateIntentRewrites() {
     },
     {
       pageName: 'Get Started',
-      url: '/get-started',
+      url: '/get-started-accounting-firm-automation',
       firstSentence: 'Start growing your accounting firm with proven marketing systems and strategic guidance.',
       primaryKeyword: 'get started'
     },
     {
       pageName: 'Quick Start Package',
-      url: '/quick-start',
+      url: '/quick-start-automation-package-for-cpa-firms',
       firstSentence: 'Launch your accounting firm marketing in 30 days with website optimization, local SEO, and automated lead generation.',
       primaryKeyword: 'quick start package'
-    },
-    {
-      pageName: 'Quick Start Checkout',
-      url: '/quick-start-checkout',
-      firstSentence: 'Complete your Quick Start Package enrollment and begin transforming your firm.',
-      primaryKeyword: 'checkout'
-    },
-    {
-      pageName: 'Quick Start Thank You',
-      url: '/quick-start-thank-you',
-      firstSentence: 'Welcome to SmartFirm - your Quick Start journey begins now.',
-      primaryKeyword: 'thank you'
     },
     {
       pageName: 'Thank You',
