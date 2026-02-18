@@ -31,7 +31,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Tax Preparers"
     }
   },
-  '/services/professional-website-design-for-accounting-firms': {
+  '/services/website-design-for-accounting-firms': {
     name: 'Website Design for Accounting Firms',
     description: 'Professional website design and development services tailored for accounting firms to convert visitors into clients.',
     serviceType: 'Web Design',
@@ -42,7 +42,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/email-marketing-for-cpas': {
+  '/services/email-marketing-for-accounting-firms': {
     name: 'Email Marketing for Accountants',
     description: 'Strategic email marketing campaigns that nurture prospects and keep your accounting firm top-of-mind with clients.',
     serviceType: 'Email Marketing',
@@ -53,7 +53,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/strategic-content-marketing-for-cpas': {
+  '/services/content-marketing-for-accounting-firms': {
     name: 'Content Marketing for Accounting Firms',
     description: 'Expert content creation and strategy that positions your accounting firm as a trusted authority.',
     serviceType: 'Content Marketing',
@@ -64,7 +64,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs"
     }
   },
-  '/services/social-media-management-for-cpas': {
+  '/services/social-media-management-for-accounting-firms': {
     name: 'Social Media Management for Accountants',
     description: 'Professional social media management services to build your accounting firm\'s online presence and engage prospects.',
     serviceType: 'Social Media Marketing',
@@ -75,7 +75,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
     }
   },
-  '/services/accounting-firm-technology-consulting': {
+  '/services/technology-consulting-for-accounting-firms': {
     name: 'Technology Solutions for Accounting Firms',
     description: 'Advanced technology integration and automation solutions to streamline accounting firm operations.',
     serviceType: 'Technology Consulting',
@@ -97,7 +97,7 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs"
     }
   },
-  '/services/ai-transformation-roadmap': {
+  '/services/ai-transformation-roadmap-for-accounting-firms': {
     name: 'AI Transformation Roadmap for Accounting Firms',
     description: 'Strategic AI implementation planning to help accounting firms leverage artificial intelligence for efficiency and growth.',
     serviceType: 'AI Consulting',
@@ -108,8 +108,8 @@ const serviceDefinitions = {
       "audienceType": "Accounting Firms, CPAs"
     }
   },
-  '/services/single-process-ai-transformation': {
-    name: 'Single Process AI Transformation',
+  '/services/ai-process-optimization-for-accounting-firms': {
+    name: 'AI Process Optimization for Accounting Firms',
     description: 'Focused AI optimization for a single business process to deliver quick wins and measurable ROI.',
     serviceType: 'AI Consulting',
     provider: { "@id": "https://smartfirm.io#organization" },
@@ -117,6 +117,83 @@ const serviceDefinitions = {
     audience: {
       "@type": "Audience",
       "audienceType": "Accounting Firms, CPAs, Bookkeepers"
+    }
+  },
+  '/services/automated-lead-follow-up-for-accounting-firms': {
+    name: 'Automated Lead Follow-Up for Accounting Firms',
+    description: 'Automated lead nurturing and follow-up systems that convert prospects into clients for accounting firms.',
+    serviceType: 'Marketing Automation',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/automated-review-generation-for-cpas': {
+    name: 'Automated Review Generation for CPAs',
+    description: 'Automated systems that help accounting firms generate positive client reviews and manage their online reputation.',
+    serviceType: 'Reputation Management',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/reputation-management-for-cpa-firms': {
+    name: 'Reputation Management for CPA Firms',
+    description: 'Professional online reputation management services to protect and enhance your accounting firm\'s brand.',
+    serviceType: 'Reputation Management',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/fractional-cio-for-accounting-firms': {
+    name: 'Fractional CIO for Accounting Firms',
+    description: 'Executive-level technology leadership on a fractional basis to guide your accounting firm\'s digital transformation.',
+    serviceType: 'Technology Consulting',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/marketing-strategy-integration-for-accounting-firms': {
+    name: 'Marketing Strategy Integration for Accounting Firms',
+    description: 'Unified marketing strategy that integrates all channels for maximum impact and ROI for accounting firms.',
+    serviceType: 'Marketing Strategy',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/marketing-add-ons-for-accounting-firms': {
+    name: 'Marketing Add-Ons for Accounting Firms',
+    description: 'Additional marketing services and add-on packages to enhance your accounting firm\'s marketing efforts.',
+    serviceType: 'Marketing Services',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
+    }
+  },
+  '/services/client-onboarding-automation': {
+    name: 'Client Onboarding Automation',
+    description: 'Streamlined client onboarding automation that reduces manual work and improves the new client experience.',
+    serviceType: 'Business Process Automation',
+    provider: { "@id": "https://smartfirm.io#organization" },
+    areaServed: { "@type": "Country", "name": "United States" },
+    audience: {
+      "@type": "Audience",
+      "audienceType": "Accounting Firms, CPAs"
     }
   }
 };
