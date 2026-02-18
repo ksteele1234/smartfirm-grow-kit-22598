@@ -120,10 +120,10 @@ function main() {
   
   // Key pages that should have Organization schema
   const targetPages = [
-    'index.html',           // Homepage
-    'about/index.html',     // About page
-    'contact/index.html',   // Contact page
-    'get-started/index.html' // Get Started
+    'index.html',                                           // Homepage
+    'marketing-agency-for-accounting-firms/index.html',     // About page
+    'accounting-firm-automation-consultation/index.html',   // Contact page
+    'get-started-accounting-firm-automation/index.html'     // Get Started
   ];
   
   let successCount = 0;
