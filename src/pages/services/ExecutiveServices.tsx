@@ -98,7 +98,8 @@ const ExecutiveServices = () => {
     ctaTitle: "Access Executive-Level Expertise",
     ctaDescription: "Let's provide your firm with the strategic leadership needed to accelerate growth and achieve your goals.",
     ctaButtonText: "Explore Services",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['accounting-automation', 'integration', 'scalability', 'efficiency']
   };
 
   return <ServicePageTemplate data={serviceData} />;

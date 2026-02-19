@@ -33,6 +33,7 @@ export interface ServicePageData extends CMSPageData {
   ctaDescription: string;
   ctaButtonText: string;
   ctaButtonLink: string;
+  relatedBlogTags?: string[];
 }
 
 export interface SolutionPageData extends CMSPageData {

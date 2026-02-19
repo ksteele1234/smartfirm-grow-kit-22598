@@ -98,7 +98,8 @@ const WebsiteDesign = () => {
     ctaTitle: "Get a Website That Converts",
     ctaDescription: "Let's design a professional website that establishes credibility and generates leads for your accounting firm.",
     ctaButtonText: "View Portfolio",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['web-design', 'seo', 'lead-generation', 'conversion-optimization']
   };
 
   return <ServicePageTemplate data={serviceData} />;

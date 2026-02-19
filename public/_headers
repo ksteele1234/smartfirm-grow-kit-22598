@@ -1,0 +1,52 @@
+# =============================================================================
+# Netlify Custom Headers - SmartFirm.io
+# =============================================================================
+
+# ─── Global Security Headers ─────────────────────────────────────────────────
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# ─── Hashed Assets (Vite generates fingerprinted filenames) ──────────────────
+# These files have content hashes in their names, so they can be cached forever.
+# e.g. /assets/MarketingAutomation-BEB9qhcn.js
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── Static Images & Media ──────────────────────────────────────────────────
+# Images that don't change often — cache aggressively with revalidation
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+/*.ico
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# ─── Fonts ───────────────────────────────────────────────────────────────────
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+# ─── Favicons ────────────────────────────────────────────────────────────────
+/favicon*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# ─── Sitemap & Robots ───────────────────────────────────────────────────────
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/robots.txt
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# ─── HTML Pages ──────────────────────────────────────────────────────────────
+# Short cache for HTML so content updates propagate quickly
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate

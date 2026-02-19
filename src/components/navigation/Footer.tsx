@@ -26,7 +26,9 @@ const Footer = () => {
     { name: "Resources", slug: "/resources/" },
     { name: "Tools & Calculators", slug: "/tools/" },
     { name: "Case Studies", slug: "/case-studies/" },
-    { name: "Growth Calculator", slug: "/accounting-firm-growth-calculator/" }
+    { name: "Growth Calculator", slug: "/accounting-firm-growth-calculator/" },
+    { name: "AI Transformation Offer", slug: "/ai-transformation-offer/" },
+    { name: "List Reactivation Offer", slug: "/list-reactivation-offer/" }
   ];
 
 

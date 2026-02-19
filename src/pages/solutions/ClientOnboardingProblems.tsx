@@ -6,7 +6,7 @@ const ClientOnboardingProblems = () => {
     id: "client-onboarding-problems",
     title: "Client Onboarding Problems? Stop Losing Clients | SmartFirm",
     slug: "client-onboarding-problems",
-    metaDescription: "New clients falling through the cracks? A broken onboarding process costs you time, money, and reputation. Learn how to create a flawless first impression.",
+    metaDescription: "Losing new clients during onboarding? A disorganized first impression costs your firm trust, time, and revenue. Fix the experience that's driving clients away.",
     canonicalUrl: "https://smartfirm.io/solutions/client-onboarding-problems/",
     content: {},
     heroTitle: "New Clients Falling Through the Cracks? It's Costing You More Than You Think.",

@@ -74,7 +74,8 @@ const OnlineReputationManagement = () => {
     ctaTitle: "Ready to Strengthen Your Online Reputation?",
     ctaDescription: "Book a free reputation audit to see how we can transform your firm's online presence and attract more ideal clients.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['reputation-management', 'client-retention', 'google-business-profile', 'lead-generation']
   };
 
   return <ServicePageTemplate data={serviceData} />;

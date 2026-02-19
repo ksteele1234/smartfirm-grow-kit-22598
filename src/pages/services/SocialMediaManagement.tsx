@@ -98,7 +98,8 @@ const SocialMediaManagement = () => {
     ctaTitle: "Build Your Professional Social Media Presence",
     ctaDescription: "Let's establish your firm as a trusted authority on social media while generating new business opportunities.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['social-media', 'content-marketing', 'lead-generation', 'thought-leadership']
   };
 
   return <ServicePageTemplate data={serviceData} />;
