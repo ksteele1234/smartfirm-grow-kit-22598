@@ -102,7 +102,8 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Marketing?',
     ctaDescription: "Let's implement a marketing automation system that grows your firm while you focus on serving clients.",
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started-accounting-firm-automation/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/',
+    relatedBlogTags: ['marketing-automation', 'lead-generation', 'accounting-automation', 'client-retention']
   },
   'seo-for-accountants': {
     id: 'seo-for-accountants',
@@ -156,7 +157,8 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Rank Higher?',
     ctaDescription: 'Let\'s build an SEO strategy that brings qualified clients to your firm.',
     ctaButtonText: 'Get Started',
-    ctaButtonLink: '/get-started-accounting-firm-automation/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/',
+    relatedBlogTags: ['seo', 'local-seo', 'google-business-profile', 'lead-generation']
   },
   'client-onboarding-automation': {
     id: 'client-onboarding-automation',
@@ -225,7 +227,8 @@ export const servicePages: Record<string, ServicePageData> = {
     ctaTitle: 'Ready to Automate Your Client Onboarding?',
     ctaDescription: 'Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.',
     ctaButtonText: 'Schedule a Free Consultation',
-    ctaButtonLink: '/get-started-accounting-firm-automation/'
+    ctaButtonLink: '/get-started-accounting-firm-automation/',
+    relatedBlogTags: ['client-onboarding', 'workflow-automation', 'accounting-automation', 'efficiency']
   }
 };
 
@@ -235,7 +238,7 @@ export const solutionPages: Record<string, SolutionPageData> = {
     id: 'client-onboarding-problems',
     title: 'Client Onboarding Problems? Stop Losing Clients | SmartFirm',
     slug: 'client-onboarding-problems',
-    metaDescription: 'New clients falling through the cracks? A broken onboarding process costs you time, money, and reputation. Learn how to create a flawless first impression.',
+    metaDescription: 'Losing new clients during onboarding? A disorganized first impression costs your firm trust, time, and revenue. Fix the experience that\'s driving clients away.',
     canonicalUrl: 'https://smartfirm.io/solutions/client-onboarding-problems/',
     heroTitle: 'New Clients Falling Through the Cracks? It\'s Costing You More Than You Think.',
     heroSubtitle: 'You just closed a great new client. You were excited, they were excited. But by the time you have everything you need, the initial excitement has evaporated—replaced by frustration.',

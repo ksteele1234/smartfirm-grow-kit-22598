@@ -85,7 +85,8 @@ const StrategyIntegration = () => {
     ctaTitle: "Build Your Marketing Foundation Right",
     ctaDescription: "Let's start with a strategic discovery session and build a marketing infrastructure that actually works together.",
     ctaButtonText: "Schedule Discovery Session",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['marketing-automation', 'lead-generation', 'roi', 'scalability']
   };
 
   return <ServicePageTemplate data={serviceData} />;

@@ -98,7 +98,8 @@ const AutomatedLeadFollowUp = () => {
     ctaTitle: "Ready to Automate Your Lead Follow-Up?",
     ctaDescription: "Let's set up automated sequences that convert more prospects into clients for your accounting firm.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['lead-generation', 'marketing-automation', 'client-retention', 'accounting-automation']
   };
 
   return <ServicePageTemplate data={serviceData} />;

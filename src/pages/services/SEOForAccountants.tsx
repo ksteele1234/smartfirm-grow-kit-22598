@@ -98,7 +98,8 @@ const SEOForAccountants = () => {
     ctaTitle: "Ready to Dominate Local Search Results?",
     ctaDescription: "Let's optimize your website to attract more qualified prospects from Google search.",
     ctaButtonText: "Talk to Us",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['seo', 'local-seo', 'google-business-profile', 'lead-generation']
   };
 
   return <ServicePageTemplate data={serviceData} />;

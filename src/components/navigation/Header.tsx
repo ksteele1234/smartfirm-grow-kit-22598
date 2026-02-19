@@ -351,6 +351,16 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <NavigationMenuLink href="/tools/" className={cn(
+                  "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
+                  "text-base font-medium text-slate-700 transition-colors duration-200",
+                  "hover:text-primary focus:text-primary focus:outline-none"
+                )}>
+                  FREE TOOLS
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <NavigationMenuLink href="/marketing-agency-for-accounting-firms/" className={cn(
                   "group inline-flex h-10 w-max items-center justify-center px-4 py-2",
                   "text-base font-medium text-slate-700 transition-colors duration-200",
@@ -410,6 +420,9 @@ const Header = () => {
               </a>
               <a href="/industries/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 INDUSTRIES
+              </a>
+              <a href="/tools/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
+                FREE TOOLS
               </a>
               <a href="/marketing-agency-for-accounting-firms/" className="text-slate-700 hover:text-primary transition-colors duration-200 font-medium">
                 ABOUT US

@@ -120,7 +120,8 @@ const ClientOnboardingAutomation = () => {
     ctaTitle: "Ready to Automate Your Client Onboarding?",
     ctaDescription: "Schedule a free consultation to see how we can streamline your client intake and save your team 10+ hours every week.",
     ctaButtonText: "Schedule a Free Consultation",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['client-onboarding', 'workflow-automation', 'accounting-automation', 'efficiency']
   };
 
   const relatedSolutionCallout = (

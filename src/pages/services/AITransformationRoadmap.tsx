@@ -604,6 +604,9 @@ const AITransformationRoadmap = () => {
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
+              <p className="mt-4 text-white/70 text-sm">
+                PASBA member? <a href="/ai-transformation-offer/" className="text-white underline hover:text-accent transition-colors">See exclusive pricing</a>
+              </p>
             </motion.div>
           </div>
         </section>

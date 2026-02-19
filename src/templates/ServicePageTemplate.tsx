@@ -1,4 +1,4 @@
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, lazy, Suspense } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,8 @@ import {
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import FaqAnswer from "@/components/faq/FaqAnswer";
+
+const RelatedBlogPosts = lazy(() => import("@/components/blog/RelatedBlogPosts"));
 
 const heroStyles = `
   @keyframes bubble-float {
@@ -397,6 +399,13 @@ const ServicePageTemplate = ({ data, beforeFinalCta }: ServicePageTemplateProps)
             </div>
           </div>
         </section>
+
+        {/* Related Blog Posts - Cross-links to blog content */}
+        {data.relatedBlogTags && data.relatedBlogTags.length > 0 && (
+          <Suspense fallback={null}>
+            <RelatedBlogPosts tags={data.relatedBlogTags} />
+          </Suspense>
+        )}
 
         {/* Optional content before Final CTA */}
         {beforeFinalCta}

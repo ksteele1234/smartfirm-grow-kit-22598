@@ -98,10 +98,28 @@ const EmailMarketing = () => {
     ctaTitle: "Start Nurturing Client Relationships",
     ctaDescription: "Discover how strategic email marketing can strengthen client relationships and drive business growth.",
     ctaButtonText: "Get Started",
-    ctaButtonLink: "/get-started-accounting-firm-automation/"
+    ctaButtonLink: "/get-started-accounting-firm-automation/",
+    relatedBlogTags: ['email-marketing', 'lead-generation', 'client-retention', 'accounting-automation']
   };
 
-  return <ServicePageTemplate data={serviceData} />;
+  return (
+    <ServicePageTemplate
+      data={serviceData}
+      beforeFinalCta={
+        <section className="py-10 px-6 md:px-12 bg-gradient-to-r from-primary/5 to-secondary/5">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-foreground font-medium">
+              Have a dormant client list? Our{" "}
+              <a href="/list-reactivation-offer/" className="text-primary font-semibold underline hover:text-secondary transition-colors">
+                List Reactivation Program
+              </a>{" "}
+              re-engages past clients and prospects with targeted campaigns.
+            </p>
+          </div>
+        </section>
+      }
+    />
+  );
 };
 
 export default EmailMarketing;
