@@ -275,6 +275,25 @@ async function fetchBlogCategories() {
   }
 }
 
+function generateProgrammaticSeoRoutes() {
+  const dataPath = path.resolve(__dirname, '../data/programmatic-pages.json');
+
+  if (!fs.existsSync(dataPath)) {
+    console.log('[Sitemap] programmatic-pages.json not found, skipping programmatic SEO routes');
+    return [];
+  }
+
+  const pages = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const publishedPages = pages.filter(p => p.published);
+
+  return publishedPages.map(page => ({
+    path: `/grow/${page.slug}/`,
+    changefreq: 'monthly',
+    priority: 0.6,
+    lastmod: page.publishDate,
+  }));
+}
+
 function generateFaqRoutes() {
   const slugs = extractFaqSlugsFromSource();
   return slugs.map(slug => ({
@@ -320,6 +339,10 @@ async function main() {
   const faqRoutes = generateFaqRoutes();
   console.log(`[Sitemap] Generated ${faqRoutes.length} FAQ routes`);
 
+  // Generate programmatic SEO routes
+  const seoRoutes = generateProgrammaticSeoRoutes();
+  console.log(`[Sitemap] Generated ${seoRoutes.length} programmatic SEO routes`);
+
   // Convert blog posts to sitemap routes
   const blogRoutes = blogPosts.map(post => ({
     path: `/blog/${post.slug}/`,
@@ -337,7 +360,7 @@ async function main() {
   }));
 
   // Combine static + dynamic routes
-  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...faqRoutes];
+  const allRoutes = [...staticRoutes, ...blogRoutes, ...tagRoutes, ...faqRoutes, ...seoRoutes];
 
   // Generate sitemap XML
   const sitemapXml = generateSitemapXml(allRoutes);
@@ -359,6 +382,7 @@ async function main() {
   console.log(`   - Blog posts: ${blogRoutes.length}`);
   console.log(`   - Tags: ${tagRoutes.length}`);
   console.log(`   - FAQ pages: ${faqRoutes.length}`);
+  console.log(`   - Programmatic SEO: ${seoRoutes.length}`);
   console.log('');
 }
 

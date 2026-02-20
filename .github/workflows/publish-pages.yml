@@ -1,0 +1,55 @@
+name: Publish Scheduled Pages
+
+on:
+  schedule:
+    # Runs daily at 9 AM UTC
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    # Allows manual triggering from GitHub Actions tab
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Update published status for scheduled pages
+        run: node scripts/publish-scheduled-pages.cjs
+
+      - name: Regenerate React app data
+        run: node scripts/regenerate-seo-data.cjs
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code data/programmatic-pages.json src/data/programmaticSeoPages.ts || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add data/programmatic-pages.json src/data/programmaticSeoPages.ts
+          git commit -m "Publish scheduled pages for $(date +%Y-%m-%d)"
+          git push
+
+      - name: Trigger Netlify deploy
+        if: steps.git-check.outputs.changed == 'true'
+        run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
+
+      - name: Log completion
+        run: |
+          if [ "${{ steps.git-check.outputs.changed }}" == "true" ]; then
+            echo "Successfully published new pages and triggered Netlify rebuild"
+          else
+            echo "No pages ready to publish today"
+          fi

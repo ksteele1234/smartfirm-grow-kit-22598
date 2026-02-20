@@ -76,6 +76,9 @@ const PageGrader = lazy(() => import("./pages/tools/PageGrader"));
 const AdvancedSEOQA = lazy(() => import("./pages/tools/AdvancedSEOQA"));
 const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 
+// Programmatic SEO Pages
+const ProgrammaticPage = lazy(() => import("./pages/grow/ProgrammaticPage"));
+
 // Other Pages
 const CaseStudies = lazy(() => import("./pages/CaseStudies"));
 const PayrollAutomationROI = lazy(() => import("./pages/case-studies/PayrollAutomationROI"));
@@ -323,6 +326,9 @@ const App = () => (
               <Route path="tags" element={<TagManager />} />
               <Route path="profiles" element={<ProfileManager />} />
             </Route>
+
+            {/* Programmatic SEO Pages */}
+            <Route path="/grow/:slug" element={<ProgrammaticPage />} />
 
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
