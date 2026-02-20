@@ -3066,5 +3066,44 @@
     "metaDescription": "Monday.com alternative for CPA operations. Operational automation built for accounting firms instead of generic project management.",
     "h1": "Monday.com Alternative for CPA Operations",
     "focusKeyword": "monday.com alternative for cpa operations"
+  },
+  {
+    "id": 231,
+    "slug": "accounting-data-automation-for-cpas",
+    "title": "Accounting Data Automation for CPAs",
+    "category": "services-technical",
+    "subcategory": "data-automation",
+    "targetAudience": "CPAs",
+    "published": false,
+    "publishDate": "2026-08-18",
+    "metaDescription": "Accounting data automation for CPAs. Automate data entry, data flows between systems, and reporting pipelines so your team spends zero time on manual data work.",
+    "h1": "Accounting Data Automation for CPAs",
+    "focusKeyword": "accounting data automation"
+  },
+  {
+    "id": 232,
+    "slug": "data-entry-automation-for-accounting-firms",
+    "title": "Data Entry Automation for Accounting Firms",
+    "category": "services-technical",
+    "subcategory": "data-automation",
+    "targetAudience": "accounting firms",
+    "published": false,
+    "publishDate": "2026-08-19",
+    "metaDescription": "Data entry automation for accounting firms. Eliminate manual data entry with automated extraction, validation, and syncing across your accounting systems.",
+    "h1": "Data Entry Automation for Accounting Firms",
+    "focusKeyword": "data entry automation for accounting firms"
+  },
+  {
+    "id": 233,
+    "slug": "automated-data-processing-for-bookkeepers",
+    "title": "Automated Data Processing for Bookkeepers",
+    "category": "services-technical",
+    "subcategory": "data-automation",
+    "targetAudience": "bookkeepers",
+    "published": false,
+    "publishDate": "2026-08-20",
+    "metaDescription": "Automated data processing for bookkeepers. Streamline receipt processing, bank feeds, and data reconciliation with done for you automation.",
+    "h1": "Automated Data Processing for Bookkeepers",
+    "focusKeyword": "automated data processing for bookkeepers"
   }
 ]
