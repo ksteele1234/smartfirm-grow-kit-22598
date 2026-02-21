@@ -1,0 +1,72 @@
+{
+  "subcategory": "full-spectrum",
+  "heroDescription": "Most firms automate marketing, operations, or client experience in isolation. The result is a firm where leads come in through one system, work gets managed in another, and client communication happens in a third, with your team acting as the glue holding it all together. Full spectrum automation connects every layer of your practice so that a new lead flows seamlessly into onboarding, onboarding triggers your engagement workflows, and your workflows drive the client experience from start to finish.",
+  "benefits": [
+    {
+      "title": "Everything Talks to Everything",
+      "description": "When your marketing, operations, and client experience systems are connected, data moves automatically between them. A new lead captured from your website flows into your CRM, triggers an onboarding sequence, and creates the engagement tasks your team needs, all without manual handoffs. That level of connection eliminates the data gaps and dropped balls that happen when systems operate independently."
+    },
+    {
+      "title": "A Client Journey Without Gaps",
+      "description": "Your clients experience your firm as one cohesive entity, not a collection of departments. From the moment they discover you online to their ongoing engagement, every touchpoint feels intentional and connected. That consistency builds trust and typically leads to stronger retention and more referrals."
+    },
+    {
+      "title": "One Strategic View of Your Firm",
+      "description": "When all your systems are connected, you can see the full picture. How your marketing drives leads, how those leads convert to clients, how efficiently you deliver, and how satisfied those clients are. That visibility helps you make better decisions about where to invest your time and resources."
+    }
+  ],
+  "features": [
+    {
+      "title": "Marketing to Operations Pipeline",
+      "description": "Your lead generation, nurturing, and conversion systems connect directly to your operational workflows. When a prospect becomes a client, the transition happens automatically with all the right information flowing to the right places.",
+      "details": [
+        "Lead capture and nurturing through platforms like GoHighLevel feeding directly into your practice management system",
+        "Automated onboarding triggered the moment a prospect signs an engagement letter",
+        "Client data collected during marketing interactions carries forward so nothing needs to be re entered"
+      ]
+    },
+    {
+      "title": "Operational Workflow Automation",
+      "description": "Your internal processes, from engagement setup to deliverable completion, run on structured workflows with automated handoffs, reminders, and status tracking. Tools like Karbon can manage the work while automations handle the coordination.",
+      "details": [
+        "Engagement workflows that move work forward automatically as steps are completed",
+        "Document collection and management integrated into your workflow stages using tools like LedgerDocs",
+        "Team assignments and workload balancing that update in real time"
+      ]
+    },
+    {
+      "title": "Client Experience Layer",
+      "description": "Every client facing touchpoint, from status updates to review scheduling to feedback requests, is automated and tied to where each client sits in your workflow. Clients feel informed and cared for without your team manually managing communication.",
+      "details": [
+        "Automated status updates at key engagement milestones so clients always know where things stand",
+        "Review and feedback requests triggered at the right moments in the client journey",
+        "A branded client portal experience powered by tools like Double that keeps everything accessible"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is full spectrum automation realistic for a firm our size?",
+      "answer": "It is more accessible than most firms expect. We do not implement everything at once. We start with the connections that will make the biggest immediate difference and build from there. Even a small firm can have a fully connected system. It just looks different than what a larger firm might need."
+    },
+    {
+      "question": "How do you handle firms that already have some automation in place?",
+      "answer": "That is actually the most common starting point. Most firms have pieces automated but the connections between them are manual. We audit what you already have, identify where the gaps and disconnections are, and build the bridges between your existing systems before adding anything new."
+    },
+    {
+      "question": "What happens if something breaks in a fully connected system?",
+      "answer": "Connected does not mean fragile. We build systems with monitoring, fallback triggers, and clear alert notifications so your team knows immediately if something needs attention. The goal is a system that runs reliably on its own but keeps your team informed and in control."
+    }
+  ],
+  "heroSubtitleTemplate": "Most {audience} have automation in pieces but nothing truly connected. Here is how firms are building end to end systems where marketing, operations, and client experience work as one.",
+  "ctaTitle": "Ready to Connect Everything?",
+  "ctaDescription": "Book a free call and we will audit your current systems together and show you where the disconnections are costing your firm the most time and opportunity.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms that want to grow face a common challenge: marketing brings in new clients, but onboarding is manual, monthly workflows are disconnected from client communication, and there is no clear feedback loop to drive retention or referrals. Full spectrum automation connects your entire practice so that a new bookkeeping lead flows into onboarding, onboarding sets up your monthly workflows, and those workflows drive a client experience that keeps clients engaged for years."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax practices operate on tight seasonal timelines where every disconnection between marketing, operations, and client communication creates risk. Full spectrum automation ensures that new tax clients flow seamlessly from lead capture through onboarding, into your preparation workflow, and through a client experience that drives reviews, referrals, and year round engagement, all without your team manually managing each handoff."
+    }
+  }
+}

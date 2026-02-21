@@ -1,0 +1,87 @@
+{
+  "subcategory": "social-media",
+  "heroDescription": "You know your firm should have a social media presence, but between client work and running the practice, creating content and posting consistently just does not happen. That is exactly what this service is for. We handle the content creation, scheduling, and strategy so your {audience} firm shows up professionally on the platforms that matter, without you or your team spending hours trying to figure out what to post.",
+  "benefits": [
+    {
+      "title": "Professional Content Without the Time Commitment",
+      "description": "We create and schedule social media content on your behalf, so your firm maintains a polished, consistent presence without anyone on your team needing to become a content creator. The posts reflect your expertise and your voice because we develop them in collaboration with you during discovery.",
+      "details": [
+        "Done for you content creation tailored to your firm's services and personality",
+        "Regular posting cadence maintained without any effort from your team",
+        "Content that positions you as a knowledgeable professional, not a generic firm"
+      ]
+    },
+    {
+      "title": "Thought Leadership That Builds Trust",
+      "description": "Social media for {audience} works best when it demonstrates expertise rather than trying to sell. We develop content that showcases your knowledge, answers questions your ideal clients are already asking, and positions your firm as a go to resource in your market.",
+      "details": [
+        "Educational posts that address real questions your prospects and clients have",
+        "Thought leadership content that differentiates you from firms posting generic tips",
+        "Strategic positioning that builds credibility with both prospects and referral partners"
+      ]
+    },
+    {
+      "title": "LinkedIn Strategy That Actually Produces Results",
+      "description": "For most accounting professionals, LinkedIn is where your ideal clients and referral partners spend their time. We focus your social media investment on the platform most likely to generate meaningful professional connections and visibility rather than spreading thin across every network.",
+      "details": [
+        "LinkedIn focused strategy designed for professional services visibility",
+        "Content tailored to engage prospects, referral sources, and industry peers",
+        "Profile optimization recommendations to strengthen your firm's first impression"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Content Creation and Scheduling",
+      "description": "We develop a content calendar, write the posts, and schedule them for publication so your social presence runs like clockwork. This includes a mix of educational content, industry commentary, and firm updates designed to keep your audience engaged and your brand visible.",
+      "details": [
+        "Monthly content calendars with a strategic mix of post types",
+        "Written posts ready for publication with appropriate formatting and hashtags",
+        "Scheduled publishing through tools that ensure consistent timing and frequency"
+      ]
+    },
+    {
+      "title": "Platform Strategy and Optimization",
+      "description": "We assess which platforms deserve your firm's attention and develop a strategy focused on the channels where your audience actually engages. For most {audience}, that means a concentrated LinkedIn effort, potentially supplemented by one additional platform based on your specific market.",
+      "details": [
+        "Platform audit to identify where your ideal clients and referral sources are active",
+        "Focused strategy on one to two platforms rather than trying to be everywhere",
+        "Ongoing optimization based on what content types are generating the most engagement"
+      ]
+    },
+    {
+      "title": "Reporting and Strategy Adjustments",
+      "description": "We track what is working and what is not, then adjust the content strategy accordingly. You receive regular updates on engagement trends and recommendations for refining your approach so your social presence keeps improving over time.",
+      "details": [
+        "Regular performance summaries covering reach, engagement, and follower growth",
+        "Content analysis to identify which topics and formats resonate most",
+        "Strategic adjustments based on real data rather than guesswork"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How is this different from your social media solution page?",
+      "answer": "Our solution content helps you understand the strategy and principles behind effective social media for accounting firms. This service is the done for you version where we actually create the content, manage the scheduling, and handle the ongoing execution on your behalf. Think of the solution as the playbook and this service as us running the plays for you."
+    },
+    {
+      "question": "Do we need to approve every post before it goes live?",
+      "answer": "That is entirely up to you. Some firms prefer to review and approve content before publication, and we are happy to build that into the workflow. Others trust us to post on their behalf after the initial discovery phase where we learn your voice and preferences. We can start with an approval process and transition to a more hands off arrangement as you get comfortable."
+    },
+    {
+      "question": "Will social media actually bring us new clients?",
+      "answer": "We are honest about this: social media for {audience} is typically more about building credibility and staying visible than generating direct leads. When a prospect searches for you or a referral source considers recommending you, your social presence reinforces that you are active, knowledgeable, and professional. That supporting role can make a significant difference in how your other marketing efforts convert."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm deserves a professional social media presence without the time drain. We handle the content creation, scheduling, and strategy so you stay visible to the prospects and referral partners who matter most.",
+  "ctaTitle": "Ready to Hand Off Your Social Media?",
+  "ctaDescription": "Book a free call and we will review your current social presence and show you what a done for you social media program could look like for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "As a bookkeeper, you probably know that having an active social media presence could help you attract better clients and stay visible to referral sources. But between monthly closes and client communications, creating content consistently just does not happen. We take it off your plate entirely, handling the content creation, scheduling, and strategy so your bookkeeping practice looks polished and professional online without taking any time away from your actual work."
+    },
+    "tax preparers": {
+      "heroDescription": "Most tax preparers have social media accounts that go dark after April and only come alive again when filing season approaches. That feast or famine pattern hurts your visibility and makes it harder to promote advisory services during the off season. We manage your social media year round, creating and scheduling content that keeps your firm visible to prospects and referral partners whether it is January or July."
+    }
+  }
+}

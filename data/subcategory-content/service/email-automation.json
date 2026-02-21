@@ -1,0 +1,87 @@
+{
+  "subcategory": "email-automation",
+  "heroDescription": "Most {audience} have a growing list of clients and prospects but no reliable system for staying in touch with them. Email automation changes that by delivering the right message at the right time, whether that is a welcome sequence for new clients, a seasonal reminder about upcoming deadlines, or a drip campaign that nurtures leads until they are ready to engage. We build the sequences, configure the triggers, and make sure your firm stays visible without adding more to your plate.",
+  "benefits": [
+    {
+      "title": "Consistent Client Communication",
+      "description": "When emails go out on a predictable schedule, your clients feel taken care of and your firm stays top of mind. Automated sequences handle the timing and delivery so your team can focus on the work itself rather than remembering to follow up.",
+      "details": [
+        "Trigger based emails that send automatically based on client actions or dates",
+        "Seasonal and deadline reminder sequences tailored to your service calendar",
+        "Personalized messaging that feels intentional even though it runs on autopilot"
+      ]
+    },
+    {
+      "title": "Lead Nurturing That Runs in the Background",
+      "description": "Not every prospect is ready to sign an engagement letter the day they find your website. Drip campaigns keep your firm in front of interested prospects over weeks or months, educating them about your services until they are ready to take the next step.",
+      "details": [
+        "Multi step sequences that build trust and demonstrate your expertise over time",
+        "Automated follow up so no lead falls through the cracks",
+        "Prospects receive relevant content based on the services they showed interest in"
+      ]
+    },
+    {
+      "title": "Significant Time Savings for Your Team",
+      "description": "Manually writing and sending individual emails to clients and prospects can consume hours every week. Automation handles the repetitive communication so your team reclaims that time for higher value work like advisory conversations and client deliverables.",
+      "details": [
+        "Eliminate the need to manually draft and send routine client updates",
+        "Reduce the back and forth that comes from unclear or missed communications",
+        "Free up staff time that was previously spent on administrative email tasks"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Automated Drip Campaigns",
+      "description": "We design and build multi step email sequences that deliver your message over time. Each campaign is tailored to a specific goal, whether that is onboarding a new client, nurturing a prospect, or re engaging someone who has gone quiet.",
+      "details": [
+        "Custom sequence design with messaging that matches your firm's voice",
+        "Configurable timing and intervals between each email in the series",
+        "Built in logic to stop or redirect sequences based on recipient behavior"
+      ]
+    },
+    {
+      "title": "Trigger Based Email Workflows",
+      "description": "Emails fire automatically when specific events happen, like a form submission, a missed appointment, or a document upload. This means your clients get timely, relevant communication without anyone on your team needing to press send.",
+      "details": [
+        "Event driven triggers connected to your CRM, forms, or scheduling tools",
+        "Conditional logic that adjusts messaging based on client type or service line",
+        "Integration with platforms like GoHighLevel for seamless automation"
+      ]
+    },
+    {
+      "title": "Newsletter and Broadcast Systems",
+      "description": "Beyond automated sequences, we set up the infrastructure for regular newsletters and one time broadcasts. This gives you a reliable way to share updates, announce new services, or send timely reminders to your entire list or specific segments.",
+      "details": [
+        "Branded email templates designed for professional services firms",
+        "List segmentation so you can target specific client groups with relevant content",
+        "Scheduling and sending tools that make broadcast emails straightforward"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will automated emails feel impersonal to our clients?",
+      "answer": "That is one of the most common concerns we hear, and honestly it is a valid one. The key is in the writing and the timing. We craft emails that sound like they came from a real person at your firm, not a marketing robot. When a client gets a helpful reminder about an upcoming deadline or a personalized check in after onboarding, it actually feels more attentive than if your team had to remember to send those messages manually."
+    },
+    {
+      "question": "What email platforms do you work with?",
+      "answer": "We are tool agnostic and can work with whatever platform makes sense for your firm. That said, we frequently build email automation inside GoHighLevel because it integrates well with CRM and pipeline tools that {audience} already use. If you have an existing platform you prefer, we can typically work within that system too."
+    },
+    {
+      "question": "How long does it take to get email automation up and running?",
+      "answer": "It depends on the scope, but most firms see their first automated sequences live within two to four weeks. We start with the highest impact workflows, typically a welcome sequence or lead nurture campaign, and build from there. You do not need to have everything figured out upfront because we handle the strategy and sequencing during our discovery process."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm has clients and prospects who need to hear from you. We build the email automation systems that keep your firm visible, nurture leads, and deliver timely communications without adding more to your to do list.",
+  "ctaTitle": "Ready to Put Your Email on Autopilot?",
+  "ctaDescription": "Book a free call and we will map out the email sequences that would have the biggest impact on your firm's client communication and lead nurturing.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Most bookkeepers know they should be staying in touch with clients between monthly closes, but finding time to write and send emails consistently just does not happen. Email automation solves that by delivering timely updates, onboarding sequences, and check ins automatically. We build the workflows so your clients feel connected to your firm without you spending hours drafting messages every week."
+    },
+    "tax preparers": {
+      "heroDescription": "For tax preparers, client communication tends to spike during filing season and go silent the rest of the year. Email automation keeps your firm visible year round with seasonal reminders, document request sequences, and advisory content that nurtures relationships between returns. We design and build the systems so your clients hear from you at the right moments without your team needing to manage it manually."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "website-traffic",
+  "problemStatement": "Most {audience} have a website that looks professional enough but generates almost no traffic and even fewer inquiries. You built it once, maybe updated it a couple of times, and now it sits there doing very little for your practice.",
+  "solutionOverview": "The accounting firms that consistently attract website visitors have done a few specific things well: they show up in local search results, they publish content that answers the questions their ideal clients are already searching for, and they have optimized their Google Business Profile so it works as a second homepage. None of this requires a massive budget, but it does require a strategy.",
+  "hearingSignals": [
+    "Your website gets fewer than a handful of organic visitors per week and you are not sure why",
+    "You show up on page two or three of Google when someone searches for accounting services in your area",
+    "Your Google Business Profile is incomplete or you are not sure what it even looks like right now"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Your website does not rank for any of the terms potential clients are searching for in your area",
+      "solution": "Local SEO starts with making sure your site is structured around the services you offer and the locations you serve. This includes optimizing title tags, creating service specific pages, and ensuring your name, address, and phone number are consistent everywhere online"
+    },
+    {
+      "problem": "You have no content strategy and your website has not been updated since it was built",
+      "solution": "Publishing helpful content that answers common client questions signals to Google that your site is active and relevant. Even two to three articles per quarter on topics like tax planning tips or bookkeeping best practices can make a meaningful difference over time"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Show Up Where Clients Are Searching",
+      "description": "When someone in your area searches for accounting help, you want to be one of the first results they see. Local SEO and Google Business Profile optimization are the foundation of visibility for professional services firms.",
+      "points": ["Rank higher in local search results for your core services", "Appear in Google Maps and the local pack where many prospects start their search", "Build an online presence that works around the clock without paid advertising"]
+    },
+    {
+      "title": "Attract Visitors Who Are Ready to Hire",
+      "description": "Not all traffic is equal. The right content strategy brings people to your site who are actively looking for the services you provide, not just browsing.",
+      "points": ["Target search terms that signal buying intent like accounting firm near me or CPA for small business", "Service pages that speak directly to your ideal client needs", "Content that pre qualifies visitors so the inquiries you get are higher quality"]
+    },
+    {
+      "title": "Sustainable Growth Without Ad Spend",
+      "description": "Unlike paid advertising that stops working the moment you stop paying, SEO and content compound over time. The articles and pages you create today continue attracting visitors for months and years.",
+      "points": ["Organic traffic typically grows steadily as your content library expands", "Less reliance on paid ads to generate new inquiries", "A content foundation that supports other marketing efforts like email and social media"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Website and Search Audit", "description": "We analyze your current website performance, search rankings, Google Business Profile, and competitive landscape to identify the biggest opportunities.", "subheading": "Audit" },
+    { "step": 2, "title": "Strategy and Prioritization", "description": "Based on the audit, we create a prioritized plan focusing on the changes that will have the most impact first, whether that is technical fixes, new content, or local listing optimization.", "subheading": "Plan" },
+    { "step": 3, "title": "Implementation", "description": "We execute the strategy including on page optimization, Google Business Profile setup, content creation guidance, and technical improvements to your site.", "subheading": "Build" },
+    { "step": 4, "title": "Monitor and Adjust", "description": "We track your rankings, traffic trends, and inquiry volume over time and adjust the strategy based on what is driving the best results.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Search Visibility", "value": "Significantly Improved", "description": "Firms typically see meaningful improvement in local search rankings within a few months" },
+    { "metric": "Organic Traffic", "value": "Steady Growth", "description": "Consistent content and optimization efforts compound into increasing visitor numbers over time" },
+    { "metric": "Inquiry Quality", "value": "Better Fit", "description": "Visitors who find you through search tend to be more qualified and ready to engage" }
+  ],
+  "faqs": [
+    { "question": "How long does it take to see results from SEO?", "answer": "SEO is a longer term strategy. Some improvements like Google Business Profile optimization can show results in weeks. Content and on page SEO typically take three to six months to gain momentum. We focus on quick wins alongside the longer term strategy so you are not waiting months to see any progress." },
+    { "question": "Do we need to blog every week to make this work?", "answer": "No. Quality matters more than quantity for accounting firms. Two to three well written, helpful articles per quarter can make a real difference. We help you identify the topics that will have the most impact so you are not creating content just for the sake of it." },
+    { "question": "Should we be running Google Ads instead of doing SEO?", "answer": "They serve different purposes. Ads can generate immediate visibility, but they stop the moment you stop paying. SEO builds an asset that continues delivering traffic over time. Many firms find the best approach is a combination, but we assess your specific situation before recommending where to invest." }
+  ],
+  "heroSubtitleTemplate": "Most {audience} have a website that barely gets any traffic. Here is how firms are using local SEO, helpful content, and Google Business Profile optimization to show up where potential clients are actually searching.",
+  "ctaTitle": "Ready to Get Found Online?",
+  "ctaDescription": "Book a free call and we will audit your current search visibility and show you where the biggest traffic opportunities are for your practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Small business owners in your area search for bookkeeping help online but find your competitors instead of you",
+        "Your website has no content addressing common bookkeeping questions that potential clients are searching for",
+        "Your Google Business Profile still says you are a general accounting firm and does not highlight your bookkeeping specialties"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Taxpayers in your area search for local tax preparers each season and you do not appear in the top results",
+        "Your website has no seasonal content to capture the surge of tax related searches from January through April",
+        "Your Google Business Profile has few reviews and is missing key details that help you stand out during tax season"
+      ]
+    }
+  }
+}

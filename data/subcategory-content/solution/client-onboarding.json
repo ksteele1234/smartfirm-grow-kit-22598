@@ -1,0 +1,72 @@
+{
+  "subcategory": "client-onboarding",
+  "problemStatement": "First impressions set the tone for every client relationship, and most {audience} are still onboarding new clients with scattered emails, missing documents, and unclear expectations. That inconsistency leads to scope creep, client frustration, and hours of unnecessary back and forth before any real work even begins.",
+  "solutionOverview": "Firms that onboard well tend to retain clients longer and experience far fewer scope disputes. A structured onboarding system automates document collection, sets clear expectations upfront, and delivers a professional welcome experience that builds trust from day one.",
+  "hearingSignals": [
+    "New clients regularly show up unprepared because they did not receive clear instructions about what you need from them",
+    "You spend the first few weeks of every engagement chasing documents and re explaining your process",
+    "Scope creep is a recurring problem because expectations were never clearly defined at the start"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "New clients do not know what documents to provide or what to expect, so the first few weeks feel disorganized",
+      "solution": "An automated welcome sequence delivers a clear checklist, engagement letter, and timeline before the first meeting so clients arrive prepared and confident in your process"
+    },
+    {
+      "problem": "Every team member onboards clients differently, leading to inconsistent experiences and missed steps",
+      "solution": "Standardized onboarding workflows with task templates ensure every client goes through the same proven process regardless of which team member handles the engagement"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Professional First Impressions",
+      "description": "Your onboarding experience is the first real taste a client gets of working with your firm. A polished, automated process signals that you are organized and trustworthy.",
+      "points": ["Branded welcome sequences that reflect your firm's professionalism", "Clear timelines and next steps delivered automatically", "Clients feel confident they chose the right firm from the start"]
+    },
+    {
+      "title": "Fewer Scope Disputes",
+      "description": "Most scope creep starts with vague onboarding. When expectations, deliverables, and boundaries are set clearly upfront, both sides know exactly what the engagement includes.",
+      "points": ["Engagement terms and service boundaries defined before work begins", "Automated delivery of scope documents and client agreements", "Less time spent on uncomfortable conversations about what is or is not included"]
+    },
+    {
+      "title": "Faster Time to Productivity",
+      "description": "When clients know what to provide and your team knows what to do, actual work starts sooner. Automated document collection eliminates the back and forth that typically delays engagement kickoff.",
+      "points": ["Document requests sent automatically with reminders for missing items", "Client information captured through structured intake forms", "Your team spends less time gathering and more time delivering value"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Onboarding Audit", "description": "We walk through your current onboarding process, identify where clients get stuck or confused, and pinpoint the steps causing delays or inconsistency.", "subheading": "Discovery" },
+    { "step": 2, "title": "Workflow Design", "description": "We design a streamlined onboarding workflow tailored to your services, including welcome sequences, document collection, and expectation setting touchpoints.", "subheading": "Design" },
+    { "step": 3, "title": "Automation Build", "description": "We build the system using tools that fit your practice, configuring automated emails, intake forms, document requests, and internal task assignments.", "subheading": "Build" },
+    { "step": 4, "title": "Test and Refine", "description": "We run new clients through the system, gather feedback, and fine tune timing, messaging, and workflows based on real results.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Onboarding Time", "value": "Significantly Reduced", "description": "Firms typically cut their onboarding timeline substantially by automating document collection and communication" },
+    { "metric": "Client Experience", "value": "Consistently Professional", "description": "Every client receives the same polished welcome experience regardless of who handles the engagement" },
+    { "metric": "Scope Clarity", "value": "Defined Upfront", "description": "Clear expectations from day one can reduce scope related conversations and disputes throughout the engagement" }
+  ],
+  "faqs": [
+    { "question": "What if we have different onboarding needs for different service lines?", "answer": "That is actually very common. We design onboarding workflows for each service type so a new tax client gets a different sequence than a new bookkeeping client. The automation handles the routing based on what the client signed up for." },
+    { "question": "Will this feel impersonal to our clients?", "answer": "The opposite, actually. Automation handles the logistics like sending checklists and reminders so your team has more time for personal touchpoints. Clients experience a smooth, organized process while your team focuses on building the relationship." },
+    { "question": "How do we handle clients who are slow to provide documents?", "answer": "Automated reminder sequences follow up at intervals you define, escalating gently until documents arrive. Your team only needs to step in for clients who need extra attention, rather than chasing every single one manually." }
+  ],
+  "heroSubtitleTemplate": "Most {audience} lose trust before the real work even starts. Scattered onboarding leads to confused clients, missing documents, and scope creep. Here is how to make every first impression count.",
+  "ctaTitle": "Ready to Transform Your Client Onboarding?",
+  "ctaDescription": "Book a free call and we will walk through your current onboarding process together and show you where the biggest improvements are hiding.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "New bookkeeping clients take weeks to send over their bank logins, prior records, and access credentials because nobody told them what was needed",
+        "You find yourself re explaining your monthly process and deliverables to clients who should already know what to expect",
+        "Different clients have wildly different onboarding experiences depending on which team member set them up"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Tax clients show up to their first appointment without the documents you need, pushing everything behind schedule",
+        "You spend the first weeks of tax season chasing organizers and prior year returns instead of doing actual prep work",
+        "New clients are unclear on your filing timeline, pricing, and what is included, leading to frustration on both sides"
+      ]
+    }
+  }
+}

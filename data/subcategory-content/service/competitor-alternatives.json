@@ -1,0 +1,72 @@
+{
+  "subcategory": "competitor-alternatives",
+  "heroDescription": "Most marketing agencies and automation consultants work across dozens of industries. They can build you a funnel or set up a CRM, but they do not understand why busy season matters, what a month end close looks like, or how compliance deadlines shape your entire year. When you work with a partner that specializes in accounting firms, the systems they build reflect how your practice actually operates. We work exclusively with {audience}, and that focus shapes everything we do.",
+  "benefits": [
+    {
+      "title": "Industry Specialization You Can Feel",
+      "description": "When your automation partner understands the difference between tax prep and advisory, or knows why January through April changes everything, the solutions they deliver just work better. You spend less time explaining your business and more time seeing results that make sense for your practice."
+    },
+    {
+      "title": "No Translation Layer Required",
+      "description": "With a general agency, you often find yourself teaching them about your industry before any real work gets done. That learning curve costs time and money, and it typically means your first round of deliverables misses the mark. Working with a team that already speaks your language eliminates that friction."
+    },
+    {
+      "title": "Solutions Designed Around Accounting Workflows",
+      "description": "Generic automation tools can technically do many things, but configuring them for an accounting practice requires specific knowledge. We have built systems for firms like yours and understand the patterns, which means your implementation reflects proven approaches rather than experiments."
+    }
+  ],
+  "features": [
+    {
+      "title": "Accounting Specific Strategy",
+      "description": "Our discovery process is built around the questions that matter for accounting firms. We assess your service lines, client mix, team structure, and technology stack with the context of someone who has done this specifically for practices like yours, not someone learning your industry on your dime.",
+      "details": [
+        "Discovery conversations grounded in accounting practice realities",
+        "Benchmarking against what we see working for similar firms",
+        "Strategy recommendations that account for seasonality, compliance cycles, and client expectations"
+      ]
+    },
+    {
+      "title": "Pre Built Frameworks Customized to You",
+      "description": "Because we focus on accounting firms, we bring tested frameworks and workflow templates to every engagement. These are not rigid templates but proven starting points that we customize to your specific practice, saving significant time compared to building everything from scratch.",
+      "details": [
+        "Workflow templates designed for common accounting service lines",
+        "Communication sequences written for accounting firm clients",
+        "Integration patterns for the tools most accounting firms already use"
+      ]
+    },
+    {
+      "title": "Ongoing Support That Understands Your Calendar",
+      "description": "We know when you are deep in busy season and when you have bandwidth for changes. Our support and optimization cadence respects your calendar rather than following a generic quarterly review schedule that ignores the reality of how accounting firms operate.",
+      "details": [
+        "Support timing that aligns with your busiest and slowest periods",
+        "Proactive recommendations ahead of peak seasons",
+        "Optimization reviews scheduled when you actually have time to discuss them"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What makes you different from a general marketing agency?",
+      "answer": "The biggest difference is context. A general agency can build automations and run campaigns, but they typically need you to teach them about your industry first. We already understand accounting firm workflows, client expectations, compliance requirements, and seasonal patterns. That means faster implementation, fewer missteps, and solutions that fit your practice from day one."
+    },
+    {
+      "question": "We have worked with a general agency before and it did not go well. How do we know this will be different?",
+      "answer": "A common pattern we hear is that a general agency delivered something that looked good on paper but did not fit how the firm actually operates. That usually happens because the agency did not understand the nuances of an accounting practice. Our specialization means we are not guessing about what you need. We have seen the same challenges across many firms and know what works."
+    },
+    {
+      "question": "Are your services more expensive than a general automation consultant?",
+      "answer": "Our pricing is competitive, and many firms find the total cost is actually lower when you factor in the time saved during discovery and the reduced back and forth on revisions. When your partner already understands your business, implementations tend to go faster and produce better results, which typically delivers a stronger return on your investment."
+    }
+  ],
+  "heroSubtitleTemplate": "General agencies learn your industry on your dime. We already know it. Here is why {audience} are choosing a partner that specializes in accounting firm automation.",
+  "ctaTitle": "Ready to Work With a Team That Gets Accounting?",
+  "ctaDescription": "Book a free call and we will show you how our accounting firm specialization translates into better systems and faster results for your practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Many bookkeepers have tried working with general marketing agencies or automation consultants, only to find themselves spending more time explaining their business than getting results. When your partner does not understand recurring monthly workflows, client document collection cycles, or the tools bookkeeping firms actually use, the solutions they deliver tend to miss the mark. We work specifically with bookkeepers and understand the nuances that generalists overlook."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation has a unique cadence that most general agencies and automation consultants simply do not understand. The seasonal intensity, the document collection crunch, the extension management process, and the off season advisory opportunity are all specific to your world. When your automation partner already knows these patterns, the systems they build reflect your reality instead of a generic small business template that needs constant adjustment."
+    }
+  }
+}

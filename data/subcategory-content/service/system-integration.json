@@ -1,0 +1,72 @@
+{
+  "subcategory": "system-integration",
+  "heroDescription": "Most {audience} firms use a handful of great tools that do not talk to each other. Your accounting platform, CRM, email system, scheduling tool, and client portal each do their job, but the connections between them are held together by manual effort, copy and paste, and team members who remember to update things in multiple places. System integration services connect your tools into a unified stack where data flows automatically between platforms, eliminating double entry and the errors that come with it.",
+  "benefits": [
+    {
+      "title": "Eliminate Double Entry Across Platforms",
+      "description": "When your tools are properly integrated, information entered once flows everywhere it needs to go. A new client added to your CRM can automatically appear in your scheduling system, your document portal, and your workflow tool without anyone re keying the same data in three different places."
+    },
+    {
+      "title": "One Source of Truth for Your Firm",
+      "description": "Disconnected systems create conflicting versions of reality. Is the client's contact info correct in your CRM, your email platform, or your billing system? Integration ensures that updates made in one place are reflected everywhere, so your team is always working from accurate, current information."
+    },
+    {
+      "title": "Less Friction, More Focus",
+      "description": "Every time a team member has to switch between platforms, look up the same information in two places, or manually trigger a step that should happen automatically, they lose focus and momentum. A connected tech stack removes that friction and lets your team stay in flow on the work that actually matters."
+    }
+  ],
+  "features": [
+    {
+      "title": "Platform to Platform Data Connections",
+      "description": "We map out how data should flow between your tools and build the integrations that make it happen. Whether that means syncing contacts between your CRM and email platform or pushing completed work from your workflow tool to your billing system, we connect the pieces so information moves automatically.",
+      "details": [
+        "Bi directional syncing between your core platforms so data stays consistent",
+        "Field mapping that ensures the right information lands in the right place",
+        "Error handling and monitoring so you know immediately if a sync fails"
+      ]
+    },
+    {
+      "title": "Unified Client and Contact Management",
+      "description": "Your client records should live in one master system and propagate outward to every tool that needs them. We configure your stack so that adding or updating a client in your primary system automatically reflects across your scheduling, communication, and document management platforms.",
+      "details": [
+        "Central client database that feeds into all connected tools",
+        "Automated contact updates that propagate across your entire stack",
+        "Deduplication and data cleanup to ensure accuracy from the start"
+      ]
+    },
+    {
+      "title": "Workflow Triggered Integrations",
+      "description": "Beyond basic data syncing, we build integrations that are triggered by workflow events. When a specific step is completed, an engagement moves to a new stage, or a client takes an action, the integration fires automatically to update the relevant systems.",
+      "details": [
+        "Event driven triggers that connect workflow progress to downstream actions",
+        "Conditional logic so integrations only fire when specific criteria are met",
+        "Integration with platforms like GoHighLevel, Karbon, and other tools commonly used by accounting firms"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need to change any of our current tools to get them integrated?",
+      "answer": "In most cases, no. We start by looking at what you are already using and figure out the best way to connect those tools together. Many popular platforms offer APIs or built in integration options that we can configure without replacing anything. If we do identify a tool that is creating a bottleneck or does not integrate well, we will talk through options with you, but we never push changes that are not clearly in your firm's best interest."
+    },
+    {
+      "question": "What happens if one of our tools updates and breaks the integration?",
+      "answer": "That is a valid concern, and it is one reason we build integrations with monitoring and error handling in place. If a sync fails or data stops flowing correctly, the system flags it so it can be addressed quickly. We also design integrations to be resilient, meaning a temporary glitch in one platform does not cascade into problems across your entire stack."
+    },
+    {
+      "question": "How long does a typical integration project take?",
+      "answer": "It depends on how many platforms we are connecting and how complex the data flows are. A straightforward two or three platform integration can typically be configured and tested within a couple of weeks. More complex projects involving multiple data sources, custom logic, and workflow triggers may take longer. We scope everything clearly upfront so you know what to expect before we start."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm's tools should work as a team, not as isolated islands. We connect your accounting, CRM, email, scheduling, and client portal into a unified system where data flows automatically and double entry disappears.",
+  "ctaTitle": "Ready to Connect Your Tech Stack?",
+  "ctaDescription": "Book a free call and we will map out your current tools, identify the disconnections costing you time, and show you what a unified system could look like for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms typically rely on an accounting platform, a document collection tool, some form of client communication system, and often a separate workflow manager. When those tools do not talk to each other, your team fills the gaps with manual data entry and mental checklists. System integration services connect those platforms so that client data, document status, and workflow progress flow automatically between systems without anyone copying and pasting."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation firms often accumulate tools over time, a tax software here, a CRM there, a scheduling platform, and maybe a client portal for document uploads. Each one serves a purpose, but together they create a fragmented experience for your team and your clients. System integration services connect those platforms into a cohesive stack where client data, document status, and engagement progress are always in sync across every system your firm touches."
+    }
+  }
+}

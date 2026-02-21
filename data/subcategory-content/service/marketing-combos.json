@@ -1,0 +1,72 @@
+{
+  "subcategory": "marketing-combos",
+  "heroDescription": "Most firms that try marketing end up with a patchwork of disconnected tools: a CRM that nobody updates, an email platform that sends sporadically, review requests that go out manually, and SEO that was set up once and forgotten. The problem is not the individual tools, it is that they are not working together. Our combined marketing automation packages bring CRM, email marketing, review generation, and SEO into a single integrated system where each piece amplifies the others.",
+  "benefits": [
+    {
+      "title": "An Integrated System That Actually Works",
+      "description": "When your CRM, email sequences, review requests, and SEO strategy are all connected, data flows between them automatically. A new lead captured through your website enters your CRM, triggers a nurture sequence, and eventually becomes a client who receives a review request, all without manual handoffs."
+    },
+    {
+      "title": "Better Results Than Any Single Tool Alone",
+      "description": "Individual marketing tools typically underperform when they operate in isolation. Email marketing is more effective when it is driven by CRM data. Review generation improves when it is triggered automatically after key milestones. SEO compounds when supported by fresh content and growing reviews. Together, these pieces can deliver results that none of them would achieve on their own."
+    },
+    {
+      "title": "One Cohesive Strategy Instead of Scattered Efforts",
+      "description": "Instead of managing four or five separate marketing initiatives that compete for your attention, a combined package gives you one unified strategy with a consistent message across every channel. This is simpler to manage, easier to measure, and typically more cost effective than buying and maintaining individual tools."
+    }
+  ],
+  "features": [
+    {
+      "title": "CRM and Pipeline Management",
+      "description": "Your CRM becomes the central hub that drives everything else. Leads, clients, and opportunities are tracked in one place, and the data in your CRM triggers automated actions across email, reviews, and follow up workflows.",
+      "details": [
+        "Centralized contact management with full engagement history and pipeline stages",
+        "Automated lead scoring and tagging based on behavior and source",
+        "Integration with email, review, and SEO systems so your CRM data powers your entire marketing engine"
+      ]
+    },
+    {
+      "title": "Email Marketing and Nurture Sequences",
+      "description": "Automated email sequences are built to work hand in hand with your CRM data. Prospects receive nurture campaigns based on where they are in the pipeline. Clients receive cross sell content, deadline reminders, and educational emails based on their service history.",
+      "details": [
+        "Prospect nurture sequences that move leads toward a consultation or engagement",
+        "Client retention emails including seasonal reminders, service announcements, and check ins",
+        "Segmentation driven by CRM data so the right message reaches the right person"
+      ]
+    },
+    {
+      "title": "Review Generation and Local SEO",
+      "description": "Review requests are triggered automatically at the right moment in the client lifecycle, and those reviews feed directly into your local SEO presence. Combined with on page optimization and content strategy, this creates a compounding loop where more visibility leads to more clients leads to more reviews.",
+      "details": [
+        "Automated review requests sent after key engagement milestones like tax filing or onboarding completion",
+        "Review monitoring and response management to maintain your online reputation",
+        "Local SEO optimization that leverages your growing review profile to improve search visibility"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Why is a bundled approach more effective than using individual tools?",
+      "answer": "When marketing tools are connected, they share data and trigger each other automatically. Your CRM knows when a lead becomes a client, which triggers an onboarding sequence, which eventually triggers a review request, which improves your SEO, which brings in more leads. That flywheel effect simply does not happen when each tool is a standalone silo that your team has to manage separately."
+    },
+    {
+      "question": "What platforms do you use for combined marketing packages?",
+      "answer": "We typically build combined packages on GoHighLevel because it provides CRM, email marketing, review management, and automation in a single platform. This eliminates the integration headaches that come with stitching together separate tools. Depending on your firm's needs, we may also incorporate complementary tools for specific functions."
+    },
+    {
+      "question": "Is this overkill for a smaller firm that is just starting with marketing?",
+      "answer": "Actually, smaller firms often benefit the most from an integrated approach because they cannot afford to waste time and budget on tools that do not work together. Starting with a connected system from the beginning means you build the right foundation instead of having to rip out and replace disconnected tools later. We scale the package to fit your firm's size and goals."
+    }
+  ],
+  "heroSubtitleTemplate": "Give {audience} an integrated marketing system where CRM, email, reviews, and SEO work together as one engine instead of four disconnected tools collecting dust.",
+  "ctaTitle": "Ready to Unify Your Marketing?",
+  "ctaDescription": "Book a free call and we will assess your current marketing tools and show you how an integrated system could deliver better results with less effort.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "If your bookkeeping firm has tried marketing before and found it overwhelming or ineffective, you are not alone. Most bookkeepers end up with a CRM they barely use, an email tool that sends a newsletter once in a while, and no real strategy connecting any of it. Our combined marketing packages bring everything together into one integrated system built on platforms like GoHighLevel, where your CRM data drives your email sequences, review requests go out automatically, and your SEO presence grows alongside your reputation."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation firms face a unique marketing challenge: you need to generate leads seasonally, retain clients year round, and build a reputation that keeps referrals flowing. Trying to do that with disconnected tools rarely works. Our combined marketing packages integrate your CRM, email campaigns, review generation, and SEO into a single system where each component reinforces the others, giving you a marketing engine that runs consistently whether you are in season or not."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "lead-follow-up",
+  "problemStatement": "When a prospective client contacts your firm, response time matters. Studies show that leads contacted within 5 minutes are significantly more likely to convert, yet most {audience} take hours or even days to respond to inquiries.",
+  "solutionOverview": "The highest converting firms respond instantly with automated acknowledgment, then follow up systematically until the prospect either schedules a meeting or indicates they are not interested. This approach ensures no lead falls through the cracks while your team focuses on client work.",
+  "hearingSignals": [
+    "You find old website inquiries in your inbox that were never answered",
+    "By the time you call back a prospect, they have already hired someone else",
+    "Your team does not have a consistent process for handling incoming leads"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Leads come in through your website or phone and sit unanswered for hours because your team is busy with client work",
+      "solution": "Automated instant response via email and SMS acknowledges the inquiry within minutes, sets expectations, and offers scheduling options"
+    },
+    {
+      "problem": "Even when you respond once, prospects who are not ready often go cold because no one follows up",
+      "solution": "Automated nurture sequences stay in touch at appropriate intervals, providing helpful information until the prospect is ready to move forward"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Instant Response Without Team Effort",
+      "description": "Every inquiry gets an immediate, professional response regardless of whether your team is available. Prospects know you received their message and what happens next.",
+      "points": ["Automated responses within minutes, not hours", "Professional first impression even outside business hours", "Clear next steps for the prospect to take"]
+    },
+    {
+      "title": "No Leads Lost",
+      "description": "A systematic follow up process means every prospect receives appropriate attention. No more discovering unanswered inquiries weeks later.",
+      "points": ["Every lead tracked and followed up with automatically", "Escalation alerts if a hot lead needs personal attention", "Complete visibility into your lead pipeline"]
+    },
+    {
+      "title": "Higher Conversion from Existing Traffic",
+      "description": "You are already getting website visitors and inquiries. Better follow up converts more of that existing interest into actual clients without spending more on marketing.",
+      "points": ["Faster response typically correlates with higher conversion rates", "Consistent follow up catches prospects who need more time to decide", "Better use of the leads you are already generating"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Map Your Lead Sources", "description": "We identify where your leads come from, how they currently flow, and where prospects are getting lost in the process.", "subheading": "Audit" },
+    { "step": 2, "title": "Design Response Workflows", "description": "We build automated response and follow up sequences customized to your services, tone, and the types of prospects you attract.", "subheading": "Design" },
+    { "step": 3, "title": "Connect and Launch", "description": "We integrate with your website forms, phone system, and CRM so leads flow automatically into the follow up system.", "subheading": "Launch" },
+    { "step": 4, "title": "Refine Based on Results", "description": "We monitor response rates, conversion patterns, and prospect feedback to optimize timing and messaging.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Response Time", "value": "Under 5 Minutes", "description": "Prospects receive acknowledgment almost immediately" },
+    { "metric": "Follow Up Consistency", "value": "100%", "description": "Every lead receives systematic follow up regardless of team availability" },
+    { "metric": "Lost Leads", "value": "Eliminated", "description": "No more unanswered inquiries discovered weeks later" }
+  ],
+  "faqs": [
+    { "question": "Will automated responses feel impersonal?", "answer": "Not when done well. We design responses that feel personal and helpful, not robotic. The goal is to acknowledge quickly and provide useful next steps, then transition to personal contact when appropriate." },
+    { "question": "What if a lead needs immediate personal attention?", "answer": "The system includes escalation rules. Hot leads or urgent inquiries can trigger immediate notifications to your team while the automated response buys you time." },
+    { "question": "Can this work with our existing CRM or email?", "answer": "We design around your current tools during discovery. The system integrates with most CRM platforms and email systems commonly used by {audience}." }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm is getting leads, but how many are you losing because of slow or inconsistent follow up? Here is how firms are converting more prospects without adding to their team's workload.",
+  "ctaTitle": "Ready to Stop Losing Leads?",
+  "ctaDescription": "Book a free call and we will map out where your current leads are getting lost and how to fix it.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Small business owners inquire about bookkeeping services but you are too busy with monthly closes to respond quickly",
+        "You have no system for tracking who has contacted you and whether anyone followed up",
+        "Potential bookkeeping clients tell you they went with someone who responded faster"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "During tax season your team is too busy to respond to new inquiries promptly",
+        "Prospective tax clients who contact you in January have hired someone else by the time you call back",
+        "Off season inquiries about advisory services get buried under other work"
+      ]
+    }
+  }
+}

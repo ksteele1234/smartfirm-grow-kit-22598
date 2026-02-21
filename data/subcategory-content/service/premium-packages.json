@@ -1,0 +1,72 @@
+{
+  "subcategory": "premium-packages",
+  "heroDescription": "Some firms do not want a standard implementation. They want automation designed specifically for how they work, built by a dedicated team that understands their practice inside and out, and supported with the priority attention that keeps everything running at the highest level. Our premium packages are for firms that want the best: white glove service, dedicated support, priority implementation timelines, and advanced customization that goes well beyond templates.",
+  "benefits": [
+    {
+      "title": "Dedicated Team, Not a Ticket Queue",
+      "description": "With a premium package, you work with a dedicated implementation and support team that knows your firm, your workflows, and your goals. You are not submitting tickets into a queue and waiting for someone unfamiliar with your setup to respond. Your team knows your system because they built it, and they are available when you need them."
+    },
+    {
+      "title": "Priority Implementation and Faster Results",
+      "description": "Premium engagements move faster because your project gets priority scheduling and dedicated resources. That means shorter timelines from discovery to launch, faster iteration cycles, and quicker access to the time savings and efficiency gains that automation delivers."
+    },
+    {
+      "title": "Customization That Fits Your Practice Exactly",
+      "description": "Every firm has unique workflows, client expectations, and team dynamics. Premium packages include advanced customization that goes beyond standard templates and configurations. We build systems that match how your firm actually works, not how a generic firm might work."
+    }
+  ],
+  "features": [
+    {
+      "title": "White Glove Implementation",
+      "description": "Your automation system is built from the ground up based on deep discovery into your firm's processes, client base, and growth goals. We handle the heavy lifting so your team can focus on serving clients while we build the infrastructure behind the scenes.",
+      "details": [
+        "Comprehensive discovery sessions with firm leadership and team members to understand your unique needs",
+        "Custom workflow design tailored to your specific service lines and client types",
+        "Full system build, testing, and launch management with minimal disruption to your daily operations"
+      ]
+    },
+    {
+      "title": "Advanced Customization and Integration",
+      "description": "Premium packages include the deeper customization that standard implementations cannot accommodate. Custom reporting dashboards, advanced conditional workflows, multi system integrations, and bespoke client experiences designed specifically for your practice.",
+      "details": [
+        "Custom integrations connecting your specific combination of tools, whether that includes Karbon, GoHighLevel, LedgerDocs, Double, or other platforms",
+        "Advanced workflow logic with conditional branching based on client type, service line, or engagement complexity",
+        "Branded client portals and communication templates designed to match your firm's identity"
+      ]
+    },
+    {
+      "title": "Ongoing Priority Support and Optimization",
+      "description": "After launch, your dedicated team continues to monitor, support, and optimize your systems. You get priority response times, regular strategy reviews, and proactive recommendations based on how your automation is performing.",
+      "details": [
+        "Priority support with faster response times than standard service levels",
+        "Quarterly strategy reviews to align your automation with evolving firm goals",
+        "Proactive optimization recommendations based on system performance data and industry trends"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What makes a premium package different from your standard services?",
+      "answer": "Three things primarily: dedicated resources, deeper customization, and priority timelines. Standard implementations follow proven templates and processes that work well for most firms. Premium packages start from a blank canvas, with a dedicated team building something tailored specifically to your firm. You also get faster implementation timelines and ongoing priority support."
+    },
+    {
+      "question": "Is a premium package worth it for a smaller firm?",
+      "answer": "It depends on your goals and complexity rather than your size alone. Some smaller firms have sophisticated service offerings, high value clients, or ambitious growth plans that benefit significantly from the deeper customization and dedicated attention that a premium package provides. We are happy to discuss whether it makes sense for your specific situation during a discovery call."
+    },
+    {
+      "question": "What does ongoing support look like after the initial build?",
+      "answer": "Your dedicated team stays with your firm after launch. That includes priority access for questions and issues, regular strategy reviews to make sure your automation evolves with your firm, and proactive monitoring that catches potential problems before they affect your operations. Think of it as having a technology partner on retainer who knows your systems inside and out."
+    }
+  ],
+  "heroSubtitleTemplate": "For {audience} who want more than a standard setup. Premium packages deliver dedicated support, priority timelines, and advanced customization designed around how your firm actually works.",
+  "ctaTitle": "Ready for the Premium Experience?",
+  "ctaDescription": "Book a free call and we will explore whether a premium package is the right fit for your firm's goals, complexity, and growth plans.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms with complex client portfolios, multiple team members, and high standards for service delivery often find that standard automation packages do not go deep enough. Our premium packages for bookkeeping firms include dedicated implementation teams, advanced workflow customization for different client tiers and service lines, and ongoing priority support to keep your systems performing at the highest level as your practice evolves."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax practices that serve high value clients, manage complex multi entity engagements, or operate under tight seasonal timelines need automation that goes beyond standard templates. Our premium packages for tax practices include dedicated teams who understand tax workflow complexity, advanced customization for different return types and client segments, and priority support that ensures your systems are fully optimized before and during every busy season."
+    }
+  }
+}

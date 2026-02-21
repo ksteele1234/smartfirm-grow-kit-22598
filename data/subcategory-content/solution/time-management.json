@@ -1,0 +1,72 @@
+{
+  "subcategory": "time-management",
+  "problemStatement": "Most {audience} spend a significant portion of their week on tasks that do not require their expertise: formatting emails, chasing documents, updating spreadsheets, and managing scheduling. This administrative burden leaves less time for billable work and strategic growth.",
+  "solutionOverview": "The firms reclaiming their time are not working harder or hiring more people. They are identifying the repetitive, low value tasks that consume their week and replacing them with automated systems that run in the background. The time savings compound as more processes are automated.",
+  "hearingSignals": [
+    "You regularly work evenings or weekends just to keep up with administrative tasks",
+    "Marketing, client communication, and business development always get pushed to later",
+    "You feel busy all day but struggle to point to meaningful progress at the end of the week"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Hours each week are spent on repetitive email communication, scheduling, and document follow ups that could be standardized",
+      "solution": "Automated workflows handle routine communications, send reminders, and manage scheduling without your team touching them"
+    },
+    {
+      "problem": "Marketing and business development get deprioritized because there is never enough time after client work",
+      "solution": "Automated marketing systems run in the background, maintaining your online presence and nurturing prospects while you focus on clients"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Reclaim Hours for Billable Work",
+      "description": "When routine tasks are automated, your team redirects that time to serving clients and generating revenue. The hours freed up typically translate directly to increased capacity.",
+      "points": ["Less time on admin means more capacity for client work", "Automated systems do not take breaks or forget tasks", "Time savings compound as more processes are automated"]
+    },
+    {
+      "title": "Reduce the Constant Context Switching",
+      "description": "Jumping between client work and administrative tasks kills productivity. Automation handles the interruptions so your team can focus on deeper work.",
+      "points": ["Fewer interruptions from routine follow ups and reminders", "Administrative tasks happen without manual intervention", "Your team stays focused on work that requires their expertise"]
+    },
+    {
+      "title": "Sustainable Workload",
+      "description": "Instead of working more hours to handle growth, automated systems absorb the administrative overhead. Growth becomes manageable rather than overwhelming.",
+      "points": ["Take on more clients without proportionally increasing admin time", "Reduce the weekend and evening hours spent catching up", "Build a practice that does not require you to do everything personally"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Time Audit", "description": "We analyze how your team currently spends their time, identifying the highest impact automation opportunities and low value tasks consuming the most hours.", "subheading": "Audit" },
+    { "step": 2, "title": "Prioritize Quick Wins", "description": "We start with the automations that deliver the most time savings with the least disruption to your current workflows.", "subheading": "Design" },
+    { "step": 3, "title": "Build and Integrate", "description": "We configure automated workflows that integrate with your existing tools, testing thoroughly before going live.", "subheading": "Build" },
+    { "step": 4, "title": "Measure and Expand", "description": "We track the time savings, identify the next automation opportunities, and continue expanding your automated systems.", "subheading": "Expand" }
+  ],
+  "results": [
+    { "metric": "Administrative Time", "value": "Significantly Reduced", "description": "Firms typically reclaim meaningful hours each week from automated routine tasks" },
+    { "metric": "Team Focus", "value": "Higher Value Work", "description": "Staff spend more time on tasks that require their expertise" },
+    { "metric": "Capacity", "value": "Increased", "description": "Handle more clients without proportionally increasing your workload" }
+  ],
+  "faqs": [
+    { "question": "Which tasks should we automate first?", "answer": "During discovery, we identify the tasks consuming the most time relative to their complexity. Common starting points include client communications, document requests, scheduling, and routine follow ups." },
+    { "question": "Will automation make our firm feel impersonal?", "answer": "The opposite, actually. When routine tasks are handled automatically, your team has more time for personal, high value interactions with clients. Automation handles the administrative work so humans can focus on relationship building." },
+    { "question": "How much time can we realistically save?", "answer": "It varies significantly by firm. We assess your specific situation during discovery and focus on the areas where automation will deliver the most meaningful time savings for your practice." }
+  ],
+  "heroSubtitleTemplate": "Your {audience} team is spending too much time on tasks that do not require their expertise. Here is how firms are reclaiming those hours and redirecting them to work that actually matters.",
+  "ctaTitle": "Ready to Reclaim Your Time?",
+  "ctaDescription": "Book a free call and we will help you identify where your biggest time savings opportunities are.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Monthly closes consume so much time that you cannot take on new bookkeeping clients",
+        "You spend hours each week chasing clients for receipts, bank statements, and missing documents",
+        "Administrative overhead from managing multiple bookkeeping clients leaves no time for growing your practice"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Busy season means 60 to 70 hour weeks because administrative tasks pile up alongside tax work",
+        "Off season is supposed to be for business development but you spend it catching up on admin",
+        "Your team wastes hours tracking down client documents and sending reminder emails manually"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "solo-practitioners",
+  "heroDescription": "Running a solo accounting practice means you are the rainmaker, the service provider, the office manager, and the IT department all in one. Every hour you spend on administrative tasks, chasing documents, or manually following up with clients is an hour you cannot spend on billable work or growing your practice. Automation for solo practitioners is not about building a complex system. It is about giving you a virtual team member that handles the repetitive work so you can focus on what only you can do.",
+  "benefits": [
+    {
+      "title": "Get Hours Back Without Hiring",
+      "description": "Hiring help is expensive and managing someone takes time you do not have. Automation can handle many of the tasks you would hire for, including appointment scheduling, document reminders, client follow ups, and routine communication. You get the capacity of additional support without the overhead or management burden."
+    },
+    {
+      "title": "Never Drop the Ball Again",
+      "description": "When you are the only person in the firm, there is no safety net. If you forget to follow up with a prospect, miss a document deadline, or let a client communication slide, there is nobody to catch it. Automated systems run consistently in the background, ensuring that nothing falls through the cracks even on your busiest days."
+    },
+    {
+      "title": "Look Bigger Than You Are",
+      "description": "Clients do not need to know that you are a one person operation. With the right automation in place, your practice can deliver the same polished, professional experience that larger firms provide. Branded communications, timely follow ups, and organized processes signal a well run firm, regardless of your headcount."
+    }
+  ],
+  "features": [
+    {
+      "title": "Automated Client Communication",
+      "description": "Your clients receive timely, professional communication at every stage of their engagement without you composing individual emails or making reminder calls. From onboarding welcome sequences to document request reminders to engagement wrap up messages, it all happens automatically.",
+      "details": [
+        "Welcome sequences that set expectations and collect information from new clients",
+        "Automated reminders for outstanding documents, upcoming deadlines, and scheduled meetings",
+        "Follow up sequences that nurture leads and re engage past clients without manual effort"
+      ]
+    },
+    {
+      "title": "Streamlined Document Collection",
+      "description": "Chasing documents is one of the biggest time drains for solo practitioners. Automated document collection sends requests, tracks what has been received, and follows up on missing items so you can focus on the work itself rather than the logistics of gathering what you need.",
+      "details": [
+        "Automated document request lists customized by service type and client situation",
+        "Status tracking that shows you at a glance what has been received and what is still outstanding",
+        "Escalating reminders that get progressively more direct so you only need to intervene for the most unresponsive clients"
+      ]
+    },
+    {
+      "title": "Self Service Scheduling and Intake",
+      "description": "Stop the back and forth of scheduling. Clients can book their own appointments, complete intake forms, and provide preliminary information before your meeting even starts. You show up prepared, and your calendar stays organized without the coordination overhead.",
+      "details": [
+        "Online scheduling that syncs with your calendar and respects the availability windows you define",
+        "Pre meeting intake forms that collect the information you need before the conversation",
+        "Automated confirmations and reminders that reduce no shows and last minute cancellations"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "I am a solo practitioner with a limited budget. Is automation realistic for me?",
+      "answer": "Absolutely. In fact, solo practitioners often see the most dramatic return on automation because every hour saved goes directly back to you. We design systems that fit solo budgets and prioritize the automations that save the most time for the least investment. You do not need to automate everything at once. Even starting with just client communication or document collection can make a significant difference."
+    },
+    {
+      "question": "Will my clients notice that responses are automated?",
+      "answer": "The goal is for your clients to notice that your firm is incredibly organized and responsive, not that a system is behind it. We write communications in your voice, time them naturally, and design sequences that feel personal. Most clients simply experience a firm that always follows up, never forgets, and communicates clearly."
+    },
+    {
+      "question": "I barely have time to set this up. How much of my time does implementation require?",
+      "answer": "We understand that your time is your scarcest resource, which is why we handle the heavy lifting. You will need to invest some time upfront in discovery so we understand your practice, but from there we build, configure, and test the system with minimal disruption to your client work. Most solo practitioners tell us the implementation time pays for itself within the first few weeks."
+    }
+  ],
+  "heroSubtitleTemplate": "Solo {audience} wear every hat in the firm. Automation gives you a virtual team member that handles the repetitive work so you can focus on clients, revenue, and the parts of the practice only you can do.",
+  "ctaTitle": "Ready to Stop Doing Everything Yourself?",
+  "ctaDescription": "Book a free call and we will look at where your time is going and identify the automations that will give you the biggest hours back as a solo practitioner.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Solo bookkeepers face a unique challenge: every client needs consistent monthly attention, but there is only one of you. Between reconciliations, document collection, client questions, and chasing down missing information, the administrative load can consume as much time as the actual bookkeeping. Automation for solo bookkeeping practices acts as your virtual team member, handling the communication, document logistics, and scheduling so you can focus on delivering quality work to your clients."
+    },
+    "tax preparers": {
+      "heroDescription": "Solo tax preparers experience the most extreme version of the feast or famine cycle. During tax season, you are buried in returns, document collection, and client communication with no one to delegate to. During the off season, you need to market, follow up with prospects, and maintain client relationships on your own. Automation for solo tax practices smooths out both extremes, managing the logistics during busy season and keeping your pipeline warm year round without requiring your constant attention."
+    }
+  }
+}

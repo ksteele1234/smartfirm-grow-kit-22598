@@ -1,0 +1,75 @@
+{
+  "subcategory": "website-optimization",
+  "heroDescription": "Your website is often the first impression prospective clients have of your firm, and for many {audience}, that first impression is not working as hard as it could be. Slow load times, unclear calls to action, poor mobile experience, and generic messaging all contribute to visitors leaving your site without taking action. Website optimization addresses these issues systematically, turning your existing website from a digital brochure into a genuine client acquisition tool. The goal is not just a prettier site. It is a site that converts the visitors you are already getting into consultations and new clients.",
+  "benefits": [
+    {
+      "title": "Faster Load Times That Keep Visitors Engaged",
+      "description": "Research consistently shows that visitors abandon websites that take more than a few seconds to load. We identify and fix the technical issues slowing your site down, from oversized images to inefficient code. Faster sites also tend to rank better in search results, which means speed improvements can have a compounding effect on your visibility."
+    },
+    {
+      "title": "A Mobile Experience That Actually Works",
+      "description": "More than half of your prospective clients are likely visiting your website on their phone. If your site is hard to navigate, slow to load, or difficult to read on mobile, you are losing potential clients before they ever see what you offer. We ensure your site looks professional and functions smoothly on every device and screen size."
+    },
+    {
+      "title": "Clear Paths to Conversion",
+      "description": "Many accounting firm websites make it surprisingly hard for visitors to take the next step. We optimize your calls to action, simplify your contact process, and create clear paths that guide visitors from initial interest to scheduling a conversation. Small changes to button placement, form design, and page layout can significantly improve how many visitors actually reach out."
+    }
+  ],
+  "features": [
+    {
+      "title": "Speed and Performance Optimization",
+      "description": "We conduct a technical audit of your website to identify everything that is slowing it down, then systematically fix each issue. This can include image compression, code optimization, caching configuration, and hosting improvements that collectively make your site load faster for every visitor.",
+      "details": [
+        "Comprehensive technical performance audit with prioritized recommendations",
+        "Image optimization and lazy loading implementation",
+        "Caching and code minification to reduce page load times"
+      ]
+    },
+    {
+      "title": "Conversion Rate Optimization",
+      "description": "We analyze how visitors interact with your site and identify where they are dropping off. Then we make targeted improvements to calls to action, contact forms, page layouts, and messaging to increase the percentage of visitors who take meaningful action like booking a call or submitting an inquiry.",
+      "details": [
+        "Visitor behavior analysis to identify conversion bottlenecks",
+        "Call to action optimization for placement, wording, and design",
+        "Contact form simplification to reduce friction and increase submissions"
+      ]
+    },
+    {
+      "title": "Local Landing Pages",
+      "description": "If your firm serves specific geographic areas, dedicated local landing pages can significantly improve your visibility in those markets. We create targeted pages that speak directly to prospective clients in your service areas, with locally relevant content that helps both search engines and human visitors understand where you operate.",
+      "details": [
+        "Location specific pages optimized for local search queries",
+        "Service area content that demonstrates your presence in each market",
+        "Integration with your Google Business Profile for consistent local signals"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a completely new website or can you optimize what we have?",
+      "answer": "In most cases, we can make significant improvements to your existing website without a full redesign. We start by assessing what you have and identifying the highest impact changes. Sometimes a few targeted optimizations deliver better results than starting from scratch. If a rebuild is warranted, we will tell you honestly during discovery, but optimization of your current site is typically the faster and more cost effective path.",
+      "category": "Implementation"
+    },
+    {
+      "question": "How do you measure whether the optimization is working?",
+      "answer": "We track specific metrics tied to real business outcomes, not vanity numbers. This typically includes page load speed, mobile usability scores, contact form submission rates, and phone call volume from the website. We set up tracking before making changes so we have a clear baseline, and then report on improvements as they happen.",
+      "category": "Pricing & ROI"
+    },
+    {
+      "question": "How long before we see results from website optimization?",
+      "answer": "Speed improvements are typically visible immediately after implementation. Conversion rate improvements can take a few weeks to measure accurately because you need enough visitor data to identify meaningful patterns. Local landing pages often begin appearing in search results within a few weeks to a couple of months depending on your market's competitiveness. We set realistic expectations during discovery based on your specific situation.",
+      "category": "Implementation"
+    }
+  ],
+  "heroSubtitleTemplate": "Done for you website optimization built specifically for {audience}. Speed improvements, conversion optimization, mobile responsiveness, and local landing pages designed to turn your existing website traffic into more client conversations.",
+  "ctaTitle": "Ready to Turn Your Website Into a Client Magnet?",
+  "ctaDescription": "Book a free call and we will review your current website performance and identify the highest impact optimization opportunities for your practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "For bookkeepers, your website often needs to convince small business owners that you are trustworthy, competent, and easy to work with, all within a few seconds of their first visit. If your site loads slowly, looks outdated on a phone, or makes it hard to figure out how to get in touch, those prospective clients move on to the next result. Website optimization focuses on the specific improvements that matter most for bookkeeping practices: fast load times, a clean mobile experience, clear descriptions of your services, and obvious next steps for visitors who want to learn more. These changes can meaningfully increase how many of your existing website visitors actually reach out."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparers often see a surge in website traffic during the months leading up to filing deadlines, which means your site's ability to convert visitors is especially critical during a narrow window. If your website is slow, confusing on mobile, or lacks clear calls to action, you are losing potential clients right when demand is highest. Website optimization ensures your site loads quickly, communicates your value clearly, and makes it effortless for prospective clients to schedule a consultation or submit their information. We also help with local landing pages that target the specific areas you serve, so more of your ideal clients find you when they search for tax help in your market."
+    }
+  }
+}

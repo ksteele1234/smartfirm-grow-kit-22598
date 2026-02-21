@@ -1,0 +1,72 @@
+{
+  "subcategory": "cpa-marketing",
+  "problemStatement": "Most marketing advice does not work for {audience}. Generic tactics designed for retail or e-commerce businesses fall flat in professional services where trust, credibility, and long term relationships drive client decisions.",
+  "solutionOverview": "The marketing approaches that actually work for accounting firms look very different from what most marketing agencies recommend. Sustainable growth comes from building genuine authority in your market through reputation, helpful content, local visibility, and consistent follow up with people who already know you.",
+  "hearingSignals": [
+    "You have tried running ads or social media campaigns and the results were disappointing or nonexistent",
+    "You know you need to market your firm but everything you read feels like it was written for a completely different type of business",
+    "Your best clients came from referrals and you are not sure how to replicate that without just waiting and hoping"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Generic digital marketing tactics like paid ads and aggressive social media campaigns feel off brand and typically produce low quality leads for professional services firms",
+      "solution": "Focus on trust building channels that align with how accounting clients actually choose a firm: Google Business Profile optimization, educational content that demonstrates expertise, and systematic reputation management that turns happy clients into visible advocates"
+    },
+    {
+      "problem": "Past clients and professional contacts are a goldmine for referrals and repeat business, but most firms have no system for staying in touch consistently",
+      "solution": "Automated email nurturing sequences keep your firm top of mind with past clients, referral partners, and warm contacts by sharing genuinely useful content on a regular cadence, without your team managing it manually"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Marketing That Matches Your Profession",
+      "description": "Accounting firms build trust differently than other businesses. Your marketing should reflect the professionalism, reliability, and expertise your clients expect.",
+      "points": ["Positioning that builds authority rather than chasing clicks", "Content and messaging designed for how accounting clients actually make decisions", "A professional presence that attracts the kind of clients you want to work with"]
+    },
+    {
+      "title": "Visibility Where It Matters",
+      "description": "When someone in your area searches for accounting help, your firm should be visible. Local SEO, reputation management, and a well optimized online presence make that happen.",
+      "points": ["Google Business Profile optimized to appear in local searches", "Review generation systems that build social proof over time", "A website that communicates your value clearly and converts visitors into inquiries"]
+    },
+    {
+      "title": "Consistent Without Being Overwhelming",
+      "description": "The biggest marketing challenge for most firms is consistency. Automated systems maintain your presence and nurture relationships so marketing happens even during your busiest months.",
+      "points": ["Email sequences that run in the background keeping your firm top of mind", "Content that can be planned and scheduled in advance", "Referral nurturing that turns one time interactions into ongoing relationships"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Marketing Audit", "description": "We assess your current marketing efforts, online presence, and referral patterns to understand what is working, what is not, and where the biggest opportunities are.", "subheading": "Audit" },
+    { "step": 2, "title": "Strategy Design", "description": "We design a marketing approach tailored to your firm, your market, and the types of clients you want to attract, focusing on channels that actually work for professional services.", "subheading": "Design" },
+    { "step": 3, "title": "Build the Systems", "description": "We implement the infrastructure: optimized online profiles, email nurture sequences, review generation workflows, and content systems that run with minimal ongoing effort.", "subheading": "Build" },
+    { "step": 4, "title": "Refine and Scale", "description": "We monitor what is generating results and adjust the approach over time, expanding what works and discontinuing what does not.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Online Visibility", "value": "Meaningfully Increased", "description": "Firms typically see improved local search rankings and more inbound inquiries from their online presence" },
+    { "metric": "Referral Volume", "value": "More Consistent", "description": "Systematic nurturing keeps your firm top of mind with referral sources leading to steadier introductions" },
+    { "metric": "Marketing Effort", "value": "Sustainable", "description": "Automated systems maintain your marketing presence without requiring constant manual attention from your team" }
+  ],
+  "faqs": [
+    { "question": "Should CPA firms run paid ads?", "answer": "It depends on your market and goals. Paid ads can work for specific, high intent searches in some markets, but they are rarely the best starting point. Most firms get better returns from optimizing their Google Business Profile, building reviews, and nurturing their existing network. We assess your situation before recommending any paid channels." },
+    { "question": "What kind of content should accounting firms create?", "answer": "The most effective content answers the questions your ideal clients are already asking. Think tax deadline reminders, explanations of common deductions, guides for business owners on bookkeeping basics. It does not need to be frequent or elaborate. Consistency and relevance matter more than volume." },
+    { "question": "We get most of our clients from referrals. Do we still need marketing?", "answer": "Referrals are a great sign that your clients trust you. Marketing does not replace referrals. It amplifies them. When someone gets referred to you and searches your name, your online presence either reinforces or undermines that referral. A strong marketing foundation makes referrals more likely to convert and adds additional channels on top." }
+  ],
+  "heroSubtitleTemplate": "Most marketing advice was not written for {audience}. Here is what actually works for accounting firms: building trust, staying visible, and nurturing relationships systematically.",
+  "ctaTitle": "Ready to Market Your Firm the Right Way?",
+  "ctaDescription": "Book a free call and we will audit your current marketing presence and show you where the highest impact opportunities are for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "You have tried posting on social media or running ads but the leads that come in are not the right fit for your bookkeeping services",
+        "Local business owners do not know your bookkeeping firm exists even though you are right in their area",
+        "You want to market your bookkeeping practice but everything you find online is geared toward product businesses, not services"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Your marketing efforts are concentrated entirely around tax season and you have no presence the rest of the year",
+        "You compete with big box tax services on price because your online presence does not communicate your value",
+        "Potential clients search for tax preparers in your area and find your competitors first because your online visibility is weak"
+      ]
+    }
+  }
+}

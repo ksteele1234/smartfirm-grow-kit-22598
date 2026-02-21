@@ -1,0 +1,72 @@
+{
+  "subcategory": "client-acquisition",
+  "problemStatement": "Growing your client base as {audience} typically means relying on referrals and word of mouth, which are unpredictable and hard to scale. When referrals slow down, most firms have no systematic way to attract new clients.",
+  "solutionOverview": "Firms that grow consistently have built client acquisition systems that work whether referrals are flowing or not. This means having a visible online presence, a way to capture interested prospects, and automated follow up that nurtures leads until they are ready to engage.",
+  "hearingSignals": [
+    "Your firm growth depends almost entirely on referrals and you have no control over when they come",
+    "You get website visitors but very few actually reach out or schedule a call",
+    "You know you should be doing marketing but you do not have time to manage it consistently"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Referrals are your only growth channel and they are unpredictable month to month",
+      "solution": "Build a multi channel presence combining local SEO, targeted content, and reputation management so prospects find you through search, not just introductions"
+    },
+    {
+      "problem": "Prospects visit your website but leave without taking action because there is no clear next step",
+      "solution": "Strategic calls to action, lead capture forms, and immediate automated follow up ensure interested visitors convert into scheduled consultations"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Predictable Pipeline",
+      "description": "Move beyond the feast or famine cycle of referral dependence. A systematic acquisition approach means you can plan for growth rather than hoping for it.",
+      "points": ["Multiple channels generating leads simultaneously", "Less dependence on any single referral source", "Visibility into your pipeline at all times"]
+    },
+    {
+      "title": "Attract the Right Clients",
+      "description": "Not all clients are equally valuable. A well designed acquisition system helps you attract the type of clients your practice serves best.",
+      "points": ["Messaging that resonates with your ideal client profile", "Content and positioning that pre qualifies prospects", "Less time spent on prospects who are not a good fit"]
+    },
+    {
+      "title": "Growth Without Constant Attention",
+      "description": "Automated systems handle the initial outreach, follow up, and nurturing so your team can focus on serving existing clients.",
+      "points": ["Lead follow up happens automatically within minutes", "Nurture sequences stay in touch until prospects are ready", "Your team only engages with qualified, interested leads"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Discovery", "description": "We assess your current client acquisition channels, identify gaps, and understand what types of clients you want to attract.", "subheading": "Audit" },
+    { "step": 2, "title": "System Design", "description": "We design an acquisition system tailored to your market, including online presence improvements, lead capture, and automated follow up workflows.", "subheading": "Design" },
+    { "step": 3, "title": "Implementation", "description": "We build and configure everything, integrating with your existing tools and testing all workflows before launch.", "subheading": "Build" },
+    { "step": 4, "title": "Optimize", "description": "We monitor results and continuously refine messaging, channels, and follow up timing based on what is working.", "subheading": "Refine" }
+  ],
+  "results": [
+    { "metric": "Lead Consistency", "value": "Predictable", "description": "Firms typically move from sporadic referrals to a steady stream of inquiries" },
+    { "metric": "Response Time", "value": "Minutes", "description": "Automated follow up engages prospects immediately instead of days later" },
+    { "metric": "Client Quality", "value": "Better Fit", "description": "Better positioning attracts clients who value your expertise" }
+  ],
+  "faqs": [
+    { "question": "How long before we see new leads coming in?", "answer": "Timeline varies based on your current online presence and market. Some improvements like lead capture and automated follow up can start working within weeks. Longer term strategies like SEO take more time to build momentum." },
+    { "question": "Do we need to stop relying on referrals?", "answer": "Not at all. Referrals are great. The goal is to add systematic channels alongside referrals so your growth is not dependent on any single source." },
+    { "question": "Will this work in our specific market?", "answer": "We assess your local market during discovery. The approach is customized based on your geography, competition, and the types of clients you want to attract." }
+  ],
+  "heroSubtitleTemplate": "Most {audience} rely on referrals for growth. That works until it does not. Here is how firms are building predictable client acquisition systems that work alongside referrals.",
+  "ctaTitle": "Ready to Build a Predictable Growth System?",
+  "ctaDescription": "Book a free call and we will assess your current acquisition channels and show you where the biggest opportunities are.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Small business owners in your area do not know your bookkeeping firm exists",
+        "You lose potential bookkeeping clients to larger firms with better online presence",
+        "Your referral pipeline dries up and you have no backup plan for finding new clients"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "You scramble to fill your client roster each tax season instead of having a waitlist",
+        "New taxpayers in your area choose online filing services because they cannot find local preparers",
+        "Your firm has no way to attract clients during the off season for advisory work"
+      ]
+    }
+  }
+}

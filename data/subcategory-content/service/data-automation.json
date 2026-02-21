@@ -1,0 +1,72 @@
+{
+  "subcategory": "data-automation",
+  "heroDescription": "Manual data entry is one of the biggest time drains in accounting and bookkeeping, and it is also one of the most error prone. Data automation services replace the tedious work of keying in receipts, categorizing transactions, and reconciling bank feeds with systems that handle it automatically. Tools like Dext can capture source documents and extract the data your team needs without anyone touching a keyboard.",
+  "benefits": [
+    {
+      "title": "Dramatically Less Manual Data Entry",
+      "description": "When receipts, invoices, and bank transactions are processed automatically, your team can redirect hours of repetitive work toward higher value activities. Firms that adopt data automation typically find that the volume of manual entry they were doing was far larger than they realized."
+    },
+    {
+      "title": "Fewer Errors and Cleaner Books",
+      "description": "Automation removes the human error that comes with manual keying. Mistyped numbers, duplicate entries, and miscategorized transactions can cause problems that compound over time. Automated data capture tends to be more accurate and more consistent than manual processing."
+    },
+    {
+      "title": "Faster Turnaround on Client Work",
+      "description": "When data flows into your system automatically instead of waiting for someone to enter it, the entire workflow accelerates. Monthly closes happen sooner, reconciliations move faster, and your team can deliver results to clients with less lag time."
+    }
+  ],
+  "features": [
+    {
+      "title": "Receipt and Invoice Processing",
+      "description": "Tools like Dext capture receipts and invoices from photos, emails, and uploads, then extract the relevant data and push it into your accounting system. Clients can snap a photo of a receipt on their phone and the data shows up in your books without any manual entry.",
+      "details": [
+        "Optical character recognition extracts vendor, amount, date, and category from source documents",
+        "Clients can submit receipts via mobile app, email forwarding, or drag and drop upload",
+        "Extracted data is matched to the correct accounts and pushed to your accounting platform automatically"
+      ]
+    },
+    {
+      "title": "Bank Feed Management and Reconciliation",
+      "description": "Automated bank feeds pull transactions directly from client bank accounts into your accounting system in near real time. Combined with smart categorization rules, this can significantly reduce the manual work involved in monthly reconciliation.",
+      "details": [
+        "Direct bank feed connections that import transactions automatically",
+        "Rule based categorization that learns from your corrections and improves over time",
+        "Exception flagging that highlights transactions needing human review instead of requiring you to check every line"
+      ]
+    },
+    {
+      "title": "Automated Transaction Categorization",
+      "description": "Instead of manually assigning categories to every transaction, automation applies rules and pattern recognition to sort transactions into the right accounts. Over time the system gets smarter, and the percentage of transactions requiring manual review continues to shrink.",
+      "details": [
+        "Custom rules tailored to each client's chart of accounts and recurring vendors",
+        "Machine learning that adapts based on your team's review and corrections",
+        "Bulk processing that handles high transaction volumes without slowing down your team"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What tools do you typically use for data automation?",
+      "answer": "Dext is one of the primary tools we implement for receipt and document processing. Depending on your firm's tech stack, we may also configure automation within your accounting platform itself or connect additional tools that handle bank feeds and categorization. During discovery we look at what you are already using and recommend the best fit."
+    },
+    {
+      "question": "How accurate is automated data capture compared to manual entry?",
+      "answer": "In most cases, automated capture is more accurate than manual entry because it eliminates typos and fatigue related errors. That said, no system is perfect. We configure review workflows so your team can quickly verify anything the system flags as uncertain, which keeps accuracy high without creating a new bottleneck."
+    },
+    {
+      "question": "Will our clients need to change how they send us receipts and documents?",
+      "answer": "The transition is usually quite simple for clients. In many cases they just need to take a photo with their phone or forward an email. Some clients actually prefer it because it is faster than their old process. We help you communicate the change so clients understand the benefit and feel comfortable with the new workflow."
+    }
+  ],
+  "heroSubtitleTemplate": "Help {audience} eliminate manual data entry and let automation handle receipt processing, bank feeds, and transaction categorization so your team can focus on the work that matters.",
+  "ctaTitle": "Ready to Automate Your Data Entry?",
+  "ctaDescription": "Book a free call and we will map out your current data entry workflow and show you where automation tools like Dext can save your team the most time.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "For bookkeeping firms, manual data entry is not just tedious, it is the bottleneck that limits how many clients you can serve without adding headcount. Data automation services replace the repetitive keying of receipts, invoices, and bank transactions with tools like Dext that capture and categorize data automatically. The result is typically cleaner books, faster turnaround, and more capacity for your team."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation involves a significant amount of data gathering and entry, from W2s and 1099s to receipts and expense reports. Data automation services streamline that process by capturing source document data automatically and organizing it for your team. Tools like Dext can extract key information from client submitted documents so your preparers spend less time on data entry and more time on the return itself."
+    }
+  }
+}

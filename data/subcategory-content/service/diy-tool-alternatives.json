@@ -1,0 +1,72 @@
+{
+  "subcategory": "diy-tool-alternatives",
+  "heroDescription": "You have probably already subscribed to the tools. Maybe you started setting them up, got pulled into client work, and never finished. That half configured CRM, the automation platform you logged into twice, the practice management system your team only partially adopted. You are not alone. Most {audience} have the right tools but lack the time to actually implement them. We pick up where you left off and turn those subscriptions into working systems.",
+  "benefits": [
+    {
+      "title": "Stop Paying for Tools You Are Not Using",
+      "description": "Every month those subscriptions renew, and every month the gap between what you are paying for and what you are actually using gets a little more frustrating. We help you get real value from the tools you already own by finishing the setup, configuring the automations, and building the workflows that turn software into systems."
+    },
+    {
+      "title": "Skip the Learning Curve",
+      "description": "Most automation platforms are powerful but not intuitive. Learning to configure them well takes dozens of hours that you simply do not have between client deadlines and practice management. We bring the technical expertise so you get the results without investing months becoming a platform expert yourself."
+    },
+    {
+      "title": "Go From Subscribed to Operational in Weeks",
+      "description": "The typical DIY path from signing up to having a fully working system can take months or longer for busy firm owners. Our done for you approach compresses that timeline significantly because we already know how to configure these platforms for accounting firms."
+    }
+  ],
+  "features": [
+    {
+      "title": "Tool Audit and Recovery",
+      "description": "We start by looking at everything you have already set up, even the partial configurations and abandoned attempts. There is often more usable work in your existing setup than you think, and we build on what you have rather than starting over from scratch.",
+      "details": [
+        "Review of all current tool subscriptions and their configuration status",
+        "Assessment of what is working, what is partially done, and what needs a fresh start",
+        "Honest recommendations about which tools to keep and which to consider replacing"
+      ]
+    },
+    {
+      "title": "Complete Implementation and Configuration",
+      "description": "This is the part where most firm owners get stuck. We handle the detailed configuration work, including workflow setup, automation rules, integrations between tools, and all the technical details that make the difference between a tool you have and a system that works.",
+      "details": [
+        "Full configuration of automation workflows tailored to your practice",
+        "Integration setup between your existing tools so data flows automatically",
+        "Testing and quality assurance before anything goes live with real clients"
+      ]
+    },
+    {
+      "title": "Team Training and Adoption Support",
+      "description": "A perfectly configured system is only valuable if your team actually uses it. We provide hands on training, documentation, and adoption support so your team understands the new workflows and feels confident using them in their day to day work.",
+      "details": [
+        "Practical training sessions focused on how your team will use the system daily",
+        "Documentation and quick reference guides customized to your workflows",
+        "Follow up support during the adoption period to address questions and refine processes"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "We have already tried setting things up ourselves. Will you need to start over?",
+      "answer": "Not necessarily. We always start with an audit of what you have already done. In many cases, the foundation is solid and we can build on it rather than rebuilding from scratch. If certain parts do need to be reconfigured, we will explain why and make sure you understand the reasoning before we change anything."
+    },
+    {
+      "question": "What if we are not sure our current tools are the right ones?",
+      "answer": "That is something we can help with during discovery. We are tool agnostic and work with platforms like GoHighLevel, Karbon, and many others. If your current tools can do what you need, we will make them work. If there are gaps, we will recommend alternatives and explain the tradeoffs so you can make an informed decision."
+    },
+    {
+      "question": "How is this different from hiring a virtual assistant or freelancer to set things up?",
+      "answer": "A VA or freelancer can typically follow instructions, but they rarely bring the strategic understanding of how accounting firms operate. We do not just configure buttons and triggers. We design the underlying workflows based on what we know works for firms like yours, and we build in the logic that handles the edge cases and exceptions that inevitably come up in real practice operations."
+    }
+  ],
+  "heroSubtitleTemplate": "Most {audience} already have the tools. They just never finished setting them up. Here is how we turn those stalled subscriptions into working systems.",
+  "ctaTitle": "Ready to Finally Get Those Tools Working?",
+  "ctaDescription": "Book a free call and we will audit your current tool subscriptions together to see what is worth finishing, what needs reworking, and where to start.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "You signed up for the practice management platform, maybe started building a few client templates, and then month end close pulled you back into the work. Now that subscription has been renewing for months and your team is still doing most things manually. This is one of the most common patterns we see with bookkeeping firms. We help bookkeepers finish what they started, turning partially configured tools into fully operational systems that actually save time every month."
+    },
+    "tax preparers": {
+      "heroDescription": "Somewhere between last tax season and this one, you were going to get that CRM configured, automate your organizer distribution, and build a proper client communication workflow. Then the off season got busy, planning season arrived, and now you are heading into filing season with the same manual processes. We help tax preparers turn those stalled tool setups into fully working systems, often before the next deadline crunch hits."
+    }
+  }
+}

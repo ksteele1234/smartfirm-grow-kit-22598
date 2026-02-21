@@ -1,0 +1,72 @@
+{
+  "subcategory": "client-portal",
+  "heroDescription": "Your clients expect the same kind of convenient, self service access from their accounting firm that they get from their bank or their doctor's office. A well designed client portal gives them a secure place to exchange documents, check on engagement status, communicate with your team, and find answers without waiting for a callback. It is the kind of upgrade that makes your firm feel modern and organized.",
+  "benefits": [
+    {
+      "title": "Secure Document Exchange in One Place",
+      "description": "Instead of sensitive financial documents bouncing around in email threads, a client portal provides a secure, encrypted space for uploading and sharing files. This protects your clients and reduces the risk of data ending up where it should not."
+    },
+    {
+      "title": "Fewer Calls and Emails Asking for Status Updates",
+      "description": "When clients can log in and see exactly where their engagement stands, they do not need to call your office to ask. This frees up your team's time significantly while actually making clients feel more informed and cared for."
+    },
+    {
+      "title": "A Professional Experience That Builds Trust",
+      "description": "A branded client portal signals that your firm invests in technology and takes the client experience seriously. Clients notice when their accountant has a polished, easy to use system, and it often becomes a differentiator when they are comparing firms."
+    }
+  ],
+  "features": [
+    {
+      "title": "Secure Document Upload and Sharing",
+      "description": "Clients get a dedicated space to upload tax documents, financial statements, receipts, and any other files your team needs. Everything is encrypted, organized by engagement, and accessible to the right people on your team.",
+      "details": [
+        "Drag and drop file uploads that work from any device, including mobile",
+        "Automatic organization by client, document type, and engagement period",
+        "Bank level encryption that exceeds the security of standard email attachments"
+      ]
+    },
+    {
+      "title": "Engagement Status and Communication Hub",
+      "description": "Your clients can see where things stand without picking up the phone. The portal acts as a central communication hub where messages, updates, and task status are all visible in one place.",
+      "details": [
+        "Real time status updates on active engagements and pending tasks",
+        "Secure messaging between clients and your team, organized by topic or engagement",
+        "Notification preferences so clients get alerted in the way they prefer"
+      ]
+    },
+    {
+      "title": "Self Service Access and Knowledge Base",
+      "description": "A well configured portal can include resources like FAQs, instructional guides, and helpful links that answer common questions before clients need to reach out. This reduces repetitive inquiries and empowers clients to find what they need.",
+      "details": [
+        "Custom knowledge base with firm specific guides and frequently asked questions",
+        "Access to past invoices, engagement letters, and signed documents",
+        "Self service options for updating contact information and communication preferences"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will our clients actually use a portal or will they keep emailing us?",
+      "answer": "Adoption tends to be higher than most firms expect, especially when the portal is easy to use and the onboarding experience is smooth. We help you introduce the portal to clients in a way that highlights the benefits for them. Some clients take a little longer to transition, and that is fine. The key is making the portal the path of least resistance."
+    },
+    {
+      "question": "Can we brand the portal to look like our firm?",
+      "answer": "Yes. The portals we configure are branded with your firm's logo, colors, and messaging so it feels like an extension of your practice. Clients see your brand throughout the experience, which reinforces trust and professionalism."
+    },
+    {
+      "question": "How does the portal handle security and compliance?",
+      "answer": "The portal solutions we work with use enterprise grade encryption and meet the security standards required for handling sensitive financial data. They are significantly more secure than exchanging documents via email, and most include audit trails so you can see who accessed what and when."
+    }
+  ],
+  "heroSubtitleTemplate": "Give your {audience} clients a secure, self service portal where they can exchange documents, track engagement status, and communicate with your team without the back and forth.",
+  "ctaTitle": "Ready to Launch a Client Portal?",
+  "ctaDescription": "Book a free call and we will assess your current client communication workflow and show you how a portal could simplify things for both your team and your clients.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Your bookkeeping clients need to send you documents regularly, ask questions about their accounts, and stay informed about where things stand each month. Without a portal, all of that happens through scattered emails, text messages, and phone calls. A client portal brings it all together into one secure, organized space that makes monthly collaboration significantly smoother for everyone."
+    },
+    "tax preparers": {
+      "heroDescription": "During tax season, your clients need a reliable way to send you sensitive documents, check on the status of their return, and communicate with your team without clogging up your email or voicemail. A client portal provides a secure, self service hub where clients can do all of that on their own time, which means fewer interruptions for your team and a more professional experience for your clients."
+    }
+  }
+}

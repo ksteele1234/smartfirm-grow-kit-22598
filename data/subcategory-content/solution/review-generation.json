@@ -1,0 +1,92 @@
+{
+  "subcategory": "review-generation",
+  "problemStatement": "Most {audience} know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
+  "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+  "hearingSignals": [
+    "You keep meaning to ask clients for reviews but it never happens consistently",
+    "Your competitors have significantly more Google reviews than you do",
+    "Clients say they will leave a review but rarely follow through"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
+      "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+    },
+    {
+      "problem": "Clients agree to leave a review but forget because the process is not easy enough",
+      "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Consistent Review Flow",
+      "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+      "points": ["Reviews come in consistently, not just when you remember to ask", "Recent reviews signal to Google that your firm is active and trusted", "Volume builds naturally over time without manual effort"]
+    },
+    {
+      "title": "Higher Visibility in Local Search",
+      "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for {audience} in your area.",
+      "points": ["More reviews typically correlate with higher local search rankings", "Recent reviews carry more weight than old ones", "Review velocity signals an active, client focused practice"]
+    },
+    {
+      "title": "Authentic Social Proof",
+      "description": "Prospects researching {audience} read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+      "points": ["Prospective clients often read 5 to 10 reviews before reaching out", "Authentic reviews from real clients are more persuasive than any marketing copy", "Reviews on multiple platforms expand your reach"]
+    }
+  ],
+  "howItWorks": [
+    {
+      "step": 1,
+      "title": "Assessment",
+      "description": "We review your current online presence, identify which platforms matter most for {audience} in your market, and assess your existing review profile.",
+      "subheading": "Audit"
+    },
+    {
+      "step": 2,
+      "title": "System Design",
+      "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+      "subheading": "Design"
+    },
+    {
+      "step": 3,
+      "title": "Launch and Monitor",
+      "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+      "subheading": "Launch"
+    },
+    {
+      "step": 4,
+      "title": "Ongoing Optimization",
+      "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+      "subheading": "Optimize"
+    }
+  ],
+  "results": [
+    { "metric": "Review Consistency", "value": "Steady Growth", "description": "Firms typically see a consistent increase in review volume within the first few months" },
+    { "metric": "Team Time Spent", "value": "Near Zero", "description": "Your team does not need to remember to ask or follow up manually" },
+    { "metric": "Client Experience", "value": "Seamless", "description": "Clients find the process easy and non intrusive" }
+  ],
+  "faqs": [
+    { "question": "Which review platforms should we focus on?", "answer": "It depends on where your prospective clients search. For most {audience}, Google Business Profile is the priority, but we assess your specific market during discovery." },
+    { "question": "Will clients feel pressured?", "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer." },
+    { "question": "What if we already have some reviews?", "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts." }
+  ],
+  "heroSubtitleTemplate": "Your {audience} clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
+  "ctaTitle": "Ready to Build Your Review Engine?",
+  "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Your bookkeeping clients are happy but you have very few online reviews to show for it",
+        "Small business owners in your area are choosing competitors with stronger review profiles",
+        "You do not have a consistent way to request feedback after monthly closes"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Tax season ends and you realize you forgot to ask clients for reviews again",
+        "Your firm handles hundreds of returns but your Google profile has under 20 reviews",
+        "Clients are satisfied at filing time but the window to ask for reviews closes quickly"
+      ]
+    }
+  }
+}

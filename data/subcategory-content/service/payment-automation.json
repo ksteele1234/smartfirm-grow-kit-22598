@@ -1,0 +1,72 @@
+{
+  "subcategory": "payment-automation",
+  "heroDescription": "Getting paid should not be one of the hardest parts of running your firm. If you are still manually creating invoices, chasing overdue balances, and reminding clients about upcoming payments, there is a better way. Payment automation services streamline your entire billing cycle so invoices go out on time, reminders happen automatically, and clients have a simple way to pay online.",
+  "benefits": [
+    {
+      "title": "Faster Payments With Less Effort",
+      "description": "Automated invoicing and payment reminders can significantly reduce the time between completing work and getting paid. When clients receive a clear invoice with an easy online payment link, they tend to pay much faster than when they receive a PDF attached to an email."
+    },
+    {
+      "title": "Consistent Cash Flow You Can Count On",
+      "description": "Recurring billing and automated collection workflows help smooth out the revenue spikes and valleys that many firms experience. When payments are predictable, you can plan with more confidence around hiring, technology investments, and growth initiatives."
+    },
+    {
+      "title": "A Professional Client Experience",
+      "description": "A polished payment experience signals that your firm is organized and modern. Clients appreciate the convenience of online portals, autopay options, and clear billing communications. It is a small detail that shapes their overall perception of your firm."
+    }
+  ],
+  "features": [
+    {
+      "title": "Automated Invoicing and Recurring Billing",
+      "description": "Invoices are generated and sent automatically based on your engagement terms, whether that is a one time project, a monthly retainer, or a seasonal billing cycle. Recurring billing runs in the background without any manual intervention from your team.",
+      "details": [
+        "Invoices generated on a schedule that matches your engagement structure",
+        "Recurring billing for retainer and subscription based services",
+        "Automatic delivery via email with a direct link to your online payment portal"
+      ]
+    },
+    {
+      "title": "Payment Reminders and Collection Workflows",
+      "description": "Overdue balances get attention without your team having to send awkward follow up emails. Automated reminder sequences escalate politely from a gentle nudge to a firmer request based on how far past due the balance is.",
+      "details": [
+        "Scheduled reminders at intervals you define, such as 7, 14, and 30 days past due",
+        "Customizable messaging that matches your firm's tone and brand",
+        "Escalation workflows that flag accounts needing personal follow up from your team"
+      ]
+    },
+    {
+      "title": "Online Payment Portals",
+      "description": "A branded payment portal gives clients a simple, secure place to view invoices, make payments, and set up autopay. Removing friction from the payment process typically leads to faster collection and fewer outstanding balances.",
+      "details": [
+        "Clients can pay via credit card, ACH, or bank transfer depending on your preferences",
+        "Autopay enrollment allows clients to set it and forget it for recurring engagements",
+        "Payment history and outstanding balances visible to clients at any time"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What payment methods can clients use through the portal?",
+      "answer": "Most payment portals support credit cards, debit cards, and ACH bank transfers. We configure the options based on what works best for your firm, including any preferences you have around processing fees. Some firms pass card fees through to clients while absorbing ACH costs, for example."
+    },
+    {
+      "question": "Can we automate billing for clients on different pricing structures?",
+      "answer": "Absolutely. Whether you bill hourly, on a fixed fee retainer, per return, or with a combination of pricing models, we can configure the automation to handle each client's billing terms individually. The system sends the right invoice at the right time regardless of how each engagement is structured."
+    },
+    {
+      "question": "How do automated payment reminders avoid annoying our clients?",
+      "answer": "We help you design reminder sequences that feel professional and helpful rather than aggressive. The messaging, timing, and tone are all customizable. And reminders stop automatically once a payment is received, so clients never get a follow up for something they already paid."
+    }
+  ],
+  "heroSubtitleTemplate": "Help {audience} get paid faster and more consistently with automated invoicing, smart payment reminders, and a seamless online payment experience for clients.",
+  "ctaTitle": "Ready to Streamline How You Get Paid?",
+  "ctaDescription": "Book a free call and we will review your current billing process together and show you where automation can get you paid faster with less manual work.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "If your bookkeeping firm is still sending invoices manually and following up on overdue balances with individual emails, you are spending time on admin work that should be running itself. Payment automation services handle your recurring monthly billing, send reminders when clients fall behind, and give your clients a professional portal where they can pay in a few clicks."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax season is hectic enough without having to chase clients for payment after the work is already done. Payment automation services ensure invoices go out as returns are completed, reminders follow up consistently on outstanding balances, and clients have a convenient online option to pay immediately. The result is typically faster collection and less awkward follow up during your busiest months."
+    }
+  }
+}

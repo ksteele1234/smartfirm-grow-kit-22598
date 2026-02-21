@@ -1,0 +1,72 @@
+{
+  "subcategory": "ai-technology",
+  "problemStatement": "Every {audience} firm is hearing about AI, but the gap between the hype and the practical reality is enormous. Most firms either ignore it entirely or chase shiny tools without a clear strategy, and both approaches leave opportunity on the table.",
+  "solutionOverview": "AI is genuinely useful for accounting firms today, but only when applied to the right problems. The biggest wins are not in replacing your team. They are in eliminating the tedious data handling, document processing, and routine communication that slow everything else down.",
+  "hearingSignals": [
+    "You know AI is changing the industry but you are not sure where to start or what is actually worth adopting",
+    "Your team manually enters data from documents that could probably be read automatically",
+    "You have tried a tool or two but they did not stick because no one had time to figure them out"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Your team spends hours manually extracting information from client documents, receipts, and statements",
+      "solution": "AI powered document processing tools like LedgerDocs or similar platforms can read, categorize, and extract data from common accounting documents, turning hours of manual entry into minutes of review"
+    },
+    {
+      "problem": "You are overwhelmed by the number of AI tools on the market and do not know which ones are worth your time",
+      "solution": "A structured evaluation starting with your actual workflow bottlenecks, not trending tools, helps you adopt only what solves a real problem and skip everything that is just noise"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Practical AI That Actually Gets Used",
+      "description": "The goal is not to be on the cutting edge. It is to find the specific applications where AI saves your team real time on real tasks. We focus on adoption that sticks, not demos that impress.",
+      "points": ["AI tools selected based on your actual bottlenecks, not industry hype", "Implementation designed for your team's comfort level with technology", "Training and support that ensures your team actually uses what gets built"]
+    },
+    {
+      "title": "Faster Document Processing",
+      "description": "Document handling is one of the most time consuming tasks in any accounting firm, and it is also where AI delivers the most immediate, measurable improvement today.",
+      "points": ["Automatic data extraction from receipts, invoices, and bank statements", "Intelligent document categorization that learns your firm's patterns", "Reduced manual entry errors through automated verification"]
+    },
+    {
+      "title": "Smarter Client Communication",
+      "description": "AI can help your firm communicate more consistently without writing every message from scratch. From drafting routine emails to summarizing client interactions, it handles the repetitive parts while your team adds the personal touch.",
+      "points": ["Draft responses for common client inquiries in seconds", "Automated summaries of client conversations and action items", "Consistent communication tone across your entire team"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Workflow Assessment", "description": "We identify where your team spends time on tasks that AI can realistically handle today, separating genuine opportunities from hype.", "subheading": "Discovery" },
+    { "step": 2, "title": "Tool Selection", "description": "Based on your specific needs, we recommend tools that fit your budget, your existing tech stack, and your team's comfort level. We are tool agnostic and only suggest what makes sense.", "subheading": "Strategy" },
+    { "step": 3, "title": "Guided Implementation", "description": "We set up the tools, integrate them with your current systems, and train your team with hands on sessions that build real confidence.", "subheading": "Implementation" },
+    { "step": 4, "title": "Adoption Support", "description": "We check in regularly to make sure the tools are being used effectively, troubleshoot issues, and identify the next set of opportunities as your team gets comfortable.", "subheading": "Optimization" }
+  ],
+  "results": [
+    { "metric": "Data Entry Time", "value": "Substantially Reduced", "description": "Document processing automation typically eliminates a significant portion of manual data entry work" },
+    { "metric": "Tool Adoption", "value": "Sustained", "description": "Implementation designed around your team's actual workflow leads to tools that get used long term" },
+    { "metric": "Competitive Position", "value": "Strengthened", "description": "Firms using AI effectively can serve more clients with higher quality and faster turnaround" }
+  ],
+  "faqs": [
+    { "question": "Is AI going to replace accountants?", "answer": "No, and that framing misses the point entirely. AI is very good at handling repetitive, data heavy tasks like document reading and categorization. It is not good at professional judgment, client relationships, or strategic advice. The firms using AI well are freeing their people to do more of the high value work, not less." },
+    { "question": "We tried an AI tool before and nobody used it. What makes this different?", "answer": "Most failed AI adoptions happen because the tool was chosen before the problem was clearly defined. We start with your specific workflows and bottlenecks, then select tools that directly address those issues. When the tool clearly saves someone time on a task they dislike, adoption takes care of itself." },
+    { "question": "How do we handle client data privacy with AI tools?", "answer": "This is an important question and one we take seriously. We only recommend tools with clear data handling policies, and we help you evaluate the privacy implications of any tool before adopting it. Many AI tools designed for accounting have built in compliance features specifically for this reason." }
+  ],
+  "heroSubtitleTemplate": "AI is changing the accounting industry, but not in the way most headlines suggest. Here is what {audience} actually need to know about adopting AI practically and responsibly.",
+  "ctaTitle": "Ready to Explore What AI Can Do for Your Firm?",
+  "ctaDescription": "Book a free call and we will walk through your current workflows together and show you where AI can realistically save your team time today.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Your bookkeeping team manually enters data from bank statements and receipts that could be processed automatically",
+        "You worry that clients will expect AI powered services and you will fall behind competitors who adopt faster",
+        "You have heard about tools like automated categorization but do not know how to evaluate or implement them"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Your team manually reviews and enters data from W2s, 1099s, and other tax documents every season",
+        "You spend significant time drafting similar client communications and status updates during filing season",
+        "You are concerned about falling behind other tax firms that are advertising AI powered preparation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "scheduling-automation",
+  "heroDescription": "If your team is still scheduling client meetings through a back and forth chain of emails, you are burning time on something that should take seconds. Scheduling automation gives your {audience} firm a professional, self service booking experience that syncs with your calendar, sends confirmations and reminders automatically, and significantly reduces no shows. We build the system so your clients can book time with the right person at the right time without anyone on your team playing calendar coordinator.",
+  "benefits": [
+    {
+      "title": "Reclaim the Hours Lost to Scheduling Logistics",
+      "description": "The average back and forth to schedule a single meeting can involve three to five emails. Multiply that across dozens of client interactions each month and the time adds up quickly. Online booking eliminates that overhead by letting clients self schedule based on your team's real time availability."
+    },
+    {
+      "title": "Significantly Fewer No Shows and Missed Appointments",
+      "description": "Automated reminder sequences sent before each appointment give clients the nudge they need to show up prepared and on time. Most firms that implement scheduling automation see a meaningful reduction in missed meetings, which means less wasted time and fewer rescheduling headaches."
+    },
+    {
+      "title": "A Polished, Professional Booking Experience",
+      "description": "When clients can book appointments through a clean, branded interface that confirms their meeting instantly and sends them reminders, it signals that your firm has its act together. That kind of experience builds confidence before the conversation even starts."
+    }
+  ],
+  "features": [
+    {
+      "title": "Online Self Service Booking",
+      "description": "We set up a branded booking page where your clients and prospects can see your available time slots and schedule meetings directly. The system respects your team's availability, buffer times, and working hours so only valid slots are offered.",
+      "details": [
+        "Customizable booking pages that match your firm's branding and service types",
+        "Availability rules that account for buffer time between meetings, working hours, and team capacity",
+        "Multiple appointment types so clients can book the right kind of meeting for their needs"
+      ]
+    },
+    {
+      "title": "Calendar Integration and Sync",
+      "description": "Your scheduling system connects directly to your existing calendar so availability is always accurate. Booked appointments appear automatically, preventing double bookings and ensuring your schedule reflects reality without manual updates.",
+      "details": [
+        "Two way sync with Google Calendar, Outlook, or other calendar platforms your firm uses",
+        "Automatic blocking of booked time across all connected calendars",
+        "Team calendar views that help managers see availability and distribute meetings evenly"
+      ]
+    },
+    {
+      "title": "Automated Confirmations and Reminder Sequences",
+      "description": "The moment a client books an appointment, they receive an automatic confirmation with all the details they need. Leading up to the meeting, reminder sequences go out at intervals you define to reduce no shows and ensure clients arrive prepared.",
+      "details": [
+        "Instant booking confirmations via email and optionally SMS",
+        "Multi touch reminder sequences, such as reminders at 24 hours and one hour before the meeting",
+        "Pre appointment preparation messages that tell clients what to bring or have ready"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can different team members have their own booking pages?",
+      "answer": "Absolutely. We can set up individual booking pages for each team member or create shared pages that route appointments based on service type, client assignment, or team availability. This flexibility means your clients always book with the right person without needing to know your internal team structure."
+    },
+    {
+      "question": "What if a client needs to reschedule or cancel?",
+      "answer": "The booking system handles rescheduling and cancellations automatically. Clients receive a link in their confirmation email that lets them modify their appointment on their own. Your calendar updates in real time, the freed up slot becomes available again, and new confirmation and reminder sequences kick in for the rescheduled time. No phone calls or email chains required."
+    },
+    {
+      "question": "How does scheduling automation integrate with our other tools?",
+      "answer": "We design the scheduling system to connect with your broader tech stack. Depending on your setup, a booked appointment can automatically create a contact record in your CRM, trigger a workflow step in your practice management tool, or notify a team member through your communication platform. Tools like GoHighLevel make these connections straightforward, but we work with whatever stack makes sense for your firm."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm's scheduling should not require a coordinator. We build online booking systems with calendar integration, automated confirmations, and smart reminder sequences that keep your meetings on track.",
+  "ctaTitle": "Ready to Simplify Your Scheduling?",
+  "ctaDescription": "Book a free call and we will review your current scheduling process and show you how automation can eliminate the back and forth while reducing no shows.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms that meet regularly with clients for monthly reviews, onboarding sessions, or advisory conversations often lose time to the logistics of scheduling. Back and forth emails, missed confirmations, and no shows add up across your client base. Scheduling automation gives your clients a simple way to book time on your calendar, sends them reminders so they show up prepared, and keeps your team's availability accurate across every platform."
+    },
+    "tax preparers": {
+      "heroDescription": "During tax season, your appointment volume spikes dramatically and the last thing your team needs is to manage scheduling manually. Scheduling automation lets your clients book their own tax preparation meetings, organizer pickups, and review sessions through a professional online booking page. Automated confirmations and reminders go out without your team lifting a finger, and no show rates typically drop significantly when clients receive timely nudges before their appointments."
+    }
+  }
+}

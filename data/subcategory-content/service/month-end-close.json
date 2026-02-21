@@ -1,0 +1,72 @@
+{
+  "subcategory": "month-end-close",
+  "heroDescription": "If your month end close process looks different every time depending on who handles it, which clients are involved, and whether anyone remembered all the steps, you are not alone. Most {audience} firms know their close process could be tighter, but building and enforcing a consistent system takes time nobody has. We implement month end close automation that standardizes your workflow, assigns tasks automatically, and keeps everyone, including your clients, informed at every stage.",
+  "benefits": [
+    {
+      "title": "A Consistent Process Every Single Month",
+      "description": "When your close process runs on a standardized checklist with automated task assignments, nothing gets missed and nothing depends on any one person remembering the next step. Every client engagement follows the same reliable sequence, which means fewer errors and a much smoother experience for your team."
+    },
+    {
+      "title": "Clear Visibility Into Where Things Stand",
+      "description": "Automated close workflows give you and your team a real time view of every client's status. You can see at a glance which reconciliations are done, which are waiting on client input, and where bottlenecks are forming. That visibility makes it significantly easier to manage workload and hit your deadlines."
+    },
+    {
+      "title": "Less Time on Coordination, More Time on the Work",
+      "description": "When task assignments, client reminders, and status updates happen automatically, your team spends less time coordinating and more time doing the actual accounting. The result is typically faster closes and a team that feels less overwhelmed during the busiest weeks of the month."
+    }
+  ],
+  "features": [
+    {
+      "title": "Standardized Close Checklists and Workflows",
+      "description": "We build out your close process as a structured workflow with defined steps, dependencies, and review checkpoints. Each engagement gets its own instance of the checklist, so your team always knows exactly what needs to happen and in what order.",
+      "details": [
+        "Customizable checklists tailored to your firm's specific close procedures",
+        "Built in dependencies so tasks unlock in the right sequence",
+        "Review and approval steps that ensure quality before anything moves forward"
+      ]
+    },
+    {
+      "title": "Automated Task Assignment and Notifications",
+      "description": "As each step in the close process is completed, the next task is automatically assigned to the right team member. Notifications go out so nobody is left wondering what they should be working on, and managers can see team progress without chasing down updates.",
+      "details": [
+        "Tasks routed automatically based on role, workload, or client assignment",
+        "Real time notifications when new tasks are assigned or deadlines are approaching",
+        "Manager dashboards that show close progress across all clients at a glance"
+      ]
+    },
+    {
+      "title": "Client Communication Templates and Reminders",
+      "description": "Your clients receive timely, professional updates about their close status without your team drafting individual messages. Automated templates handle document requests, status notifications, and follow up reminders throughout the process.",
+      "details": [
+        "Pre built communication templates for common close touchpoints",
+        "Automated reminders when client action items are outstanding",
+        "Status update emails that keep clients informed without manual effort from your team"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can the close workflow be customized for different types of clients?",
+      "answer": "Definitely. We understand that a simple sole proprietor close looks very different from a complex multi entity engagement. During setup, we work with you to create workflow variations that match your different client types and service levels. Each version follows your firm's standards while accounting for the specific steps each engagement requires."
+    },
+    {
+      "question": "What tools do you typically use for month end close automation?",
+      "answer": "We are tool agnostic and start by understanding what you already have in place. Many firms we work with use platforms like Karbon for workflow management, and we can build close workflows inside that system or configure alternatives depending on your stack. The goal is to implement a process that fits naturally into how your team already works."
+    },
+    {
+      "question": "How do you handle it when the close process gets stuck waiting on a client?",
+      "answer": "That is one of the most common pain points, and the automation is specifically designed to address it. When a client has outstanding items, the system sends automated follow up reminders at intervals you set. If items remain overdue beyond a threshold you define, the system can escalate by notifying a manager or flagging the engagement for personal outreach. Your team only gets involved when the automated reminders have not done the job."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm's month end close should run like a well oiled machine, not a scramble. We build the workflows, checklists, and automations that make consistent, on time closes the norm rather than the exception.",
+  "ctaTitle": "Ready to Fix Your Month End Close?",
+  "ctaDescription": "Book a free call and we will walk through your current close process together and identify where automation can eliminate bottlenecks and bring consistency to every engagement.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "For bookkeeping firms, the month end close is the heartbeat of your operation, and when it is inconsistent, everything downstream suffers. If your team is relying on memory, spreadsheets, or informal checklists to manage closes across dozens of clients, things inevitably get missed. We implement structured close workflows with automated task assignments, client reminders, and reconciliation tracking so every close follows the same reliable process."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation firms that also handle monthly accounting often find the close process gets squeezed by seasonal pressures. When returns are the priority, month end work can slip. We implement close automation that keeps your monthly engagements running on a consistent schedule with standardized checklists, automated task routing, and client communication that happens without manual effort, even during your busiest months."
+    }
+  }
+}

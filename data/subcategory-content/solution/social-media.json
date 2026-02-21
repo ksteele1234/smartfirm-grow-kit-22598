@@ -1,0 +1,72 @@
+{
+  "subcategory": "social-media",
+  "problemStatement": "Let us be honest: social media for {audience} is harder than it is for most industries. Nobody is scrolling Instagram hoping to see a post about tax deadlines. But that does not mean social media is useless for your firm. It just means you need a realistic strategy.",
+  "solutionOverview": "The accounting firms that get real value from social media have stopped trying to go viral and started focusing on the platforms and content types that actually matter for professional services. LinkedIn, educational content, and thought leadership tend to drive the most meaningful results. The goal is credibility and visibility, not likes.",
+  "hearingSignals": [
+    "You have firm social media accounts that have not been posted to in months because you do not know what to say",
+    "You have tried posting but get almost no engagement and question whether it is worth the time",
+    "You see competitors posting regularly and worry you are falling behind even though you are not sure it is working for them either"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "You do not know what to post because accounting topics feel too boring or technical for social media",
+      "solution": "The content that works best for accounting firms is educational and practical. Quick tips, deadline reminders, common mistakes to avoid, and answers to questions your clients ask you every week. This type of content builds trust and keeps your firm visible without trying to be entertaining"
+    },
+    {
+      "problem": "You are spreading yourself thin trying to be on every platform with no clear return on any of them",
+      "solution": "For most {audience}, LinkedIn is the highest value platform because your ideal clients and referral partners are there. Focusing on one or two platforms well produces better results than being inconsistent on five"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Build Professional Credibility",
+      "description": "Social media for accounting firms is less about generating direct leads and more about building the credibility that supports your other marketing efforts. When a referral looks you up, your social presence reinforces that you are active and knowledgeable.",
+      "points": ["Consistent posting signals that your firm is active and engaged in the profession", "Educational content positions you as a trusted advisor, not just a service provider", "Prospects who research you online see a professional firm that shares valuable insights"]
+    },
+    {
+      "title": "Stay Visible to Referral Sources",
+      "description": "Your best referral sources are busy people. Regular social media presence keeps your firm top of mind with attorneys, financial advisors, and other professionals who refer clients to you.",
+      "points": ["LinkedIn activity keeps you visible to professional referral networks", "Sharing relevant content gives referral sources confidence in recommending you", "Consistent presence means you are remembered when someone asks for an accountant recommendation"]
+    },
+    {
+      "title": "Sustainable Without Burnout",
+      "description": "The biggest reason social media fails for accounting firms is that it becomes an unsustainable time commitment. A focused strategy with templates, scheduling, and content batching makes it manageable.",
+      "points": ["Content calendars and templates reduce the time needed to create posts", "Scheduling tools let you batch content creation into a couple of hours per month", "A focused platform strategy means you are not wasting time on channels that do not matter"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Assess Your Social Presence", "description": "We review your current social media accounts, content history, and competitive landscape to understand where you stand and where the real opportunities are.", "subheading": "Audit" },
+    { "step": 2, "title": "Define a Focused Strategy", "description": "We identify the right platforms for your firm and develop a content strategy built around topics your audience actually cares about, with realistic posting frequency.", "subheading": "Strategy" },
+    { "step": 3, "title": "Set Up Systems and Templates", "description": "We create content templates, a scheduling workflow, and guidance so posting becomes a repeatable process rather than a creative struggle every time.", "subheading": "Build" },
+    { "step": 4, "title": "Review and Refine", "description": "We periodically review what is getting engagement and what is not, then adjust your content mix and approach based on what is actually resonating.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Posting Consistency", "value": "Sustainable", "description": "Firms move from sporadic or nonexistent posting to a manageable, consistent cadence" },
+    { "metric": "Professional Credibility", "value": "Strengthened", "description": "Active social presence reinforces trust when prospects and referral sources look you up" },
+    { "metric": "Time Investment", "value": "Manageable", "description": "Templates and systems reduce social media from a time drain to a few hours per month" }
+  ],
+  "faqs": [
+    { "question": "Is social media really worth the effort for accounting firms?", "answer": "It depends on your goals. Social media is rarely the primary lead generator for accounting firms, and we are upfront about that. But it plays a valuable supporting role in building credibility, staying visible to referral sources, and reinforcing your other marketing efforts. The key is having realistic expectations and a sustainable approach." },
+    { "question": "Which platforms should we focus on?", "answer": "For most {audience}, LinkedIn is the highest priority because your clients and referral partners are there. Facebook can be useful for local visibility depending on your market. We assess your specific situation during discovery, but we typically recommend focusing on one to two platforms well rather than being everywhere poorly." },
+    { "question": "How often do we need to post?", "answer": "Consistency matters more than frequency. Two to three quality posts per week on LinkedIn is a solid starting point for most firms. We would rather see you post twice a week consistently than post daily for two weeks and then disappear for a month." }
+  ],
+  "heroSubtitleTemplate": "Social media for {audience} is not about going viral. Here is how firms are using LinkedIn and educational content to build professional credibility, stay visible to referral sources, and support their growth without spending hours every week.",
+  "ctaTitle": "Ready to Make Social Media Actually Work?",
+  "ctaDescription": "Book a free call and we will assess your current social presence and show you a realistic strategy that fits how accounting firms actually grow.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "You know your bookkeeping clients came from referrals but those referral sources never see you online and may be forgetting about you",
+        "You have tried posting bookkeeping tips but get zero engagement and feel like you are talking to nobody",
+        "Other bookkeeping firms in your area have active LinkedIn profiles and you worry clients are comparing"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "You post frantically during tax season trying to attract last minute filers but have no presence the rest of the year",
+        "Your social accounts go completely dark from May through December and you lose all momentum",
+        "You want to promote advisory and planning services during the off season but do not know how to position that content"
+      ]
+    }
+  }
+}

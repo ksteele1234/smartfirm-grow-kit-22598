@@ -1,0 +1,75 @@
+{
+  "subcategory": "lead-automation",
+  "heroDescription": "For most {audience}, leads come in through the website, phone, or referral and then sit in someone's inbox until they have time to respond. By then, the prospect has often moved on to a competitor who replied faster. Lead automation solves this by capturing every inquiry instantly, responding within minutes regardless of your team's availability, routing leads to the right person, and following up systematically until the prospect either books a meeting or tells you they are not interested. The firms that convert the most leads are not necessarily better at what they do. They are just better at responding quickly and following up consistently.",
+  "benefits": [
+    {
+      "title": "Instant Response to Every Inquiry",
+      "description": "When a prospective client reaches out, they receive an immediate acknowledgment with helpful next steps. This happens whether the inquiry comes in at 2 PM on a Tuesday or 10 PM on a Saturday. That instant response sets a professional first impression and significantly reduces the chance of losing the lead to a faster competitor."
+    },
+    {
+      "title": "No Lead Falls Through the Cracks",
+      "description": "Every inquiry is captured, tracked, and followed up with automatically. Your team gets visibility into the entire pipeline so nothing sits unanswered. Leads that are not ready to move forward today enter a nurture sequence that stays in touch until they are. This is especially critical during busy periods when your team is focused on client delivery."
+    },
+    {
+      "title": "Smarter Lead Routing and Prioritization",
+      "description": "Not every inquiry deserves the same level of attention. We configure routing rules that send high value leads directly to the right partner or team member while routine inquiries get handled through automated workflows. Your team spends time on the conversations that matter most instead of sorting through every contact form submission manually."
+    }
+  ],
+  "features": [
+    {
+      "title": "Lead Capture and Instant Response",
+      "description": "We connect your website forms, phone system, and other lead sources to an automated response system that acknowledges every inquiry within minutes. Responses are personalized based on the type of inquiry and include clear next steps so prospects know exactly what to expect.",
+      "details": [
+        "Website form integration with immediate email and SMS acknowledgment",
+        "After hours response handling so leads never wait until the next business day",
+        "Customized response templates that reflect your firm's tone and services"
+      ]
+    },
+    {
+      "title": "Follow Up Sequence Automation",
+      "description": "We design multi step follow up sequences that stay in touch with prospects who do not convert immediately. These sequences provide helpful information, address common questions, and offer easy ways to schedule a conversation, all without your team manually tracking who needs a follow up call.",
+      "details": [
+        "Multi channel sequences using email and SMS at appropriate intervals",
+        "Conditional logic that adjusts messaging based on prospect behavior",
+        "Automatic pause when a prospect books a meeting or opts out"
+      ]
+    },
+    {
+      "title": "Pipeline Management and Routing",
+      "description": "We configure your lead pipeline with stages that match your actual sales process, routing rules that get leads to the right people, and alerts that escalate time sensitive opportunities. Your team gets a clear picture of where every prospect stands without maintaining spreadsheets or checking multiple inboxes.",
+      "details": [
+        "Custom pipeline stages aligned with how your firm converts prospects to clients",
+        "Automated routing based on service type, geography, or lead source",
+        "Escalation alerts for high priority leads that need immediate personal attention"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Can this work with leads from different sources?",
+      "answer": "Yes. We design the system to capture leads from wherever they come in, including your website, Google Business Profile, social media, referral partners, and even phone calls. During discovery, we map out all of your lead sources and create a unified system so nothing gets missed regardless of how the prospect finds you.",
+      "category": "Implementation"
+    },
+    {
+      "question": "How do you prevent automated follow ups from annoying prospects?",
+      "answer": "Timing and relevance are everything. We design sequences with appropriate spacing between messages, provide genuinely useful information in each touchpoint, and include easy opt out options. The sequences also stop automatically when a prospect takes action like booking a meeting. The goal is to be helpfully persistent, not annoying.",
+      "category": "General"
+    },
+    {
+      "question": "What tools do you use for lead automation?",
+      "answer": "We typically build lead automation systems using GoHighLevel, which provides CRM, email, SMS, and pipeline management in a single platform. However, we are tool agnostic and can integrate with your existing systems if you already have a CRM or email platform you prefer. We assess your current setup during discovery and recommend the approach that works best for your situation.",
+      "category": "Implementation"
+    }
+  ],
+  "heroSubtitleTemplate": "Done for you lead automation built specifically for {audience}. Lead capture, instant response, smart routing, and follow up sequences configured and managed so you convert more of the leads you are already getting.",
+  "ctaTitle": "Ready to Stop Losing Leads?",
+  "ctaDescription": "Book a free call and we will map out where your leads are coming from, where they are getting lost, and how to fix it.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "When a small business owner reaches out about bookkeeping services, they are often contacting two or three firms at the same time. The bookkeeper who responds first and follows up most consistently typically wins the client. But when you are in the middle of month end closes or reconciling accounts, responding to new inquiries quickly is nearly impossible. Lead automation solves this by capturing every inquiry instantly, sending a professional response within minutes, and following up systematically until the prospect books a meeting or tells you they went with someone else. You get more clients from the same number of leads without adding to your workload."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparers face a unique lead management challenge. Inquiries peak right when your capacity to respond is at its lowest. During filing season, prospective clients who contact your firm may wait days for a callback, and by then they have already hired someone else. Lead automation ensures every inquiry gets an instant professional response regardless of how busy your team is, with follow up sequences that nurture prospects who are not ready to commit immediately. For the off season, automated systems keep your advisory and planning services in front of leads who expressed interest months ago but were not ready to move forward."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "client-communication",
+  "heroDescription": "Your clients want to hear from you, they just do not want to be the ones reaching out to ask for updates. Most {audience} firms know that proactive communication builds trust and reduces client anxiety, but doing it consistently across every engagement is nearly impossible when it depends on your team remembering to send each message. Client communication automation handles the status updates, appointment reminders, follow up sequences, and bulk communications that keep your clients informed and your team focused on the work.",
+  "benefits": [
+    {
+      "title": "Proactive Communication Without the Manual Effort",
+      "description": "Automated status notifications and progress updates go to your clients at exactly the right moments without anyone on your team writing or sending them. Your clients feel informed and taken care of while your team stays focused on deliverables rather than drafting individual messages."
+    },
+    {
+      "title": "Fewer Missed Follow Ups and Dropped Threads",
+      "description": "When follow up communication depends on your team remembering who needs what and when, things inevitably fall through. Automated sequences ensure that every client receives timely follow ups on outstanding items, upcoming deadlines, and next steps regardless of how busy your team gets."
+    },
+    {
+      "title": "A More Professional Client Experience",
+      "description": "Clients notice when your firm communicates consistently and proactively. It signals organization, reliability, and attention to detail. Automated communication creates that experience at scale so every client gets the same polished, attentive treatment whether your firm serves fifty clients or five hundred."
+    }
+  ],
+  "features": [
+    {
+      "title": "Automated Status Updates and Progress Notifications",
+      "description": "As work moves through your workflow, clients receive timely updates about where things stand. Whether a return has moved to review, a reconciliation is complete, or documents are still needed, clients stay informed without your team pausing to send individual messages.",
+      "details": [
+        "Workflow triggered notifications that fire automatically as engagement stages change",
+        "Customizable message templates that reflect your firm's voice and branding",
+        "Delivery via email, SMS, or both depending on client preferences"
+      ]
+    },
+    {
+      "title": "Appointment Reminders and Follow Up Sequences",
+      "description": "Missed meetings and forgotten appointments waste everyone's time. Automated reminder sequences ensure your clients are prepared and present for every scheduled interaction, with follow up messages if action items come out of the conversation.",
+      "details": [
+        "Multi touch reminder sequences leading up to appointments",
+        "Post meeting follow ups summarizing next steps and action items",
+        "Integration with scheduling tools like GoHighLevel to trigger reminders automatically"
+      ]
+    },
+    {
+      "title": "Bulk and Segmented Client Communications",
+      "description": "When you need to reach your entire client base or a specific segment with important updates, the system makes it simple. Seasonal reminders, policy changes, deadline alerts, and firm announcements go out to the right people at the right time without manual list management.",
+      "details": [
+        "Client segmentation based on service type, engagement status, or custom criteria",
+        "Template library for common communications like deadline reminders and firm updates",
+        "Scheduling and delivery tools that handle the logistics of reaching large groups"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will our clients know these messages are automated?",
+      "answer": "Not if we do our job well, and we take this seriously. Every template is written to sound like it came from a real person at your firm, using your voice and your tone. The timing is designed to feel natural rather than robotic. Most clients simply experience better, more consistent communication from your firm, and they appreciate it without ever thinking about what is happening behind the scenes."
+    },
+    {
+      "question": "Can we control which messages go out and when?",
+      "answer": "You have full control over every aspect of the communication. We configure the triggers, timing, and content together during setup, and you approve everything before it goes live. If your preferences change or you want to adjust the messaging for a specific client segment, we can update the templates and rules at any time. Nothing goes out that you have not reviewed and approved."
+    },
+    {
+      "question": "What communication channels can we automate?",
+      "answer": "We typically set up automation across email and SMS since those cover the vast majority of client communication needs. Some firms also use platforms like GoHighLevel for centralized messaging that includes chat and social channels. We configure whatever combination makes sense for how your clients prefer to be reached."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} clients deserve proactive, timely communication at every stage of their engagement. We build the automation systems that deliver status updates, reminders, and follow ups without adding to your team's workload.",
+  "ctaTitle": "Ready to Transform Your Client Communication?",
+  "ctaDescription": "Book a free call and we will review your current client communication touchpoints and show you where automation can make every client feel like your most important one.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping clients often feel left in the dark between monthly closes, wondering whether their books are done, if anything needs their attention, or when they will hear from you next. Client communication automation solves that by sending timely updates at every stage of your workflow, from document requests to close notifications. Your clients stay informed, your team stays focused, and nobody has to remember to send the update manually."
+    },
+    "tax preparers": {
+      "heroDescription": "During filing season, your clients are anxious about their returns and eager for updates. Outside of season, they may not hear from you at all. Client communication automation ensures your firm stays in touch year round with automated status updates during preparation, deadline reminders as filing dates approach, and advisory touchpoints that keep your firm top of mind between returns."
+    }
+  }
+}

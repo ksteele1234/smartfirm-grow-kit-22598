@@ -1,0 +1,72 @@
+{
+  "subcategory": "email-marketing",
+  "problemStatement": "Most {audience} know they should be emailing their clients and prospects regularly but never find the time to write, schedule, and send consistent communications. The result is long gaps between touchpoints where clients forget you exist.",
+  "solutionOverview": "Effective email marketing for accounting firms does not require you to become a copywriter or spend hours each week crafting messages. The firms doing this well have automated sequences that deliver the right message at the right time, keeping them top of mind with minimal ongoing effort.",
+  "hearingSignals": [
+    "You have a client email list but have not sent anything in months",
+    "You know email marketing works but cannot justify the time to write and send newsletters consistently",
+    "Clients have told you they did not know you offered a service because you never communicated it"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Writing email content regularly is time consuming and always gets deprioritized behind client work",
+      "solution": "Pre built email sequences and templates customized for {audience} run automatically, delivering relevant content to your list without ongoing writing"
+    },
+    {
+      "problem": "Your client list sits unused because you do not have a system to send targeted, relevant communications",
+      "solution": "Automated segmentation and scheduling sends the right messages to the right clients based on their services, engagement history, and lifecycle stage"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Stay Top of Mind Effortlessly",
+      "description": "Regular email touchpoints keep your firm in clients minds when they need additional services or when friends ask for a recommendation. Consistency matters more than perfection.",
+      "points": ["Automated emails maintain regular contact without your involvement", "Clients remember you when they need advisory or additional services", "Referral opportunities increase when you stay visible"]
+    },
+    {
+      "title": "Nurture Prospects Automatically",
+      "description": "Not every prospect is ready to hire immediately. Automated email sequences keep your firm in front of interested prospects until they are ready to engage.",
+      "points": ["Drip sequences educate prospects about your services over time", "Automated follow up prevents leads from going cold", "Prospects self select when they are ready to move forward"]
+    },
+    {
+      "title": "Cross Sell to Existing Clients",
+      "description": "Many of your current clients do not know about all the services you offer. Targeted emails introduce relevant services to the right clients at the right time.",
+      "points": ["Segment clients by service type and send relevant offers", "Educate clients about advisory services beyond compliance work", "Revenue per client can increase without new client acquisition"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Assess Your List", "description": "We review your current email list, segmentation, and communication history to identify the biggest opportunities.", "subheading": "Audit" },
+    { "step": 2, "title": "Design Sequences", "description": "We create email sequences tailored to your services, client segments, and communication goals.", "subheading": "Design" },
+    { "step": 3, "title": "Configure and Launch", "description": "We set up the automation, configure triggers and scheduling, and launch with proper testing.", "subheading": "Launch" },
+    { "step": 4, "title": "Monitor and Optimize", "description": "We track open rates, click rates, and engagement to refine messaging and timing over time.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Email Consistency", "value": "Automated", "description": "Regular client communications happen without manual effort from your team" },
+    { "metric": "Client Awareness", "value": "Improved", "description": "Clients learn about services they did not know you offered" },
+    { "metric": "Lead Nurturing", "value": "Systematic", "description": "Prospects receive consistent follow up instead of being forgotten" }
+  ],
+  "faqs": [
+    { "question": "What kind of emails should accounting firms send?", "answer": "Common types include tax deadline reminders, regulatory updates, new service announcements, educational content about advisory services, and seasonal check ins. The specific mix depends on your services and client base." },
+    { "question": "How often should we email our list?", "answer": "For most {audience}, monthly to bi weekly is a good starting point. We help you find the right cadence during discovery based on your audience and content strategy." },
+    { "question": "Do we need to write all the content ourselves?", "answer": "No. We handle the content strategy, template design, and sequence setup. Your input is needed for firm specific details, but the heavy lifting of content creation and automation setup is done for you." }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm has a client list that could be generating referrals, cross sells, and new business. Here is how firms are turning dormant email lists into consistent revenue drivers without writing a single newsletter.",
+  "ctaTitle": "Ready to Activate Your Email List?",
+  "ctaDescription": "Book a free call and we will assess your current email situation and show you what automated email marketing could look like for your practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Your bookkeeping clients do not know you offer additional services like advisory or tax preparation referrals",
+        "You have never sent a newsletter or email campaign to your client list",
+        "Clients leave for other bookkeepers because they forget you exist between monthly interactions"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Clients only hear from you during tax season, creating a transactional relationship",
+        "You miss opportunities to promote advisory services because you do not communicate between filing seasons",
+        "Your email list has hundreds of past clients but you have never sent a targeted campaign"
+      ]
+    }
+  }
+}

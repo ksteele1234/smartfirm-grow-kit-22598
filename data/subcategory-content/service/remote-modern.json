@@ -1,0 +1,72 @@
+{
+  "subcategory": "remote-modern",
+  "heroDescription": "Running a remote or cloud first accounting practice unlocks incredible flexibility, but it also introduces coordination challenges that traditional office based firms do not face. When your team works across time zones, your clients interact through portals instead of lobbies, and your tools need to connect seamlessly without anyone in the same room, the right automation becomes essential. We help {audience} build the systems that make location independent operations feel effortless.",
+  "benefits": [
+    {
+      "title": "Seamless Virtual Collaboration",
+      "description": "Remote teams thrive when handoffs are clear and communication is structured. Automation can ensure that work moves between team members without anything getting lost in Slack threads or email chains, even when people are working at different times."
+    },
+    {
+      "title": "Cloud First Workflow Integration",
+      "description": "Modern practices typically run on a stack of cloud tools that need to talk to each other. We help connect your practice management, communication, document management, and client facing systems so information flows automatically instead of being manually copied between platforms."
+    },
+    {
+      "title": "Professional Client Experience Without a Physical Office",
+      "description": "Your clients should feel the same level of professionalism and responsiveness whether your firm operates from a single office or across five states. Automated client communication, self service portals, and structured onboarding can create a polished experience that builds trust regardless of location."
+    }
+  ],
+  "features": [
+    {
+      "title": "Asynchronous Workflow Design",
+      "description": "When your team is not in the same room at the same time, your workflows need to support asynchronous handoffs. We design systems where tasks move forward automatically, status is always visible, and team members can pick up exactly where someone else left off.",
+      "details": [
+        "Automated task assignments and notifications when work is ready for the next step",
+        "Centralized dashboards that show real time status without requiring status meetings",
+        "Built in documentation so context travels with the work, not just with the person"
+      ]
+    },
+    {
+      "title": "Cloud Tool Integration",
+      "description": "Most modern firms use a combination of tools like Karbon for practice management, LedgerDocs or similar platforms for document collection, and various communication tools. We help connect these systems so data flows between them without manual re entry or duplicate work.",
+      "details": [
+        "Integration mapping to identify where your current tools overlap or leave gaps",
+        "Automated data flow between practice management, accounting, and client communication tools",
+        "Reduction of manual data entry across platforms"
+      ]
+    },
+    {
+      "title": "Virtual Client Experience Systems",
+      "description": "Your client experience is one of the biggest differentiators for a remote firm. We build automated touchpoints that keep clients informed, make it easy for them to share documents and information, and ensure they always know what is happening with their engagement.",
+      "details": [
+        "Automated onboarding sequences designed for fully virtual client relationships",
+        "Self service scheduling and document upload workflows",
+        "Proactive communication sequences that keep clients engaged between deliverables"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need to switch our existing tools to work with you?",
+      "answer": "Not typically. We are tool agnostic and work with whatever platforms your firm already uses. If you are already on Karbon, GoHighLevel, or other cloud tools, we build automation around your existing stack. We only recommend changes when there is a clear gap that your current tools cannot fill."
+    },
+    {
+      "question": "How do you handle firms with team members in multiple time zones?",
+      "answer": "Asynchronous workflow design is one of our core strengths. We build systems where work progresses automatically and team members can see exactly what needs their attention when they start their day. The goal is to minimize dependencies on real time communication so time zone differences become a non issue for routine work."
+    },
+    {
+      "question": "Can you help us transition from an office based model to remote?",
+      "answer": "Yes, and it is a transition many firms are navigating right now. We can help you identify which processes need to change for a remote model, select the right cloud tools if you do not already have them, and build automated workflows that replace the informal coordination that happens naturally in an office."
+    }
+  ],
+  "heroSubtitleTemplate": "Modern {audience} need automation that works across locations, time zones, and cloud platforms. Here is how we help remote first firms operate seamlessly.",
+  "ctaTitle": "Ready to Build a Truly Location Independent Practice?",
+  "ctaDescription": "Book a free call and we will assess your current remote workflows together to find the biggest opportunities for automation and integration.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Virtual bookkeeping firms face a unique challenge. Your work is inherently recurring and collaborative, but your team and clients may be spread across different locations. Automation that handles document collection, status updates, and monthly close coordination can make a remote bookkeeping practice feel as tight and responsive as any traditional office. We help bookkeepers build the cloud first systems that make virtual operations sustainable."
+    },
+    "tax preparers": {
+      "heroDescription": "Remote tax preparation is growing fast, but managing a distributed team through filing season takes more than just moving to cloud based tax software. You need structured workflows for document collection, review routing, and client communication that work reliably when nobody is in the same building. We help tax preparers build the automation that makes remote tax season as organized as an in person one."
+    }
+  }
+}

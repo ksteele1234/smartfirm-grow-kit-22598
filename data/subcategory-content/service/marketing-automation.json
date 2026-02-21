@@ -1,0 +1,75 @@
+{
+  "subcategory": "marketing-automation",
+  "heroDescription": "Most {audience} know they should be doing more marketing, but the reality is you are busy serving clients and marketing keeps falling to the bottom of the list. Marketing automation changes that equation. When your CRM, email sequences, and lead nurture workflows are set up correctly, your firm stays visible and engaged with prospects and clients without anyone on your team spending hours on it each week. The challenge is that these systems are only effective when they are configured thoughtfully and maintained consistently, which is where done for you implementation makes the difference.",
+  "benefits": [
+    {
+      "title": "Marketing That Runs While You Work",
+      "description": "Once your marketing automation is configured, it works in the background while your team focuses on billable client work. Email sequences go out on schedule, leads get nurtured automatically, and campaigns run without anyone remembering to press send. This is especially valuable during busy season when marketing typically stops entirely."
+    },
+    {
+      "title": "A CRM That Actually Gets Used",
+      "description": "Many {audience} have a CRM that sits half configured and mostly ignored. We set up your CRM so it fits your actual workflow, captures the information that matters, and connects to your other systems. When the CRM works the way your team actually operates, adoption happens naturally."
+    },
+    {
+      "title": "Consistent Client Communication",
+      "description": "Your clients and prospects hear from you on a regular cadence without your team drafting individual emails. Automated sequences can include onboarding welcome series, seasonal reminders, educational content, and re engagement campaigns. The result is a professional, consistent experience that builds trust over time."
+    }
+  ],
+  "features": [
+    {
+      "title": "CRM Setup and Configuration",
+      "description": "We configure your CRM around how your practice actually works, not how a generic template assumes you work. This includes custom pipelines, contact properties, and integrations with your existing tools so data flows where it needs to go.",
+      "details": [
+        "Custom pipeline stages designed for accounting firm client journeys",
+        "Integration with your existing tools like GoHighLevel, email, and calendar",
+        "Contact segmentation based on service type, client status, and engagement"
+      ]
+    },
+    {
+      "title": "Email Sequence Design and Deployment",
+      "description": "We build email sequences that nurture leads, onboard new clients, and keep existing clients engaged. Each sequence is written in your voice and tailored to the types of clients your firm serves. Sequences can include conditional logic so the right people get the right messages.",
+      "details": [
+        "Lead nurture sequences that educate prospects and move them toward a conversation",
+        "Client onboarding sequences that set expectations and reduce questions",
+        "Re engagement campaigns for past prospects and inactive clients"
+      ]
+    },
+    {
+      "title": "Campaign Management and Optimization",
+      "description": "We do not just set it and forget it. After launch, we monitor open rates, click through behavior, and conversion patterns to refine messaging and timing. Your campaigns get better over time based on how your specific audience responds.",
+      "details": [
+        "Ongoing performance monitoring with adjustments based on real data",
+        "Seasonal campaign planning aligned with tax deadlines and advisory opportunities",
+        "Monthly reporting so you can see what is working without digging into dashboards"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What CRM platform do you use for marketing automation?",
+      "answer": "We typically work with GoHighLevel for firms that need an all in one marketing and CRM platform, but we are tool agnostic. During our discovery process, we assess what you are already using and recommend the best fit for your specific situation. If you already have a CRM you like, we can often build on top of it rather than replacing it.",
+      "category": "Implementation"
+    },
+    {
+      "question": "How much of our time does this require?",
+      "answer": "During setup, we typically need a few hours of your time for discovery conversations and content approval. After that, the system runs with minimal involvement from your team. We handle ongoing management and optimization so you can focus on client work. Most firms spend less than an hour per month reviewing results with us.",
+      "category": "Implementation"
+    },
+    {
+      "question": "Will automated emails feel robotic to our clients?",
+      "answer": "Not when they are done well. We write in your firm's voice and design sequences that feel like personal communication, not mass marketing blasts. The goal is for clients and prospects to feel like someone on your team personally reached out, just at the perfect time and consistently.",
+      "category": "General"
+    }
+  ],
+  "heroSubtitleTemplate": "Done for you marketing automation built specifically for {audience}. Your CRM, email sequences, and lead nurture workflows configured and managed so your firm stays visible without adding to your team's workload.",
+  "ctaTitle": "Ready to Put Your Marketing on Autopilot?",
+  "ctaDescription": "Book a free call and we will map out which marketing automation opportunities would make the biggest impact for your specific practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "As a bookkeeper, your marketing often takes a back seat to month end closes and daily client work. Marketing automation changes that by keeping your firm visible to prospective small business owners even during your busiest periods. When your CRM, email sequences, and follow up workflows are configured correctly, you can nurture leads and stay top of mind with clients without adding marketing tasks to your already full plate. The key is having these systems set up by someone who understands how bookkeeping practices actually operate."
+    },
+    "tax preparers": {
+      "heroDescription": "For tax preparers, marketing tends to happen in bursts between seasons and then stops entirely when filing deadlines hit. Marketing automation solves this by keeping your firm engaged with prospects and clients year round, even during the months when you barely have time to eat lunch. With properly configured email sequences, CRM workflows, and campaign automation, your practice builds pipeline during busy season and converts it during the quieter months. Done for you implementation means you do not have to become a marketing expert on top of everything else."
+    }
+  }
+}

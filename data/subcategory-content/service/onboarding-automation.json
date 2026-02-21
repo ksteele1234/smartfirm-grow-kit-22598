@@ -1,0 +1,87 @@
+{
+  "subcategory": "onboarding-automation",
+  "heroDescription": "The first few weeks of a new client relationship set the tone for everything that follows. Most {audience} handle onboarding with a patchwork of manual emails, scattered document requests, and verbal instructions that vary from team member to team member. We build automated onboarding systems that deliver a professional, consistent experience for every new client while collecting everything your team needs to start work quickly.",
+  "benefits": [
+    {
+      "title": "Professional First Impressions Every Time",
+      "description": "Your onboarding experience tells new clients exactly what kind of firm they are working with. An automated welcome sequence with clear next steps, branded communications, and a structured process signals that your firm is organized and trustworthy from the very first interaction.",
+      "details": [
+        "Branded welcome emails that introduce your firm and set expectations clearly",
+        "Structured next steps delivered automatically so clients know exactly what to do",
+        "Every new client receives the same polished experience regardless of who manages them"
+      ]
+    },
+    {
+      "title": "Faster Document Collection",
+      "description": "Chasing clients for documents and information is one of the biggest time drains during onboarding. Automated document collection workflows send clear requests, follow up on missing items, and track what has been received so your team can focus on actual work instead of administrative back and forth.",
+      "details": [
+        "Automated document request sequences with clear instructions for each item needed",
+        "Reminder workflows that follow up on outstanding items at intervals you define",
+        "Real time tracking so your team can see exactly what has been received and what is still pending"
+      ]
+    },
+    {
+      "title": "Clear Expectations From Day One",
+      "description": "Many scope disputes and client frustrations trace back to vague onboarding where neither side was entirely clear on what was included. Automated delivery of engagement letters, service summaries, and process overviews ensures everyone starts on the same page.",
+      "details": [
+        "Automated delivery of engagement letters and service agreements for acknowledgment",
+        "Clear communication of timelines, deliverables, and what you need from the client",
+        "Expectation setting touchpoints that can reduce scope related conversations later"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Welcome Sequence Design and Build",
+      "description": "We design a multi step welcome sequence tailored to your firm's services and client types. This typically includes an initial welcome email, an introduction to your team and process, access credentials or portal instructions, and a clear outline of what happens next.",
+      "details": [
+        "Custom welcome sequences for each service line your firm offers",
+        "Personalized messaging that reflects your firm's voice and approach",
+        "Conditional branching so different client types receive relevant onboarding paths"
+      ]
+    },
+    {
+      "title": "Document Collection Workflows",
+      "description": "We build automated workflows that request, collect, and track every document and piece of information your team needs to begin work. Clients receive clear instructions with secure upload options, and your team gets notified as items arrive. Tools like LedgerDocs or Double can be integrated into the collection process where it makes sense.",
+      "details": [
+        "Structured intake forms and document request lists customized for your services",
+        "Automated reminders that escalate gently for missing items",
+        "Integration with document management tools your firm already uses or plans to adopt"
+      ]
+    },
+    {
+      "title": "Engagement Letter and Agreement Automation",
+      "description": "We configure systems to automatically generate and deliver engagement letters based on the services a client has signed up for. This can include electronic signature collection, acknowledgment tracking, and automatic filing of completed agreements.",
+      "details": [
+        "Template based engagement letters that populate with client specific details",
+        "Electronic signature workflows for faster turnaround on agreements",
+        "Automatic archiving and status tracking for all signed documents"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What if we onboard different types of clients who need different things?",
+      "answer": "That is the norm for most {audience}, and the automation is designed to handle it. We build separate onboarding paths for each service type so a new tax client gets a different sequence and document list than a new bookkeeping client. The system routes each client to the right workflow based on the services they signed up for."
+    },
+    {
+      "question": "Will clients feel like they are being processed through a machine?",
+      "answer": "The opposite, actually. When onboarding is automated well, clients experience a smoother, more organized process than they would with manual emails and phone calls. The messaging is written in your firm's voice, and the automation handles logistics so your team has more time for the personal touches that actually build relationships."
+    },
+    {
+      "question": "How does this work with our existing practice management system?",
+      "answer": "We design the onboarding automation to complement whatever tools you are already using. If you are on Karbon, for example, we can configure task triggers and client status updates that sync with your existing workflow. During discovery, we map out your current systems and identify the best integration points so everything works together instead of creating more fragmentation."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm can deliver a polished, professional onboarding experience for every new client without manual effort. We build the welcome sequences, document collection workflows, and expectation setting automation that turn chaotic first weeks into smooth, confident starts.",
+  "ctaTitle": "Ready to Transform Your Client Onboarding?",
+  "ctaDescription": "Book a free call and we will walk through your current onboarding process together and identify where automation can save your team the most time while improving the client experience.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "When a new bookkeeping client signs on, the first few weeks are typically spent chasing bank access credentials, prior records, and software logins while trying to explain your monthly process. That disorganized start can set the wrong tone for the entire relationship. We build automated onboarding systems that deliver a clear welcome experience, collect everything you need upfront, and set expectations so your new clients feel confident and your team can start productive work faster."
+    },
+    "tax preparers": {
+      "heroDescription": "For tax preparers, onboarding often means clients showing up without the documents you need, unclear about your timeline, and confused about what is included in their engagement. When you are trying to onboard dozens of clients during intake season, those inefficiencies multiply quickly. We build automated onboarding systems that send clear instructions, collect documents systematically, and deliver engagement terms before the first appointment so every client arrives prepared."
+    }
+  }
+}

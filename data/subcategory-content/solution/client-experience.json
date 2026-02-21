@@ -1,0 +1,72 @@
+{
+  "subcategory": "client-experience",
+  "problemStatement": "Your {audience} clients are comparing you to every other service they use, not just other accounting firms. When they can track a pizza delivery in real time but cannot get a status update on their tax return, they start wondering if they chose the right firm.",
+  "solutionOverview": "Client experience is not about being flashy. It is about being easy to work with, keeping people informed, and removing the friction that makes clients feel forgotten. The firms winning on experience are the ones that communicate proactively and make every interaction feel effortless.",
+  "hearingSignals": [
+    "Clients regularly email or call asking for updates on work that is already in progress",
+    "Your team dreads sending invoices because it often triggers complaints or awkward conversations",
+    "You have lost clients who said nothing was wrong but simply did not come back"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Clients feel left in the dark between dropping off documents and receiving finished work",
+      "solution": "Automated status updates at key milestones, like document received, work in progress, and ready for review, keep clients informed without your team lifting a finger"
+    },
+    {
+      "problem": "Every client interaction requires a phone call or email chain because there is no self service option",
+      "solution": "A client portal where people can upload documents, check status, sign forms, and pay invoices on their own schedule removes friction for clients and frees up your team simultaneously"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Fewer Where Are We At Calls",
+      "description": "The number one source of unnecessary client communication is status requests. When clients can see where things stand on their own, those calls and emails simply stop.",
+      "points": ["Automatic updates when work reaches key milestones", "Client facing dashboards or portals that show engagement status", "Proactive communication that answers questions before they are asked"]
+    },
+    {
+      "title": "Stronger Client Retention",
+      "description": "Clients rarely leave because of technical quality. They leave because the experience felt difficult or they did not feel valued. A consistent, proactive communication system changes that dynamic entirely.",
+      "points": ["Every client receives the same high quality communication regardless of firm size", "Timely check ins and follow ups that make clients feel remembered", "Smooth onboarding that sets the right expectations from day one"]
+    },
+    {
+      "title": "More Referrals Through Better Impressions",
+      "description": "When clients have a great experience, they talk about it. A modern, professional interaction style makes your firm the one they recommend to colleagues and friends.",
+      "points": ["Professional branded communications that reinforce your expertise", "Easy processes that clients actually enjoy telling others about", "Consistent experience that builds trust and confidence over time"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Experience Audit", "description": "We walk through your client journey from first contact to completed engagement, identifying every point where clients experience friction or go silent.", "subheading": "Discovery" },
+    { "step": 2, "title": "Communication Design", "description": "We design a communication framework that keeps clients informed at the right moments, using the right channels, without creating more work for your team.", "subheading": "Design" },
+    { "step": 3, "title": "System Setup", "description": "We implement client portals, automated updates, and communication workflows using tools like GoHighLevel or your existing platform, and train your team on the new process.", "subheading": "Implementation" },
+    { "step": 4, "title": "Measure and Improve", "description": "We track client engagement with your new systems, gather feedback, and refine the experience based on what your specific clients respond to.", "subheading": "Optimization" }
+  ],
+  "results": [
+    { "metric": "Status Inquiries", "value": "Dramatically Fewer", "description": "Firms typically see a significant drop in clients calling or emailing to ask for updates" },
+    { "metric": "Client Retention", "value": "Improved", "description": "Better communication tends to directly reduce client churn year over year" },
+    { "metric": "Team Morale", "value": "Higher", "description": "When clients are happier and less anxious, your team spends less time managing complaints" }
+  ],
+  "faqs": [
+    { "question": "Our clients are not tech savvy. Will they actually use a portal?", "answer": "That is a fair concern and one we hear often. The portals we help implement are designed to be as simple as possible. That said, we always recommend keeping traditional options available alongside the portal so clients can transition at their own pace." },
+    { "question": "We pride ourselves on personal service. Will automation make us seem impersonal?", "answer": "Great personal service and smart automation are not opposites. Automation handles the routine communications like status updates and reminders, which frees up your team to have more meaningful personal conversations about advisory topics and client needs." },
+    { "question": "How do we get our team to actually use a new system?", "answer": "Adoption is something we plan for from the beginning. We design workflows that make your team's job easier, not harder, and we roll things out gradually. When people see that the system reduces their inbox load and client complaints, adoption tends to follow naturally." }
+  ],
+  "heroSubtitleTemplate": "Your {audience} clients expect the same ease and transparency they get from every other service. Here is how firms are delivering a modern client experience without adding complexity.",
+  "ctaTitle": "Ready to Transform Your Client Experience?",
+  "ctaDescription": "Book a free call and we will map your current client journey together and show you where small changes can make the biggest impression.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Bookkeeping clients constantly ask when their monthly reports will be ready instead of receiving proactive updates",
+        "New bookkeeping clients have a confusing onboarding process that varies depending on who sets them up",
+        "Clients leave your bookkeeping firm for competitors without ever raising a complaint"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Tax clients call repeatedly during filing season asking if their return has been started yet",
+        "Clients struggle with your document submission process and some give up and go elsewhere",
+        "You have no structured way to stay in touch with tax clients between filing seasons"
+      ]
+    }
+  }
+}

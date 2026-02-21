@@ -1,0 +1,87 @@
+{
+  "subcategory": "workflow-automation",
+  "heroDescription": "Running an accounting practice involves a staggering number of recurring tasks, deadlines, and handoffs that most {audience} still manage through memory, email threads, and manual checklists. Workflow automation brings structure to that chaos by configuring your practice management tools to assign tasks automatically, track deadlines proactively, and move work through defined stages without anyone needing to chase status updates or wonder what is next.",
+  "benefits": [
+    {
+      "title": "Nothing Falls Through the Cracks",
+      "description": "When workflows are automated, every task gets assigned, every deadline gets tracked, and every handoff triggers the next step. Your team stops relying on memory and email to keep work moving, which typically results in significantly fewer missed deadlines and dropped balls.",
+      "details": [
+        "Automated task creation and assignment based on client type, service line, or engagement stage",
+        "Deadline tracking with proactive reminders before due dates, not after",
+        "Status workflows that make it clear where every piece of work stands at any given moment"
+      ]
+    },
+    {
+      "title": "Consistent Processes Across Your Team",
+      "description": "Every firm has tribal knowledge about how things should get done, but that knowledge lives in people's heads rather than in a system. Workflow automation codifies your best processes into repeatable templates so every team member handles work the same way, whether they have been with your firm for ten years or ten days.",
+      "details": [
+        "Standardized task templates that ensure every engagement follows the same proven steps",
+        "Role based assignments so the right person gets the right work automatically",
+        "Process documentation built into the system rather than living in separate documents"
+      ]
+    },
+    {
+      "title": "Clear Visibility for Firm Leaders",
+      "description": "When you are managing a team, you need to know what is on track and what is falling behind without asking everyone for individual updates. Automated workflows feed into dashboards and status views that give you real time visibility into your firm's workload and progress.",
+      "details": [
+        "At a glance views showing team capacity, task progress, and upcoming deadlines",
+        "Bottleneck identification so you can see where work is getting stuck before it becomes a problem",
+        "Reporting that helps you make staffing and resource decisions based on real data"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Practice Management Configuration",
+      "description": "We set up and configure your practice management system with workflows that match how your firm actually operates. This includes task templates, recurring job schedules, and automation rules that handle the repetitive setup work your team currently does manually for every engagement.",
+      "details": [
+        "Custom workflow templates for each service line your firm offers",
+        "Recurring job configuration for monthly, quarterly, and annual engagements",
+        "Integration with tools like Karbon or your existing practice management platform"
+      ]
+    },
+    {
+      "title": "Task Automation and Assignment Rules",
+      "description": "We configure rules that automatically create, assign, and sequence tasks based on triggers you define. When a new client is onboarded, when a deadline approaches, or when a predecessor task is completed, the system generates the next step and routes it to the right person without any manual intervention.",
+      "details": [
+        "Trigger based task creation tied to dates, events, or completed predecessor tasks",
+        "Automatic assignment rules based on team roles, capacity, or specialization",
+        "Priority and dependency logic so tasks appear in the right order for your team"
+      ]
+    },
+    {
+      "title": "Deadline Tracking and Status Workflows",
+      "description": "We build status based workflows that track every engagement from start to completion. Each stage can trigger notifications, escalations, or follow up tasks so deadlines are managed proactively. Your team always knows what needs attention today and what is coming up next.",
+      "details": [
+        "Custom status stages that reflect your firm's actual workflow progression",
+        "Automated notifications and escalations when work is approaching or past due",
+        "Calendar views and deadline dashboards that keep the whole team aligned"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What practice management tools do you work with?",
+      "answer": "We are experienced with a range of practice management platforms and configure workflows based on what your firm uses or plans to adopt. Karbon is one we work with frequently because of its strong workflow automation capabilities, but we can also work with other platforms depending on your situation. During discovery, we assess what you have in place and recommend the best path forward."
+    },
+    {
+      "question": "How do you learn our processes well enough to automate them?",
+      "answer": "That is what the discovery phase is for. We sit down with you and your team to map out how work actually moves through your firm today, including the informal steps and workarounds that never made it into a written process. From there, we design workflows that capture what works well and improve what does not. You are involved throughout, so nothing gets automated in a way that does not reflect how your firm operates."
+    },
+    {
+      "question": "What if our processes are messy and not well defined yet?",
+      "answer": "That is more common than you might think, and it is actually a great time to bring in workflow automation. Part of what we do during discovery is help you identify and define the processes that should be standardized. We do not just automate chaos. We help you design cleaner processes first, then build the automation around them."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm has too many recurring tasks, deadlines, and handoffs to manage manually. We configure the workflow automation systems that keep your practice running smoothly, your team aligned, and your deadlines tracked without the constant overhead of manual coordination.",
+  "ctaTitle": "Ready to Automate Your Firm's Workflows?",
+  "ctaDescription": "Book a free call and we will map out your current processes together and identify the workflows that would save your team the most time and reduce the most risk.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "As a bookkeeper, your work is inherently cyclical. Monthly closes, bank reconciliations, payroll processing, and client deliverables repeat on a schedule, and keeping all of those balls in the air across multiple clients gets overwhelming fast. We configure workflow automation that turns your recurring tasks into managed, trackable processes with automatic assignments, deadline reminders, and status tracking so you always know where every client's work stands."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax season brings a surge of work that needs to move through your firm in a defined sequence: document collection, preparation, review, filing, and follow up. When you are managing dozens or hundreds of returns, manual tracking is a recipe for missed deadlines and stressed staff. We build workflow automation systems that assign tasks, track progress, and escalate approaching deadlines so every return moves through your process reliably and your team can focus on the work itself."
+    }
+  }
+}

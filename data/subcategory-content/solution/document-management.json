@@ -1,0 +1,72 @@
+{
+  "subcategory": "document-management",
+  "problemStatement": "Every {audience} knows the pain of chasing clients for documents. Tax organizers go unanswered, source documents arrive in drips and drabs, and your team wastes hours following up manually. During busy season, this bottleneck can bring your entire workflow to a standstill.",
+  "solutionOverview": "Firms that have solved the document collection problem share a common approach: they make it ridiculously easy for clients to upload what is needed and let automation handle the reminders. A secure portal with clear requests and persistent follow up removes the burden from your team while getting documents in faster.",
+  "hearingSignals": [
+    "Your team spends hours every week sending follow up emails asking clients for the same documents they already requested",
+    "Client documents arrive via email, text, fax, and even physical mail, and there is no single place where everything lives",
+    "Busy season becomes a bottleneck not because of the work itself but because you cannot get the information you need to start"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Clients receive a document request but ignore it because the list is overwhelming and there is no easy way to respond",
+      "solution": "Client facing portals like LedgerDocs or similar tools break requests into clear, manageable items with drag and drop uploads so clients can submit documents on their phone in minutes"
+    },
+    {
+      "problem": "Your team manually tracks which clients have submitted documents and which ones need another reminder, eating up hours of admin time",
+      "solution": "Automated tracking dashboards show exactly which documents are outstanding for each client, and scheduled reminder sequences follow up without anyone on your team lifting a finger"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Documents Come to You",
+      "description": "Instead of chasing clients through multiple channels, a centralized portal gives them one clear place to upload everything. Clients appreciate the simplicity, and your team appreciates not having to ask three times.",
+      "points": ["One secure link per client with a personalized document checklist", "Clients can upload from any device at any time", "Automatic confirmation when documents are received so clients know it worked"]
+    },
+    {
+      "title": "Automated Follow Up That Never Forgets",
+      "description": "Manual reminders are inconsistent and easy to deprioritize when your team is busy. Automated sequences follow up at the right intervals with the right tone, every single time.",
+      "points": ["Scheduled reminders escalate gently from friendly nudge to urgent request", "Reminders only go to clients who have outstanding items, not everyone", "Your team gets notified when a client completes their submission so work can begin immediately"]
+    },
+    {
+      "title": "Organized Filing Without the Busywork",
+      "description": "When documents arrive through a structured system, they can be automatically organized and filed rather than sitting in someone's inbox waiting to be sorted. This saves significant time and reduces the risk of misfiling.",
+      "points": ["Documents automatically categorized by client, type, and tax year", "Consistent naming conventions applied without manual effort", "Easy retrieval when you need to reference something months later"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Document Flow Assessment", "description": "We map how documents currently move into and through your firm, identifying where delays happen, where things get lost, and which client types cause the most friction.", "subheading": "Discovery" },
+    { "step": 2, "title": "Portal and Workflow Design", "description": "We design a document collection system tailored to your service lines, including client facing portals, request templates, and reminder sequences that match your firm's voice.", "subheading": "Design" },
+    { "step": 3, "title": "System Build and Integration", "description": "We configure your document management tools, connect them with your practice management system, and set up automated filing rules and reminder workflows.", "subheading": "Build" },
+    { "step": 4, "title": "Launch and Iterate", "description": "We roll out the system with your clients, monitor adoption rates, and refine the experience based on how clients actually interact with it.", "subheading": "Optimize" }
+  ],
+  "results": [
+    { "metric": "Document Collection Time", "value": "Substantially Faster", "description": "Firms typically see documents arrive much sooner when clients have a simple, clear way to submit them" },
+    { "metric": "Team Admin Hours", "value": "Significantly Reduced", "description": "Automated reminders and tracking can eliminate hours of manual follow up each week" },
+    { "metric": "Busy Season Readiness", "value": "Earlier Start", "description": "Getting documents sooner means your team can begin substantive work earlier in the season" }
+  ],
+  "faqs": [
+    { "question": "Will our clients actually use a document portal?", "answer": "Most clients prefer a portal once they try it. The key is making it simple. If a client can take a photo of a document with their phone and upload it in two taps, adoption tends to be high. We also design onboarding communications that walk clients through the process so the first experience is smooth." },
+    { "question": "What about clients who still insist on emailing documents?", "answer": "That is totally normal and we plan for it. Many systems allow you to set up a dedicated email address that automatically routes attachments into the right client folder. Over time, as clients see how easy the portal is, most gradually shift on their own." },
+    { "question": "Is this secure enough for sensitive financial documents?", "answer": "Absolutely. The portals we work with use bank level encryption and meet the security standards you would expect for handling financial data. They are significantly more secure than emailing documents as attachments, which is what most clients do now." }
+  ],
+  "heroSubtitleTemplate": "If you are {audience} still chasing clients for documents every season, you are not alone. Here is how firms are getting documents in faster, with less effort, and without the endless follow up emails.",
+  "ctaTitle": "Ready to Stop Chasing Documents?",
+  "ctaDescription": "Book a free call and we will look at your current document collection process together and identify where automation can save your team the most time.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Clients send you bank statements and receipts through a mix of email, text, and shared drives with no consistent process",
+        "Monthly reconciliation gets delayed because clients take weeks to provide the source documents you need",
+        "You have documents scattered across email inboxes, desktop folders, and cloud drives with no single source of truth"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "Tax organizers go out in January and you are still chasing responses in March, pushing your entire filing schedule back",
+        "Clients send partial document packages and your team has to figure out what is missing for each return",
+        "You dread the annual cycle of sending reminders, waiting, following up again, and still not having what you need to start"
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "subcategory": "firm-size",
+  "heroDescription": "What you should automate first depends heavily on where your firm is today. A three person practice wrestling with document chaos has different priorities than a twenty person firm struggling with team coordination. We take a growth aware approach to automation, designing systems that solve your current pain points while building a foundation that scales with you as your firm evolves.",
+  "benefits": [
+    {
+      "title": "Automation That Matches Your Stage",
+      "description": "There is no one size fits all automation roadmap. Small firms typically benefit most from client facing automation that saves the owner's time. Mid size firms often need operational systems that keep growing teams aligned. And firms in active growth mode need scalable infrastructure that does not break every time they add a client or team member. We start where you are."
+    },
+    {
+      "title": "A Roadmap That Grows With You",
+      "description": "The automation you build today should not need to be torn out and replaced when you grow. We design systems with your next stage in mind, so the client communication workflows you build as a small firm become the foundation for the full operational system you will need as a mid size practice. You invest once and build on it."
+    },
+    {
+      "title": "Right Investment at the Right Time",
+      "description": "Firms sometimes over invest in automation they do not need yet, or under invest in areas that are costing them significantly. A growth aware approach helps you put your budget where it matters most for your current reality, while planning ahead so you are not caught off guard when the next growth stage arrives."
+    }
+  ],
+  "features": [
+    {
+      "title": "Small Firm Foundations",
+      "description": "For firms with one to five team members, the priority is typically automating the tasks that consume the most owner time. Client communication, document collection, scheduling, and lead follow up are usually the highest impact starting points that deliver immediate time savings.",
+      "details": [
+        "Automated client communication and document requests that eliminate hours of weekly follow up",
+        "Self service scheduling and intake that reduce back and forth coordination",
+        "Lead nurturing sequences that keep your pipeline warm without requiring your daily attention"
+      ]
+    },
+    {
+      "title": "Mid Size Firm Operations",
+      "description": "For firms with five to fifteen team members, the challenge typically shifts from individual time savings to team coordination and process consistency. This is where workflow management, standardized processes, and internal automation become essential to maintain quality as you scale.",
+      "details": [
+        "Structured engagement workflows using tools like Karbon that give leadership visibility across all client work",
+        "Standardized processes with built in quality checkpoints that ensure consistency regardless of which team member handles the work",
+        "Automated internal coordination that reduces meeting overhead and keeps handoffs clean"
+      ]
+    },
+    {
+      "title": "Growth Stage Infrastructure",
+      "description": "For firms actively scaling beyond fifteen team members or expanding into new service lines, automation needs to be enterprise grade. This includes advanced reporting, multi department workflows, capacity planning, and systems that support the complexity of a growing organization.",
+      "details": [
+        "Multi department workflow orchestration that keeps different teams and service lines synchronized",
+        "Advanced reporting dashboards that give firm leadership real time visibility into performance, capacity, and profitability",
+        "Scalable client experience systems that maintain service quality even as your client base grows significantly"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do we know which automation stage our firm is at?",
+      "answer": "It is less about a rigid stage definition and more about where your pain points are. If you as the owner are personally handling tasks that should be automated, you are likely in the small firm foundations stage. If your team is growing but coordination is messy, you are probably ready for mid size operational systems. We figure this out together during discovery so we build what actually matters for where you are right now."
+    },
+    {
+      "question": "What if we are a small firm but want to build like a larger one?",
+      "answer": "We love that ambition, and we will channel it wisely. Building overly complex systems before you need them can actually slow you down and waste budget. We will design your foundation with your growth goals in mind so that adding more advanced capabilities later is straightforward, without over engineering things you do not need today."
+    },
+    {
+      "question": "Can we start small and expand over time?",
+      "answer": "That is exactly how we recommend approaching it. We typically start with the two or three automations that will make the biggest difference for your firm right now, get those running smoothly, and then build from there as your firm grows and your needs evolve. Each phase builds on the last rather than replacing it."
+    }
+  ],
+  "heroSubtitleTemplate": "What your {audience} firm should automate first depends on where you are today and where you are headed. Here is how to build automation that fits your current stage and scales as you grow.",
+  "ctaTitle": "Ready to Build for Your Firm's Stage?",
+  "ctaDescription": "Book a free call and we will assess where your firm is today, identify the highest impact automations for your current stage, and map out a growth aware plan.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms experience distinct growing pains at each stage. A solo bookkeeper drowning in document collection needs very different automation than a mid size practice struggling to maintain quality across fifteen team members handling monthly closes. We take a growth aware approach that meets your bookkeeping practice where it is today and builds systems that scale smoothly as you add clients and team members."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax practices face unique scaling challenges because growth compounds the seasonal pressure that already defines the profession. A small tax firm might need to automate client communication and document collection to survive busy season. A mid size practice might need workflow orchestration to manage hundreds of returns across a growing team. We build automation that matches your firm's current size and prepares you for the next stage of growth."
+    }
+  }
+}

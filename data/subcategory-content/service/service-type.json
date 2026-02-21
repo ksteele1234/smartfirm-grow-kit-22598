@@ -1,0 +1,72 @@
+{
+  "subcategory": "service-type",
+  "heroDescription": "Every accounting service line has its own rhythm, deadlines, and client expectations. The automation priorities for a tax practice look very different from those of a bookkeeping firm or an advisory focused practice. We help {audience} identify which workflows to automate first based on the services you actually deliver, so you get meaningful results instead of a generic system that does not fit how you work.",
+  "benefits": [
+    {
+      "title": "Automation Matched to Your Service Mix",
+      "description": "A firm that primarily does tax preparation has very different bottlenecks than one focused on monthly bookkeeping or CFO advisory. We design automation around the services you offer so the systems we build address the real friction points in your day to day operations, not theoretical ones."
+    },
+    {
+      "title": "Faster Results Where It Matters Most",
+      "description": "When automation targets your highest volume or most time consuming service line first, you typically see meaningful improvements faster. We help you prioritize based on where your team spends the most manual effort relative to the value it creates."
+    },
+    {
+      "title": "Workflows That Respect Compliance Cycles",
+      "description": "Tax deadlines, month end closes, and audit timelines all create unique pressure points. Automation that accounts for these cycles can help your team stay ahead of crunch periods rather than scrambling through them every time."
+    }
+  ],
+  "features": [
+    {
+      "title": "Service Line Assessment",
+      "description": "We start by mapping your service offerings and understanding where each one creates manual work, client friction, or team bottlenecks. This discovery process helps us prioritize automation investments based on your actual practice, not assumptions.",
+      "details": [
+        "Detailed review of workflows for each service line you offer",
+        "Identification of high effort, low value tasks within each service area",
+        "Prioritization framework based on time savings and client impact"
+      ]
+    },
+    {
+      "title": "Tax and Compliance Automation",
+      "description": "For firms with significant tax or compliance work, automation can streamline document collection, organizer distribution, status tracking, and client communication during your busiest periods. The goal is to reduce the manual coordination that consumes so much time during filing seasons.",
+      "details": [
+        "Automated organizer delivery and follow up sequences",
+        "Status tracking dashboards so clients and team members stay informed",
+        "Deadline driven workflows that escalate tasks before things fall behind"
+      ]
+    },
+    {
+      "title": "Bookkeeping and Advisory Workflow Design",
+      "description": "Recurring service lines like bookkeeping and advisory benefit from automation that handles the repetitive coordination between engagements. We can help systematize monthly close processes, recurring deliverable schedules, and ongoing client communication cadences.",
+      "details": [
+        "Monthly and quarterly workflow templates with built in review steps",
+        "Automated document requests timed to your close schedule",
+        "Recurring communication sequences that keep advisory clients engaged between meetings"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What if our firm offers multiple service lines?",
+      "answer": "That is very common, and it is actually one of the reasons a service type approach works so well. We assess each service line independently and help you decide which one to automate first. Most firms start with their highest volume service and expand from there as they see results."
+    },
+    {
+      "question": "Do you work with firms that are transitioning from compliance to advisory?",
+      "answer": "Absolutely. Many of the firms we work with are making that shift, and automation plays a significant role in freeing up the time needed to offer higher value advisory services. We can help you build systems that support both your existing compliance work and the advisory practice you are growing into."
+    },
+    {
+      "question": "How do you handle seasonal fluctuations like tax season?",
+      "answer": "We design workflows that account for your busy periods. For tax focused firms, that typically means building automation that ramps up document collection and client communication ahead of deadlines, then shifts to follow up and extension management as the season progresses. The system adapts to your calendar, not the other way around."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} service mix determines which automation will make the biggest difference. Here is how we match the right systems to the work you actually do.",
+  "ctaTitle": "Ready to Automate Your Most Time Consuming Service Line?",
+  "ctaDescription": "Book a free call and we will walk through your service offerings together to identify which workflows will benefit most from automation.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Monthly bookkeeping creates a predictable but labor intensive cycle of document collection, reconciliation, and reporting. The right automation can streamline each step so your team spends less time on coordination and more time on the work that actually requires your expertise. We help bookkeepers identify which parts of their monthly workflow to automate first for the biggest impact."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation has one of the most pronounced seasonal patterns in all of accounting, which makes the right automation strategy especially impactful. From organizer distribution and document collection to status tracking and extension management, we help tax preparers build systems that reduce the manual chaos of filing season and create a more sustainable workflow year round."
+    }
+  }
+}

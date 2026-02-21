@@ -1,0 +1,72 @@
+{
+  "subcategory": "document-automation",
+  "heroDescription": "If your team is still collecting client documents through email attachments, shared drives, and the occasional text message, you already know the problem. Files get lost, follow ups pile up, and nobody is quite sure whether every document has come in. Document automation services give your firm a structured, secure system for collecting, organizing, and extracting data from client documents so your team can spend their time on the work itself rather than chasing paperwork.",
+  "benefits": [
+    {
+      "title": "A Single, Secure Place for Every Document",
+      "description": "When clients have one clear place to upload their files and your team has one place to find them, the confusion disappears. Secure portals replace the scattered mix of email threads and shared folders with a system that keeps everything organized by client, engagement, and document type."
+    },
+    {
+      "title": "Significantly Less Time Spent Chasing Documents",
+      "description": "Automated reminders and request sequences follow up with clients on your behalf when documents are outstanding. Your team no longer needs to remember who still owes what or draft individual follow up messages. The system handles the nudges so you can focus on the deliverables."
+    },
+    {
+      "title": "Faster Data Entry Through Extraction Technology",
+      "description": "OCR and data extraction tools can pull key information directly from uploaded documents, reducing the manual data entry that slows down your workflow. This typically means your team spends less time re keying numbers and more time reviewing and advising."
+    }
+  ],
+  "features": [
+    {
+      "title": "Secure Client Upload Portals",
+      "description": "We set up branded, secure portals where your clients can upload documents directly. Each portal is organized by document type and engagement, giving clients a clear picture of what has been submitted and what is still needed.",
+      "details": [
+        "Branded upload experience that matches your firm's look and feel",
+        "Document checklists so clients can see exactly what you need from them",
+        "Automatic confirmation notifications when documents are successfully received"
+      ]
+    },
+    {
+      "title": "Automated Document Requests and Follow Ups",
+      "description": "Document request workflows go out automatically based on engagement stage or calendar date. When items remain outstanding, the system sends polite follow up reminders at intervals you define, escalating when needed without your team getting involved.",
+      "details": [
+        "Scheduled request sequences triggered by workflow milestones or due dates",
+        "Customizable reminder intervals and messaging that match your firm's tone",
+        "Integration with platforms like LedgerDocs for streamlined document tracking and collection"
+      ]
+    },
+    {
+      "title": "OCR and Data Extraction Workflows",
+      "description": "Once documents arrive, OCR and data extraction tools can read and categorize them automatically. This means uploaded receipts, bank statements, and tax forms can be processed and routed to the right place with minimal manual handling.",
+      "details": [
+        "Optical character recognition that pulls text and numbers from scanned documents",
+        "Automated categorization and filing based on document type",
+        "Extracted data routed directly into your accounting or practice management system"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is the client upload portal secure enough for sensitive financial documents?",
+      "answer": "Absolutely. The portals we implement use encrypted connections and secure storage, which is exactly what you need when handling financial and tax documents. We configure access controls so only authorized team members can view each client's files. Your clients get the peace of mind that comes with knowing their sensitive information is protected, and you get the compliance confidence your firm needs."
+    },
+    {
+      "question": "What if our clients are not comfortable using a portal?",
+      "answer": "That is a fair concern, and honestly most clients adapt quickly once they see how simple the experience is. The portals we build are designed to be straightforward, with clear instructions and minimal steps. For clients who need a little more hand holding, we can set up guided onboarding emails that walk them through the process. In our experience, once clients use the portal for one engagement, they prefer it over the old email back and forth."
+    },
+    {
+      "question": "Can document automation integrate with our existing accounting software?",
+      "answer": "In most cases, yes. We commonly implement tools like LedgerDocs that are designed to work alongside popular accounting and practice management platforms. During our discovery process, we look at your current tech stack and design the document workflows to fit into what you already use rather than replacing everything. The goal is to reduce manual steps, not add new complexity."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm deserves a document collection system that works as hard as your team does. We build secure portals, automated request workflows, and data extraction systems that eliminate the document chase.",
+  "ctaTitle": "Ready to End the Document Chase?",
+  "ctaDescription": "Book a free call and we will review your current document collection process and show you where automation can save your team significant time every month.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms collect documents from every client every month, and when that process depends on email reminders and manual tracking, things inevitably slip through. Document automation gives your firm a repeatable, secure system for requesting, collecting, and organizing monthly source documents so your team can move straight into the work instead of waiting on missing files. We commonly implement tools like LedgerDocs to make this process seamless."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax season puts enormous pressure on document collection, and when you are managing hundreds of clients who all need to submit forms, receipts, and statements, a manual process simply does not scale. Document automation services give your firm a secure, organized system for requesting and collecting tax documents, with automated reminders that follow up persistently so your team does not have to. We typically implement platforms like LedgerDocs to keep everything in one place."
+    }
+  }
+}

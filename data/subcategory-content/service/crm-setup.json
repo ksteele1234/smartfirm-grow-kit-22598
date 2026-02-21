@@ -1,0 +1,87 @@
+{
+  "subcategory": "crm-setup",
+  "heroDescription": "Most {audience} are managing client relationships across spreadsheets, email inboxes, and sticky notes. A properly configured CRM brings all of that into one place, giving you clear visibility into every prospect, client, and opportunity without the chaos. We handle the setup, configuration, and integration so your team can start using it right away instead of spending months trying to figure it out on your own.",
+  "benefits": [
+    {
+      "title": "Complete Visibility Into Your Pipeline",
+      "description": "When your contacts, opportunities, and client history live in one system, nothing slips through the cracks. You can see at a glance who needs follow up, which prospects are warm, and where revenue is sitting in your pipeline.",
+      "details": [
+        "Centralized contact records with full communication and engagement history",
+        "Pipeline stages customized to how your firm actually moves prospects to clients",
+        "Dashboard views that give you and your team instant clarity on business development"
+      ]
+    },
+    {
+      "title": "Seamless Integration With Your Existing Tools",
+      "description": "A CRM only works if it connects to the tools you already use. We configure integrations with your practice management software, email platform, and scheduling tools so data flows between systems without manual entry or duplicate work.",
+      "details": [
+        "Connect with tools like Karbon, QuickBooks, and your email platform",
+        "Automated data syncing that eliminates double entry across systems",
+        "Integration with scheduling and form tools so new leads land directly in your CRM"
+      ]
+    },
+    {
+      "title": "A System Your Team Will Actually Use",
+      "description": "The most common CRM failure is adoption. If it is too complicated or does not match how your team works, it gathers dust. We configure the system around your actual workflows and provide the training your team needs to make it stick.",
+      "details": [
+        "Custom fields, tags, and views designed for how your firm operates",
+        "Simplified interface that removes unnecessary complexity for your team",
+        "Hands on training sessions so everyone knows how to use it from day one"
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Contact Management and Organization",
+      "description": "We set up your CRM with a clean, organized contact structure that makes sense for an accounting practice. This includes custom fields for service type, engagement status, and any other details your firm tracks, plus tagging systems that let you segment and filter your entire database in seconds.",
+      "details": [
+        "Custom contact fields tailored to the data your firm cares about",
+        "Tagging and segmentation for easy filtering by service line, status, or source",
+        "Import and deduplication of your existing contact data during setup"
+      ]
+    },
+    {
+      "title": "Pipeline Configuration",
+      "description": "We build pipeline stages that mirror your actual sales process, from initial inquiry through proposal, engagement letter, and onboarding. Each stage can include automated actions like task creation, email notifications, or status updates so nothing gets missed as opportunities move forward.",
+      "details": [
+        "Custom pipeline stages based on how your firm converts prospects to clients",
+        "Automated actions triggered when deals move between stages",
+        "Multiple pipelines for different service lines if your firm needs them"
+      ]
+    },
+    {
+      "title": "Team Training and Adoption Support",
+      "description": "We do not just configure the system and hand it off. We walk your team through how to use it, answer their questions, and make adjustments based on real feedback. This typically includes live training sessions, written guides, and a follow up check in to make sure adoption is going smoothly.",
+      "details": [
+        "Live training sessions customized to your team's roles and responsibilities",
+        "Quick reference guides for common tasks like adding contacts and updating deals",
+        "Post launch check in to address questions and refine the setup based on actual usage"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which CRM platform do you recommend for accounting firms?",
+      "answer": "It depends on your firm's size, budget, and what you need the CRM to do. We frequently work with GoHighLevel because it combines CRM, email, and automation in one platform, which tends to work well for {audience} who want to keep things consolidated. But we can also configure other platforms if you already have a preference or an existing system you want to optimize."
+    },
+    {
+      "question": "What if we already have a CRM but nobody is using it?",
+      "answer": "That is actually one of the most common situations we walk into. Usually the problem is that the CRM was set up generically and does not match how your team actually works. We audit your current setup, clean up the data, reconfigure it to fit your workflows, and retrain your team. Most firms see a significant improvement in adoption once the system feels like it was built for them."
+    },
+    {
+      "question": "How long does CRM setup typically take?",
+      "answer": "For most firms, we can have a fully configured CRM live within two to four weeks. That includes discovery, data migration, pipeline setup, integrations, and team training. More complex setups with multiple service lines or extensive data migration may take a bit longer, but we scope that out clearly during our initial conversation."
+    }
+  ],
+  "heroSubtitleTemplate": "Your {audience} firm deserves a CRM that actually works the way you do. We handle the setup, configuration, and team training so you get a system that gives you real visibility into your client relationships and business pipeline.",
+  "ctaTitle": "Ready to Get Your CRM Working for You?",
+  "ctaDescription": "Book a free call and we will assess your current client management setup and show you what a properly configured CRM could look like for your practice.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "If you are managing client information across spreadsheets, email threads, and mental notes, you are not alone. Most bookkeepers outgrow their informal systems faster than they realize. A properly set up CRM gives you one place to track every client, prospect, and opportunity so you can stop losing track of follow ups and start managing relationships with real clarity. We handle the full setup so you can focus on your clients."
+    },
+    "tax preparers": {
+      "heroDescription": "For tax preparers, client relationships are seasonal by nature, which makes it even more important to have a system that tracks where every client stands. A well configured CRM helps you manage your pipeline during intake season, track returning clients, and follow up with prospects who were not ready last year. We set up and configure the whole system so it fits how your tax practice actually operates."
+    }
+  }
+}

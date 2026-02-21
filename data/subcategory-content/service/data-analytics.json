@@ -1,0 +1,72 @@
+{
+  "subcategory": "data-analytics",
+  "heroDescription": "Your firm generates a tremendous amount of data every month, but if it is sitting in spreadsheets and disconnected systems, it is not actually helping you make better decisions. Data analytics and reporting services can turn your firm's raw numbers into clear, actionable dashboards that show you what is working, what is not, and where the biggest opportunities are hiding.",
+  "benefits": [
+    {
+      "title": "Visibility Into Firm Performance",
+      "description": "When your key metrics live in a real time dashboard instead of a quarterly spreadsheet, you can spot trends and course correct before small issues become expensive problems. Firms that track their KPIs consistently tend to make more confident decisions about pricing, staffing, and growth."
+    },
+    {
+      "title": "Client Facing Insights That Add Value",
+      "description": "Giving your clients access to their own dashboards can transform the way they perceive your firm. Instead of waiting for monthly reports, clients can see where they stand at any time, which positions you as a strategic partner rather than a backward looking compliance provider."
+    },
+    {
+      "title": "Automated Reporting That Saves Hours",
+      "description": "Manual report generation typically eats up a surprising amount of time each week. Automated reporting pulls data from your existing systems and delivers polished reports on a schedule, so your team can focus on analysis rather than assembly."
+    }
+  ],
+  "features": [
+    {
+      "title": "Custom KPI Dashboards",
+      "description": "We build dashboards tailored to the metrics that actually matter for your firm and your clients. Whether you are tracking revenue per client, turnaround times, or client profitability, the dashboard is designed around your priorities.",
+      "details": [
+        "Firm level dashboards covering revenue, capacity, and engagement health",
+        "Client facing dashboards that display financial KPIs in an easy to understand format",
+        "Role based views so team members see what is relevant to their responsibilities"
+      ]
+    },
+    {
+      "title": "Automated Report Generation",
+      "description": "Reports that used to take hours to compile can be generated automatically on whatever schedule works for you. Data pulls from your practice management, accounting, and CRM systems feed directly into report templates.",
+      "details": [
+        "Scheduled reports delivered weekly, monthly, or on custom intervals",
+        "Data aggregation from multiple sources into a single unified view",
+        "Branded report templates that look professional and are ready to share with clients"
+      ]
+    },
+    {
+      "title": "Business Intelligence and Trend Analysis",
+      "description": "Beyond basic reporting, business intelligence tools can surface patterns you would not catch manually. This might include identifying your most profitable service lines, spotting clients at risk of churning, or forecasting seasonal capacity needs.",
+      "details": [
+        "Trend analysis across revenue, client acquisition, and service mix over time",
+        "Profitability breakdowns by client, service line, or team member",
+        "Predictive insights that help you plan for busy seasons and staffing needs"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What data sources can you connect to our dashboards?",
+      "answer": "Most accounting firms use a combination of practice management, accounting, and CRM tools. We typically connect to platforms like Karbon, GoHighLevel, QuickBooks, Xero, and similar systems. During discovery we map out your tech stack and determine the best way to pull everything together."
+    },
+    {
+      "question": "Do our clients need to be technical to use client facing dashboards?",
+      "answer": "Not at all. The dashboards are designed to be simple and visual. We focus on making the information intuitive so clients can understand their numbers at a glance without needing to interpret complex charts or tables."
+    },
+    {
+      "question": "How long does it typically take to get dashboards up and running?",
+      "answer": "It depends on how many data sources are involved and how complex your reporting needs are. For most firms, we can have an initial dashboard live within a few weeks of starting the project. We usually recommend starting with the metrics that matter most and expanding from there."
+    }
+  ],
+  "heroSubtitleTemplate": "Help {audience} turn raw data into clear, actionable insights that drive smarter decisions for their firms and their clients.",
+  "ctaTitle": "Ready to See What Your Data Is Telling You?",
+  "ctaDescription": "Book a free call and we will walk through your current reporting setup together and show you what a tailored analytics dashboard could look like for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Your bookkeeping firm handles a huge volume of transactions and client data every month, but if all of that information is locked inside disconnected tools, it is not doing much for you strategically. Data analytics services can surface the insights hidden in your day to day work, from client profitability to turnaround times, giving you a clear picture of where your firm stands and where the growth opportunities are."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparation generates a wealth of data each season, from return complexity and turnaround times to revenue per client and seasonal capacity trends. If that data lives in scattered spreadsheets and siloed systems, you are missing the insights that could help you plan better, price smarter, and identify your most valuable clients. Data analytics services bring all of that together into dashboards and reports you can actually use."
+    }
+  }
+}

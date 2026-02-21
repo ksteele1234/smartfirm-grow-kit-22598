@@ -1,0 +1,72 @@
+{
+  "subcategory": "operational-combos",
+  "heroDescription": "Most accounting firms automate one thing at a time, only to find that disconnected tools create new problems. When your workflow system does not talk to your document management, which does not connect to your client communication, you end up with a patchwork that still requires manual effort to hold together. Bundled operational automation brings workflow management, document handling, client communication, and scheduling into a single connected system so nothing falls between the cracks.",
+  "benefits": [
+    {
+      "title": "One Connected System Instead of Many",
+      "description": "When your operational tools work together as an integrated system, information flows automatically between them. A completed workflow step can trigger a client notification and schedule the next meeting without anyone copying data between platforms. That kind of seamless connection is what turns individual tools into a real operational backbone."
+    },
+    {
+      "title": "Significantly Less Manual Coordination",
+      "description": "In most firms, a surprising amount of team time goes to connecting the dots between systems. Updating a spreadsheet here, sending a reminder there, checking a calendar somewhere else. When these functions are bundled and automated together, your team can focus on the work that actually requires their expertise."
+    },
+    {
+      "title": "A Foundation That Grows With You",
+      "description": "Firms that build their operations on connected systems typically find it much easier to scale. Adding new service lines, bringing on team members, or expanding your client base becomes simpler when your core operations already run on an integrated platform rather than a collection of workarounds."
+    }
+  ],
+  "features": [
+    {
+      "title": "Integrated Workflow and Task Management",
+      "description": "Your engagement workflows, internal tasks, and team assignments live in one place. When a task is completed, the next step is triggered automatically, so work moves forward without someone remembering to hand it off.",
+      "details": [
+        "Automated task progression that moves engagements forward as steps are completed",
+        "Team workload visibility so you can balance assignments across your staff",
+        "Built in checklists and review steps tied to each workflow stage"
+      ]
+    },
+    {
+      "title": "Connected Document and Client Communication",
+      "description": "Document requests, reminders, and status updates go out automatically based on where each client is in your workflow. Clients receive clear, timely communication while your team focuses on the actual work instead of chasing paperwork.",
+      "details": [
+        "Automated document requests triggered by workflow milestones using tools like LedgerDocs or your existing platform",
+        "Client status updates sent at key touchpoints without manual effort",
+        "Follow up reminders that escalate appropriately when items are outstanding"
+      ]
+    },
+    {
+      "title": "Scheduling That Fits Your Process",
+      "description": "Appointments and meetings are scheduled in context, tied to the engagement stage and client needs rather than managed as a separate system. Your calendar reflects your workflow, and your workflow reflects your calendar.",
+      "details": [
+        "Meeting invitations triggered automatically when an engagement reaches the appropriate stage",
+        "Client self scheduling that respects your team's availability and workload",
+        "Calendar integration that keeps everything synchronized without double entry"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need to replace all our current tools to get a bundled system?",
+      "answer": "Not necessarily. We start by understanding what you already use and how well those tools can integrate. In many cases, the right combination of automations and integrations can connect your existing tools into a cohesive system. If there are gaps, we will recommend options, but we never push changes that do not clearly make your life easier."
+    },
+    {
+      "question": "What if we only want to automate some of these operational areas right now?",
+      "answer": "That is completely reasonable, and actually how we recommend most firms approach it. We can start with the area causing the most friction, get that running smoothly, and then layer in additional components over time. The bundled approach just means we design with the full picture in mind from the start so everything connects cleanly as you expand."
+    },
+    {
+      "question": "How long does it typically take to get a bundled operational system running?",
+      "answer": "It depends on your firm's complexity and how many operational areas we are connecting. A focused initial implementation covering two or three core areas can often be up and running within a few weeks. From there, we refine and expand based on what your team is experiencing in practice."
+    }
+  ],
+  "heroSubtitleTemplate": "Most {audience} are running operations on disconnected tools that create more work than they save. Here is how bundled automation brings workflow, documents, communication, and scheduling into one system that actually works together.",
+  "ctaTitle": "Ready to Connect Your Operations?",
+  "ctaDescription": "Book a free call and we will map out how your current operational tools are working together, where the gaps are, and what a connected system could look like for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "Bookkeeping firms juggle monthly close workflows, document collection from dozens of clients, ongoing communication about open items, and scheduling review meetings, often across multiple disconnected tools. A bundled operational system connects all of these functions so that completing a reconciliation can automatically trigger a client update, request missing documents, and schedule the next check in without your team managing each step manually."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax practices manage complex seasonal workflows alongside year round document collection, client communication about return status, and appointment scheduling for reviews and consultations. When these functions operate in silos, tax season becomes a coordination nightmare. A bundled operational system ties your preparation workflow directly to document tracking, client updates, and scheduling so your team can focus on returns instead of logistics."
+    }
+  }
+}

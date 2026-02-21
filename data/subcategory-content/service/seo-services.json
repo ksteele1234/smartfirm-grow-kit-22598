@@ -1,0 +1,75 @@
+{
+  "subcategory": "seo-services",
+  "heroDescription": "When prospective clients search for {audience} in their area, where your firm shows up in those results can make the difference between a steady flow of new inquiries and hearing crickets. SEO for accounting firms is not about gaming algorithms. It is about making sure search engines understand what your firm does, where you operate, and why you are a strong choice for the types of clients you want to attract. The firms winning at local search are not necessarily doing anything flashy. They are consistently showing up with relevant content, a well optimized Google Business Profile, and a technically sound website that search engines can easily crawl and index.",
+  "benefits": [
+    {
+      "title": "Show Up When Prospective Clients Search",
+      "description": "The majority of people looking for accounting services start with a local search. If your firm does not appear on the first page of results, most of those potential clients will never know you exist. We help you earn visibility for the search terms that matter most to your practice so you can attract the types of clients you actually want to serve."
+    },
+    {
+      "title": "A Google Business Profile That Works for You",
+      "description": "Your Google Business Profile is often the first thing prospective clients see, even before your website. We optimize every element of your profile, from categories and descriptions to photos and review management, so it accurately represents your firm and encourages potential clients to take the next step. A well maintained profile can significantly influence who shows up in the local map pack results."
+    },
+    {
+      "title": "Organic Traffic That Compounds Over Time",
+      "description": "Unlike paid advertising that stops the moment you stop spending, organic search visibility builds on itself. The content and technical improvements we make today continue to drive traffic for months and years to come. This makes SEO one of the most cost effective long term marketing investments for {audience} who are willing to invest in a sustainable approach to client acquisition."
+    }
+  ],
+  "features": [
+    {
+      "title": "Local SEO Strategy and Execution",
+      "description": "We develop a local SEO strategy based on your firm's specific services, target markets, and competitive landscape. This includes optimizing your Google Business Profile, building consistent local citations, and creating location specific content that helps you rank for searches in your service areas.",
+      "details": [
+        "Google Business Profile optimization including categories, descriptions, and regular posts",
+        "Local citation building and cleanup across directories that matter for your market",
+        "Location specific content strategy targeting the geographic areas you serve"
+      ]
+    },
+    {
+      "title": "Content Strategy and Creation",
+      "description": "We help you create content that answers the questions your prospective clients are actually searching for. This is not about publishing blog posts for the sake of it. It is about strategically creating pages and articles that target specific keywords, demonstrate your expertise, and give search engines more reasons to recommend your firm.",
+      "details": [
+        "Keyword research focused on terms your ideal clients actually use",
+        "Service page optimization with content that converts visitors into inquiries",
+        "Educational content that builds topical authority in your areas of expertise"
+      ]
+    },
+    {
+      "title": "Technical SEO Foundation",
+      "description": "We audit and fix the technical issues that prevent search engines from properly crawling and indexing your website. Many accounting firm websites have structural problems that limit their search visibility regardless of how good their content is. Fixing these foundations makes all your other SEO efforts more effective.",
+      "details": [
+        "Site structure and internal linking optimization for better crawlability",
+        "Page speed improvements that satisfy both search engines and visitors",
+        "Schema markup implementation to help search engines understand your content"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does SEO take to show results?",
+      "answer": "SEO is a long term investment, not an overnight fix. Most {audience} begin to see meaningful improvements in search visibility within three to six months, with results continuing to build over time. Some quick wins, like Google Business Profile optimization, can show impact sooner. We set realistic expectations during discovery based on your current position, competition, and goals so there are no surprises.",
+      "category": "Implementation"
+    },
+    {
+      "question": "How is your SEO approach different from other agencies?",
+      "answer": "We work exclusively with accounting and finance firms, which means we understand the specific keywords your clients search for, the competitive dynamics in your local market, and the compliance considerations that affect your content. We also take a consultative approach. We start by understanding your practice, your ideal client profile, and your growth goals before recommending a strategy. This is not a one size fits all SEO package.",
+      "category": "General"
+    },
+    {
+      "question": "Do we need to write our own blog content?",
+      "answer": "No. We handle content strategy and creation as part of the service. We do typically involve you in reviewing content for accuracy, especially on technical tax or accounting topics, but the writing, optimization, and publishing is handled by our team. Your subject matter expertise combined with our SEO knowledge produces content that ranks well and accurately represents your firm.",
+      "category": "Implementation"
+    }
+  ],
+  "heroSubtitleTemplate": "Done for you SEO services built specifically for {audience}. Local SEO, Google Business Profile optimization, content strategy, and technical SEO managed by a team that works exclusively with accounting firms.",
+  "ctaTitle": "Ready to Get Found by More Prospective Clients?",
+  "ctaDescription": "Book a free call and we will assess your current search visibility and identify the biggest opportunities to improve your rankings in your local market.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "For bookkeepers, local search visibility is often the difference between a full client roster and constantly wondering where the next client will come from. When small business owners search for bookkeeping help in your area, your firm needs to appear in those results. SEO for bookkeepers focuses on the specific terms your prospective clients use, optimizing your Google Business Profile so you appear in local map results, and creating content that demonstrates your expertise with the types of businesses you serve. We take a consultative approach, starting by understanding your ideal client profile and target markets before building a strategy designed to attract the right kind of inquiries consistently."
+    },
+    "tax preparers": {
+      "heroDescription": "For tax preparers, search demand follows a predictable cycle. Searches spike dramatically in the months before filing deadlines and taper off during the rest of the year. The firms that capture the most clients during peak season are the ones who invested in their search visibility months earlier. SEO for tax preparers includes optimizing your Google Business Profile for local visibility, targeting the specific keywords prospective clients use when searching for tax help, and building a content strategy that positions your firm as a trusted resource year round. We also help with off season visibility for advisory and planning services, so your practice is not entirely dependent on seasonal demand."
+    }
+  }
+}

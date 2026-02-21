@@ -1,0 +1,72 @@
+{
+  "subcategory": "operational-automation",
+  "problemStatement": "Most {audience} scale by adding people, not by improving processes. The result is a firm where everything depends on someone remembering to do the next thing, and important tasks fall through the cracks when the team gets busy.",
+  "solutionOverview": "Operational automation means identifying the repetitive, manual tasks that consume your team's time and replacing them with systems that run consistently without supervision. The firms that scale smoothly are the ones that automate the work behind the work.",
+  "hearingSignals": [
+    "Your team spends more time coordinating tasks than actually doing client work",
+    "Important deadlines get missed because no one realized a step was waiting on someone else",
+    "You have tried to document processes but no one follows them consistently"
+  ],
+  "problemSolutionPairs": [
+    {
+      "problem": "Team members constantly interrupt each other to ask about task status or hand off work",
+      "solution": "Automated workflow triggers can move tasks between team members, send status updates, and flag items that are stalled, so everyone knows what is happening without having to ask"
+    },
+    {
+      "problem": "Client communication is inconsistent because each team member handles it differently",
+      "solution": "Templated communication workflows tied to specific engagement milestones ensure every client gets the right message at the right time, regardless of which team member is assigned"
+    }
+  ],
+  "keyBenefits": [
+    {
+      "title": "Reclaim Hours Lost to Coordination",
+      "description": "Internal coordination is necessary but it should not consume a significant portion of your team's day. Automation handles the handoffs, reminders, and status tracking that currently require manual effort.",
+      "points": ["Automatic task assignments when prior steps are completed", "Status updates sent without anyone composing an email", "Escalation alerts when items sit untouched past a threshold"]
+    },
+    {
+      "title": "Consistent Execution Every Time",
+      "description": "When processes live in people's heads, quality depends on who is doing the work and how busy they are. Automated workflows ensure your firm delivers the same standard regardless of workload.",
+      "points": ["Every engagement follows the same proven steps", "Nothing gets skipped during busy periods like tax season", "New hires follow the same process as your most experienced team members"]
+    },
+    {
+      "title": "Visibility Into Your Operations",
+      "description": "You cannot improve what you cannot see. Automated systems create a clear picture of where work stands across the firm, making it easier to spot bottlenecks before they become problems.",
+      "points": ["Real time dashboards showing engagement progress across the firm", "Automated reporting on turnaround times and workload distribution", "Early warning when capacity is approaching limits"]
+    }
+  ],
+  "howItWorks": [
+    { "step": 1, "title": "Process Mapping", "description": "We walk through your current workflows with your team to understand how work actually moves through your firm, not just how you think it does.", "subheading": "Discovery" },
+    { "step": 2, "title": "Automation Design", "description": "We identify the highest impact processes to automate first and design workflows that fit your team's real working patterns using tools like Karbon, GoHighLevel, or your existing systems.", "subheading": "Design" },
+    { "step": 3, "title": "Build and Test", "description": "We configure the automations, integrate them with your current tools, and test thoroughly with your team before going live.", "subheading": "Implementation" },
+    { "step": 4, "title": "Monitor and Refine", "description": "We track how the automations perform in practice and make adjustments based on your team's feedback and the data we see.", "subheading": "Optimization" }
+  ],
+  "results": [
+    { "metric": "Administrative Time", "value": "Significantly Reduced", "description": "Firms typically see a meaningful reduction in time spent on internal coordination and task management" },
+    { "metric": "Process Consistency", "value": "Standardized", "description": "Engagements follow the same steps every time, regardless of who is handling the work" },
+    { "metric": "Capacity", "value": "Expanded", "description": "Teams can typically handle more clients without adding headcount when manual tasks are automated" }
+  ],
+  "faqs": [
+    { "question": "Will automation make our firm feel impersonal?", "answer": "The opposite, actually. When your team is not buried in manual administrative tasks, they have more time for the personal interactions that clients value. Automation handles the behind the scenes work so your people can focus on relationships." },
+    { "question": "What if our processes are not documented yet?", "answer": "That is completely normal and actually a great starting point. Part of our discovery process involves documenting how your firm really operates. Many firms find that exercise valuable on its own, even before we start automating anything." },
+    { "question": "Do we need to switch to new software?", "answer": "Not necessarily. We start by looking at what you already use and finding automation opportunities within your existing tools. If there are gaps, we will recommend options, but we never push a tool change that does not clearly justify itself." }
+  ],
+  "heroSubtitleTemplate": "If your {audience} firm runs on memory, sticky notes, and good intentions, you are not alone. Here is how firms are building operational systems that scale without burning out the team.",
+  "ctaTitle": "Ready to Streamline Your Operations?",
+  "ctaDescription": "Book a free call and we will walk through your current workflows together and identify the biggest opportunities to save your team time.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "hearingSignals": [
+        "Your bookkeeping team spends hours each week chasing clients for documents and following up on open items",
+        "Monthly close processes vary depending on which team member handles the client",
+        "You cannot easily tell how many engagements are on track versus behind schedule at any given moment"
+      ]
+    },
+    "tax preparers": {
+      "hearingSignals": [
+        "During tax season your team drowns in manual status tracking across hundreds of returns",
+        "Client documents arrive in a dozen different ways and there is no consistent process for organizing them",
+        "You spend the first week of every tax season scrambling to set up the same workflows you built last year"
+      ]
+    }
+  }
+}

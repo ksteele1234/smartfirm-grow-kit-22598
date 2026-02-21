@@ -1,0 +1,75 @@
+{
+  "subcategory": "review-automation",
+  "heroDescription": "Online reviews are one of the most powerful trust signals for {audience}, yet most firms leave review generation entirely to chance. Review automation takes the guesswork out of this process by systematically requesting feedback at the right moments, through the right channels, and following up when clients do not respond the first time. The difference between firms with 15 reviews and firms with 150 reviews is rarely about client satisfaction. It is about having a system that asks consistently and makes it easy for clients to follow through.",
+  "benefits": [
+    {
+      "title": "Reviews That Build Themselves",
+      "description": "Instead of relying on individual team members to remember to ask, your review system triggers automatically after key milestones like engagement completion or successful filing. Reviews accumulate steadily over time without any manual effort from your team, building a reputation profile that works as a 24/7 sales tool."
+    },
+    {
+      "title": "Reputation Monitoring You Can Trust",
+      "description": "Know immediately when a new review appears on any platform. Automated monitoring means you catch both positive reviews you can amplify and negative feedback you can address quickly. Most firms discover bad reviews weeks or months after they are posted. With monitoring in place, you can respond within hours."
+    },
+    {
+      "title": "Professional Response Management",
+      "description": "Every review deserves a response, but drafting thoughtful replies takes time your team does not have. We help establish response templates and workflows so every reviewer feels acknowledged. Consistent responses also signal to Google and prospective clients that your firm is attentive and engaged."
+    }
+  ],
+  "features": [
+    {
+      "title": "Automated Review Request System",
+      "description": "We build and configure the technical infrastructure that sends review requests to your clients at optimal moments. Requests go out via email and SMS with direct links that make leaving a review as simple as a few taps on a phone.",
+      "details": [
+        "Trigger based requests tied to engagement milestones in your workflow",
+        "Multi channel delivery through email and SMS for higher response rates",
+        "Smart follow up sequences for clients who do not respond to the initial request"
+      ]
+    },
+    {
+      "title": "Reputation Monitoring Dashboard",
+      "description": "We set up monitoring across the platforms that matter for your firm so you have a single view of your online reputation. This includes Google Business Profile, Yelp, Facebook, and industry specific directories where prospective clients research {audience}.",
+      "details": [
+        "Real time alerts when new reviews appear on any monitored platform",
+        "Sentiment tracking so you can spot trends before they become problems",
+        "Competitive benchmarking to see how your review profile compares to local firms"
+      ]
+    },
+    {
+      "title": "Response Workflow Configuration",
+      "description": "We create response templates and workflows that make it easy for your team to reply to reviews quickly and professionally. This includes guidance on handling negative reviews in a way that demonstrates accountability and professionalism to anyone reading.",
+      "details": [
+        "Customizable response templates matched to your firm's tone and voice",
+        "Escalation workflows for negative reviews that need partner level attention",
+        "Best practice guidance for turning negative feedback into a trust building opportunity"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which review platforms should we focus on?",
+      "answer": "For most {audience}, Google Business Profile is the highest priority because it directly influences local search visibility. Beyond that, it depends on your market and where your prospective clients are researching. We assess your specific situation during discovery and recommend a platform strategy that makes sense for your practice.",
+      "category": "General"
+    },
+    {
+      "question": "What if we get a negative review?",
+      "answer": "Negative reviews happen to every firm eventually. What matters is how you respond. We set up monitoring so you catch negative reviews quickly, and we provide response frameworks that demonstrate professionalism. A thoughtful response to a negative review can actually build more trust than no negative reviews at all, because prospective clients see how you handle difficult situations.",
+      "category": "General"
+    },
+    {
+      "question": "Will clients feel pressured by automated review requests?",
+      "answer": "Not when the system is designed thoughtfully. Requests are timed for moments when client satisfaction is naturally high, written in a friendly and non pushy tone, and easy to ignore if a client prefers not to participate. Most clients are happy to leave a review when the process is convenient. They just need to be asked.",
+      "category": "Implementation"
+    }
+  ],
+  "heroSubtitleTemplate": "Done for you review automation built specifically for {audience}. Automated review requests, reputation monitoring, and response management configured and managed so your online reputation grows consistently without manual effort.",
+  "ctaTitle": "Ready to Build a Stronger Online Reputation?",
+  "ctaDescription": "Book a free call and we will assess your current review profile and show you how an automated system would work for your firm.",
+  "audienceOverrides": {
+    "bookkeepers": {
+      "heroDescription": "For bookkeepers, online reviews are especially important because prospective small business clients often research several options before choosing who to trust with their finances. Yet most bookkeeping practices have a handful of reviews at best, not because clients are unhappy, but because no one has a system to ask consistently. Review automation changes this by sending requests at the right time through channels clients actually use, and following up automatically when they do not respond right away. The result is a steady stream of authentic reviews that helps your practice stand out in your local market."
+    },
+    "tax preparers": {
+      "heroDescription": "Tax preparers have a unique advantage when it comes to reviews. Clients are often relieved and grateful right after their returns are filed, which is the perfect moment to request feedback. But during busy season, asking for reviews is the last thing on your mind. Review automation captures that window of client satisfaction automatically, sending requests at the optimal moment and following up without anyone on your team lifting a finger. By the time next season rolls around, you could have significantly more reviews working for you than you do today."
+    }
+  }
+}
