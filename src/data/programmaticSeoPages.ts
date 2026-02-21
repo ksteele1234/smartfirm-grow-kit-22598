@@ -269,112 +269,112 @@ export const programmaticPages: Record<string, ProgrammaticPageData> = {
     "content": null,
     "templateType": "solution",
     "heroTitle": "How to Get More Reviews for My CPA Firm",
-    "heroSubtitle": "Your CPAs clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
-    "problemStatement": "Most CPAs know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
-    "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+    "heroSubtitle": "Your CPA firm does excellent work, but your Google profile does not reflect it. Most CPA firms want to get more reviews but never build a consistent process to make it happen. Here is how to change that without adding another task to your team's plate.",
+    "problemStatement": "CPA firms rely heavily on reputation and referrals, yet most have a fraction of the online reviews their work warrants. The partners know reviews matter for attracting new clients, but the day to day demands of compliance work, advisory engagements, and managing staff leave no bandwidth to figure out how to get more reviews consistently.",
+    "solutionOverview": "The CPA firms that consistently get more reviews are not spending more time on it. They have automated the entire process so that review requests go out at the right moments, through channels clients actually respond to, without anyone on the team having to think about it. The key is timing the ask to coincide with natural satisfaction points like completing a complex return or delivering advisory insights that save a client real money.",
     "problemSolutionPairs": [
       {
-        "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
-        "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+        "problem": "Your firm delivers strong results across tax, audit, and advisory services, but clients rarely think to leave a review on their own because CPA relationships feel private and professional",
+        "solution": "Automated requests sent after key engagement milestones like filing completion or advisory deliverables normalize the ask and make it feel like a natural part of your client communication"
       },
       {
-        "problem": "Clients agree to leave a review but forget because the process is not easy enough",
-        "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+        "problem": "Partners and managers are too focused on billable work and client deadlines to remember to ask for reviews, and delegating it to admin staff produces inconsistent results",
+        "solution": "A system that triggers automatically based on your workflow eliminates the need for anyone to remember. Reviews come in as a byproduct of serving clients well, not as a separate initiative"
       }
     ],
     "hearingSignals": [
-      "You keep meaning to ask clients for reviews but it never happens consistently",
-      "Your competitors have significantly more Google reviews than you do",
-      "Clients say they will leave a review but rarely follow through"
+      "You have dozens of long term clients who would happily recommend you, but your Google profile has fewer than 15 reviews",
+      "A newer CPA firm in your area has more reviews than you do, and you are seeing them show up higher in local search",
+      "Partners agree that reviews are important but nobody has time to own the process"
     ],
     "keyBenefits": [
       {
-        "title": "Consistent Review Flow",
-        "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+        "title": "A Review Profile That Matches Your Reputation",
+        "description": "Your CPA firm has built its reputation through years of excellent client service. An automated review system helps you get more reviews so your online presence reflects that reputation and prospects researching CPAs in your area see the full picture.",
         "points": [
-          "Reviews come in consistently, not just when you remember to ask",
-          "Recent reviews signal to Google that your firm is active and trusted",
-          "Volume builds naturally over time without manual effort"
+          "Close the gap between your actual reputation and your online presence",
+          "Build credibility with business owners and executives who research firms before making contact",
+          "Stand out from competitors who may do less impressive work but have more reviews"
         ]
       },
       {
-        "title": "Higher Visibility in Local Search",
-        "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for CPAs in your area.",
+        "title": "Stronger Positioning in Local Search",
+        "description": "When a business owner or individual searches for a CPA in your area, Google weighs review quantity, quality, and recency heavily. A steady flow of 5 star reviews can significantly improve where your firm appears in those searches.",
         "points": [
-          "More reviews typically correlate with higher local search rankings",
-          "Recent reviews carry more weight than old ones",
-          "Review velocity signals an active, client focused practice"
+          "More recent reviews carry more weight with Google's local algorithm",
+          "Higher review counts typically correlate with better map pack visibility",
+          "Consistent review velocity signals an active, thriving practice"
         ]
       },
       {
-        "title": "Authentic Social Proof",
-        "description": "Prospects researching CPAs read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+        "title": "Referral Amplification",
+        "description": "Many of your best clients come from referrals. When a referred prospect looks you up online, a strong review profile reinforces the recommendation and makes them more likely to reach out. Reviews turn warm referrals into booked consultations.",
         "points": [
-          "Prospective clients often read 5 to 10 reviews before reaching out",
-          "Authentic reviews from real clients are more persuasive than any marketing copy",
-          "Reviews on multiple platforms expand your reach"
+          "Referred prospects who see strong reviews are more likely to follow through",
+          "Reviews from recognizable businesses or professionals carry extra weight",
+          "A strong online presence makes it easier for existing clients to refer you confidently"
         ]
       }
     ],
     "howItWorks": [
       {
         "step": 1,
-        "title": "Assessment",
-        "description": "We review your current online presence, identify which platforms matter most for CPAs in your market, and assess your existing review profile.",
+        "title": "Review Profile Audit",
+        "description": "We assess your current Google profile, review volume, and competitor positioning to identify where you stand and the biggest opportunities.",
         "subheading": "Audit"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+        "title": "Workflow Integration",
+        "description": "We design review request triggers tied to your engagement lifecycle, whether that is tax filing completion, advisory project delivery, or annual planning meetings.",
         "subheading": "Design"
       },
       {
         "step": 3,
-        "title": "Launch and Monitor",
-        "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+        "title": "Launch Across Channels",
+        "description": "We configure email and SMS review requests with one click links, test the experience, and launch with a small client segment before scaling.",
         "subheading": "Launch"
       },
       {
         "step": 4,
-        "title": "Ongoing Optimization",
-        "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+        "title": "Monitor and Refine",
+        "description": "We track response rates by service type and client segment, then refine timing and messaging to maximize your review flow.",
         "subheading": "Optimize"
       }
     ],
     "results": [
       {
-        "metric": "Review Consistency",
-        "value": "Steady Growth",
-        "description": "Firms typically see a consistent increase in review volume within the first few months"
+        "metric": "Review Volume",
+        "value": "Consistent Growth",
+        "description": "CPA firms typically see steady new reviews each month without anyone on the team manually asking"
       },
       {
-        "metric": "Team Time Spent",
-        "value": "Near Zero",
-        "description": "Your team does not need to remember to ask or follow up manually"
+        "metric": "Partner Involvement",
+        "value": "Minimal",
+        "description": "Partners and managers stay focused on client work while reviews accumulate automatically"
       },
       {
-        "metric": "Client Experience",
-        "value": "Seamless",
-        "description": "Clients find the process easy and non intrusive"
+        "metric": "Local Visibility",
+        "value": "Improved",
+        "description": "A growing review profile typically correlates with stronger local search positioning over time"
       }
     ],
     "faqs": [
       {
-        "question": "Which review platforms should we focus on?",
-        "answer": "It depends on where your prospective clients search. For most CPAs, Google Business Profile is the priority, but we assess your specific market during discovery."
+        "question": "Will automated review requests feel unprofessional for a CPA firm?",
+        "answer": "Not when done well. We design messages that match the professional tone your clients expect. The request feels like a natural extension of your client communication, not a marketing blast. Many CPA clients actually appreciate being asked, making it straightforward to get more reviews without anyone on your team feeling awkward about it."
       },
       {
-        "question": "Will clients feel pressured?",
-        "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer."
+        "question": "Should we focus on Google or other platforms?",
+        "answer": "For most CPA firms, Google Business Profile is the highest priority because it directly impacts local search visibility. Depending on your market, we may also recommend industry specific platforms. We assess your competitive landscape during discovery and recommend the right mix."
       },
       {
-        "question": "What if we already have some reviews?",
-        "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts."
+        "question": "What about clients who might leave negative feedback?",
+        "answer": "The system includes sentiment routing that directs dissatisfied clients to a private feedback channel instead of a public review site. This gives you the opportunity to address concerns before they become public. In practice, CPA firms with strong client relationships see overwhelmingly positive reviews."
       }
     ],
-    "ctaTitle": "Ready to Build Your Review Engine?",
-    "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice."
+    "ctaTitle": "Ready to Build a Review Profile That Reflects Your Work?",
+    "ctaDescription": "Book a free call and we will audit your current review presence and show you how an automated system would work for your CPA firm."
   },
   "how-do-i-get-clients-to-leave-reviews-for-my-accounting-firm": {
     "id": "how-do-i-get-clients-to-leave-reviews-for-my-accounting-firm",
@@ -385,112 +385,112 @@ export const programmaticPages: Record<string, ProgrammaticPageData> = {
     "content": null,
     "templateType": "solution",
     "heroTitle": "How Do I Get Clients to Leave Reviews for My Accounting Firm",
-    "heroSubtitle": "Your Accounting Firms clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
-    "problemStatement": "Most Accounting Firms know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
-    "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+    "heroSubtitle": "You have tried to get clients to leave reviews before. They said yes, meant it, and then never followed through. The problem is not willingness. It is friction. Here is how accounting firms are solving the follow through gap.",
+    "problemStatement": "Most accounting firm owners have had this experience: you finish a great engagement, the client is thrilled, you mention leaving a review, they agree enthusiastically, and nothing happens. The real question is how to get clients to leave reviews when they have every intention but no immediate reason to act, because life gets busy and leaving a review is never urgent.",
+    "solutionOverview": "The firms that consistently get clients to leave reviews have removed every unnecessary step from the process. Instead of hoping clients remember, they send a direct link at exactly the right moment through a channel the client checks naturally. The combination of perfect timing and zero friction turns a casual agreement into an actual review.",
     "problemSolutionPairs": [
       {
-        "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
-        "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+        "problem": "When you ask in person or by email, clients genuinely intend to leave a review but the moment passes and they forget because there is no immediate prompt to act",
+        "solution": "Automated SMS and email with a direct one click link delivered within hours of a positive interaction catches clients while the experience is still fresh and reduces the process to a single tap"
       },
       {
-        "problem": "Clients agree to leave a review but forget because the process is not easy enough",
-        "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+        "problem": "Even motivated clients abandon the process when they have to search for your business on Google, navigate to the review section, and figure out what to write",
+        "solution": "A direct link that opens your Google review form pre loaded with a star rating reduces the effort to roughly 30 seconds, which is the difference between intention and action"
       }
     ],
     "hearingSignals": [
-      "You keep meaning to ask clients for reviews but it never happens consistently",
-      "Your competitors have significantly more Google reviews than you do",
-      "Clients say they will leave a review but rarely follow through"
+      "Clients tell you they will leave a review but fewer than 1 in 10 actually do",
+      "You have tried asking in person, by email, and even with follow up reminders, but the conversion rate is still low",
+      "You know your clients are satisfied because they keep coming back, but your review count does not reflect that loyalty"
     ],
     "keyBenefits": [
       {
-        "title": "Consistent Review Flow",
-        "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+        "title": "Turn Good Intentions Into Actual Reviews",
+        "description": "Your clients want to help. They are not ignoring your request, they are just busy. By removing friction and catching them at the right moment, you get clients to leave reviews using the goodwill that already exists, creating social proof that works for your firm 24/7.",
         "points": [
-          "Reviews come in consistently, not just when you remember to ask",
-          "Recent reviews signal to Google that your firm is active and trusted",
-          "Volume builds naturally over time without manual effort"
+          "A direct link eliminates the search and navigate steps that cause drop off",
+          "Timing the request to follow a positive milestone maximizes response rates",
+          "SMS requests typically get higher open and response rates than email alone"
         ]
       },
       {
-        "title": "Higher Visibility in Local Search",
-        "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for Accounting Firms in your area.",
+        "title": "Stop Relying on Memory",
+        "description": "When review requests depend on your team remembering to ask, they happen inconsistently at best. An automated system makes review generation a reliable process rather than an occasional afterthought.",
         "points": [
-          "More reviews typically correlate with higher local search rankings",
-          "Recent reviews carry more weight than old ones",
-          "Review velocity signals an active, client focused practice"
+          "Automated triggers mean every qualifying client gets asked at the right time",
+          "Your team focuses on serving clients, not managing a review spreadsheet",
+          "Consistency compounds, a few reviews per week adds up to a significant profile over months"
         ]
       },
       {
-        "title": "Authentic Social Proof",
-        "description": "Prospects researching Accounting Firms read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+        "title": "Build Momentum That Feeds Itself",
+        "description": "Once you have a critical mass of reviews, new prospects find you more easily, which creates more clients, which creates more reviews. Getting past the initial hurdle of low review count is the hardest part, and automation accelerates it.",
         "points": [
-          "Prospective clients often read 5 to 10 reviews before reaching out",
-          "Authentic reviews from real clients are more persuasive than any marketing copy",
-          "Reviews on multiple platforms expand your reach"
+          "Each review makes your firm more visible to the next prospect",
+          "A strong review profile reinforces referrals and word of mouth",
+          "Review momentum is easier to maintain than it is to build from scratch"
         ]
       }
     ],
     "howItWorks": [
       {
         "step": 1,
-        "title": "Assessment",
-        "description": "We review your current online presence, identify which platforms matter most for Accounting Firms in your market, and assess your existing review profile.",
+        "title": "Understand Your Current Gap",
+        "description": "We look at how many clients you serve versus how many reviews you have to quantify the opportunity. Most accounting firms are converting less than 5 percent of happy clients into reviewers.",
         "subheading": "Audit"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+        "title": "Design the Friction Free Flow",
+        "description": "We build a review request sequence with direct links, clear messaging, and delivery timing based on your specific client touchpoints.",
         "subheading": "Design"
       },
       {
         "step": 3,
-        "title": "Launch and Monitor",
-        "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+        "title": "Test and Scale",
+        "description": "We start with a segment of your client base, measure response rates, and refine the approach before rolling it out to everyone.",
         "subheading": "Launch"
       },
       {
         "step": 4,
-        "title": "Ongoing Optimization",
-        "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+        "title": "Optimize Over Time",
+        "description": "We track which channels, messages, and timing produce the best results and continuously improve the system.",
         "subheading": "Optimize"
       }
     ],
     "results": [
       {
-        "metric": "Review Consistency",
-        "value": "Steady Growth",
-        "description": "Firms typically see a consistent increase in review volume within the first few months"
+        "metric": "Follow Through Rate",
+        "value": "Significantly Higher",
+        "description": "Reducing friction typically converts far more of the goodwill you are already generating"
       },
       {
-        "metric": "Team Time Spent",
-        "value": "Near Zero",
-        "description": "Your team does not need to remember to ask or follow up manually"
+        "metric": "Time Per Review",
+        "value": "Under 30 Seconds",
+        "description": "Direct links reduce the client effort to a single click and a few words"
       },
       {
-        "metric": "Client Experience",
-        "value": "Seamless",
-        "description": "Clients find the process easy and non intrusive"
+        "metric": "Team Effort",
+        "value": "Fully Automated",
+        "description": "No one on your team needs to remember to ask or follow up"
       }
     ],
     "faqs": [
       {
-        "question": "Which review platforms should we focus on?",
-        "answer": "It depends on where your prospective clients search. For most Accounting Firms, Google Business Profile is the priority, but we assess your specific market during discovery."
+        "question": "Why is it so hard to get clients to leave reviews even when they agree to?",
+        "answer": "It is almost never about unwillingness. Clients get busy, the moment passes, and leaving a review is never urgent. The solution is to reduce friction to near zero and catch them at the exact moment they are feeling positive about your work. Direct links and smart timing solve this without being pushy."
       },
       {
-        "question": "Will clients feel pressured?",
-        "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer."
+        "question": "Is texting clients about reviews too informal for an accounting firm?",
+        "answer": "Not when done thoughtfully. A brief, professional SMS with a direct link after a positive interaction actually feels more personal and less like marketing than a formal email. We design the messaging to match your firm's communication style so it feels like a natural touchpoint, not an ad."
       },
       {
-        "question": "What if we already have some reviews?",
-        "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts."
+        "question": "How many review requests should we send before it becomes annoying?",
+        "answer": "We typically send one primary request and one follow up. If the client has not responded after that, we stop. The goal is to make it easy for willing clients to act, not to pressure anyone. Most clients appreciate the simplicity of a direct link and respond on the first touch."
       }
     ],
-    "ctaTitle": "Ready to Build Your Review Engine?",
-    "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice."
+    "ctaTitle": "Ready to Turn Client Goodwill Into Reviews?",
+    "ctaDescription": "Book a free call and we will show you how to close the gap between happy clients and actual reviews for your accounting firm."
   },
   "how-to-ask-clients-for-reviews-as-a-tax-preparer": {
     "id": "how-to-ask-clients-for-reviews-as-a-tax-preparer",
@@ -501,112 +501,112 @@ export const programmaticPages: Record<string, ProgrammaticPageData> = {
     "content": null,
     "templateType": "solution",
     "heroTitle": "How to Ask Clients for Reviews as a Tax Preparer",
-    "heroSubtitle": "Your Tax Preparers clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
-    "problemStatement": "Most Tax Preparers know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
-    "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+    "heroSubtitle": "You do great work during tax season, but figuring out how to ask clients for reviews feels awkward when the relationship is built around getting their taxes done, not marketing yourself. Here is how tax preparers are building strong review profiles without the uncomfortable ask.",
+    "problemStatement": "Tax preparers face a unique review challenge. Your busiest months are spent heads down in returns, and by the time filing season ends, the window to ask clients for reviews has already closed. The clients who were thrilled in April have moved on by June, and the relationship often feels too transactional to bring up reviews.",
+    "solutionOverview": "The tax preparers who successfully ask clients for reviews have figured out one critical thing: the best time to ask is within 48 hours of a client receiving their refund or confirmation that their return was accepted. That is the peak satisfaction moment. An automated message at that point feels like a natural follow up, not an awkward sales pitch. The ask becomes effortless when the timing is right and the client does not have to do more than click a link.",
     "problemSolutionPairs": [
       {
-        "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
-        "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+        "problem": "During tax season you are too busy preparing returns to think about marketing, and after season ends the client satisfaction window has already closed",
+        "solution": "Automated review requests triggered by filing confirmation or refund notification catch clients at the exact moment they feel most grateful, without requiring any action from your team during the busiest weeks"
       },
       {
-        "problem": "Clients agree to leave a review but forget because the process is not easy enough",
-        "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+        "problem": "Asking for reviews face to face feels uncomfortable because the client relationship is built on trust and professionalism, not on marketing",
+        "solution": "A well timed email or text that says something like 'Glad we could get this done for you, if you have a moment we would really appreciate a review' removes the personal awkwardness while still feeling warm and genuine"
       }
     ],
     "hearingSignals": [
-      "Tax season ends and you realize you forgot to ask clients for reviews again",
-      "Your firm handles hundreds of returns but your Google profile has under 20 reviews",
-      "Clients are satisfied at filing time but the window to ask for reviews closes quickly"
+      "You prepare hundreds of returns each season but your Google profile has fewer than 20 reviews",
+      "You feel uncomfortable asking clients for reviews in person because it feels like it undermines the professional relationship",
+      "By the time you think about asking for reviews, tax season is over and the moment has passed"
     ],
     "keyBenefits": [
       {
-        "title": "Consistent Review Flow",
-        "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+        "title": "Capture the Post Filing Satisfaction Window",
+        "description": "There is a narrow window after a client's return is accepted or their refund arrives when satisfaction peaks. An automated system hits that window every time without you needing to track filing statuses or set reminders.",
         "points": [
-          "Reviews come in consistently, not just when you remember to ask",
-          "Recent reviews signal to Google that your firm is active and trusted",
-          "Volume builds naturally over time without manual effort"
+          "Requests go out within 48 hours of the positive event, not weeks later",
+          "Clients are most willing to leave a review when the experience is fresh",
+          "Automation ensures you never miss the window, even during your busiest weeks"
         ]
       },
       {
-        "title": "Higher Visibility in Local Search",
-        "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for Tax Preparers in your area.",
+        "title": "Build a Year Round Reputation From Seasonal Work",
+        "description": "Even though most of your client work happens during tax season, a strong review profile works for you all 12 months. Prospects searching for a tax preparer in September or October will find your reviews from the previous season and feel confident reaching out.",
         "points": [
-          "More reviews typically correlate with higher local search rankings",
-          "Recent reviews carry more weight than old ones",
-          "Review velocity signals an active, client focused practice"
+          "Reviews from tax season attract clients researching preparers months in advance",
+          "A strong profile differentiates you from competitors when prospects are comparing options",
+          "Each season's reviews compound on the previous year, building long term credibility"
         ]
       },
       {
-        "title": "Authentic Social Proof",
-        "description": "Prospects researching Tax Preparers read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+        "title": "Remove the Awkwardness Entirely",
+        "description": "Many tax preparers never ask clients for reviews because it feels uncomfortable or salesy. When the request comes from an automated system with natural, professional language, it removes the personal discomfort while still getting results.",
         "points": [
-          "Prospective clients often read 5 to 10 reviews before reaching out",
-          "Authentic reviews from real clients are more persuasive than any marketing copy",
-          "Reviews on multiple platforms expand your reach"
+          "Automated messages feel like helpful follow ups, not marketing pitches",
+          "You never have to bring up reviews in conversation with a client",
+          "Clients appreciate the simplicity and most do not find it intrusive"
         ]
       }
     ],
     "howItWorks": [
       {
         "step": 1,
-        "title": "Assessment",
-        "description": "We review your current online presence, identify which platforms matter most for Tax Preparers in your market, and assess your existing review profile.",
+        "title": "Season Prep Audit",
+        "description": "Before your next busy season, we review your current online presence and design a review system that integrates with your filing workflow.",
         "subheading": "Audit"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+        "title": "Trigger Point Design",
+        "description": "We identify the best moments to request reviews based on your process, whether that is e-file acceptance, refund deposit notification, or completion of advisory work.",
         "subheading": "Design"
       },
       {
         "step": 3,
-        "title": "Launch and Monitor",
-        "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+        "title": "Automated Launch",
+        "description": "We configure and test the system so it runs hands free during your busiest months when you cannot afford to think about marketing.",
         "subheading": "Launch"
       },
       {
         "step": 4,
-        "title": "Ongoing Optimization",
-        "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+        "title": "Post Season Review",
+        "description": "After season ends, we analyze what worked, refine messaging and timing, and prepare the system for the next year.",
         "subheading": "Optimize"
       }
     ],
     "results": [
       {
-        "metric": "Review Consistency",
-        "value": "Steady Growth",
-        "description": "Firms typically see a consistent increase in review volume within the first few months"
+        "metric": "Seasonal Review Capture",
+        "value": "Automated",
+        "description": "Review requests go out during your busiest months without any manual effort"
       },
       {
-        "metric": "Team Time Spent",
-        "value": "Near Zero",
-        "description": "Your team does not need to remember to ask or follow up manually"
+        "metric": "Timing Precision",
+        "value": "Within 48 Hours",
+        "description": "Requests arrive when client satisfaction peaks, not weeks or months later"
       },
       {
-        "metric": "Client Experience",
-        "value": "Seamless",
-        "description": "Clients find the process easy and non intrusive"
+        "metric": "Year Round Impact",
+        "value": "12 Month Visibility",
+        "description": "Reviews earned during season attract prospects all year long"
       }
     ],
     "faqs": [
       {
-        "question": "Which review platforms should we focus on?",
-        "answer": "It depends on where your prospective clients search. For most Tax Preparers, Google Business Profile is the priority, but we assess your specific market during discovery."
+        "question": "When is the best time to ask clients for reviews as a tax preparer?",
+        "answer": "Within 48 hours of their return being accepted or their refund hitting their account. That is when satisfaction peaks. Asking during the appointment itself can feel awkward, and waiting until after season means the moment has passed. Automated timing solves this perfectly."
       },
       {
-        "question": "Will clients feel pressured?",
-        "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer."
+        "question": "I only see clients once a year. Is that enough to build a review profile?",
+        "answer": "Absolutely. If you prepare 200 returns per season and even 15 to 20 percent leave a review, that is 30 to 40 new reviews every year. Over 2 to 3 seasons, you build a very strong profile. Consistency matters more than frequency."
       },
       {
-        "question": "What if we already have some reviews?",
-        "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts."
+        "question": "Should I ask all clients or just the ones I know are happy?",
+        "answer": "We recommend asking all clients but using sentiment routing. The system can include a brief satisfaction check before directing to Google. Clients who indicate a concern get routed to a private feedback channel instead. This protects your public rating while still gathering useful feedback."
       }
     ],
-    "ctaTitle": "Ready to Build Your Review Engine?",
-    "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice."
+    "ctaTitle": "Ready to Build Your Review Profile Before Next Season?",
+    "ctaDescription": "Book a free call and we will design a review system that runs on autopilot during your busiest months."
   },
   "how-to-increase-online-reviews-for-bookkeepers": {
     "id": "how-to-increase-online-reviews-for-bookkeepers",
@@ -617,112 +617,112 @@ export const programmaticPages: Record<string, ProgrammaticPageData> = {
     "content": null,
     "templateType": "solution",
     "heroTitle": "How to Increase Online Reviews for Bookkeepers",
-    "heroSubtitle": "Your Bookkeepers clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
-    "problemStatement": "Most Bookkeepers know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
-    "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+    "heroSubtitle": "As a bookkeeper, you see your clients every month. That recurring relationship is your biggest advantage for building online reviews, but most bookkeepers are not leveraging it to increase online reviews. Here is how to turn monthly touchpoints into a steady stream of Google reviews.",
+    "problemStatement": "Bookkeepers have a unique advantage when it comes to reviews: ongoing monthly relationships with their clients. Unlike accountants or tax preparers who may only interact with clients a few times a year, bookkeepers are in regular contact. Yet most bookkeeping practices struggle to increase online reviews because asking feels awkward in a relationship that is primarily about getting work done, not about marketing.",
+    "solutionOverview": "The bookkeepers who consistently increase online reviews have found the right moments within their monthly workflow to trigger review requests. After delivering a clean monthly close, when the client sees organized financials and knows everything is in order, that is a natural satisfaction point. An automated message at that moment turns routine good work into visible social proof without disrupting the working relationship.",
     "problemSolutionPairs": [
       {
-        "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
-        "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+        "problem": "Your monthly client interactions are focused on reconciliations, reports, and follow up questions, and bringing up reviews feels out of place in that working context",
+        "solution": "An automated review request sent after delivering the monthly close package feels like a natural follow up rather than an interruption, because the client just received tangible value from your work"
       },
       {
-        "problem": "Clients agree to leave a review but forget because the process is not easy enough",
-        "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+        "problem": "You serve many clients each month and it is impossible to personally remember to ask each one at the right moment",
+        "solution": "Automated triggers tied to your monthly delivery schedule ensure every client receives a review request at their highest satisfaction point without you tracking anything manually"
       }
     ],
     "hearingSignals": [
-      "Your bookkeeping clients are happy but you have very few online reviews to show for it",
-      "Small business owners in your area are choosing competitors with stronger review profiles",
-      "You do not have a consistent way to request feedback after monthly closes"
+      "You have 20 or more recurring clients but fewer than 10 Google reviews",
+      "Small business owners in your area choose other bookkeepers who appear more established online",
+      "You have never asked a client for a review because it does not feel like a natural part of your monthly interactions"
     ],
     "keyBenefits": [
       {
-        "title": "Consistent Review Flow",
-        "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+        "title": "Use Your Recurring Relationships as an Advantage",
+        "description": "Most service businesses get one shot to ask for a review. As a bookkeeper, you have a satisfaction touchpoint every single month. An automated system helps you increase online reviews by turning that recurring relationship into a compounding advantage that single engagement businesses cannot match.",
         "points": [
-          "Reviews come in consistently, not just when you remember to ask",
-          "Recent reviews signal to Google that your firm is active and trusted",
-          "Volume builds naturally over time without manual effort"
+          "Monthly closes create natural, repeatable moments to request reviews",
+          "Clients who have worked with you for months give more detailed, authentic reviews",
+          "Over time you can tastefully cycle through your client base so no one gets asked too frequently"
         ]
       },
       {
-        "title": "Higher Visibility in Local Search",
-        "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for Bookkeepers in your area.",
+        "title": "Stand Out to Local Small Business Owners",
+        "description": "When a small business owner searches for a bookkeeper in your area, they compare Google profiles. A bookkeeping practice with 40 or 50 reviews looks significantly more established and trustworthy than one with 5. For a local service business, this difference directly impacts how many inquiries you receive.",
         "points": [
-          "More reviews typically correlate with higher local search rankings",
-          "Recent reviews carry more weight than old ones",
-          "Review velocity signals an active, client focused practice"
+          "Small business owners rely heavily on reviews when choosing financial service providers",
+          "A strong review count signals stability and client satisfaction",
+          "Local search visibility improves as review volume and recency grow"
         ]
       },
       {
-        "title": "Authentic Social Proof",
-        "description": "Prospects researching Bookkeepers read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+        "title": "Build Trust Before the First Conversation",
+        "description": "Bookkeeping requires handing over sensitive financial information. Potential clients need to trust you before they will share bank logins and financial records. A strong review profile from other small business owners builds that trust before you ever speak.",
         "points": [
-          "Prospective clients often read 5 to 10 reviews before reaching out",
-          "Authentic reviews from real clients are more persuasive than any marketing copy",
-          "Reviews on multiple platforms expand your reach"
+          "Reviews from other small business owners create relatable social proof",
+          "Specific mentions of reliability, accuracy, and communication address the trust concerns bookkeeping prospects have",
+          "A professional online presence signals that you take your practice seriously"
         ]
       }
     ],
     "howItWorks": [
       {
         "step": 1,
-        "title": "Assessment",
-        "description": "We review your current online presence, identify which platforms matter most for Bookkeepers in your market, and assess your existing review profile.",
+        "title": "Practice Assessment",
+        "description": "We review your client base size, monthly workflow, and current online presence to design a review approach that fits how you operate.",
         "subheading": "Audit"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+        "title": "Monthly Trigger Design",
+        "description": "We create review request triggers tied to your monthly close delivery, whether that is when reports are sent, when reconciliations are complete, or when you deliver a financial summary.",
         "subheading": "Design"
       },
       {
         "step": 3,
-        "title": "Launch and Monitor",
-        "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+        "title": "Gradual Rollout",
+        "description": "We start with a small group of long term clients who know you well, then expand to your full client base once the messaging and timing are dialed in.",
         "subheading": "Launch"
       },
       {
         "step": 4,
-        "title": "Ongoing Optimization",
-        "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+        "title": "Ongoing Cadence Management",
+        "description": "We manage the frequency so clients are not asked every single month, but your review count grows steadily across your entire client base.",
         "subheading": "Optimize"
       }
     ],
     "results": [
       {
-        "metric": "Review Consistency",
-        "value": "Steady Growth",
-        "description": "Firms typically see a consistent increase in review volume within the first few months"
+        "metric": "Monthly Review Flow",
+        "value": "Consistent",
+        "description": "New reviews come in regularly by staggering requests across your client base"
       },
       {
-        "metric": "Team Time Spent",
-        "value": "Near Zero",
-        "description": "Your team does not need to remember to ask or follow up manually"
+        "metric": "Client Relationship Impact",
+        "value": "Positive",
+        "description": "Clients appreciate the easy process and it often strengthens the relationship"
       },
       {
-        "metric": "Client Experience",
-        "value": "Seamless",
-        "description": "Clients find the process easy and non intrusive"
+        "metric": "Local Search Presence",
+        "value": "Growing",
+        "description": "A steadily increasing review profile improves visibility to small business owners searching in your area"
       }
     ],
     "faqs": [
       {
-        "question": "Which review platforms should we focus on?",
-        "answer": "It depends on where your prospective clients search. For most Bookkeepers, Google Business Profile is the priority, but we assess your specific market during discovery."
+        "question": "How often should I ask recurring clients for reviews?",
+        "answer": "Not every month. We typically request a review from each client once or twice per year, but we stagger requests across your client base so new reviews come in every month. This keeps the flow steady without any individual client feeling over asked."
       },
       {
-        "question": "Will clients feel pressured?",
-        "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer."
+        "question": "My clients are small business owners who are always busy. Will they actually respond?",
+        "answer": "Small business owners are busy, which is exactly why the one click direct link approach works. When the process takes 30 seconds and arrives right after they received value from your work, response rates are typically much higher than you would expect. Many bookkeepers are surprised at how willing their clients are once the process is easy."
       },
       {
-        "question": "What if we already have some reviews?",
-        "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts."
+        "question": "I only have 15 to 20 clients. Is that enough to increase online reviews meaningfully?",
+        "answer": "Absolutely. If even half your clients leave a review over the next 6 to 12 months, that is 8 to 10 reviews, which is a strong foundation for a local bookkeeping practice. Combined with any new clients you onboard, your review count grows steadily. Start with what you have."
       }
     ],
-    "ctaTitle": "Ready to Build Your Review Engine?",
-    "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice."
+    "ctaTitle": "Ready to Turn Monthly Clients Into a Growing Review Profile?",
+    "ctaDescription": "Book a free call and we will show you how to build a review system around your monthly bookkeeping workflow."
   },
   "how-to-generate-5-star-reviews-for-my-accounting-practice": {
     "id": "how-to-generate-5-star-reviews-for-my-accounting-practice",
@@ -733,112 +733,112 @@ export const programmaticPages: Record<string, ProgrammaticPageData> = {
     "content": null,
     "templateType": "solution",
     "heroTitle": "How to Generate 5 Star Reviews for My Accounting Practice",
-    "heroSubtitle": "Your Accounting Firms clients are happy with your work. The challenge is turning that satisfaction into consistent online reviews that attract new business. Here is how firms are solving this.",
-    "problemStatement": "Most Accounting Firms know online reviews influence which firms prospects choose, but asking clients for reviews feels awkward, gets forgotten during busy periods, or produces inconsistent results when left to individual team members.",
-    "solutionOverview": "The firms getting consistent 5 star reviews are not asking more often. They are using automated systems that request reviews at the right moment, through the right channel, without anyone on the team having to remember. The result is a steady stream of authentic reviews that builds social proof on autopilot.",
+    "heroSubtitle": "Getting reviews is one thing. Getting consistently 5 star reviews is another. It starts with understanding what drives a client to not just leave a review, but to leave a glowing one. Here is how accounting practices generate 5 star reviews that attract the right clients.",
+    "problemStatement": "Most accounting practice owners want to generate 5 star reviews, not just accumulate a high count of generic ratings. A practice with 50 generic 3 and 4 star reviews is less compelling than one with 30 detailed 5 star reviews that speak to specific strengths. The challenge is creating conditions where clients are motivated to leave thoughtful, enthusiastic feedback rather than perfunctory ratings.",
+    "solutionOverview": "The practices that generate 5 star reviews consistently focus on three things: delivering experiences worth raving about, asking at the moment when enthusiasm is highest, and making the review process so simple that the client's momentum carries them through. The practices getting the best reviews are not just automating the ask. They are engineering the entire client experience to create natural review worthy moments.",
     "problemSolutionPairs": [
       {
-        "problem": "Remembering to ask after every engagement is unrealistic, especially during busy season",
-        "solution": "Automated review requests trigger after key milestones like tax filing completion or onboarding finish, timed for when client satisfaction is highest"
+        "problem": "When clients leave reviews unprompted, they often default to brief, generic comments like 'good service' that do not help your practice stand out from competitors",
+        "solution": "Timing the review request to follow a specific positive moment, like saving a client money, resolving a complex issue, or delivering a particularly clean financial picture, prompts more detailed and enthusiastic feedback because the experience is vivid"
       },
       {
-        "problem": "Clients agree to leave a review but forget because the process is not easy enough",
-        "solution": "One click review links sent via email and SMS take clients directly to your Google profile with minimal friction"
+        "problem": "Some clients leave 4 star reviews not because anything was wrong, but because they reserve 5 stars for extraordinary experiences and view accounting as routine",
+        "solution": "Creating small moments of surprise value, such as proactive tax planning suggestions, early deadline reminders, or a quick call to flag an opportunity, shifts the client's perception from routine service to exceptional care"
       }
     ],
     "hearingSignals": [
-      "You keep meaning to ask clients for reviews but it never happens consistently",
-      "Your competitors have significantly more Google reviews than you do",
-      "Clients say they will leave a review but rarely follow through"
+      "You have reviews but many are generic 4 star ratings that do not really differentiate your practice from competitors",
+      "You want reviews that mention specific strengths like responsiveness, proactive advice, or expertise in your niche",
+      "You have seen competitors with glowing, detailed reviews and wonder how they consistently get that quality of feedback"
     ],
     "keyBenefits": [
       {
-        "title": "Consistent Review Flow",
-        "description": "Instead of sporadic reviews that come in waves, your firm builds a steady cadence of authentic client feedback that search engines and prospects notice.",
+        "title": "Reviews That Actually Differentiate Your Practice",
+        "description": "A wall of 5 star reviews that mention specific qualities like responsiveness, expertise, and proactive communication tells prospective clients exactly why your practice is different. Generic reviews blend in. Specific, enthusiastic reviews stand out and attract clients who value what you do best.",
         "points": [
-          "Reviews come in consistently, not just when you remember to ask",
-          "Recent reviews signal to Google that your firm is active and trusted",
-          "Volume builds naturally over time without manual effort"
+          "Detailed reviews highlight the specific strengths that attract your ideal clients",
+          "Quality reviews build more trust per review than generic ones",
+          "Prospects can see themselves in the experiences described by other clients"
         ]
       },
       {
-        "title": "Higher Visibility in Local Search",
-        "description": "Google prioritizes firms with more recent, positive reviews in local search results. A consistent review stream can improve where you show up when prospects search for Accounting Firms in your area.",
+        "title": "Higher Conversion From Search to Contact",
+        "description": "When a prospect finds two accounting practices with similar review counts, the one that can generate 5 star reviews consistently wins the inquiry almost every time. Review quality directly impacts the percentage of profile viewers who actually reach out.",
         "points": [
-          "More reviews typically correlate with higher local search rankings",
-          "Recent reviews carry more weight than old ones",
-          "Review velocity signals an active, client focused practice"
+          "Prospects read 3 to 5 reviews in detail before deciding who to contact",
+          "Consistently high ratings signal reliability and reduce the perceived risk of choosing your firm",
+          "Specific praise for things like advisory services or tax savings pre sells the value before you speak"
         ]
       },
       {
-        "title": "Authentic Social Proof",
-        "description": "Prospects researching Accounting Firms read reviews before making contact. A strong review profile builds trust before you ever speak with them.",
+        "title": "A Self Reinforcing Quality Signal",
+        "description": "When your online profile is filled with genuine 5 star reviews, it sets an expectation for every client interaction. Your team knows that client experience matters, and clients approach the relationship with higher confidence. Quality reviews create a virtuous cycle.",
         "points": [
-          "Prospective clients often read 5 to 10 reviews before reaching out",
-          "Authentic reviews from real clients are more persuasive than any marketing copy",
-          "Reviews on multiple platforms expand your reach"
+          "A strong review profile attracts clients who value quality, not just price",
+          "Team awareness of review importance can subtly improve client service across the practice",
+          "Consistently positive reviews reduce the impact of any occasional lower rating"
         ]
       }
     ],
     "howItWorks": [
       {
         "step": 1,
-        "title": "Assessment",
-        "description": "We review your current online presence, identify which platforms matter most for Accounting Firms in your market, and assess your existing review profile.",
+        "title": "Experience Mapping",
+        "description": "We identify the specific moments in your client journey where satisfaction peaks, these become your review trigger points where 5 star responses are most likely.",
         "subheading": "Audit"
       },
       {
         "step": 2,
-        "title": "System Design",
-        "description": "We design automated review request workflows that trigger at the right moments in your client lifecycle, using email and SMS channels your clients prefer.",
+        "title": "Messaging That Prompts Quality",
+        "description": "We design review request messages that subtly guide clients toward detailed, specific feedback rather than generic star clicks. The phrasing makes a measurable difference.",
         "subheading": "Design"
       },
       {
         "step": 3,
-        "title": "Launch and Monitor",
-        "description": "We configure and launch the system, then monitor early results to optimize timing, messaging, and delivery channels.",
+        "title": "Smart Routing",
+        "description": "We implement sentiment pre screening so that clients who may have concerns are routed to a private feedback channel, while enthusiastic clients are directed to your public review profiles.",
         "subheading": "Launch"
       },
       {
         "step": 4,
-        "title": "Ongoing Optimization",
-        "description": "We continue refining the system based on response rates and review quality, adjusting as your practice evolves.",
+        "title": "Quality Monitoring",
+        "description": "We track not just review count but review quality, helping you identify which trigger points and messages produce the most detailed and positive responses.",
         "subheading": "Optimize"
       }
     ],
     "results": [
       {
-        "metric": "Review Consistency",
-        "value": "Steady Growth",
-        "description": "Firms typically see a consistent increase in review volume within the first few months"
+        "metric": "Review Quality",
+        "value": "Consistently High",
+        "description": "Smart timing and messaging produce more detailed, enthusiastic reviews"
       },
       {
-        "metric": "Team Time Spent",
-        "value": "Near Zero",
-        "description": "Your team does not need to remember to ask or follow up manually"
+        "metric": "Average Rating",
+        "value": "Maintained at 4.8 Plus",
+        "description": "Sentiment routing and satisfaction timing help maintain a strong overall rating"
       },
       {
-        "metric": "Client Experience",
-        "value": "Seamless",
-        "description": "Clients find the process easy and non intrusive"
+        "metric": "Prospect Conversion",
+        "value": "Improved",
+        "description": "Detailed 5 star reviews build more trust and convert more profile viewers into inquiries"
       }
     ],
     "faqs": [
       {
-        "question": "Which review platforms should we focus on?",
-        "answer": "It depends on where your prospective clients search. For most Accounting Firms, Google Business Profile is the priority, but we assess your specific market during discovery."
+        "question": "Is it ethical to route dissatisfied clients away from public reviews?",
+        "answer": "Yes, as long as you are not preventing anyone from leaving a public review. Sentiment routing simply offers dissatisfied clients a direct channel to share their concern with you privately. If they still want to leave a public review, they can. The goal is to give unhappy clients a better way to be heard, not to suppress feedback."
       },
       {
-        "question": "Will clients feel pressured?",
-        "answer": "No. The automated requests are designed to feel natural and are timed for moments when clients are already feeling positive about your service. Clients can easily ignore them if they prefer."
+        "question": "Can the review request messaging really influence the quality of reviews?",
+        "answer": "Absolutely. A request that says 'We would appreciate a review' gets very different responses than one that says 'If there is anything specific about working with us that stood out, we would love to hear about it.' Small phrasing changes can significantly influence how much detail and enthusiasm clients put into their review."
       },
       {
-        "question": "What if we already have some reviews?",
-        "answer": "Great, we build on what you have. The system helps you maintain momentum and grow your review count consistently rather than in sporadic bursts."
+        "question": "We already have a few low star reviews. Will more 5 star reviews help?",
+        "answer": "Yes. A practice with 5 reviews including one 3 star looks much more vulnerable than a practice with 50 reviews and a 4.9 average that includes one 3 star. When you generate 5 star reviews consistently, the volume naturally dilutes the occasional lower rating and strengthens your overall profile."
       }
     ],
-    "ctaTitle": "Ready to Build Your Review Engine?",
-    "ctaDescription": "Book a free call and we will show you how a review automation system would work for your specific practice."
+    "ctaTitle": "Ready to Build a 5 Star Reputation Online?",
+    "ctaDescription": "Book a free call and we will show you how to generate the kind of reviews that actually attract your ideal clients."
   },
   "how-to-get-more-clients-for-my-cpa-firm": {
     "id": "how-to-get-more-clients-for-my-cpa-firm",
