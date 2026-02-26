@@ -14,9 +14,10 @@ import { CurvedSeparator } from "@/components/ui/curved-separator";
 
 interface IndustryPageTemplateProps {
   data: IndustryPageData;
+  beforeFinalCta?: React.ReactNode;
 }
 
-const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
+const IndustryPageTemplate = ({ data, beforeFinalCta }: IndustryPageTemplateProps) => {
   const industriesIndexPath = "/industries/";
   const defaultFAQs = [
     {
@@ -197,6 +198,9 @@ const IndustryPageTemplate = ({ data }: IndustryPageTemplateProps) => {
           </div>
         </section>
         <CurvedSeparator variant="primary" className="text-background" />
+
+        {/* Optional content before FAQs */}
+        {beforeFinalCta}
 
         {/* FAQs Section */}
         <section id="sf-faqs" className="section-padding bg-background">

@@ -53,6 +53,9 @@ export const sitemapRoutes: SitemapRoute[] = [
   { path: '/services/marketing-add-ons-for-accounting-firms/', changefreq: 'weekly', priority: 0.7 },
   { path: '/services/client-onboarding-automation/', changefreq: 'weekly', priority: 0.8 },
 
+  // Offer Pages
+  { path: '/ai-transformation-offer/', changefreq: 'monthly', priority: 0.7 },
+
   // Industry Pages
   { path: '/industries/automation-for-tax-preparation-firms/', changefreq: 'weekly', priority: 0.8 },
   { path: '/industries/marketing-for-bookkeeping-firms/', changefreq: 'weekly', priority: 0.8 },
@@ -81,6 +84,9 @@ export const sitemapRoutes: SitemapRoute[] = [
   // Case Studies
   { path: '/case-studies/', changefreq: 'weekly', priority: 0.8 },
   { path: '/case-studies/payroll-automation-roi-for-accounting-firms/', changefreq: 'monthly', priority: 0.7 },
+
+  // Blog
+  { path: '/blog/', changefreq: 'daily', priority: 0.8 },
 
   // Legal Pages
   { path: '/privacy-policy/', changefreq: 'yearly', priority: 0.3 },

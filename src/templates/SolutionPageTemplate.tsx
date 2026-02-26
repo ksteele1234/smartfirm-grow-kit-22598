@@ -29,9 +29,10 @@ const defaultSolutionFaqs = [
 
 interface SolutionPageTemplateProps {
   data: SolutionPageData;
+  beforeFinalCta?: React.ReactNode;
 }
 
-const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
+const SolutionPageTemplate = ({ data, beforeFinalCta }: SolutionPageTemplateProps) => {
   const solutionsIndexPath = "/solutions/";
   const [showStickyFAB, setShowStickyFAB] = useState(false);
 
@@ -333,6 +334,9 @@ const SolutionPageTemplate = ({ data }: SolutionPageTemplateProps) => {
             </ol>
           </div>
         </section>
+
+        {/* Optional content before FAQs */}
+        {beforeFinalCta}
 
         {/* FAQs Section */}
         <section id="sf-faqs" className="section-padding bg-gradient-muted-blue">

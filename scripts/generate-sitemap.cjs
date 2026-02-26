@@ -58,7 +58,6 @@ const staticRoutes = [
 
   // Offer Pages
   { path: '/ai-transformation-offer/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/list-reactivation-offer/', changefreq: 'monthly', priority: 0.7 },
 
   // Industry Pages
   { path: '/industries/automation-for-tax-preparation-firms/', changefreq: 'weekly', priority: 0.8 },
@@ -78,6 +77,9 @@ const staticRoutes = [
   { path: '/tools/lead-generation-scorecard-for-accounting-firms/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/modern-accounting-firm-assessment/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/accounting-firm-growth-scorecard/', changefreq: 'monthly', priority: 0.7 },
+  { path: '/tools/seo-audit/', changefreq: 'monthly', priority: 0.7 },
+  { path: '/tools/page-grader/', changefreq: 'monthly', priority: 0.7 },
+  { path: '/tools/advanced-seo-qa/', changefreq: 'monthly', priority: 0.7 },
 
   // Funnel Pages
   { path: '/accounting-firm-growth-calculator/', changefreq: 'weekly', priority: 0.8 },
@@ -94,7 +96,6 @@ const staticRoutes = [
   { path: '/terms-of-service/', changefreq: 'yearly', priority: 0.3 },
   { path: '/cookie-policy/', changefreq: 'yearly', priority: 0.3 },
   { path: '/faq/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/reactivation-terms/', changefreq: 'yearly', priority: 0.3 },
 ];
 
 /**
