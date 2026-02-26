@@ -67,7 +67,6 @@ const prerenderRoutes = [
 
   // Offer Pages
   "/ai-transformation-offer",
-  "/list-reactivation-offer",
 
   // Industry Pages
   "/industries/automation-for-tax-preparation-firms",
@@ -106,7 +105,6 @@ const prerenderRoutes = [
   "/terms-of-service",
   "/cookie-policy",
   "/faq",
-  "/reactivation-terms",
 ];
 
 /**
@@ -235,6 +233,7 @@ function extractFaqSlugsFromSource() {
 
 // Generate FAQ routes dynamically from source
 const faqRoutes = extractFaqSlugsFromSource();
+
 
 const distPath = path.resolve(__dirname, '../dist');
 

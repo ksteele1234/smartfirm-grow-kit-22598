@@ -119,8 +119,8 @@ const GetStarted = () => {
             answer: "Pricing is customized by firm size, services, and objectives. We offer flexible packages and payment options. You'll receive transparent pricing during your consultation."
           },
           {
-            question: "Do you offer guarantees?",
-            answer: "We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
+            question: "How do you ensure results?",
+            answer: "We set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
           }
         ]}
       />
@@ -407,8 +407,8 @@ const GetStarted = () => {
                 answer: "Pricing is customized based on your firm size and specific requirements. We offer flexible packages for solo practitioners, small firms, and enterprise-level practices. Contact us for a detailed quote."
               },
               {
-                question: "Do you offer guarantees?",
-                answer: "We don't make one-size-fits-all guarantees. Instead, we set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
+                question: "How do you ensure results?",
+                answer: "We set clear success metrics with you, then continuously optimize to help you achieve them. Most clients see improvements in efficiency and lead flow within the first 90 days."
               }
             ].map((faq, index) => {
               const isOpen = openFaqItem === index;
@@ -448,6 +448,29 @@ const GetStarted = () => {
             })}
           </div>
         </div>
+        <script id="sf-faq-jsonld" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do I get started?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Book a Free Call to discuss your firm's specific needs and goals." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the pricing structure?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote." }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you ensure results?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction." }
+              }
+            ]
+          })}
+        </script>
       </section>
 
       {/* Final CTA Section */}

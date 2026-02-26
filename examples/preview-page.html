@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Get More Reviews for My CPA Firm | SmartFirm</title>
+  <meta name="description" content="How to get more reviews for your CPA firm. Automated systems that make it easy for clients to leave 5 star reviews on Google and other platforms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0A7265;
+      --primary-dark: #085B50;
+      --primary-light: #0D8A7A;
+      --secondary: #1B5E7E;
+      --secondary-dark: #164B63;
+      --deep-navy: #0F2942;
+      --coral: #FB7185;
+      --coral-dark: #F43F5E;
+      --gold: #F59E0B;
+      --gold-dark: #D97706;
+      --teal-bright: #14B8A6;
+      --cyan-bright: #5EEAD4;
+      --white: #ffffff;
+      --slate-dark: #475569;
+      --slate: #64748B;
+      --slate-light: #CBD5E1;
+      --slate-lighter: #F1F5F9;
+      --border: #E2E8F0;
+      --shadow-card: 0 4px 12px rgba(10, 114, 101, 0.1);
+      --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08);
+      --shadow-teal-md: 0 4px 12px rgba(10, 114, 101, 0.12);
+      --glow-coral: 0 4px 24px rgba(251, 113, 133, 0.6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #334155;
+      line-height: 1.6;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .container { padding: 0 3rem; }
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 72px;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span { color: var(--secondary); }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+    }
+
+    .nav-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--slate-dark);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .nav-links .dropdown-indicator::after {
+      content: '';
+      display: inline-block;
+      width: 0; height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid var(--slate);
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 2px 12px rgba(251, 113, 133, 0.4);
+    }
+
+    .header-cta:hover {
+      opacity: 0.9;
+      box-shadow: var(--glow-coral);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn { display: none; }
+    }
+
+    .hamburger {
+      width: 24px;
+      height: 2px;
+      background: var(--slate-dark);
+      position: relative;
+    }
+    .hamburger::before, .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: var(--slate-dark);
+      left: 0;
+    }
+    .hamburger::before { top: -7px; }
+    .hamburger::after { top: 7px; }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 0.75rem 0;
+      background: var(--slate-lighter);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--slate);
+    }
+
+    .breadcrumb a {
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover { color: var(--primary-dark); text-decoration: underline; }
+
+    .breadcrumb .sep { margin: 0 0.5rem; color: var(--slate-light); }
+
+    .breadcrumb .current { color: var(--slate-dark); }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--deep-navy) 100%);
+      padding: 5rem 0 8rem;
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero { padding: 6rem 0 10rem; }
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(10, 114, 101, 0.15), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--cyan-bright);
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: var(--glow-coral);
+      animation: gentle-pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes gentle-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.92; }
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(251, 113, 133, 0.7);
+    }
+
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.2s;
+    }
+
+    .hero-cta:hover svg { transform: translateX(3px); }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-trust .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    /* Wave clip path */
+    .hero-wave {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .hero-wave svg {
+      display: block;
+      width: 100%;
+      height: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-wave svg { height: 120px; }
+    }
+
+    /* ===== SECTION STYLES ===== */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-alt {
+      background: var(--slate-lighter);
+    }
+
+    .section-heading {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subheading {
+      font-size: 1.0625rem;
+      color: var(--slate);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ===== PROBLEM SECTION ===== */
+    .problem-section {
+      padding: 5rem 0;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .problem-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .problem-card {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .problem-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(251, 113, 133, 0.1), rgba(244, 63, 94, 0.05));
+      border-radius: 10px;
+      color: var(--coral-dark);
+      font-size: 1.25rem;
+    }
+
+    .problem-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--deep-navy);
+      margin-bottom: 0.375rem;
+    }
+
+    .problem-card p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ===== SOLUTION / PROCESS SECTION ===== */
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .process-steps { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      transition: all 0.2s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-teal-md);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--white);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h4 {
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: var(--deep-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-card p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ===== INCLUDED SECTION ===== */
+    .included-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .included-list { grid-template-columns: 1fr 1fr; }
+    }
+
+    .included-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+
+    .included-item:hover {
+      border-color: var(--primary);
+      background: rgba(10, 114, 101, 0.02);
+    }
+
+    .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--teal-bright));
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 0.75rem;
+      margin-top: 1px;
+    }
+
+    .included-item span {
+      font-size: 0.9375rem;
+      color: var(--slate-dark);
+      line-height: 1.5;
+    }
+
+    /* ===== RESULTS SECTION ===== */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .results-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .result-card {
+      padding: 1.75rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow-card);
+      border-left: 4px solid var(--primary);
+      transition: all 0.2s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-teal-md);
+    }
+
+    .result-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.375rem;
+    }
+
+    .result-card p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    /* ===== FAQ SECTION ===== */
+    .faq-section {
+      padding: 5rem 0;
+      background: var(--slate-lighter);
+    }
+
+    .faq-list {
+      max-width: 780px;
+      margin: 2rem auto 0;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.125rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--deep-navy);
+      transition: all 0.15s;
+    }
+
+    .faq-question:hover { color: var(--primary); }
+
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--slate);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.9375rem;
+      color: var(--slate);
+      line-height: 1.7;
+    }
+
+    .faq-answer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .faq-answer .affiliate-disclosure {
+      font-size: 0.8125rem;
+      color: var(--slate);
+      font-style: italic;
+    }
+
+    /* ===== FINAL CTA SECTION ===== */
+    .final-cta {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--deep-navy) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent 70%);
+      border-radius: 50%;
+    }
+
+    .final-cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .final-cta p {
+      font-size: 1.0625rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .final-cta .hero-cta {
+      font-size: 1.0625rem;
+      padding: 16px 36px;
+    }
+
+    .no-contract {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--deep-navy);
+      padding: 4rem 0 2rem;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+    }
+
+    .footer-brand .logo {
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand .logo span { color: var(--cyan-bright); }
+
+    .footer-brand p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+
+    .footer-col a {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.65);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--cyan-bright); }
+
+    .footer-bottom {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-bottom a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: color 0.2s;
+    }
+    .footer-bottom a:hover { color: var(--cyan-bright); }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: slide-up 0.6s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">Smart<span>Firm</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="dropdown-indicator">Marketing Services</a></li>
+          <li><a href="#" class="dropdown-indicator">Operations Services</a></li>
+          <li><a href="#" class="dropdown-indicator">Solutions</a></li>
+          <li><a href="#" class="dropdown-indicator">Industries</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Quick Start</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="/get-started/" class="header-cta">
+          Book a Free Call
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+          <div class="hamburger"></div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/solutions/">Solutions</a>
+      <span class="sep">/</span>
+      <span class="current">How to Get More Reviews for My CPA Firm</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content animate-in">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Solutions for CPAs
+        </div>
+        <h1>How to Get More Reviews for My CPA Firm</h1>
+        <p class="hero-subtitle">The answer is automation. Let SmartFirm build and manage your review generation system so you can focus on what you do best: serving clients and growing your practice.</p>
+        <a href="/get-started/" class="hero-cta">
+          Book a Free Call
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <div class="hero-trust">
+          <span>Done for you</span>
+          <span class="dot"></span>
+          <span>No long term contracts</span>
+          <span class="dot"></span>
+          <span>Accounting firms only</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 120L60 110C120 100 240 80 360 75C480 70 600 80 720 85C840 90 960 90 1080 82.5C1200 75 1320 60 1380 52.5L1440 45V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM SECTION ===== -->
+  <section class="problem-section section">
+    <div class="container">
+      <h2 class="section-heading animate-in">You Are Not Alone</h2>
+      <p class="section-subheading animate-in delay-1">Most CPAs face this exact challenge. You know you need a solution, but implementing systems feels overwhelming during busy season.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card animate-in delay-1">
+          <div class="problem-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          </div>
+          <div>
+            <h4>Manual approaches fail</h4>
+            <p>You have tried asking clients for reviews manually with limited results. Time constraints keep you from following through consistently.</p>
+          </div>
+        </div>
+        <div class="problem-card animate-in delay-2">
+          <div class="problem-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>No time to implement</h4>
+            <p>Between client deadlines, busy season, and daily operations, there is simply no time to implement and manage a review system yourself.</p>
+          </div>
+        </div>
+        <div class="problem-card animate-in delay-3">
+          <div class="problem-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+          </div>
+          <div>
+            <h4>Competitors are winning</h4>
+            <p>Meanwhile, competitors with systemized operations are winning the clients you should be getting. Every day without automation costs you opportunities.</p>
+          </div>
+        </div>
+        <div class="problem-card animate-in delay-4">
+          <div class="problem-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+          </div>
+          <div>
+            <h4>DIY tools sit unused</h4>
+            <p>DIY automation platforms sit partially configured because implementation takes too much time and technical expertise you do not have.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS SECTION ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-heading" style="text-align: center;">The SmartFirm Process</h2>
+      <p class="section-subheading" style="text-align: center; margin-left: auto; margin-right: auto;">SmartFirm provides done for you automation built specifically for accounting professionals. We handle the entire implementation.</p>
+
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Discovery Call</h4>
+          <p>We learn about your practice, ideal clients, and current challenges in a consultation.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Custom Strategy</h4>
+          <p>We design a system tailored to your services, client types, and communication preferences.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Done For You Setup</h4>
+          <p>We build and configure everything. You review and approve. No technical work on your end.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Launch & Optimize</h4>
+          <p>We manage ongoing execution, track results, and continuously optimize based on your feedback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT'S INCLUDED SECTION ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-heading">What's Typically Included</h2>
+      <p class="section-subheading">Solutions are customized to each firm, but commonly include:</p>
+
+      <div class="included-list">
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Discovery and current process assessment</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Custom system design for your specific needs</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Automated workflow implementation</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Integration with your existing tools and platforms</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Communication templates tailored to your brand</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Implementation and testing</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Training for your team</span>
+        </div>
+        <div class="included-item">
+          <div class="check-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Ongoing support and optimization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTS SECTION ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-heading">What Firms Experience</h2>
+      <p class="section-subheading">Firms that implement automation typically see:</p>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <h4>More consistent execution</h4>
+          <p>Review requests go out automatically without manual effort, ensuring every client gets asked at the right time.</p>
+        </div>
+        <div class="result-card">
+          <h4>Better client communication</h4>
+          <p>Automated follow ups and personalized messaging lead to higher response rates and more positive reviews.</p>
+        </div>
+        <div class="result-card">
+          <h4>Improved efficiency</h4>
+          <p>Eliminate the manual work of tracking who has been asked and following up with clients who have not responded.</p>
+        </div>
+        <div class="result-card">
+          <h4>More time for billable work</h4>
+          <p>Stop spending hours on administrative tasks and redirect that time to serving clients and growing your practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-heading" style="text-align: center;">Your Questions Answered</h2>
+      <p class="section-subheading" style="text-align: center; margin-left: auto; margin-right: auto;">Everything you need to know before getting started.</p>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What makes SmartFirm different from other solutions?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We are done for you, not DIY. We design and implement custom solutions for your specific situation. We also focus exclusively on accounting firms, so we understand your unique needs, busy season challenges, and the compliance to advisory shift.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How much does this cost?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Investment varies based on your needs and current technology environment. We start with discovery to understand your situation, then provide transparent pricing for your specific solution. No long term contracts.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is this right for solo practitioners or just larger firms?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We work with firms of all sizes, from solo practitioners to multi partner practices. Solutions are tailored to your firm size, goals, and current systems.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What if we have tried this before and it did not work?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Most manual approaches fail because they require consistent effort you do not have time for. We design automated systems that fit your workflow and practice management approach, making it sustainable long term.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA SECTION ===== -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-cta-content">
+        <h2>Ready to Stop Struggling and Start Growing?</h2>
+        <p>Book a free call with our team. We will show you exactly how we can solve this challenge for your practice.</p>
+        <a href="/get-started/" class="hero-cta">
+          Book Your Free Call
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <div class="no-contract">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No long term contracts. We earn your business by delivering results.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Smart<span>Firm</span></div>
+          <p>Done for you marketing and operations automation built exclusively for accounting firms, CPAs, bookkeepers, and tax professionals.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Marketing Automation</a></li>
+            <li><a href="#">SEO for Accountants</a></li>
+            <li><a href="#">Email Marketing</a></li>
+            <li><a href="#">Lead Follow Up</a></li>
+            <li><a href="#">Review Generation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">For CPAs</a></li>
+            <li><a href="#">For Bookkeepers</a></li>
+            <li><a href="#">For Tax Firms</a></li>
+            <li><a href="#">Quick Start</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Book a Call</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SmartFirm. All rights reserved.</span>
+        <div style="display: flex; gap: 1rem;">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const wasOpen = item.classList.contains('open');
+
+      // Close all items
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+      });
+
+      // Toggle the clicked one
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    }
+  </script>
+
+</body>
+</html>

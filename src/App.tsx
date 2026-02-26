@@ -51,8 +51,6 @@ const AITransformationRoadmap = lazy(() => import("./pages/services/AITransforma
 const SingleProcessAITransformation = lazy(() => import("./pages/services/SingleProcessAITransformation"));
 const ClientOnboardingAutomation = lazy(() => import("./pages/services/ClientOnboardingAutomation"));
 const AITransformationOffer = lazy(() => import("./pages/AITransformationOffer"));
-const ListReactivationOffer = lazy(() => import("./pages/ListReactivationOffer"));
-
 // Industry Pages
 const TaxPreparation = lazy(() => import("./pages/industries/TaxPreparation"));
 const BookkeepingServices = lazy(() => import("./pages/industries/BookkeepingServices"));
@@ -96,7 +94,6 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const FaqDetail = lazy(() => import("./pages/faq/FaqDetail"));
-const ReactivationTerms = lazy(() => import("./pages/ReactivationTerms"));
 
 // Debug Pages (excluded from sitemap)
 const DebugUrlProbe = lazy(() => import("./pages/DebugUrlProbe"));
@@ -123,6 +120,7 @@ const PostEditor = lazyWithRetry(() => import("./pages/admin/PostEditor"));
 const CategoryManager = lazyWithRetry(() => import("./pages/admin/CategoryManager"));
 const TagManager = lazyWithRetry(() => import("./pages/admin/TagManager"));
 const ProfileManager = lazyWithRetry(() => import("./pages/admin/ProfileManager"));
+
 
 // Loading fallback component
 const PageLoader = () => (
@@ -197,7 +195,6 @@ const App = () => (
             <Route path="/services/ai-transformation-roadmap-for-accounting-firms" element={<AITransformationRoadmap />} />
             <Route path="/services/ai-process-optimization-for-accounting-firms" element={<SingleProcessAITransformation />} />
             <Route path="/ai-transformation-offer" element={<AITransformationOffer />} />
-            <Route path="/list-reactivation-offer" element={<ListReactivationOffer />} />
             <Route path="/services/marketing-automation-for-accounting-firms" element={<MarketingAutomation />} />
             <Route path="/services/technology-consulting-for-accounting-firms" element={<TechnologySolutions />} />
             <Route path="/services/business-optimization-for-accounting-firms" element={<BusinessOptimization />} />
@@ -308,7 +305,6 @@ const App = () => (
             <Route path="/cookies" element={<Navigate to="/cookie-policy" replace />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/faq/:slug" element={<FaqDetail />} />
-            <Route path="/reactivation-terms" element={<ReactivationTerms />} />
 
             {/* Utility Pages - Excluded from sitemap */}
             <Route path="/__debug/url-probe" element={<DebugUrlProbe />} />

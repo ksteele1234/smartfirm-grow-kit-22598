@@ -175,7 +175,7 @@ const Terms = () => {
                   service agreements and privacy policies of these platforms.
                 </p>
                 <p className="mt-4">
-                  We make reasonable efforts to ensure our integrations function reliably, but we cannot guarantee 
+                  We make reasonable efforts to ensure our integrations function reliably, but we cannot ensure
                   continuous uptime or feature availability for any third-party tools.
                 </p>
               </div>

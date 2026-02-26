@@ -58,7 +58,7 @@ const Contact = () => {
             answer: "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget."
           },
           {
-            question: "Do you offer guarantees?",
+            question: "How do you ensure results?",
             answer: "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them."
           },
           {
@@ -341,7 +341,7 @@ const Contact = () => {
                 answer: "Pricing is customized based on firm size and requirements. We offer flexible packages for solo practitioners, small firms, and larger practices. After your strategy call, we'll provide a clear proposal that fits your goals and budget."
               },
               {
-                question: "Do you offer guarantees?",
+                question: "How do you ensure results?",
                 answer: "We don't believe in one-size-fits-all promises. Instead, we align on measurable success metrics with you, then provide ongoing support and continuous optimization to help you reach them."
               },
               {

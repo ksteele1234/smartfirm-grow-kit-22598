@@ -101,7 +101,7 @@ const ProtectPractice = () => {
     results: [
       {
         metric: "99.9%",
-        value: "Uptime Guarantee",
+        value: "Uptime Reliability",
         description: "Maintain business continuity even during disruptions"
       },
       {

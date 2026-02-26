@@ -860,7 +860,7 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
           answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
         },
         {
-          question: "Do you offer guarantees?",
+          question: "How do you ensure results?",
           answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
         }
       );

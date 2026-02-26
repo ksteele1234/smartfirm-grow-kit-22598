@@ -157,7 +157,7 @@ const SuccessStories = () => {
             answer: "Pricing is customized based on your firm size and specific requirements. Contact us for a detailed quote."
           },
           {
-            question: "Do you offer guarantees?",
+            question: "How do you ensure results?",
             answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction."
           }
         ]}
@@ -526,7 +526,7 @@ const SuccessStories = () => {
 
               <details className="group border border-border rounded-lg p-6 bg-background">
                 <summary className="font-semibold text-lg text-primary cursor-pointer list-none flex items-center justify-between">
-                  Do you offer guarantees?
+                  How do you ensure results?
                   <span className="ml-2 transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-muted-foreground leading-relaxed">
