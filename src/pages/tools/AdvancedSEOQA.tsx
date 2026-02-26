@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Download, Play, AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 interface AdvancedPageAudit {
   url: string;
@@ -61,6 +63,7 @@ interface AdvancedSEOQAProps {
 }
 
 const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
+  const links = getRelationships("/tools/advanced-seo-qa");
   const [isAuditing, setIsAuditing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [results, setResults] = useState<AdvancedPageAudit[]>([]);
@@ -987,6 +990,13 @@ const AdvancedSEOQA = ({ onBack }: AdvancedSEOQAProps) => {
             </CardContent>
           </Card>
         </div>
+
+        {links.relatedServices && (
+          <RelatedContent heading="Related Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+        )}
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const WebsiteDesign = () => {
   const serviceData: ServicePageData = {
@@ -102,7 +104,25 @@ const WebsiteDesign = () => {
     relatedBlogTags: ['web-design', 'seo', 'lead-generation', 'conversion-optimization']
   };
 
-  return <ServicePageTemplate data={serviceData} />;
+  const links = getRelationships("/services/website-design-for-accounting-firms");
+  return (
+    <ServicePageTemplate
+      data={serviceData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default WebsiteDesign;

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const commonTools = [
   { id: "quickbooks", name: "QuickBooks", avgCost: 50 },
@@ -26,6 +28,7 @@ const commonTools = [
 ];
 
 const TechStackROICalculator = () => {
+  const links = getRelationships("/tools/accounting-firm-technology-roi-calculator");
   const [selectedTools, setSelectedTools] = useState<Set<string>>(new Set());
   const [customTools, setCustomTools] = useState<Array<{ name: string; cost: number }>>([]);
   const [teamSize, setTeamSize] = useState<number>(1);
@@ -266,6 +269,13 @@ const TechStackROICalculator = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {links.relatedServices && (
+              <RelatedContent heading="Related Services" items={links.relatedServices} />
+            )}
+            {links.relatedSolutions && (
+              <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+            )}
           </div>
         </main>
         <Footer />
@@ -393,6 +403,13 @@ const TechStackROICalculator = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

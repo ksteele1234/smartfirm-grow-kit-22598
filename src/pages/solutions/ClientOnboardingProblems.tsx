@@ -1,7 +1,10 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const ClientOnboardingProblems = () => {
+  const links = getRelationships("/solutions/client-onboarding-problems");
   const solutionData: SolutionPageData = {
     id: "client-onboarding-problems",
     title: "Client Onboarding Problems? Stop Losing Clients | SmartFirm",
@@ -145,7 +148,24 @@ const ClientOnboardingProblems = () => {
     ]
   };
 
-  return <SolutionPageTemplate data={solutionData} />;
+  return (
+    <SolutionPageTemplate
+      data={solutionData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore More Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default ClientOnboardingProblems;

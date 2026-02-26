@@ -18,6 +18,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 interface PageScore {
   url: string;
@@ -62,6 +64,7 @@ interface PageGraderProps {
 }
 
 const PageGrader = ({ onBack }: PageGraderProps) => {
+  const links = getRelationships("/tools/page-grader");
   const [isGrading, setIsGrading] = useState(false);
   const [isValidating, setIsValidating] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -1594,6 +1597,12 @@ const PageGrader = ({ onBack }: PageGraderProps) => {
             </Card>
           )}
         </>
+      )}
+      {links.relatedServices && (
+        <RelatedContent heading="Related Services" items={links.relatedServices} />
+      )}
+      {links.relatedSolutions && (
+        <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
       )}
     </div>
     </>

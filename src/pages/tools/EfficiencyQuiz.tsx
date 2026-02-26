@@ -9,6 +9,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle, ArrowLeft, ArrowRight, BarChart3 } from "lucide-react";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 interface Question {
   id: string;
@@ -18,6 +20,7 @@ interface Question {
 }
 
 const EfficiencyQuiz = () => {
+  const links = getRelationships("/tools/accounting-firm-efficiency-assessment");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [showResults, setShowResults] = useState(false);
@@ -242,6 +245,13 @@ const EfficiencyQuiz = () => {
               </Card>
             </div>
           </section>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </main>
         <Footer />
       </div>
@@ -313,6 +323,13 @@ const EfficiencyQuiz = () => {
           </Card>
         </div>
       </section>
+
+      {links.relatedServices && (
+        <RelatedContent heading="Related Services" items={links.relatedServices} />
+      )}
+      {links.relatedSolutions && (
+        <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+      )}
     </ToolPageWrapper>
   );
 };

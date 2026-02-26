@@ -14,6 +14,8 @@ import {
 } from "@/components/ui/breadcrumb";
 import SEO from "@/components/SEO";
 import { FloatingShapes, BackgroundPattern } from "@/components/ui/visual-accents";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const AddOns = () => {
   const addOnServices = [
@@ -117,6 +119,8 @@ const AddOns = () => {
       ]
     }
   ];
+
+  const links = getRelationships("/services/marketing-add-ons-for-accounting-firms");
 
   const benefits = [
     {
@@ -298,6 +302,17 @@ const AddOns = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        {links.relatedServices && (
+          <RelatedContent heading="Related Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+        )}
+        {links.relatedTools && (
+          <RelatedContent heading="Free Tools" items={links.relatedTools} />
+        )}
 
         {/* CTA Section */}
         <section className="relative py-[120px] md:py-[100px] bg-gradient-deep-teal overflow-hidden">

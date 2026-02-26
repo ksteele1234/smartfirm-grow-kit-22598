@@ -5,9 +5,12 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
 import { useIsMobile } from "@/hooks/use-mobile";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const SingleProcessAITransformation = () => {
   const isMobile = useIsMobile();
+  const links = getRelationships("/services/ai-process-optimization-for-accounting-firms");
 
   const heroStyles = `
     @keyframes bubble-float {
@@ -389,6 +392,17 @@ const SingleProcessAITransformation = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Related Content */}
+        {links.relatedServices && (
+          <RelatedContent heading="Related Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+        )}
+        {links.relatedTools && (
+          <RelatedContent heading="Free Tools" items={links.relatedTools} />
+        )}
 
         {/* Final CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-muted-blue text-white">

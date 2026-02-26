@@ -1,8 +1,11 @@
 import React from 'react';
 import { Clock, TrendingUp, DollarSign, AlertCircle, Activity, CheckCircle } from 'lucide-react';
 import CaseStudyTemplate, { CaseStudyTemplateProps } from '@/templates/CaseStudyTemplate';
+import { getRelationships } from '@/config/internalLinks';
 
 const PayrollAutomationROI = () => {
+  const links = getRelationships("/case-studies/payroll-automation-roi-for-accounting-firms");
+
   const caseStudyData: CaseStudyTemplateProps = {
     // SEO
     seoTitle: "Payroll Automation ROI for Accounting Firms | SmartFirm.io",
@@ -139,6 +142,10 @@ const PayrollAutomationROI = () => {
     footerCTAButtonLink: "/get-started-accounting-firm-automation/",
     footerCTAButtonId: "case-study-payroll-footer-book-call-btn",
     footerCTADisclaimer: "Continuous incremental investments have massive cumulative benefits.",
+
+    // Related Content
+    relatedServices: links.relatedServices,
+    relatedSolutions: links.relatedSolutions,
   };
 
   return <CaseStudyTemplate {...caseStudyData} />;

@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, Calculator, TrendingUp, DollarSign, Users, BarChart3 } from "lucide-react";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const ROICalculator = () => {
+  const links = getRelationships("/tools/marketing-roi-calculator-for-accounting-firms");
   const [formData, setFormData] = useState({
     monthlyAdSpend: "",
     monthlyLeads: "",
@@ -244,6 +247,13 @@ const ROICalculator = () => {
               </Button>
             </div>
           </div>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </main>
         <Footer />
       </div>
@@ -391,6 +401,13 @@ const ROICalculator = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

@@ -25,8 +25,12 @@ import {
   MessageSquare
 } from "lucide-react";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const Resources = () => {
+  const links = getRelationships("/resources");
+
   const resourceCategories = [
     {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
@@ -340,6 +344,14 @@ const Resources = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        {links.relatedServices && (
+          <RelatedContent heading="Explore Our Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+        )}
 
         {/* Help Section */}
         <section className="py-section md:py-28 bg-background-light">

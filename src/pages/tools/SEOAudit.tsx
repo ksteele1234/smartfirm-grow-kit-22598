@@ -11,6 +11,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AdvancedSEOQA from "./AdvancedSEOQA";
 import PageGrader from "./PageGrader";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 interface PageAudit {
   url: string;
@@ -35,6 +37,7 @@ interface PageAudit {
 }
 
 const SEOAudit = () => {
+  const links = getRelationships("/tools/seo-audit");
   const [activeTab, setActiveTab] = useState<"basic" | "advanced" | "grader">("basic");
   const [isAuditing, setIsAuditing] = useState(false);
   const [isValidating, setIsValidating] = useState(false);
@@ -854,6 +857,13 @@ const SEOAudit = () => {
             </TabsContent>
           </Tabs>
         </div>
+
+        {links.relatedServices && (
+          <RelatedContent heading="Related Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+        )}
       </main>
 
       <Footer />

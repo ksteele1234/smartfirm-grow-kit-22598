@@ -1,6 +1,8 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const AuditAssurance = () => {
   const industryFaqs = getFaqsForPath("/industries/marketing-for-audit-firms");
@@ -58,7 +60,26 @@ const AuditAssurance = () => {
     faqs: industryFaqs
   };
 
-  return <IndustryPageTemplate data={industryData} />;
+  const links = getRelationships("/industries/marketing-for-audit-firms");
+
+  return (
+    <IndustryPageTemplate
+      data={industryData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default AuditAssurance;

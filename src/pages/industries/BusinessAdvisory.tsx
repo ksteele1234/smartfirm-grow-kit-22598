@@ -1,6 +1,8 @@
 import IndustryPageTemplate from "@/templates/IndustryPageTemplate";
 import { IndustryPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const BusinessAdvisory = () => {
   const industryFaqs = getFaqsForPath("/industries/business-advisory");
@@ -58,7 +60,26 @@ const BusinessAdvisory = () => {
     faqs: industryFaqs
   };
 
-  return <IndustryPageTemplate data={industryData} />;
+  const links = getRelationships("/industries/business-advisory");
+
+  return (
+    <IndustryPageTemplate
+      data={industryData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default BusinessAdvisory;

@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const questions = [
   {
@@ -64,6 +66,7 @@ const questions = [
 ];
 
 const AutomationReadinessQuiz = () => {
+  const links = getRelationships("/tools/automation-readiness-assessment-for-accountants");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<number, boolean>>({});
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -181,6 +184,13 @@ const AutomationReadinessQuiz = () => {
               </CardContent>
             </Card>
           </div>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </main>
         <Footer />
       </div>
@@ -264,6 +274,13 @@ const AutomationReadinessQuiz = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

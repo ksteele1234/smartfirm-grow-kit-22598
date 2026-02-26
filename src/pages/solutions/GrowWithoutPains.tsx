@@ -1,8 +1,11 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const GrowWithoutPains = () => {
+  const links = getRelationships("/solutions/grow-accounting-firm-without-growing-pains");
   const solutionFaqs = getFaqsForPath("/solutions/grow-accounting-firm-without-growing-pains");
   const solutionData: SolutionPageData = {
     id: "grow-without-pains",
@@ -120,7 +123,24 @@ const GrowWithoutPains = () => {
     faqs: solutionFaqs
   };
 
-  return <SolutionPageTemplate data={solutionData} />;
+  return (
+    <SolutionPageTemplate
+      data={solutionData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore More Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default GrowWithoutPains;

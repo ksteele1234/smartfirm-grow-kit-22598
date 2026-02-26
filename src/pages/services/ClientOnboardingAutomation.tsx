@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const ClientOnboardingAutomation = () => {
   const serviceData: ServicePageData = {
@@ -124,6 +126,8 @@ const ClientOnboardingAutomation = () => {
     relatedBlogTags: ['client-onboarding', 'workflow-automation', 'accounting-automation', 'efficiency']
   };
 
+  const links = getRelationships("/services/client-onboarding-automation");
+
   const relatedSolutionCallout = (
     <section className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -154,7 +158,23 @@ const ClientOnboardingAutomation = () => {
   );
 
   return (
-    <ServicePageTemplate data={serviceData} beforeFinalCta={relatedSolutionCallout} />
+    <ServicePageTemplate
+      data={serviceData}
+      beforeFinalCta={
+        <>
+          {relatedSolutionCallout}
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
   );
 };
 

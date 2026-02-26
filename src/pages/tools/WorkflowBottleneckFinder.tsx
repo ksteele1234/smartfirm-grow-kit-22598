@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const workflowAreas = [
   {
@@ -63,6 +65,7 @@ const workflowAreas = [
 ];
 
 const WorkflowBottleneckFinder = () => {
+  const links = getRelationships("/tools/accounting-firm-workflow-audit-tool");
   const [selectedTasks, setSelectedTasks] = useState<Set<string>>(new Set());
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [showResults, setShowResults] = useState(false);
@@ -242,6 +245,13 @@ const WorkflowBottleneckFinder = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {links.relatedServices && (
+              <RelatedContent heading="Related Services" items={links.relatedServices} />
+            )}
+            {links.relatedSolutions && (
+              <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+            )}
           </div>
         </main>
         <Footer />
@@ -326,6 +336,13 @@ const WorkflowBottleneckFinder = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

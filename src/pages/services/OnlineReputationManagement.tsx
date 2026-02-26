@@ -1,6 +1,8 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const OnlineReputationManagement = () => {
   const serviceData: ServicePageData = {
@@ -78,7 +80,25 @@ const OnlineReputationManagement = () => {
     relatedBlogTags: ['reputation-management', 'client-retention', 'google-business-profile', 'lead-generation']
   };
 
-  return <ServicePageTemplate data={serviceData} />;
+  const links = getRelationships("/services/reputation-management-for-cpa-firms");
+  return (
+    <ServicePageTemplate
+      data={serviceData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default OnlineReputationManagement;

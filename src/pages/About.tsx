@@ -30,8 +30,12 @@ import brianHellewellImage from "@/assets/brian-hellewell.webp";
 import graceMendezImage from "@/assets/grace-mendez.webp";
 import yvonneGaliciaImage from "@/assets/yvonne-galicia.webp";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const About = () => {
+  const links = getRelationships("/marketing-agency-for-accounting-firms");
+
   const coreValues = [
     {
       icon: <Lightbulb className="h-8 w-8 text-primary" />,
@@ -506,6 +510,14 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        {links.relatedServices && (
+          <RelatedContent heading="Explore Our Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+        )}
 
         {/* Final CTA */}
         <section className="py-16 md:py-section text-white" style={{ background: 'hsl(var(--professional-teal))' }}>

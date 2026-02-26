@@ -6,8 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Users, ArrowRight, Building2 } from "lucide-react";
 import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const CaseStudies = () => {
+  const links = getRelationships("/case-studies");
+
   const featuredCaseStudy = {
     id: 1,
     title: "Payroll Automation ROI: $8,372 Saved & 94% Time Reduction",
@@ -186,6 +190,14 @@ const CaseStudies = () => {
               </div>
             </div>
           </section>
+
+          {/* Related Content */}
+          {links.relatedServices && (
+            <RelatedContent heading="Explore Our Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
 
           {/* CTA Section */}
           <section className="section-padding bg-gradient-mesh-professional">

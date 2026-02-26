@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
 import SEO from '@/components/SEO';
+import RelatedContent from '@/components/sections/RelatedContent';
+import type { RelatedPageLink } from '@/config/internalLinks';
 import adpLogo from '@/assets/logos/adp-logo.png';
 import canopyLogo from '@/assets/logos/canopy-logo.webp';
 import qboLogo from '@/assets/logos/qbo-logo.png';
@@ -107,6 +109,10 @@ export interface CaseStudyTemplateProps {
   footerCTAButtonLink: string;
   footerCTAButtonId: string;
   footerCTADisclaimer: string;
+
+  // Related Content (optional)
+  relatedServices?: RelatedPageLink[];
+  relatedSolutions?: RelatedPageLink[];
 }
 
 const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
@@ -138,6 +144,8 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
   footerCTAButtonLink,
   footerCTAButtonId,
   footerCTADisclaimer,
+  relatedServices,
+  relatedSolutions,
 }) => {
   return (
     <>
@@ -428,6 +436,14 @@ const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
             </div>
           </div>
         </section>
+
+        {/* ==================== RELATED CONTENT ==================== */}
+        {relatedServices && relatedServices.length > 0 && (
+          <RelatedContent heading="Explore Our Services" items={relatedServices} />
+        )}
+        {relatedSolutions && relatedSolutions.length > 0 && (
+          <RelatedContent heading="Explore Solutions" items={relatedSolutions} variant="teal" />
+        )}
 
         {/* ==================== FOOTER CTA ==================== */}
         <section className="py-20 lg:py-32 bg-background">

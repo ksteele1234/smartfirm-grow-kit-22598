@@ -9,8 +9,11 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const ClientLifetimeValueCalculator = () => {
+  const links = getRelationships("/tools/client-lifetime-value-calculator-for-accountants");
   const [avgMonthlyValue, setAvgMonthlyValue] = useState<number>(0);
   const [avgClientLifespan, setAvgClientLifespan] = useState<number>(0);
   const [clientType, setClientType] = useState<string>("");
@@ -224,6 +227,13 @@ const ClientLifetimeValueCalculator = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {links.relatedServices && (
+              <RelatedContent heading="Related Services" items={links.relatedServices} />
+            )}
+            {links.relatedSolutions && (
+              <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+            )}
           </div>
         </main>
         <Footer />
@@ -344,6 +354,13 @@ const ClientLifetimeValueCalculator = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

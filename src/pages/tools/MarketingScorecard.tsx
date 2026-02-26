@@ -10,6 +10,8 @@ import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
 import ToolPageWrapper from "@/components/ToolPageWrapper";
 import { EmailCaptureModal } from "@/components/ui/email-capture-modal";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 interface Question {
   id: string;
@@ -18,6 +20,7 @@ interface Question {
 }
 
 const MarketingScorecard = () => {
+  const links = getRelationships("/tools/marketing-assessment-for-accountants");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -239,6 +242,13 @@ const MarketingScorecard = () => {
               </div>
             </div>
           </section>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </main>
         <Footer />
       </div>
@@ -317,6 +327,13 @@ const MarketingScorecard = () => {
           </Card>
         </div>
       </section>
+
+      {links.relatedServices && (
+        <RelatedContent heading="Related Services" items={links.relatedServices} />
+      )}
+      {links.relatedSolutions && (
+        <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+      )}
 
       <EmailCaptureModal
         isOpen={showEmailModal}

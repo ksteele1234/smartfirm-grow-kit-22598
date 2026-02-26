@@ -10,6 +10,8 @@ import {
 import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 import FaqAnswer from "@/components/faq/FaqAnswer";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
@@ -21,6 +23,8 @@ const AITransformationRoadmap = () => {
     const timer = setTimeout(() => setShowFallback(true), 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  const links = getRelationships("/services/ai-transformation-roadmap-for-accounting-firms");
 
   const faqs = [
     {
@@ -568,6 +572,17 @@ const AITransformationRoadmap = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Content */}
+        {links.relatedServices && (
+          <RelatedContent heading="Related Services" items={links.relatedServices} />
+        )}
+        {links.relatedSolutions && (
+          <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
+        )}
+        {links.relatedTools && (
+          <RelatedContent heading="Free Tools" items={links.relatedTools} />
+        )}
 
         {/* Final CTA Section */}
         <section

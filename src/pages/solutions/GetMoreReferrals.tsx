@@ -1,8 +1,11 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const GetMoreReferrals = () => {
+  const links = getRelationships("/solutions/get-more-referrals-for-cpa-firm-without-asking");
   const solutionFaqs = getFaqsForPath("/solutions/get-more-referrals-for-cpa-firm-without-asking");
   const solutionData: SolutionPageData = {
     id: "get-more-referrals",
@@ -120,7 +123,24 @@ const GetMoreReferrals = () => {
     faqs: solutionFaqs
   };
 
-  return <SolutionPageTemplate data={solutionData} />;
+  return (
+    <SolutionPageTemplate
+      data={solutionData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore More Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default GetMoreReferrals;

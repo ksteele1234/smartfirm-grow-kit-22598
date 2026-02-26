@@ -9,8 +9,11 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const GrowthPotentialScorecard = () => {
+  const links = getRelationships("/tools/accounting-firm-growth-scorecard");
   const [annualRevenue, setAnnualRevenue] = useState<number>(0);
   const [teamSize, setTeamSize] = useState<number>(0);
   const [avgClientValue, setAvgClientValue] = useState<number>(0);
@@ -328,6 +331,13 @@ const GrowthPotentialScorecard = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {links.relatedServices && (
+              <RelatedContent heading="Related Services" items={links.relatedServices} />
+            )}
+            {links.relatedSolutions && (
+              <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+            )}
           </div>
         </main>
         <Footer />
@@ -476,6 +486,13 @@ const GrowthPotentialScorecard = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

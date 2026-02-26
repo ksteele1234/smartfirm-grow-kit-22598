@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import SEO from "@/components/SEO";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const categories = {
   tech: "Technology Adoption",
@@ -128,6 +130,7 @@ const questions = [
 ];
 
 const ModernFirmQuiz = () => {
+  const links = getRelationships("/tools/modern-accounting-firm-assessment");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -324,6 +327,13 @@ const ModernFirmQuiz = () => {
                 </div>
               </CardContent>
             </Card>
+
+            {links.relatedServices && (
+              <RelatedContent heading="Related Services" items={links.relatedServices} />
+            )}
+            {links.relatedSolutions && (
+              <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+            )}
           </div>
         </main>
         <Footer />
@@ -410,6 +420,13 @@ const ModernFirmQuiz = () => {
               </div>
             </CardContent>
           </Card>
+
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
         </div>
       </main>
       <Footer />

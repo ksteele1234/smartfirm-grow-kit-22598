@@ -1,8 +1,11 @@
 import SolutionPageTemplate from "@/templates/SolutionPageTemplate";
 import { SolutionPageData } from "@/types/cms";
 import { getFaqsForPath } from "@/data/faqContent";
+import RelatedContent from "@/components/sections/RelatedContent";
+import { getRelationships } from "@/config/internalLinks";
 
 const WorkLessEarnMore = () => {
+  const links = getRelationships("/solutions/work-less-earn-more-as-a-cpa");
   const solutionFaqs = getFaqsForPath("/solutions/work-less-earn-more-as-a-cpa");
   const solutionData: SolutionPageData = {
     id: "work-less-earn-more",
@@ -124,7 +127,24 @@ const WorkLessEarnMore = () => {
     faqs: solutionFaqs
   };
 
-  return <SolutionPageTemplate data={solutionData} />;
+  return (
+    <SolutionPageTemplate
+      data={solutionData}
+      beforeFinalCta={
+        <>
+          {links.relatedServices && (
+            <RelatedContent heading="Related Services" items={links.relatedServices} />
+          )}
+          {links.relatedSolutions && (
+            <RelatedContent heading="Explore More Solutions" items={links.relatedSolutions} variant="teal" />
+          )}
+          {links.relatedTools && (
+            <RelatedContent heading="Free Tools" items={links.relatedTools} />
+          )}
+        </>
+      }
+    />
+  );
 };
 
 export default WorkLessEarnMore;
