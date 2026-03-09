@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, CheckCircle, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle, ChevronDown, Loader2 } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -11,27 +11,56 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import FaqAnswer from "@/components/faq/FaqAnswer";
 import SEO from "@/components/SEO";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
-  
-  useEffect(() => {
-    // Load the form script
-    const script = document.createElement('script');
-    script.src = 'https://link.msgsndr.com/js/form_embed.js';
-    script.type = 'text/javascript';
-    document.head.appendChild(script);
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const { data, error: fnError } = await supabase.functions.invoke('form-submit', {
+        body: {
+          form_type: 'contact',
+          data: formData,
+          page_url: '/accounting-firm-automation-consultation/',
+        },
+      });
+
+      if (fnError) {
+        throw new Error(fnError.message || 'Something went wrong. Please try again.');
       }
-    };
-  }, []);
+
+      setIsSubmitted(true);
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background" data-sf-fixed="headings entities">
@@ -207,25 +236,102 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="min-h-[600px]">
-                    <iframe  
-                      src="https://api.leadconnectorhq.com/widget/form/R9iCUNna996pH7StYk0b"  
-                      style={{width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: '600px'}}
-                      id="inline-R9iCUNna996pH7StYk0b"   
-                      data-layout="{'id':'INLINE'}"  
-                      data-trigger-type="alwaysShow"  
-                      data-trigger-value=""  
-                      data-activation-type="alwaysActivated"  
-                      data-activation-value=""  
-                      data-deactivation-type="neverDeactivate"  
-                      data-deactivation-value=""  
-                      data-form-name="SmartFirm Contact Form"  
-                      data-height="879"  
-                      data-layout-iframe-id="inline-R9iCUNna996pH7StYk0b"  
-                      data-form-id="R9iCUNna996pH7StYk0b"  
-                      title="SmartFirm Contact Form"  
-                    />
-                  </div>
+                  {isSubmitted ? (
+                    <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
+                      <CheckCircle className="h-16 w-16 text-green-600" />
+                      <h3 className="text-2xl font-heading font-semibold text-primary">
+                        Message Sent!
+                      </h3>
+                      <p className="text-lg text-muted-foreground max-w-md">
+                        Thank you! We'll get back to you within 24 hours.
+                      </p>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="first_name">First Name <span className="text-red-500">*</span></Label>
+                          <Input
+                            id="first_name"
+                            name="first_name"
+                            type="text"
+                            required
+                            value={formData.first_name}
+                            onChange={handleChange}
+                            placeholder="Jane"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <Label htmlFor="last_name">Last Name</Label>
+                          <Input
+                            id="last_name"
+                            name="last_name"
+                            type="text"
+                            value={formData.last_name}
+                            onChange={handleChange}
+                            placeholder="Smith"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email <span className="text-red-500">*</span></Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="jane@yourfirm.com"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="phone">Phone</Label>
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="(555) 123-4567"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Message <span className="text-red-500">*</span></Label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          required
+                          rows={4}
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Tell us about your firm and how we can help..."
+                        />
+                      </div>
+
+                      {error && (
+                        <p className="text-sm text-red-600">{error}</p>
+                      )}
+
+                      <Button
+                        type="submit"
+                        className="w-full"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          'Send Message'
+                        )}
+                      </Button>
+                    </form>
+                  )}
                 </CardContent>
               </Card>
             </div>

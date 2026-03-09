@@ -1,9 +1,14 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import SEO from "@/components/SEO";
 import { FunnelHeader } from "@/components/navigation/FunnelHeader";
 import { FunnelFooter } from "@/components/sections/FunnelFooter";
 import { Button } from "@/components/ui/button";
 import { CheckmarkIcon } from "@/components/ui/checkmark-icon";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import revenueChart from "@/assets/revenue-growth-chart.svg";
 import meetingPhoto from "@/assets/meeting-photo.webp";
 import danPhoto from "@/assets/testimonial-dan.webp";
@@ -12,16 +17,60 @@ import jennPhoto from "@/assets/testimonial-jenn.webp";
 import womanPointingBlazer from "@/assets/woman-pointing-blazer.webp";
 
 const GrowthCalculator = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://link.msgsndr.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+  const [clientCount, setClientCount] = useState('');
+  const [avgFee, setAvgFee] = useState('2500');
+  const [email, setEmail] = useState('');
+  const [isCalculated, setIsCalculated] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const potentialRevenue = Math.round(
+    parseInt(clientCount || '0') * 0.15 * parseInt(avgFee || '0')
+  );
+
+  const handleCalculate = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!clientCount || parseInt(clientCount) <= 0) {
+      toast.error('Please enter a valid number of clients.');
+      return;
+    }
+    if (!avgFee || parseInt(avgFee) <= 0) {
+      toast.error('Please enter a valid average fee.');
+      return;
+    }
+    setIsCalculated(true);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      toast.error('Please enter your email address.');
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const { error } = await supabase.functions.invoke('form-submit', {
+        body: {
+          form_type: 'growth_calculator',
+          data: {
+            email,
+            client_count: parseInt(clientCount),
+            avg_fee: parseInt(avgFee),
+            calculated_revenue: potentialRevenue,
+          },
+          page_url: '/accounting-firm-growth-calculator/',
+        },
+      });
+      if (error) throw error;
+      setIsSubmitted(true);
+      toast.success('Your personalized growth plan is on its way!');
+    } catch (err) {
+      console.error('Form submission error:', err);
+      toast.error('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const scrollToForm = () => {
     const formElement = document.getElementById("calculator-form");
@@ -34,7 +83,7 @@ const GrowthCalculator = () => {
     <>
       <SEO
         title="Accounting Firm Growth Calculator | SmartFirm.io"
-        description="Accounting firm growth calculator — input your client count, fees, and capacity to see how many clients and dollars you're leaving on the table."
+        description="Accounting firm growth calculator. Input your client count, fees, and capacity to see how many clients and dollars you're leaving on the table."
         canonicalUrl="https://smartfirm.io/accounting-firm-growth-calculator/"
       />
       <FunnelHeader />
@@ -57,35 +106,150 @@ const GrowthCalculator = () => {
 
               <div id="sf-keyword-intro">
                 <p className="text-lg text-gray-700">
-                  Use our accounting firm growth calculator to input your client count, average fees, and capacity — then see how many clients you're leaving on the table.
+                  Use our accounting firm growth calculator to input your client count, average fees, and capacity, then see how many clients you're leaving on the table.
                 </p>
               </div>
             </div>
 
             {/* Right Column - Form */}
             <div id="calculator-form" className="bg-white rounded-lg p-6 elevation-2 min-h-[493px]">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/SiWJkhgszdob40Rkfcs2"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                  borderRadius: "3px",
-                }}
-                id="inline-SiWJkhgszdob40Rkfcs2"
-                data-layout='{"id":"INLINE"}'
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Calculator"
-                data-height="493"
-                data-layout-iframe-id="inline-SiWJkhgszdob40Rkfcs2"
-                data-form-id="SiWJkhgszdob40Rkfcs2"
-                title="Calculator"
-              />
+              {/* STEP 3: Success */}
+              {isSubmitted ? (
+                <div className="flex flex-col items-center justify-center h-full min-h-[420px] text-center space-y-6">
+                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="16" cy="16" r="16" fill="hsl(var(--primary))" />
+                      <path d="M10 16L14 20L22 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-primary">
+                    You're All Set!
+                  </h3>
+                  <p className="text-gray-700 max-w-sm">
+                    Your personalized growth plan is on its way to <span className="font-semibold">{email}</span>. Check your inbox for actionable steps to unlock your firm's growth potential.
+                  </p>
+                </div>
+              ) : !isCalculated ? (
+                /* STEP 1: Calculator Input */
+                <form onSubmit={handleCalculate} className="space-y-6">
+                  <div className="text-center mb-2">
+                    <h3 className="text-xl font-heading font-bold text-primary">
+                      Calculate Your Growth Potential
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Enter your numbers below to see how much revenue you could be missing.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="clientCount" className="text-gray-800 font-medium">
+                      Number of Current Clients
+                    </Label>
+                    <Input
+                      id="clientCount"
+                      type="number"
+                      min="1"
+                      placeholder="e.g. 50"
+                      value={clientCount}
+                      onChange={(e) => setClientCount(e.target.value)}
+                      required
+                      className="text-base"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="avgFee" className="text-gray-800 font-medium">
+                      Average Fee per Client
+                    </Label>
+                    <div className="relative">
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-medium">
+                        $
+                      </span>
+                      <Input
+                        id="avgFee"
+                        type="number"
+                        min="1"
+                        placeholder="2500"
+                        value={avgFee}
+                        onChange={(e) => setAvgFee(e.target.value)}
+                        required
+                        className="pl-7 text-base"
+                      />
+                    </div>
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold rounded-lg"
+                  >
+                    Calculate My Growth
+                  </Button>
+                </form>
+              ) : (
+                /* STEP 2: Results + Email Gate */
+                <div className="space-y-6">
+                  <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-center">
+                    <p className="text-sm text-gray-600 mb-1">Your Growth Potential</p>
+                    <p className="text-4xl font-heading font-bold text-primary">
+                      ${potentialRevenue.toLocaleString()}
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1">in additional annual revenue</p>
+                  </div>
+
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    With <span className="font-semibold">{parseInt(clientCount).toLocaleString()} clients</span> at{' '}
+                    <span className="font-semibold">${parseInt(avgFee).toLocaleString()}</span> average fee,
+                    optimized marketing could generate an additional{' '}
+                    <span className="font-semibold text-primary">${potentialRevenue.toLocaleString()}</span> in annual revenue.
+                  </p>
+
+                  <form onSubmit={handleSubmit} className="space-y-4 border-t border-gray-200 pt-5">
+                    <h4 className="text-lg font-heading font-semibold text-primary">
+                      Get Your Personalized Growth Plan
+                    </h4>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-gray-800 font-medium">
+                        Email Address
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="you@yourfirm.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="text-base"
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg font-semibold rounded-lg"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        'Send My Growth Plan'
+                      )}
+                    </Button>
+                  </form>
+
+                  <button
+                    type="button"
+                    onClick={() => setIsCalculated(false)}
+                    className="text-sm text-gray-500 hover:text-primary underline w-full text-center"
+                  >
+                    Recalculate with different numbers
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>

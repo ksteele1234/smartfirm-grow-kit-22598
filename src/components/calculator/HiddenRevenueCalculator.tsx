@@ -62,7 +62,7 @@ export const HiddenRevenueCalculator = () => {
 
     setIsSubmitting(true);
 
-    const payload = {
+    const formData = {
       email: cleanedEmail,
       client_count: parseInt(clientCount) || 0,
       avg_fee: parseInt(avgFee) || 2500,
@@ -70,19 +70,21 @@ export const HiddenRevenueCalculator = () => {
       source: "calculator-lead-magnet",
     };
 
-    // Debug (avoid logging full email address)
-    // Debug (avoid logging full email address)
-    const emailDomain = cleanedEmail.split("@")[1] || "";
-
     try {
       const { data, error } = await supabase.functions.invoke(
-        "ghl-reactivation-webhook",
-        { body: payload },
+        "form-submit",
+        {
+          body: {
+            form_type: "growth_calculator",
+            data: formData,
+            page_url: window.location.pathname,
+          },
+        },
       );
 
       if (error) throw error;
       if (!data?.success) {
-        throw new Error(data?.error || "Webhook rejected the request");
+        throw new Error(data?.error || "Submission failed");
       }
 
       toast.success("Sent — check your inbox.");
@@ -95,7 +97,7 @@ export const HiddenRevenueCalculator = () => {
       // console.error("Calculator webhook failed:", message); // Keep internal error for now or remove? User asked to clear cleanup.
       // I'll keep the error log for critical failures but remove the "submit" log.
       console.error("Calculator webhook failed:", message);
-      toast.error("Couldn’t send your email—please try again.");
+      toast.error("Couldn’t send your email. Please try again.");
       setIsSubmitting(false);
       return;
     }

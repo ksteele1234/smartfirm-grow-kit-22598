@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CalEmbed } from "@/components/ui/cal-embed";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -31,21 +32,6 @@ import FaqAnswer from "@/components/faq/FaqAnswer";
 
 const GetStarted = () => {
   const [openFaqItem, setOpenFaqItem] = useState<number | null>(null);
-  useEffect(() => {
-    // Load the booking script
-    const script = document.createElement('script');
-    script.src = 'https://link.msgsndr.com/js/form_embed.js';
-    script.type = 'text/javascript';
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://link.msgsndr.com/js/form_embed.js"]');
-      if (existingScript) {
-        document.head.removeChild(existingScript);
-      }
-    };
-  }, []);
   const engagementOptions = [
     {
       icon: Calendar,
@@ -159,13 +145,7 @@ const GetStarted = () => {
         <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 elevation-1 w-full max-w-container-3xl mx-auto">
-              <iframe 
-                src="https://api.leadconnectorhq.com/widget/booking/1IIG0vYonSNZxTHPcaZp" 
-                style={{width: '100%', border: 'none', overflow: 'hidden', borderRadius: '8px', minHeight: '600px'}}
-                scrolling="no" 
-                id="KLvW5plbvzaBvLcQYv7k_1759007988370"
-                title="Book a Free Call"
-              />
+              <CalEmbed calLink="PLACEHOLDER/30min" className="rounded-lg" />
             </div>
           </div>
         </div>
