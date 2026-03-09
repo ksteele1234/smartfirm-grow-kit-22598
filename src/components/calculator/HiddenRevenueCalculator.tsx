@@ -89,8 +89,8 @@ export const HiddenRevenueCalculator = () => {
 
       toast.success("Sent — check your inbox.");
       pushDataLayer("calculator_email_submitted", {
-        client_count: payload.client_count,
-        calculated_revenue: payload.calculated_revenue
+        client_count: formData.client_count,
+        calculated_revenue: formData.calculated_revenue
       });
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : "Unknown error";
