@@ -62,7 +62,7 @@ function severityBadge(severity: string): string {
   return `<span style="display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;${colors[severity] || colors.moderate}">${severity}</span>`;
 }
 
-function emailWrapper(bodyHtml: string): string {
+function emailWrapper(bodyHtml: string, preheader = ""): string {
   return `<!DOCTYPE html>
 <html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -72,6 +72,7 @@ function emailWrapper(bodyHtml: string): string {
   <style>@media only screen and (max-width:620px){.email-container{width:100%!important;}.body-padding{padding:24px 16px!important;}.header-padding{padding:12px 20px!important;}}</style>
 </head>
 <body style="margin:0;padding:0;background-color:#f7f7f7;font-family:Arial,Helvetica,sans-serif;">
+  ${preheader ? `<div style="display:none;font-size:1px;color:#f7f7f7;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${preheader}</div>` : ""}
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f7f7f7;">
     <tr><td align="center" style="padding:20px 12px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="email-container" style="max-width:600px;background-color:#ffffff;border-radius:12px;overflow:hidden;">
@@ -122,7 +123,7 @@ function buildEmail1Html(firstName: string): string {
       I'll follow up in a day or two with some insights firm owners often find eye-opening.
     </p>
     ${signOff()}
-  `);
+  `, "Your Firm Owner Diagnostic is ready to download. 13 questions that reveal where your firm is quietly losing revenue.");
 }
 
 /** Personalized quiz results email with priorities, easy fixes, and free call CTA */
@@ -204,7 +205,7 @@ function buildQuizResultsHtml(firstName: string, results: QuizResultsData): stri
     <p style="margin:0 0 20px;font-size:13px;color:#999999;text-align:center;">No sales pitch. No obligation. Just a conversation about what your scores mean.</p>
 
     ${signOff()}
-  `);
+  `, `Your firm is losing an estimated ${formatDollars(results.dollarLow)}-${formatDollars(results.dollarHigh)} per year. Here is your priority breakdown and quick wins.`);
 }
 
 // ---------------------------------------------------------------------------

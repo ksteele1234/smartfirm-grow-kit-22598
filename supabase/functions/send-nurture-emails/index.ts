@@ -12,7 +12,7 @@ const corsHeaders = {
 // ---------------------------------------------------------------------------
 
 /** Shared wrapper: gradient header, body slot, Katie signature footer. */
-function wrapEmail(firstName: string, bodyHtml: string): string {
+function wrapEmail(firstName: string, bodyHtml: string, preheader = ""): string {
   return `<!DOCTYPE html>
 <html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -23,6 +23,7 @@ function wrapEmail(firstName: string, bodyHtml: string): string {
 <style>@media only screen and (max-width:620px){.email-container{width:100%!important;}.body-padding{padding:24px 16px!important;}.header-padding{padding:12px 20px!important;}}</style>
 </head>
 <body style="margin:0;padding:0;background-color:#f4f5f7;font-family:Arial,Helvetica,sans-serif;">
+${preheader ? `<div style="display:none;font-size:1px;color:#f4f5f7;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">${preheader}</div>` : ""}
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f5f7;">
 <tr><td align="center" style="padding:20px 12px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="email-container" style="max-width:600px;background-color:#ffffff;border-radius:8px;overflow:hidden;">
@@ -109,6 +110,7 @@ function getDiagnosticNurtureBody(
 <p style="margin:0 0 8px;font-size:16px;line-height:1.6;color:#0f2942;">
   Talk soon,
 </p>`,
+        "Most firm owners hesitate on at least 3 of the 13 questions. That hesitation points to something worth examining.",
       );
 
     // Step 3 ------------------------------------------------------------------
@@ -137,6 +139,7 @@ function getDiagnosticNurtureBody(
 <p style="margin:0 0 8px;font-size:16px;line-height:1.6;color:#0f2942;">
   I will show you how tomorrow.
 </p>`,
+        "The average firm wastes $42,000 to $106,000 per year on small leaks that compound month after month.",
       );
 
     // Step 4 ------------------------------------------------------------------
@@ -174,6 +177,7 @@ ${ctaButton("Book a Free 15-Minute Results Review")}
 <p style="margin:0 0 8px;font-size:16px;line-height:1.6;color:#0f2942;">
   Talk soon,
 </p>`,
+        "A full process map, waste report, and 90-day roadmap. Three audit levels starting at $3,500.",
       );
 
     // Step 5 ------------------------------------------------------------------
@@ -200,6 +204,7 @@ ${ctaButton("Book a Free 15-Minute Results Review")}
 <p style="margin:0 0 8px;font-size:16px;line-height:1.6;color:#0f2942;">
   To your firm's growth,
 </p>`,
+        "Last email in this series. 15 free minutes could surface $50,000+ in hidden capacity.",
       );
 
     default:
