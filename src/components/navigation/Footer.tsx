@@ -191,7 +191,7 @@ const Footer = () => {
         <div className="pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
             <div className="text-sm text-white/65">
-              © 2025 SmartFirm.io. All rights reserved.
+              © 2026 SmartFirm.io. All rights reserved.
             </div>
             <div className="flex gap-sm text-sm text-white/65">
               <Link to="/privacy-policy/" className="hover:text-primary transition-colors duration-200">

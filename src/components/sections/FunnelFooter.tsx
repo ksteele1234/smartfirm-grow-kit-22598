@@ -6,7 +6,7 @@ export const FunnelFooter = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="text-center">
           <p className="text-white/80 text-sm">
-            Copyrights 2025 | SmartFirm |{" "}
+            Copyrights 2026 | SmartFirm |{" "}
             <Link to="/terms-of-service/" className="hover:text-white transition-colors">
               Terms & Conditions
             </Link>
