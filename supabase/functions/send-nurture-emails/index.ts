@@ -365,11 +365,39 @@ serve(async (req) => {
             `send-nurture-emails: Resend error for event ${emailEvent.id}: ${errMsg}`,
           );
 
+          // Detect bounces vs generic failures
+          const isBounce = errMsg.toLowerCase().includes("bounce") ||
+            errMsg.toLowerCase().includes("invalid") ||
+            errMsg.toLowerCase().includes("not found") ||
+            errMsg.toLowerCase().includes("rejected");
+
+          const failStatus = isBounce ? "bounced" : "failed";
+
           await supabase
             .from("email_events")
-            .update({ status: "failed" })
+            .update({ status: failStatus })
             .eq("id", emailEvent.id);
           failures.push({ id: emailEvent.id, error: errMsg });
+
+          // Send Telegram alert for bounces and failures (non-fatal)
+          try {
+            const telegramToken = Deno.env.get("TELEGRAM_BOT_TOKEN");
+            const telegramChatId = Deno.env.get("TELEGRAM_CHAT_ID");
+            if (telegramToken && telegramChatId) {
+              const bounceMsg = `Email ${isBounce ? "bounce" : "failure"}: ${contact.email} (step ${emailEvent.step_number} of ${emailEvent.sequence_name}). Error: ${errMsg}`;
+              await fetch(
+                `https://api.telegram.org/bot${telegramToken}/sendMessage`,
+                {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ chat_id: telegramChatId, text: bounceMsg }),
+                },
+              );
+            }
+          } catch (tgErr) {
+            console.error("send-nurture-emails: bounce Telegram alert failed", tgErr);
+          }
+
           continue;
         }
 

@@ -513,6 +513,20 @@ export function useDealMutation() {
       description: `Deal "${title}" moved from ${oldStage} to ${newStage}`,
       metadata: { deal_id: id, old_stage: oldStage, new_stage: newStage },
     });
+
+    // Telegram notification (non-fatal, fire-and-forget)
+    const stageLabels: Record<string, string> = {
+      discovery: "Discovery", proposal: "Proposal", negotiation: "Negotiation",
+      closed_won: "Closed Won", closed_lost: "Closed Lost",
+    };
+    const message = `Deal stage change: "${title}" moved from ${stageLabels[oldStage] || oldStage} to ${stageLabels[newStage] || newStage}`;
+    try {
+      supabase.functions.invoke("send-telegram-alert", {
+        body: { message },
+      });
+    } catch {
+      // Non-fatal: don't break CRM if Telegram fails
+    }
   };
 
   return { createDeal, updateDeal, changeDealStage };
