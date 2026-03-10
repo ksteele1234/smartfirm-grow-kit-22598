@@ -122,6 +122,13 @@ const CategoryManager = lazyWithRetry(() => import("./pages/admin/CategoryManage
 const TagManager = lazyWithRetry(() => import("./pages/admin/TagManager"));
 const ProfileManager = lazyWithRetry(() => import("./pages/admin/ProfileManager"));
 
+// CRM Pages
+const CrmOverview = lazyWithRetry(() => import("./pages/admin/crm/CrmOverview"));
+const PipelinePage = lazyWithRetry(() => import("./pages/admin/crm/PipelinePage"));
+const ContactsPage = lazyWithRetry(() => import("./pages/admin/crm/ContactsPage"));
+const ActivityPage = lazyWithRetry(() => import("./pages/admin/crm/ActivityPage"));
+const EmailStatsPage = lazyWithRetry(() => import("./pages/admin/crm/EmailStatsPage"));
+
 
 // Loading fallback component
 const PageLoader = () => (
@@ -324,6 +331,12 @@ const App = () => (
               <Route path="categories" element={<CategoryManager />} />
               <Route path="tags" element={<TagManager />} />
               <Route path="profiles" element={<ProfileManager />} />
+              {/* CRM Routes */}
+              <Route path="crm" element={<CrmOverview />} />
+              <Route path="crm/pipeline" element={<PipelinePage />} />
+              <Route path="crm/contacts" element={<ContactsPage />} />
+              <Route path="crm/activity" element={<ActivityPage />} />
+              <Route path="crm/emails" element={<EmailStatsPage />} />
             </Route>
 
             {/* Programmatic SEO Pages */}

@@ -3,27 +3,52 @@ import { Outlet, useNavigate, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import { 
-  LayoutDashboard, 
-  FileText, 
-  FolderOpen, 
-  Tags, 
+import {
+  LayoutDashboard,
+  FileText,
+  FolderOpen,
+  Tags,
   Users,
   LogOut,
   Loader2,
   Menu,
-  X
+  X,
+  BarChart3,
+  DollarSign,
+  Activity,
+  Mail,
+  Contact,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
-const navItems = [
-  { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/admin/posts', label: 'Posts', icon: FileText },
-  { href: '/admin/categories', label: 'Categories', icon: FolderOpen },
-  { href: '/admin/tags', label: 'Tags', icon: Tags },
-  { href: '/admin/profiles', label: 'Authors', icon: Users },
+interface NavSection {
+  title: string;
+  items: { href: string; label: string; icon: React.ComponentType<{ size?: number }> }[];
+}
+
+const navSections: NavSection[] = [
+  {
+    title: 'CRM',
+    items: [
+      { href: '/admin/crm', label: 'Overview', icon: BarChart3 },
+      { href: '/admin/crm/pipeline', label: 'Pipeline', icon: DollarSign },
+      { href: '/admin/crm/contacts', label: 'Contacts', icon: Contact },
+      { href: '/admin/crm/activity', label: 'Activity', icon: Activity },
+      { href: '/admin/crm/emails', label: 'Emails', icon: Mail },
+    ],
+  },
+  {
+    title: 'Blog',
+    items: [
+      { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
+      { href: '/admin/posts', label: 'Posts', icon: FileText },
+      { href: '/admin/categories', label: 'Categories', icon: FolderOpen },
+      { href: '/admin/tags', label: 'Tags', icon: Tags },
+      { href: '/admin/profiles', label: 'Authors', icon: Users },
+    ],
+  },
 ];
 
 export default function AdminLayout() {
@@ -97,26 +122,38 @@ export default function AdminLayout() {
             </div>
 
             {/* Navigation */}
-            <nav className="flex-1 p-4 space-y-1 mt-16 lg:mt-0">
-              {navItems.map((item) => {
-                const isActive = location.pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={cn(
-                      'flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-                      isActive
-                        ? 'bg-primary text-white'
-                        : 'text-slate-600 hover:bg-slate-100 hover:text-primary'
-                    )}
-                  >
-                    <item.icon size={18} />
-                    {item.label}
-                  </Link>
-                );
-              })}
+            <nav className="flex-1 p-4 space-y-4 mt-16 lg:mt-0">
+              {navSections.map((section) => (
+                <div key={section.title}>
+                  <div className="px-3 mb-1 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    {section.title}
+                  </div>
+                  <div className="space-y-1">
+                    {section.items.map((item) => {
+                      const isActive =
+                        item.href === '/admin'
+                          ? location.pathname === '/admin'
+                          : location.pathname.startsWith(item.href);
+                      return (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={cn(
+                            'flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
+                            isActive
+                              ? 'bg-primary text-white'
+                              : 'text-slate-600 hover:bg-slate-100 hover:text-primary'
+                          )}
+                        >
+                          <item.icon size={18} />
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
             </nav>
 
             {/* User section */}
