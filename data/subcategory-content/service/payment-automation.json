@@ -68,5 +68,271 @@
     "tax preparers": {
       "heroDescription": "Tax season is hectic enough without having to chase clients for payment after the work is already done. Payment automation services ensure invoices go out as returns are completed, reminders follow up consistently on outstanding balances, and clients have a convenient online option to pay immediately. The result is typically faster collection and less awkward follow up during your busiest months."
     }
+  },
+  "slugOverrides": {
+    "payment-automation-for-cpas": {
+      "heroSubtitleTemplate": "Bring together invoicing, payment collection, and recurring billing into one streamlined workflow so your CPA firm can spend less time on accounts receivable and more time advising clients.",
+      "heroDescription": "Many CPA firms still rely on a patchwork of spreadsheets, manual invoice emails, and scattered follow-ups to manage billing. That approach works until it does not, usually around the time your firm starts growing and the volume of invoices outpaces what your team can handle by hand. Full payment automation brings invoicing, collection, and recurring billing under one roof, giving you a consistent and reliable revenue cycle without the administrative overhead.",
+      "benefits": [
+        {
+          "title": "A Unified Billing Workflow From Start to Finish",
+          "description": "When invoicing, payment collection, and recurring billing all operate within a single automated system, nothing falls through the cracks. Your team no longer needs to toggle between tools or manually reconcile what has been sent, paid, or overdue. Everything lives in one place and moves forward on its own."
+        },
+        {
+          "title": "Reduced Administrative Burden on Your Staff",
+          "description": "Time spent generating invoices, sending payment reminders, and tracking down late payments adds up quickly in a growing CPA firm. Automating these tasks can free your administrative staff to focus on higher-value activities like client onboarding, engagement coordination, and internal reporting."
+        },
+        {
+          "title": "More Predictable Revenue Across Engagement Types",
+          "description": "Whether your firm bills monthly retainers for advisory work, fixed fees for annual compliance, or hourly rates for special projects, automating the entire payment cycle tends to make revenue more predictable. Invoices go out on schedule, clients pay more promptly, and recurring charges process without manual intervention."
+        }
+      ],
+      "features": [
+        {
+          "title": "End-to-End Invoice Automation",
+          "description": "Invoices are created and delivered automatically based on your engagement terms. Whether a client is on a monthly advisory retainer or an annual compliance engagement, the system handles the timing, formatting, and delivery without anyone on your team having to initiate it.",
+          "details": [
+            "Invoices configured per client based on engagement type, billing frequency, and fee structure",
+            "Automatic delivery through email with a direct link to your branded payment portal",
+            "Line-item detail that reflects the specific services rendered for each billing period"
+          ]
+        },
+        {
+          "title": "Integrated Payment Collection With Smart Follow-Ups",
+          "description": "Once an invoice is delivered, the collection process begins automatically. Clients receive reminders at intervals you define, and the system tracks every payment status so your team always knows where things stand without having to check manually.",
+          "details": [
+            "Configurable reminder sequences that escalate in tone based on how far past due a balance becomes",
+            "Real-time dashboards showing which invoices are paid, pending, or overdue across all clients",
+            "Automatic cessation of reminders once payment is received so clients are never contacted unnecessarily"
+          ]
+        },
+        {
+          "title": "Recurring Billing for Retainer and Subscription Engagements",
+          "description": "For clients on ongoing engagements, recurring billing runs in the background each cycle. Charges are processed automatically, receipts are sent, and your accounting records update without anyone having to remember to bill a client or process a payment.",
+          "details": [
+            "Monthly, quarterly, or annual billing cycles configured individually for each client engagement",
+            "Autopay enrollment options that let clients authorize recurring charges at the start of the relationship",
+            "Failed payment handling with automatic retry logic and client notification so nothing goes unresolved"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does full payment automation work for a CPA firm that has multiple engagement types with different billing structures?",
+          "answer": "The system is configured to handle each client engagement individually. A client on a monthly advisory retainer gets billed differently than one with an annual compliance fee or an hourly special project. Each engagement has its own billing rules, invoice schedule, and collection workflow, all running simultaneously without your team needing to manage them separately.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will our clients notice a change in how they receive and pay invoices?",
+          "answer": "Clients will likely notice an improvement. Instead of receiving inconsistent emails with PDF attachments, they get a professional invoice with a direct link to a branded portal where they can pay in just a few clicks. Most firms find that clients appreciate the convenience and clarity, which often leads to faster payment as well.",
+          "category": "General"
+        },
+        {
+          "question": "Can the automated system integrate with our existing practice management and accounting software?",
+          "answer": "In most cases, yes. We work with the tools your firm already uses, whether that includes a practice management platform, a general ledger system, or both. The goal is to ensure that when a payment is collected, it flows through to your records without manual data entry or duplicate reconciliation work.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Unify Your Firm's Entire Payment Workflow?",
+      "ctaDescription": "Schedule a conversation with our team and we will walk through how invoicing, collection, and recurring billing can all run automatically for your CPA firm, so you can focus on the work that matters most."
+    },
+    "payment-collection-system-for-tax-preparers": {
+      "heroSubtitleTemplate": "Build a payment collection system designed for the unique rhythms of tax preparation, from seasonal billing surges to split payment arrangements and consistent collections during peak filing periods.",
+      "heroDescription": "Tax preparation firms face a billing challenge that most other professional services do not. Revenue concentrates heavily around filing deadlines, client volumes spike dramatically for a few months, and many clients expect to pay only after their returns are filed. A payment collection system built around these realities helps tax preparers collect what they have earned without the awkward follow-ups and seasonal cash flow gaps that come with manual billing.",
+      "benefits": [
+        {
+          "title": "Seasonal Billing That Matches Your Filing Workflow",
+          "description": "Your busiest months should not also be the months where you are spending the most time chasing payments. A properly configured collection system sends invoices as returns are completed and follows up automatically, so billing keeps pace with your filing output without additional effort from your team."
+        },
+        {
+          "title": "Flexible Payment Options That Clients Actually Use",
+          "description": "Not every tax client can pay the full preparation fee upfront, especially when they also owe a balance to the IRS. Offering split payment plans and installment options through an automated system tends to improve both collection rates and client satisfaction, since people appreciate having choices."
+        },
+        {
+          "title": "Consistent Collections Even During Your Busiest Weeks",
+          "description": "During filing season, your team is focused on getting returns out the door. An automated collection system ensures that payment follow-ups continue running in the background, so revenue keeps coming in even when no one on your team has time to think about billing."
+        }
+      ],
+      "features": [
+        {
+          "title": "Seasonal Billing Configuration",
+          "description": "The collection system adapts to the natural rhythm of a tax preparation practice. Invoicing ramps up as returns are completed during peak season and adjusts during off-season months when your workload shifts to planning, amendments, or extension filings.",
+          "details": [
+            "Billing triggers tied to return completion status so invoices go out at the right moment in your workflow",
+            "Volume handling designed for the surge of invoices that tax season generates without any bottleneck",
+            "Off-season billing adjustments for extension work, amendments, and planning engagements"
+          ]
+        },
+        {
+          "title": "Split Payment and Installment Management",
+          "description": "For clients who need to break their preparation fees into smaller amounts, the system manages the entire installment process automatically. Payment plans are set up at the start of the engagement, and each installment is billed and collected on schedule without manual tracking.",
+          "details": [
+            "Customizable installment plans that can be offered to clients at the point of engagement",
+            "Automatic billing of each installment on the agreed schedule with reminders for upcoming charges",
+            "Clear visibility into which clients are on payment plans and the status of each remaining installment"
+          ]
+        },
+        {
+          "title": "Peak Season Collection Workflows",
+          "description": "During filing season, the collection system operates on autopilot. Invoices are sent, reminders escalate, and payments are tracked without your team needing to intervene. The only time a human needs to step in is when an account has been flagged for personal attention after automated attempts have been exhausted.",
+          "details": [
+            "Hands-free reminder sequences that run continuously throughout the filing season rush",
+            "Priority flagging for high-value accounts that may warrant a personal phone call from a partner",
+            "End-of-season collection reports that show exactly where outstanding balances stand as filing deadlines pass"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How quickly can the collection system be set up before tax season starts?",
+          "answer": "Most tax preparation firms can be fully configured and running within a few weeks, depending on the complexity of your pricing structure and the number of clients. We recommend starting the setup process well before your busy season begins so everything is tested and your team is comfortable with the workflow before returns start going out the door.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens if a client on a split payment plan misses an installment?",
+          "answer": "The system automatically sends a reminder for the missed installment and can attempt to process the payment again if the client has autopay enabled. If the payment continues to fail, the account is flagged for your team to review. You decide how many automatic attempts and reminders happen before it escalates to a personal follow-up.",
+          "category": "General"
+        },
+        {
+          "question": "Can the system handle different fee structures for different types of returns?",
+          "answer": "Yes. Whether you charge a flat fee per return type, use a tiered pricing model based on complexity, or have custom pricing for certain client segments, the collection system is configured to reflect your specific fee structure. Each client receives an invoice that accurately reflects the services they received and the price they were quoted.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Want a Collection System Built Around Tax Season?",
+      "ctaDescription": "Let us review your current billing process and show you how a payment collection system designed for tax preparation can help you collect faster during your busiest months without adding work to your plate."
+    },
+    "billing-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Automate the recurring invoicing, payment reminders, and collection workflows that keep your bookkeeping firm's revenue flowing month after month without manual effort.",
+      "heroDescription": "Bookkeeping firms live on recurring revenue, which means billing should be one of the most predictable parts of your operation. Yet many firms still spend hours each month creating invoices, sending reminders, and manually tracking who has paid and who has not. Billing automation takes these repetitive tasks off your team's plate entirely, ensuring that every client is invoiced on schedule, reminded when necessary, and given a frictionless way to pay.",
+      "benefits": [
+        {
+          "title": "Recurring Invoicing That Runs Itself",
+          "description": "When the majority of your clients are on monthly retainers, manually creating and sending invoices each cycle is time you should not have to spend. Automated recurring invoicing generates and delivers each client's bill on the same schedule every month, so your team never has to think about it."
+        },
+        {
+          "title": "Fewer Overdue Balances Without Uncomfortable Conversations",
+          "description": "Late payments are an unavoidable reality in any service business, but chasing them does not have to be. Automated payment reminders handle the follow-up professionally and consistently, often resolving overdue balances before your team even becomes aware there was a delay."
+        },
+        {
+          "title": "Clear Visibility Into Your Firm's Financial Health",
+          "description": "When billing and collection data is centralized in one automated system, you gain a clear picture of your firm's revenue at any given moment. You can see which clients are current, which are behind, and what your projected revenue looks like for the coming months, all without pulling together numbers from multiple sources."
+        }
+      ],
+      "features": [
+        {
+          "title": "Monthly Recurring Invoice Generation",
+          "description": "Each client's monthly invoice is generated and sent automatically based on the terms of their engagement. Whether you bill a flat monthly retainer, a tiered fee based on transaction volume, or a hybrid structure, the system handles the details and delivers a professional invoice on time every cycle.",
+          "details": [
+            "Client-specific invoice templates that reflect each engagement's fee structure and service scope",
+            "Scheduled delivery on the same day each month with no manual action required from your team",
+            "Automatic adjustments for clients whose billing terms change mid-engagement due to scope modifications"
+          ]
+        },
+        {
+          "title": "Intelligent Payment Reminder Sequences",
+          "description": "When a client misses a payment, the system initiates a reminder sequence that you have designed in advance. Each message is timed, toned, and worded to reflect your firm's brand, and the sequence stops the moment payment is received so clients are never over-contacted.",
+          "details": [
+            "Multi-step reminder sequences with configurable timing, such as three days, one week, and two weeks past due",
+            "Messaging templates that you control so every communication sounds like it came from your firm",
+            "Automatic suppression of reminders once payment is detected to avoid sending unnecessary follow-ups"
+          ]
+        },
+        {
+          "title": "Centralized Collection Dashboard",
+          "description": "A single dashboard gives you an at-a-glance view of your entire billing and collection status. You can see which invoices have been sent, which are paid, which are overdue, and which clients may need a personal conversation from someone on your team.",
+          "details": [
+            "Real-time status indicators for every active client invoice across your entire book of business",
+            "Aging reports that categorize outstanding balances by how far past due they are",
+            "Export capabilities so you can pull collection data into your own financial reporting as needed"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does billing automation handle clients who change their service level mid-month?",
+          "answer": "When a client's scope changes, you update their engagement terms in the system and the next invoice reflects the new billing amount. Depending on your preference, the system can prorate the current month or apply the change starting with the following billing cycle. Either way, the adjustment is handled automatically going forward.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Is it possible to customize the look and feel of the invoices our clients receive?",
+          "answer": "Yes. Invoices are branded with your firm's logo, colors, and contact information, and you can customize the line-item descriptions, payment terms, and footer messaging. The goal is for every invoice to look and feel like it came directly from your firm, because it did.",
+          "category": "General"
+        },
+        {
+          "question": "How does the system handle clients who pay by check or wire transfer instead of online?",
+          "answer": "The system can accommodate multiple payment methods. When a client pays by check or wire, your team marks the payment as received manually, and the system updates the client's account and stops any active reminder sequences. Over time, many firms find that offering convenient online payment options gradually shifts more clients toward digital payments.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Put Your Bookkeeping Firm's Billing on Autopilot?",
+      "ctaDescription": "Book a call with our team and we will review your current invoicing and collection process together, then map out how automation can save your firm time and improve your monthly cash flow."
+    },
+    "payment-processing-for-cpas": {
+      "heroSubtitleTemplate": "Integrate the right payment methods into your CPA firm's workflow, streamline how transactions are processed, and simplify reconciliation so every dollar is accounted for without extra manual work.",
+      "heroDescription": "For many CPA firms, accepting and processing payments is more cumbersome than it needs to be. Clients pay through different channels, receipts need to be matched to invoices, and reconciling everything at the end of the month takes time that could be spent elsewhere. Payment processing services help your firm accept payments through the methods your clients prefer, route those transactions through efficient workflows, and reconcile everything automatically so your books stay clean.",
+      "benefits": [
+        {
+          "title": "Accept the Payment Methods Your Clients Expect",
+          "description": "Today's clients expect to pay the way that is most convenient for them, whether that is a credit card, ACH transfer, or online bank payment. Offering multiple options through a single integrated system removes friction from the payment experience and often leads to faster collection."
+        },
+        {
+          "title": "Streamlined Processing That Reduces Manual Touchpoints",
+          "description": "When a client makes a payment, it should flow through your system automatically, from receipt to invoice matching to ledger entry. Reducing the number of manual steps in your processing workflow means fewer errors, less administrative time, and a cleaner audit trail."
+        },
+        {
+          "title": "Simplified Reconciliation at Month End",
+          "description": "Matching payments to invoices and ensuring everything ties out in your accounting records can be one of the most tedious parts of running a firm. Automated reconciliation matches incoming payments to outstanding invoices and flags any discrepancies for review, so month-end closes become significantly less time-consuming."
+        }
+      ],
+      "features": [
+        {
+          "title": "Multi-Method Payment Integration",
+          "description": "Your firm's payment portal is configured to accept the methods that work best for your client base and your fee structure. Credit cards, ACH transfers, and online bank payments can all be offered through a single branded experience, with processing fees handled according to your preferences.",
+          "details": [
+            "Credit card, debit card, and ACH acceptance through one unified portal clients can access anytime",
+            "Configurable fee handling so you can absorb processing costs, pass them to clients, or use a blended approach",
+            "Secure payment processing that meets industry standards for data protection and transaction security"
+          ]
+        },
+        {
+          "title": "Processing Workflow Optimization",
+          "description": "Every payment follows a defined path from the moment it is initiated to the moment it is recorded in your system. The workflow routes each transaction through validation, matching, and recording steps automatically, so your team only gets involved when something needs attention.",
+          "details": [
+            "Automatic validation of payment details before processing to reduce failed transactions and chargebacks",
+            "Invoice matching logic that ties each incoming payment to the correct outstanding balance in your system",
+            "Exception handling that flags unusual transactions or partial payments for your team to review"
+          ]
+        },
+        {
+          "title": "Automated Reconciliation and Reporting",
+          "description": "At the end of each day, week, or month, the system reconciles processed payments against your outstanding invoices and accounting records. Discrepancies are identified and flagged immediately, and summary reports give you a clear picture of your firm's payment activity.",
+          "details": [
+            "Daily or weekly reconciliation runs that match processed payments to open invoices automatically",
+            "Discrepancy alerts that notify your team when a payment does not match an expected amount or invoice",
+            "Summary reports covering payment volume, method breakdown, processing fees, and outstanding balances"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do we decide which payment methods to offer our clients?",
+          "answer": "We typically recommend starting with the methods that cover the broadest range of client preferences, usually credit cards and ACH transfers. From there, we look at your client demographics, average invoice size, and your firm's tolerance for processing fees to fine-tune the mix. Larger invoices often favor ACH since the fees are typically lower, while smaller amounts may work well with card payments for convenience.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will switching to a new payment processing system disrupt our current clients?",
+          "answer": "The transition is designed to be as seamless as possible for your clients. In most cases, clients simply receive an updated payment link that directs them to your new branded portal. Clients who were previously paying by check or other manual methods can continue doing so while gradually being introduced to the online options. The goal is to improve the experience, not create confusion.",
+          "category": "General"
+        },
+        {
+          "question": "How does the reconciliation process handle payments that come in through different channels?",
+          "answer": "The system is designed to aggregate payments regardless of how they arrive. Whether a client pays through the online portal, initiates an ACH transfer from their bank, or sends a check that your team records manually, each payment is matched to the corresponding invoice and reflected in your reconciliation reports. This centralized approach ensures nothing is missed, even when payments arrive through multiple channels.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Want Cleaner Payment Processing for Your CPA Firm?",
+      "ctaDescription": "Schedule a free consultation and we will assess your current payment workflow together, then outline how integrated processing and automated reconciliation can reduce your firm's administrative overhead."
+    }
   }
 }

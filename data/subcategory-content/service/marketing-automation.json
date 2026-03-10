@@ -71,5 +71,337 @@
     "tax preparers": {
       "heroDescription": "For tax preparers, marketing tends to happen in bursts between seasons and then stops entirely when filing deadlines hit. Marketing automation solves this by keeping your firm engaged with prospects and clients year round, even during the months when you barely have time to eat lunch. With properly configured email sequences, CRM workflows, and campaign automation, your practice builds pipeline during busy season and converts it during the quieter months. Done for you implementation means you do not have to become a marketing expert on top of everything else."
     }
+  },
+  "slugOverrides": {
+    "marketing-automation-for-cpas-with-email-sequences": {
+      "heroSubtitleTemplate": "Professionally built email sequences designed to keep your CPA practice connected with clients and prospects on autopilot, from seasonal tax reminders to advisory nurture campaigns.",
+      "heroDescription": "Running a CPA firm means your attention is constantly pulled toward compliance deadlines, client deliverables, and staff management. Marketing through email tends to happen sporadically, if it happens at all. The firms that maintain a steady pipeline of new business often have one thing in common: they have email sequences doing the heavy lifting in the background. Automated nurture sequences can welcome new leads, educate prospects on your service offerings, send timely seasonal reminders before key deadlines, and re-engage past clients who may have drifted. When these sequences are written in your firm's voice and configured with thoughtful timing, recipients experience what feels like personal outreach from your team. The result is a CPA practice that stays visible and top of mind throughout the year without anyone on your staff drafting individual emails or remembering to follow up.",
+      "benefits": [
+        {
+          "title": "Seasonal Campaigns That Deploy Themselves",
+          "description": "Tax season, extension deadlines, year-end planning windows, and quarterly estimate reminders all present opportunities to reach out to clients and prospects. With pre-built seasonal email sequences, these campaigns launch on schedule every year without your team lifting a finger. You can focus on the work itself while your email sequences handle the outreach that keeps clients informed and engaged."
+        },
+        {
+          "title": "Nurture Sequences That Build Trust Over Time",
+          "description": "Most prospective CPA clients are not ready to engage immediately. Automated nurture sequences allow you to stay in front of those prospects with educational content, firm updates, and helpful reminders over weeks or months. By the time they are ready to make a decision, your firm is already the one they know and trust."
+        },
+        {
+          "title": "Client Communication Without the Manual Effort",
+          "description": "Onboarding welcome series, document request reminders, satisfaction check-ins, and annual engagement letters can all be automated through thoughtfully designed email sequences. Your clients receive a consistent, professional communication experience while your team reclaims hours every week that used to go toward drafting and sending individual messages."
+        }
+      ],
+      "features": [
+        {
+          "title": "CPA-Specific Email Sequence Design",
+          "description": "Every email sequence is built around the realities of how CPA firms operate and what their clients and prospects actually need to hear. We write in your firm's voice and structure sequences around the accounting calendar so messages land at the right moment.",
+          "details": [
+            "Lead nurture sequences tailored to common CPA service inquiries like tax planning and advisory",
+            "Onboarding email series that walk new clients through your engagement process smoothly",
+            "Re-engagement sequences targeting past prospects and former clients who may need services again"
+          ]
+        },
+        {
+          "title": "Seasonal Campaign Automation",
+          "description": "We build and schedule campaigns around the key dates that matter to CPA practices. From pre-tax-season outreach to year-end planning reminders, each campaign is designed to drive action at the moment when clients and prospects are most receptive.",
+          "details": [
+            "Tax season preparation campaigns that encourage early document submission",
+            "Year-end advisory outreach promoting planning conversations before December closes",
+            "Extension deadline reminders and quarterly estimate notifications for existing clients"
+          ]
+        },
+        {
+          "title": "Performance Tracking and Sequence Refinement",
+          "description": "Email sequences improve when they are monitored and adjusted based on real engagement data. We track open rates, click behavior, and reply patterns to continuously refine subject lines, timing, and content so your sequences perform better over time.",
+          "details": [
+            "Monthly reporting on sequence performance including open rates and conversions",
+            "Subject line and send time optimization based on how your specific audience responds",
+            "Ongoing content updates to keep sequences fresh and relevant as your services evolve"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How many email sequences does a typical CPA firm need to start?",
+          "answer": "Most CPA firms see strong results starting with three core sequences: a lead nurture series for new prospects, a client onboarding series, and a seasonal campaign tied to tax deadlines. From there, you can layer in additional sequences for re-engagement, referral requests, or advisory service promotion as your comfort level grows. We typically recommend starting focused and expanding once you see how your audience responds.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can email sequences be personalized for different types of CPA clients?",
+          "answer": "Absolutely. We use conditional logic and segmentation so that business clients receive different messaging than individual tax clients, and prospects interested in advisory services see different content than those focused on compliance work. The goal is for each recipient to feel like the communication was written specifically for their situation, which dramatically improves engagement rates.",
+          "category": "Technical"
+        },
+        {
+          "question": "How long does it take before email sequences start producing results?",
+          "answer": "Most CPA firms begin seeing measurable engagement within the first few weeks after launch, including higher open rates and responses from prospects who had gone quiet. Converting that engagement into new clients typically takes one to three months depending on your sales cycle and the services being promoted. The compounding effect is significant because sequences continue working on every new lead that enters your pipeline.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Build Email Sequences That Work While You Focus on Clients?",
+      "ctaDescription": "Schedule a free call and we will walk through which email sequences would have the biggest impact on your CPA practice, based on the services you offer and the prospects you want to reach."
+    },
+    "marketing-automation-for-accountants-with-crm-integration": {
+      "heroSubtitleTemplate": "Done-for-you CRM integration that connects your marketing tools to your practice management systems, so every lead, client interaction, and campaign result flows where it needs to go.",
+      "heroDescription": "Most accounting practices have more tools than they know what to do with. A CRM here, email marketing there, practice management software somewhere else, and none of them talking to each other. The result is duplicate data entry, leads that slip through the cracks, and a team that avoids the CRM because it creates more work than it saves. CRM integration solves this by connecting your marketing automation platform to the tools your team already uses every day. When a new lead fills out a form, they appear in your CRM with the right tags and get added to the appropriate nurture sequence automatically. When a prospect becomes a client, their status updates across systems without anyone manually toggling records. This kind of connected workflow is what separates firms that scale efficiently from firms that stay stuck doing everything manually. The challenge is that getting these integrations right requires someone who understands both the technology and how accounting practices actually operate.",
+      "benefits": [
+        {
+          "title": "One Connected System Instead of Disconnected Tools",
+          "description": "When your CRM integrates properly with your email marketing, practice management, and scheduling tools, your team works from a single source of truth. No more checking three different platforms to understand where a client relationship stands. Information flows automatically between systems so everyone on your team has the context they need without hunting for it."
+        },
+        {
+          "title": "Leads That Never Fall Through the Cracks",
+          "description": "Disconnected systems are where leads go to die. With integrated CRM and marketing automation, every website inquiry, referral, and form submission is captured, tagged, and routed into the correct follow-up workflow immediately. Your team gets notified when action is needed, and automated sequences handle the nurturing in between. Nothing gets lost because the system does the tracking for you."
+        },
+        {
+          "title": "A CRM Your Team Will Actually Use",
+          "description": "The number one reason CRMs fail in accounting practices is because they add work instead of reducing it. When your CRM is integrated with the tools your team already relies on, data populates automatically and workflows trigger without manual input. Adoption increases naturally because the CRM becomes helpful rather than another chore on the to-do list."
+        }
+      ],
+      "features": [
+        {
+          "title": "Practice Management Integration",
+          "description": "We connect your CRM to the practice management platforms your firm relies on so client data stays synchronized. When engagement status changes in one system, it reflects across all connected tools without manual updates from your team.",
+          "details": [
+            "Bi-directional syncing between your CRM and practice management software",
+            "Automatic client status updates when engagements are created or completed",
+            "Contact record enrichment pulling data from multiple sources into a unified profile"
+          ]
+        },
+        {
+          "title": "Marketing Tool Connectivity",
+          "description": "Your email marketing, form builders, scheduling tools, and landing pages all feed data back into your CRM automatically. This creates a complete picture of every prospect's journey from first touch to signed engagement letter, and it powers smarter automation along the way.",
+          "details": [
+            "Email marketing platform integration for seamless campaign management and tracking",
+            "Form and landing page connections so every lead capture flows directly into your CRM",
+            "Calendar and scheduling tool sync to track consultations and follow-up commitments"
+          ]
+        },
+        {
+          "title": "Workflow Automation Across Systems",
+          "description": "Integration is not just about moving data. It is about triggering the right actions at the right time across your entire tech stack. We build automated workflows that respond to events in one system by taking action in another, creating a seamless operational experience.",
+          "details": [
+            "Automated task creation when leads reach specific stages in your pipeline",
+            "Cross-platform notification triggers so your team knows when to take action",
+            "Conditional workflow logic that adapts based on client type, service interest, or engagement stage"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Which CRM and practice management platforms do you integrate with?",
+          "answer": "We work primarily with GoHighLevel as the CRM and marketing automation hub, but we are platform agnostic when it comes to practice management tools. Whether your firm uses Karbon, Canopy, TaxDome, or another platform, we assess what you have in place and build the integrations that make the most sense for your workflow. If a direct integration is not available, we can often use middleware tools to connect systems reliably.",
+          "category": "Technical"
+        },
+        {
+          "question": "How disruptive is the integration process for our day-to-day operations?",
+          "answer": "We design the integration process to be minimally disruptive. Most of the configuration and testing happens behind the scenes before anything goes live. Your team typically needs to be involved for a discovery session to map your current workflows, a brief training when the integrations are active, and occasional feedback during the first few weeks. The goal is for the transition to feel seamless, not like a technology overhaul.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens to our existing data when we integrate systems?",
+          "answer": "We handle data migration carefully. Existing contacts, client records, and historical data can typically be imported and mapped to your new integrated setup without losing anything. We run test migrations first to catch any issues before the full transfer, and we always recommend maintaining backups. The end result is a clean, unified dataset that your team can trust going forward.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Connect Your Marketing Tools to Your Practice?",
+      "ctaDescription": "Book a free discovery call and we will map out which integrations would eliminate the most manual work in your accounting practice and help your team get more value from the tools you already have."
+    },
+    "marketing-automation-for-tax-firms-with-lead-nurturing-workflows": {
+      "heroSubtitleTemplate": "Strategic lead nurturing workflows built for tax firms that turn seasonal inquiries into year-round clients, so your pipeline stays active even when filing season ends.",
+      "heroDescription": "Tax firms face a unique marketing challenge. Inquiries flood in during the months leading up to filing deadlines, and then the phone goes quiet for the rest of the year. Many of those seasonal inquiries represent prospective clients who were interested but not quite ready to commit, or who reached out and never received consistent follow-up because your team was buried in returns. Lead nurturing workflows solve this problem by creating an automated follow-up system that engages every prospect over time with relevant, helpful communication. Instead of relying on your staff to manually track who needs a follow-up call or email, the system handles it with sequences designed around the tax calendar and the decision-making patterns of your ideal clients. Firms that implement lead nurturing effectively often find that their quieter months become productive pipeline-building periods, converting the interest generated during busy season into signed engagement letters throughout the year.",
+      "benefits": [
+        {
+          "title": "Convert Seasonal Interest Into Year-Round Clients",
+          "description": "Every tax season produces a surge of inquiries from people and businesses looking for help. Without a lead nurturing system in place, most of those prospects hear from you once and then disappear. Automated nurturing workflows keep your firm in front of those prospects with relevant touchpoints over weeks and months, dramatically increasing the likelihood they choose your firm when they are ready to move forward."
+        },
+        {
+          "title": "Automated Follow-Up During Your Busiest Months",
+          "description": "When your team is heads-down processing returns, marketing follow-up is the first thing that gets dropped. Lead nurturing workflows ensure that every prospect receives timely, professional communication regardless of how busy your staff is. The system keeps working through February, March, and April so your pipeline does not dry up after the filing rush ends."
+        },
+        {
+          "title": "Warmer Conversations When Prospects Are Ready to Talk",
+          "description": "By the time a nurtured prospect schedules a consultation, they have already received multiple touchpoints from your firm. They understand your approach, they have seen your expertise demonstrated through educational content, and they arrive at the conversation with a level of trust that cold prospects simply do not have. This typically results in shorter sales cycles and higher close rates."
+        }
+      ],
+      "features": [
+        {
+          "title": "Tax Calendar-Aligned Nurture Sequences",
+          "description": "We design lead nurturing workflows that align with the rhythms of the tax year. Prospect communication is timed around key dates when tax-related decisions are top of mind, so your outreach feels timely and relevant rather than generic.",
+          "details": [
+            "Pre-season nurture sequences that activate as filing season approaches to capture early interest",
+            "Mid-year touchpoints focused on estimated payments, planning opportunities, and life changes",
+            "Year-end sequences promoting tax planning conversations before December deadlines"
+          ]
+        },
+        {
+          "title": "Multi-Stage Lead Qualification Workflows",
+          "description": "Not every lead is the same, and your nurturing should reflect that. We build workflows that score and segment prospects based on their behavior and engagement, so high-intent leads get fast-tracked to your team while others continue receiving educational nurture content until they are ready.",
+          "details": [
+            "Behavioral scoring based on email opens, link clicks, and content engagement",
+            "Automatic lead routing that notifies your team when prospects show strong buying signals",
+            "Segmented nurture paths based on service interest, business type, or inquiry source"
+          ]
+        },
+        {
+          "title": "Prospect Re-Engagement Campaigns",
+          "description": "Many tax firms have databases full of past inquiries that never converted. Re-engagement campaigns target these dormant prospects with fresh, relevant outreach to rekindle interest. These campaigns can often produce quick results because the prospects already had enough interest to reach out initially.",
+          "details": [
+            "Dormant lead reactivation sequences designed to restart conversations with past inquiries",
+            "Seasonal re-engagement tied to upcoming deadlines that create natural urgency",
+            "Feedback-driven content that addresses common objections and hesitations identified over time"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How many leads can the nurturing system handle at once?",
+          "answer": "The system scales without issues. Whether you have fifty prospects or five thousand in your pipeline, the automated workflows treat each one individually based on their behavior and segmentation. There is no practical limit, and performance does not degrade as your database grows. Most tax firms are surprised by how many dormant leads they already have that can be activated with the right nurture sequence.",
+          "category": "Technical"
+        },
+        {
+          "question": "How do you prevent nurture emails from feeling like spam to prospects?",
+          "answer": "The key is relevance and timing. We write content that genuinely helps your prospects, such as tax tips, deadline reminders, and planning insights rather than constant sales pitches. Sequences are spaced appropriately so recipients never feel bombarded, and we include easy opt-out options. The goal is for every email to feel like it came from a knowledgeable professional who remembered them at the right time.",
+          "category": "General"
+        },
+        {
+          "question": "Can we customize the workflows for different types of tax clients?",
+          "answer": "Yes, and we strongly recommend it. A small business owner considering your firm for business returns should receive different nurture content than an individual looking for personal tax preparation. We build separate workflow branches based on client type, service interest, and where the prospect came from. This segmentation is what makes the nurture sequences feel personalized rather than generic.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Stop Losing Leads After Tax Season?",
+      "ctaDescription": "Schedule a free strategy call and we will show you how lead nurturing workflows can turn your seasonal inquiries into a steady pipeline of new tax clients throughout the year."
+    },
+    "marketing-automation-for-bookkeepers-with-automated-segmentation": {
+      "heroSubtitleTemplate": "Automated contact segmentation designed for bookkeeping practices, organizing your prospects and clients into targeted groups so every message reaches the right people at the right time.",
+      "heroDescription": "Bookkeeping practices serve a wide range of small business clients across different industries, stages of growth, and service needs. Sending the same marketing message to every contact on your list means most of your communication misses the mark. Automated segmentation changes this by organizing your contacts into meaningful groups based on criteria that actually matter to your practice. Industry type, service level, engagement history, client status, and dozens of other factors can be used to ensure that a restaurant owner with payroll needs receives different communication than a freelancer who only needs monthly reconciliation. When your contacts are properly segmented, your email campaigns, nurture sequences, and outreach efforts become dramatically more effective because each message speaks directly to what that specific group cares about. The challenge for most bookkeepers is that manual segmentation is tedious and rarely maintained. Automation solves this by continuously categorizing and re-categorizing contacts based on their behavior and profile data, keeping your segments accurate without ongoing effort from your team.",
+      "benefits": [
+        {
+          "title": "Send the Right Message to the Right People Every Time",
+          "description": "When your contact list is properly segmented, every campaign you send is relevant to the people receiving it. A prospect interested in payroll services receives information about your payroll capabilities, while an existing client approaching fiscal year-end gets reminders about year-end close procedures. This relevance is what separates marketing that gets opened and acted on from marketing that gets ignored or unsubscribed from."
+        },
+        {
+          "title": "Segments That Update Themselves Automatically",
+          "description": "Manual list management is one of the biggest time sinks in small business marketing. With automated segmentation, contacts are tagged, grouped, and moved between segments based on their actions and profile changes without anyone on your team touching a spreadsheet. When a prospect becomes a client, when someone opens a specific email, or when a contact matches a new criteria, the system updates their segmentation instantly."
+        },
+        {
+          "title": "Higher Engagement Rates Across Every Campaign",
+          "description": "Segmented email campaigns consistently outperform mass blasts in open rates, click-through rates, and conversion rates. When your bookkeeping practice sends targeted communication to well-defined groups, recipients are more likely to engage because the content addresses their specific situation. Over time, this builds a reputation for relevant, helpful communication that strengthens your client relationships."
+        }
+      ],
+      "features": [
+        {
+          "title": "Industry and Service-Based Segmentation",
+          "description": "We set up automated rules that categorize your contacts based on the industries they operate in and the services they need from your bookkeeping practice. This creates natural groupings that align with how you actually think about and serve your client base.",
+          "details": [
+            "Industry tags applied automatically based on business type, such as retail, restaurants, professional services, or e-commerce",
+            "Service interest segments that group contacts by needs like payroll, tax prep referrals, or advisory",
+            "Client tier groupings based on engagement level and service package to prioritize communication"
+          ]
+        },
+        {
+          "title": "Behavioral Segmentation and Engagement Tracking",
+          "description": "Beyond static profile data, we build segments based on how contacts actually interact with your marketing. Email opens, link clicks, form submissions, and website visits all feed into dynamic segments that reflect real-time engagement levels.",
+          "details": [
+            "Engagement scoring that identifies your most active prospects and flags them for outreach",
+            "Inactivity triggers that move disengaged contacts into re-engagement campaigns automatically",
+            "Content interest tracking that reveals which topics and services resonate most with each segment"
+          ]
+        },
+        {
+          "title": "Lifecycle Stage Automation",
+          "description": "Your contacts move through stages, from first inquiry to active prospect to client to long-term relationship. We automate the transitions between these stages so your marketing always matches where each contact stands in their relationship with your practice.",
+          "details": [
+            "Automatic stage progression when contacts take key actions like booking a consultation or signing an engagement",
+            "Stage-specific communication sequences that deliver the right content for each phase of the relationship",
+            "Win-back segmentation that identifies former clients or stalled prospects for targeted re-engagement"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you determine the right segments for a bookkeeping practice?",
+          "answer": "We start with a discovery conversation about your client base, the services you offer, and how you think about different types of clients. From there, we build segments that reflect your actual practice. Common starting segments for bookkeepers include industry verticals, service type, client size, and engagement level. We typically recommend starting with five to eight core segments and refining from there based on what your data reveals over time.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if our existing contact data is messy or incomplete?",
+          "answer": "That is very common, and we plan for it. During setup, we clean and normalize your existing data as much as possible, merging duplicates, standardizing fields, and filling in gaps where we can. Going forward, the automated segmentation rules ensure that new contacts are categorized correctly from the start. Your data quality improves progressively as the system processes more interactions and gathers more information about each contact.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can segmentation work with a small contact list?",
+          "answer": "Segmentation is valuable at any list size. Even with a few hundred contacts, sending targeted messages to specific groups outperforms sending the same message to everyone. In fact, smaller lists often see the most dramatic improvement from segmentation because each contact represents a higher percentage of your potential revenue. As your list grows, the segments scale naturally and continue delivering targeted communication without additional manual effort.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Send Smarter Marketing to the Right Clients?",
+      "ctaDescription": "Book a free call and we will assess your current contact data and show you which segmentation strategies could make the biggest difference for your bookkeeping practice."
+    },
+    "marketing-automation-for-accounting-firms-with-sms-campaigns": {
+      "heroSubtitleTemplate": "Strategic SMS marketing campaigns built for accounting firms, adding a direct text message channel alongside your email marketing to reach clients and prospects where they are most responsive.",
+      "heroDescription": "Email is the backbone of most marketing automation, but it is not the only channel that works. Accounting firms that add SMS campaigns to their marketing mix often see engagement rates that far exceed what email alone can deliver. Text messages have near-instant open rates, and for time-sensitive communications like appointment reminders, deadline alerts, and limited-time offers, they are difficult to beat. The key is using SMS strategically rather than bombarding contacts with text messages. When text campaigns are integrated thoughtfully alongside your email sequences, they create a multi-channel experience that meets clients and prospects wherever they are most likely to respond. For accounting firms, this means using SMS for the messages that benefit from immediacy, such as consultation confirmations, deadline reminders, and quick check-ins, while letting email handle the longer-form educational and nurture content. Done correctly, SMS becomes a high-impact addition to your marketing system that clients actually appreciate rather than find intrusive.",
+      "benefits": [
+        {
+          "title": "Reach Clients Where They Actually Pay Attention",
+          "description": "Most people check text messages within minutes of receiving them. For time-sensitive communications that accounting firms regularly need to send, like deadline reminders, appointment confirmations, and document request follow-ups, SMS often outperforms email by a significant margin. Adding a text channel to your automation means your most important messages are seen and acted on quickly."
+        },
+        {
+          "title": "Multi-Channel Marketing That Feels Seamless",
+          "description": "When SMS and email campaigns work together through a unified automation platform, your contacts experience a cohesive communication flow. A prospect might receive an educational email about tax planning, followed by a text message reminder about your free consultation offer a few days later. This coordinated approach reinforces your messaging without overwhelming any single channel."
+        },
+        {
+          "title": "Higher Response Rates on Time-Sensitive Outreach",
+          "description": "Accounting firms deal with hard deadlines throughout the year, and client responsiveness to those deadlines can directly affect your workflow and revenue. SMS campaigns for deadline reminders, document requests, and meeting confirmations typically generate faster responses than email alone. This can meaningfully reduce the last-minute scrambles that plague many firms during busy periods."
+        }
+      ],
+      "features": [
+        {
+          "title": "SMS Campaign Strategy and Compliance",
+          "description": "We build SMS campaigns that comply with messaging regulations and respect your contacts' preferences. Every campaign includes proper opt-in management, clear messaging guidelines, and frequency controls so your firm maintains a professional reputation through the text channel.",
+          "details": [
+            "Opt-in and consent management built into every contact touchpoint to maintain compliance",
+            "Message frequency controls that prevent over-texting and protect your sender reputation",
+            "SMS content templates designed for accounting firm use cases that are concise and action-oriented"
+          ]
+        },
+        {
+          "title": "Email and SMS Workflow Coordination",
+          "description": "Rather than running SMS and email as separate silos, we integrate both channels into unified automation workflows. This means the system intelligently decides which channel to use for each message based on the content type, urgency, and contact preferences.",
+          "details": [
+            "Unified workflows that trigger both email and SMS based on contact behavior and timing",
+            "Channel preference tracking so contacts receive messages through their preferred medium",
+            "Escalation logic that sends an SMS follow-up when important emails go unopened"
+          ]
+        },
+        {
+          "title": "Automated SMS for Client Operations",
+          "description": "Beyond marketing, SMS automation can streamline your firm's operational communication. Appointment reminders, document request notifications, and status updates can all be automated through text, reducing no-shows and speeding up information gathering from clients.",
+          "details": [
+            "Appointment reminder texts that reduce no-show rates for consultations and meetings",
+            "Document request notifications that prompt clients to upload or send needed materials quickly",
+            "Engagement milestone texts like welcome messages for new clients or thank-you notes after tax filing"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Is SMS marketing appropriate for a professional accounting firm?",
+          "answer": "When done thoughtfully, absolutely. The key is using SMS for messages that genuinely benefit from the immediacy of text, such as appointment reminders, deadline alerts, and brief follow-ups, rather than sending lengthy promotional content. Clients increasingly expect the convenience of text communication from their service providers. We help you strike the right balance between professional and accessible so your firm's reputation is enhanced rather than diminished.",
+          "category": "General"
+        },
+        {
+          "question": "How do we handle SMS compliance and opt-in requirements?",
+          "answer": "We build compliance into every aspect of your SMS campaigns from the start. This includes proper opt-in collection through your website forms and intake process, clear disclosure about what contacts can expect, easy opt-out mechanisms in every message, and message frequency limits. We stay current with TCPA regulations and carrier requirements so your firm is protected. Every contact in your SMS list has documented consent before receiving their first text.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can we use SMS just for operational messages and not for marketing?",
+          "answer": "Yes, and many firms start exactly that way. Using SMS for appointment reminders, document request follow-ups, and status notifications is a great entry point that delivers immediate operational value. Once your team and clients are comfortable with the text channel, you can gradually expand into marketing use cases like deadline reminders and consultation invitations. We can configure the system for operations-only SMS initially and add marketing workflows whenever you are ready.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Add SMS to Your Accounting Firm's Marketing Mix?",
+      "ctaDescription": "Schedule a free call and we will walk through how text message campaigns can complement your existing marketing and improve client communication for your accounting firm."
+    }
   }
 }

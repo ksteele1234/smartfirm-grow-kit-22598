@@ -68,5 +68,439 @@
         "You have no system for generating leads outside of tax season to build advisory and year round planning services"
       ]
     }
+  },
+  "slugOverrides": {
+    "lead-generation-for-cpas-with-automated-follow-up": {
+      "heroSubtitleTemplate": "Most CPA firms invest real time and money into generating leads, only to watch those leads go cold because nobody followed up fast enough. Automated follow-up changes the equation by engaging every prospect the moment they raise their hand, so your firm never loses a lead to slow response time again.",
+      "problemStatement": "CPA firms often do a reasonable job attracting initial interest, whether through referrals, their website, or networking events. But the real breakdown happens after that first touchpoint. Partners get busy with client work, staff forget to send the follow-up email, and by the time someone reaches out, the prospect has already signed with another firm. The problem is not lead generation itself. It is what happens in the hours and days after a lead comes in.",
+      "solutionOverview": "Lead generation with automated follow-up means every inquiry your CPA firm receives gets an immediate, professional response, followed by a structured nurture sequence that keeps your firm top of mind. Instead of relying on someone remembering to send a follow-up email, the system handles it. Prospects receive timely, relevant touchpoints that build trust and move them toward a conversation, all without adding to your team's workload.",
+      "hearingSignals": [
+        "You know leads have slipped through the cracks because no one on your team followed up within a reasonable window",
+        "Your CPAs are too focused on billable work to consistently respond to new inquiries the same day they come in",
+        "You have tried CRM tools before but they just became another thing no one had time to maintain or check regularly"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Leads contact your CPA firm but receive no response for days because your team is buried in client deadlines and billable work",
+          "solution": "Automated follow-up sequences engage every new lead within minutes of their inquiry, sending a personalized response and scheduling reminders so no prospect waits more than a few hours to hear from your firm"
+        },
+        {
+          "problem": "Prospects who do not convert immediately fall off your radar entirely because there is no system to stay in touch with them over weeks or months",
+          "solution": "Structured nurture workflows keep your CPA firm in front of undecided prospects through a series of helpful, well-timed touchpoints that build credibility and bring them back when they are ready to move forward"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Every Lead Gets a Response, Every Time",
+          "description": "Automated follow-up removes the inconsistency that comes with manual outreach. Whether a lead comes in at 2 PM or 2 AM, they receive an immediate, professional reply that sets the tone for your firm.",
+          "points": [
+            "Instant acknowledgment emails go out the moment a prospect submits an inquiry",
+            "Follow-up sequences are pre-built so your team does not have to draft individual responses under pressure",
+            "No lead falls through the cracks regardless of how busy tax season or quarter-end gets"
+          ]
+        },
+        {
+          "title": "Your CPAs Stay Focused on Client Work",
+          "description": "When follow-up is automated, your team can focus on the work that actually generates revenue. They step in only when a prospect is ready for a real conversation, not to chase cold leads or send reminder emails.",
+          "points": [
+            "Partners and managers are freed from the mental load of tracking who needs a callback",
+            "Staff time is redirected toward billable engagements instead of administrative follow-up tasks",
+            "The system surfaces warm leads so your team talks to the right people at the right time"
+          ]
+        },
+        {
+          "title": "Longer Nurture Windows Without Extra Effort",
+          "description": "Many prospects are not ready to hire a CPA the day they first reach out. Automated nurture keeps your firm in their consideration set for weeks or months, so when they are ready, you are the firm they remember.",
+          "points": [
+            "Drip sequences deliver educational content that positions your CPAs as knowledgeable advisors",
+            "Prospects who go quiet receive periodic check-ins that feel personal without requiring manual effort",
+            "Your firm stays top of mind through the entire decision-making cycle, which can often stretch several months"
+          ]
+        }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Follow-Up Audit",
+          "description": "We review how your CPA firm currently handles incoming leads, map out where prospects are falling off, and identify the response gaps that are costing you the most opportunities.",
+          "subheading": "Diagnose"
+        },
+        {
+          "step": 2,
+          "title": "Sequence Design",
+          "description": "We build automated follow-up sequences tailored to the types of prospects your firm attracts, from individual tax clients to business advisory leads, each with messaging that reflects how CPAs actually communicate.",
+          "subheading": "Build"
+        },
+        {
+          "step": 3,
+          "title": "Integration and Launch",
+          "description": "We connect the follow-up system to your existing lead sources so that every inquiry, whether from your website, Google Business Profile, or referral form, triggers the right sequence automatically.",
+          "subheading": "Connect"
+        },
+        {
+          "step": 4,
+          "title": "Monitor and Refine",
+          "description": "We track open rates, response rates, and conversion patterns across your follow-up sequences, then adjust timing, messaging, and cadence based on what is actually moving prospects to book calls.",
+          "subheading": "Improve"
+        }
+      ],
+      "results": [
+        {
+          "metric": "Response Speed",
+          "value": "Minutes, Not Days",
+          "description": "CPA firms using automated follow-up typically reduce their average response time from several days to under five minutes"
+        },
+        {
+          "metric": "Lead Recovery",
+          "value": "Fewer Lost Prospects",
+          "description": "Firms often find that leads they would have previously lost to slow follow-up are now converting into discovery calls"
+        },
+        {
+          "metric": "Team Efficiency",
+          "value": "Less Manual Outreach",
+          "description": "CPAs and admin staff can spend significantly less time on follow-up tasks while maintaining more consistent prospect communication"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Will automated follow-up emails feel impersonal to our CPA prospects?",
+          "answer": "Not when they are written well. We craft follow-up sequences that match the professional tone your CPA firm already uses with clients. The emails feel like they are coming from a real person on your team, not a marketing robot. Many prospects will not realize the initial touchpoints are automated, and by the time a real conversation starts, trust has already been built."
+        },
+        {
+          "question": "What happens when a prospect replies to an automated email?",
+          "answer": "When someone replies, your team gets notified immediately so a real person can take over the conversation. The automation handles the initial outreach and nurture, but the moment a prospect engages, it becomes a human interaction. Think of the automation as the bridge between first contact and a real conversation."
+        },
+        {
+          "question": "We already use a CRM. Can automated follow-up work alongside it?",
+          "answer": "In most cases, yes. We design follow-up systems that can integrate with common CRM tools CPA firms already use. The goal is not to replace your existing systems but to fill the gap between a lead coming in and someone on your team actually responding. If your CRM is collecting leads but nobody is following up, automation solves that specific problem."
+        }
+      ],
+      "ctaTitle": "Stop Losing Leads to Slow Follow-Up",
+      "ctaDescription": "Book a free call and we will walk through how your CPA firm currently handles incoming leads, where prospects are falling off, and how automated follow-up can close those gaps."
+    },
+    "lead-generation-for-accounting-firms-with-transparent-pricing": {
+      "heroSubtitleTemplate": "Too many accounting firms have been burned by marketing agencies that bury costs in vague retainers and surprise add-ons. Lead generation with transparent pricing means you see every dollar before you spend it, so you can evaluate results honestly and make informed decisions about your marketing investment.",
+      "problemStatement": "Accounting firms are trained to scrutinize numbers, yet many find themselves locked into marketing agreements where the actual costs are anything but clear. Retainers that balloon after the first quarter. Setup fees that appear after the contract is signed. Vague deliverables that make it impossible to evaluate whether you are getting a fair return. For firms built on financial transparency, this kind of ambiguity is more than frustrating. It undermines trust from the very first invoice.",
+      "solutionOverview": "Lead generation with transparent pricing gives accounting firms complete visibility into what they are paying for, why they are paying it, and what results to expect at each investment level. Every line item is explained upfront. There are no hidden fees, no surprise charges at renewal, and no vague bundles designed to obscure what is actually being done. You get a clear breakdown of services, costs, and the rationale behind each recommendation so you can make decisions the same way you advise your own clients: with full information.",
+      "hearingSignals": [
+        "You have worked with a marketing vendor before and discovered charges you were never told about until the invoice arrived",
+        "Your firm evaluates every expense carefully but your current marketing costs are so opaque you cannot determine your actual return on investment",
+        "You have been pitched lead generation packages that sound promising but the proposal never clearly explains what is included versus what costs extra"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Your accounting firm has invested in marketing services before but the pricing structure was so convoluted that you could never determine whether the results justified the cost",
+          "solution": "Every service and fee is presented in a clear, itemized format before any work begins, so your firm can evaluate the investment using the same financial rigor you apply to your own client engagements"
+        },
+        {
+          "problem": "Marketing vendors have surprised your firm with scope changes, add-on fees, or price increases that were never discussed during the sales process",
+          "solution": "Pricing is locked in at the start of each engagement with no hidden fees or mid-contract surprises, and any recommended changes to scope are presented with full cost breakdowns before you agree to them"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Complete Cost Visibility From Day One",
+          "description": "Before any engagement begins, your accounting firm receives a detailed breakdown of every cost, what it covers, and why it is recommended. Nothing is buried in fine print or revealed later.",
+          "points": [
+            "Itemized proposals that separate setup costs, ongoing services, and optional add-ons so you can evaluate each independently",
+            "No bundled packages designed to obscure individual service costs or inflate perceived value",
+            "Written documentation of exactly what is and is not included so there are no gray areas after you sign"
+          ]
+        },
+        {
+          "title": "Honest ROI Conversations",
+          "description": "When pricing is transparent, evaluating your return on investment becomes straightforward. You can compare what you are spending against the leads and clients you are gaining, the way accounting professionals naturally think about business decisions.",
+          "points": [
+            "Monthly reporting that ties specific costs to specific outcomes so you can see what each dollar produced",
+            "No inflated metrics or vanity numbers designed to distract from actual lead quality",
+            "Quarterly reviews where we walk through your investment and results with the same clarity you bring to your own client meetings"
+          ]
+        },
+        {
+          "title": "A Marketing Partner That Operates Like You Do",
+          "description": "Accounting firms value precision, honesty, and clear communication. Working with a lead generation partner that shares those values means fewer surprises and a more productive relationship from the start.",
+          "points": [
+            "Straightforward communication about what is working and what needs adjustment, without spin",
+            "Proactive notifications about any recommended scope or budget changes, always presented with rationale",
+            "A partnership built on the same financial transparency your firm provides to its own clients"
+          ]
+        }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Transparent Discovery",
+          "description": "We start with an open conversation about your accounting firm's goals, budget constraints, and past marketing experiences, including what went wrong with previous vendors. No sales pressure, just an honest assessment of whether we can help.",
+          "subheading": "Assess"
+        },
+        {
+          "step": 2,
+          "title": "Itemized Proposal",
+          "description": "You receive a detailed, line-by-line proposal that shows exactly what each service costs, what it includes, and what results it is designed to support. Every recommendation comes with a clear rationale.",
+          "subheading": "Propose"
+        },
+        {
+          "step": 3,
+          "title": "Execution With Open Books",
+          "description": "Once approved, we execute your lead generation plan and provide regular reporting that ties costs to outcomes. You always know what you are paying for and what it is producing.",
+          "subheading": "Execute"
+        },
+        {
+          "step": 4,
+          "title": "Review and Reallocate",
+          "description": "We conduct regular reviews where we walk through your spend and results together, recommending where to increase investment, where to pull back, and where to try something new, all with full cost transparency.",
+          "subheading": "Review"
+        }
+      ],
+      "results": [
+        {
+          "metric": "Cost Clarity",
+          "value": "Full Visibility",
+          "description": "Accounting firms can see exactly what every marketing dollar is going toward, with no hidden fees or unexplained line items"
+        },
+        {
+          "metric": "Budget Confidence",
+          "value": "No Surprises",
+          "description": "Firms typically report feeling significantly more confident in their marketing spend when pricing is fully transparent from the start"
+        },
+        {
+          "metric": "Decision Quality",
+          "value": "Data-Driven Choices",
+          "description": "Clear cost-to-outcome mapping helps accounting firms make smarter decisions about where to invest their marketing budget"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How is your pricing different from other marketing agencies that also claim to be transparent?",
+          "answer": "Many agencies use the word transparent but still bundle services in ways that make it hard to see what each component costs. We provide fully itemized proposals where every service, tool, and deliverable has its own line item. You can see exactly what you are paying for Google Business Profile optimization versus content creation versus follow-up automation. If something is optional, it is clearly marked as optional. And if we recommend adding a service later, you see the full cost before agreeing."
+        },
+        {
+          "question": "What if our accounting firm has a limited marketing budget?",
+          "answer": "Transparent pricing actually works in your favor when budgets are tight. Because you can see exactly what each service costs, you can prioritize the lead generation activities that offer the highest potential return for your firm. We are upfront about what a given budget can realistically accomplish, and we would rather build a smaller plan that delivers real results than sell you an inflated package you cannot sustain."
+        },
+        {
+          "question": "Do your prices ever change during the engagement?",
+          "answer": "Pricing is locked for the agreed term of each engagement. If we believe a scope change would benefit your firm, we present the updated pricing alongside a clear explanation of why we are recommending the change and what outcomes it is designed to support. You always approve changes before any new costs are incurred. We treat your marketing budget with the same care you bring to managing your clients' financial matters."
+        }
+      ],
+      "ctaTitle": "See Exactly What Lead Generation Costs",
+      "ctaDescription": "Book a free call and we will provide a fully transparent assessment of what lead generation looks like for your accounting firm, including itemized costs and realistic expectations for results."
+    },
+    "lead-generation-for-tax-preparers-targeting-advisory-clients": {
+      "heroSubtitleTemplate": "Many tax preparers want to attract higher-value advisory clients but continue to generate leads that are only looking for basic return filing. Targeting advisory clients requires a different approach to positioning, messaging, and outreach, one that signals expertise beyond compliance work.",
+      "problemStatement": "Tax preparers who want to grow beyond seasonal compliance work face a specific challenge: the leads they currently attract are almost exclusively looking for someone to file their returns. These prospects compare preparers on price, expect a transactional relationship, and rarely convert into year-round advisory engagements. The problem is not a lack of leads. It is that your current marketing and positioning attract the wrong type of client for the practice you are trying to build.",
+      "solutionOverview": "Targeting advisory clients as a tax preparer means fundamentally shifting how your practice shows up in the market. Instead of competing on price for basic filing services, you position yourself around the strategic value you provide: tax planning, entity structure guidance, retirement optimization, and proactive financial counsel. The lead generation approach changes to attract business owners and high-income individuals who are actively seeking a trusted advisor, not just someone to meet a filing deadline.",
+      "hearingSignals": [
+        "You spend most of your year doing compliance work and want to build an advisory practice but every new lead just wants a cheap tax return",
+        "Business owners in your area are paying large firms for tax advisory when you could provide the same quality of guidance at a more accessible price point",
+        "You have the expertise to offer tax planning and strategic advice but your marketing only positions you as a basic tax preparer"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Your tax preparation practice attracts mostly price-sensitive filers who view your services as a commodity and have no interest in advisory relationships",
+          "solution": "Repositioning your online presence and messaging around tax planning expertise signals to higher-value prospects that you offer strategic guidance, not just filing services, which naturally filters out price-only shoppers"
+        },
+        {
+          "problem": "Business owners and higher-income individuals in your market do not know you offer advisory services because everything about your current marketing says tax preparation",
+          "solution": "Targeted content and visibility strategies that showcase your advisory capabilities, such as tax planning case scenarios and proactive strategy insights, attract the exact prospects who are willing to invest in ongoing professional guidance"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Attract Clients Who Value Expertise Over Price",
+          "description": "When your marketing speaks to advisory needs rather than filing deadlines, the prospects who reach out are already looking for strategic help. These conversations start with value, not cost, which changes the entire dynamic of your practice.",
+          "points": [
+            "Content and positioning that emphasizes tax planning, entity structuring, and proactive strategy rather than return preparation",
+            "Lead magnets and resources that appeal to business owners and high-income earners seeking ongoing guidance",
+            "A brand presence that communicates advisor rather than preparer, attracting the right level of prospect"
+          ]
+        },
+        {
+          "title": "Build Year-Round Revenue Beyond Tax Season",
+          "description": "Advisory clients engage with your practice throughout the year, not just in the weeks before filing deadlines. Attracting these clients can help smooth out the extreme seasonality that defines most tax preparation businesses.",
+          "points": [
+            "Advisory engagements often involve quarterly planning sessions, mid-year reviews, and ongoing strategy conversations",
+            "Clients who value your guidance are more likely to refer other business owners who also need advisory services",
+            "Year-round client relationships can provide more predictable revenue compared to seasonal filing surges"
+          ]
+        },
+        {
+          "title": "Differentiate From Every Other Tax Preparer in Your Market",
+          "description": "Most tax preparers in any given market position themselves the same way: affordable, accurate, fast. By targeting advisory clients, you step out of that crowded field and compete in a space with fewer competitors and higher engagement quality.",
+          "points": [
+            "Your practice stands apart because you are solving strategic problems, not just meeting compliance deadlines",
+            "Advisory positioning can reduce direct competition with discount preparers and online filing tools",
+            "Prospects seeking advisory help tend to be more engaged and committed to finding the right professional fit"
+          ]
+        }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Advisory Positioning Review",
+          "description": "We evaluate your current online presence, messaging, and lead sources to understand how your practice is perceived in the market. We identify where the disconnect is between your advisory capabilities and how prospects currently see you.",
+          "subheading": "Evaluate"
+        },
+        {
+          "step": 2,
+          "title": "Messaging and Content Strategy",
+          "description": "We develop a repositioned brand message and content plan designed to attract business owners and high-income individuals who need tax advisory, not just preparation. This includes the language, topics, and proof points that resonate with advisory prospects.",
+          "subheading": "Reposition"
+        },
+        {
+          "step": 3,
+          "title": "Advisory Lead Channels",
+          "description": "We build and optimize the specific channels most effective for reaching advisory prospects in your market: thought leadership content, Google Business Profile updates that emphasize planning services, and referral pathways from complementary professionals.",
+          "subheading": "Activate"
+        },
+        {
+          "step": 4,
+          "title": "Qualify and Convert",
+          "description": "We help you build a qualification process that identifies which incoming leads are genuine advisory prospects versus basic filing requests, so your time is spent on the conversations most likely to result in high-value, ongoing engagements.",
+          "subheading": "Qualify"
+        }
+      ],
+      "results": [
+        {
+          "metric": "Client Quality",
+          "value": "Higher-Value Engagements",
+          "description": "Tax preparers who reposition toward advisory work often find that the average engagement value of new clients increases meaningfully"
+        },
+        {
+          "metric": "Seasonal Dependence",
+          "value": "More Year-Round Work",
+          "description": "Practices targeting advisory clients tend to develop more consistent revenue throughout the year rather than concentrating everything in filing season"
+        },
+        {
+          "metric": "Competitive Position",
+          "value": "Less Price Competition",
+          "description": "Advisory positioning can move tax preparers out of the price-driven filing market and into a space where expertise and trust drive client decisions"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can I target advisory clients while still offering basic tax preparation?",
+          "answer": "Absolutely. The goal is not to stop offering preparation services but to shift your marketing emphasis so that your practice attracts more of the advisory clients you want. Many successful tax professionals continue to serve filing clients while building a growing advisory book. The key difference is that your marketing leads with your strategic capabilities, so the new prospects coming in are increasingly the advisory type."
+        },
+        {
+          "question": "What kind of content attracts advisory clients versus basic filing clients?",
+          "answer": "Filing clients respond to messages about price, speed, and convenience. Advisory clients respond to content that demonstrates strategic thinking: articles about tax planning strategies for business owners, insights on entity structure decisions, retirement planning considerations, and proactive steps to reduce tax exposure. The content should make the reader think this person understands my financial situation at a deeper level."
+        },
+        {
+          "question": "How long does it typically take to start attracting advisory clients?",
+          "answer": "Repositioning is not instant. It typically takes several months for updated messaging, content, and visibility efforts to shift the type of leads you attract. Some practices see early wins from updated Google Business Profile positioning and referral network outreach. Others find that content-driven advisory leads build more gradually. The important thing is that each month, the mix of incoming prospects should trend more toward advisory and away from price-only filing requests."
+        }
+      ],
+      "ctaTitle": "Start Attracting Advisory Clients to Your Tax Practice",
+      "ctaDescription": "Book a free call and we will review how your practice is currently positioned in the market and identify specific steps to start attracting the higher-value advisory clients you want to work with."
+    },
+    "lead-generation-for-bookkeepers-with-done-for-you-setup": {
+      "heroSubtitleTemplate": "Most bookkeepers know they need better lead generation but do not have the hours to research, build, and configure everything themselves. Done-for-you setup means your lead generation system is built, launched, and optimized by our team while you focus on serving your clients.",
+      "problemStatement": "Bookkeepers are among the busiest professionals in the accounting space. Between reconciling accounts, managing payroll, preparing reports, and communicating with clients, there is almost no time left to research marketing strategies, set up lead generation tools, write website content, or configure automated systems. Many bookkeepers have purchased courses, downloaded templates, or started setting up marketing tools only to abandon the effort weeks later because client work always takes priority. The bottleneck is not willingness. It is bandwidth.",
+      "solutionOverview": "Lead generation with done-for-you setup is designed specifically for bookkeepers who recognize that they need a consistent flow of new clients but cannot carve out the time to build that system themselves. Our team handles every aspect of the setup: optimizing your Google Business Profile, building your lead capture pages, writing your follow-up email sequences, configuring your CRM, and launching your initial outreach campaigns. You provide input on the types of clients you want to attract, and we do the rest.",
+      "hearingSignals": [
+        "You have started setting up marketing tools or lead generation systems multiple times but never finished because client deadlines always take priority",
+        "You know your bookkeeping practice needs a better way to attract clients but you simply do not have the hours to learn and implement marketing on your own",
+        "You have looked into hiring a marketing person but the cost does not make sense for a bookkeeping practice your size"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Every time you try to work on marketing or lead generation for your bookkeeping practice, a client deadline pulls you away and the project stalls indefinitely",
+          "solution": "Our team builds your entire lead generation system for you, requiring only a few focused conversations about your ideal clients and preferences, so nothing stalls and your marketing launches without competing with your client workload"
+        },
+        {
+          "problem": "You do not have the technical knowledge to set up lead capture forms, automated emails, CRM integrations, and tracking systems, and learning all of that would take weeks you do not have",
+          "solution": "Every technical element is handled by our team, from configuring your tools and integrations to writing your email sequences and setting up your tracking dashboard, so you get a fully operational system without needing to become a marketing technologist"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Zero Setup Time Required From You",
+          "description": "The done-for-you approach means your total time commitment is limited to a few onboarding conversations where you tell us about your ideal clients, your services, and your preferences. From there, we handle the entire build.",
+          "points": [
+            "Initial onboarding takes just a few conversations rather than weeks of your own research and configuration",
+            "No need to learn new tools, write marketing copy, or figure out technical integrations yourself",
+            "Your lead generation system is built by professionals who have set up similar systems for other bookkeeping practices"
+          ]
+        },
+        {
+          "title": "Built For How Bookkeepers Actually Work",
+          "description": "Your lead generation system is configured around the realities of running a bookkeeping practice: client-first schedules, deadline-driven workflows, and limited time for anything that is not directly serving a client.",
+          "points": [
+            "Automated follow-up handles prospect communication so you are not adding another task to your daily routine",
+            "Lead notifications are designed to be actionable, telling you exactly who reached out and what they need so you can respond quickly",
+            "The system runs in the background while you focus on reconciliations, payroll, and reporting"
+          ]
+        },
+        {
+          "title": "A Complete System, Not Just One Piece",
+          "description": "Done-for-you setup means you receive a fully integrated lead generation system, not just a website tweak or a single ad. Every component works together from day one.",
+          "points": [
+            "Google Business Profile optimization, lead capture pages, email sequences, and CRM configuration are all included in the setup",
+            "Each element is connected so leads flow seamlessly from first contact to your inbox without manual steps",
+            "You launch with a complete, working system rather than spending months assembling individual pieces yourself"
+          ]
+        }
+      ],
+      "howItWorks": [
+        {
+          "step": 1,
+          "title": "Discovery Conversations",
+          "description": "We have a few focused conversations to understand your bookkeeping practice: the types of clients you serve, the industries you prefer, your geographic area, and what has or has not worked in the past. This is the only time-intensive part for you.",
+          "subheading": "Learn"
+        },
+        {
+          "step": 2,
+          "title": "Full System Build",
+          "description": "Our team builds your entire lead generation system from scratch: Google Business Profile optimization, landing pages, email follow-up sequences, CRM setup, and tracking configuration. Everything is customized to your bookkeeping practice and target clients.",
+          "subheading": "Build"
+        },
+        {
+          "step": 3,
+          "title": "Review and Launch",
+          "description": "We walk you through the completed system so you understand how it works, then launch it. You see exactly how leads will come in, how follow-up is handled, and where to check your pipeline. No surprises, no confusion.",
+          "subheading": "Launch"
+        },
+        {
+          "step": 4,
+          "title": "Ongoing Optimization",
+          "description": "After launch, we monitor your system's performance and make adjustments to improve results. You receive regular updates on what is working and any refinements we have made, all without requiring additional setup time from you.",
+          "subheading": "Optimize"
+        }
+      ],
+      "results": [
+        {
+          "metric": "Time to Launch",
+          "value": "Weeks, Not Months",
+          "description": "Bookkeepers who use done-for-you setup typically have their lead generation system live in a fraction of the time it would take to build it themselves"
+        },
+        {
+          "metric": "Owner Time Investment",
+          "value": "Minimal Hours",
+          "description": "Most bookkeepers invest only a few hours total in onboarding conversations, compared to the dozens of hours self-setup would require"
+        },
+        {
+          "metric": "System Completeness",
+          "value": "Fully Integrated",
+          "description": "Done-for-you clients launch with a complete, connected system rather than the partial implementations that often result from DIY attempts"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much of my time does the done-for-you setup actually require?",
+          "answer": "Your time commitment is typically limited to a few onboarding conversations where we learn about your practice, your ideal clients, and your preferences. After that, our team handles the build. Most bookkeepers tell us they expected it to take much more of their time than it actually did. We designed the process this way specifically because we know bookkeepers do not have spare hours to dedicate to marketing projects."
+        },
+        {
+          "question": "Will I be able to manage the system myself after it is set up?",
+          "answer": "Yes. We build everything to be straightforward and manageable for someone who is not a marketing expert. You will have access to a simple dashboard where you can see incoming leads, track follow-up status, and review basic performance metrics. And if you ever need help making changes or updates, we are available to assist. The system is designed to run with minimal ongoing attention from you."
+        },
+        {
+          "question": "What if I have tried other marketing tools before and they did not work?",
+          "answer": "That is a common experience among bookkeepers we work with. Usually the tools themselves were fine, but they were never properly set up, configured, or integrated with each other. A half-built lead generation system does not produce results. The done-for-you approach solves this by ensuring everything is fully built, tested, and connected before launch. You are not getting a tool. You are getting a complete, working system."
+        }
+      ],
+      "ctaTitle": "Get Your Lead Generation System Built For You",
+      "ctaDescription": "Book a free call and we will discuss what a done-for-you lead generation setup looks like for your bookkeeping practice, including what we handle, what you provide, and how quickly we can have your system live."
+    }
   }
 }

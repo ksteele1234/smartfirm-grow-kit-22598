@@ -83,5 +83,337 @@
     "tax preparers": {
       "heroDescription": "For tax preparers, client relationships are seasonal by nature, which makes it even more important to have a system that tracks where every client stands. A well configured CRM helps you manage your pipeline during intake season, track returning clients, and follow up with prospects who were not ready last year. We set up and configure the whole system so it fits how your tax practice actually operates."
     }
+  },
+  "slugOverrides": {
+    "crm-implementation-for-cpas": {
+      "heroSubtitleTemplate": "A CRM implementation designed around how CPA firms actually operate can transform scattered prospect tracking and client follow-ups into a structured, repeatable process. We configure your pipeline stages, contact management, and workflow automation so your team spends less time on administrative tasks and more time advising clients.",
+      "heroDescription": "Many CPA firms invest in a CRM only to discover that generic configurations do not reflect the nuances of professional services. Engagement letters, advisory upsells, and seasonal capacity shifts all demand a system built with those realities in mind. Our implementation process starts with understanding how your firm moves prospects from initial inquiry through onboarding, then configures every pipeline stage, automation rule, and team view to match. The result is a CRM your partners and staff can rely on from day one rather than working around.",
+      "benefits": [
+        {
+          "title": "Structured Pipeline Stages That Mirror Your Engagement Process",
+          "description": "From initial consultation through proposal delivery and engagement letter signing, each step in your client acquisition process gets its own clearly defined stage. Automated task assignments and notifications keep deals moving forward without relying on memory or manual check-ins."
+        },
+        {
+          "title": "Centralized Contact Records With Full Relationship Context",
+          "description": "Every interaction, document, and note tied to a prospect or client lives in a single record. Your team can pull up a contact and immediately understand the full history of the relationship, which services were discussed, and what follow-up actions are pending."
+        },
+        {
+          "title": "Workflow Automation That Reduces Repetitive Administrative Work",
+          "description": "Routine steps like sending follow-up emails after consultations, creating onboarding tasks when a new client signs, or notifying a partner when a high-value opportunity advances can all be automated. This frees up hours each week that your team currently spends on manual coordination."
+        }
+      ],
+      "features": [
+        {
+          "title": "Custom Pipeline Design for CPA Firm Sales Cycles",
+          "description": "We map out the stages your firm uses to convert prospects into engaged clients, then build those stages directly into your CRM. Each stage includes the specific actions, notifications, and criteria that reflect how your partners and business development team actually work.",
+          "details": [
+            "Pipeline stages tailored to advisory, tax, and assurance service lines",
+            "Stage-specific automation rules that trigger tasks and reminders as deals progress",
+            "Separate pipeline views for partners, managers, and business development staff"
+          ]
+        },
+        {
+          "title": "Contact Organization Built for Professional Services",
+          "description": "We configure your contact database with fields and tags that matter for a CPA practice. Service type, entity structure, referral source, and engagement status are all built into the system so you can segment, filter, and report on your client base without exporting to spreadsheets.",
+          "details": [
+            "Custom fields for entity type, fiscal year end, and primary service line",
+            "Tagging system that supports segmentation by referral source, industry, and engagement tier",
+            "Automated contact enrichment that fills in missing details where possible"
+          ]
+        },
+        {
+          "title": "Workflow Automation Configuration and Testing",
+          "description": "We build and thoroughly test automation sequences that handle the repetitive tasks your team currently manages manually. Each automation is documented so your team understands what fires, when it fires, and how to adjust it as your processes evolve.",
+          "details": [
+            "Automated follow-up sequences triggered by pipeline stage changes",
+            "Task creation rules that assign onboarding steps when new engagements close",
+            "Notification workflows that alert partners to stalled or high-priority opportunities"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you ensure the CRM pipeline reflects the way our CPA firm actually operates?",
+          "answer": "We begin with a detailed discovery session where we walk through your current sales and onboarding process step by step. We ask about how inquiries come in, who handles them, what steps happen before a proposal goes out, and how onboarding works once a client signs. That information drives every pipeline stage, automation rule, and team permission we configure. We also build in a review period where your team tests the system and we refine anything that does not match the real-world flow.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the CRM handle multiple service lines with different sales processes?",
+          "answer": "Yes. Most CPA firms we work with offer a mix of tax, advisory, and assurance services, each with a slightly different path from prospect to client. We set up separate pipelines for each service line where needed, or use conditional logic within a shared pipeline if the processes overlap significantly. The goal is to give your team clarity without unnecessary complexity.",
+          "category": "General"
+        },
+        {
+          "question": "What integrations are typically included in a CRM implementation for CPA firms?",
+          "answer": "The most common integrations we configure connect your CRM to your email platform, calendar, practice management software, and document storage. For CPA firms specifically, we often integrate with tools like Karbon or similar workflow platforms so that client data stays synchronized across systems. We scope the specific integrations during discovery based on the tools your firm currently relies on.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Implement a CRM That Fits Your CPA Practice?",
+      "ctaDescription": "Schedule a consultation and we will review your current prospect tracking and client management process, then outline what a tailored CRM implementation would look like for your firm."
+    },
+    "client-relationship-management-setup-for-accounting-firms": {
+      "heroSubtitleTemplate": "Setting up client relationship management for an accounting firm means more than installing software. It means organizing years of client data, structuring how your team tracks interactions, and building a system that gives everyone in the firm a clear picture of every client relationship.",
+      "heroDescription": "Accounting firms often reach a point where informal systems for tracking clients simply cannot keep up. Partners rely on personal memory, associates maintain their own spreadsheets, and critical details about client preferences or past conversations live in scattered email threads. A structured CRM setup brings all of that information into one accessible system. We handle the data organization, field configuration, and interaction tracking so your firm can move from fragmented client knowledge to a single source of truth that supports better service and stronger relationships.",
+      "benefits": [
+        {
+          "title": "One Unified View of Every Client Relationship",
+          "description": "When any team member can open a client record and see the full history of interactions, service details, and open items, the quality of every conversation improves. No more asking clients to repeat information or scrambling to find context before a call."
+        },
+        {
+          "title": "Organized Client Data That Supports Strategic Decisions",
+          "description": "Clean, structured client data makes it possible to identify cross-sell opportunities, spot at-risk relationships, and understand which services drive the most revenue. Instead of guessing, your firm can make decisions backed by real relationship data."
+        },
+        {
+          "title": "Consistent Interaction Tracking Across the Entire Firm",
+          "description": "Whether a partner takes a client call or an associate handles a follow-up email, the interaction gets logged in the same place. This consistency means that client relationships belong to the firm rather than to individual team members."
+        }
+      ],
+      "features": [
+        {
+          "title": "Client Data Organization and Migration",
+          "description": "We take your existing client data, wherever it currently lives, and organize it into a clean, structured CRM database. This includes deduplicating records, standardizing fields, and ensuring that every client profile has the information your team needs to serve them well.",
+          "details": [
+            "Data import from spreadsheets, email contacts, and existing software systems",
+            "Deduplication and cleanup to eliminate redundant or outdated records",
+            "Standardized fields for service type, billing status, engagement history, and key contacts"
+          ]
+        },
+        {
+          "title": "Interaction Logging and Communication Tracking",
+          "description": "We configure your CRM to capture client interactions automatically where possible and make manual logging simple for your team. Email syncing, call logging, and meeting notes all feed into the client record so the full relationship history is always up to date.",
+          "details": [
+            "Email integration that automatically associates messages with the correct client record",
+            "Simplified call and meeting logging that takes seconds rather than minutes",
+            "Activity timeline on each client record showing the complete interaction history"
+          ]
+        },
+        {
+          "title": "Custom Views and Reporting for Firm Leadership",
+          "description": "We build dashboard views and reports that give partners and managers the high-level perspective they need. See which clients have not been contacted recently, which relationships are growing, and where attention may be needed, all without pulling manual reports.",
+          "details": [
+            "Dashboard views showing client engagement activity across the firm",
+            "Filtered lists that highlight clients due for outreach or review",
+            "Revenue and service-line breakdowns tied directly to client records"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you handle migrating client data from our existing systems?",
+          "answer": "We start by understanding where your client data currently lives, whether that is spreadsheets, an older CRM, your practice management system, or a combination. We then export, clean, and standardize the data before importing it into your new CRM. This process includes deduplication, field mapping, and a review step where your team verifies that key records look correct before we finalize the migration.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will our team need to manually log every client interaction?",
+          "answer": "Not for most interactions. We configure email integration so that messages are automatically associated with client records, and we set up streamlined logging for calls and meetings that takes just a few clicks. The goal is to make interaction tracking feel effortless so your team actually maintains it over time rather than letting it fall off after the first few weeks.",
+          "category": "General"
+        },
+        {
+          "question": "Can the CRM integrate with our practice management software?",
+          "answer": "In most cases, yes. We commonly configure integrations between CRMs and practice management platforms like Karbon, Canopy, and similar tools used by accounting firms. The specifics depend on what platforms you are using and what data needs to flow between them. We evaluate integration options during the discovery phase and recommend the approach that keeps your systems in sync without adding manual steps.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Organize Your Firm's Client Relationships?",
+      "ctaDescription": "Book a consultation and we will assess how your firm currently manages client data and interactions, then map out what a structured CRM setup would look like for your practice."
+    },
+    "crm-integration-for-tax-preparers": {
+      "heroSubtitleTemplate": "For tax preparers, having client data spread across your CRM, tax software, and document management system creates unnecessary friction during the busiest time of year. We integrate your CRM with the tools you already rely on so information flows seamlessly between systems.",
+      "heroDescription": "Tax preparation practices depend on multiple software systems that rarely talk to each other out of the box. Client details live in one platform, tax return status in another, and communication history in a third. This fragmentation means your team spends valuable time during peak season switching between tools, re-entering data, and manually checking statuses. A properly integrated CRM connects these systems so that client information, engagement details, and communication records stay synchronized. We handle the technical configuration and data mapping so your team can focus on preparing returns rather than wrestling with disconnected software.",
+      "benefits": [
+        {
+          "title": "Connected Systems That Eliminate Redundant Data Entry",
+          "description": "When your CRM talks to your tax software and document management system, client updates made in one place automatically reflect across all connected tools. Your team stops entering the same information multiple times and can trust that records are consistent everywhere."
+        },
+        {
+          "title": "Real-Time Client Status Visibility During Tax Season",
+          "description": "Instead of checking multiple systems to understand where a client stands, your team can see return status, outstanding document requests, and communication history from a single interface. This visibility is especially valuable during high-volume periods when keeping track of hundreds of clients manually is not realistic."
+        },
+        {
+          "title": "Smoother Client Communication Powered by Accurate Data",
+          "description": "When your CRM has up-to-date information pulled from your tax software, client-facing communications become more accurate and timely. Automated reminders about missing documents or upcoming deadlines can reference the correct details without your team needing to verify each one manually."
+        }
+      ],
+      "features": [
+        {
+          "title": "Tax Software Integration and Data Mapping",
+          "description": "We connect your CRM to your tax preparation software and configure the data fields that need to stay in sync. Client names, filing statuses, return progress, and key dates all flow between systems based on rules we define together during setup.",
+          "details": [
+            "Bi-directional data sync between your CRM and tax preparation platform",
+            "Field mapping that aligns client records across both systems accurately",
+            "Automated status updates that reflect return progress in your CRM in near real time"
+          ]
+        },
+        {
+          "title": "Document Management System Connection",
+          "description": "We integrate your CRM with your document storage platform so that client files, signed engagement letters, and uploaded source documents are accessible directly from the client record. Your team no longer needs to hunt through separate systems to find what they need.",
+          "details": [
+            "Direct links to client document folders from within CRM contact records",
+            "Automated notifications when new documents are uploaded or requested items are received",
+            "Organized folder structures that mirror your CRM contact and engagement setup"
+          ]
+        },
+        {
+          "title": "Communication Platform Integration",
+          "description": "We connect your email, text messaging, and scheduling tools to your CRM so that every client touchpoint is captured automatically. This gives your team a complete communication timeline without requiring manual logging after every interaction.",
+          "details": [
+            "Email sync that ties messages to the correct client record automatically",
+            "Text message integration for firms that communicate with clients via SMS",
+            "Calendar and scheduling tool connections that log appointments in the CRM"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Which tax preparation software platforms can you integrate with a CRM?",
+          "answer": "The integration options depend on the specific platforms involved. We have experience connecting CRMs with a range of tax software tools, and we evaluate the available integration methods, whether through native connectors, APIs, or middleware like Zapier, during our discovery process. If a direct integration is not available, we can often build a workaround that achieves the same result through automated data syncing.",
+          "category": "Technical"
+        },
+        {
+          "question": "How long does it take to integrate a CRM with our existing tax software?",
+          "answer": "Most integration projects for tax preparers take between two and four weeks from kickoff to completion. The timeline depends on how many systems we are connecting, the complexity of the data mapping, and whether any custom automation is needed. We typically recommend starting the process well before the busy season so your team has time to get comfortable with the connected workflow before volume ramps up.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will the integration break if one of our software providers pushes an update?",
+          "answer": "We build integrations using stable connection methods and test them thoroughly before going live. That said, software updates can occasionally affect integrations, which is why we document every connection point and provide your team with guidance on what to check if something seems off. For firms that want ongoing assurance, we offer monitoring and maintenance options that catch issues quickly so your data stays in sync.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Connect Your Tax Practice Systems?",
+      "ctaDescription": "Schedule a call and we will review the tools your practice currently uses, then outline a CRM integration plan that eliminates the data silos slowing your team down."
+    },
+    "contact-management-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Managing a growing list of clients and prospects as a bookkeeper becomes unsustainable without a system that organizes contacts and automates routine communications. We set up contact management that keeps your client and prospect information organized while automating the follow-ups that keep relationships moving forward.",
+      "heroDescription": "Bookkeeping practices often grow through referrals and word of mouth, which means new contacts arrive in a steady trickle rather than a predictable flow. Without a structured system, those contacts end up scattered across email inboxes, phone notes, and mental to-do lists. Important follow-ups get delayed, warm prospects go cold, and existing clients may not hear from you until the next invoice. We configure a contact management system with automation built in so that every new lead gets a timely response, every client gets consistent communication, and your practice grows without requiring you to personally remember every pending task.",
+      "benefits": [
+        {
+          "title": "Every Contact Organized and Accessible in One Place",
+          "description": "Clients, prospects, referral partners, and vendors all live in a single organized database with clear tags and categories. You can find any contact instantly, see their full history, and understand exactly where the relationship stands without digging through old emails."
+        },
+        {
+          "title": "Automated Follow-Ups That Keep Prospects Warm",
+          "description": "When a new prospect inquires about your services, an automated sequence can send a welcome message, share relevant information about your practice, and schedule check-ins at appropriate intervals. This keeps your bookkeeping practice top of mind without adding to your daily workload."
+        },
+        {
+          "title": "Consistent Client Communication Without Manual Effort",
+          "description": "Regular touchpoints with existing clients, like monthly check-in messages, seasonal reminders, or satisfaction surveys, can run on autopilot. Your clients feel well-served and your practice maintains strong relationships even during your busiest months."
+        }
+      ],
+      "features": [
+        {
+          "title": "Contact Database Setup and Organization",
+          "description": "We build a clean, well-structured contact database designed for a bookkeeping practice. Every contact gets the right tags, categories, and custom fields so you can segment your list and find anyone quickly. We also import and clean up your existing contacts so you start with a solid foundation.",
+          "details": [
+            "Custom tags for client type, service level, referral source, and communication preference",
+            "Import and deduplication of contacts from spreadsheets, email, and other tools",
+            "Organized views that separate active clients, prospects, past clients, and referral partners"
+          ]
+        },
+        {
+          "title": "Automated Prospect Nurture Sequences",
+          "description": "We create email and messaging sequences that engage new prospects automatically after they reach out. Each sequence is written in a conversational tone that reflects your practice, with appropriate timing between messages so contacts feel informed rather than pressured.",
+          "details": [
+            "Welcome sequences that introduce your services and set expectations for new inquiries",
+            "Timed follow-ups that check in with prospects who have not yet scheduled a consultation",
+            "Re-engagement messages for older leads who may be ready to revisit the conversation"
+          ]
+        },
+        {
+          "title": "Client Communication Automation",
+          "description": "We set up automated messages that keep your existing clients informed and engaged throughout the year. These can include onboarding sequences for new clients, periodic check-ins, seasonal reminders, and even request-for-review prompts that help you build social proof.",
+          "details": [
+            "New client onboarding sequences that walk clients through what to expect",
+            "Periodic check-in messages timed to your bookkeeping cycle",
+            "Automated review and referral requests sent at moments when clients are most satisfied"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Do I need a large contact list for automation to be worthwhile?",
+          "answer": "Not at all. Even bookkeeping practices with a few dozen contacts can benefit from automation because the real value is in consistency rather than volume. When follow-ups happen on time every time, prospects are more likely to convert and clients feel better served. Automation also scales naturally, so as your practice grows, the system handles the increased volume without requiring more of your time.",
+          "category": "General"
+        },
+        {
+          "question": "How do you set up automated messages that still sound personal?",
+          "answer": "We write all automated sequences in a natural, conversational tone that matches how you actually communicate with clients. We use personalization fields like first name and service type to make each message feel individual. We also build in appropriate timing and variety so contacts receive messages that feel helpful and relevant rather than generic or salesy. You review and approve every message before it goes live.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can I control which contacts receive automated messages and which do not?",
+          "answer": "Absolutely. We configure your system with clear segmentation rules so you have full control over who enters which automation sequence. You can exclude specific contacts, pause sequences for anyone who needs a personal touch, and set conditions that determine when automation starts or stops. The system works for you rather than overriding your judgment.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your Contact Management?",
+      "ctaDescription": "Book a call and we will look at how your bookkeeping practice currently handles contacts and follow-ups, then show you what an organized, automated system could look like."
+    },
+    "client-database-automation-for-cpas": {
+      "heroSubtitleTemplate": "A well-maintained client database is the foundation of an efficient CPA practice. We help firms centralize their client information, automate data entry processes, and establish systems that keep records clean and current without requiring constant manual oversight.",
+      "heroDescription": "CPA firms accumulate enormous amounts of client data across engagement files, billing systems, tax software, and email. Over time, this data becomes fragmented, outdated, and inconsistent, making it harder to find accurate information when you need it. Partners and staff end up working with incomplete records or spending time verifying details that should already be reliable. We configure client database systems that centralize your firm's information, automate the data entry tasks that consume staff time, and implement validation rules that maintain data quality over the long term. The outcome is a client database your entire firm can trust and use confidently.",
+      "benefits": [
+        {
+          "title": "Centralized Client Information Accessible to the Entire Firm",
+          "description": "Every piece of client data your firm maintains, from contact details and entity information to engagement history and billing records, lives in one structured database. Any authorized team member can find what they need in seconds instead of asking colleagues or searching through files."
+        },
+        {
+          "title": "Automated Data Entry That Saves Hours of Staff Time",
+          "description": "Routine data entry tasks like updating contact information from forms, syncing details from intake questionnaires, and logging engagement milestones can be automated. Your staff reclaims productive hours each week that were previously spent on manual data management."
+        },
+        {
+          "title": "Clean, Reliable Records That Stay Accurate Over Time",
+          "description": "Data validation rules, duplicate detection, and periodic audit processes keep your database clean without requiring someone to manually review every record. When your team pulls a client list or generates a report, they can trust that the underlying data is current and correct."
+        }
+      ],
+      "features": [
+        {
+          "title": "Client Data Centralization and Structuring",
+          "description": "We consolidate client information from across your firm's systems into a single organized database. This includes mapping data from disparate sources, resolving conflicts between records, and establishing a clear data structure that makes sense for how your firm operates.",
+          "details": [
+            "Data consolidation from practice management, billing, tax, and email systems",
+            "Conflict resolution for records with inconsistent or outdated information across sources",
+            "Structured fields for entity type, engagement scope, key contacts, and compliance dates"
+          ]
+        },
+        {
+          "title": "Automated Data Entry and Record Updates",
+          "description": "We configure automation rules that capture new client data as it enters your firm and route it to the correct fields in your database. Intake forms, signed engagement letters, and software updates can all trigger automatic record creation or updates without staff intervention.",
+          "details": [
+            "Form submissions that automatically create or update client records in your database",
+            "Integration triggers that sync data when changes occur in connected software systems",
+            "Scheduled import routines that pull updated information from external data sources"
+          ]
+        },
+        {
+          "title": "Data Quality Rules and Ongoing Maintenance",
+          "description": "We implement validation rules that catch errors at the point of entry, duplicate detection that prevents redundant records, and periodic review workflows that flag stale or incomplete data for attention. These safeguards keep your database reliable as your firm grows.",
+          "details": [
+            "Field validation rules that enforce consistent formatting and required information",
+            "Automated duplicate detection that alerts your team before redundant records are created",
+            "Quarterly data health reports that identify incomplete, outdated, or inconsistent records"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you centralize data from multiple systems without disrupting our current workflows?",
+          "answer": "We approach centralization carefully to avoid interrupting your team's day-to-day operations. The process typically starts with a data audit where we map out what lives in each system and how it connects. We then set up the centralized database and begin syncing data in parallel with your existing workflows. Once the new system is verified and your team is comfortable, we transition fully. There is no hard cutover that forces everyone to change overnight.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens when data conflicts exist between our different systems?",
+          "answer": "Data conflicts are common when client information has been maintained in multiple places independently. We establish clear rules for which source takes priority for each type of data, then apply those rules systematically during centralization. Any conflicts that cannot be resolved automatically are flagged for your team to review. Once the centralized system is live, real-time syncing helps prevent new conflicts from developing.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can the automated data entry handle the volume of new client information our firm processes?",
+          "answer": "The automation systems we configure are designed to handle the volume typical of CPA firms, from smaller practices processing a few new clients per week to larger firms handling dozens. We stress-test the automation during setup to confirm it performs well at your firm's actual volume. If your firm experiences seasonal surges, such as during tax season, we configure the system to handle peak loads without bottlenecks or data loss.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Build a Client Database Your Firm Can Rely On?",
+      "ctaDescription": "Schedule a consultation and we will evaluate your current data management setup, identify the biggest efficiency opportunities, and outline a plan for centralizing and automating your client database."
+    }
   }
 }

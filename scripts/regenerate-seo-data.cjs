@@ -89,7 +89,7 @@ function replaceAudience(obj, audienceLabel) {
   if (obj && typeof obj === 'object') {
     const result = {};
     for (const [k, v] of Object.entries(obj)) {
-      if (k === 'audienceOverrides') continue; // strip overrides from output
+      if (k === 'audienceOverrides' || k === 'slugOverrides') continue; // strip overrides from output
       result[k] = replaceAudience(v, audienceLabel);
     }
     return result;
@@ -98,11 +98,20 @@ function replaceAudience(obj, audienceLabel) {
 }
 
 // Apply audience overrides (merge override fields into content)
-function applyOverrides(content, overrideKey) {
+function applyAudienceOverrides(content, overrideKey) {
   if (!overrideKey || !content.audienceOverrides || !content.audienceOverrides[overrideKey]) {
     return content;
   }
   const overrides = content.audienceOverrides[overrideKey];
+  return { ...content, ...overrides };
+}
+
+// Apply slug-level overrides (highest priority, for per-page unique content)
+function applySlugOverrides(content, slug) {
+  if (!content.slugOverrides || !content.slugOverrides[slug]) {
+    return content;
+  }
+  const overrides = content.slugOverrides[slug];
   return { ...content, ...overrides };
 }
 
@@ -111,8 +120,9 @@ function buildSolutionPageData(page, content) {
   const audienceLabel = getAudienceLabel(page.targetAudience);
   const overrideKey = getAudienceOverrideKey(page.targetAudience);
 
-  // Apply audience overrides before audience label replacement
-  const merged = applyOverrides(content, overrideKey);
+  // Apply overrides: audience first, then slug-level (highest priority)
+  const afterAudience = applyAudienceOverrides(content, overrideKey);
+  const merged = applySlugOverrides(afterAudience, page.slug);
 
   return replaceAudience({
     id: page.slug,
@@ -141,8 +151,9 @@ function buildServicePageData(page, content) {
   const audienceLabel = getAudienceLabel(page.targetAudience);
   const overrideKey = getAudienceOverrideKey(page.targetAudience);
 
-  // Apply audience overrides before audience label replacement
-  const merged = applyOverrides(content, overrideKey);
+  // Apply overrides: audience first, then slug-level (highest priority)
+  const afterAudience = applyAudienceOverrides(content, overrideKey);
+  const merged = applySlugOverrides(afterAudience, page.slug);
 
   return replaceAudience({
     id: page.slug,

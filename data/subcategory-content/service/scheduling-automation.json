@@ -68,5 +68,337 @@
     "tax preparers": {
       "heroDescription": "During tax season, your appointment volume spikes dramatically and the last thing your team needs is to manage scheduling manually. Scheduling automation lets your clients book their own tax preparation meetings, organizer pickups, and review sessions through a professional online booking page. Automated confirmations and reminders go out without your team lifting a finger, and no show rates typically drop significantly when clients receive timely nudges before their appointments."
     }
+  },
+  "slugOverrides": {
+    "appointment-scheduling-automation-for-cpas": {
+      "heroSubtitleTemplate": "Stop losing billable hours to back and forth scheduling emails. A fully automated appointment booking system lets your CPA clients self-schedule, syncs with your calendar in real time, and sends reminders that help reduce missed meetings.",
+      "heroDescription": "Most CPA firms still rely on phone calls and email chains to schedule client meetings, which means someone on your team is spending time that could go toward advisory work or tax preparation on pure logistics. Full scheduling automation changes that entirely. Your clients see your real-time availability through a professional online booking page, pick a time that works, and receive instant confirmation along with a reminder sequence leading up to the meeting. Your calendar updates automatically, double bookings become a thing of the past, and no-show rates tend to drop noticeably when clients get timely nudges. We build and configure the entire system so it fits the way your CPA practice actually operates, from the types of meetings you offer to the buffer times you need between consultations.",
+      "benefits": [
+        {
+          "title": "Eliminate the Email Chains That Slow Down Scheduling",
+          "description": "Every client meeting that requires three or four emails to confirm is time your CPAs could spend on higher-value work. Online self-service booking gives clients the ability to choose an available slot and confirm instantly, removing your team from the scheduling loop entirely."
+        },
+        {
+          "title": "Reduce Missed Appointments with Automated Reminder Sequences",
+          "description": "Clients who receive well-timed reminders before their appointments are far more likely to show up on time and prepared. Automated reminder sequences sent at intervals you choose help keep your CPA firm's calendar reliable without requiring your staff to make follow-up calls."
+        },
+        {
+          "title": "Keep Every Calendar in Sync Without Manual Updates",
+          "description": "When a client books a meeting, the system automatically updates your calendar across every connected platform. Your CPAs always know what is coming next, double bookings are prevented, and freed-up slots from cancellations become available again without anyone having to intervene."
+        }
+      ],
+      "features": [
+        {
+          "title": "Branded Online Booking Pages for Your CPA Practice",
+          "description": "We create a professional booking interface that reflects your firm's identity and allows clients to select the type of meeting they need, whether it is a tax planning session, a quarterly review, or a quick follow-up consultation.",
+          "details": [
+            "Custom booking pages with your firm's branding, colors, and service categories",
+            "Appointment type configuration so clients book the right kind of meeting from the start",
+            "Availability windows that respect your team's working hours, lunch breaks, and prep time between sessions"
+          ]
+        },
+        {
+          "title": "Real-Time Calendar Synchronization Across Platforms",
+          "description": "The scheduling system connects to whatever calendar tools your CPA firm already uses, ensuring that availability displayed to clients always matches reality. Booked meetings appear instantly, and changes propagate across all linked calendars.",
+          "details": [
+            "Two-way sync with Outlook, Google Calendar, and other platforms commonly used by CPA firms",
+            "Automatic conflict detection that prevents overlapping appointments across team members",
+            "Centralized team calendar view so managing partners can monitor scheduling patterns and workload distribution"
+          ]
+        },
+        {
+          "title": "Multi-Touch Confirmation and Reminder Workflows",
+          "description": "From the moment a client books a meeting, they receive a confirmation email with all relevant details. As the appointment approaches, automated reminders go out at the intervals you define, often resulting in a meaningful reduction in no-shows.",
+          "details": [
+            "Instant confirmation emails with meeting details, location or video link, and any preparation instructions",
+            "Customizable reminder cadence, such as notifications at 48 hours, 24 hours, and one hour before the meeting",
+            "Optional SMS reminders for clients who prefer text-based notifications"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How long does it typically take to set up appointment scheduling automation for a CPA firm?",
+          "answer": "Most CPA firms are fully up and running within a few weeks. The timeline depends on factors like how many team members need individual booking pages, how many appointment types you want to offer, and whether you need integrations with existing practice management tools. We handle the configuration and testing so your team can start using the system with confidence.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will clients find it easy to book appointments through the new system?",
+          "answer": "The booking experience is designed to be intuitive even for clients who are not especially tech-savvy. They visit your booking page, choose a service type, pick an available time, and confirm. The entire process usually takes under a minute. Most CPA firms find that clients appreciate the convenience and start booking on their own very quickly.",
+          "category": "General"
+        },
+        {
+          "question": "Can the scheduling system connect with our CRM or practice management software?",
+          "answer": "In most cases, yes. We typically configure the scheduling system to pass appointment data into your CRM so that new bookings create or update contact records automatically. Depending on your practice management platform, we can also trigger follow-up tasks or workflows when meetings are booked. We assess your current tech stack and design integrations that make sense for how your firm operates.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your CPA Firm's Appointment Scheduling?",
+      "ctaDescription": "Schedule a complimentary consultation and we will walk through how a fully automated booking system could work for your practice, from client-facing booking pages to calendar sync and reminder sequences."
+    },
+    "calendar-automation-for-accounting-firms": {
+      "heroSubtitleTemplate": "Managing team calendars across an accounting firm should not require constant coordination. Calendar automation keeps every schedule aligned, routes meetings to the right people, and gives your team visibility into who is available and when.",
+      "heroDescription": "As your accounting firm grows, keeping track of who is available, when meetings are happening, and how to coordinate across multiple team members becomes increasingly difficult to manage manually. Calendar automation solves this by creating a centralized system where team calendars stay synchronized, meeting requests are routed based on service type or client assignment, and availability is always accurate across every platform your firm uses. Instead of someone on your team acting as a scheduling coordinator, the system handles the logistics so your accountants can focus on the work that actually requires their expertise. We configure the entire setup around how your firm is structured, whether that means individual calendars for each partner, shared calendars for departments, or a combination of both.",
+      "benefits": [
+        {
+          "title": "Unified Visibility Across Every Team Member's Schedule",
+          "description": "When your firm's calendars are automated and connected, managers and team leads can see at a glance who is available, who is overbooked, and where there is room to take on additional meetings. This visibility makes it far easier to distribute client interactions evenly and avoid burnout during busy periods."
+        },
+        {
+          "title": "Eliminate the Coordination Overhead of Managing Multiple Calendars",
+          "description": "Without automation, coordinating meetings across several accountants often means someone is manually checking calendars, sending availability options, and confirming times. Calendar automation replaces that entire process with a system that handles availability checks and booking confirmations on its own."
+        },
+        {
+          "title": "Fewer Scheduling Conflicts and Double Bookings",
+          "description": "When calendars sync in real time across all connected platforms, the risk of accidentally scheduling two meetings in the same slot drops significantly. Automated conflict detection catches overlaps before they happen, saving your team from the awkward experience of having to reschedule a client."
+        }
+      ],
+      "features": [
+        {
+          "title": "Team Calendar Synchronization and Centralized Views",
+          "description": "We connect every team member's calendar into a unified system so that availability is always current and visible to the people who need it. Whether your firm uses Outlook, Google Calendar, or another platform, the system keeps everything aligned.",
+          "details": [
+            "Real-time sync across all calendar platforms used within the firm",
+            "Centralized dashboard showing team-wide availability at a glance for managers and partners",
+            "Department-level calendar views for audit, tax, advisory, and other practice areas"
+          ]
+        },
+        {
+          "title": "Intelligent Meeting Routing and Assignment",
+          "description": "When a client or prospect requests a meeting, the system can automatically route that request to the appropriate team member based on criteria you define. This eliminates the guesswork and manual assignment that typically slows down scheduling in multi-person firms.",
+          "details": [
+            "Rule-based routing that assigns meetings by service type, client relationship, or geographic territory",
+            "Round-robin distribution for general inquiries so no single team member gets overwhelmed",
+            "Fallback rules that redirect meeting requests when a team member is out of office or fully booked"
+          ]
+        },
+        {
+          "title": "Availability Management and Buffer Configuration",
+          "description": "Your team's available time is displayed accurately to anyone booking a meeting, with built-in controls for buffer times, working hours, and blocked periods. This ensures that meetings are scheduled in a way that respects your accountants' workflows.",
+          "details": [
+            "Configurable buffer times between meetings so team members have transition and preparation time",
+            "Working hours and day-off settings that automatically block unavailable periods from booking",
+            "Temporary availability overrides for busy seasons, vacations, or firm-wide events"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does calendar automation handle team members who use different calendar platforms?",
+          "answer": "The system is designed to work across multiple calendar platforms simultaneously. If some of your accountants use Outlook and others use Google Calendar, the automation layer sits on top and synchronizes everything into a unified view. Each person continues using the calendar tool they prefer while the system keeps availability accurate across the board.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can we control which types of meetings are routed to specific team members?",
+          "answer": "Absolutely. We configure routing rules based on the criteria that matter to your firm. For example, tax-related meetings can be directed to your tax department, advisory consultations to senior partners, and general inquiries distributed across available staff using round-robin logic. These rules can be adjusted as your team structure evolves.",
+          "category": "General"
+        },
+        {
+          "question": "What is involved in setting up calendar automation for a firm with multiple offices or locations?",
+          "answer": "Multi-location setups are common among accounting firms and the system handles them well. We configure location-specific availability, time zone settings if applicable, and routing rules that account for which team members serve which offices. The centralized dashboard still gives firm leadership visibility across all locations, while each office maintains its own scheduling flow.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Bring Your Firm's Calendars Under One Roof?",
+      "ctaDescription": "Book a free strategy session and we will assess how your accounting firm currently manages calendars and show you what a fully automated, centralized scheduling system could look like."
+    },
+    "meeting-scheduling-system-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax season means a surge in client meetings, and managing that volume manually creates bottlenecks your team cannot afford. A meeting scheduling system built for tax preparers handles the rush without dropping the ball.",
+      "heroDescription": "When tax season hits, the number of client consultations, document pickups, and review meetings your firm handles can multiply several times over in a matter of weeks. If your team is still coordinating those appointments through phone calls and emails, the sheer volume can overwhelm even the most organized office. A meeting scheduling system designed for the realities of tax preparation gives your clients the ability to book their own appointments through an online portal, automatically adjusts available slots as your calendar fills up, and sends reminder sequences that help reduce the number of missed or forgotten meetings. We build the system to handle the seasonal surge your practice faces, with the flexibility to scale back during quieter months. The goal is to make sure that scheduling logistics never compete with the actual work of preparing returns and advising clients.",
+      "benefits": [
+        {
+          "title": "Handle Seasonal Appointment Volume Without Adding Staff",
+          "description": "During peak tax season, the volume of scheduling requests can easily overwhelm a front desk team. An automated meeting scheduling system absorbs that demand by letting clients book directly, freeing your staff to focus on client service and document processing rather than playing phone tag."
+        },
+        {
+          "title": "Reduce the No-Show Rate That Costs You Time During Your Busiest Weeks",
+          "description": "A missed appointment during tax season is not just an inconvenience, it is a slot that could have gone to another client. Automated reminders sent at strategic intervals before each meeting help ensure that clients remember their appointments and come prepared with the documents they need."
+        },
+        {
+          "title": "Give Clients a Convenient Way to Book That Reflects Well on Your Practice",
+          "description": "Clients who can book their own tax preparation meetings at a time that suits them, without having to call during business hours, appreciate the flexibility. A polished self-service booking experience signals that your practice is modern, organized, and respectful of their time."
+        }
+      ],
+      "features": [
+        {
+          "title": "Seasonal Capacity Management",
+          "description": "The scheduling system can be configured to reflect the changing capacity of your tax preparation practice throughout the year. During busy months, you can offer more meeting slots, shorter appointment types, and tighter scheduling. During off-season, you can open up longer consultation windows.",
+          "details": [
+            "Season-specific scheduling templates that adjust available time slots based on time of year",
+            "Appointment duration settings that can vary by period, such as shorter intake meetings during peak season",
+            "Capacity limits per day or per week to prevent your team from becoming overbooked during the busiest stretches"
+          ]
+        },
+        {
+          "title": "Client Self-Service Booking with Document Preparation Prompts",
+          "description": "Your clients visit a professional booking page, choose the type of meeting they need, and select from your available time slots. After booking, they receive a confirmation that includes instructions on what documents or information to bring, helping them arrive prepared.",
+          "details": [
+            "Appointment type options such as initial consultation, document drop-off, return review, and amendment discussion",
+            "Post-booking emails with checklists tailored to the meeting type so clients know what to bring",
+            "Easy rescheduling and cancellation links that free up slots automatically when plans change"
+          ]
+        },
+        {
+          "title": "Automated Reminder Sequences Tuned for Tax Season",
+          "description": "Clients receive reminders at intervals you choose, with messaging that can be tailored to the urgency of tax season deadlines. These reminders serve the dual purpose of reducing no-shows and reinforcing what clients need to have ready for their appointment.",
+          "details": [
+            "Multi-step reminder cadence with customizable timing, such as one week, two days, and morning of the appointment",
+            "Deadline-aware messaging that can reference upcoming filing dates to encourage clients to keep their appointments",
+            "Optional SMS reminders for clients who respond better to text notifications than email"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can the system handle the dramatic increase in bookings we see during January through April?",
+          "answer": "That is exactly the kind of scenario the system is built for. We configure seasonal capacity settings that allow you to open more time slots, offer additional appointment types, and set daily or weekly limits to prevent overbooking. As the season winds down, those settings can be dialed back so your calendar reflects a more typical workload.",
+          "category": "General"
+        },
+        {
+          "question": "How do we get the scheduling system running before the next tax season starts?",
+          "answer": "We recommend starting the setup process at least a few weeks before your busy season begins. That gives us time to configure appointment types, set up calendar integrations, customize reminder sequences, and run through testing with your team. Most tax preparation practices are fully operational within two to three weeks of starting the project.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Does the scheduling system work with the calendar and practice management tools we already use?",
+          "answer": "In nearly all cases, yes. The system integrates with widely used calendar platforms like Outlook and Google Calendar, and we can typically connect it with your practice management software so that booked appointments flow into your existing workflows. We review your current tool stack during the initial consultation and design the integration approach accordingly.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Take Control of Tax Season Scheduling?",
+      "ctaDescription": "Book a complimentary consultation and we will review how your practice currently handles appointment scheduling, then map out a system designed to manage the seasonal surge with less stress and fewer missed meetings."
+    },
+    "booking-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Your bookkeeping clients need an easy way to schedule consultations and onboarding calls without the back and forth. Booking automation gives them a simple, professional experience while keeping your calendar organized.",
+      "heroDescription": "Bookkeeping practices thrive on regular client interaction, whether that means monthly check-in calls, onboarding sessions for new clients, or ad hoc consultations when questions come up. But coordinating all of those meetings manually through email and phone calls takes time away from the actual bookkeeping work your clients are paying for. Booking automation gives your clients a straightforward way to see your available times and schedule a call or meeting on their own. Confirmations go out instantly, reminders arrive before the appointment, and your calendar stays up to date without anyone on your team having to manage it. We set up the system to match the way your bookkeeping practice works, with appointment types that reflect your services and availability settings that keep your schedule manageable.",
+      "benefits": [
+        {
+          "title": "Make It Easy for Clients to Book Without Burdening Your Team",
+          "description": "When a new client needs an onboarding call or an existing client wants to discuss their monthly financials, they should be able to book that meeting in under a minute. Self-service booking removes your team from the scheduling equation and gives clients the convenience they expect from a modern service provider."
+        },
+        {
+          "title": "Keep Your Client Communication Cadence Consistent",
+          "description": "Regular meetings are the backbone of a strong bookkeeping relationship, but they are often the first thing to slip when scheduling becomes a chore. Automated booking and reminders help maintain the consistent meeting cadence that keeps your clients engaged and informed about their financial position."
+        },
+        {
+          "title": "Present a Polished First Impression During Client Onboarding",
+          "description": "The onboarding process sets the tone for your entire client relationship. When a prospective client can book their initial consultation through a professional, branded booking page and immediately receive a confirmation with clear next steps, it creates a positive impression that carries forward into the working relationship."
+        }
+      ],
+      "features": [
+        {
+          "title": "Simple Online Booking for Client Consultations",
+          "description": "We create a clean, easy-to-use booking page where your clients can select the type of meeting they need and choose from your available time slots. The experience is designed to be as frictionless as possible, even for clients who are not comfortable with technology.",
+          "details": [
+            "Appointment categories tailored to bookkeeping services, such as monthly review, onboarding call, and ad hoc consultation",
+            "A straightforward booking flow that requires minimal information from the client to confirm",
+            "Mobile-friendly design so clients can book from their phone just as easily as from a computer"
+          ]
+        },
+        {
+          "title": "Onboarding-Specific Booking Workflows",
+          "description": "New client onboarding often involves multiple steps, and the booking system can be configured to support that process. After an initial consultation is booked, follow-up meetings can be suggested or scheduled automatically as part of your onboarding sequence.",
+          "details": [
+            "Dedicated onboarding appointment types with longer time blocks and preparation instructions",
+            "Post-booking emails that outline what new clients should have ready for their first meeting",
+            "Optional follow-up meeting prompts that encourage new clients to schedule their next session before leaving the first one"
+          ]
+        },
+        {
+          "title": "Automatic Confirmations and Gentle Reminders",
+          "description": "Every booked meeting triggers an instant confirmation email with the meeting details, and a series of reminders goes out before the appointment. This helps your bookkeeping clients remember their meetings and come prepared, which makes the time you spend together more productive.",
+          "details": [
+            "Confirmation emails that include the meeting time, any video call links, and a brief agenda or checklist",
+            "Reminder emails sent at intervals that work for your practice, typically 24 hours and one hour before the meeting",
+            "Rescheduling and cancellation options built into every confirmation so clients can adjust plans without contacting your office"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Is booking automation suitable for a small bookkeeping practice with just one or two people?",
+          "answer": "It is actually an especially good fit for smaller practices because it removes a task that would otherwise fall on someone who is also doing the bookkeeping work. Even a solo bookkeeper can benefit from letting clients self-schedule rather than managing appointments manually. The system scales to fit practices of any size.",
+          "category": "General"
+        },
+        {
+          "question": "How complicated is it to get booking automation set up for a bookkeeping firm?",
+          "answer": "The setup is straightforward. We work with you to define your appointment types, connect your calendar, configure your availability settings, and set up confirmation and reminder emails. Most bookkeeping practices are live within a week or two. We handle the technical configuration so you can focus on your clients.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the booking system send reminders through text messages as well as email?",
+          "answer": "Yes, SMS reminders can be included as part of your reminder sequence. Some bookkeeping clients are more responsive to text messages than email, and having both options available tends to produce the best results when it comes to reducing missed appointments. We configure the channels based on what makes sense for your client base.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Simplify How Your Bookkeeping Clients Schedule Meetings?",
+      "ctaDescription": "Book a free introductory call and we will walk through how booking automation can streamline your client consultations and onboarding process, saving you time on every meeting you schedule."
+    },
+    "scheduling-software-for-cpas": {
+      "heroSubtitleTemplate": "The right scheduling software does more than book meetings. For CPA firms, it connects your booking system to your CRM, practice management tools, and client communication workflows so nothing falls through the cracks.",
+      "heroDescription": "CPA firms that adopt scheduling software often start with the basics, an online booking page and calendar sync, and quickly realize the real value comes from connecting that system to the rest of their technology stack. When a client books a meeting, the information should flow into your CRM, trigger the right follow-up tasks in your practice management platform, and notify the appropriate team member without anyone having to manually transfer data between systems. We help CPA practices select, configure, and integrate scheduling software that fits their workflows. Rather than treating booking as a standalone function, we build it into the fabric of how your firm operates, so every scheduled meeting creates the downstream actions your team needs to stay organized and responsive.",
+      "benefits": [
+        {
+          "title": "Turn Every Booked Meeting into an Actionable CRM Record",
+          "description": "When scheduling software is connected to your CRM, each new booking automatically creates or updates a contact record with the meeting details. Your team walks into every conversation with context about who the client is, what they need, and what interactions have already taken place."
+        },
+        {
+          "title": "Reduce Manual Data Entry Between Disconnected Systems",
+          "description": "Without integration, your team may be copying meeting details from one system into another, a repetitive task that introduces errors and wastes time. Scheduling software that connects directly to your practice management and CRM tools eliminates that redundancy and keeps your data consistent across platforms."
+        },
+        {
+          "title": "Create a Seamless Client Experience from First Booking to Ongoing Service",
+          "description": "When your scheduling software is part of a connected system, the client experience feels cohesive. From the moment they book their first consultation through every subsequent meeting, the communication they receive is timely, relevant, and informed by their history with your firm."
+        }
+      ],
+      "features": [
+        {
+          "title": "CRM Integration for Automatic Contact and Activity Tracking",
+          "description": "We connect your scheduling software to your CRM platform so that every booking generates the appropriate records and activity logs. This means your team always has a complete picture of client interactions without manual data entry.",
+          "details": [
+            "Automatic creation of new contact records when a first-time client books a meeting",
+            "Activity logging that records each scheduled, completed, and rescheduled meeting against the client record",
+            "Custom field mapping so that information collected during the booking process populates the right CRM fields"
+          ]
+        },
+        {
+          "title": "Practice Management Tool Integration",
+          "description": "Your scheduling software can trigger workflows and tasks in your practice management system when meetings are booked. This ensures that the operational side of your CPA firm stays in sync with your client-facing schedule.",
+          "details": [
+            "Automatic task creation in your practice management platform when specific appointment types are booked",
+            "Status updates that reflect meeting outcomes, such as marking a client engagement as active after an onboarding call",
+            "Integration with project tracking so that scheduled review meetings are linked to the relevant client project or engagement"
+          ]
+        },
+        {
+          "title": "Unified Communication Workflows Triggered by Bookings",
+          "description": "Beyond confirmations and reminders, your scheduling software can initiate broader communication sequences. When a prospect books a discovery call, for example, the system can enroll them in a pre-meeting nurture sequence that shares relevant information about your firm's services.",
+          "details": [
+            "Pre-meeting email sequences that provide context about your CPA firm and what to expect from the consultation",
+            "Post-meeting follow-up automation that sends thank you messages, next steps, or engagement documents",
+            "Internal notifications that alert the assigned CPA and support staff when a meeting is booked, rescheduled, or canceled"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Which scheduling software platforms do you typically recommend for CPA firms?",
+          "answer": "The best platform depends on your firm's existing technology stack and specific requirements. We work with a range of tools and often leverage platforms like GoHighLevel that offer built-in scheduling alongside CRM and automation capabilities. During our initial assessment, we evaluate what you are already using and recommend the option that integrates most naturally with your workflows.",
+          "category": "General"
+        },
+        {
+          "question": "What does the integration process look like between scheduling software and our existing CRM?",
+          "answer": "We start by mapping out the data flow you need, identifying what information should move from your scheduling system to your CRM and what actions should be triggered. Then we configure the connections, test them with sample bookings, and refine the setup based on how it performs. The entire process typically takes one to two weeks depending on the complexity of your CRM configuration.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the scheduling software handle different booking flows for different services our CPA firm offers?",
+          "answer": "Yes. We can configure distinct booking flows for different service lines, such as tax preparation, advisory consultations, audit planning, and new client onboarding. Each flow can have its own appointment types, intake questions, duration settings, and post-booking automation. This ensures that the scheduling experience is tailored to the specific context of each service your firm provides.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Connect Your Scheduling Software to the Rest of Your Tech Stack?",
+      "ctaDescription": "Book a free consultation and we will review your current tools, identify integration opportunities, and show you how scheduling software can work alongside your CRM and practice management platform to streamline operations."
+    }
   }
 }

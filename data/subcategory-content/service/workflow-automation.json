@@ -83,5 +83,337 @@
     "tax preparers": {
       "heroDescription": "Tax season brings a surge of work that needs to move through your firm in a defined sequence: document collection, preparation, review, filing, and follow up. When you are managing dozens or hundreds of returns, manual tracking is a recipe for missed deadlines and stressed staff. We build workflow automation systems that assign tasks, track progress, and escalate approaching deadlines so every return moves through your process reliably and your team can focus on the work itself."
     }
+  },
+  "slugOverrides": {
+    "workflow-automation-for-cpas": {
+      "heroSubtitleTemplate": "Between managing client engagements, coordinating team assignments, and tracking deadlines across every service line, your CPA firm likely spends more time orchestrating work than doing it. We help you configure workflow automation that handles task management, approval routing, and recurring process execution so your professionals can focus on advisory work instead of administrative overhead.",
+      "heroDescription": "Most CPA firms operate with a patchwork of spreadsheets, email reminders, and informal check-ins that barely hold together during busy periods. Workflow automation replaces that fragile coordination layer with structured systems that assign the right tasks to the right people, route work through defined approval stages, and keep recurring engagements on track without anyone needing to manually trigger each step. The result is a firm that runs more predictably, with fewer things slipping through the cracks and more capacity for the high-value work your clients actually hire you to do.",
+      "benefits": [
+        {
+          "title": "Streamlined Task Management Across Engagements",
+          "description": "When every engagement generates its own set of tasks, assignments, and deadlines, the sheer volume of coordination can overwhelm even experienced managers. Automated task management creates and assigns work based on engagement type and stage, giving your team clear visibility into what needs attention today and what is coming up next."
+        },
+        {
+          "title": "Approval Workflows That Move at the Speed of Your Firm",
+          "description": "Review and sign-off bottlenecks slow down engagements and frustrate both staff and clients. Configuring structured approval flows means work automatically routes to the right reviewer at the right time, with escalation paths built in so nothing sits waiting for attention longer than it should."
+        },
+        {
+          "title": "Recurring Processes That Run Themselves",
+          "description": "Monthly, quarterly, and annual engagements follow predictable patterns, yet many firms recreate the same task lists and assignments from scratch each cycle. Automating recurring processes means those engagements spin up on schedule with all tasks pre-assigned, letting your team start working immediately rather than spending time on setup."
+        }
+      ],
+      "features": [
+        {
+          "title": "Engagement-Level Task Orchestration",
+          "description": "We configure your practice management platform to generate complete task sequences when new engagements launch. Each service line gets its own workflow template with built-in dependencies, role-based assignments, and milestone tracking so your team always knows what stage every engagement has reached.",
+          "details": [
+            "Custom task templates mapped to each service line your CPA firm offers, from tax compliance to advisory",
+            "Dependency chains that prevent downstream tasks from starting before prerequisite steps are marked complete",
+            "Role-based routing that matches tasks to the appropriate staff level based on complexity and specialization"
+          ]
+        },
+        {
+          "title": "Multi-Stage Approval Configuration",
+          "description": "We build approval workflows that reflect how your firm actually reviews and signs off on deliverables. Whether you have a two-tier review process or a more layered approach, the system routes work to the next reviewer automatically and flags items that need attention before they create downstream delays.",
+          "details": [
+            "Configurable review stages that match your firm's quality control process for different engagement types",
+            "Automatic reviewer notification with context about the engagement and any notes from prior stages",
+            "Escalation triggers that alert managers when approvals are pending beyond your defined timeframes"
+          ]
+        },
+        {
+          "title": "Recurring Engagement Automation",
+          "description": "We set up recurring job templates that automatically generate new engagements on your defined schedule. Each recurring instance inherits the full task list, assignments, and deadlines from the template, adjusted for the current period, so your team never has to manually create the same engagement twice.",
+          "details": [
+            "Scheduled engagement creation for monthly closes, quarterly reviews, annual tax returns, and other cyclical work",
+            "Automatic deadline calculation based on filing dates, client agreements, or custom period offsets",
+            "Carry-forward logic that pulls relevant notes and open items from the prior period into the new engagement"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How long does it typically take to get workflow automation fully configured for a CPA firm?",
+          "answer": "The timeline depends on how many service lines and engagement types you want to automate, as well as the complexity of your current review and approval processes. For most CPA firms, we can have core workflows configured and tested within a few weeks, with more specialized workflows rolling out in phases after that. We prioritize the highest-impact areas first so your team starts seeing benefits early in the process.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will this work if our team is resistant to changing how they do things?",
+          "answer": "Change management is a real consideration, and we approach it by involving your team early in the process. During discovery, we map workflows based on how your people actually work, not how a software vendor thinks they should work. When your team sees that the automation reflects their real processes and removes the parts they find tedious, adoption tends to follow naturally. We also build in flexibility so workflows can be refined as your team gets comfortable with the new approach.",
+          "category": "General"
+        },
+        {
+          "question": "Can approval workflows handle different levels of review for different engagement types?",
+          "answer": "Absolutely. We configure approval routing based on engagement type, dollar thresholds, client risk level, or whatever criteria your firm uses to determine review requirements. A straightforward individual return might need a single reviewer, while a complex entity engagement could require multiple review stages. The system adapts to your quality control standards rather than forcing a one-size-fits-all approach.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Bring Structure to Your Firm's Workflows?",
+      "ctaDescription": "Schedule a discovery call and we will walk through your current task management, approval processes, and recurring engagements to identify where automation can have the biggest impact on your CPA firm's efficiency."
+    },
+    "process-automation-for-accounting-firms": {
+      "heroSubtitleTemplate": "Your accounting firm runs on processes, from client onboarding through engagement delivery and everything in between. When those processes live in people's heads or scattered checklists, consistency suffers and things get missed. We help you standardize and automate your multi-step firm processes so work flows predictably from start to finish.",
+      "heroDescription": "Every accounting firm has processes that repeat hundreds of times a year, but few firms have those processes documented in a way that actually drives consistent execution. Process automation takes your firm's best practices and builds them into systems that execute reliably every time. Instead of relying on individual team members to remember every step, the system guides work through defined stages with automatic handoffs, built-in quality checks, and clear accountability at each phase. The outcome is a firm that delivers consistent results regardless of who is handling a particular engagement or how busy the team happens to be.",
+      "benefits": [
+        {
+          "title": "Consistent Execution Across Every Engagement",
+          "description": "When processes are automated and standardized, every client receives the same level of thoroughness regardless of which team member handles their work. This consistency reduces errors, improves client satisfaction, and makes it far easier to train new staff because the process itself provides the guidance they need."
+        },
+        {
+          "title": "Reduced Dependency on Institutional Knowledge",
+          "description": "Most accounting firms have key people who carry critical process knowledge that no one else fully understands. Automating those processes captures that expertise in a system, which means your firm can continue operating smoothly even when experienced staff take time off, move on, or shift into different roles."
+        },
+        {
+          "title": "Faster Throughput During Peak Periods",
+          "description": "Standardized, automated processes move faster because there is no ambiguity about what happens next. During busy season or month-end crunches, your team spends less time figuring out next steps and more time executing, which can meaningfully improve your firm's capacity without adding headcount."
+        }
+      ],
+      "features": [
+        {
+          "title": "Process Mapping and Standardization",
+          "description": "Before we automate anything, we work with your team to map out how your key processes actually operate today. We identify the steps, decision points, handoffs, and quality checks that make up each process, then design a standardized version that preserves what works well while eliminating inefficiencies and ambiguities.",
+          "details": [
+            "Collaborative process mapping sessions with your team to capture both formal procedures and informal workarounds",
+            "Gap analysis that identifies where current processes have inconsistencies, bottlenecks, or missing quality controls",
+            "Standardized process documentation that serves as the foundation for automation configuration"
+          ]
+        },
+        {
+          "title": "Multi-Step Workflow Configuration",
+          "description": "We configure your systems to execute each standardized process as a series of defined steps with automatic progression. When one step is completed, the next step is triggered with the right person assigned and the right context provided, so work moves forward without anyone needing to manually initiate the handoff.",
+          "details": [
+            "Sequential and parallel step configuration based on which tasks can happen simultaneously and which require predecessor completion",
+            "Conditional branching that routes work through different paths based on engagement characteristics or client attributes",
+            "Built-in checkpoint stages where quality reviews or manager approvals are required before work can advance"
+          ]
+        },
+        {
+          "title": "Process Monitoring and Optimization",
+          "description": "Once your processes are automated, we set up monitoring that gives firm leadership visibility into how work is flowing. You can see where processes are running smoothly, where bottlenecks are forming, and where individual engagements stand relative to their expected timelines.",
+          "details": [
+            "Dashboard views showing the status of all active engagements across each automated process",
+            "Bottleneck alerts that notify managers when work is stuck at a particular stage longer than expected",
+            "Process performance metrics that help you identify opportunities to further refine and improve your workflows over time"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What if different partners in our firm want to run their processes differently?",
+          "answer": "That is a common reality in accounting firms, and we handle it by building flexibility into the automation. We typically establish a core process framework that covers the essential quality control and compliance steps, then allow for partner-level variations in areas where personal preference does not affect the outcome. The goal is to standardize where it matters for consistency and client experience while leaving room for professional judgment where it is appropriate.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How do you decide which processes to automate first?",
+          "answer": "We work with you to prioritize based on a combination of frequency, impact, and pain level. Processes that run hundreds of times a year, that have the most steps prone to being missed, or that cause the most frustration for your team tend to be the best candidates for early automation. We also consider how well-defined a process already is, since processes that are completely ad hoc may need some design work before they are ready for automation.",
+          "category": "General"
+        },
+        {
+          "question": "Can automated processes integrate with our existing accounting and tax software?",
+          "answer": "In most cases, yes. The practice management platforms we work with offer integrations with common accounting and tax preparation tools, and we configure those connections as part of the process automation setup. Where direct integrations are not available, we can often use intermediate automation tools to bridge the gap. During discovery, we assess your current software ecosystem and design the automation approach accordingly.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Standardize and Automate Your Firm's Processes?",
+      "ctaDescription": "Book a discovery session and we will review your firm's core processes together, identify the areas where standardization and automation can deliver the most value, and outline a practical path forward."
+    },
+    "task-automation-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax season demands precision across hundreds of moving pieces, and the repetitive administrative tasks that surround each return can consume as much time as the preparation work itself. We configure task automation that handles the recurring seasonal workload, from document request sequences to status communications and filing checklists, so your team can focus on the returns instead of the coordination.",
+      "heroDescription": "For tax preparers, every return follows a similar lifecycle: collect documents, prepare the return, review it, get client approval, file it, and follow up. Multiply that by dozens or hundreds of clients and the administrative overhead becomes staggering. Task automation addresses this by handling the repetitive elements of that lifecycle automatically. Document request emails go out on schedule, status updates reach clients without manual effort, and filing checklists populate themselves based on return type. Your preparers spend their time on the technical work that requires their expertise rather than on the coordination tasks that could be systematized.",
+      "benefits": [
+        {
+          "title": "Automated Document Collection That Stays on Track",
+          "description": "Chasing clients for missing documents is one of the most time-consuming parts of tax season. Automated document request sequences send initial requests, follow-up reminders, and escalation notices on a defined schedule, keeping the collection process moving without your team manually tracking who has responded and who has not."
+        },
+        {
+          "title": "Proactive Client Communication Without the Effort",
+          "description": "Clients want to know where their return stands, but manually sending status updates to every client drains time your team does not have during busy season. Task automation can trigger client notifications at key milestones, such as when documents are received, when preparation begins, or when the return is ready for review, keeping clients informed automatically."
+        },
+        {
+          "title": "Filing Checklists That Adapt to Each Return",
+          "description": "Different return types have different filing requirements, and missing a step can create costly problems. Automated task generation builds return-specific checklists based on entity type, state requirements, and client circumstances, so your preparers always have a complete picture of what needs to happen for each engagement."
+        }
+      ],
+      "features": [
+        {
+          "title": "Document Request Sequence Configuration",
+          "description": "We set up automated document request workflows that send personalized organizers, track responses, and trigger follow-up reminders based on your defined timeline. Each client receives the right request for their return type, and your team can see at a glance who has submitted documents and who needs another nudge.",
+          "details": [
+            "Customizable document request templates tailored to individual, business, trust, and other return types",
+            "Scheduled reminder sequences that escalate in tone and urgency as filing deadlines approach",
+            "Response tracking dashboards that show document collection status across your entire client base"
+          ]
+        },
+        {
+          "title": "Status Update and Client Communication Automation",
+          "description": "We configure milestone-based notifications that keep clients informed as their return progresses through your workflow. When a return moves from preparation to review, or from review to ready for signature, the client receives a clear update without anyone on your team needing to draft and send a message.",
+          "details": [
+            "Trigger-based email or portal notifications tied to workflow stage transitions in your practice management system",
+            "Customizable message templates that maintain your firm's voice and include relevant details for each milestone",
+            "Opt-in preferences that let clients choose their preferred communication frequency and channel"
+          ]
+        },
+        {
+          "title": "Filing Checklist and Deadline Automation",
+          "description": "We build dynamic task lists that generate automatically based on the characteristics of each return. State filing requirements, estimated payment schedules, extension deadlines, and post-filing follow-ups are all captured in task lists that update as the engagement progresses, so nothing gets overlooked in the rush of busy season.",
+          "details": [
+            "Return-type-specific task generation that accounts for federal, state, and local filing requirements",
+            "Deadline calculation logic that factors in extensions, estimated payment dates, and jurisdiction-specific due dates",
+            "Post-filing task automation for items like estimated payment reminders, amendment tracking, and next-year planning notes"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can this be set up before tax season starts, or is it too late if we are already in the middle of it?",
+          "answer": "Ideally, we start the configuration during your slower months so everything is tested and ready before the seasonal rush begins. That said, we have worked with tax practices that needed to implement automation mid-season, and in those cases we focus on the highest-impact areas first, typically document collection and status communications, and layer in additional automation as capacity allows. It is never too late to start, though starting earlier gives us more room to get things dialed in.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will automated client communications feel impersonal to our clients?",
+          "answer": "Not if they are done thoughtfully. We work with you to craft message templates that reflect your firm's voice and feel like they are coming from a real person, not a system. The content is personalized with client-specific details, and the timing aligns with actual workflow milestones so clients receive information that is relevant and timely. Most clients appreciate the proactive communication and do not distinguish it from a manually sent message.",
+          "category": "General"
+        },
+        {
+          "question": "How does the document request automation handle clients who use different methods to submit their documents?",
+          "answer": "The automation is flexible enough to accommodate different submission methods. Whether a client uploads documents through a portal, emails them directly, or drops off physical copies that your team scans in, the tracking system can be updated to reflect what has been received. We configure the workflow so that the follow-up reminders account for partial submissions and only prompt clients about the specific items that are still outstanding.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Take the Repetition Out of Tax Season?",
+      "ctaDescription": "Schedule a call and we will review your current seasonal workflow together, identify the tasks that are consuming the most administrative time, and show you how automation can help your team focus on preparation instead of coordination."
+    },
+    "operations-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Running a bookkeeping practice means juggling daily operational tasks across every client on your roster, from transaction categorization workflows to reconciliation schedules and deliverable tracking. We configure operations automation that keeps your daily work organized, on schedule, and moving forward without the constant mental overhead of managing it all manually.",
+      "heroDescription": "Bookkeeping is inherently operational. Every day brings a cycle of transaction processing, categorization, reconciliation, and client communication that repeats across every account you manage. When you are handling multiple clients, each with their own chart of accounts, preferences, and reporting schedules, the operational complexity compounds quickly. Operations automation addresses this by turning your daily workflows into managed, trackable processes. Tasks are created and assigned automatically based on your schedule, reconciliation reminders trigger on time, and client deliverables are tracked through defined stages so you always know exactly where every client's work stands without having to hold it all in your head.",
+      "benefits": [
+        {
+          "title": "Daily Workflows That Organize Themselves",
+          "description": "Instead of starting each day by mentally reconstructing what needs to happen for which client, automated operations create your daily task list based on schedules, deadlines, and the current status of each engagement. You open your system and see a prioritized list of work that is ready for your attention, with context about each task built right in."
+        },
+        {
+          "title": "Predictable Reconciliation and Close Cycles",
+          "description": "Monthly and weekly reconciliation schedules are the heartbeat of a bookkeeping practice, but managing those cycles manually across multiple clients is where things tend to slip. Operations automation generates reconciliation tasks on your defined schedule, tracks completion, and escalates items that are falling behind so your close cycles stay predictable."
+        },
+        {
+          "title": "Client Deliverable Tracking That Keeps Everyone Aligned",
+          "description": "When clients expect financial reports, bank reconciliation confirmations, or custom deliverables on a regular cadence, missing a delivery erodes trust. Automated tracking makes sure every client deliverable is accounted for, assigned, and monitored through completion, with reminders that keep your team on track before due dates arrive."
+        }
+      ],
+      "features": [
+        {
+          "title": "Daily Operations Workflow Configuration",
+          "description": "We configure your practice management system to generate daily operational task lists based on your client roster and service schedules. Each morning, your team sees a clear picture of the day's work, organized by priority and client, with the relevant context and links needed to start each task without hunting for information.",
+          "details": [
+            "Client-specific task generation based on service agreements, reporting schedules, and processing frequencies",
+            "Priority sequencing that accounts for deadlines, client importance, and task dependencies",
+            "Contextual task details that include links to client accounts, relevant notes, and any outstanding items from prior periods"
+          ]
+        },
+        {
+          "title": "Reconciliation Cycle Automation",
+          "description": "We set up automated reconciliation workflows that trigger on your defined schedule for each client. The system creates reconciliation tasks, assigns them to the appropriate team member, and tracks completion through each stage. If a reconciliation is not completed by its target date, the system escalates it so nothing falls behind without notice.",
+          "details": [
+            "Scheduled reconciliation task creation for bank accounts, credit cards, and other accounts on a per-client basis",
+            "Completion tracking with clear status indicators so you can see reconciliation progress across all clients at once",
+            "Escalation rules that alert you when reconciliations are approaching or past their target completion dates"
+          ]
+        },
+        {
+          "title": "Client Reporting and Deliverable Management",
+          "description": "We configure workflows that track every client deliverable from preparation through delivery. When a reporting period closes, the system automatically creates the deliverable tasks, assigns preparation and review steps, and monitors progress against your delivery commitments so clients receive their reports on time consistently.",
+          "details": [
+            "Deliverable templates tied to each client's reporting schedule, including financial statements, management reports, and custom packages",
+            "Preparation and review stage tracking with automatic handoffs between team members responsible for each phase",
+            "Delivery confirmation tracking that logs when each deliverable is sent and captures any client feedback or follow-up requests"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "I am a solo bookkeeper. Is operations automation still worthwhile if it is just me?",
+          "answer": "It can be, especially if you are managing more than a handful of clients. Even without a team to coordinate, operations automation helps you stay organized by generating your task lists automatically, tracking reconciliation schedules, and making sure client deliverables do not slip through the cracks when you are busy. Many solo practitioners find that the mental relief of not having to hold everything in their head is one of the most valuable aspects of automation, even before considering the time savings.",
+          "category": "General"
+        },
+        {
+          "question": "How does this work with my existing bookkeeping and accounting software?",
+          "answer": "The operations automation lives in your practice management layer and coordinates the work that happens in your bookkeeping tools. We configure it to work alongside whatever accounting software you use, whether that is QuickBooks, Xero, or another platform. The automation handles the task management, scheduling, and tracking side of things, while your accounting software continues to handle the actual transaction processing and reporting.",
+          "category": "Technical"
+        },
+        {
+          "question": "What does the setup process look like for a bookkeeping practice?",
+          "answer": "We start with a discovery session where we map out your current client roster, service schedules, and operational workflows. From there, we design the automation configuration, set up your templates and schedules, and test everything with a subset of your clients before rolling it out fully. The timeline varies depending on the number of clients and the complexity of your service offerings, but most bookkeeping practices can be up and running within a few weeks of starting the configuration process.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Streamline Your Bookkeeping Operations?",
+      "ctaDescription": "Book a discovery call and we will map out your current daily workflows, reconciliation cycles, and client deliverable schedules together to identify where operations automation can free up the most time in your practice."
+    },
+    "business-process-automation-for-cpas": {
+      "heroSubtitleTemplate": "Your CPA firm manages complete business processes that span the entire client lifecycle, from the first inquiry through engagement delivery and ongoing relationship management. We help you automate those end-to-end processes so that every client moves through your firm's systems smoothly, with fewer manual handoffs and more consistent outcomes at every stage.",
+      "heroDescription": "CPA firms do not just perform tasks in isolation. They manage interconnected business processes that tie together client acquisition, onboarding, engagement execution, quality review, delivery, billing, and ongoing relationship management. When these processes are managed manually, each handoff between stages is an opportunity for things to fall through the cracks. Business process automation connects these stages into unified workflows where completing one phase naturally triggers the next, with the right people assigned, the right information carried forward, and the right quality controls applied automatically. The result is a firm where clients experience a seamless journey from initial contact to long-term relationship, and your team spends less time on process management and more time on professional service delivery.",
+      "benefits": [
+        {
+          "title": "Seamless Client Lifecycle Management",
+          "description": "From the moment a prospect becomes a client through every engagement your firm delivers, automated business processes ensure that each stage transitions smoothly into the next. Onboarding triggers engagement setup, engagement completion triggers billing, and billing triggers the scheduling of subsequent services, all without manual intervention to move things along."
+        },
+        {
+          "title": "Reduced Revenue Leakage from Process Gaps",
+          "description": "Many CPA firms lose revenue not because they lack clients but because work falls into the gaps between process stages. Engagements that are completed but not billed promptly, follow-up services that are never scheduled, or renewal conversations that happen too late are all symptoms of disconnected processes. End-to-end automation helps close those gaps by making sure every step in your revenue cycle triggers the next one."
+        },
+        {
+          "title": "Scalable Operations Without Proportional Overhead",
+          "description": "When your business processes are automated, adding new clients or service lines does not require a proportional increase in administrative staff. The systems handle the coordination, routing, and tracking that would otherwise require more people, which means your firm can grow its revenue without growing its overhead at the same rate."
+        }
+      ],
+      "features": [
+        {
+          "title": "Client Onboarding Process Automation",
+          "description": "We configure end-to-end onboarding workflows that take a new client from signed engagement letter through to a fully set up, active engagement. Every step, including document collection, system setup, team assignment, and kickoff communication, is sequenced and tracked so onboarding happens consistently and nothing is missed.",
+          "details": [
+            "Triggered onboarding sequences that launch automatically when an engagement letter is signed or a new client record is created",
+            "Parallel task streams for items that can happen simultaneously, such as document collection and system configuration",
+            "Onboarding completion verification that confirms all prerequisites are met before the first engagement work begins"
+          ]
+        },
+        {
+          "title": "Engagement-to-Billing Workflow Integration",
+          "description": "We connect your engagement delivery workflows to your billing processes so that completed work flows naturally into invoicing. When an engagement reaches its final stage, the system captures the relevant billing details, generates or queues the invoice, and initiates the collection workflow, reducing the lag between work completion and revenue recognition.",
+          "details": [
+            "Automatic billing triggers tied to engagement completion milestones or defined billing schedules",
+            "Time and fee capture integration that pulls engagement data into your billing system without manual data entry",
+            "Collection workflow automation that sends payment reminders and escalates outstanding invoices on a defined schedule"
+          ]
+        },
+        {
+          "title": "Ongoing Relationship and Renewal Management",
+          "description": "We automate the processes that maintain and grow your client relationships over time. Service renewal reminders, annual planning conversations, and cross-sell opportunity identification are all built into workflows that keep your client relationships active and productive without relying on individual partners to remember every touchpoint.",
+          "details": [
+            "Scheduled relationship touchpoints that trigger outreach tasks at defined intervals throughout the year",
+            "Renewal and re-engagement workflows that begin automatically in advance of contract or engagement expiration dates",
+            "Opportunity tracking that surfaces clients who may benefit from additional services based on their profile and engagement history"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How is business process automation different from just automating individual tasks?",
+          "answer": "Individual task automation handles specific activities in isolation, like sending a reminder email or creating a checklist. Business process automation connects those activities into a continuous flow where the completion of one step automatically initiates the next. The difference is that you are not just automating pieces of your workflow. You are automating the entire journey from start to finish, including the transitions and handoffs between stages that are often where things go wrong in a manually managed firm.",
+          "category": "General"
+        },
+        {
+          "question": "Our firm has different processes for different service lines. Can the automation handle that complexity?",
+          "answer": "Yes, and in fact that is exactly the kind of complexity where business process automation provides the most value. We configure separate process templates for each service line, with their own stages, task sequences, and quality control checkpoints. At the same time, we connect the shared elements, like billing and client communication, so you get consistency where it matters without forcing every service line into an identical workflow. The result is a system that respects the unique requirements of each practice area while maintaining firm-wide standards for client experience and process quality.",
+          "category": "Technical"
+        },
+        {
+          "question": "What is involved in mapping our existing business processes before automation?",
+          "answer": "We conduct structured discovery sessions with key stakeholders across your firm to document how work actually flows from client acquisition through delivery and ongoing management. This includes identifying formal procedures, informal workarounds, decision points, and handoffs between teams or individuals. The mapping phase typically takes one to two weeks depending on the number of service lines and the complexity of your operations. It is a critical investment because the quality of the automation depends directly on the accuracy of the process map we build together.",
+          "category": "Implementation"
+        }
+      ],
+      "ctaTitle": "Ready to Connect Your Firm's Processes End to End?",
+      "ctaDescription": "Schedule a discovery session and we will map your client lifecycle together, from acquisition through ongoing relationship management, and identify where end-to-end business process automation can reduce friction, close revenue gaps, and help your CPA firm scale more efficiently."
+    }
   }
 }

@@ -68,5 +68,337 @@
     "tax preparers": {
       "heroDescription": "Tax practices operate on tight seasonal timelines where every disconnection between marketing, operations, and client communication creates risk. Full spectrum automation ensures that new tax clients flow seamlessly from lead capture through onboarding, into your preparation workflow, and through a client experience that drives reviews, referrals, and year round engagement, all without your team manually managing each handoff."
     }
+  },
+  "slugOverrides": {
+    "marketing-and-operations-automation-for-cpas": {
+      "heroSubtitleTemplate": "When your marketing runs on one platform and your operations live in another, your team becomes the bridge between them. CPAs who connect both sides into a single automated flow spend less time coordinating and more time advising clients.",
+      "heroDescription": "CPA firms often build marketing and operations separately, then rely on staff to move information between the two. A lead comes in from a campaign, someone manually adds them to the CRM, another person sets up the engagement, and a third starts the onboarding communication. Full spectrum automation for CPAs ties marketing directly to operations so that every new lead, every converted client, and every ongoing engagement moves through a connected system without manual handoffs between departments.",
+      "benefits": [
+        {
+          "title": "Marketing Efforts That Feed Directly Into Your Workflow",
+          "description": "When a prospect responds to your outreach or fills out a form on your website, that information flows straight into your practice management system. Your team does not need to re-enter data, assign tasks manually, or wonder whether someone followed up. The marketing-to-operations handoff happens automatically, which means your campaigns actually translate into organized, actionable work."
+        },
+        {
+          "title": "Operational Visibility Across the Entire Client Lifecycle",
+          "description": "Connecting marketing and operations gives you a single view of how clients move through your firm. You can see which campaigns are bringing in engaged prospects, how quickly those prospects convert, and how smoothly they transition into active engagements. That kind of visibility helps you make informed decisions about where to focus your marketing budget and operational resources."
+        },
+        {
+          "title": "Consistent Client Experience From First Touch to Ongoing Service",
+          "description": "Clients notice when communication feels disjointed, when they have to repeat information or when follow-ups come late. By connecting your marketing and operations systems, every client interaction feels like it comes from one cohesive firm. That consistency tends to build trust early and can contribute to stronger long-term relationships."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Lead-to-Engagement Pipeline",
+          "description": "Your marketing platforms connect directly to your engagement setup workflows. When a CPA prospect becomes a client, the system creates the engagement, assigns the team, and initiates the onboarding sequence without anyone copying data between systems.",
+          "details": [
+            "Lead scoring and qualification data from marketing platforms like GoHighLevel flows into your CRM automatically",
+            "Engagement letters and onboarding documents are pre-populated with information collected during the marketing interaction",
+            "Task assignments and team notifications trigger the moment a prospect converts to a signed client"
+          ]
+        },
+        {
+          "title": "Coordinated Campaign and Workflow Tracking",
+          "description": "Marketing campaign performance connects to operational outcomes so you can see not just how many leads a campaign generated but how those leads performed once they became clients. This closed-loop reporting helps you invest in the marketing activities that produce the best operational results.",
+          "details": [
+            "Campaign attribution data follows clients through onboarding and into active engagement tracking",
+            "Revenue and retention metrics tie back to the original marketing source for each client",
+            "Automated reports combine marketing spend with operational outcomes for a complete picture of ROI"
+          ]
+        },
+        {
+          "title": "Cross-System Communication Automation",
+          "description": "Client communications that span marketing and operations, like welcome sequences that transition into engagement updates, are managed as one continuous flow. Your clients never experience a gap between the attentive communication they received as a prospect and the service they receive as a client.",
+          "details": [
+            "Welcome and onboarding email sequences that adapt based on which marketing channel the client came from",
+            "Status updates and milestone notifications that continue the communication cadence established during nurturing",
+            "Feedback and review requests timed to operational milestones rather than arbitrary calendar dates"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How long does it typically take to connect our existing marketing and operations systems?",
+          "answer": "Most CPA firms see their core marketing-to-operations pipeline connected within four to six weeks. We start by mapping how leads currently move through your firm, identify where the manual handoffs are, and build the automated connections in priority order. The timeline depends on how many systems are involved and how complex your current workflows are, but we focus on delivering measurable improvements early rather than waiting for a complete buildout.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will this work with the marketing tools and practice management software we already use?",
+          "answer": "In most cases, yes. We work with the platforms CPA firms commonly rely on, including GoHighLevel, Karbon, and similar tools. Rather than asking you to replace what is already working, we focus on building the connections between your existing systems. If there are gaps that require a new tool, we will walk you through the options and the reasoning before making any changes.",
+          "category": "Technical"
+        },
+        {
+          "question": "What kind of results should we realistically expect from connecting marketing and operations?",
+          "answer": "Firms that connect these systems typically see faster lead response times, fewer dropped prospects during the conversion process, and a noticeable reduction in the administrative time spent moving information between platforms. The specific impact varies based on your firm size and current processes, but the most common early win is reclaiming the hours your team currently spends on manual data entry and follow-up coordination.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "See How Your Marketing and Operations Can Work Together",
+      "ctaDescription": "Schedule a consultation and we will map out exactly where disconnections between your marketing and operations are creating extra work for your team, then show you what a connected system could look like for your firm."
+    },
+    "client-acquisition-and-onboarding-automation-for-accounting-firms": {
+      "heroSubtitleTemplate": "The transition from prospect to active client is where many accounting firms lose momentum. Automating the entire acquisition-to-onboarding journey means fewer prospects slip through the cracks and every new client starts with a smooth, professional experience.",
+      "heroDescription": "Accounting firms invest heavily in attracting new clients but often underestimate how much friction exists between winning a prospect and getting them fully onboarded. Proposals sit in inboxes, engagement letters wait for signatures, welcome packets go out late, and the team scrambles to set up the new client in every system. Full spectrum automation for accounting firms connects the entire acquisition-to-onboarding journey so that every step from initial inquiry to first deliverable happens in sequence, on time, and without manual coordination.",
+      "benefits": [
+        {
+          "title": "Faster Prospect-to-Client Conversion",
+          "description": "When the steps between a prospect saying yes and actually becoming a client happen automatically, the conversion window shrinks dramatically. Engagement letters go out immediately, signatures trigger onboarding workflows, and welcome communications launch without waiting for someone on your team to initiate each step. That speed creates a professional first impression and reduces the chance of prospects reconsidering."
+        },
+        {
+          "title": "Onboarding That Collects Everything the First Time",
+          "description": "Automated onboarding sequences walk new clients through document submission, information gathering, and system access setup in a structured order. Clients receive clear instructions about what they need to provide and when, with reminders that follow up automatically if items are outstanding. This approach tends to reduce the back-and-forth that typically extends onboarding timelines."
+        },
+        {
+          "title": "A Repeatable Process That Scales With Your Growth",
+          "description": "Manual onboarding works when you add a few clients per quarter, but it becomes a bottleneck as your firm grows. An automated acquisition-to-onboarding system handles ten new clients the same way it handles two, with the same level of attention and consistency. That scalability means growth does not require proportional increases in administrative staff."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Proposal and Engagement Workflow",
+          "description": "From the moment a prospect expresses interest, the system manages the proposal, follow-up, and engagement letter process. Each step triggers the next, ensuring nothing sits idle waiting for someone to take action.",
+          "details": [
+            "Customized proposals generated from intake data and sent automatically with e-signature capability",
+            "Follow-up sequences that check in with prospects who have not yet signed, with messaging that adjusts based on how long the proposal has been open",
+            "Signed engagement letters that immediately trigger client setup in your practice management and communication systems"
+          ]
+        },
+        {
+          "title": "Structured Client Onboarding Sequences",
+          "description": "New clients receive a step-by-step onboarding experience that collects documents, sets expectations, and introduces them to your firm, all without your team manually managing the process for each individual client.",
+          "details": [
+            "Welcome communications that introduce your team, explain your process, and set clear timelines for what happens next",
+            "Document request workflows using tools like LedgerDocs that track submission status and send automated reminders for missing items",
+            "System access provisioning and client portal setup that happens in the background as onboarding progresses"
+          ]
+        },
+        {
+          "title": "Acquisition Analytics and Pipeline Visibility",
+          "description": "Every stage of the acquisition-to-onboarding pipeline is tracked and visible. You can see exactly how many prospects are at each stage, where bottlenecks occur, and how long each step takes on average.",
+          "details": [
+            "Real-time pipeline dashboards showing prospect status from inquiry through completed onboarding",
+            "Conversion rate tracking at each stage so you can identify where prospects are dropping off",
+            "Onboarding completion metrics that highlight which steps take the longest and where clients need the most support"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can we customize the onboarding experience for different service types?",
+          "answer": "Absolutely. Different service lines typically require different documents, different timelines, and different communication. The system can branch the onboarding workflow based on which services a client has signed up for, so a tax-only client receives a different sequence than a client who has engaged for monthly bookkeeping and advisory. Each path is tailored to collect exactly what is needed for that engagement type.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does the automation handle prospects who go quiet during the acquisition process?",
+          "answer": "The system includes configurable follow-up sequences for prospects who stop responding at any stage. These sequences adjust their tone and timing based on how long the prospect has been inactive and where they were in the process. If a prospect remains unresponsive beyond your defined threshold, the system can archive them and optionally add them to a long-term nurture sequence for future re-engagement.",
+          "category": "General"
+        },
+        {
+          "question": "What systems does this integrate with for document collection and e-signatures?",
+          "answer": "We typically build these workflows using platforms accounting firms already rely on, including GoHighLevel for client communication, LedgerDocs or similar tools for document management, and built-in or third-party e-signature solutions. If your firm uses specific tools for any of these functions, we evaluate compatibility and build the integrations accordingly rather than asking you to switch platforms.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Streamline Your Client Acquisition and Onboarding",
+      "ctaDescription": "Book a consultation and we will walk through your current acquisition-to-onboarding process together, identify the manual steps that are slowing you down, and outline a connected system that moves new clients from inquiry to active engagement seamlessly."
+    },
+    "lead-generation-and-client-management-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparation is seasonal by nature, but client relationships should not be. Automating lead generation alongside client management gives tax preparers a way to build a steady pipeline while keeping existing clients engaged throughout the entire year.",
+      "heroDescription": "Tax preparers face a unique challenge: the demand for new clients peaks at specific times of year, but the work of managing those relationships never stops. Without automation, lead generation happens in bursts, follow-ups fall behind during busy season, and client communication goes quiet once returns are filed. Full spectrum automation for tax preparers connects your lead generation efforts directly to your client management workflows, creating a system where new prospects are captured and nurtured year round while existing clients receive consistent communication that drives retention, referrals, and expanded services.",
+      "benefits": [
+        {
+          "title": "Year-Round Lead Generation That Runs Without Daily Attention",
+          "description": "Automated lead generation systems capture prospects from your website, social media, and referral programs continuously, not just when you have time to focus on marketing. During busy season, your pipeline keeps filling. During slower months, nurture sequences maintain engagement with prospects who are not yet ready to commit. This steady approach tends to smooth out the feast-or-famine cycle that many tax preparers experience."
+        },
+        {
+          "title": "Client Management That Extends Beyond Tax Season",
+          "description": "After returns are filed, many tax preparers lose touch with clients until the following January. Automated client management maintains regular, valuable communication throughout the year, including tax planning reminders, estimated payment notifications, and check-ins that keep your firm top of mind. That ongoing engagement can make it more likely that clients return and refer others."
+        },
+        {
+          "title": "A Single System for Both Acquisition and Retention",
+          "description": "When lead generation and client management share the same platform, you eliminate the disconnect between how you attract clients and how you serve them. Prospect data flows into client records, communication histories carry forward, and your team has one place to see the full picture of every relationship, whether someone is a new lead or a five-year client."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Lead Capture and Nurturing",
+          "description": "Prospects who find your practice through any channel are captured, categorized, and entered into nurture sequences that educate them about your services and build trust over time, all without manual follow-up from your team.",
+          "details": [
+            "Landing pages and intake forms that capture prospect information and automatically segment leads based on their tax needs",
+            "Email and SMS nurture sequences tailored to different prospect types, such as individual filers versus small business owners",
+            "Automated follow-up scheduling that adjusts cadence based on prospect engagement and seasonal timing"
+          ]
+        },
+        {
+          "title": "Client Lifecycle Communication Workflows",
+          "description": "Every client receives structured communication tied to where they are in the annual tax cycle. From document collection reminders before filing season to estimated payment alerts throughout the year, your clients hear from you at the moments that matter most.",
+          "details": [
+            "Pre-season document checklists sent automatically based on each client's filing history and complexity",
+            "Post-filing follow-up sequences that include satisfaction surveys, review requests, and referral program invitations",
+            "Quarterly estimated payment reminders and year-end tax planning communications personalized to each client's situation"
+          ]
+        },
+        {
+          "title": "Unified Client Dashboard and Reporting",
+          "description": "Both your prospects and active clients are visible in one system, giving you a complete picture of your pipeline, your active relationships, and the health of your practice at any point in the year.",
+          "details": [
+            "Pipeline tracking that shows how many prospects are in each stage of your lead nurture and conversion process",
+            "Client engagement scoring that identifies which active clients may be at risk of not returning next season",
+            "Revenue and growth reporting that connects marketing activity to client acquisition and retention outcomes"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does the lead generation system work during the off-season when fewer people are thinking about taxes?",
+          "answer": "Off-season lead generation focuses on content and outreach that addresses year-round financial concerns, such as estimated payments, tax planning for life events, and small business financial management. The system shifts its messaging and targeting based on the time of year so that prospects receive relevant information regardless of when they enter your pipeline. Many tax preparers find that off-season leads convert at higher rates because there is less competition for attention.",
+          "category": "General"
+        },
+        {
+          "question": "Can the client management system handle both individual and business clients with different communication needs?",
+          "answer": "Yes. The system supports segmented workflows that deliver different communication based on client type, service level, and filing complexity. An individual client with a straightforward W-2 return receives a different cadence and different content than a small business owner with quarterly obligations and payroll considerations. Each segment can be configured independently while still being managed from a single dashboard.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens with leads that come in during busy season when we do not have time to respond personally?",
+          "answer": "The automation is designed specifically for that scenario. New leads receive immediate acknowledgment and are entered into a nurture sequence that keeps them engaged while your team focuses on current clients. The system tracks each lead's engagement level and surfaces the highest-priority prospects for personal follow-up when your schedule allows. This way, busy season does not mean lost leads.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Build a Lead Generation and Client Management System That Works Year Round",
+      "ctaDescription": "Schedule a call and we will review your current lead generation and client management approach, identify the gaps that may be costing you prospects and renewals, and map out an automated system designed around the seasonal realities of tax preparation."
+    },
+    "growth-and-efficiency-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Growing a bookkeeping practice usually means working longer hours or hiring more staff. Automation offers a different path, one where you can take on more clients and deliver better service without proportionally increasing your workload.",
+      "heroDescription": "Bookkeepers who want to grow their practice often hit the same ceiling: there are only so many hours in a day, and every new client adds more recurring tasks to manage. Full spectrum automation for bookkeepers addresses both sides of that equation simultaneously. It automates the growth activities that bring in new clients, like lead nurturing, onboarding, and referral programs, while also automating the operational tasks that consume your time each month, like document collection, client communication, and workflow management. The result is a practice that can scale without the workload scaling at the same rate.",
+      "benefits": [
+        {
+          "title": "Capacity to Grow Without Proportional Overhead",
+          "description": "When your recurring monthly processes are automated, adding a new client does not add the same amount of work it used to. Document requests go out automatically, communication follows a set cadence, and workflow tasks are created and assigned without manual setup. That efficiency can allow you to serve more clients with your current team, or free up time to focus on higher-value advisory services."
+        },
+        {
+          "title": "Proactive Client Engagement That Drives Retention",
+          "description": "Bookkeeping relationships thrive on consistent communication, but when you are managing dozens of clients monthly, it is easy for proactive outreach to fall behind. Automated engagement workflows send regular updates, flag potential issues for client discussion, and maintain the kind of attentive communication that helps clients feel well-served. That consistency can contribute to stronger retention over time."
+        },
+        {
+          "title": "Time Reclaimed for Strategic Work",
+          "description": "The administrative tasks that fill a bookkeeper's day, such as chasing documents, sending reminders, updating status tracking, and scheduling follow-ups, are exactly the tasks that automation handles well. When those are running in the background, you can redirect that time toward advisory conversations, process improvements, or simply maintaining a sustainable work schedule."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Monthly Workflow Management",
+          "description": "Your recurring monthly processes run on structured workflows that create tasks, assign work, track progress, and manage deadlines automatically. Each client's monthly cycle follows a consistent process while still accommodating the specific needs of their engagement.",
+          "details": [
+            "Monthly workflow templates that generate tasks and deadlines automatically based on each client's engagement terms",
+            "Document collection requests through tools like LedgerDocs that go out on schedule with automated follow-up for missing items",
+            "Progress tracking dashboards that show your team exactly where every client's monthly work stands at a glance"
+          ]
+        },
+        {
+          "title": "Growth Engine for Client Acquisition",
+          "description": "While your operational workflows keep current clients running smoothly, a parallel automation system works on bringing in new ones. Lead capture, nurture sequences, and referral program management run continuously in the background.",
+          "details": [
+            "Automated lead nurture sequences that educate prospects about your bookkeeping services and build trust over multiple touchpoints",
+            "Referral program automation that tracks referral sources, sends acknowledgment to referrers, and manages incentive fulfillment",
+            "Onboarding workflows that activate automatically when a new client signs, ensuring a professional and consistent start to every relationship"
+          ]
+        },
+        {
+          "title": "Client Communication Cadence Automation",
+          "description": "Every client receives regular, relevant communication without your team manually managing outreach for each account. Monthly updates, quarterly reviews, and annual check-ins are all scheduled and delivered automatically based on where each client is in their engagement cycle.",
+          "details": [
+            "Monthly summary communications that go out after books are closed, keeping clients informed about their financial position",
+            "Quarterly review scheduling and preparation workflows that organize the conversation before it happens",
+            "Annual engagement renewal sequences that begin at the right time and manage the renewal process through completion"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "We are a small bookkeeping firm with limited technical resources. Is this realistic for us?",
+          "answer": "Many of the bookkeeping firms we work with start in exactly that position. The automation is built on platforms designed to be manageable without a dedicated technical team. We handle the setup and configuration, train your team on how the system works, and provide documentation so you can make adjustments as your needs evolve. The goal is a system your team feels comfortable running day to day, not one that requires outside support every time something needs to change.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does automation handle the variability between different bookkeeping clients?",
+          "answer": "Each client can have their own workflow configuration within the broader system. A client who provides documents through a shared folder has a different collection workflow than one who emails everything. A client on a quarterly review cadence receives different communication than one with monthly advisory meetings. The automation framework is consistent, but the specific settings adapt to each client's engagement terms.",
+          "category": "General"
+        },
+        {
+          "question": "What if we want to start with just the efficiency side and add growth automation later?",
+          "answer": "That is a common and often recommended approach. Starting with operational efficiency, such as automating your monthly workflows, document collection, and client communication, creates immediate time savings and establishes the foundation for growth automation. Once your operations are running smoothly, adding lead nurture, onboarding, and referral automation is straightforward because the systems are already in place.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Explore How Automation Can Help Your Bookkeeping Practice Grow Efficiently",
+      "ctaDescription": "Book a consultation and we will look at your current monthly workflows and growth activities together. We will identify the areas where automation can give you back the most time and outline a phased approach that fits your firm's size and goals."
+    },
+    "complete-automation-suite-for-cpas": {
+      "heroSubtitleTemplate": "Running a CPA practice means managing dozens of interconnected processes across marketing, operations, client service, and compliance. A complete automation suite brings all of those processes into one coordinated system, so your firm operates with less friction and more consistency.",
+      "heroDescription": "CPA firms manage a remarkable number of moving parts: client acquisition, engagement management, tax preparation workflows, advisory service delivery, compliance tracking, client communication, team coordination, and business development, to name just the obvious ones. When each of these operates independently, the firm runs on manual coordination. A complete automation suite for CPAs connects every dimension of practice management into a unified system where each process supports the others, data flows where it needs to go, and your team focuses on the professional work that requires their expertise rather than the administrative work that holds it all together.",
+      "benefits": [
+        {
+          "title": "Every Process Connected Under One Strategic Framework",
+          "description": "Rather than automating individual processes in isolation, a complete suite approach ensures that your marketing, onboarding, service delivery, client communication, and business development all work as parts of one integrated system. A lead captured by marketing feeds into onboarding, onboarding activates service workflows, service milestones trigger client communication, and satisfied clients feed back into your referral and growth systems. That level of connection can reduce the coordination burden on your team significantly."
+        },
+        {
+          "title": "Firm-Wide Visibility and Informed Decision Making",
+          "description": "When all of your processes are automated and connected, the data they generate tells a comprehensive story about your firm's performance. You can see how marketing investment translates to revenue, how efficiently engagements move through your workflows, where client satisfaction is strongest or weakest, and how your team's capacity aligns with demand. That visibility supports better strategic decisions and helps you anticipate issues before they affect clients."
+        },
+        {
+          "title": "A Foundation Built for Long-Term Growth",
+          "description": "A complete automation suite is designed to grow with your firm. As you add service lines, bring on new team members, or expand to new markets, the underlying systems adapt without requiring a rebuild. The processes that work for your firm today are designed to accommodate twice the volume with configuration changes rather than structural overhauls."
+        }
+      ],
+      "features": [
+        {
+          "title": "End-to-End Client Journey Automation",
+          "description": "From the moment a prospect discovers your firm to their ongoing engagement as a long-term client, every touchpoint is automated and coordinated. The client journey is not a series of disconnected handoffs but a continuous, managed experience.",
+          "details": [
+            "Lead capture, nurturing, and conversion workflows that transition seamlessly into client onboarding",
+            "Engagement-specific workflows for tax, advisory, and compliance services, each with their own automation logic and communication cadence",
+            "Client retention and growth sequences that identify opportunities for expanded services and manage the conversation through completion"
+          ]
+        },
+        {
+          "title": "Integrated Operational Command Center",
+          "description": "All of your firm's operational workflows, including team assignments, deadline tracking, document management, and quality review, are managed through a connected system that gives leadership real-time visibility into every active engagement.",
+          "details": [
+            "Workflow management through platforms like Karbon with automated task creation, assignments, and deadline monitoring",
+            "Document lifecycle management from collection through review and delivery, integrated with tools like LedgerDocs",
+            "Capacity planning and workload distribution dashboards that help you allocate team resources based on actual demand"
+          ]
+        },
+        {
+          "title": "Business Intelligence and Performance Analytics",
+          "description": "The data generated by your automated systems feeds into reporting dashboards that give you a clear picture of firm performance across every dimension. Marketing, operations, client satisfaction, and financial metrics are all connected and updated in real time.",
+          "details": [
+            "Marketing attribution reporting that traces revenue back to specific campaigns, channels, and referral sources",
+            "Engagement profitability analysis that accounts for actual time invested against fees collected for each service line",
+            "Client health scoring that combines communication engagement, payment history, and satisfaction indicators into a single metric"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How is a complete automation suite different from just automating individual processes?",
+          "answer": "Individual process automation solves specific problems in isolation. Your marketing might be automated, but it does not talk to your operations. Your onboarding might be efficient, but it does not inform your service delivery workflows. A complete suite connects all of these so that data, communication, and workflow triggers flow between every area of your practice. The difference shows up in fewer manual handoffs, better data consistency, and a client experience that feels cohesive from start to finish.",
+          "category": "General"
+        },
+        {
+          "question": "Is it possible to implement a complete suite in phases rather than all at once?",
+          "answer": "Phased implementation is not only possible, it is the approach we recommend for most firms. We typically start with the area that creates the most immediate impact, often operations or client onboarding, and then build outward to connect marketing, communication, and analytics. Each phase delivers standalone value while also strengthening the connections to what has already been built. Most firms reach full suite implementation within three to six months depending on complexity.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What level of technical involvement does our team need to maintain this system?",
+          "answer": "The day-to-day operation of a complete automation suite should feel intuitive rather than technical. We build the systems, configure the workflows, and train your team on how to manage them. Routine adjustments like updating templates, modifying workflow steps, or adding new team members are designed to be done without technical expertise. For larger changes or new integrations, we provide ongoing support so your team is never stuck waiting on a technical resource to keep things running.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Discover What a Fully Connected CPA Practice Looks Like",
+      "ctaDescription": "Schedule a comprehensive consultation and we will assess your current systems across marketing, operations, and client service. We will show you where the disconnections are, what a complete automation suite could look like for your firm, and how to get there in manageable phases."
+    }
   }
 }

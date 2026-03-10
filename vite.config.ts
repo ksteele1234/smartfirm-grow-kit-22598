@@ -53,7 +53,6 @@ export const prerenderRoutes = [
 
   // Offer Pages
   "/ai-transformation-offer",
-  "/list-reactivation-offer",
 
   // Industry Pages
   "/industries/automation-for-tax-preparation-firms",
@@ -89,7 +88,6 @@ export const prerenderRoutes = [
   "/terms-of-service",
   "/cookie-policy",
   "/faq",
-  "/reactivation-terms",
 ];
 
 // https://vitejs.dev/config/

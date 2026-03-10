@@ -68,5 +68,337 @@
     "tax preparers": {
       "heroDescription": "During filing season, your clients are anxious about their returns and eager for updates. Outside of season, they may not hear from you at all. Client communication automation ensures your firm stays in touch year round with automated status updates during preparation, deadline reminders as filing dates approach, and advisory touchpoints that keep your firm top of mind between returns."
     }
+  },
+  "slugOverrides": {
+    "client-communication-automation-for-cpas": {
+      "heroSubtitleTemplate": "CPA firms thrive on trust, and trust is built through consistent, timely communication. We design automation systems that keep your clients informed at every stage of their engagement, from initial document collection through final delivery, so your team can focus on advisory work instead of drafting status emails.",
+      "heroDescription": "Most CPA firms recognize that proactive client communication is essential to retention and satisfaction, but the reality of managing dozens or hundreds of active engagements makes it nearly impossible to keep everyone updated manually. Client communication automation addresses this by delivering status updates, deadline reminders, project notifications, and follow-up sequences on your behalf. Every message reflects your firm's voice and reaches clients at the moments when they are most likely wondering about their engagement. Your team stays focused on complex accounting work while your clients experience a level of attentiveness that sets your practice apart.",
+      "benefits": [
+        {
+          "title": "Consistent Status Updates Across Every Engagement",
+          "description": "Whether your firm handles audits, compilations, tax planning, or advisory services, every client receives timely updates as their engagement progresses. Automated notifications fire as work moves between stages, keeping clients informed about preparation milestones, review progress, and expected completion timelines without requiring manual outreach from your staff."
+        },
+        {
+          "title": "Deadline Awareness That Protects Your Relationships",
+          "description": "When filing deadlines, extension dates, or estimated payment windows approach, your clients hear about it from you first rather than scrambling at the last moment. Automated reminder sequences ensure that critical dates never sneak up on your clients, reinforcing your role as a proactive advisor who looks out for their financial well-being."
+        },
+        {
+          "title": "Reduced Administrative Burden on Your Team",
+          "description": "Every minute your CPAs or administrative staff spend composing individual status updates is a minute taken away from billable work or professional development. Communication automation reclaims those hours by handling routine notifications systematically, allowing your team to invest their energy where it generates the most value for clients and your firm."
+        }
+      ],
+      "features": [
+        {
+          "title": "Engagement Stage Notifications",
+          "description": "As work progresses through your internal workflow, clients automatically receive updates reflecting where things stand. When a return moves to review, when financial statements are ready for discussion, or when additional documentation is needed, the system sends a clear, professional message without anyone on your team stopping to draft it.",
+          "details": [
+            "Notifications triggered by workflow stage changes in your practice management system",
+            "Customizable messaging that matches the tone and language your firm uses with clients",
+            "Delivery options across email and text to match individual client preferences"
+          ]
+        },
+        {
+          "title": "Filing Deadline and Estimated Payment Reminders",
+          "description": "A structured reminder sequence ensures that your clients are aware of upcoming deadlines well in advance. Rather than a single reminder that may get lost in a busy inbox, the system sends a progressive series of alerts that build urgency appropriately as due dates approach, helping your clients stay compliant and prepared.",
+          "details": [
+            "Multi-stage reminder sequences starting weeks before critical due dates",
+            "Separate tracks for quarterly estimates, annual filings, extensions, and state-specific deadlines",
+            "Personalized messaging that references each client's specific obligations and filing status"
+          ]
+        },
+        {
+          "title": "Project Completion and Next Steps Communication",
+          "description": "When an engagement wraps up, clients receive a professional summary of what was completed along with clear guidance on next steps, upcoming obligations, or recommended follow-up discussions. This final touchpoint reinforces value and naturally opens the door for ongoing advisory conversations.",
+          "details": [
+            "Automated delivery messages when completed work products are ready for client access",
+            "Summary communications outlining key outcomes and any items requiring client attention",
+            "Follow-up scheduling prompts that encourage proactive planning conversations"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do automated notifications integrate with our existing practice management software?",
+          "answer": "We configure the automation to work alongside the tools your firm already uses. Whether you run your practice through a dedicated management platform or a combination of systems, we map your existing workflow stages to communication triggers so that notifications fire at the right moments. The setup process involves understanding how your team currently tracks engagement progress and building the automation layer on top of that foundation.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can we customize which clients receive certain types of notifications?",
+          "answer": "Absolutely. Not every client needs the same communication cadence, and we build that flexibility into the system from the start. You can segment notifications by engagement type, client tier, service line, or any other criteria that makes sense for your practice. Some firms prefer more frequent updates for complex engagements and lighter communication for straightforward annual filings, and the system accommodates those distinctions.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens if a client responds to an automated message with a question?",
+          "answer": "Responses from clients route directly to your team just as they would with any other communication. The automation handles outbound messaging, but incoming replies are treated as normal client correspondence that your staff reviews and responds to personally. This ensures that clients always receive a human response when they have questions or need clarification beyond what the notification covered.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Keep Every CPA Client Informed Effortlessly?",
+      "ctaDescription": "Schedule a consultation and we will walk through your current client communication workflow, identify the touchpoints where automation can make the biggest difference, and outline a plan tailored to how your CPA firm operates."
+    },
+    "automated-client-updates-for-accounting-firms": {
+      "heroSubtitleTemplate": "Accounting firms that communicate proactively stand out in a competitive market. We build automated client update systems that deliver progress reports, engagement status changes, and milestone notifications so your team can stay focused on the work that matters most.",
+      "heroDescription": "Your accounting firm likely serves clients across multiple service lines, each with different engagement timelines, deliverables, and expectations. Keeping everyone informed about where their work stands is a constant challenge, especially when your team is deep in period-end close work or managing competing deadlines. Automated client updates solve this by generating and delivering progress reports, engagement status changes, and milestone notifications as work moves through your pipeline. Clients hear from your firm at the moments when they are most likely to wonder what is happening, and your team never has to pause productive work to send a routine update.",
+      "benefits": [
+        {
+          "title": "Progress Transparency That Builds Client Confidence",
+          "description": "When clients can see that work is moving forward, they feel confident in your firm's ability to deliver. Automated progress reports provide that visibility without requiring your team to compile updates manually. Each report reflects the actual state of the engagement, giving clients a clear picture of what has been completed, what is in progress, and what comes next."
+        },
+        {
+          "title": "Fewer Inbound Inquiries About Engagement Status",
+          "description": "A significant portion of the calls and emails your team fields are clients simply asking for a status update. Automated notifications address these questions before they are asked, reducing the volume of inbound inquiries and freeing your staff to focus on substantive client interactions rather than repeating information that could be communicated automatically."
+        },
+        {
+          "title": "Scalable Communication That Grows With Your Firm",
+          "description": "As your accounting firm takes on additional clients or expands into new service areas, the communication demands grow proportionally. Automated updates scale naturally with your client base, ensuring that every new engagement receives the same level of proactive communication without requiring additional administrative staff or manual effort."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Progress Reporting by Engagement",
+          "description": "Each active engagement generates periodic progress reports delivered to the relevant client contacts. These reports summarize recent activity, highlight completed milestones, and outline upcoming work so clients always have a current understanding of where their engagement stands within your firm's workflow.",
+          "details": [
+            "Configurable reporting intervals based on engagement type and client expectations",
+            "Content pulled from your workflow data to reflect actual progress rather than generic templates",
+            "Professional formatting that reinforces your firm's brand identity in every communication"
+          ]
+        },
+        {
+          "title": "Engagement Status Change Alerts",
+          "description": "When an engagement moves from one phase to the next, whether from fieldwork to review, from draft to final, or from preparation to delivery, the relevant client contacts receive a concise notification explaining what has changed and what they can expect next. These real-time alerts eliminate the uncertainty that often accompanies longer engagements.",
+          "details": [
+            "Instant notifications triggered by stage transitions within your project management workflow",
+            "Clear language that explains what the status change means for the client's timeline and expectations",
+            "Optional internal alerts so engagement managers are aware of what clients have been told"
+          ]
+        },
+        {
+          "title": "Milestone Notifications and Deliverable Announcements",
+          "description": "When significant milestones are reached or deliverables are ready, clients are notified immediately with clear instructions on what to do next. Whether it is a completed financial statement, a tax return ready for signature, or a year-end package available for download, the notification ensures timely client action.",
+          "details": [
+            "Automated alerts when deliverables are finalized and available for client review or signature",
+            "Instructions included in each notification so clients know exactly what action is needed",
+            "Follow-up reminders if client action has not been taken within a configurable timeframe"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do automated updates reflect our firm's communication style?",
+          "answer": "During setup, we work with your team to understand the tone, vocabulary, and level of detail your clients expect. Every message template is drafted to match how your firm actually communicates, whether that is formal and precise or warm and conversational. You review and approve all templates before anything is sent, and adjustments can be made at any time as your preferences evolve.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can different service lines have different update formats and schedules?",
+          "answer": "Yes, and we typically recommend this approach. Tax preparation clients may need frequent updates during filing season and less communication outside of it, while audit clients may benefit from consistent weekly progress summaries throughout the engagement. We configure separate communication tracks for each service line so the messaging is always relevant and appropriately timed.",
+          "category": "General"
+        },
+        {
+          "question": "What data sources drive the automated progress reports?",
+          "answer": "The system connects to the tools your team already uses to track engagement progress, including practice management platforms, project tracking software, and workflow systems. We map the relevant data points to communication triggers so that reports reflect actual work completed rather than estimated timelines. If your firm uses multiple systems across different departments, we can integrate with each one to create a unified communication experience for your clients.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Client Updates for Your Accounting Firm?",
+      "ctaDescription": "Book a call and we will review how your firm currently communicates with clients, pinpoint the gaps where automated updates would have the most impact, and design a communication plan that fits your workflow."
+    },
+    "client-notification-automation-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparation clients want to know what is happening with their return without having to call and ask. We set up notification automation that keeps your clients informed about filing status, document receipts, and deadline alerts throughout the entire engagement.",
+      "heroDescription": "Tax preparation is inherently deadline-driven, and your clients feel that pressure acutely. They want to know that their documents were received, that their return is being worked on, and that everything will be filed on time. When your office is handling hundreds of returns simultaneously, providing that reassurance manually is simply not feasible. Client notification automation delivers filing status updates, document receipt confirmations, and deadline alerts at the moments your clients need them most. Your preparers stay focused on accuracy and compliance while your clients enjoy a level of communication that makes them feel prioritized and cared for.",
+      "benefits": [
+        {
+          "title": "Filing Status Visibility That Reduces Client Anxiety",
+          "description": "The period between dropping off documents and receiving a completed return is filled with uncertainty for most tax clients. Automated filing status notifications close that information gap by letting clients know when their return has entered preparation, when it is under review, and when it is ready for their signature. This transparency significantly reduces anxious follow-up calls to your office."
+        },
+        {
+          "title": "Document Receipt Confirmations That Build Trust",
+          "description": "When clients submit sensitive financial documents, they want confirmation that those materials arrived safely. Automated receipt acknowledgments provide that assurance immediately, letting clients know exactly which documents you have on file and whether anything is still outstanding. This simple touchpoint eliminates a common source of client concern."
+        },
+        {
+          "title": "Deadline Alerts That Protect Client Compliance",
+          "description": "Missing a filing deadline creates stress for everyone involved. Automated deadline alerts ensure that your clients are aware of approaching due dates, extension deadlines, and estimated payment windows well in advance. Timely reminders help clients take necessary action and reinforce your firm's reputation as a reliable partner in their financial well-being."
+        }
+      ],
+      "features": [
+        {
+          "title": "Filing Status Notification Sequences",
+          "description": "As a return progresses through your preparation pipeline, clients receive clear, timely notifications at each significant stage. From initial intake through final filing confirmation, the system keeps clients informed about exactly where things stand without requiring your team to compose or send individual messages.",
+          "details": [
+            "Stage-based notifications that align with your internal preparation workflow and review process",
+            "Clear language that explains what each status means and what the client should expect next",
+            "Confirmation messages sent after filing is completed, including relevant reference numbers"
+          ]
+        },
+        {
+          "title": "Document Receipt and Outstanding Item Tracking",
+          "description": "When clients submit tax documents through any channel, the system generates an immediate confirmation listing what was received. If documents are still missing or additional information is needed, automated follow-up messages prompt the client to provide the outstanding items, reducing preparation delays caused by incomplete files.",
+          "details": [
+            "Instant acknowledgment messages when documents are logged into your intake system",
+            "Itemized summaries showing which documents have been received and which are still needed",
+            "Escalating reminder sequences for outstanding items as preparation deadlines approach"
+          ]
+        },
+        {
+          "title": "Seasonal Deadline Awareness Campaigns",
+          "description": "Throughout the year, your clients face various tax-related deadlines beyond the standard April date. Automated campaigns ensure they hear from your firm ahead of estimated payment deadlines, extension filing dates, and state-specific obligations so they remain compliant and prepared.",
+          "details": [
+            "Pre-built communication tracks for federal, state, and estimated payment deadlines",
+            "Personalized alerts based on each client's specific filing obligations and history",
+            "Progressive urgency in messaging as deadlines draw closer to encourage timely action"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How quickly do document receipt confirmations go out after a client submits materials?",
+          "answer": "Once documents are logged into your intake system, the confirmation is typically sent within minutes. The exact timing depends on how your team processes incoming materials, but we configure the trigger to fire as soon as the intake step is recorded. For firms that accept documents through a client portal, the confirmation can be essentially instantaneous since the upload event itself serves as the trigger.",
+          "category": "Technical"
+        },
+        {
+          "question": "Can we send different notifications to individual filers versus business clients?",
+          "answer": "Yes, the system supports segmentation so that individual filers and business clients receive messaging appropriate to their situation. Business clients may need notifications about additional schedules, entity-specific deadlines, or multi-state obligations, while individual filers receive simpler, more straightforward communications. We set up separate tracks during implementation to ensure every client gets relevant information.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if our preparation workflow changes during busy season?",
+          "answer": "We understand that tax season often brings adjustments to how your office operates. The notification triggers and sequences can be updated at any point to reflect changes in your workflow. If you add a new review step, change your preparation stages, or adjust how documents are processed, we can reconfigure the automation to match. The goal is for the system to always reflect how your firm actually works, not the other way around.",
+          "category": "General"
+        }
+      ],
+      "ctaTitle": "Ready to Keep Your Tax Clients Informed Automatically?",
+      "ctaDescription": "Let us review your current client notification process, map out the communication touchpoints that matter most during tax season, and build an automation plan designed specifically for how your preparation office operates."
+    },
+    "client-messaging-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Bookkeeping clients appreciate consistent communication, but your team cannot spend half their day composing check-in messages. We build messaging automation that handles routine client outreach, reconciliation summaries, and query resolution so your team stays focused on the books.",
+      "heroDescription": "Bookkeeping is a recurring service, which means your client communication needs are ongoing rather than seasonal. Clients need regular updates about their reconciliation status, timely responses when they submit questions or documents, and periodic check-ins that reinforce the value your firm provides. Managing all of that manually across a growing client roster is a recipe for inconsistency, missed messages, and client frustration. Client messaging automation solves this by delivering regular check-ins, reconciliation summaries, and query acknowledgments automatically, ensuring that every client receives attentive communication regardless of how many accounts your team manages.",
+      "benefits": [
+        {
+          "title": "Regular Check-Ins That Strengthen Client Relationships",
+          "description": "Bookkeeping clients sometimes feel like their service runs on autopilot with no visibility into what is happening. Automated check-in messages change that perception by reaching out at regular intervals to share updates, ask if anything has changed in their business, and confirm that everything is on track. These touchpoints reinforce that your firm is actively engaged and paying attention to their financial health."
+        },
+        {
+          "title": "Reconciliation Summaries Delivered on Schedule",
+          "description": "After each monthly or periodic reconciliation, clients receive a clear summary of what was completed, any discrepancies that were resolved, and items that may need their attention. Delivering this information proactively demonstrates thoroughness and gives clients confidence that their books are being maintained accurately and consistently."
+        },
+        {
+          "title": "Faster Query Acknowledgment and Resolution Tracking",
+          "description": "When clients send questions about transactions, balances, or reports, an automated acknowledgment lets them know their message was received and is being addressed. This immediate response prevents the frustration that builds when clients feel like their questions disappeared into a void, and it gives your team time to research and respond thoughtfully."
+        }
+      ],
+      "features": [
+        {
+          "title": "Scheduled Client Check-In Sequences",
+          "description": "Your clients receive periodic outreach at intervals you define, whether monthly, quarterly, or aligned with their specific engagement cycle. Each check-in covers relevant topics like upcoming document needs, changes in their business that might affect their books, and confirmation that recurring processes are running smoothly.",
+          "details": [
+            "Configurable check-in frequency tailored to each client's service level and preferences",
+            "Conversational messaging that invites client feedback and surfaces potential issues early",
+            "Automated scheduling that adjusts around holidays, closures, and client-specific timing"
+          ]
+        },
+        {
+          "title": "Post-Reconciliation Summary Delivery",
+          "description": "Once your team completes a reconciliation cycle, the system generates and delivers a summary to the relevant client. The summary highlights key figures, notes any items that were flagged or corrected, and outlines anything that requires client input, all without your team composing a separate communication for each account.",
+          "details": [
+            "Summary templates that present reconciliation outcomes in clear, client-friendly language",
+            "Highlighting of items that require client action or acknowledgment before the next cycle",
+            "Delivery timed to follow your team's reconciliation completion workflow automatically"
+          ]
+        },
+        {
+          "title": "Client Query Management and Response Tracking",
+          "description": "When clients reach out with questions, the system immediately acknowledges receipt and logs the inquiry for your team to address. If a response has not been sent within a defined timeframe, internal reminders prompt your team to follow up, ensuring that no client question goes unanswered for longer than your firm's service standards allow.",
+          "details": [
+            "Instant acknowledgment messages sent when client queries are received through any channel",
+            "Internal tracking that flags unanswered queries approaching your firm's response time threshold",
+            "Resolution confirmation messages sent to clients once their question has been addressed"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do automated check-ins avoid feeling impersonal to our bookkeeping clients?",
+          "answer": "The messaging is written to reflect how your team actually communicates, using natural language and referencing details relevant to each client's situation. Rather than generic broadcasts, check-ins are personalized based on the client's service type, recent activity, and any outstanding items. Clients experience these messages as genuine outreach from your firm because the content is specific and the timing is thoughtful.",
+          "category": "General"
+        },
+        {
+          "question": "Can reconciliation summaries include specific financial details for each client?",
+          "answer": "Yes, the summaries are generated based on data from your bookkeeping workflow, so they reflect the actual figures and outcomes from each client's reconciliation. The level of detail included is configurable, and during setup we work with you to determine what information is most useful for your clients to see. Some firms prefer high-level summaries while others include itemized details, and the system accommodates either approach.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens when a client submits a query outside of business hours?",
+          "answer": "The automated acknowledgment fires regardless of when the query arrives, so clients receive immediate confirmation that their message was received even if your team is not available to respond right away. The internal tracking system queues the inquiry for the next business day, and your team sees it as a priority item when they start work. This approach manages client expectations while ensuring nothing is overlooked.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Client Messaging for Your Bookkeeping Practice?",
+      "ctaDescription": "Schedule a conversation and we will review your current client communication patterns, identify where automated messaging can improve consistency, and design a system that fits the rhythm of your bookkeeping workflow."
+    },
+    "client-engagement-automation-for-cpas": {
+      "heroSubtitleTemplate": "Long-term client relationships are the foundation of every successful CPA practice. We create engagement automation that maintains meaningful touchpoints, monitors client satisfaction, and nurtures the relationships that drive referrals and retention.",
+      "heroDescription": "Winning a new CPA client is only the beginning. The real value comes from maintaining that relationship over years of service, deepening trust, and expanding the scope of what you provide. But relationship maintenance takes effort, and when your firm is juggling active engagements, it is easy for touchpoints like satisfaction checks, periodic outreach, and relationship-building communication to fall by the wayside. Client engagement automation handles these ongoing relationship activities systematically, ensuring that every client feels valued and connected to your firm between active engagements. The result is stronger retention, more referrals, and a practice built on relationships rather than transactions.",
+      "benefits": [
+        {
+          "title": "Consistent Touchpoints That Prevent Client Drift",
+          "description": "Clients who only hear from their CPA once a year during tax season are more likely to consider switching firms. Automated touchpoints keep your firm visible and relevant throughout the year, reaching out with useful information, timely reminders, and genuine check-ins that remind clients why they chose your practice in the first place."
+        },
+        {
+          "title": "Satisfaction Monitoring That Catches Issues Early",
+          "description": "By the time a dissatisfied client decides to leave, it is usually too late to recover the relationship. Automated satisfaction checks create regular opportunities for clients to share feedback, flag concerns, or express appreciation. This early warning system allows your team to address potential issues before they become reasons to seek another firm."
+        },
+        {
+          "title": "Relationship Depth That Drives Organic Growth",
+          "description": "Clients who feel genuinely connected to their CPA are more likely to refer colleagues, accept recommendations for additional services, and remain loyal through market changes. Engagement automation nurtures that connection consistently, building the kind of relationship equity that translates into sustainable practice growth without aggressive sales tactics."
+        }
+      ],
+      "features": [
+        {
+          "title": "Year-Round Relationship Touchpoint Sequences",
+          "description": "Between active engagements, your clients receive thoughtful outreach that keeps your firm relevant and top of mind. These touchpoints might include industry-relevant updates, planning reminders, milestone acknowledgments, or simple check-ins designed to maintain the connection and demonstrate ongoing interest in the client's financial well-being.",
+          "details": [
+            "A structured communication calendar that spaces touchpoints naturally throughout the year",
+            "Content themes that rotate between educational, advisory, and relationship-focused messaging",
+            "Timing adjustments that align with each client's engagement cycle and key financial dates"
+          ]
+        },
+        {
+          "title": "Automated Client Satisfaction Surveys and Feedback Collection",
+          "description": "After key engagement milestones, clients receive a brief opportunity to share their experience. The feedback is collected and organized so your team can review trends, identify areas for improvement, and follow up personally with clients who express concerns or suggestions. This structured approach to satisfaction monitoring replaces guesswork with actionable data.",
+          "details": [
+            "Brief, well-timed surveys delivered after engagement completion or significant milestones",
+            "Sentiment tracking that highlights clients who may need personal outreach from a partner",
+            "Aggregated reporting that reveals firm-wide trends in client satisfaction over time"
+          ]
+        },
+        {
+          "title": "Relationship Lifecycle Management and Re-Engagement",
+          "description": "As client relationships evolve over months and years, the system adapts its communication to match. New clients receive onboarding-focused outreach, established clients get advisory-oriented touchpoints, and inactive clients receive re-engagement sequences designed to reignite the relationship before it fades entirely.",
+          "details": [
+            "Lifecycle stages that adjust messaging based on the age and activity level of each relationship",
+            "Re-engagement campaigns for clients who have not interacted with your firm recently",
+            "Anniversary and milestone acknowledgments that recognize the longevity of the relationship"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do engagement touchpoints differ from the status updates we send during active work?",
+          "answer": "Status updates are operational, they inform clients about the progress of specific work being performed. Engagement touchpoints are relational, designed to maintain the connection between active engagements and reinforce the advisory relationship. Think of status updates as project communication and engagement touchpoints as relationship communication. Both are important, but they serve different purposes and are configured as separate systems within the automation.",
+          "category": "General"
+        },
+        {
+          "question": "What kind of satisfaction feedback do clients typically provide through automated surveys?",
+          "answer": "Most clients appreciate the opportunity to share their experience and keep responses brief and actionable. Common feedback touches on communication quality, responsiveness, clarity of deliverables, and overall satisfaction with the engagement. Occasionally, clients surface specific concerns or suggestions that your team would not have heard otherwise. We design the surveys to be concise enough that clients actually complete them while still capturing meaningful insights your firm can act on.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can we customize re-engagement sequences based on why a client became inactive?",
+          "answer": "Yes, and we recommend doing so when possible. A client who completed their engagement and simply has not needed services since receives different messaging than one who stopped responding to outreach. During setup, we help you define the criteria for different inactivity scenarios and build appropriate re-engagement tracks for each. This targeted approach tends to be more effective than a one-size-fits-all reactivation campaign because the messaging speaks to the client's actual situation.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Strengthen Every Client Relationship in Your CPA Practice?",
+      "ctaDescription": "Book a consultation and we will evaluate your current client engagement approach, identify where automated touchpoints can deepen loyalty, and create a relationship management strategy tailored to the way your CPA practice serves its clients."
+    }
   }
 }

@@ -68,5 +68,286 @@
         "Your firm has no way to attract clients during the off season for advisory work"
       ]
     }
+  },
+  "slugOverrides": {
+    "how-to-get-more-clients-for-my-cpa-firm": {
+      "heroSubtitleTemplate": "Your CPA firm does excellent work for existing clients, but growth has stalled because new clients only come through occasional referrals. Here is how CPA firms are building systems to get more clients consistently without adding marketing to the partners' already full plates.",
+      "problemStatement": "Most CPA firms hit a growth ceiling where referrals alone cannot sustain the pipeline. Partners are too busy with billable work to focus on business development, and the marketing efforts that do happen are sporadic and hard to measure. The result is unpredictable growth that makes hiring decisions and capacity planning feel like guesswork.",
+      "solutionOverview": "CPA firms that consistently get more clients have stopped treating marketing as a side project. They have built systems where their online presence works around the clock, capturing interested prospects and following up automatically. This means when a business owner or individual searches for a CPA in their area, your firm shows up, looks credible, and makes it easy to take the next step.",
+      "hearingSignals": [
+        "Your CPA firm has not added a significant number of new clients in the past year despite doing strong work",
+        "You have lost bids or prospects to competing firms that seem to have a stronger online presence",
+        "The partners know growth is a priority but nobody has the bandwidth to lead a marketing initiative"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Partners and senior staff are fully utilized with client work, leaving no bandwidth for business development activities that would bring in new CPA clients",
+          "solution": "A done for you system handles everything from online presence to lead capture to follow up, so your team stays focused on billable work while the pipeline builds itself"
+        },
+        {
+          "problem": "When prospects do find your firm online, your website looks dated or does not clearly communicate why a business owner should choose you over other CPAs in the area",
+          "solution": "Strategic positioning that highlights your specializations, client results, and differentiators helps prospects self select and reach out with confidence"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "A Pipeline That Does Not Depend on Who You Know",
+          "description": "Referrals are valuable but they are not a growth strategy you can control. Building additional acquisition channels means you can get more clients on your terms, scaling up or down based on your firm's capacity.",
+          "points": ["Prospects find your CPA firm through search, not just personal connections", "Multiple channels working simultaneously reduce the risk of any single source drying up", "You gain visibility into where inquiries are coming from and what is working"]
+        },
+        {
+          "title": "Attract Higher Value Engagements",
+          "description": "When your firm is positioned as a specialist rather than a generalist, the clients who reach out are already a better fit. This means higher average engagement values and less time wasted on prospects who are shopping purely on price.",
+          "points": ["Targeted messaging pre qualifies prospects before they contact you", "Advisory and planning services are easier to sell when clients sought you out specifically", "You spend less time on proposals that go nowhere"]
+        },
+        {
+          "title": "Capacity Planning With Confidence",
+          "description": "When new clients arrive predictably rather than sporadically, you can make better decisions about hiring, expanding services, and investing in your firm's growth.",
+          "points": ["A steady pipeline lets you plan staffing needs in advance", "Growth becomes a decision you make rather than something that happens to you", "You can be selective about which new clients you take on"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Growth Assessment", "description": "We evaluate your CPA firm's current online presence, referral patterns, and competitive landscape to identify the highest impact opportunities for getting more clients.", "subheading": "Audit" },
+        { "step": 2, "title": "Acquisition Strategy", "description": "We design a multi channel approach specific to your firm, which may include local SEO improvements, website conversion optimization, and automated lead follow up.", "subheading": "Design" },
+        { "step": 3, "title": "Build and Launch", "description": "We implement everything, integrating with your existing practice management tools and CRM, and test all workflows before going live.", "subheading": "Build" },
+        { "step": 4, "title": "Measure and Improve", "description": "We track which channels are producing inquiries, monitor lead quality, and refine the approach based on what is actually driving new CPA clients.", "subheading": "Refine" }
+      ],
+      "faqs": [
+        { "question": "How is this different from hiring a marketing agency?", "answer": "Most marketing agencies work across many industries and treat your CPA firm like any other client. We work exclusively with accounting firms and understand the nuances of CPA client acquisition, from the compliance to advisory pipeline to the seasonal rhythms that affect when prospects are most likely to switch firms." },
+        { "question": "We already get some referrals. Why change what is working?", "answer": "We do not replace referrals. We add systematic channels alongside them. The firms that grow most consistently have both strong referral relationships and systems that bring in clients independently. When referrals slow down, your pipeline does not." },
+        { "question": "How long does it typically take to see results?", "answer": "Some elements like improved lead capture and automated follow up can start working within weeks. Building a strong local search presence takes longer to develop. We set realistic expectations during discovery based on your starting point and market." }
+      ],
+      "results": [
+        { "metric": "Lead Sources", "value": "Diversified", "description": "CPA firms typically move from single source referral dependence to multiple channels generating inquiries" },
+        { "metric": "Partner Time on Marketing", "value": "Minimal", "description": "Partners stay focused on client work while the acquisition system runs automatically" },
+        { "metric": "Prospect Quality", "value": "Higher Fit", "description": "Better positioning means inquiries come from prospects who value CPA expertise, not just the lowest price" }
+      ],
+      "ctaTitle": "Ready to Get More Clients for Your CPA Firm?",
+      "ctaDescription": "Book a free call and we will assess your current growth channels and show you where the biggest opportunities are for your CPA firm."
+    },
+
+    "how-do-i-attract-new-clients-to-my-accounting-practice": {
+      "heroSubtitleTemplate": "You started your accounting practice to do great client work, not to become a marketing expert. But attracting new clients requires more than waiting for the phone to ring. Here is how accounting practices are building a presence that draws the right clients in.",
+      "problemStatement": "Attracting new clients to an accounting practice requires being visible where prospects are looking and making a compelling case for why they should choose you. Most practice owners know this intellectually but struggle to execute because marketing feels foreign, time consuming, and hard to measure against the direct results they see from client work.",
+      "solutionOverview": "Accounting practices that consistently attract new clients have built what amounts to a digital front door. Their online presence clearly communicates who they serve, what makes them different, and what the first step looks like. When someone in their area needs an accountant, these firms show up, stand out, and make it simple to start a conversation.",
+      "hearingSignals": [
+        "Your accounting practice is invisible online and you know prospects are finding competitors instead",
+        "You have tried posting on social media or writing blog content but it feels like shouting into the void",
+        "Prospective clients tell you they almost went with another firm because they could not find much about you online"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Your accounting practice has deep expertise but your online presence does not reflect it, making it difficult for prospects researching options to understand what sets you apart",
+          "solution": "A strategic online presence that communicates your specializations, approach, and client results positions your practice as the obvious choice for your ideal clients"
+        },
+        {
+          "problem": "You have tried various marketing activities like social media or email newsletters but they feel disconnected and you cannot tell if they are actually attracting new clients",
+          "solution": "An integrated approach where your website, search presence, and follow up system work together creates a clear path from discovery to consultation"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Be Found by People Already Looking",
+          "description": "The highest quality prospects are people actively searching for an accountant in your area. When your practice shows up in those searches with a compelling presence, you attract new clients who are ready to engage.",
+          "points": ["Local search visibility puts you in front of prospects with immediate need", "A strong Google Business Profile builds trust before the first conversation", "Relevant content positions your practice as a knowledgeable authority"]
+        },
+        {
+          "title": "Let Your Expertise Do the Selling",
+          "description": "When your online presence clearly demonstrates your expertise and approach, prospects arrive pre sold on working with you. This shifts the first conversation from a sales pitch to a mutual fit assessment.",
+          "points": ["Case studies and client results demonstrate your impact without sounding salesy", "Educational content shows your depth of knowledge to prospects researching their options", "Clear specialization helps the right clients self select"]
+        },
+        {
+          "title": "Build a Reputation That Compounds",
+          "description": "Every review, every piece of content, and every positive client experience builds your online reputation over time. The longer you invest in this approach, the stronger your position becomes relative to competitors.",
+          "points": ["Reviews and testimonials accumulate and reinforce your credibility", "Content you create today continues attracting new clients for months and years", "A strong online presence makes referrals more effective because referred prospects can verify your reputation"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Practice Assessment", "description": "We evaluate your accounting practice's current online presence, identify how prospects are finding you now, and understand what types of new clients you want to attract.", "subheading": "Audit" },
+        { "step": 2, "title": "Attraction Strategy", "description": "We design a plan to improve your visibility where it matters most, whether that is local search, your website, review profiles, or targeted content.", "subheading": "Design" },
+        { "step": 3, "title": "Execute and Integrate", "description": "We implement improvements to your online presence and set up systems to capture and follow up with interested prospects automatically.", "subheading": "Build" },
+        { "step": 4, "title": "Track and Refine", "description": "We monitor which efforts are attracting the most qualified prospects and adjust the approach to focus resources on what works best for your market.", "subheading": "Refine" }
+      ],
+      "faqs": [
+        { "question": "We are a small practice. Can we really compete with larger firms online?", "answer": "Absolutely. In fact, local search often favors smaller practices because prospects searching for an accountant in your area want someone accessible and personal. Your size can be a strength when positioned correctly." },
+        { "question": "How much of our time will this require?", "answer": "Our done for you approach means we handle the execution. You will need to provide input on your specializations and ideal clients during discovery, and we may occasionally ask for your review on messaging. The ongoing time commitment is minimal." },
+        { "question": "What if we serve a niche market?", "answer": "Serving a niche is actually an advantage for attracting new clients online. Specialized practices can create highly targeted content and positioning that general firms cannot match, making it easier to stand out in search results." }
+      ],
+      "results": [
+        { "metric": "Online Visibility", "value": "Significantly Improved", "description": "Practices typically see meaningful improvements in where they appear when prospects search locally" },
+        { "metric": "Inquiry Quality", "value": "Better Aligned", "description": "Clearer positioning means prospects who reach out are more likely to be a good fit for your practice" },
+        { "metric": "Practice Owner Involvement", "value": "Low", "description": "The system works in the background while you focus on serving clients" }
+      ],
+      "ctaTitle": "Ready to Attract the Right Clients to Your Practice?",
+      "ctaDescription": "Book a free call and we will evaluate your accounting practice's current visibility and show you the most impactful opportunities to attract new clients."
+    },
+
+    "how-to-find-clients-for-my-tax-preparation-business": {
+      "heroSubtitleTemplate": "Tax preparation is seasonal by nature, which makes finding clients a unique challenge. You need a full roster by January and there is no time to figure out marketing during busy season. Here is how tax preparation businesses are solving the client pipeline problem.",
+      "problemStatement": "Finding clients for a tax preparation business means dealing with a challenge most other professional services do not face: extreme seasonality. You need to fill your capacity in a narrow window, and the clients you do not find before busy season starts are clients you will not serve that year. Most tax preparers rely on repeat clients and referrals, leaving growth to chance.",
+      "solutionOverview": "Tax preparation businesses that consistently find new clients have built a year round presence that peaks when it matters most. They are visible to taxpayers searching for preparation services in the months leading up to filing season, and they stay connected with past clients during the off season through advisory services and proactive communication.",
+      "hearingSignals": [
+        "You start each tax season hoping enough clients come back rather than knowing your calendar is full",
+        "Individual taxpayers in your area default to TurboTax or H and R Block because they do not know you exist",
+        "You want to offer advisory services year round but cannot find clients outside of tax season"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "By the time you think about marketing, tax season is already underway and you are too busy to do anything about client acquisition",
+          "solution": "Automated systems that run year round ensure your tax preparation business is visible and capturing interest during the months when taxpayers are researching their options"
+        },
+        {
+          "problem": "Individual taxpayers and small business owners in your area do not realize that a local tax preparer offers significant advantages over DIY software or chain services",
+          "solution": "Targeted local content and positioning that highlights the personal attention, accuracy, and potential savings of working with a dedicated preparer helps you stand out from impersonal alternatives"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "A Full Calendar Before Busy Season Starts",
+          "description": "When your tax preparation business has a system working year round to build awareness and capture interest, you enter each filing season with a strong pipeline rather than scrambling to fill spots.",
+          "points": ["Lead capture during October through January catches taxpayers while they are researching options", "Automated follow up with past clients secures return engagements before competitors reach them", "Pre season outreach fills your schedule so you can focus on preparation, not marketing"]
+        },
+        {
+          "title": "Compete With DIY Software on Your Terms",
+          "description": "You cannot compete with TurboTax on price, but you can compete on outcomes. Taxpayers who find your tax preparation business online and understand the value of personalized service are willing to pay for expertise.",
+          "points": ["Content that explains the limitations of DIY filing educates prospects about what they are missing", "Positioning around accuracy, audit protection, and planning converts taxpayers who have been burned by software", "Local presence means you show up when taxpayers search for help in your specific area"]
+        },
+        {
+          "title": "Year Round Revenue Through Advisory",
+          "description": "Finding clients for advisory services during the off season starts with staying visible and relevant between filing seasons. A system that keeps you top of mind with existing clients opens the door to tax planning, estimated payments, and business advisory work.",
+          "points": ["Automated touchpoints keep your firm in clients' awareness between tax seasons", "Educational content about tax planning and year end strategies positions you as a year round advisor", "Existing clients are your best prospects for advisory services when you stay connected"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Market Assessment", "description": "We evaluate your tax preparation business's current client base, local competition, and online presence to identify the best opportunities to find new clients.", "subheading": "Audit" },
+        { "step": 2, "title": "Seasonal Strategy", "description": "We design a year round approach that ramps up before filing season and maintains visibility during off months, including local SEO and automated client communication.", "subheading": "Design" },
+        { "step": 3, "title": "System Setup", "description": "We build lead capture, follow up automation, and client retention workflows that run automatically and integrate with your existing tools.", "subheading": "Build" },
+        { "step": 4, "title": "Season Over Season Improvement", "description": "After each filing season, we analyze what worked, refine the approach, and strengthen your position for the next year.", "subheading": "Refine" }
+      ],
+      "faqs": [
+        { "question": "When is the best time to start this?", "answer": "The ideal time to start building your client acquisition system is during the off season, so everything is in place before the next filing season. That said, improvements to lead capture and follow up can add value at any point in the year." },
+        { "question": "Can this help us attract business clients, not just individuals?", "answer": "Absolutely. We tailor the approach based on whether you want to grow individual preparation, small business clients, or both. The positioning and channels differ for each, and we design accordingly." },
+        { "question": "We are in a competitive area. Will this help us stand out?", "answer": "Competitive markets actually make systematic acquisition more important. Most tax preparers in any market are doing little to no online marketing, so even modest improvements in visibility and follow up can produce meaningful results." }
+      ],
+      "results": [
+        { "metric": "Pre Season Pipeline", "value": "Stronger", "description": "Tax preparers typically enter busy season with more confirmed clients and fewer empty spots to fill" },
+        { "metric": "Client Retention", "value": "Higher", "description": "Automated year round communication helps retain clients who might otherwise drift to competitors or DIY options" },
+        { "metric": "Off Season Engagement", "value": "Increased", "description": "Staying visible between tax seasons opens the door to advisory work and year round revenue" }
+      ],
+      "ctaTitle": "Ready to Build a Pipeline for Your Tax Business?",
+      "ctaDescription": "Book a free call and we will assess your tax preparation business's current client acquisition approach and show you the best opportunities for growth."
+    },
+
+    "how-to-market-my-bookkeeping-services": {
+      "heroSubtitleTemplate": "You became a bookkeeper because you are great with numbers, not because you love marketing. But growing a bookkeeping practice requires getting the word out to small business owners who need your help. Here is how bookkeepers are marketing their services without becoming full time marketers.",
+      "problemStatement": "Marketing bookkeeping services feels like a completely different skillset from the work itself. Most bookkeepers started their practice based on word of mouth and a handful of initial clients, but reaching the next level of growth requires being visible to small business owners who do not yet know you exist. The challenge is figuring out how to market effectively without spending all your time on it.",
+      "solutionOverview": "Bookkeepers who successfully market their services have realized that they do not need to become marketing experts. They need systems that showcase their expertise to the right people at the right time. This means having an online presence that speaks directly to the small business owners they serve and a follow up process that converts interest into clients.",
+      "hearingSignals": [
+        "You know marketing is important for your bookkeeping business but you have no idea where to start",
+        "You have tried posting on social media or local Facebook groups but it has not translated into actual bookkeeping clients",
+        "Small business owners in your area are using QuickBooks alone or hiring cheap offshore bookkeepers because they do not know about your services"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "As a bookkeeper, you know your craft inside and out but marketing feels like a foreign language and every platform seems to require expertise you do not have",
+          "solution": "A done for you approach means you focus on bookkeeping while we handle your online presence, lead generation, and follow up systems based on what works specifically for bookkeeping services"
+        },
+        {
+          "problem": "Small business owners who need bookkeeping help often do not know what to look for or where to find a qualified professional, so they default to the cheapest option they can find",
+          "solution": "Educational content and positioning that helps business owners understand the value of professional bookkeeping attracts clients who appreciate quality over the lowest price"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Show Up Where Small Business Owners Are Looking",
+          "description": "When a small business owner realizes they need bookkeeping help, they search online. If your bookkeeping services show up in that search with a professional presence and clear value proposition, you have a real opportunity to earn their business.",
+          "points": ["Local search optimization helps you appear when business owners search for bookkeepers in your area", "A professional website demonstrates that you take your practice seriously", "Clear service descriptions help prospects understand exactly how you can help them"]
+        },
+        {
+          "title": "Stand Out From DIY Software and Discount Services",
+          "description": "Your competition is not just other bookkeepers. It is QuickBooks tutorials, offshore services, and the business owner's cousin who is good with spreadsheets. Marketing your bookkeeping services effectively means showing prospects why professional bookkeeping is worth the investment.",
+          "points": ["Content that addresses common bookkeeping mistakes builds trust and demonstrates your expertise", "Case studies showing the impact of accurate books help justify your fees", "Positioning around peace of mind, accuracy, and time savings resonates with overwhelmed business owners"]
+        },
+        {
+          "title": "Grow at Your Own Pace",
+          "description": "Effective marketing does not mean taking on more clients than you can handle. A good system lets you control the flow, scaling up when you have capacity and focusing on retention when you are full.",
+          "points": ["Adjustable lead flow means you never have to turn away clients because you are overwhelmed", "Automated follow up nurtures prospects who are not ready now but may need you in a few months", "A strong reputation builds over time, making each subsequent client easier to win"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Practice Review", "description": "We assess your bookkeeping practice's current visibility, client base, and growth goals to understand where marketing will have the most impact.", "subheading": "Audit" },
+        { "step": 2, "title": "Marketing Plan", "description": "We design a marketing approach tailored to bookkeeping services, focusing on the channels and messaging that resonate with small business owners in your area.", "subheading": "Design" },
+        { "step": 3, "title": "Implementation", "description": "We build your online presence, set up lead capture, and create automated follow up workflows so interested prospects do not fall through the cracks.", "subheading": "Build" },
+        { "step": 4, "title": "Ongoing Refinement", "description": "We monitor what is working, adjust messaging and channels based on results, and help you build a sustainable marketing engine for your bookkeeping practice.", "subheading": "Refine" }
+      ],
+      "faqs": [
+        { "question": "I am a solo bookkeeper. Is this too much for my size practice?", "answer": "Not at all. Many of our clients are solo practitioners. The approach scales to your size and goals. Even a few new clients per month can make a significant difference for a solo bookkeeping practice." },
+        { "question": "What makes marketing for bookkeepers different from other services?", "answer": "Bookkeeping clients are typically small business owners who need to understand why professional bookkeeping matters before they will invest. The messaging and positioning need to educate as well as promote, which is different from marketing to someone already seeking a CPA or auditor." },
+        { "question": "How do I compete on price with offshore bookkeeping services?", "answer": "You do not compete on price. You compete on proximity, responsiveness, understanding of local tax requirements, and the peace of mind that comes from working with someone who knows your business personally. Our marketing approach highlights these differentiators." }
+      ],
+      "results": [
+        { "metric": "Visibility to Local Business Owners", "value": "Established", "description": "Bookkeepers typically go from invisible online to showing up when small business owners search for help locally" },
+        { "metric": "Time Spent on Marketing", "value": "Minimal", "description": "The done for you approach means you spend your time on bookkeeping, not learning marketing platforms" },
+        { "metric": "Client Conversations", "value": "More Frequent", "description": "A visible presence and lead capture system means more small business owners reaching out to discuss their needs" }
+      ],
+      "ctaTitle": "Ready to Get the Word Out About Your Bookkeeping Services?",
+      "ctaDescription": "Book a free call and we will assess your practice's current marketing situation and show you the most effective ways to reach small business owners in your area."
+    },
+
+    "how-to-grow-my-accounting-firm-without-referrals": {
+      "heroSubtitleTemplate": "Referrals built your accounting firm to where it is today. But when referrals are your only growth channel, you are dependent on factors you cannot control. Here is how accounting firms are building growth systems that work independently of any single source.",
+      "problemStatement": "For most accounting firms, referrals have been the primary growth engine since day one. And for good reason because they produce high quality clients with minimal effort. The problem surfaces when you need to grow beyond what referrals naturally provide, when a key referral source retires or moves, or when you realize that your growth rate is entirely at the mercy of other people's willingness to recommend you.",
+      "solutionOverview": "Growing an accounting firm without referrals does not mean abandoning referrals. It means building complementary channels that produce clients independently. This typically involves strengthening your online presence so prospects find you through search, creating content that demonstrates your expertise to people researching their options, and building automated systems that nurture interested prospects until they are ready to engage.",
+      "hearingSignals": [
+        "A key referral source retired or changed focus and your new client flow dropped noticeably",
+        "You want to grow by 20 or 30 percent but referrals only produce enough to maintain your current size",
+        "You have no way to predict how many new clients you will add in any given quarter because it depends entirely on who happens to recommend you"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Your accounting firm's growth is entirely dependent on the willingness and memory of existing clients, attorneys, bankers, and other referral sources to send business your way",
+          "solution": "Building a presence that captures demand from prospects actively searching for an accountant means you attract clients who found you on their own merits, independent of any referral relationship"
+        },
+        {
+          "problem": "When you try to diversify beyond referrals, the options feel overwhelming and it is hard to know which marketing channels will actually work for a professional services firm",
+          "solution": "We focus on the channels that consistently produce results for accounting firms, primarily local search visibility, a conversion oriented website, and automated follow up, rather than chasing every trend"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Growth You Control",
+          "description": "When your accounting firm can generate clients through its own channels, growth becomes a decision you make rather than something that happens to you. You can set targets, measure progress, and adjust your approach based on capacity.",
+          "points": ["Your growth rate is no longer limited by the frequency and quality of referrals", "You can plan hiring and capacity expansion with confidence", "Slow referral months no longer cause panic because other channels are producing"]
+        },
+        {
+          "title": "Reduce Concentration Risk",
+          "description": "Many accounting firms discover too late that a large portion of their growth came from one or two key referral sources. Diversifying your acquisition channels protects your firm from the inevitable changes in any single relationship.",
+          "points": ["No single referral source can dramatically impact your growth trajectory", "Multiple channels mean a downturn in one area is offset by others", "Your firm becomes more resilient and less vulnerable to relationship changes"]
+        },
+        {
+          "title": "Reach Clients Who Do Not Have a CPA Network",
+          "description": "Not everyone who needs an accountant has a lawyer or banker to ask for a recommendation. Many excellent potential clients, especially younger business owners and those new to an area, search online. Growing without referrals means you reach these prospects too.",
+          "points": ["Business owners relocating to your area search online for a new accountant", "First time business owners often do not have professional networks that include CPA recommendations", "Individuals with complex tax situations research their options online before choosing a firm"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Referral Dependency Analysis", "description": "We assess how much of your accounting firm's growth comes from referrals versus other channels, identify concentration risks, and understand your growth goals.", "subheading": "Audit" },
+        { "step": 2, "title": "Channel Strategy", "description": "We design a growth approach that builds on your referral strength while adding independent channels like local SEO, website optimization, and automated lead nurturing.", "subheading": "Design" },
+        { "step": 3, "title": "System Build Out", "description": "We implement the agreed upon channels, set up lead capture and follow up automation, and integrate everything with your existing practice management tools.", "subheading": "Build" },
+        { "step": 4, "title": "Monitor and Balance", "description": "We track results across all channels, measure the contribution of non referral sources, and continuously optimize to increase the proportion of self generated growth.", "subheading": "Refine" }
+      ],
+      "faqs": [
+        { "question": "Will focusing on other channels hurt our referral relationships?", "answer": "Not at all. Referral sources typically do not notice or care about your other marketing efforts. In fact, having a stronger online presence can actually improve referral conversion because referred prospects who look you up will find a more compelling profile." },
+        { "question": "What channels work best for accounting firms beyond referrals?", "answer": "For most accounting firms, local search visibility and a conversion oriented website produce the best results. When someone searches for an accountant in your area, showing up prominently with strong reviews and clear messaging is extremely effective. We assess your specific market to determine the right mix." },
+        { "question": "How do we measure whether non referral channels are working?", "answer": "We implement tracking that shows you exactly where each inquiry comes from, whether it is organic search, a specific piece of content, or a referral. This gives you clear visibility into how each channel is performing and what the return looks like." }
+      ],
+      "results": [
+        { "metric": "Referral Dependence", "value": "Reduced", "description": "Accounting firms typically see a meaningful shift toward a balanced mix of referral and self generated clients" },
+        { "metric": "Growth Predictability", "value": "Improved", "description": "Multiple channels producing clients creates a more consistent and forecastable growth trajectory" },
+        { "metric": "Overall Inquiry Volume", "value": "Increased", "description": "Adding channels typically increases total inquiries because you are reaching prospects who would never have found you through referrals alone" }
+      ],
+      "ctaTitle": "Ready to Diversify Your Growth Beyond Referrals?",
+      "ctaDescription": "Book a free call and we will analyze your current referral dependence and show you how to build complementary channels that grow your accounting firm independently."
+    }
   }
 }

@@ -83,5 +83,337 @@
     "tax preparers": {
       "heroDescription": "For tax preparers, onboarding often means clients showing up without the documents you need, unclear about your timeline, and confused about what is included in their engagement. When you are trying to onboard dozens of clients during intake season, those inefficiencies multiply quickly. We build automated onboarding systems that send clear instructions, collect documents systematically, and deliver engagement terms before the first appointment so every client arrives prepared."
     }
+  },
+  "slugOverrides": {
+    "client-onboarding-automation-for-cpas": {
+      "heroSubtitleTemplate": "CPA firms that rely on manual emails and verbal walkthroughs during onboarding often find that details slip through the cracks before the engagement even begins. We build end-to-end onboarding automation that handles engagement letters, document collection, and welcome sequences so your team can focus on advisory work from the start.",
+      "heroDescription": "Most CPA firms treat onboarding as a series of one-off tasks handled differently by each staff member. One partner sends a welcome email, another calls the client, and a third waits until documents arrive before reaching out at all. The result is an inconsistent experience that can leave new clients uncertain about what comes next. We design and build automated onboarding workflows that deliver engagement letters for signature, collect the documents your team needs, and walk each client through a branded welcome sequence that reflects the professionalism of your firm.",
+      "benefits": [
+        {
+          "title": "Engagement Letters Delivered and Signed Without Manual Follow Up",
+          "description": "When a new CPA engagement begins, getting the letter signed promptly sets the entire relationship on solid footing. Automated engagement letter delivery sends the right agreement based on the services selected, collects electronic signatures, and archives completed documents without your team drafting individual emails or chasing clients for returned paperwork."
+        },
+        {
+          "title": "Complete Document Collection Before Work Begins",
+          "description": "Starting an engagement without all the necessary records leads to back-and-forth that delays timelines and frustrates both sides. An automated document collection workflow sends tailored requests based on the service type, follows up on missing items at intervals your team defines, and provides real-time visibility into what has been received so you can begin work as soon as everything is in hand."
+        },
+        {
+          "title": "A Consistent Welcome Experience Across Every New Client",
+          "description": "When onboarding varies depending on who handles it, the client experience becomes unpredictable. Automated welcome sequences introduce your firm, outline what the client can expect, and provide access to portals or resources in a consistent format that reflects well on your practice regardless of which team member is assigned."
+        }
+      ],
+      "features": [
+        {
+          "title": "Engagement Letter Automation and Tracking",
+          "description": "We configure workflows that generate engagement letters based on the specific services a client has selected, deliver them electronically for signature, and track completion status so your team always knows where things stand. This typically replaces the manual process of drafting, sending, and filing individual agreements.",
+          "details": [
+            "Template-driven engagement letters that populate automatically with client and service details",
+            "Electronic signature collection with automatic reminders for unsigned documents",
+            "Completion tracking that notifies your team when agreements are fully executed and filed"
+          ]
+        },
+        {
+          "title": "Structured Document Request Workflows",
+          "description": "We build document collection sequences customized to the types of engagements your CPA firm handles. Each new client receives a clear list of what is needed, instructions for secure submission, and gentle follow-up reminders that escalate over time. Your team receives status updates as documents arrive rather than having to check manually.",
+          "details": [
+            "Service-specific document checklists that adjust based on the engagement type",
+            "Secure upload links and clear submission instructions sent directly to each client",
+            "Automated follow-up sequences with escalating reminders for outstanding items"
+          ]
+        },
+        {
+          "title": "Multi-Step Welcome Sequence Design",
+          "description": "We design and deploy a welcome sequence that introduces new clients to your firm, outlines the onboarding timeline, shares relevant resources, and sets expectations for communication. The sequence runs automatically after a client signs their engagement letter, so every new relationship starts with the same polished experience.",
+          "details": [
+            "Branded welcome messages that reflect your firm's voice and communication style",
+            "Scheduled touchpoints that guide clients through each stage of the onboarding process",
+            "Conditional logic that adjusts the sequence based on the services a client has engaged for"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does the engagement letter automation handle different service combinations?",
+          "answer": "We build templates for each service your firm offers and configure the system to assemble the correct letter based on what the client has signed up for. If a client engages for both tax preparation and advisory services, for example, the workflow can generate a combined agreement or send separate letters depending on how your firm prefers to structure engagements. The templates are designed so your team can update language or terms without rebuilding the automation.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens if a client does not respond to the automated document requests?",
+          "answer": "The system sends follow-up reminders at intervals your team defines, and each reminder can use slightly different messaging to avoid sounding repetitive. If a client still has not responded after the final automated touchpoint, your team receives a notification so they can follow up personally. This approach tends to resolve most outstanding items before human intervention is needed, though every client is different.",
+          "category": "General"
+        },
+        {
+          "question": "Can this integrate with the practice management tools we already use?",
+          "answer": "In most cases, yes. During discovery we review the tools your CPA firm is currently using, whether that is Karbon, Canopy, TaxDome, or another platform, and identify the best integration points. The goal is to have onboarding activity reflected in your existing systems so your team is not checking multiple places for status updates. The specific integration options depend on what your current tools support.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your CPA Firm's Client Onboarding?",
+      "ctaDescription": "Book a free discovery call and we will walk through your current onboarding process together. We can identify where engagement letter delivery, document collection, and welcome sequences could be streamlined so your team spends less time on administrative coordination."
+    },
+    "automated-client-intake-for-accounting-firms": {
+      "heroSubtitleTemplate": "Accounting firms often lose valuable hours to scattered intake processes where client information arrives in different formats through different channels. We build automated intake systems that standardize how new client data is collected, validated, and routed to your team so engagements can begin with everything in order.",
+      "heroDescription": "Client intake at most accounting firms involves some combination of emailed PDFs, phone calls to gather missing details, and manual data entry into practice management software. The process works until it does not, and the breakdowns usually show up as missing information that delays the start of work or creates confusion about what services were actually agreed upon. We design automated intake workflows that present new clients with structured forms, collect the specific data points your team needs, and route completed submissions into your systems so nothing falls through the cracks.",
+      "benefits": [
+        {
+          "title": "Structured Data Collection That Reduces Back and Forth",
+          "description": "When intake relies on free-form emails and phone conversations, important details often get missed or miscommunicated. Automated intake forms ask the right questions in the right order, require responses for critical fields, and present options clearly so clients provide what you need the first time. This approach tends to significantly reduce the follow-up conversations that slow down engagement starts."
+        },
+        {
+          "title": "Faster Time From Signed Engagement to Active Work",
+          "description": "The gap between signing a new client and actually beginning productive work is often filled with administrative tasks that could be handled automatically. When intake data flows directly into your systems and triggers the appropriate next steps, your team can typically begin substantive work sooner rather than spending the first week gathering basics."
+        },
+        {
+          "title": "Consistent Data Quality Across All New Client Records",
+          "description": "Manual intake means data quality depends entirely on who handled the process. Automated forms enforce consistent formatting, required fields, and validation rules so every new client record starts with the same level of completeness. Over time, this consistency can make reporting, client communication, and internal handoffs noticeably smoother."
+        }
+      ],
+      "features": [
+        {
+          "title": "Custom Intake Form Design and Deployment",
+          "description": "We build intake forms tailored to the specific information your accounting firm needs for each service line. Rather than a generic questionnaire, each form is designed to collect the data points that actually matter for your team to begin work, including entity details, prior-year information, software access, and service preferences.",
+          "details": [
+            "Service-specific forms that adjust questions based on the engagement type selected",
+            "Required field validation to reduce incomplete submissions",
+            "Branded presentation that matches your firm's visual identity and communication tone"
+          ]
+        },
+        {
+          "title": "Automated Data Routing and System Population",
+          "description": "We configure the intake workflow so submitted data flows directly into your practice management system, CRM, or internal tracking tools. This eliminates the manual step of re-entering client information from intake forms and helps reduce transcription errors that can cause problems later in the engagement.",
+          "details": [
+            "Direct data mapping from intake form fields to your practice management records",
+            "Automatic creation of client profiles or projects when intake is completed",
+            "Notification triggers that alert the assigned team member when a new intake is ready for review"
+          ]
+        },
+        {
+          "title": "Initial Assessment and Service Matching Logic",
+          "description": "We build conditional logic into the intake process that helps route new clients to the right service path based on their responses. If a prospective client indicates they need payroll services in addition to bookkeeping, for example, the system can flag that for your team or trigger an additional set of intake questions specific to payroll setup.",
+          "details": [
+            "Branching logic that adjusts the intake flow based on client responses",
+            "Automatic flagging of complex situations that may require a discovery call before engagement",
+            "Service recommendation summaries generated from intake responses for your team's review"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can the intake forms handle different entity types like individuals, partnerships, and corporations?",
+          "answer": "Yes. We design the forms with conditional sections that appear based on the entity type a client selects. An individual completing intake for personal tax services sees different questions than someone submitting information for an S-Corp. This keeps the experience relevant for each client while still collecting everything your team needs for that specific entity type.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How do clients typically respond to filling out online intake forms instead of just calling the office?",
+          "answer": "Most clients appreciate having a clear, structured way to provide their information, especially when the alternative is trying to relay details over the phone or dig through old files to attach to an email. The forms can include helpful context for each question so clients understand what is being asked and why. Firms that have made this transition generally report that clients adapt quickly and often prefer the online format.",
+          "category": "General"
+        },
+        {
+          "question": "What if our practice management system does not have a direct integration available?",
+          "answer": "We evaluate what your system supports during the discovery phase. Many practice management platforms offer API access or integration through tools like Zapier or Make that can bridge the gap. In cases where a direct connection is not feasible, we can configure the intake workflow to deliver formatted data via email or structured exports that are straightforward for your team to import. The approach depends on your specific tools and how your team prefers to work.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Streamline Your Accounting Firm's Client Intake?",
+      "ctaDescription": "Schedule a free consultation and we will review how your firm currently handles new client intake. We can map out where automated forms, data routing, and assessment logic could reduce manual effort and help your team start engagements with better information from the beginning."
+    },
+    "client-onboarding-system-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparers who manage high volumes of client onboarding during intake season know how quickly the manual process breaks down. We build onboarding systems that automate document gathering, organizer distribution, consent form collection, and filing preference capture so your clients arrive prepared and your season starts smoothly.",
+      "heroDescription": "For tax preparers, onboarding is not a year-round trickle but a seasonal surge that demands efficiency. Dozens or even hundreds of clients need to provide prior-year documents, complete organizers, sign consent forms, and communicate their filing preferences within a compressed timeframe. When that process depends on individual emails and phone calls, important items get missed, clients show up unprepared, and your team spends valuable preparation time on administrative coordination instead of actual tax work. We design automated onboarding systems specifically for tax preparation workflows that handle the logistics of getting clients ready before their appointments.",
+      "benefits": [
+        {
+          "title": "Organizer Distribution That Scales With Your Client Volume",
+          "description": "Sending organizers manually works when you have a handful of clients, but it becomes a bottleneck as your practice grows. Automated organizer distribution sends the right questionnaire to each client based on their filing situation, tracks completion status, and follows up with clients who have not yet responded, all without your team sending individual messages."
+        },
+        {
+          "title": "Document Gathering Completed Before Appointments Begin",
+          "description": "When clients arrive without their W-2s, 1099s, or prior-year returns, appointments become data collection sessions instead of productive preparation meetings. Automated document gathering workflows request specific items based on each client's tax situation, provide clear upload instructions, and give your team visibility into what has been received so you can identify gaps before the appointment."
+        },
+        {
+          "title": "Consent and Authorization Forms Handled Systematically",
+          "description": "Collecting signed consent forms, e-file authorizations, and engagement letters from every client is a compliance necessity that consumes significant administrative time when done manually. Automated delivery and collection of these forms ensures nothing is overlooked while freeing your staff to focus on preparation and review work."
+        }
+      ],
+      "features": [
+        {
+          "title": "Tax Organizer Automation and Tracking",
+          "description": "We build workflows that distribute tax organizers to your client list based on their filing type and history. Each organizer can be customized to reflect the specific questions relevant to that client's situation, and the system tracks which clients have completed theirs so your team knows exactly where things stand heading into preparation season.",
+          "details": [
+            "Filing-type-specific organizers that ask relevant questions for each client's tax situation",
+            "Automated distribution with built-in deadlines and completion tracking",
+            "Reminder sequences that encourage timely completion without overwhelming clients"
+          ]
+        },
+        {
+          "title": "Document Collection Configured for Tax Preparation",
+          "description": "We configure document request workflows that ask each client for the specific items your team needs based on their income sources, deductions, and filing history. Clients receive a clear checklist with descriptions of each document, secure upload options, and the ability to mark items as not applicable so your team has an accurate picture of what to expect.",
+          "details": [
+            "Client-specific document checklists generated from prior-year filing data when available",
+            "Secure submission portals with clear labeling and upload instructions",
+            "Status dashboards that show your team which clients are fully submitted, partially complete, or not yet started"
+          ]
+        },
+        {
+          "title": "Consent Form and Filing Preference Collection",
+          "description": "We automate the delivery and collection of consent forms, e-file authorizations, privacy disclosures, and filing preference questionnaires. These are sent as part of the onboarding sequence so they arrive alongside document requests rather than as an afterthought, which tends to improve completion rates and reduce last-minute scrambles during appointment windows.",
+          "details": [
+            "Electronic delivery and signature collection for all required authorization forms",
+            "Filing preference questionnaires that capture direct deposit details, payment preferences, and special instructions",
+            "Automatic archiving of completed forms linked to each client's record for easy retrieval"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can the system handle clients with very different tax situations, like simple W-2 filers versus business owners?",
+          "answer": "Absolutely. We build the onboarding paths with conditional logic so each client's experience is tailored to their filing complexity. A straightforward W-2 filer receives a shorter organizer and a simpler document checklist, while a client with business income, rental properties, or investment accounts gets a more detailed set of requests. The system routes each client to the appropriate path based on information you already have or based on initial screening questions.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does this work during the peak of tax season when we are onboarding clients rapidly?",
+          "answer": "The automation is designed to handle volume without additional effort from your team. Whether you are onboarding ten clients in a week or fifty, the system sends the same structured sequences and tracks responses in the same way. Your team's involvement is limited to reviewing completed submissions and following up on the cases where automated reminders have not resolved outstanding items. Most firms find this approach significantly reduces the seasonal staffing pressure around intake coordination.",
+          "category": "General"
+        },
+        {
+          "question": "Can this connect with our existing tax preparation software?",
+          "answer": "We evaluate your current software stack during discovery to determine the best integration approach. Many tax preparation platforms like Drake, Lacerte, UltraTax, or TaxDome offer ways to import client data or connect with external workflows. Where direct integration is available, we configure data to flow between systems. Where it is not, we design the workflow to produce organized outputs that are straightforward for your team to work with in their existing tools.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Onboarding for Your Tax Preparation Practice?",
+      "ctaDescription": "Book a free call and we will review your current intake and onboarding process. We can identify where automated organizers, document collection, and consent form workflows could help your team manage client volume more efficiently heading into your next filing season."
+    },
+    "new-client-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Setting up a new bookkeeping client involves a long list of technical and administrative steps that are easy to miss when handled manually. We build new client automation that manages account access collection, bank connections, software setup, and onboarding checklists so nothing is overlooked and your team can start productive work sooner.",
+      "heroDescription": "Every new bookkeeping client brings a unique combination of bank accounts, payment processors, payroll platforms, and accounting software that your team needs to connect to and configure before monthly work can begin. When setup depends on memory and informal checklists, critical steps get skipped, access requests sit unanswered, and the first month of work is often spent catching up on things that should have been handled during onboarding. We design automated setup workflows that guide both your team and the client through every step required to get the engagement running smoothly.",
+      "benefits": [
+        {
+          "title": "Nothing Missed During the Setup Process",
+          "description": "Bookkeeping setup involves dozens of small but critical steps, from requesting bank access to configuring chart of accounts to verifying software permissions. Automated checklists ensure every step is tracked, assigned, and completed in the right order so your team does not discover missing access or incomplete configurations weeks into the engagement."
+        },
+        {
+          "title": "Bank and Software Connections Requested Systematically",
+          "description": "Getting access to a new client's financial accounts and software platforms often involves multiple rounds of requests because clients are not always sure what you need or how to grant it. Automated access request workflows send clear, step-by-step instructions for each platform your team needs to connect to, reducing the back-and-forth that typically delays the first month of work."
+        },
+        {
+          "title": "A Repeatable Process That Scales With Your Client Base",
+          "description": "When setup relies on one person's institutional knowledge, bringing on new team members or growing your client count creates risk. Automated setup workflows codify your best practices into a repeatable system that works the same way every time, regardless of which team member is handling the onboarding or how many new clients you are bringing on at once."
+        }
+      ],
+      "features": [
+        {
+          "title": "Account Access and Bank Connection Request Workflows",
+          "description": "We build automated workflows that send new clients clear, platform-specific instructions for granting your team access to their bank accounts, credit cards, and financial platforms. Each request includes step-by-step guidance tailored to the institution or software, which tends to reduce the confusion and delays that come with generic access requests.",
+          "details": [
+            "Platform-specific instructions for common banks and financial institutions",
+            "Separate request sequences for each account type your team needs access to",
+            "Progress tracking that shows which connections have been established and which are still pending"
+          ]
+        },
+        {
+          "title": "Software Setup and Configuration Checklists",
+          "description": "We design automated checklists that walk your team through the technical setup steps for each new client, from configuring their accounting software to connecting integrations to setting up recurring workflows. Each checklist is customized based on the tools the client uses and the services your firm is providing.",
+          "details": [
+            "Client-specific setup checklists generated based on their software stack and service agreement",
+            "Task assignments that distribute setup responsibilities across your team members",
+            "Status tracking with notifications when critical setup milestones are completed"
+          ]
+        },
+        {
+          "title": "Client-Facing Onboarding Task Management",
+          "description": "We configure a client-facing task list or portal that shows new bookkeeping clients exactly what they need to provide and complete on their end. This gives clients a clear picture of their responsibilities while reducing the number of individual emails and messages your team needs to send to keep things moving.",
+          "details": [
+            "Client-visible task lists with clear descriptions and deadlines for each item",
+            "Automated reminders for tasks the client has not yet completed",
+            "Completion notifications that alert your team when client-side tasks are finished"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does the automation handle clients who use different accounting software or have unusual setups?",
+          "answer": "We design the setup workflows with flexibility built in. During discovery, we identify the most common software combinations your bookkeeping clients use and create setup paths for each. For clients with less common tools or unusual configurations, the system includes a manual review step where your team can adjust the checklist before it is deployed. The goal is to automate the predictable steps while preserving your team's ability to handle exceptions thoughtfully.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if a client is not comfortable granting bank access through an automated system?",
+          "answer": "The automated requests are simply structured communications that guide clients through the access granting process. Clients are not giving access to the automation itself; they are following clear instructions to add your team as authorized users through their bank's own security protocols. If a client prefers to handle access setup over a phone call or in person, your team can still use the checklist tracking to mark those items as completed manually. The system adapts to how each client is most comfortable.",
+          "category": "General"
+        },
+        {
+          "question": "Can this work alongside the project management tools our bookkeeping team already uses?",
+          "answer": "That is typically how we design it. If your team uses tools like Karbon, Jetpack Workflow, or Financial Cents, we look for ways to sync the onboarding checklist status with your existing project management setup. In many cases, completing onboarding tasks in the automated workflow can trigger corresponding updates in your project management tool so your team has a single source of truth for client status. The specific integration depends on what your tools support.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Systematize How You Set Up New Bookkeeping Clients?",
+      "ctaDescription": "Schedule a free discovery call and we will map out your current new client setup process. We can identify where automated access requests, software configuration checklists, and client task management could help your team bring on new clients more efficiently."
+    },
+    "client-setup-automation-for-cpas": {
+      "heroSubtitleTemplate": "After a new CPA engagement is signed, the internal work of setting up the client often involves a tangle of manual tasks that delay the start of meaningful work. We build post-signing automation that handles system access provisioning, team assignments, and kickoff processes so your firm transitions from signed agreement to active engagement without unnecessary lag.",
+      "heroDescription": "Signing a new client is a milestone, but for most CPA firms it marks the beginning of an internal coordination challenge rather than the start of billable work. Someone needs to create the client in your practice management system, assign the engagement team, set up software access, schedule a kickoff meeting, and communicate internally about scope and deadlines. When these post-signing steps rely on memory or informal handoffs, they often take longer than they should and occasionally result in things being set up incorrectly. We design automated client setup workflows that turn the transition from signed engagement to active work into a structured, reliable process.",
+      "benefits": [
+        {
+          "title": "Faster Transition From Signed Engagement to Active Work",
+          "description": "The days or weeks between signing a client and beginning substantive work represent a gap that can frustrate new clients and delay revenue recognition. Automated post-signing workflows trigger the setup process immediately after an agreement is executed, moving through system provisioning, team notification, and kickoff scheduling without waiting for someone to remember to start each step manually."
+        },
+        {
+          "title": "Clear Team Assignments and Internal Communication",
+          "description": "New engagements sometimes stall because it is unclear who on your team is responsible for what. Automated setup workflows assign roles based on criteria your firm defines, notify each team member of their responsibilities, and provide the context they need about the engagement so everyone knows what they are accountable for from the start."
+        },
+        {
+          "title": "Reliable System Provisioning That Does Not Depend on Institutional Knowledge",
+          "description": "Setting up a new client across your firm's various platforms often requires knowledge that lives in one person's head. Automated provisioning workflows codify those steps into a repeatable process that creates client records, configures access permissions, and establishes project templates consistently every time, regardless of who is managing the setup."
+        }
+      ],
+      "features": [
+        {
+          "title": "Post-Signing Workflow Triggers and Task Sequencing",
+          "description": "We configure workflows that automatically initiate when a signed engagement letter is received. These workflows sequence the internal setup tasks in the right order, assigning each to the appropriate team member and tracking completion so nothing sits unattended. The trigger can be an electronic signature completion, a status change in your CRM, or another event that indicates the engagement is confirmed.",
+          "details": [
+            "Automatic workflow initiation based on engagement letter signature or status update",
+            "Sequenced task lists that enforce the correct order of operations for client setup",
+            "Deadline tracking with escalation notifications for tasks that fall behind schedule"
+          ]
+        },
+        {
+          "title": "System Access Provisioning and Configuration",
+          "description": "We build automation that handles the creation of client records across your firm's platforms, whether that includes your practice management system, document management tool, billing software, or communication platform. Each system is provisioned according to templates your firm defines, reducing the manual effort and inconsistency that come with setting up each client from scratch.",
+          "details": [
+            "Client record creation across multiple platforms triggered by a single workflow step",
+            "Template-based configuration that applies your firm's standard settings and folder structures",
+            "Access permission assignments that match team roles to the appropriate level of system access"
+          ]
+        },
+        {
+          "title": "Team Assignment and Kickoff Process Automation",
+          "description": "We design the workflow to assign engagement team members based on criteria like service type, client complexity, team capacity, or partner preference. Once assignments are made, the system can automatically notify the team, share engagement details, and schedule or prompt a kickoff meeting so the engagement begins with everyone aligned on scope and expectations.",
+          "details": [
+            "Rule-based team assignments that consider workload, expertise, and engagement type",
+            "Automated engagement briefings delivered to each assigned team member with relevant context",
+            "Kickoff meeting scheduling or prompts that initiate the first client touchpoint after setup is complete"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does the automation know which team members to assign to a new engagement?",
+          "answer": "We work with your firm during discovery to define the assignment criteria that make sense for your practice. This might be based on the service type, the client's industry, the assigned partner, team member availability, or a combination of factors. The system applies those rules automatically when a new engagement is triggered, though your team can always override assignments manually when circumstances require it. The criteria can be updated as your firm's structure or capacity changes.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if our internal setup process is different for different types of engagements?",
+          "answer": "That is expected and something we account for in the design. Tax engagements, audit engagements, and advisory work each typically require different setup steps, different team structures, and different system configurations. We build separate workflow paths for each engagement type so the automation matches the actual process your team follows. During discovery, we map out these variations and design the workflows to handle each one appropriately.",
+          "category": "General"
+        },
+        {
+          "question": "Can this automate the creation of client records in our practice management system?",
+          "answer": "In many cases, yes. The feasibility depends on what your practice management platform supports in terms of API access or integration capabilities. Platforms like Karbon, Canopy, and TaxDome offer various levels of automation support that we can leverage. If direct record creation is not possible with your specific tool, we can automate the preparation of client data and deliver it in a format that makes manual entry faster and more consistent. We assess the technical options during discovery so you know exactly what is achievable before we begin building.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate the Post-Signing Setup at Your CPA Firm?",
+      "ctaDescription": "Book a free call and we will review what happens at your firm between signing a new client and starting work. We can identify where automated provisioning, team assignments, and kickoff processes could shorten that gap and help your team begin engagements with less administrative overhead."
+    }
   }
 }

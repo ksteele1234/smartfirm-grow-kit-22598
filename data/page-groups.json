@@ -1,0 +1,2173 @@
+{
+  "solution/client-acquisition": {
+    "dir": "solution",
+    "subcategory": "client-acquisition",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-get-more-clients-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "how to get more clients",
+        "h1": "How to Get More Clients for My CPA Firm",
+        "title": "How to Get More Clients for My CPA Firm",
+        "metaDescription": "How to get more clients for your CPA firm. Attract 5K to 15K advisory clients with done for you marketing automation and SEO."
+      },
+      {
+        "slug": "how-do-i-attract-new-clients-to-my-accounting-practice",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "attract new clients",
+        "h1": "How Do I Attract New Clients to My Accounting Practice",
+        "title": "How Do I Attract New Clients to My Accounting Practice",
+        "metaDescription": "How to attract new clients to your accounting practice. Build a predictable client acquisition system with automated marketing."
+      },
+      {
+        "slug": "how-to-find-clients-for-my-tax-preparation-business",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "find clients for tax preparation",
+        "h1": "How to Find Clients for My Tax Preparation Business",
+        "title": "How to Find Clients for My Tax Preparation Business",
+        "metaDescription": "How to find clients for your tax preparation business. Get found online and convert more prospects during and after busy season."
+      },
+      {
+        "slug": "how-to-market-my-bookkeeping-services",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "market bookkeeping services",
+        "h1": "How to Market My Bookkeeping Services",
+        "title": "How to Market My Bookkeeping Services",
+        "metaDescription": "How to market your bookkeeping services effectively. Done for you marketing systems that attract ideal clients without taking all your time."
+      },
+      {
+        "slug": "how-to-grow-my-accounting-firm-without-referrals",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "grow accounting firm without referrals",
+        "h1": "How to Grow My Accounting Firm Without Referrals",
+        "title": "How to Grow My Accounting Firm Without Referrals",
+        "metaDescription": "How to grow your accounting firm without relying on referrals. Build predictable lead generation with SEO and marketing automation."
+      }
+    ]
+  },
+  "solution/lead-follow-up": {
+    "dir": "solution",
+    "subcategory": "lead-follow-up",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-follow-up-with-leads-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "follow up with leads",
+        "h1": "How to Follow Up with Leads for My CPA Firm",
+        "title": "How to Follow Up with Leads for My CPA Firm",
+        "metaDescription": "How to follow up with leads for your CPA firm. Automated follow up systems that convert more inquiries into paying clients."
+      },
+      {
+        "slug": "how-do-i-respond-to-website-inquiries-faster",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "respond to inquiries faster",
+        "h1": "How Do I Respond to Website Inquiries Faster",
+        "title": "How Do I Respond to Website Inquiries Faster",
+        "metaDescription": "How to respond to website inquiries faster. Instant automated responses that engage prospects while you focus on billable work."
+      },
+      {
+        "slug": "how-to-not-lose-leads-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "not lose leads",
+        "h1": "How to Not Lose Leads for My Accounting Firm",
+        "title": "How to Not Lose Leads for My Accounting Firm",
+        "metaDescription": "How to stop losing leads for your accounting firm. Automated nurture sequences that keep prospects engaged until they are ready to hire."
+      },
+      {
+        "slug": "how-to-track-prospects-for-my-tax-business",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "track prospects",
+        "h1": "How to Track Prospects for My Tax Business",
+        "title": "How to Track Prospects for My Tax Business",
+        "metaDescription": "How to track prospects for your tax business. CRM systems that organize leads and automate follow up so nothing falls through the cracks."
+      },
+      {
+        "slug": "how-to-manage-client-inquiries-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "manage client inquiries",
+        "h1": "How to Manage Client Inquiries for Bookkeepers",
+        "title": "How to Manage Client Inquiries for Bookkeepers",
+        "metaDescription": "How to manage client inquiries efficiently for bookkeepers. Systems that handle lead intake and follow up without manual work."
+      }
+    ]
+  },
+  "solution/time-management": {
+    "dir": "solution",
+    "subcategory": "time-management",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-save-time-on-marketing-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "save time on marketing",
+        "h1": "How to Save Time on Marketing for CPAs",
+        "title": "How to Save Time on Marketing for CPAs",
+        "metaDescription": "How to save time on marketing for CPAs. Done for you marketing automation that runs 24/7 while you focus on billable hours."
+      },
+      {
+        "slug": "how-do-i-automate-my-accounting-firm-marketing",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automate accounting firm marketing",
+        "h1": "How Do I Automate My Accounting Firm Marketing",
+        "title": "How Do I Automate My Accounting Firm Marketing",
+        "metaDescription": "How to automate your accounting firm marketing completely. Set it once and let it run with automated email, social, and SEO systems."
+      },
+      {
+        "slug": "how-to-market-during-busy-season-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "market during busy season",
+        "h1": "How to Market During Busy Season for Tax Preparers",
+        "title": "How to Market During Busy Season for Tax Preparers",
+        "metaDescription": "How to market during busy season for tax preparers. Automated systems that keep marketing running while you prepare returns."
+      },
+      {
+        "slug": "how-to-do-marketing-with-no-time-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "marketing with no time",
+        "h1": "How to Do Marketing with No Time for Bookkeepers",
+        "title": "How to Do Marketing with No Time for Bookkeepers",
+        "metaDescription": "How to do marketing when you have no time as a bookkeeper. Fully automated marketing systems that require minimal ongoing effort."
+      },
+      {
+        "slug": "how-to-reduce-marketing-hours-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "reduce marketing hours",
+        "h1": "How to Reduce Marketing Hours for CPAs",
+        "title": "How to Reduce Marketing Hours for CPAs",
+        "metaDescription": "How to reduce marketing hours for CPAs. Reclaim 10 to 15 hours per week with marketing automation that works while you sleep."
+      }
+    ]
+  },
+  "solution/email-marketing": {
+    "dir": "solution",
+    "subcategory": "email-marketing",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-email-my-clients-automatically-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "email clients automatically",
+        "h1": "How to Email My Clients Automatically for CPAs",
+        "title": "How to Email My Clients Automatically for CPAs",
+        "metaDescription": "How to email your clients automatically as a CPA. Set up email workflows that keep clients informed without manual work."
+      },
+      {
+        "slug": "how-do-i-set-up-email-marketing-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "set up email marketing",
+        "h1": "How Do I Set Up Email Marketing for My Accounting Firm",
+        "title": "How Do I Set Up Email Marketing for My Accounting Firm",
+        "metaDescription": "How to set up email marketing for your accounting firm. Done for you email automation that nurtures prospects and retains clients."
+      },
+      {
+        "slug": "how-to-send-newsletters-to-clients-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "send newsletters to clients",
+        "h1": "How to Send Newsletters to Clients for Tax Preparers",
+        "title": "How to Send Newsletters to Clients for Tax Preparers",
+        "metaDescription": "How to send newsletters to clients as a tax preparer. Automated email newsletters that keep you top of mind year round."
+      },
+      {
+        "slug": "how-to-stay-in-touch-with-clients-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "stay in touch with clients",
+        "h1": "How to Stay in Touch with Clients for Bookkeepers",
+        "title": "How to Stay in Touch with Clients for Bookkeepers",
+        "metaDescription": "How to stay in touch with clients as a bookkeeper. Automated communication systems that maintain relationships without constant effort."
+      },
+      {
+        "slug": "how-to-email-prospects-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "email prospects",
+        "h1": "How to Email Prospects for My CPA Firm",
+        "title": "How to Email Prospects for My CPA Firm",
+        "metaDescription": "How to email prospects effectively for your CPA firm. Nurture sequences that convert inquiries into 5K to 15K advisory clients."
+      }
+    ]
+  },
+  "solution/website-traffic": {
+    "dir": "solution",
+    "subcategory": "website-traffic",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-get-more-website-visitors-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "get more website visitors",
+        "h1": "How to Get More Website Visitors for My CPA Firm",
+        "title": "How to Get More Website Visitors for My CPA Firm",
+        "metaDescription": "How to get more website visitors for your CPA firm. SEO and content strategies that attract qualified prospects actively searching for your services."
+      },
+      {
+        "slug": "how-do-i-rank-on-google-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "rank on google",
+        "h1": "How Do I Rank on Google for My Accounting Firm",
+        "title": "How Do I Rank on Google for My Accounting Firm",
+        "metaDescription": "How to rank on Google for your accounting firm. Done for you SEO that gets you found by ideal clients searching for accounting services."
+      },
+      {
+        "slug": "how-to-improve-my-accounting-website",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "improve accounting website",
+        "h1": "How to Improve My Accounting Website",
+        "title": "How to Improve My Accounting Website",
+        "metaDescription": "How to improve your accounting website for better results. Professional website optimization that converts more visitors into leads."
+      },
+      {
+        "slug": "how-to-get-found-online-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "get found online",
+        "h1": "How to Get Found Online for Tax Preparers",
+        "title": "How to Get Found Online for Tax Preparers",
+        "metaDescription": "How to get found online as a tax preparer. Local SEO and online visibility strategies that bring clients to your door."
+      },
+      {
+        "slug": "how-to-make-my-bookkeeping-website-convert-better",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "make website convert better",
+        "h1": "How to Make My Bookkeeping Website Convert Better",
+        "title": "How to Make My Bookkeeping Website Convert Better",
+        "metaDescription": "How to make your bookkeeping website convert better. Website optimization that turns more visitors into paying clients."
+      }
+    ]
+  },
+  "solution/social-media": {
+    "dir": "solution",
+    "subcategory": "social-media",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-do-social-media-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "do social media",
+        "h1": "How to Do Social Media for My CPA Firm",
+        "title": "How to Do Social Media for My CPA Firm",
+        "metaDescription": "How to do social media for your CPA firm. Automated social posting that builds authority without the daily time commitment."
+      },
+      {
+        "slug": "how-do-i-post-on-linkedin-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "post on linkedin",
+        "h1": "How Do I Post on LinkedIn for My Accounting Firm",
+        "title": "How Do I Post on LinkedIn for My Accounting Firm",
+        "metaDescription": "How to post on LinkedIn for your accounting firm. Professional LinkedIn content that positions you as a trusted advisor."
+      },
+      {
+        "slug": "how-to-market-on-facebook-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "market on facebook",
+        "h1": "How to Market on Facebook for Tax Preparers",
+        "title": "How to Market on Facebook for Tax Preparers",
+        "metaDescription": "How to market on Facebook for tax preparers. Reach local prospects with targeted Facebook content and advertising strategies."
+      },
+      {
+        "slug": "how-to-use-social-media-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "use social media",
+        "h1": "How to Use Social Media for Bookkeepers",
+        "title": "How to Use Social Media for Bookkeepers",
+        "metaDescription": "How to use social media for bookkeepers. Simple social media systems that build visibility without overwhelming your schedule."
+      },
+      {
+        "slug": "how-to-create-content-for-my-accounting-practice",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "create content",
+        "h1": "How to Create Content for My Accounting Practice",
+        "title": "How to Create Content for My Accounting Practice",
+        "metaDescription": "How to create content for your accounting practice. Done for you content creation that attracts ideal clients and builds authority."
+      }
+    ]
+  },
+  "solution/client-retention": {
+    "dir": "solution",
+    "subcategory": "client-retention",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-keep-clients-coming-back-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "keep clients coming back",
+        "h1": "How to Keep Clients Coming Back for CPAs",
+        "title": "How to Keep Clients Coming Back for CPAs",
+        "metaDescription": "How to keep clients coming back as a CPA. Client engagement systems that improve retention and increase lifetime value."
+      },
+      {
+        "slug": "how-do-i-reduce-client-churn-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "reduce client churn",
+        "h1": "How Do I Reduce Client Churn for My Accounting Firm",
+        "title": "How Do I Reduce Client Churn for My Accounting Firm",
+        "metaDescription": "How to reduce client churn for your accounting firm. Automated communication and engagement systems that keep clients loyal."
+      },
+      {
+        "slug": "how-to-retain-tax-clients-year-round",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "retain tax clients year round",
+        "h1": "How to Retain Tax Clients Year Round",
+        "title": "How to Retain Tax Clients Year Round",
+        "metaDescription": "How to retain tax clients year round. Stay connected with clients between tax seasons and expand into advisory services."
+      },
+      {
+        "slug": "how-to-maintain-client-relationships-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "maintain client relationships",
+        "h1": "How to Maintain Client Relationships for Bookkeepers",
+        "title": "How to Maintain Client Relationships for Bookkeepers",
+        "metaDescription": "How to maintain client relationships as a bookkeeper. Automated touchpoints that keep clients engaged without constant manual effort."
+      },
+      {
+        "slug": "how-to-stay-top-of-mind-with-clients-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "stay top of mind with clients",
+        "h1": "How to Stay Top of Mind with Clients for CPAs",
+        "title": "How to Stay Top of Mind with Clients for CPAs",
+        "metaDescription": "How to stay top of mind with clients as a CPA. Regular communication systems that maintain visibility and strengthen relationships."
+      }
+    ]
+  },
+  "solution/client-onboarding": {
+    "dir": "solution",
+    "subcategory": "client-onboarding",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-onboard-new-clients-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "onboard new clients",
+        "h1": "How to Onboard New Clients for My CPA Firm",
+        "title": "How to Onboard New Clients for My CPA Firm",
+        "metaDescription": "How to onboard new clients for your CPA firm. Streamlined onboarding workflows that create great first impressions and save time."
+      },
+      {
+        "slug": "how-do-i-automate-client-intake-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automate client intake",
+        "h1": "How Do I Automate Client Intake for My Accounting Firm",
+        "title": "How Do I Automate Client Intake for My Accounting Firm",
+        "metaDescription": "How to automate client intake for your accounting firm. Collect information and documents automatically with intelligent intake workflows."
+      },
+      {
+        "slug": "how-to-streamline-new-client-setup-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "streamline new client setup",
+        "h1": "How to Streamline New Client Setup for Tax Preparers",
+        "title": "How to Streamline New Client Setup for Tax Preparers",
+        "metaDescription": "How to streamline new client setup for tax preparers. Get clients set up faster with automated document collection and engagement letters."
+      },
+      {
+        "slug": "how-to-make-client-onboarding-easier-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "make client onboarding easier",
+        "h1": "How to Make Client Onboarding Easier for Bookkeepers",
+        "title": "How to Make Client Onboarding Easier for Bookkeepers",
+        "metaDescription": "How to make client onboarding easier for bookkeepers. Automated onboarding that creates consistent experiences and reduces setup time."
+      },
+      {
+        "slug": "how-to-reduce-onboarding-time-for-my-accounting-practice",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "reduce onboarding time",
+        "h1": "How to Reduce Onboarding Time for My Accounting Practice",
+        "title": "How to Reduce Onboarding Time for My Accounting Practice",
+        "metaDescription": "How to reduce onboarding time for your accounting practice. Cut new client setup from hours to minutes with automation workflows."
+      }
+    ]
+  },
+  "solution/workflow-efficiency": {
+    "dir": "solution",
+    "subcategory": "workflow-efficiency",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-reduce-manual-work-in-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "reduce manual work",
+        "h1": "How to Reduce Manual Work in My CPA Firm",
+        "title": "How to Reduce Manual Work in My CPA Firm",
+        "metaDescription": "How to reduce manual work in your CPA firm. Process automation that eliminates repetitive tasks and reclaims 10 to 15 hours per week."
+      },
+      {
+        "slug": "how-do-i-automate-repetitive-tasks-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automate repetitive tasks",
+        "h1": "How Do I Automate Repetitive Tasks for My Accounting Firm",
+        "title": "How Do I Automate Repetitive Tasks for My Accounting Firm",
+        "metaDescription": "How to automate repetitive tasks for your accounting firm. Workflow automation that handles routine processes without manual intervention."
+      },
+      {
+        "slug": "how-to-streamline-processes-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "streamline processes",
+        "h1": "How to Streamline Processes for Tax Preparers",
+        "title": "How to Streamline Processes for Tax Preparers",
+        "metaDescription": "How to streamline processes for tax preparers. Optimize workflows and eliminate bottlenecks to handle more clients during busy season."
+      },
+      {
+        "slug": "how-to-eliminate-busywork-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "eliminate busywork",
+        "h1": "How to Eliminate Busywork for Bookkeepers",
+        "title": "How to Eliminate Busywork for Bookkeepers",
+        "metaDescription": "How to eliminate busywork for bookkeepers. Automate routine tasks and focus on high value client work instead of data entry."
+      },
+      {
+        "slug": "how-to-save-time-on-admin-work-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "save time on admin work",
+        "h1": "How to Save Time on Admin Work for CPAs",
+        "title": "How to Save Time on Admin Work for CPAs",
+        "metaDescription": "How to save time on admin work for CPAs. Reduce non billable hours with automated administrative workflows and systems."
+      }
+    ]
+  },
+  "solution/document-management": {
+    "dir": "solution",
+    "subcategory": "document-management",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-automate-documents-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "automate documents",
+        "h1": "How to Automate Documents for My CPA Firm",
+        "title": "How to Automate Documents for My CPA Firm",
+        "metaDescription": "How to automate documents for your CPA firm. Generate engagement letters, proposals, and reports automatically from templates."
+      },
+      {
+        "slug": "how-do-i-organize-client-files-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "organize client files",
+        "h1": "How Do I Organize Client Files for My Accounting Firm",
+        "title": "How Do I Organize Client Files for My Accounting Firm",
+        "metaDescription": "How to organize client files for your accounting firm. Automated document management that keeps everything organized and accessible."
+      },
+      {
+        "slug": "how-to-manage-documents-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "manage documents",
+        "h1": "How to Manage Documents for Tax Preparers",
+        "title": "How to Manage Documents for Tax Preparers",
+        "metaDescription": "How to manage documents for tax preparers. Streamline document collection, storage, and retrieval with automated workflows."
+      },
+      {
+        "slug": "how-to-reduce-paperwork-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "reduce paperwork",
+        "h1": "How to Reduce Paperwork for Bookkeepers",
+        "title": "How to Reduce Paperwork for Bookkeepers",
+        "metaDescription": "How to reduce paperwork for bookkeepers. Go digital with automated document processing and electronic file management systems."
+      },
+      {
+        "slug": "how-to-automate-file-organization-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "automate file organization",
+        "h1": "How to Automate File Organization for CPAs",
+        "title": "How to Automate File Organization for CPAs",
+        "metaDescription": "How to automate file organization for CPAs. Never waste time searching for documents with intelligent automated filing systems."
+      }
+    ]
+  },
+  "solution/month-end-close": {
+    "dir": "solution",
+    "subcategory": "month-end-close",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "how-to-automate-month-end-close-for-my-cpa-firm",
+        "targetAudience": "CPAs",
+        "focusKeyword": "automate month end close",
+        "h1": "How to Automate Month End Close for My CPA Firm",
+        "title": "How to Automate Month End Close for My CPA Firm",
+        "metaDescription": "How to automate month end close for your CPA firm. Reduce close time from days to hours with automated reconciliation and reporting."
+      },
+      {
+        "slug": "how-do-i-speed-up-month-end-close-for-my-accounting-firm",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "speed up month end close",
+        "h1": "How Do I Speed Up Month End Close for My Accounting Firm",
+        "title": "How Do I Speed Up Month End Close for My Accounting Firm",
+        "metaDescription": "How to speed up month end close for your accounting firm. Streamline close processes with automation and eliminate manual reconciliation."
+      },
+      {
+        "slug": "how-to-streamline-period-end-close-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "streamline period end close",
+        "h1": "How to Streamline Period End Close for Tax Preparers",
+        "title": "How to Streamline Period End Close for Tax Preparers",
+        "metaDescription": "How to streamline period end close for tax preparers. Complete close faster with automated checklists and reconciliation workflows."
+      },
+      {
+        "slug": "how-to-reduce-month-end-work-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "reduce month end work",
+        "h1": "How to Reduce Month End Work for Bookkeepers",
+        "title": "How to Reduce Month End Work for Bookkeepers",
+        "metaDescription": "How to reduce month end work for bookkeepers. Automate closing tasks and reclaim hours at month end with intelligent workflows."
+      },
+      {
+        "slug": "how-to-automate-financial-close-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "automate financial close",
+        "h1": "How to Automate Financial Close for CPAs",
+        "title": "How to Automate Financial Close for CPAs",
+        "metaDescription": "How to automate financial close for CPAs. Transform month end close from manual drudgery to automated efficiency."
+      }
+    ]
+  },
+  "solution/cpa-marketing": {
+    "dir": "solution",
+    "subcategory": "cpa-marketing",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "cpa-marketing-with-automated-lead-follow-up",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with automated lead follow up",
+        "h1": "CPA Marketing with Automated Lead Follow Up",
+        "title": "CPA Marketing with Automated Lead Follow Up",
+        "metaDescription": "CPA marketing with automated lead follow up. Never lose a prospect with intelligent email and SMS sequences that convert inquiries into clients."
+      },
+      {
+        "slug": "cpa-marketing-with-done-for-you-implementation",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with done for you implementation",
+        "h1": "CPA Marketing with Done For You Implementation",
+        "title": "CPA Marketing with Done For You Implementation",
+        "metaDescription": "CPA marketing with done for you implementation. Complete marketing systems built and managed for you so you can focus on billable work."
+      },
+      {
+        "slug": "cpa-marketing-with-transparent-roi-tracking",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with transparent roi tracking",
+        "h1": "CPA Marketing with Transparent ROI Tracking",
+        "title": "CPA Marketing with Transparent ROI Tracking",
+        "metaDescription": "CPA marketing with transparent ROI tracking. Real time dashboards showing exactly where leads come from and what revenue they generate."
+      },
+      {
+        "slug": "cpa-marketing-with-no-long-term-contracts",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with no long term contracts",
+        "h1": "CPA Marketing with No Long Term Contracts",
+        "title": "CPA Marketing with No Long Term Contracts",
+        "metaDescription": "CPA marketing with no long term contracts. Month to month marketing services that deliver results or you can cancel anytime after setup."
+      },
+      {
+        "slug": "cpa-marketing-with-minimal-time-investment",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with minimal time investment",
+        "h1": "CPA Marketing with Minimal Time Investment",
+        "title": "CPA Marketing with Minimal Time Investment",
+        "metaDescription": "CPA marketing with minimal time investment. Just 2 hours monthly after setup while we handle all marketing execution."
+      },
+      {
+        "slug": "cpa-marketing-with-monthly-reporting-dashboard",
+        "targetAudience": "CPAs",
+        "focusKeyword": "cpa marketing with monthly reporting dashboard",
+        "h1": "CPA Marketing with Monthly Reporting Dashboard",
+        "title": "CPA Marketing with Monthly Reporting Dashboard",
+        "metaDescription": "CPA marketing with monthly reporting dashboard. See website traffic, lead sources, cost per lead, and revenue attribution in real time."
+      }
+    ]
+  },
+  "solution/lead-generation": {
+    "dir": "solution",
+    "subcategory": "lead-generation",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "lead-generation-for-cpas-with-automated-follow-up",
+        "targetAudience": "CPAs",
+        "focusKeyword": "lead generation for cpas with automated follow up",
+        "h1": "Lead Generation for CPAs with Automated Follow Up",
+        "title": "Lead Generation for CPAs with Automated Follow Up",
+        "metaDescription": "Lead generation for CPAs with automated follow up. Attract qualified prospects and convert them automatically with intelligent nurture sequences."
+      },
+      {
+        "slug": "lead-generation-for-accounting-firms-with-transparent-pricing",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "lead generation with transparent pricing",
+        "h1": "Lead Generation for Accounting Firms with Transparent Pricing",
+        "title": "Lead Generation for Accounting Firms with Transparent Pricing",
+        "metaDescription": "Lead generation for accounting firms with transparent pricing. Know exactly what you pay and what results you get with clear pricing and ROI tracking."
+      },
+      {
+        "slug": "lead-generation-for-tax-preparers-targeting-advisory-clients",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "lead generation targeting advisory clients",
+        "h1": "Lead Generation for Tax Preparers Targeting Advisory Clients",
+        "title": "Lead Generation for Tax Preparers Targeting Advisory Clients",
+        "metaDescription": "Lead generation for tax preparers targeting advisory clients. Attract 5K to 15K advisory engagements instead of 500 dollar tax only clients."
+      },
+      {
+        "slug": "lead-generation-for-bookkeepers-with-done-for-you-setup",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "lead generation with done for you setup",
+        "h1": "Lead Generation for Bookkeepers with Done For You Setup",
+        "title": "Lead Generation for Bookkeepers with Done For You Setup",
+        "metaDescription": "Lead generation for bookkeepers with done for you setup. Complete lead generation system built and managed so you can focus on client work."
+      }
+    ]
+  },
+  "solution/operational-automation": {
+    "dir": "solution",
+    "subcategory": "operational-automation",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "client-onboarding-automation-with-done-for-you-setup",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client onboarding automation with done for you setup",
+        "h1": "Client Onboarding Automation with Done For You Setup",
+        "title": "Client Onboarding Automation with Done For You Setup",
+        "metaDescription": "Client onboarding automation with done for you setup. Complete onboarding workflows built and configured for your specific practice."
+      },
+      {
+        "slug": "workflow-automation-for-cpas-with-minimal-time-investment",
+        "targetAudience": "CPAs",
+        "focusKeyword": "workflow automation with minimal time investment",
+        "h1": "Workflow Automation for CPAs with Minimal Time Investment",
+        "title": "Workflow Automation for CPAs with Minimal Time Investment",
+        "metaDescription": "Workflow automation for CPAs with minimal time investment. We build your automation systems so you can reclaim 10 to 15 hours per week."
+      },
+      {
+        "slug": "document-automation-for-accounting-firms-with-transparent-roi",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "document automation with transparent roi",
+        "h1": "Document Automation for Accounting Firms with Transparent ROI",
+        "title": "Document Automation for Accounting Firms with Transparent ROI",
+        "metaDescription": "Document automation for accounting firms with transparent ROI. Track exactly how much time you save with automated document generation and processing."
+      },
+      {
+        "slug": "system-integration-for-tax-preparers-with-no-long-term-contracts",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "system integration with no long term contracts",
+        "h1": "System Integration for Tax Preparers with No Long Term Contracts",
+        "title": "System Integration for Tax Preparers with No Long Term Contracts",
+        "metaDescription": "System integration for tax preparers with no long term contracts. Connect your practice management and accounting tools month to month."
+      },
+      {
+        "slug": "process-automation-for-bookkeepers-with-rapid-implementation",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "process automation with rapid implementation",
+        "h1": "Process Automation for Bookkeepers with Rapid Implementation",
+        "title": "Process Automation for Bookkeepers with Rapid Implementation",
+        "metaDescription": "Process automation for bookkeepers with rapid implementation. Get your automation systems up and running fast with expert done for you setup."
+      },
+      {
+        "slug": "month-end-close-automation-with-streamlined-workflows",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "month end close automation with streamlined workflows",
+        "h1": "Month End Close Automation with Streamlined Workflows",
+        "title": "Month End Close Automation with Streamlined Workflows",
+        "metaDescription": "Month end close automation with streamlined workflows. Reduce close time from days to hours with automated reconciliations and reporting."
+      }
+    ]
+  },
+  "solution/client-experience": {
+    "dir": "solution",
+    "subcategory": "client-experience",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "client-communication-automation-with-24-7-availability",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client communication automation with 24/7 availability",
+        "h1": "Client Communication Automation with 24/7 Availability",
+        "title": "Client Communication Automation with 24/7 Availability",
+        "metaDescription": "Client communication automation with 24/7 availability. Answer client questions and send updates automatically around the clock."
+      },
+      {
+        "slug": "appointment-scheduling-for-cpas-with-automated-reminders",
+        "targetAudience": "CPAs",
+        "focusKeyword": "appointment scheduling with automated reminders",
+        "h1": "Appointment Scheduling for CPAs with Automated Reminders",
+        "title": "Appointment Scheduling for CPAs with Automated Reminders",
+        "metaDescription": "Appointment scheduling for CPAs with automated reminders. Reduce no shows and eliminate scheduling back and forth with intelligent automation."
+      },
+      {
+        "slug": "client-portal-for-accounting-firms-with-secure-access",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client portal with secure access",
+        "h1": "Client Portal for Accounting Firms with Secure Access",
+        "title": "Client Portal for Accounting Firms with Secure Access",
+        "metaDescription": "Client portal for accounting firms with secure access. Give clients 24/7 access to documents and reports through encrypted branded portal."
+      },
+      {
+        "slug": "payment-automation-for-tax-preparers-with-faster-collections",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "payment automation with faster collections",
+        "h1": "Payment Automation for Tax Preparers with Faster Collections",
+        "title": "Payment Automation for Tax Preparers with Faster Collections",
+        "metaDescription": "Payment automation for tax preparers with faster collections. Get paid quicker with automated invoicing and online payment processing."
+      },
+      {
+        "slug": "client-engagement-for-bookkeepers-with-minimal-manual-work",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "client engagement with minimal manual work",
+        "h1": "Client Engagement for Bookkeepers with Minimal Manual Work",
+        "title": "Client Engagement for Bookkeepers with Minimal Manual Work",
+        "metaDescription": "Client engagement for bookkeepers with minimal manual work. Stay connected with clients automatically through intelligent engagement workflows."
+      }
+    ]
+  },
+  "solution/ai-technology": {
+    "dir": "solution",
+    "subcategory": "ai-technology",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "data-dashboard-for-tax-preparers-with-real-time-tracking",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "data dashboard with real time tracking",
+        "h1": "Data Dashboard for Tax Preparers with Real Time Tracking",
+        "title": "Data Dashboard for Tax Preparers with Real Time Tracking",
+        "metaDescription": "Data dashboard for tax preparers with real time tracking. Monitor business performance, lead sources, and revenue metrics as they happen."
+      }
+    ]
+  },
+  "service/marketing-combos": {
+    "dir": "service",
+    "subcategory": "marketing-combos",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "seo-and-lead-generation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "seo and lead generation for cpas",
+        "h1": "SEO and Lead Generation for CPAs",
+        "title": "SEO and Lead Generation for CPAs",
+        "metaDescription": "SEO and lead generation for CPAs. Attract qualified prospects organically and convert them with automated follow up systems."
+      },
+      {
+        "slug": "website-design-and-marketing-automation-for-accountants",
+        "targetAudience": "accountants",
+        "focusKeyword": "website design and marketing automation",
+        "h1": "Website Design and Marketing Automation for Accountants",
+        "title": "Website Design and Marketing Automation for Accountants",
+        "metaDescription": "Website design and marketing automation for accountants. Professional website plus complete marketing automation to drive and convert traffic."
+      },
+      {
+        "slug": "email-marketing-and-crm-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "email marketing and crm for tax preparers",
+        "h1": "Email Marketing and CRM for Tax Preparers",
+        "title": "Email Marketing and CRM for Tax Preparers",
+        "metaDescription": "Email marketing and CRM for tax preparers. Nurture prospects and stay connected with clients through integrated email and CRM automation."
+      },
+      {
+        "slug": "review-generation-and-local-seo-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "review generation and local seo",
+        "h1": "Review Generation and Local SEO for Bookkeepers",
+        "title": "Review Generation and Local SEO for Bookkeepers",
+        "metaDescription": "Review generation and local SEO for bookkeepers. Build online reputation while improving local search visibility for maximum impact."
+      },
+      {
+        "slug": "social-media-and-email-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "social media and email automation",
+        "h1": "Social Media and Email Automation for Accounting Firms",
+        "title": "Social Media and Email Automation for Accounting Firms",
+        "metaDescription": "Social media and email automation for accounting firms. Maintain consistent presence across social and email channels with unified automation."
+      }
+    ]
+  },
+  "service/operational-combos": {
+    "dir": "service",
+    "subcategory": "operational-combos",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "client-onboarding-and-workflow-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client onboarding and workflow automation",
+        "h1": "Client Onboarding and Workflow Automation for CPAs",
+        "title": "Client Onboarding and Workflow Automation for CPAs",
+        "metaDescription": "Client onboarding and workflow automation for CPAs. Streamline new client setup and ongoing service delivery with end to end automation."
+      },
+      {
+        "slug": "document-automation-and-system-integration-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "document automation and system integration",
+        "h1": "Document Automation and System Integration for Accounting Firms",
+        "title": "Document Automation and System Integration for Accounting Firms",
+        "metaDescription": "Document automation and system integration for accounting firms. Connect your tools and automate document workflows for seamless operations."
+      },
+      {
+        "slug": "client-portal-and-payment-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "client portal and payment automation",
+        "h1": "Client Portal and Payment Automation for Tax Preparers",
+        "title": "Client Portal and Payment Automation for Tax Preparers",
+        "metaDescription": "Client portal and payment automation for tax preparers. Secure document sharing plus automated billing for complete client service automation."
+      },
+      {
+        "slug": "workflow-automation-and-crm-integration-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "workflow automation and crm integration",
+        "h1": "Workflow Automation and CRM Integration for Bookkeepers",
+        "title": "Workflow Automation and CRM Integration for Bookkeepers",
+        "metaDescription": "Workflow automation and CRM integration for bookkeepers. Optimize operations and manage client relationships from one integrated system."
+      },
+      {
+        "slug": "client-communication-and-appointment-scheduling-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client communication and appointment scheduling",
+        "h1": "Client Communication and Appointment Scheduling for CPAs",
+        "title": "Client Communication and Appointment Scheduling for CPAs",
+        "metaDescription": "Client communication and appointment scheduling for CPAs. Keep clients informed and let them book meetings automatically."
+      }
+    ]
+  },
+  "service/full-spectrum": {
+    "dir": "service",
+    "subcategory": "full-spectrum",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-and-operations-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "marketing and operations automation",
+        "h1": "Marketing and Operations Automation for CPAs",
+        "title": "Marketing and Operations Automation for CPAs",
+        "metaDescription": "Marketing and operations automation for CPAs. Complete automation of both client acquisition and service delivery for maximum efficiency."
+      },
+      {
+        "slug": "client-acquisition-and-onboarding-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client acquisition and onboarding automation",
+        "h1": "Client Acquisition and Onboarding Automation for Accounting Firms",
+        "title": "Client Acquisition and Onboarding Automation for Accounting Firms",
+        "metaDescription": "Client acquisition and onboarding automation for accounting firms. Attract new clients and get them started seamlessly with end to end automation."
+      },
+      {
+        "slug": "lead-generation-and-client-management-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "lead generation and client management",
+        "h1": "Lead Generation and Client Management for Tax Preparers",
+        "title": "Lead Generation and Client Management for Tax Preparers",
+        "metaDescription": "Lead generation and client management for tax preparers. From first contact to ongoing relationship management with complete automation."
+      },
+      {
+        "slug": "growth-and-efficiency-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "growth and efficiency automation",
+        "h1": "Growth and Efficiency Automation for Bookkeepers",
+        "title": "Growth and Efficiency Automation for Bookkeepers",
+        "metaDescription": "Growth and efficiency automation for bookkeepers. Attract more clients while streamlining service delivery with comprehensive automation."
+      },
+      {
+        "slug": "complete-automation-suite-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "complete automation suite for cpas",
+        "h1": "Complete Automation Suite for CPAs",
+        "title": "Complete Automation Suite for CPAs",
+        "metaDescription": "Complete automation suite for CPAs. Everything from marketing and sales to operations and client experience fully automated."
+      }
+    ]
+  },
+  "service/premium-packages": {
+    "dir": "service",
+    "subcategory": "premium-packages",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "full-marketing-suite-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "full marketing suite for cpas",
+        "h1": "Full Marketing Suite for CPAs",
+        "title": "Full Marketing Suite for CPAs",
+        "metaDescription": "Full marketing suite for CPAs. Comprehensive marketing package including website, SEO, content, email, social, and lead nurturing."
+      },
+      {
+        "slug": "complete-growth-system-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "complete growth system for accounting firms",
+        "h1": "Complete Growth System for Accounting Firms",
+        "title": "Complete Growth System for Accounting Firms",
+        "metaDescription": "Complete growth system for accounting firms. End to end client acquisition system from visibility to conversion to retention."
+      },
+      {
+        "slug": "end-to-end-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "end to end automation for tax preparers",
+        "h1": "End to End Automation for Tax Preparers",
+        "title": "End to End Automation for Tax Preparers",
+        "metaDescription": "End to end automation for tax preparers. Complete automation from lead generation through client onboarding and service delivery."
+      },
+      {
+        "slug": "marketing-and-operations-package-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "marketing and operations package",
+        "h1": "Marketing and Operations Package for Bookkeepers",
+        "title": "Marketing and Operations Package for Bookkeepers",
+        "metaDescription": "Marketing and operations package for bookkeepers. Grow your client base while improving operational efficiency with bundled automation."
+      },
+      {
+        "slug": "website-seo-and-lead-generation-package-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "website seo and lead generation package",
+        "h1": "Website SEO and Lead Generation Package for CPAs",
+        "title": "Website SEO and Lead Generation Package for CPAs",
+        "metaDescription": "Website SEO and lead generation package for CPAs. Professional website optimized for search with complete lead generation and follow up automation."
+      },
+      {
+        "slug": "client-experience-automation-bundle-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client experience automation bundle",
+        "h1": "Client Experience Automation Bundle for Accounting Firms",
+        "title": "Client Experience Automation Bundle for Accounting Firms",
+        "metaDescription": "Client experience automation bundle for accounting firms. Onboarding, communication, portal access, and payment automation in one complete package."
+      }
+    ]
+  },
+  "service/marketing-automation": {
+    "dir": "service",
+    "subcategory": "marketing-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-automation-for-cpas-with-email-sequences",
+        "targetAudience": "CPAs",
+        "focusKeyword": "marketing automation for cpas",
+        "h1": "Marketing Automation for CPAs with Email Sequences",
+        "title": "Marketing Automation for CPAs with Email Sequences",
+        "metaDescription": "Done for you marketing automation for CPAs with email sequences. Reclaim 10 to 15 hours per week with automated lead nurturing and client communication."
+      },
+      {
+        "slug": "marketing-automation-for-accountants-with-crm-integration",
+        "targetAudience": "accountants",
+        "focusKeyword": "marketing automation for accountants",
+        "h1": "Marketing Automation for Accountants with CRM Integration",
+        "title": "Marketing Automation for Accountants with CRM Integration",
+        "metaDescription": "Done for you marketing automation for accountants with seamless CRM integration. Systemize your client communication and lead follow up workflows."
+      },
+      {
+        "slug": "marketing-automation-for-tax-firms-with-lead-nurturing-workflows",
+        "targetAudience": "tax firms",
+        "focusKeyword": "marketing automation for tax firms",
+        "h1": "Marketing Automation for Tax Firms with Lead Nurturing Workflows",
+        "title": "Marketing Automation for Tax Firms with Lead Nurturing Workflows",
+        "metaDescription": "Marketing automation for tax firms with automated lead nurturing workflows. Convert more prospects into 5K to 15K advisory clients."
+      },
+      {
+        "slug": "marketing-automation-for-bookkeepers-with-automated-segmentation",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "marketing automation for bookkeepers",
+        "h1": "Marketing Automation for Bookkeepers with Automated Segmentation",
+        "title": "Marketing Automation for Bookkeepers with Automated Segmentation",
+        "metaDescription": "Marketing automation for bookkeepers with intelligent automated segmentation. Target the right clients with personalized messaging at scale."
+      },
+      {
+        "slug": "marketing-automation-for-accounting-firms-with-sms-campaigns",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "marketing automation for accounting firms",
+        "h1": "Marketing Automation for Accounting Firms with SMS Campaigns",
+        "title": "Marketing Automation for Accounting Firms with SMS Campaigns",
+        "metaDescription": "Marketing automation for accounting firms with SMS campaigns. Reach prospects and clients instantly with automated text message workflows."
+      }
+    ]
+  },
+  "service/review-automation": {
+    "dir": "service",
+    "subcategory": "review-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "review-request-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "review request automation for cpas",
+        "h1": "Review Request Automation for CPAs",
+        "title": "Review Request Automation for CPAs",
+        "metaDescription": "Automated review request system for CPAs. Generate more 5 star reviews and build trust with done for you review generation workflows."
+      },
+      {
+        "slug": "automated-review-generation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated review generation",
+        "h1": "Automated Review Generation for Accounting Firms",
+        "title": "Automated Review Generation for Accounting Firms",
+        "metaDescription": "Automated review generation for accounting firms. Systematically collect 5 star reviews and improve your online reputation."
+      },
+      {
+        "slug": "review-collection-system-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "review collection system",
+        "h1": "Review Collection System for Tax Preparers",
+        "title": "Review Collection System for Tax Preparers",
+        "metaDescription": "Review collection system for tax preparers. Automate your review requests and build a strong online reputation during busy season."
+      },
+      {
+        "slug": "client-feedback-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "client feedback automation",
+        "h1": "Client Feedback Automation for Bookkeepers",
+        "title": "Client Feedback Automation for Bookkeepers",
+        "metaDescription": "Client feedback automation for bookkeepers. Collect reviews and testimonials automatically to attract more high value clients."
+      },
+      {
+        "slug": "online-reputation-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "online reputation automation",
+        "h1": "Online Reputation Automation for CPAs",
+        "title": "Online Reputation Automation for CPAs",
+        "metaDescription": "Online reputation automation for CPAs. Monitor, manage, and generate reviews automatically to build trust with prospective clients."
+      }
+    ]
+  },
+  "service/lead-automation": {
+    "dir": "service",
+    "subcategory": "lead-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "lead-follow-up-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "lead follow up automation for cpas",
+        "h1": "Lead Follow Up Automation for CPAs",
+        "title": "Lead Follow Up Automation for CPAs",
+        "metaDescription": "Lead follow up automation for CPAs. Never let another prospect go cold with automated email and SMS sequences tailored for accounting firms."
+      },
+      {
+        "slug": "automated-lead-nurturing-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated lead nurturing",
+        "h1": "Automated Lead Nurturing for Accounting Firms",
+        "title": "Automated Lead Nurturing for Accounting Firms",
+        "metaDescription": "Automated lead nurturing for accounting firms. Convert more inquiries into 5K to 15K advisory clients with done for you follow up systems."
+      },
+      {
+        "slug": "crm-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "crm automation for tax preparers",
+        "h1": "CRM Automation for Tax Preparers",
+        "title": "CRM Automation for Tax Preparers",
+        "metaDescription": "CRM automation for tax preparers. Systemize your client relationship management and track every prospect automatically."
+      },
+      {
+        "slug": "lead-engagement-system-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "lead engagement system",
+        "h1": "Lead Engagement System for Bookkeepers",
+        "title": "Lead Engagement System for Bookkeepers",
+        "metaDescription": "Lead engagement system for bookkeepers. Keep prospects engaged with automated email sequences and timely follow up workflows."
+      },
+      {
+        "slug": "prospect-communication-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "prospect communication automation",
+        "h1": "Prospect Communication Automation for CPAs",
+        "title": "Prospect Communication Automation for CPAs",
+        "metaDescription": "Prospect communication automation for CPAs. Respond to inquiries instantly and nurture leads automatically with done for you systems."
+      }
+    ]
+  },
+  "service/website-optimization": {
+    "dir": "service",
+    "subcategory": "website-optimization",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "website-conversion-optimization-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "website conversion optimization for cpas",
+        "h1": "Website Conversion Optimization for CPAs",
+        "title": "Website Conversion Optimization for CPAs",
+        "metaDescription": "Website conversion optimization for CPAs. Turn more visitors into leads with professional websites designed specifically for accounting firms."
+      },
+      {
+        "slug": "landing-page-optimization-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "landing page optimization",
+        "h1": "Landing Page Optimization for Accounting Firms",
+        "title": "Landing Page Optimization for Accounting Firms",
+        "metaDescription": "Landing page optimization for accounting firms. Increase lead conversions with high performing landing pages built for CPAs and accountants."
+      },
+      {
+        "slug": "cro-services-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "cro services for tax preparers",
+        "h1": "CRO Services for Tax Preparers",
+        "title": "CRO Services for Tax Preparers",
+        "metaDescription": "Conversion rate optimization services for tax preparers. Improve website performance and convert more visitors into paying clients."
+      },
+      {
+        "slug": "website-performance-optimization-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "website performance optimization",
+        "h1": "Website Performance Optimization for Bookkeepers",
+        "title": "Website Performance Optimization for Bookkeepers",
+        "metaDescription": "Website performance optimization for bookkeepers. Speed up your site, improve user experience, and rank higher in search results."
+      },
+      {
+        "slug": "lead-capture-optimization-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "lead capture optimization",
+        "h1": "Lead Capture Optimization for CPAs",
+        "title": "Lead Capture Optimization for CPAs",
+        "metaDescription": "Lead capture optimization for CPAs. Maximize website conversions with strategic forms, calls to action, and conversion focused design."
+      }
+    ]
+  },
+  "service/seo-services": {
+    "dir": "service",
+    "subcategory": "seo-services",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "local-seo-services-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "local seo services for cpas",
+        "h1": "Local SEO Services for CPAs",
+        "title": "Local SEO Services for CPAs",
+        "metaDescription": "Local SEO services for CPAs. Dominate local search results and attract high value clients in your geographic area."
+      },
+      {
+        "slug": "technical-seo-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "technical seo for accounting firms",
+        "h1": "Technical SEO for Accounting Firms",
+        "title": "Technical SEO for Accounting Firms",
+        "metaDescription": "Technical SEO for accounting firms. Optimize site structure, speed, and indexing to rank higher and attract more qualified leads."
+      },
+      {
+        "slug": "seo-implementation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "seo implementation for tax preparers",
+        "h1": "SEO Implementation for Tax Preparers",
+        "title": "SEO Implementation for Tax Preparers",
+        "metaDescription": "SEO implementation for tax preparers. Done for you search engine optimization to rank higher and get found by prospective clients."
+      },
+      {
+        "slug": "search-engine-optimization-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "search engine optimization for bookkeepers",
+        "h1": "Search Engine Optimization for Bookkeepers",
+        "title": "Search Engine Optimization for Bookkeepers",
+        "metaDescription": "Search engine optimization for bookkeepers. Get found online by ideal clients searching for bookkeeping services in your area."
+      },
+      {
+        "slug": "organic-search-optimization-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "organic search optimization",
+        "h1": "Organic Search Optimization for CPAs",
+        "title": "Organic Search Optimization for CPAs",
+        "metaDescription": "Organic search optimization for CPAs. Rank higher in Google and attract 5K to 15K advisory clients actively searching for your services."
+      }
+    ]
+  },
+  "service/email-automation": {
+    "dir": "service",
+    "subcategory": "email-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "email-marketing-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "email marketing automation for cpas",
+        "h1": "Email Marketing Automation for CPAs",
+        "title": "Email Marketing Automation for CPAs",
+        "metaDescription": "Email marketing automation for CPAs. Stay top of mind with automated email campaigns that educate prospects and retain clients."
+      },
+      {
+        "slug": "automated-email-campaigns-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated email campaigns",
+        "h1": "Automated Email Campaigns for Accounting Firms",
+        "title": "Automated Email Campaigns for Accounting Firms",
+        "metaDescription": "Automated email campaigns for accounting firms. Nurture leads and engage clients with done for you email marketing workflows."
+      },
+      {
+        "slug": "email-sequence-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "email sequence automation",
+        "h1": "Email Sequence Automation for Tax Preparers",
+        "title": "Email Sequence Automation for Tax Preparers",
+        "metaDescription": "Email sequence automation for tax preparers. Set up intelligent email workflows that convert prospects into paying clients on autopilot."
+      },
+      {
+        "slug": "drip-campaign-setup-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "drip campaign setup",
+        "h1": "Drip Campaign Setup for Bookkeepers",
+        "title": "Drip Campaign Setup for Bookkeepers",
+        "metaDescription": "Drip campaign setup for bookkeepers. Automated email sequences that educate prospects and keep your firm top of mind."
+      },
+      {
+        "slug": "email-workflow-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "email workflow automation",
+        "h1": "Email Workflow Automation for CPAs",
+        "title": "Email Workflow Automation for CPAs",
+        "metaDescription": "Email workflow automation for CPAs. Streamline client communication with automated email workflows that save time and boost engagement."
+      }
+    ]
+  },
+  "service/crm-setup": {
+    "dir": "service",
+    "subcategory": "crm-setup",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "crm-implementation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "crm implementation for cpas",
+        "h1": "CRM Implementation for CPAs",
+        "title": "CRM Implementation for CPAs",
+        "metaDescription": "CRM implementation for CPAs. Done for you CRM setup and integration to manage clients and prospects efficiently."
+      },
+      {
+        "slug": "client-relationship-management-setup-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "client relationship management setup",
+        "h1": "Client Relationship Management Setup for Accounting Firms",
+        "title": "Client Relationship Management Setup for Accounting Firms",
+        "metaDescription": "Client relationship management setup for accounting firms. Organize contacts, track interactions, and automate follow ups with a CRM built for CPAs."
+      },
+      {
+        "slug": "crm-integration-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "crm integration for tax preparers",
+        "h1": "CRM Integration for Tax Preparers",
+        "title": "CRM Integration for Tax Preparers",
+        "metaDescription": "CRM integration for tax preparers. Connect your CRM with existing tools for seamless client management and automated workflows."
+      },
+      {
+        "slug": "contact-management-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "contact management automation",
+        "h1": "Contact Management Automation for Bookkeepers",
+        "title": "Contact Management Automation for Bookkeepers",
+        "metaDescription": "Contact management automation for bookkeepers. Keep client and prospect information organized with automated CRM workflows."
+      },
+      {
+        "slug": "client-database-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client database automation",
+        "h1": "Client Database Automation for CPAs",
+        "title": "Client Database Automation for CPAs",
+        "metaDescription": "Client database automation for CPAs. Automatically update and maintain your client database with intelligent CRM automation."
+      }
+    ]
+  },
+  "service/social-media": {
+    "dir": "service",
+    "subcategory": "social-media",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "social-media-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "social media automation for cpas",
+        "h1": "Social Media Automation for CPAs",
+        "title": "Social Media Automation for CPAs",
+        "metaDescription": "Social media automation for CPAs. Build authority and attract clients with automated LinkedIn and social content scheduling."
+      },
+      {
+        "slug": "content-scheduling-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "content scheduling automation",
+        "h1": "Content Scheduling Automation for Accounting Firms",
+        "title": "Content Scheduling Automation for Accounting Firms",
+        "metaDescription": "Content scheduling automation for accounting firms. Plan and publish professional social content automatically across all platforms."
+      },
+      {
+        "slug": "social-media-management-system-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "social media management system",
+        "h1": "Social Media Management System for Tax Preparers",
+        "title": "Social Media Management System for Tax Preparers",
+        "metaDescription": "Social media management system for tax preparers. Maintain consistent social presence with automated posting and content calendars."
+      },
+      {
+        "slug": "automated-posting-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "automated posting for bookkeepers",
+        "h1": "Automated Posting for Bookkeepers",
+        "title": "Automated Posting for Bookkeepers",
+        "metaDescription": "Automated posting for bookkeepers. Stay visible on social media without the daily time commitment with done for you content automation."
+      },
+      {
+        "slug": "linkedin-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "linkedin automation for cpas",
+        "h1": "LinkedIn Automation for CPAs",
+        "title": "LinkedIn Automation for CPAs",
+        "metaDescription": "LinkedIn automation for CPAs. Build professional authority and attract 5K to 15K advisory clients with strategic LinkedIn content."
+      }
+    ]
+  },
+  "service/onboarding-automation": {
+    "dir": "service",
+    "subcategory": "onboarding-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "client-onboarding-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client onboarding automation for cpas",
+        "h1": "Client Onboarding Automation for CPAs",
+        "title": "Client Onboarding Automation for CPAs",
+        "metaDescription": "Client onboarding automation for CPAs. Streamline new client setup with automated workflows that save time and improve client experience."
+      },
+      {
+        "slug": "automated-client-intake-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated client intake",
+        "h1": "Automated Client Intake for Accounting Firms",
+        "title": "Automated Client Intake for Accounting Firms",
+        "metaDescription": "Automated client intake for accounting firms. Collect client information, documents, and signatures automatically with done for you systems."
+      },
+      {
+        "slug": "client-onboarding-system-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "client onboarding system",
+        "h1": "Client Onboarding System for Tax Preparers",
+        "title": "Client Onboarding System for Tax Preparers",
+        "metaDescription": "Client onboarding system for tax preparers. Get new clients set up faster with automated document collection and communication workflows."
+      },
+      {
+        "slug": "new-client-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "new client automation",
+        "h1": "New Client Automation for Bookkeepers",
+        "title": "New Client Automation for Bookkeepers",
+        "metaDescription": "New client automation for bookkeepers. Onboard clients seamlessly with automated welcome sequences, document requests, and setup workflows."
+      },
+      {
+        "slug": "client-setup-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client setup automation",
+        "h1": "Client Setup Automation for CPAs",
+        "title": "Client Setup Automation for CPAs",
+        "metaDescription": "Client setup automation for CPAs. Reduce onboarding time from hours to minutes with intelligent automation workflows."
+      }
+    ]
+  },
+  "service/workflow-automation": {
+    "dir": "service",
+    "subcategory": "workflow-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "workflow-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "workflow automation for cpas",
+        "h1": "Workflow Automation for CPAs",
+        "title": "Workflow Automation for CPAs",
+        "metaDescription": "Workflow automation for CPAs. Eliminate manual tasks and reclaim 10 to 15 hours per week with done for you process automation."
+      },
+      {
+        "slug": "process-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "process automation for accounting firms",
+        "h1": "Process Automation for Accounting Firms",
+        "title": "Process Automation for Accounting Firms",
+        "metaDescription": "Process automation for accounting firms. Systemize repetitive tasks and focus on high value billable work with intelligent automation."
+      },
+      {
+        "slug": "task-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "task automation for tax preparers",
+        "h1": "Task Automation for Tax Preparers",
+        "title": "Task Automation for Tax Preparers",
+        "metaDescription": "Task automation for tax preparers. Automate routine tasks during busy season and year round to improve efficiency and reduce stress."
+      },
+      {
+        "slug": "operations-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "operations automation for bookkeepers",
+        "h1": "Operations Automation for Bookkeepers",
+        "title": "Operations Automation for Bookkeepers",
+        "metaDescription": "Operations automation for bookkeepers. Streamline your daily operations and scale your practice with automated workflow systems."
+      },
+      {
+        "slug": "business-process-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "business process automation",
+        "h1": "Business Process Automation for CPAs",
+        "title": "Business Process Automation for CPAs",
+        "metaDescription": "Business process automation for CPAs. Transform manual processes into automated workflows that run without daily oversight."
+      }
+    ]
+  },
+  "service/document-automation": {
+    "dir": "service",
+    "subcategory": "document-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "document-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "document automation for cpas",
+        "h1": "Document Automation for CPAs",
+        "title": "Document Automation for CPAs",
+        "metaDescription": "Document automation for CPAs. Generate, organize, and manage client documents automatically with intelligent document workflows."
+      },
+      {
+        "slug": "automated-document-generation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated document generation",
+        "h1": "Automated Document Generation for Accounting Firms",
+        "title": "Automated Document Generation for Accounting Firms",
+        "metaDescription": "Automated document generation for accounting firms. Create engagement letters, proposals, and reports automatically from templates."
+      },
+      {
+        "slug": "document-workflow-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "document workflow automation",
+        "h1": "Document Workflow Automation for Tax Preparers",
+        "title": "Document Workflow Automation for Tax Preparers",
+        "metaDescription": "Document workflow automation for tax preparers. Streamline document collection, review, and storage with automated workflows."
+      },
+      {
+        "slug": "file-management-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "file management automation",
+        "h1": "File Management Automation for Bookkeepers",
+        "title": "File Management Automation for Bookkeepers",
+        "metaDescription": "File management automation for bookkeepers. Organize, store, and retrieve client files automatically with intelligent document systems."
+      },
+      {
+        "slug": "document-processing-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "document processing automation",
+        "h1": "Document Processing Automation for CPAs",
+        "title": "Document Processing Automation for CPAs",
+        "metaDescription": "Document processing automation for CPAs. Extract data, route approvals, and process documents automatically with AI powered workflows."
+      }
+    ]
+  },
+  "service/month-end-close": {
+    "dir": "service",
+    "subcategory": "month-end-close",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "month-end-close-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "month end close automation",
+        "h1": "Month End Close Automation for CPAs",
+        "title": "Month End Close Automation for CPAs",
+        "metaDescription": "Month end close automation for CPAs. Streamline financial close processes and reduce close time with automated reconciliation workflows."
+      },
+      {
+        "slug": "financial-close-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "financial close automation",
+        "h1": "Financial Close Automation for Accounting Firms",
+        "title": "Financial Close Automation for Accounting Firms",
+        "metaDescription": "Financial close automation for accounting firms. Complete month end close faster with automated journal entries and reconciliation processes."
+      },
+      {
+        "slug": "period-end-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "period end automation",
+        "h1": "Period End Automation for Tax Preparers",
+        "title": "Period End Automation for Tax Preparers",
+        "metaDescription": "Period end automation for tax preparers. Automate period end close tasks and focus on higher value advisory work."
+      },
+      {
+        "slug": "month-end-process-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "month end process automation",
+        "h1": "Month End Process Automation for Bookkeepers",
+        "title": "Month End Process Automation for Bookkeepers",
+        "metaDescription": "Month end process automation for bookkeepers. Reduce month end close from days to hours with intelligent automation workflows."
+      },
+      {
+        "slug": "accounting-close-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "accounting close automation",
+        "h1": "Accounting Close Automation for CPAs",
+        "title": "Accounting Close Automation for CPAs",
+        "metaDescription": "Accounting close automation for CPAs. Streamline your accounting close process with automated checklists, reconciliations, and reporting."
+      }
+    ]
+  },
+  "service/system-integration": {
+    "dir": "service",
+    "subcategory": "system-integration",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "system-integration-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "system integration for cpas",
+        "h1": "System Integration for CPAs",
+        "title": "System Integration for CPAs",
+        "metaDescription": "System integration for CPAs. Connect your practice management software, accounting tools, and CRM for seamless data flow."
+      },
+      {
+        "slug": "software-integration-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "software integration for accounting firms",
+        "h1": "Software Integration for Accounting Firms",
+        "title": "Software Integration for Accounting Firms",
+        "metaDescription": "Software integration for accounting firms. Eliminate duplicate data entry by connecting all your business tools automatically."
+      },
+      {
+        "slug": "practice-management-integration-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "practice management integration",
+        "h1": "Practice Management Integration for Tax Preparers",
+        "title": "Practice Management Integration for Tax Preparers",
+        "metaDescription": "Practice management integration for tax preparers. Sync your practice management software with marketing and client communication tools."
+      },
+      {
+        "slug": "tool-integration-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "tool integration for bookkeepers",
+        "h1": "Tool Integration for Bookkeepers",
+        "title": "Tool Integration for Bookkeepers",
+        "metaDescription": "Tool integration for bookkeepers. Make your software stack work together seamlessly with done for you integration setup."
+      },
+      {
+        "slug": "platform-integration-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "platform integration for cpas",
+        "h1": "Platform Integration for CPAs",
+        "title": "Platform Integration for CPAs",
+        "metaDescription": "Platform integration for CPAs. Connect QuickBooks, Xero, practice management software, and CRM into one unified system."
+      }
+    ]
+  },
+  "service/client-communication": {
+    "dir": "service",
+    "subcategory": "client-communication",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "client-communication-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client communication automation for cpas",
+        "h1": "Client Communication Automation for CPAs",
+        "title": "Client Communication Automation for CPAs",
+        "metaDescription": "Client communication automation for CPAs. Keep clients informed with automated status updates, reminders, and follow up messages."
+      },
+      {
+        "slug": "automated-client-updates-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated client updates",
+        "h1": "Automated Client Updates for Accounting Firms",
+        "title": "Automated Client Updates for Accounting Firms",
+        "metaDescription": "Automated client updates for accounting firms. Send progress updates, deadline reminders, and important notices automatically."
+      },
+      {
+        "slug": "client-notification-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "client notification automation",
+        "h1": "Client Notification Automation for Tax Preparers",
+        "title": "Client Notification Automation for Tax Preparers",
+        "metaDescription": "Client notification automation for tax preparers. Alert clients about deadlines, document needs, and return status automatically."
+      },
+      {
+        "slug": "client-messaging-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "client messaging automation",
+        "h1": "Client Messaging Automation for Bookkeepers",
+        "title": "Client Messaging Automation for Bookkeepers",
+        "metaDescription": "Client messaging automation for bookkeepers. Communicate consistently with automated email and SMS workflows for client touchpoints."
+      },
+      {
+        "slug": "client-engagement-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client engagement automation",
+        "h1": "Client Engagement Automation for CPAs",
+        "title": "Client Engagement Automation for CPAs",
+        "metaDescription": "Client engagement automation for CPAs. Stay top of mind with automated newsletters, check ins, and value add communications."
+      }
+    ]
+  },
+  "service/scheduling-automation": {
+    "dir": "service",
+    "subcategory": "scheduling-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "appointment-scheduling-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "appointment scheduling automation for cpas",
+        "h1": "Appointment Scheduling Automation for CPAs",
+        "title": "Appointment Scheduling Automation for CPAs",
+        "metaDescription": "Appointment scheduling automation for CPAs. Let clients book meetings instantly with automated calendar scheduling and reminders."
+      },
+      {
+        "slug": "calendar-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "calendar automation for accounting firms",
+        "h1": "Calendar Automation for Accounting Firms",
+        "title": "Calendar Automation for Accounting Firms",
+        "metaDescription": "Calendar automation for accounting firms. Eliminate scheduling back and forth with automated booking links and calendar sync."
+      },
+      {
+        "slug": "meeting-scheduling-system-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "meeting scheduling system",
+        "h1": "Meeting Scheduling System for Tax Preparers",
+        "title": "Meeting Scheduling System for Tax Preparers",
+        "metaDescription": "Meeting scheduling system for tax preparers. Automate appointment booking with integrated calendar software and reminder workflows."
+      },
+      {
+        "slug": "booking-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "booking automation for bookkeepers",
+        "h1": "Booking Automation for Bookkeepers",
+        "title": "Booking Automation for Bookkeepers",
+        "metaDescription": "Booking automation for bookkeepers. Allow clients to self schedule consultations and meetings based on your real time availability."
+      },
+      {
+        "slug": "scheduling-software-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "scheduling software for cpas",
+        "h1": "Scheduling Software for CPAs",
+        "title": "Scheduling Software for CPAs",
+        "metaDescription": "Scheduling software for CPAs. Professional appointment scheduling with automated reminders, confirmations, and calendar integration."
+      }
+    ]
+  },
+  "service/data-analytics": {
+    "dir": "service",
+    "subcategory": "data-analytics",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "data-dashboard-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "data dashboard for cpas",
+        "h1": "Data Dashboard for CPAs",
+        "title": "Data Dashboard for CPAs",
+        "metaDescription": "Data dashboard for CPAs. Track marketing ROI, lead sources, and business metrics in real time with custom dashboard reporting."
+      },
+      {
+        "slug": "business-intelligence-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "business intelligence for accounting firms",
+        "h1": "Business Intelligence for Accounting Firms",
+        "title": "Business Intelligence for Accounting Firms",
+        "metaDescription": "Business intelligence for accounting firms. Make data driven decisions with comprehensive analytics and performance reporting dashboards."
+      },
+      {
+        "slug": "analytics-automation-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "analytics automation for tax preparers",
+        "h1": "Analytics Automation for Tax Preparers",
+        "title": "Analytics Automation for Tax Preparers",
+        "metaDescription": "Analytics automation for tax preparers. Automatically track and report on key performance indicators with intelligent analytics systems."
+      },
+      {
+        "slug": "performance-tracking-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "performance tracking for bookkeepers",
+        "h1": "Performance Tracking for Bookkeepers",
+        "title": "Performance Tracking for Bookkeepers",
+        "metaDescription": "Performance tracking for bookkeepers. Monitor business growth, client acquisition costs, and revenue metrics with automated reporting."
+      },
+      {
+        "slug": "kpi-dashboard-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "kpi dashboard for cpas",
+        "h1": "KPI Dashboard for CPAs",
+        "title": "KPI Dashboard for CPAs",
+        "metaDescription": "KPI dashboard for CPAs. See utilization rates, realization, and firm growth metrics at a glance with custom KPI tracking."
+      }
+    ]
+  },
+  "service/payment-automation": {
+    "dir": "service",
+    "subcategory": "payment-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "payment-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "payment automation for cpas",
+        "h1": "Payment Automation for CPAs",
+        "title": "Payment Automation for CPAs",
+        "metaDescription": "Payment automation for CPAs. Accept payments online and automate invoice reminders to improve cash flow and reduce collection time."
+      },
+      {
+        "slug": "payment-collection-system-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "payment collection system",
+        "h1": "Payment Collection System for Tax Preparers",
+        "title": "Payment Collection System for Tax Preparers",
+        "metaDescription": "Payment collection system for tax preparers. Get paid faster with automated invoicing, online payments, and reminder workflows."
+      },
+      {
+        "slug": "billing-automation-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "billing automation for bookkeepers",
+        "h1": "Billing Automation for Bookkeepers",
+        "title": "Billing Automation for Bookkeepers",
+        "metaDescription": "Billing automation for bookkeepers. Automate recurring invoices, payment reminders, and receipt generation to save time each month."
+      },
+      {
+        "slug": "payment-processing-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "payment processing for cpas",
+        "h1": "Payment Processing for CPAs",
+        "title": "Payment Processing for CPAs",
+        "metaDescription": "Payment processing for CPAs. Accept credit cards, ACH, and online payments seamlessly with secure payment gateway integration."
+      }
+    ]
+  },
+  "service/client-portal": {
+    "dir": "service",
+    "subcategory": "client-portal",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "client-portal-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client portal for cpas",
+        "h1": "Client Portal for CPAs",
+        "title": "Client Portal for CPAs",
+        "metaDescription": "Client portal for CPAs. Give clients secure online access to documents, invoices, and tax returns with branded client portal software."
+      },
+      {
+        "slug": "automated-client-portal-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "automated client portal",
+        "h1": "Automated Client Portal for Accounting Firms",
+        "title": "Automated Client Portal for Accounting Firms",
+        "metaDescription": "Automated client portal for accounting firms. Streamline document sharing and client collaboration with self service portal access."
+      },
+      {
+        "slug": "secure-portal-for-tax-preparers",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "secure portal for tax preparers",
+        "h1": "Secure Portal for Tax Preparers",
+        "title": "Secure Portal for Tax Preparers",
+        "metaDescription": "Secure portal for tax preparers. Share sensitive tax documents safely with encrypted client portal that meets compliance requirements."
+      },
+      {
+        "slug": "document-portal-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "document portal for bookkeepers",
+        "h1": "Document Portal for Bookkeepers",
+        "title": "Document Portal for Bookkeepers",
+        "metaDescription": "Document portal for bookkeepers. Allow clients to upload receipts and download reports through secure branded document portal."
+      },
+      {
+        "slug": "client-access-portal-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "client access portal",
+        "h1": "Client Access Portal for CPAs",
+        "title": "Client Access Portal for CPAs",
+        "metaDescription": "Client access portal for CPAs. Provide 24/7 client access to financial documents, reports, and communication history through secure portal."
+      }
+    ]
+  },
+  "service/solo-practitioners": {
+    "dir": "service",
+    "subcategory": "solo-practitioners",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-automation-for-solo-cpa-practitioners",
+        "targetAudience": "solo CPAs",
+        "focusKeyword": "marketing automation for solo cpa practitioners",
+        "h1": "Marketing Automation for Solo CPA Practitioners",
+        "title": "Marketing Automation for Solo CPA Practitioners",
+        "metaDescription": "Marketing automation for solo CPA practitioners. Scale your practice without hiring with done for you marketing systems built for solo pros."
+      },
+      {
+        "slug": "client-onboarding-automation-for-solo-accountants",
+        "targetAudience": "solo accountants",
+        "focusKeyword": "client onboarding automation for solo accountants",
+        "h1": "Client Onboarding Automation for Solo Accountants",
+        "title": "Client Onboarding Automation for Solo Accountants",
+        "metaDescription": "Client onboarding automation for solo accountants. Onboard new clients efficiently without an admin team using intelligent automation."
+      },
+      {
+        "slug": "workflow-automation-for-solo-tax-preparers",
+        "targetAudience": "solo tax preparers",
+        "focusKeyword": "workflow automation for solo tax preparers",
+        "h1": "Workflow Automation for Solo Tax Preparers",
+        "title": "Workflow Automation for Solo Tax Preparers",
+        "metaDescription": "Workflow automation for solo tax preparers. Handle more clients during busy season without overwhelming yourself with process automation."
+      },
+      {
+        "slug": "document-automation-for-independent-cpas",
+        "targetAudience": "independent CPAs",
+        "focusKeyword": "document automation for independent cpas",
+        "h1": "Document Automation for Independent CPAs",
+        "title": "Document Automation for Independent CPAs",
+        "metaDescription": "Document automation for independent CPAs. Generate and organize documents automatically without administrative support staff."
+      },
+      {
+        "slug": "system-integration-for-solo-bookkeepers",
+        "targetAudience": "solo bookkeepers",
+        "focusKeyword": "system integration for solo bookkeepers",
+        "h1": "System Integration for Solo Bookkeepers",
+        "title": "System Integration for Solo Bookkeepers",
+        "metaDescription": "System integration for solo bookkeepers. Connect your QuickBooks, practice management, and CRM without needing IT expertise."
+      },
+      {
+        "slug": "client-portal-for-solo-accountants",
+        "targetAudience": "solo accountants",
+        "focusKeyword": "client portal for solo accountants",
+        "h1": "Client Portal for Solo Accountants",
+        "title": "Client Portal for Solo Accountants",
+        "metaDescription": "Client portal for solo accountants. Give clients secure document access and professional self service capabilities without added workload."
+      }
+    ]
+  },
+  "service/firm-size": {
+    "dir": "service",
+    "subcategory": "firm-size",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-automation-for-small-accounting-firms-under-1m",
+        "targetAudience": "small accounting firms",
+        "focusKeyword": "marketing automation for small accounting firms",
+        "h1": "Marketing Automation for Small Accounting Firms Under 1M",
+        "title": "Marketing Automation for Small Accounting Firms Under 1M",
+        "metaDescription": "Marketing automation for small accounting firms under 1M revenue. Scale to seven figures with predictable client acquisition systems."
+      },
+      {
+        "slug": "client-onboarding-system-for-boutique-cpa-firms",
+        "targetAudience": "boutique CPA firms",
+        "focusKeyword": "client onboarding system for boutique cpa firms",
+        "h1": "Client Onboarding System for Boutique CPA Firms",
+        "title": "Client Onboarding System for Boutique CPA Firms",
+        "metaDescription": "Client onboarding system for boutique CPA firms. Maintain personalized service while scaling with automated onboarding workflows."
+      },
+      {
+        "slug": "workflow-automation-for-multi-partner-accounting-firms",
+        "targetAudience": "multi partner firms",
+        "focusKeyword": "workflow automation for multi partner accounting firms",
+        "h1": "Workflow Automation for Multi Partner Accounting Firms",
+        "title": "Workflow Automation for Multi Partner Accounting Firms",
+        "metaDescription": "Workflow automation for multi partner accounting firms. Standardize processes across partners and improve firm wide efficiency."
+      },
+      {
+        "slug": "document-automation-for-growing-tax-practices",
+        "targetAudience": "growing tax practices",
+        "focusKeyword": "document automation for growing tax practices",
+        "h1": "Document Automation for Growing Tax Practices",
+        "title": "Document Automation for Growing Tax Practices",
+        "metaDescription": "Document automation for growing tax practices. Scale your document processes as you add clients and staff without losing control."
+      },
+      {
+        "slug": "system-integration-for-established-accounting-firms",
+        "targetAudience": "established accounting firms",
+        "focusKeyword": "system integration for established accounting firms",
+        "h1": "System Integration for Established Accounting Firms",
+        "title": "System Integration for Established Accounting Firms",
+        "metaDescription": "System integration for established accounting firms. Connect legacy systems with modern tools for seamless data flow across your practice."
+      },
+      {
+        "slug": "data-dashboard-for-small-cpa-firms",
+        "targetAudience": "small CPA firms",
+        "focusKeyword": "data dashboard for small cpa firms",
+        "h1": "Data Dashboard for Small CPA Firms",
+        "title": "Data Dashboard for Small CPA Firms",
+        "metaDescription": "Data dashboard for small CPA firms. Track utilization, realization, and firm growth metrics without enterprise software complexity."
+      },
+      {
+        "slug": "process-automation-for-boutique-accounting-firms",
+        "targetAudience": "boutique accounting firms",
+        "focusKeyword": "process automation for boutique accounting firms",
+        "h1": "Process Automation for Boutique Accounting Firms",
+        "title": "Process Automation for Boutique Accounting Firms",
+        "metaDescription": "Process automation for boutique accounting firms. Compete with larger firms by automating workflows and improving operational efficiency."
+      }
+    ]
+  },
+  "service/service-type": {
+    "dir": "service",
+    "subcategory": "service-type",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-automation-for-tax-preparation-firms",
+        "targetAudience": "tax preparation firms",
+        "focusKeyword": "marketing automation for tax preparation firms",
+        "h1": "Marketing Automation for Tax Preparation Firms",
+        "title": "Marketing Automation for Tax Preparation Firms",
+        "metaDescription": "Marketing automation for tax preparation firms. Attract clients year round and transition from seasonal tax work to ongoing advisory relationships."
+      },
+      {
+        "slug": "client-onboarding-for-bookkeeping-services",
+        "targetAudience": "bookkeeping services",
+        "focusKeyword": "client onboarding for bookkeeping services",
+        "h1": "Client Onboarding for Bookkeeping Services",
+        "title": "Client Onboarding for Bookkeeping Services",
+        "metaDescription": "Client onboarding for bookkeeping services. Get new bookkeeping clients set up quickly with automated document collection and software access."
+      },
+      {
+        "slug": "workflow-automation-for-business-advisory-firms",
+        "targetAudience": "business advisory firms",
+        "focusKeyword": "workflow automation for business advisory firms",
+        "h1": "Workflow Automation for Business Advisory Firms",
+        "title": "Workflow Automation for Business Advisory Firms",
+        "metaDescription": "Workflow automation for business advisory firms. Streamline client engagement processes and focus on high value strategic advisory work."
+      },
+      {
+        "slug": "document-automation-for-audit-practices",
+        "targetAudience": "audit practices",
+        "focusKeyword": "document automation for audit practices",
+        "h1": "Document Automation for Audit Practices",
+        "title": "Document Automation for Audit Practices",
+        "metaDescription": "Document automation for audit practices. Automate audit documentation, workpaper generation, and compliance reporting workflows."
+      },
+      {
+        "slug": "system-integration-for-cfo-advisory-services",
+        "targetAudience": "CFO advisory services",
+        "focusKeyword": "system integration for cfo advisory services",
+        "h1": "System Integration for CFO Advisory Services",
+        "title": "System Integration for CFO Advisory Services",
+        "metaDescription": "System integration for CFO advisory services. Connect client financial systems with your advisory dashboards for real time insights."
+      },
+      {
+        "slug": "client-portal-for-tax-preparation-firms",
+        "targetAudience": "tax preparation firms",
+        "focusKeyword": "client portal for tax preparation firms",
+        "h1": "Client Portal for Tax Preparation Firms",
+        "title": "Client Portal for Tax Preparation Firms",
+        "metaDescription": "Client portal for tax preparation firms. Secure tax document exchange and client communication through branded self service portal."
+      },
+      {
+        "slug": "payment-automation-for-bookkeeping-services",
+        "targetAudience": "bookkeeping services",
+        "focusKeyword": "payment automation for bookkeeping services",
+        "h1": "Payment Automation for Bookkeeping Services",
+        "title": "Payment Automation for Bookkeeping Services",
+        "metaDescription": "Payment automation for bookkeeping services. Automate recurring invoices and improve cash flow with scheduled payment processing."
+      }
+    ]
+  },
+  "service/remote-modern": {
+    "dir": "service",
+    "subcategory": "remote-modern",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "marketing-automation-for-remote-first-accounting-firms",
+        "targetAudience": "remote first firms",
+        "focusKeyword": "marketing automation for remote first accounting firms",
+        "h1": "Marketing Automation for Remote First Accounting Firms",
+        "title": "Marketing Automation for Remote First Accounting Firms",
+        "metaDescription": "Marketing automation for remote first accounting firms. Attract clients nationwide with digital marketing built for cloud based practices."
+      },
+      {
+        "slug": "client-onboarding-for-cloud-based-cpa-practices",
+        "targetAudience": "cloud based CPA practices",
+        "focusKeyword": "client onboarding for cloud based cpa practices",
+        "h1": "Client Onboarding for Cloud Based CPA Practices",
+        "title": "Client Onboarding for Cloud Based CPA Practices",
+        "metaDescription": "Client onboarding for cloud based CPA practices. Onboard clients anywhere with fully digital workflows and electronic signatures."
+      },
+      {
+        "slug": "workflow-automation-for-virtual-bookkeeping-services",
+        "targetAudience": "virtual bookkeeping services",
+        "focusKeyword": "workflow automation for virtual bookkeeping services",
+        "h1": "Workflow Automation for Virtual Bookkeeping Services",
+        "title": "Workflow Automation for Virtual Bookkeeping Services",
+        "metaDescription": "Workflow automation for virtual bookkeeping services. Manage distributed clients and team members seamlessly with cloud automation."
+      },
+      {
+        "slug": "system-integration-for-tech-savvy-tax-firms",
+        "targetAudience": "tech savvy tax firms",
+        "focusKeyword": "system integration for tech savvy tax firms",
+        "h1": "System Integration for Tech Savvy Tax Firms",
+        "title": "System Integration for Tech Savvy Tax Firms",
+        "metaDescription": "System integration for tech savvy tax firms. Connect modern cloud tools for seamless data flow and advanced automation capabilities."
+      },
+      {
+        "slug": "client-portal-for-remote-first-cpas",
+        "targetAudience": "remote first CPAs",
+        "focusKeyword": "client portal for remote first cpas",
+        "h1": "Client Portal for Remote First CPAs",
+        "title": "Client Portal for Remote First CPAs",
+        "metaDescription": "Client portal for remote first CPAs. Essential secure document sharing and collaboration for practices operating entirely in the cloud."
+      },
+      {
+        "slug": "document-automation-for-cloud-based-accounting-firms",
+        "targetAudience": "cloud based accounting firms",
+        "focusKeyword": "document automation for cloud based accounting firms",
+        "h1": "Document Automation for Cloud Based Accounting Firms",
+        "title": "Document Automation for Cloud Based Accounting Firms",
+        "metaDescription": "Document automation for cloud based accounting firms. Fully digital document workflows that integrate with your cloud infrastructure."
+      }
+    ]
+  },
+  "solution/competitor-alternatives": {
+    "dir": "solution",
+    "subcategory": "competitor-alternatives",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "alternative-to-cpasitesolutions-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "alternative to cpasitesolutions",
+        "h1": "Alternative to CPASiteSolutions for Accounting Firms",
+        "title": "Alternative to CPASiteSolutions for Accounting Firms",
+        "metaDescription": "Alternative to CPASiteSolutions for accounting firms. Get operational automation plus marketing instead of just marketing services."
+      },
+      {
+        "slug": "better-than-buildyourfirm-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "better than buildyourfirm",
+        "h1": "Better Than BuildYourFirm for CPAs",
+        "title": "Better Than BuildYourFirm for CPAs",
+        "metaDescription": "Better than BuildYourFirm for CPAs. Combine marketing with operational automation for complete firm transformation."
+      },
+      {
+        "slug": "replacement-for-taxpromarketer-services",
+        "targetAudience": "tax preparers",
+        "focusKeyword": "replacement for taxpromarketer",
+        "h1": "Replacement for TaxProMarketer Services",
+        "title": "Replacement for TaxProMarketer Services",
+        "metaDescription": "Replacement for TaxProMarketer services. Go beyond marketing to full operational automation and client experience improvement."
+      },
+      {
+        "slug": "cpasitesolutions-alternative-with-transparent-roi",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "cpasitesolutions alternative with transparent roi",
+        "h1": "CPASiteSolutions Alternative with Transparent ROI",
+        "title": "CPASiteSolutions Alternative with Transparent ROI",
+        "metaDescription": "CPASiteSolutions alternative with transparent ROI tracking. See exactly where leads come from and what revenue they generate."
+      },
+      {
+        "slug": "buildyourfirm-alternative-with-done-for-you-setup",
+        "targetAudience": "CPAs",
+        "focusKeyword": "buildyourfirm alternative with done for you setup",
+        "h1": "BuildYourFirm Alternative with Done For You Setup",
+        "title": "BuildYourFirm Alternative with Done For You Setup",
+        "metaDescription": "BuildYourFirm alternative with done for you setup. Get implementation help instead of just strategy and coaching."
+      },
+      {
+        "slug": "alternative-to-we-are-pf-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "alternative to we are pf",
+        "h1": "Alternative to We Are PF for CPAs",
+        "title": "Alternative to We Are PF for CPAs",
+        "metaDescription": "Alternative to We Are PF for CPAs. Accounting specific expertise with operational automation included in your marketing services."
+      },
+      {
+        "slug": "rootworks-alternative-with-implementation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "rootworks alternative with implementation",
+        "h1": "Rootworks Alternative with Implementation for Accounting Firms",
+        "title": "Rootworks Alternative with Implementation for Accounting Firms",
+        "metaDescription": "Rootworks alternative with implementation for accounting firms. Get done for you execution instead of DIY coaching programs."
+      }
+    ]
+  },
+  "solution/diy-tool-alternatives": {
+    "dir": "solution",
+    "subcategory": "diy-tool-alternatives",
+    "templateType": "solution",
+    "pages": [
+      {
+        "slug": "gohighlevel-alternative-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "gohighlevel alternative for cpas",
+        "h1": "GoHighLevel Alternative for CPAs",
+        "title": "GoHighLevel Alternative for CPAs",
+        "metaDescription": "GoHighLevel alternative for CPAs. Get expert implementation and management instead of DIY platform setup headaches."
+      },
+      {
+        "slug": "hubspot-alternative-for-small-accounting-firms",
+        "targetAudience": "small accounting firms",
+        "focusKeyword": "hubspot alternative for small accounting firms",
+        "h1": "HubSpot Alternative for Small Accounting Firms",
+        "title": "HubSpot Alternative for Small Accounting Firms",
+        "metaDescription": "HubSpot alternative for small accounting firms. Accounting focused marketing automation without enterprise complexity and cost."
+      },
+      {
+        "slug": "done-for-you-alternative-to-kartra-for-accountants",
+        "targetAudience": "accountants",
+        "focusKeyword": "done for you alternative to kartra",
+        "h1": "Done For You Alternative to Kartra for Accountants",
+        "title": "Done For You Alternative to Kartra for Accountants",
+        "metaDescription": "Done for you alternative to Kartra for accountants. Skip the learning curve and get expert setup tailored for accounting practices."
+      },
+      {
+        "slug": "managed-alternative-to-diy-marketing-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "managed alternative to diy marketing",
+        "h1": "Managed Alternative to DIY Marketing for CPAs",
+        "title": "Managed Alternative to DIY Marketing for CPAs",
+        "metaDescription": "Managed alternative to DIY marketing for CPAs. Stop struggling with marketing tools and let experts handle everything for you."
+      },
+      {
+        "slug": "gohighlevel-implementation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "gohighlevel implementation for accounting firms",
+        "h1": "GoHighLevel Implementation for Accounting Firms",
+        "title": "GoHighLevel Implementation for Accounting Firms",
+        "metaDescription": "GoHighLevel implementation for accounting firms. Expert GoHighLevel setup and management customized for accounting practices."
+      },
+      {
+        "slug": "karbon-alternative-with-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "karbon alternative with automation",
+        "h1": "Karbon Alternative with Automation for CPAs",
+        "title": "Karbon Alternative with Automation for CPAs",
+        "metaDescription": "Karbon alternative with automation for CPAs. Add marketing and client communication automation to your practice management."
+      },
+      {
+        "slug": "canopy-alternative-with-marketing-for-tax-firms",
+        "targetAudience": "tax firms",
+        "focusKeyword": "canopy alternative with marketing",
+        "h1": "Canopy Alternative with Marketing for Tax Firms",
+        "title": "Canopy Alternative with Marketing for Tax Firms",
+        "metaDescription": "Canopy alternative with marketing for tax firms. Get practice management plus growth and marketing automation in one solution."
+      },
+      {
+        "slug": "clickup-alternative-for-accounting-firm-workflows",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "clickup alternative for accounting firm workflows",
+        "h1": "ClickUp Alternative for Accounting Firm Workflows",
+        "title": "ClickUp Alternative for Accounting Firm Workflows",
+        "metaDescription": "ClickUp alternative for accounting firm workflows. Workflow automation designed specifically for accounting processes and client work."
+      },
+      {
+        "slug": "monday-com-alternative-for-cpa-operations",
+        "targetAudience": "CPAs",
+        "focusKeyword": "monday.com alternative for cpa operations",
+        "h1": "Monday.com Alternative for CPA Operations",
+        "title": "Monday.com Alternative for CPA Operations",
+        "metaDescription": "Monday.com alternative for CPA operations. Operational automation built for accounting firms instead of generic project management."
+      }
+    ]
+  },
+  "service/data-automation": {
+    "dir": "service",
+    "subcategory": "data-automation",
+    "templateType": "service",
+    "pages": [
+      {
+        "slug": "accounting-data-automation-for-cpas",
+        "targetAudience": "CPAs",
+        "focusKeyword": "accounting data automation",
+        "h1": "Accounting Data Automation for CPAs",
+        "title": "Accounting Data Automation for CPAs",
+        "metaDescription": "Accounting data automation for CPAs. Automate data entry, data flows between systems, and reporting pipelines so your team spends zero time on manual data work."
+      },
+      {
+        "slug": "data-entry-automation-for-accounting-firms",
+        "targetAudience": "accounting firms",
+        "focusKeyword": "data entry automation for accounting firms",
+        "h1": "Data Entry Automation for Accounting Firms",
+        "title": "Data Entry Automation for Accounting Firms",
+        "metaDescription": "Data entry automation for accounting firms. Eliminate manual data entry with automated extraction, validation, and syncing across your accounting systems."
+      },
+      {
+        "slug": "automated-data-processing-for-bookkeepers",
+        "targetAudience": "bookkeepers",
+        "focusKeyword": "automated data processing for bookkeepers",
+        "h1": "Automated Data Processing for Bookkeepers",
+        "title": "Automated Data Processing for Bookkeepers",
+        "metaDescription": "Automated data processing for bookkeepers. Streamline receipt processing, bank feeds, and data reconciliation with done for you automation."
+      }
+    ]
+  }
+}

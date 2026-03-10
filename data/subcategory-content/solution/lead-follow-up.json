@@ -68,5 +68,286 @@
         "Off season inquiries about advisory services get buried under other work"
       ]
     }
+  },
+  "slugOverrides": {
+    "how-to-follow-up-with-leads-for-my-cpa-firm": {
+      "heroSubtitleTemplate": "Your CPA firm invests time and money to generate leads, but the follow up process determines whether those leads become clients. Most CPA firms have no systematic way to follow up with leads, relying instead on partners or staff who are already stretched thin. Here is how to fix that.",
+      "problemStatement": "CPA firms face a unique follow up challenge. The people responsible for winning new business, typically partners and senior managers, are also the busiest people in the firm. When a prospect submits an inquiry or gets referred, the follow up often depends on someone remembering to call back between client meetings, deadlines, and busy season demands. The result is inconsistent follow up that costs your firm clients it should have won.",
+      "solutionOverview": "CPA firms that convert leads consistently have separated the initial follow up from the partner's calendar. An automated system handles the first response and keeps the conversation going until the prospect is ready for a personal meeting. By the time a partner gets involved, the prospect has been acknowledged, informed, and scheduled. No leads fall through the cracks because the system handles what human memory cannot.",
+      "hearingSignals": [
+        "Partners acknowledge that following up with leads is important but it keeps falling to the bottom of their priority list",
+        "Your CPA firm has lost prospects to competitors who simply responded faster",
+        "There is no defined process for who follows up with leads, when, or how many times"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Partners are the best people to close new CPA engagements but they are also the most time constrained, creating a bottleneck where leads wait days for a response",
+          "solution": "Automated initial outreach handles the first touchpoint instantly, qualifies the prospect, and schedules a call at a time that works for both the partner and the prospect"
+        },
+        {
+          "problem": "After an initial conversation, many CPA prospects need time to make a decision but your firm has no process for staying in touch during that consideration period",
+          "solution": "Nurture sequences send relevant content and check ins at appropriate intervals, keeping your firm top of mind without requiring manual effort from anyone on your team"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Convert More of the Leads You Already Have",
+          "description": "Your CPA firm is already generating interest through referrals, your website, and networking. A better follow up process converts more of that existing interest into engagements without spending additional money on marketing.",
+          "points": ["Faster response means prospects are still engaged when you reach them", "Consistent follow up catches prospects who need multiple touchpoints before deciding", "No more discovering old inquiries that were never answered"]
+        },
+        {
+          "title": "Free Partners From Administrative Follow Up",
+          "description": "Partners should spend their time on the conversations that close engagements, not on the administrative work of responding to initial inquiries and scheduling calls. A system handles the logistics so partners engage at the moment of highest impact.",
+          "points": ["Automated initial response eliminates the need for immediate partner involvement", "Scheduling automation removes the back and forth of finding meeting times", "Partners only engage with pre qualified, interested prospects"]
+        },
+        {
+          "title": "A Professional First Impression Every Time",
+          "description": "When a prospect reaches out to your CPA firm, the speed and quality of your response shapes their perception of how you will serve them as a client. Instant, professional follow up signals that your firm is organized and attentive.",
+          "points": ["Every inquiry receives a professional response within minutes regardless of the time of day", "Customized messaging reflects your firm's tone and service offerings", "Prospects receive clear next steps rather than silence"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Lead Flow Mapping", "description": "We identify every source of leads for your CPA firm, from website forms to referral introductions, and document how they currently flow through your firm.", "subheading": "Audit" },
+        { "step": 2, "title": "Follow Up Design", "description": "We design automated response and nurture sequences specific to CPA services, including different paths for tax, advisory, and audit prospects.", "subheading": "Design" },
+        { "step": 3, "title": "System Integration", "description": "We connect the follow up system to your website, email, and practice management tools so leads flow in automatically and partner notifications trigger at the right moments.", "subheading": "Launch" },
+        { "step": 4, "title": "Performance Optimization", "description": "We track response rates, meeting bookings, and conversion patterns to continuously improve your follow up sequences and timing.", "subheading": "Optimize" }
+      ],
+      "faqs": [
+        { "question": "Will prospects know the initial response is automated?", "answer": "When designed well, the initial response feels personal and helpful rather than robotic. We write messaging that matches your firm's professional tone. Most prospects simply appreciate the quick acknowledgment and clear next steps." },
+        { "question": "How does this work with our existing referral process?", "answer": "We design the system to complement referrals. When a referral source introduces a prospect, the system can send a personalized welcome message and scheduling link so the partner does not need to chase down the meeting details." },
+        { "question": "What about leads that need a longer sales cycle?", "answer": "CPA engagements often involve a longer decision period, especially for larger firms evaluating options. The nurture sequences are designed for this reality, staying in touch with relevant content over weeks or months without being pushy." }
+      ],
+      "results": [
+        { "metric": "Initial Response Time", "value": "Minutes Instead of Days", "description": "Every CPA prospect receives professional acknowledgment almost immediately after reaching out" },
+        { "metric": "Partner Time on Admin", "value": "Significantly Reduced", "description": "Partners engage with prospects at the point of highest impact rather than handling initial logistics" },
+        { "metric": "Lead to Meeting Rate", "value": "Improved", "description": "Faster, more consistent follow up typically increases the percentage of leads that become scheduled meetings" }
+      ],
+      "ctaTitle": "Ready to Follow Up With Every Lead Consistently?",
+      "ctaDescription": "Book a free call and we will map your CPA firm's current lead flow and show you where prospects are falling through the cracks."
+    },
+
+    "how-do-i-respond-to-website-inquiries-faster": {
+      "heroSubtitleTemplate": "A prospect just submitted a form on your accounting firm's website. Every minute that passes before you respond decreases the likelihood they will become a client. Here is how accounting firms are responding to website inquiries faster without adding staff or interrupting client work.",
+      "problemStatement": "Website inquiries represent some of your highest quality prospects because they took the initiative to find your accounting firm and reach out. But the reality of running a practice means these inquiries often sit in an inbox for hours, sometimes days, while your team handles existing client work. By the time someone responds, the prospect has moved on to a firm that got back to them sooner.",
+      "solutionOverview": "Accounting firms that respond to website inquiries faster have automated the first touchpoint entirely. Within minutes of a form submission, the prospect receives a professional response that acknowledges their inquiry, provides relevant information, and offers a way to schedule a conversation. The team gets notified about the inquiry but the prospect is not left waiting for that notification to be acted on.",
+      "hearingSignals": [
+        "You check your website inquiry inbox and find messages that are days old with no response sent",
+        "Prospects who fill out your contact form tell you they also reached out to two or three other firms at the same time",
+        "Your front desk or admin is responsible for forwarding inquiries but it is not their primary responsibility and things slip through"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Website form submissions land in a shared inbox or email that multiple people are supposed to monitor but nobody has primary responsibility for, creating gaps where inquiries go unnoticed",
+          "solution": "Automated workflows trigger the moment a form is submitted, sending an immediate response to the prospect and routing the inquiry to the right person on your team with clear accountability"
+        },
+        {
+          "problem": "Even when your team sees an inquiry quickly, crafting a thoughtful response takes time they do not have during the workday, so the reply gets delayed until things slow down",
+          "solution": "Pre designed response templates customized to different inquiry types provide a professional first response instantly, buying your team time to follow up personally when their schedule allows"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Win the Speed Battle",
+          "description": "When a prospect inquires with multiple firms, the first firm to respond professionally often has a significant advantage. Responding to website inquiries faster means your accounting firm is setting the tone while competitors are still unaware of the lead.",
+          "points": ["Automated response within minutes puts you ahead of slower competitors", "The prospect's interest is highest at the moment they submit the form", "Speed signals professionalism and attentiveness"]
+        },
+        {
+          "title": "No Inquiry Goes Unanswered",
+          "description": "Weekend inquiries, after hours submissions, and busy season form fills all receive the same prompt, professional response. Your accounting firm never misses an opportunity because of timing.",
+          "points": ["Evening and weekend inquiries get responded to just as quickly as weekday ones", "Busy season does not create a backlog of unanswered prospects", "Every prospect gets the same high quality first impression"]
+        },
+        {
+          "title": "Better Use of Your Team's Time",
+          "description": "When the initial response is handled automatically, your team can focus their limited time on the conversations that matter most: understanding the prospect's needs and closing the engagement.",
+          "points": ["Staff are not interrupted for routine initial responses", "Personal follow up happens at a planned time rather than reactively", "Team focus stays on billable work while the system handles first contact"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Inquiry Audit", "description": "We review your website forms, contact methods, and current response process to identify where delays are happening and why inquiries are being missed.", "subheading": "Audit" },
+        { "step": 2, "title": "Response Automation Design", "description": "We create automated response workflows for each type of inquiry your accounting firm receives, with messaging that matches your professional tone.", "subheading": "Design" },
+        { "step": 3, "title": "Implementation", "description": "We connect the automation to your website forms, set up team notifications and routing, and test the full workflow from submission to response.", "subheading": "Launch" },
+        { "step": 4, "title": "Response Analysis", "description": "We track response times, prospect engagement with automated messages, and meeting booking rates to optimize the process over time.", "subheading": "Optimize" }
+      ],
+      "faqs": [
+        { "question": "What kind of response time can we achieve?", "answer": "Most firms go from response times measured in hours or days to automated first responses within two to five minutes. The personal follow up from your team then happens on your schedule, but the prospect is not left waiting." },
+        { "question": "Can the automated response include scheduling?", "answer": "Yes. The initial response typically includes a link for the prospect to schedule a call or meeting directly, which removes the back and forth of finding a time and gets the conversation started faster." },
+        { "question": "What if we get inquiries that need different handling?", "answer": "We design different response paths for different inquiry types. A prospect asking about tax services receives a different response than one asking about advisory or bookkeeping, ensuring relevance." }
+      ],
+      "results": [
+        { "metric": "First Response Time", "value": "Under 5 Minutes", "description": "Website inquiries receive professional acknowledgment almost immediately" },
+        { "metric": "Missed Inquiries", "value": "Eliminated", "description": "No more form submissions sitting unanswered in an inbox" },
+        { "metric": "Prospect Experience", "value": "Consistently Professional", "description": "Every prospect receives the same high quality first impression regardless of when they reach out" }
+      ],
+      "ctaTitle": "Ready to Respond to Every Inquiry Instantly?",
+      "ctaDescription": "Book a free call and we will audit your current website inquiry process and show you how to respond faster without adding to your team's workload."
+    },
+
+    "how-to-not-lose-leads-for-my-accounting-firm": {
+      "heroSubtitleTemplate": "Your accounting firm is generating interest from potential clients, but somewhere between first contact and signed engagement letter, prospects are disappearing. The problem usually is not lead quality. It is lead management. Here is how to stop losing leads that should become clients.",
+      "problemStatement": "Most accounting firms that struggle with growth are not actually struggling to generate leads. They are struggling to manage the leads they already have. Prospects inquire and receive a late response, have a good initial conversation and then never hear from the firm again, or express interest but need a few weeks to decide and nobody follows up. The leads were real. The system for handling them was not.",
+      "solutionOverview": "Accounting firms that stop losing leads have built a simple but critical system: every prospect is tracked, every inquiry gets a response, and nobody falls through the cracks between first contact and decision. This does not require a large sales team. It requires automation that handles the repetitive parts of lead management while alerting your team when personal attention is needed.",
+      "hearingSignals": [
+        "You occasionally discover that a prospect who would have been a great client went to a competitor because your firm never followed up after the initial conversation",
+        "There is no single place where all of your accounting firm's prospects and their status are tracked",
+        "Different team members handle leads differently, with no consistent process for follow up timing or messaging"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Leads come in through multiple channels like your website, email, phone, and referrals, with no central place to track them, making it easy for prospects to fall through the cracks",
+          "solution": "A unified lead management system captures prospects from every source, tracks their status, and ensures each one receives appropriate follow up regardless of how they found you"
+        },
+        {
+          "problem": "After an initial meeting or phone call, your accounting firm has no structured process for staying in touch with prospects who are interested but not ready to commit immediately",
+          "solution": "Automated nurture sequences maintain contact at appropriate intervals with helpful content and gentle check ins, keeping your firm top of mind until the prospect is ready to move forward"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Visibility Into Every Active Prospect",
+          "description": "When every lead is tracked in one place with a clear status, you always know exactly where things stand. No more wondering whether someone followed up or guessing how many active prospects your accounting firm has.",
+          "points": ["A single dashboard shows every prospect and their stage in the process", "Team members can see who is responsible for each lead", "Nothing gets lost between referral intake and signed engagement"]
+        },
+        {
+          "title": "Consistent Follow Up Without Manual Effort",
+          "description": "The leads that most accounting firms lose are not the ones that get rejected. They are the ones that simply never receive a second or third touchpoint. Automated follow up ensures every qualified prospect hears from you the right number of times.",
+          "points": ["Every prospect receives follow up at the right intervals automatically", "Warm leads get personal attention alerts when they engage with follow up content", "Cold leads are nurtured over time without consuming team bandwidth"]
+        },
+        {
+          "title": "Higher Return on Your Existing Marketing",
+          "description": "If your accounting firm is investing in a website, SEO, networking, or referral relationships, every lost lead represents wasted investment. Better lead management extracts more value from the marketing you are already doing.",
+          "points": ["Converting even a small percentage more of your existing leads can meaningfully impact revenue", "You stop paying to generate interest that you then fail to capture", "Better lead data helps you understand which sources produce the best prospects"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Lead Loss Diagnosis", "description": "We trace your accounting firm's entire lead journey from first contact to signed engagement, identifying the specific points where prospects are getting lost.", "subheading": "Audit" },
+        { "step": 2, "title": "Process Design", "description": "We design a lead management system with clear stages, automated follow up, and team notifications that ensures no prospect slips through unnoticed.", "subheading": "Design" },
+        { "step": 3, "title": "System Implementation", "description": "We set up the tracking, automation, and integrations needed to capture leads from every source and manage them through a consistent process.", "subheading": "Build" },
+        { "step": 4, "title": "Continuous Improvement", "description": "We analyze conversion rates at each stage, identify new drop off points as your firm grows, and refine the system to minimize lead loss over time.", "subheading": "Optimize" }
+      ],
+      "faqs": [
+        { "question": "How many leads are we actually losing?", "answer": "Most accounting firms are surprised when they look closely. We typically find that firms are losing between 30 and 60 percent of their qualified prospects to poor follow up rather than genuine lack of interest. The discovery process quantifies this for your specific firm." },
+        { "question": "Do we need to change our CRM or practice management software?", "answer": "Not necessarily. We design around your existing tools during discovery. In some cases we recommend additions or integrations, but the goal is to work with what you have and fill the gaps where leads are being lost." },
+        { "question": "What does good follow up look like for an accounting firm?", "answer": "It varies by prospect type, but generally includes an immediate acknowledgment, a personal touchpoint within 24 hours, and ongoing nurture content at intervals that keep you top of mind without being pushy. We customize the cadence and messaging for your firm's services and clientele." }
+      ],
+      "results": [
+        { "metric": "Lead Tracking", "value": "Complete", "description": "Every prospect is captured and tracked regardless of how they contacted your accounting firm" },
+        { "metric": "Follow Up Gaps", "value": "Closed", "description": "The specific points where prospects were being lost are addressed with automation and team alerts" },
+        { "metric": "Prospect to Client Conversion", "value": "Improved", "description": "Firms typically see a meaningful increase in the percentage of inquiries that become signed engagements" }
+      ],
+      "ctaTitle": "Ready to Stop Losing the Leads You Worked Hard to Get?",
+      "ctaDescription": "Book a free call and we will diagnose where your accounting firm is losing leads and show you how to close the gaps."
+    },
+
+    "how-to-track-prospects-for-my-tax-business": {
+      "heroSubtitleTemplate": "You have conversations with potential tax clients throughout the year, but without a system to track prospects, opportunities slip away. Here is how tax businesses are building visibility into their prospect pipeline so they know exactly who is interested and when to follow up.",
+      "problemStatement": "Tracking prospects as a tax preparer presents a challenge that most CRM guides do not address: your prospect interactions are seasonal and spread across months. Someone who expresses interest in October might not be ready to engage until January, and by then you have forgotten the conversation. Without a way to track prospects, your tax business relies on memory and sticky notes rather than a system.",
+      "solutionOverview": "Tax businesses that track prospects effectively have moved beyond mental notes and spreadsheets to a simple system that records every interaction, schedules follow ups automatically, and surfaces the right prospects at the right time. When filing season approaches, you know exactly who expressed interest, what they need, and when to reach out.",
+      "hearingSignals": [
+        "You recall having a conversation with a potential tax client months ago but cannot remember their name or what they needed",
+        "Someone contacts your tax business about services and you lose their information before following up",
+        "You have no way to know how many active prospects your tax business has at any given time"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Prospect information lives in scattered places like email threads, voicemails, business cards, and mental notes, making it impossible to maintain a clear picture of your pipeline",
+          "solution": "A centralized tracking system captures every prospect from every source in one place, with notes, status, and scheduled follow up dates that give you complete visibility"
+        },
+        {
+          "problem": "The seasonal nature of tax preparation means months can pass between a prospect's initial interest and when they are ready to engage, and without a system most of those connections are lost",
+          "solution": "Automated reminders and pre season outreach sequences reconnect you with prospects at exactly the right moment, turning months old conversations into booked engagements"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Know Exactly Where Every Prospect Stands",
+          "description": "When you track prospects in a structured system, you can see at a glance how many potential clients are in your pipeline, which ones need follow up, and where each conversation left off. This transforms prospect management from guesswork into a clear process.",
+          "points": ["A single view shows every prospect with their current status and next action", "Notes from previous conversations are preserved so you never go into a call blind", "You can filter prospects by service type, readiness, or timeline"]
+        },
+        {
+          "title": "Enter Every Tax Season Prepared",
+          "description": "The most stressful part of tax season should not be wondering whether you have enough clients. When your tax business tracks prospects year round, you enter each filing season knowing exactly how your pipeline looks.",
+          "points": ["Off season inquiries are captured and nurtured until filing season approaches", "Automated pre season outreach reconnects you with interested prospects at the right time", "You can forecast your season's workload based on real pipeline data"]
+        },
+        {
+          "title": "Build Relationships Over Time",
+          "description": "Many of your best future tax clients are people you have already spoken with who were not ready at the time. Tracking these prospects and staying in touch positions your tax business to be the obvious choice when they are ready.",
+          "points": ["Periodic touchpoints keep you top of mind between seasons", "When a prospect's situation changes, you are the first firm they think of", "Long term nurture turns cold prospects into warm engagements"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Pipeline Assessment", "description": "We evaluate how your tax business currently handles prospect information and identify the gaps where potential clients are being lost.", "subheading": "Audit" },
+        { "step": 2, "title": "Tracking System Design", "description": "We design a simple, practical system for tracking prospects that fits the seasonal rhythms of a tax business, including automated follow up triggers.", "subheading": "Design" },
+        { "step": 3, "title": "Setup and Migration", "description": "We set up the tracking system, migrate any existing prospect data, and connect it to your website forms, email, and phone systems.", "subheading": "Build" },
+        { "step": 4, "title": "Seasonal Optimization", "description": "We refine the system based on each season's results, improving follow up timing, nurture sequences, and the prospect stages that matter most for your tax business.", "subheading": "Optimize" }
+      ],
+      "faqs": [
+        { "question": "I am a solo tax preparer. Do I really need a formal tracking system?", "answer": "Solo practitioners often benefit the most because there is no team to share the mental load of remembering prospects. A simple system that takes minutes to maintain can prevent you from losing clients you have already spoken with." },
+        { "question": "What about prospects who need different services like advisory or planning?", "answer": "The tracking system can categorize prospects by service need, so you can follow up with the right messaging whether they need tax preparation, planning, or year round advisory work." },
+        { "question": "How much time will this take me to maintain?", "answer": "We design the system to be low maintenance. Most updates happen automatically when prospects interact with your website or emails. You might spend a few minutes after prospect conversations logging notes, but the follow up and outreach happen on their own." }
+      ],
+      "results": [
+        { "metric": "Prospect Visibility", "value": "Complete", "description": "Every potential tax client is tracked in one place with clear status and next steps" },
+        { "metric": "Pre Season Preparation", "value": "Transformed", "description": "Tax businesses enter filing season with a clear pipeline of interested prospects rather than hoping for the best" },
+        { "metric": "Follow Up Consistency", "value": "Automated", "description": "Prospects receive timely follow up at key moments without manual effort from you" }
+      ],
+      "ctaTitle": "Ready to Track Every Prospect for Your Tax Business?",
+      "ctaDescription": "Book a free call and we will assess your current prospect management and show you how to build a system that fits the seasonal rhythms of your tax practice."
+    },
+
+    "how-to-manage-client-inquiries-for-bookkeepers": {
+      "heroSubtitleTemplate": "As a bookkeeper, you juggle monthly closes, client questions, and day to day operations. When potential clients reach out, managing those inquiries while keeping up with existing work feels like one more thing on an already full plate. Here is how bookkeepers are handling inquiries without dropping the ball on client work.",
+      "problemStatement": "Managing client inquiries as a bookkeeper is especially challenging because your work is deadline driven and requires focus. When a potential client sends an email or calls during a monthly close, you cannot just stop what you are doing to respond. But those inquiries represent your future revenue, and the longer they wait for a response, the more likely the prospect is to go elsewhere.",
+      "solutionOverview": "Bookkeepers who effectively manage client inquiries have set up simple systems that handle the initial response and organize incoming prospects automatically. When a small business owner inquires about bookkeeping services, they receive a prompt, professional response while you continue focused work. When you have time, you can review the organized inquiries and decide which prospects deserve personal follow up.",
+      "hearingSignals": [
+        "You find client inquiries in your email from days ago that you never saw because you were deep in reconciliation work",
+        "Small business owners who contact you sometimes follow up with a second message asking if you received the first one",
+        "You have no system for organizing inquiries and prioritizing which potential bookkeeping clients to respond to first"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Client inquiries arrive at unpredictable times, often during your most focused work periods, and there is no buffer between the inquiry and the need for a personal response",
+          "solution": "An automated acknowledgment system responds immediately with professional messaging, letting prospects know you received their inquiry and setting expectations for when they will hear from you personally"
+        },
+        {
+          "problem": "As a bookkeeper you may receive inquiries through your website, email, phone, Facebook, and referral emails, with no central place to see and manage them all",
+          "solution": "A unified inbox captures inquiries from every channel in one organized view, with priority flags and status tracking so you can manage prospects efficiently during breaks in your client work"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Never Miss an Inquiry Again",
+          "description": "When every incoming inquiry is captured automatically and acknowledged immediately, you eliminate the anxiety of wondering whether you missed someone. Small business owners who need bookkeeping help get a prompt response, and you get an organized list to review when you are ready.",
+          "points": ["Automated acknowledgment means no prospect feels ignored", "A central dashboard shows every inquiry with its status", "Priority flags help you identify the most promising prospects quickly"]
+        },
+        {
+          "title": "Protect Your Focus Time",
+          "description": "Monthly closes and client reconciliation require concentration. Managing client inquiries through an automated system means you do not need to interrupt focused work every time a potential client reaches out.",
+          "points": ["Prospects are handled automatically while you focus on existing client deliverables", "You review and respond to inquiries on your schedule, not theirs", "The quality of both your client work and your prospect responses improves when they are not competing for attention"]
+        },
+        {
+          "title": "Make a Professional First Impression",
+          "description": "Small business owners often choose their bookkeeper based on responsiveness and organization. When your inquiry management system responds quickly and professionally, it signals that you will handle their finances with the same level of attention.",
+          "points": ["Fast responses demonstrate the organizational skills bookkeeping clients value", "Professional messaging positions your practice as established and reliable", "Prospects who experience good communication upfront are more confident about hiring you"]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Inquiry Flow Review", "description": "We map how client inquiries currently reach your bookkeeping practice and identify where prospects are getting lost or delayed.", "subheading": "Audit" },
+        { "step": 2, "title": "Response System Design", "description": "We create automated response workflows tailored to bookkeeping inquiries, with messaging that is professional yet approachable for small business owners.", "subheading": "Design" },
+        { "step": 3, "title": "Setup and Connection", "description": "We connect the system to your website, email, and any other channels where inquiries come in, and set up the organized inbox for your review.", "subheading": "Build" },
+        { "step": 4, "title": "Refine Over Time", "description": "We monitor how prospects respond to automated messages, adjust timing and messaging, and help you refine the process as your bookkeeping practice grows.", "subheading": "Optimize" }
+      ],
+      "faqs": [
+        { "question": "Will this make my bookkeeping practice seem impersonal?", "answer": "The automated responses are designed to feel warm and personal. They acknowledge the prospect by context, explain what to expect next, and provide helpful information. Most small business owners appreciate the quick response and see it as a sign of professionalism." },
+        { "question": "I only get a few inquiries per week. Is this worth setting up?", "answer": "Even a few inquiries per week represent significant potential revenue for a bookkeeping practice. If even one prospect per month goes to a competitor because of a slow response, that lost recurring revenue adds up quickly. The system also scales with you as your practice grows." },
+        { "question": "How does this handle referral introductions differently from website inquiries?", "answer": "We can set up different response paths depending on the source. A referral introduction might trigger a warmer, more personalized response that references the connection, while a website inquiry follows a more general path." }
+      ],
+      "results": [
+        { "metric": "Inquiry Response Time", "value": "Immediate", "description": "Every inquiry to your bookkeeping practice receives a professional response within minutes" },
+        { "metric": "Missed Inquiries", "value": "Zero", "description": "All inquiries are captured and tracked regardless of when they arrive or how busy you are" },
+        { "metric": "Work Focus", "value": "Protected", "description": "Your concentration on client work is not interrupted by the need to respond to prospects in real time" }
+      ],
+      "ctaTitle": "Ready to Manage Inquiries Without the Stress?",
+      "ctaDescription": "Book a free call and we will review how your bookkeeping practice handles incoming inquiries and show you a simpler, more reliable approach."
+    }
   }
 }

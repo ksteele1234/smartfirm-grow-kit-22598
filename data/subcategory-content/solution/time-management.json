@@ -68,5 +68,342 @@
         "Your team wastes hours tracking down client documents and sending reminder emails manually"
       ]
     }
+  },
+  "slugOverrides": {
+    "how-to-save-time-on-marketing-for-cpas": {
+      "heroSubtitleTemplate": "Every hour a CPA spends tweaking social posts or drafting newsletters is an hour not spent on advisory work or tax planning. There are practical ways to save time on marketing without letting your pipeline dry up.",
+      "problemStatement": "Most CPAs did not start their practice to become part-time marketers. Yet between writing blog posts, managing social media accounts, and sending client newsletters, marketing tasks quietly consume hours that would otherwise be billable. The result is a frustrating trade-off: either you market your firm and sacrifice revenue-producing work, or you focus on clients and watch your pipeline thin out over time.",
+      "solutionOverview": "The CPAs who have solved this are not ignoring marketing. They have restructured how marketing gets done so it no longer competes with billable hours. By batching content creation, using pre-built campaign frameworks, and letting automated scheduling tools handle distribution, they maintain a consistent marketing presence while spending a fraction of the time they used to.",
+      "hearingSignals": [
+        "You keep meaning to send that client newsletter but billable work always takes priority",
+        "You have drafted social media posts that sit unpublished because you ran out of time to finalize them",
+        "Marketing feels like it belongs on your to-do list but never makes it to your done list"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Writing original marketing content from scratch each week pulls CPAs away from client deliverables and eats into evenings and weekends",
+          "solution": "Pre-built content frameworks tailored to CPA services let you produce a month of marketing material in a single focused session rather than scattered efforts throughout the week"
+        },
+        {
+          "problem": "Manually posting to social media, sending emails, and updating your website creates dozens of small interruptions that fragment your workday",
+          "solution": "Automated scheduling and distribution tools publish your content across channels at optimal times without requiring you to log in or hit send"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Protect Your Billable Hours",
+          "description": "When marketing runs on a system rather than on your personal effort, you stop trading billable time for visibility. Your practice stays visible while you stay focused on client work.",
+          "points": [
+            "Marketing tasks no longer compete with tax preparation and advisory work for your attention",
+            "A single content session can often fuel several weeks of marketing output",
+            "Your pipeline stays active even during your busiest billing periods"
+          ]
+        },
+        {
+          "title": "Consistent Visibility Without Constant Effort",
+          "description": "The biggest marketing challenge for CPAs is not quality, it is consistency. When you save time on the mechanics of marketing, you can actually maintain the regular presence that drives referrals and inbound leads.",
+          "points": [
+            "Scheduled content goes out on a reliable cadence regardless of how busy your week gets",
+            "Prospects see a steady stream of expertise rather than sporadic bursts followed by silence",
+            "Referral partners stay aware of your services because your name appears regularly in their feeds"
+          ]
+        },
+        {
+          "title": "Marketing That Reflects Your Expertise",
+          "description": "Rushed marketing often looks rushed. When CPAs have a streamlined process, the content they produce actually reflects the depth of knowledge they bring to client engagements.",
+          "points": [
+            "Content frameworks help you translate complex tax and accounting topics into accessible messaging",
+            "Less time on logistics means more thought goes into the substance of what you share",
+            "Your marketing positions you as a knowledgeable advisor rather than someone checking a box"
+          ]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Marketing Time Inventory", "description": "We map out exactly where your marketing hours are going now, identifying the tasks that consume the most time relative to the results they produce for your CPA practice.", "subheading": "Assess" },
+        { "step": 2, "title": "Content Batching Setup", "description": "We build a content framework aligned with CPA services so you can create several weeks of material in one focused session rather than scattered daily efforts.", "subheading": "Streamline" },
+        { "step": 3, "title": "Automated Distribution", "description": "We configure scheduling tools that publish your content across email, social media, and your website without requiring manual posting throughout the week.", "subheading": "Automate" },
+        { "step": 4, "title": "Ongoing Refinement", "description": "We review which content resonates with your audience and refine the system so your reduced marketing time produces increasingly better results.", "subheading": "Optimize" }
+      ],
+      "results": [
+        { "metric": "Marketing Time per Week", "value": "Meaningfully Reduced", "description": "CPAs typically find they can maintain their marketing output while spending significantly fewer hours on it each week" },
+        { "metric": "Content Consistency", "value": "Substantially Improved", "description": "Firms often move from sporadic posting to a regular cadence that keeps their practice visible year-round" },
+        { "metric": "Billable Hour Recovery", "value": "Notable Increase", "description": "Hours previously lost to marketing tasks can be redirected toward client work and advisory services" }
+      ],
+      "faqs": [
+        { "question": "Can I really maintain quality marketing if I spend less time on it?", "answer": "Yes, because the time savings come from eliminating inefficiency, not cutting corners. Most CPAs lose time to context switching, formatting, and manual posting rather than actual content creation. A streamlined process means the time you do spend goes entirely toward substance." },
+        { "question": "What if I have no marketing content to start with?", "answer": "We often begin with the questions your clients already ask you. CPAs have deep expertise that translates naturally into valuable content. Our frameworks help you turn that existing knowledge into marketing material without starting from a blank page." },
+        { "question": "How soon can I expect to see time savings on marketing?", "answer": "Many CPAs notice a difference within the first few weeks once their content batching and scheduling systems are in place. The savings tend to grow over time as you build a library of reusable content and refine your process." }
+      ],
+      "ctaTitle": "Ready to Stop Trading Billable Hours for Marketing?",
+      "ctaDescription": "Book a free call and we will walk through where your marketing time is going and how to cut it down without losing visibility."
+    },
+    "how-do-i-automate-my-accounting-firm-marketing": {
+      "heroSubtitleTemplate": "Accounting firm owners who automate their marketing are not just saving time. They are building systems that attract and nurture prospects without requiring anyone on the team to manually manage the process.",
+      "problemStatement": "Running an accounting firm means wearing many hats, and marketing is often the one that fits worst. Most firm owners know they need a steady flow of new clients, but the day-to-day demands of managing staff, serving existing clients, and handling operations leave no bandwidth for consistent marketing. The few marketing efforts that do happen tend to be reactive, one-off pushes that fade as soon as the firm gets busy again.",
+      "solutionOverview": "Marketing automation for accounting firms is not about replacing the personal touch that drives client relationships. It is about building behind-the-scenes systems that handle the repetitive, time-consuming parts of marketing so the firm maintains visibility and nurtures prospects automatically. The right automation means your marketing works even when you and your team are deep in client engagements.",
+      "hearingSignals": [
+        "You have tried marketing initiatives in the past but they always stall once client work picks up",
+        "You wish your firm had a steady lead flow that did not depend on someone remembering to send emails or post content",
+        "You have heard about marketing automation but are not sure what it actually looks like for an accounting firm"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Marketing campaigns at accounting firms typically launch with enthusiasm, then collapse within weeks because nobody has time to maintain them manually",
+          "solution": "Automated marketing sequences run continuously once configured, delivering the right messages to the right prospects at the right stage without anyone needing to press send"
+        },
+        {
+          "problem": "Leads from your website, referrals, and networking often go cold because follow-up is inconsistent and depends on someone remembering to reach out",
+          "solution": "Automated lead nurturing workflows engage new prospects immediately and maintain contact over weeks and months until they are ready to become clients"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Marketing That Runs Without You",
+          "description": "The defining feature of automated marketing is independence. Once your systems are configured, they continue working whether you are in back-to-back client meetings, on vacation, or managing a staffing challenge.",
+          "points": [
+            "Email sequences nurture prospects through your pipeline without manual send-and-track cycles",
+            "Social content publishes on schedule without anyone logging into platforms",
+            "New website visitors receive relevant follow-up automatically based on their interests"
+          ]
+        },
+        {
+          "title": "No Leads Fall Through the Cracks",
+          "description": "In most accounting firms, the biggest source of lost revenue is not bad marketing. It is good leads that were never followed up. Automation closes that gap by making follow-up systematic rather than something that depends on someone having time.",
+          "points": [
+            "Every inquiry receives a timely response regardless of how busy your team is",
+            "Prospects who are not ready to engage today receive ongoing nurturing until they are",
+            "Your firm stays top of mind for referral sources through automated touchpoints"
+          ]
+        },
+        {
+          "title": "Scalable Client Acquisition",
+          "description": "Manual marketing creates a ceiling on growth because there are only so many hours available. Automated systems scale with your firm, handling increasing volume without proportionally increasing the time investment.",
+          "points": [
+            "Adding new service lines or target audiences does not mean hiring marketing staff",
+            "Seasonal campaigns can be pre-built and triggered automatically at the right times",
+            "Your marketing capacity grows alongside your firm rather than limiting it"
+          ]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Automation Opportunity Mapping", "description": "We examine your current client acquisition process from first touch to signed engagement letter, identifying every point where automation can replace manual effort in your accounting firm.", "subheading": "Map" },
+        { "step": 2, "title": "Workflow Design", "description": "We design automated marketing workflows specific to accounting services, including email nurture sequences, lead scoring, and content distribution systems.", "subheading": "Design" },
+        { "step": 3, "title": "System Configuration and Integration", "description": "We build and connect your automation tools with your existing CRM, email platform, and website so everything works together seamlessly.", "subheading": "Build" },
+        { "step": 4, "title": "Monitor, Learn, and Expand", "description": "We track performance data from your automated campaigns and use those insights to refine messaging, expand to new audiences, and add additional automation layers.", "subheading": "Scale" }
+      ],
+      "results": [
+        { "metric": "Lead Response Time", "value": "Near Instant", "description": "Automated systems typically respond to new inquiries within minutes rather than the days it often takes when follow-up is manual" },
+        { "metric": "Marketing Continuity", "value": "Year-Round", "description": "Firms often move from inconsistent marketing bursts to continuous, automated outreach that maintains pipeline health through every season" },
+        { "metric": "Manual Marketing Tasks", "value": "Substantially Fewer", "description": "Accounting firm teams frequently report spending far less time on routine marketing activities once automation is in place" }
+      ],
+      "faqs": [
+        { "question": "What parts of accounting firm marketing can actually be automated?", "answer": "The most common automation opportunities include email nurture sequences for new leads, social media scheduling, review request follow-ups, client onboarding communications, seasonal service reminders, and re-engagement campaigns for past prospects. The personal, relationship-driven aspects remain human while the repetitive mechanics run automatically." },
+        { "question": "Will automated marketing feel impersonal to our prospects?", "answer": "Well-designed automation actually feels more personal than sporadic manual outreach. Automated sequences can be tailored to specific prospect interests, timed appropriately, and consistent in tone. The key is building systems that reflect your firm's voice and values rather than generic templates." },
+        { "question": "Do we need to buy expensive software to automate our marketing?", "answer": "The right tools depend on your firm's size and goals. During our discovery process, we recommend solutions that fit your budget and integrate with what you already use. Many firms find that the cost of automation tools pays for itself through improved lead conversion and time savings." }
+      ],
+      "ctaTitle": "Ready to Put Your Accounting Firm Marketing on Autopilot?",
+      "ctaDescription": "Book a free call and we will show you which parts of your marketing can be automated and what that system could look like for your firm."
+    },
+    "how-to-market-during-busy-season-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparers face a unique marketing challenge: the months when you are most visible and credible are the same months you have zero bandwidth. Here is how to keep your pipeline active even during the busiest stretch of the year.",
+      "problemStatement": "Every year follows the same painful pattern for tax preparers. From January through April, every waking hour goes to preparing returns and managing client deadlines. Marketing stops completely. Then May arrives, the workload drops, and you realize your pipeline is empty. You spend the summer and fall scrambling to fill the gaps, only to enter the next busy season without enough momentum. This feast-or-famine cycle keeps practices stuck at the same size year after year.",
+      "solutionOverview": "The tax preparers who have broken out of the seasonal marketing trap are not working more hours during busy season. They are setting up marketing systems before January that continue running through April without their involvement. Pre-built campaigns, scheduled content, and automated follow-up sequences maintain their visibility and nurture prospects during the exact months when they cannot personally attend to marketing.",
+      "hearingSignals": [
+        "Your client roster shrinks slightly every year because you never market during the months when tax preparation is top of mind for prospects",
+        "By the time busy season ends you have no pipeline and spend months rebuilding from scratch",
+        "You have a nagging feeling that January through April should be your best marketing window but you cannot capitalize on it"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Tax season creates a four-month marketing blackout every year, and the off-season scramble never fully compensates for the lost pipeline momentum",
+          "solution": "Pre-built marketing campaigns launched before January run automatically through April, keeping your practice visible during the exact window when people are actively thinking about their taxes"
+        },
+        {
+          "problem": "Prospective clients who inquire during busy season often receive slow or no responses because the team is buried in returns, and those leads go to competitors",
+          "solution": "Automated inquiry response and nurturing sequences engage busy-season prospects immediately and keep them warm until you have capacity to take them on"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Capitalize on Peak Tax Awareness",
+          "description": "January through April is when people are most aware of their need for tax help. A marketing system that runs during these months captures prospects at their highest point of motivation, even though you personally cannot be doing outreach.",
+          "points": [
+            "Your practice stays visible during the window when prospects are actively searching for tax preparation help",
+            "Automated content positions you as an expert at the exact moment people need one",
+            "Leads generated during busy season can be nurtured automatically until you have capacity to onboard them"
+          ]
+        },
+        {
+          "title": "Break the Feast-or-Famine Cycle",
+          "description": "The annual pattern of frantic tax work followed by an empty pipeline is not inevitable. Tax preparers who market through busy season typically enter the off-season with a healthier prospect list and steadier workload.",
+          "points": [
+            "Off-season starts with warm leads already in your pipeline rather than a cold start",
+            "Client acquisition becomes more predictable rather than concentrated in a few panic months",
+            "Revenue smooths out across the year as you reduce dependence on seasonal surges"
+          ]
+        },
+        {
+          "title": "Maintain Existing Client Relationships Year-Round",
+          "description": "Busy season marketing is not just about new clients. Automated touchpoints with existing clients during this period reinforce your value and reduce the risk of them drifting to another preparer next year.",
+          "points": [
+            "Clients receive timely tax-related updates and reminders without you personally sending them",
+            "Year-round communication strengthens loyalty and generates referrals",
+            "Existing clients feel informed and cared for even when you are heads-down in returns"
+          ]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Pre-Season Planning", "description": "Before January, we map out the full marketing calendar for busy season, identifying the key messages, campaigns, and touchpoints that will run automatically during your peak workload months.", "subheading": "Plan" },
+        { "step": 2, "title": "Content and Campaign Pre-Build", "description": "We create all busy-season marketing materials in advance, including email sequences, social media content, and blog posts tailored to tax-season topics that resonate with your ideal clients.", "subheading": "Create" },
+        { "step": 3, "title": "Automated Launch and Lead Capture", "description": "We schedule everything to deploy automatically starting in January, with lead capture and nurturing systems that engage inquiries instantly without requiring your attention.", "subheading": "Launch" },
+        { "step": 4, "title": "Post-Season Pipeline Handoff", "description": "When busy season ends, we review the leads and engagement generated during those months, providing you with a warm pipeline ready for personal follow-up and conversion.", "subheading": "Harvest" }
+      ],
+      "results": [
+        { "metric": "Busy Season Visibility", "value": "Maintained", "description": "Tax preparers who use pre-built campaigns typically maintain consistent marketing output through January to April without any manual effort during that period" },
+        { "metric": "Off-Season Pipeline", "value": "Significantly Stronger", "description": "Firms often enter May with a meaningful number of warm leads generated during the months they previously went dark on marketing" },
+        { "metric": "Annual Client Retention", "value": "Improved", "description": "Automated client communication during busy season tends to strengthen relationships and reduce year-over-year client attrition" }
+      ],
+      "faqs": [
+        { "question": "When do I need to start preparing for busy-season marketing?", "answer": "Ideally, the planning and content creation happens in October through December, before the workload ramps up. This gives enough time to build thoughtful campaigns without rushing, and ensures everything is ready to launch automatically when January arrives." },
+        { "question": "What kind of content works best for marketing during tax season?", "answer": "Content that addresses the questions and concerns your prospects have during tax time tends to perform well. Think along the lines of common tax mistakes, deadline reminders, changes in tax law, and guidance on organizing documents. This positions you as a helpful expert rather than someone just advertising for business." },
+        { "question": "What if I get too many leads during busy season and cannot handle them?", "answer": "This is exactly what the nurturing system is designed for. Leads who inquire during busy season receive immediate automated engagement and are kept warm through ongoing communication. When your bandwidth opens up in May, those prospects are still interested and ready to talk rather than having gone cold or chosen a competitor." }
+      ],
+      "ctaTitle": "Ready to Market Through Busy Season Without Lifting a Finger?",
+      "ctaDescription": "Book a free call and we will map out a busy-season marketing system that runs on autopilot while you focus on preparing returns."
+    },
+    "how-to-do-marketing-with-no-time-for-bookkeepers": {
+      "heroSubtitleTemplate": "When every hour of your day is spent reconciling accounts, processing payroll, and managing client deadlines, marketing feels impossible. Here is how bookkeepers are building a client pipeline even when they have no time to spare.",
+      "problemStatement": "Solo and small bookkeeping practices face a uniquely difficult marketing problem: the better you are at serving clients, the less time you have to find new ones. Your days are filled with transaction categorization, bank reconciliations, payroll runs, and client communication. There is no marketing department, no dedicated sales team, and often no administrative support. Marketing gets perpetually deferred because the work right in front of you always feels more urgent, and the consequence is a practice that grows only through occasional referrals or word of mouth.",
+      "solutionOverview": "Bookkeepers who are growing their practices despite having no spare time have not found extra hours in the day. They have adopted marketing approaches that require minimal ongoing involvement. Micro-effort strategies, templated content systems, and automated touchpoints let them maintain a marketing presence that generates leads without pulling them away from the client work that pays the bills.",
+      "hearingSignals": [
+        "You know you should be marketing but at the end of every day you have done nothing but client work",
+        "Your practice grows only when someone happens to refer a friend, and you have no control over when or if that happens",
+        "You have considered hiring marketing help but cannot justify the expense at your current revenue level"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "Solo bookkeepers are so embedded in daily client work that there is literally no window in the day for marketing activities, and evenings and weekends are already spoken for",
+          "solution": "Micro-effort marketing systems require as little as one to two hours per month of active involvement, with templates and automation handling the rest so marketing happens alongside your client workload"
+        },
+        {
+          "problem": "Without marketing expertise or budget for an agency, most bookkeepers default to doing nothing and hoping referrals keep coming, leaving growth entirely to chance",
+          "solution": "Done-with-you marketing frameworks provide the strategy and tools a bookkeeper needs to maintain a professional presence without requiring marketing expertise or a large budget"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "A Client Pipeline That Builds Itself",
+          "description": "When your marketing system is designed for minimum input, it can run with the small pockets of time you do have. The result is a pipeline that grows steadily in the background instead of staying empty until a referral happens to land.",
+          "points": [
+            "Pre-written content templates mean you never start from a blank page",
+            "Automated email sequences nurture inquiries while you focus on reconciliations and payroll",
+            "A consistent online presence attracts prospects even when you are not actively looking for them"
+          ]
+        },
+        {
+          "title": "Marketing Designed for One-Person Operations",
+          "description": "Most marketing advice assumes you have a team, a budget, and hours to spare. The strategies we build for bookkeepers are specifically designed for practices where one person does everything.",
+          "points": [
+            "Every marketing activity is chosen for maximum impact with minimum time investment",
+            "No complex tools or platforms to learn, just simple systems that fit your workflow",
+            "The approach scales with you so that as your practice grows, marketing does not become a bottleneck"
+          ]
+        },
+        {
+          "title": "Stop Depending Entirely on Referrals",
+          "description": "Referrals are wonderful but unpredictable. Adding even a modest marketing system alongside word of mouth gives you more control over your client flow and reduces the anxiety of not knowing where your next client will come from.",
+          "points": [
+            "A basic online presence captures prospects who are searching for bookkeeping help in your area or niche",
+            "Automated follow-up ensures you stay in touch with past inquiries who were not ready to commit initially",
+            "You build a reputation through content that works for you around the clock, not just when someone mentions your name"
+          ]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Realistic Capacity Assessment", "description": "We figure out how much time you can genuinely commit to marketing, whether that is two hours a month or thirty minutes a week, and we build your entire system around that constraint.", "subheading": "Reality Check" },
+        { "step": 2, "title": "Minimum Viable Marketing Plan", "description": "We identify the one or two marketing channels that will generate the best return for a bookkeeping practice with limited time, and we skip everything else.", "subheading": "Focus" },
+        { "step": 3, "title": "Template and Automation Setup", "description": "We provide ready-to-use content templates and configure simple automation so your limited marketing time goes toward personalizing and approving rather than creating from scratch.", "subheading": "Equip" },
+        { "step": 4, "title": "Monthly Check-In and Adjustment", "description": "We review results briefly each month and make small adjustments to keep your marketing effective without adding to your workload.", "subheading": "Sustain" }
+      ],
+      "results": [
+        { "metric": "Time Required for Marketing", "value": "Minimal", "description": "Bookkeepers using these systems often maintain a consistent marketing presence with just a few hours of involvement per month" },
+        { "metric": "Lead Sources", "value": "Diversified", "description": "Practices typically move from pure referral dependence to having additional lead channels generating inquiries" },
+        { "metric": "Client Acquisition Predictability", "value": "Improved", "description": "Bookkeepers often report feeling more in control of their growth rather than waiting and hoping for the next referral" }
+      ],
+      "faqs": [
+        { "question": "I genuinely have no free time. How can this work for me?", "answer": "We design the system around whatever time you actually have, even if it is just a couple of hours per month. The key is using that small window efficiently with templates, pre-built content, and automation so your limited effort produces outsized results compared to starting from scratch each time." },
+        { "question": "Is marketing worth it for a solo bookkeeper or is it just for bigger firms?", "answer": "Solo bookkeepers often see the biggest relative impact from even modest marketing because they are starting from a baseline of doing nothing. Adding a basic, consistent presence can noticeably change your inquiry volume compared to relying solely on sporadic referrals." },
+        { "question": "What marketing channels work best when I have almost no time?", "answer": "For most bookkeepers with severe time constraints, we focus on a combination of a well-optimized online profile that works passively and a simple email sequence that nurtures leads automatically. These two elements tend to deliver the most value per hour invested." }
+      ],
+      "ctaTitle": "Ready to Market Your Bookkeeping Practice Without Sacrificing Client Work?",
+      "ctaDescription": "Book a free call and we will design a marketing approach that fits inside the time you actually have, not the time you wish you had."
+    },
+    "how-to-reduce-marketing-hours-for-cpas": {
+      "heroSubtitleTemplate": "You are already investing time in marketing your CPA practice. The question is whether those hours are producing results proportional to the effort. Here is how to get more from your marketing while spending fewer hours on it.",
+      "problemStatement": "Unlike CPAs who do no marketing at all, you are already putting in the effort. You write content, post on social media, send emails, attend networking events, and maintain your website. The problem is not that you are ignoring marketing, it is that marketing consumes more of your week than it should relative to what it produces. You suspect there are inefficiencies in your process but are too busy executing to step back and analyze what is actually working and what is just filling time.",
+      "solutionOverview": "Reducing marketing hours for a CPA practice is not about doing less marketing. It is about auditing your current efforts, identifying which activities drive actual client acquisition and which are just consuming time, and then restructuring your approach so you focus on what works and eliminate or automate everything else. The goal is better results from fewer hours, not fewer results.",
+      "hearingSignals": [
+        "You spend several hours each week on marketing but could not confidently say which activities are generating new clients",
+        "Your marketing to-do list keeps growing but your client roster is not growing proportionally",
+        "You have a feeling that you could get the same or better results if your marketing process were more efficient"
+      ],
+      "problemSolutionPairs": [
+        {
+          "problem": "CPAs who are actively marketing often spread their effort across too many channels and tactics without clear data on which ones actually produce clients, resulting in wasted hours on low-return activities",
+          "solution": "A marketing efficiency audit reveals which of your current activities are driving results and which are consuming time without contributing to growth, allowing you to cut the dead weight"
+        },
+        {
+          "problem": "Marketing workflows that evolved organically over time tend to include redundant steps, manual processes that could be automated, and outdated tactics that no longer perform",
+          "solution": "A systematic review of your marketing process identifies specific steps that can be streamlined, consolidated, or automated to deliver the same output with significantly less hands-on time"
+        }
+      ],
+      "keyBenefits": [
+        {
+          "title": "Same Results, Fewer Hours",
+          "description": "Most CPA practices have meaningful fat to trim from their marketing process. By identifying and eliminating low-value activities, you can often maintain or improve your marketing outcomes while reclaiming substantial time each week.",
+          "points": [
+            "Data-driven analysis reveals which marketing activities actually correlate with new client acquisition",
+            "Low-performing channels and tactics are eliminated rather than continued out of habit",
+            "Your remaining marketing hours are concentrated on proven, high-return activities"
+          ]
+        },
+        {
+          "title": "Streamlined Marketing Workflows",
+          "description": "When your marketing process is deliberately designed rather than organically evolved, each step has a clear purpose and nothing is redundant. The result is a workflow that moves faster and produces output with less friction.",
+          "points": [
+            "Content creation follows a repeatable system rather than starting from zero each time",
+            "Approval and publishing steps are consolidated to eliminate bottlenecks",
+            "Reporting is simplified so you spend minutes, not hours, understanding what is working"
+          ]
+        },
+        {
+          "title": "Confidence in Your Marketing Investment",
+          "description": "When you know exactly which hours are producing results, you stop second-guessing your marketing. The time you do invest feels purposeful rather than hopeful, and you can scale specific activities up or down based on evidence.",
+          "points": [
+            "Clear tracking connects marketing activities to actual client inquiries and engagements",
+            "Decisions about where to spend your marketing time are based on data rather than guesswork",
+            "You can articulate exactly what your marketing is doing for your practice and whether the time investment is worthwhile"
+          ]
+        }
+      ],
+      "howItWorks": [
+        { "step": 1, "title": "Marketing Activity Audit", "description": "We catalog every marketing activity you currently perform, how much time each consumes, and what outcomes each produces. This creates a clear picture of where your hours are going and what you are getting in return.", "subheading": "Catalog" },
+        { "step": 2, "title": "Impact Analysis", "description": "We evaluate each activity against actual client acquisition data, identifying which efforts drive results and which are consuming time without measurable return for your CPA practice.", "subheading": "Analyze" },
+        { "step": 3, "title": "Process Redesign", "description": "We restructure your marketing workflow to eliminate low-value tasks, automate repetitive steps, and concentrate your hours on the activities with the highest demonstrated impact.", "subheading": "Redesign" },
+        { "step": 4, "title": "Efficiency Tracking", "description": "We establish simple metrics to track your marketing hours against results on an ongoing basis, ensuring your process stays lean and you catch any creeping inefficiencies early.", "subheading": "Track" }
+      ],
+      "results": [
+        { "metric": "Marketing Hours per Week", "value": "Reduced", "description": "CPAs who go through this process typically cut their weekly marketing time meaningfully while maintaining or improving their pipeline activity" },
+        { "metric": "Marketing ROI Clarity", "value": "Dramatically Improved", "description": "Firms often move from vague feelings about marketing effectiveness to clear data connecting specific activities to client acquisition" },
+        { "metric": "Process Efficiency", "value": "Significantly Higher", "description": "Streamlined workflows typically allow the same marketing output to be produced in substantially less time than the original process required" }
+      ],
+      "faqs": [
+        { "question": "What if the audit reveals that none of my current marketing is working?", "answer": "That is actually a valuable finding. Knowing that your current hours are not producing results is far better than continuing to invest time blindly. In that scenario, we help you redirect your marketing time toward approaches with a stronger track record for CPA practices rather than continuing what is not working." },
+        { "question": "How is this different from just hiring someone to do my marketing for me?", "answer": "Hiring help can be the right move, but if your current process is inefficient, you are either paying someone to execute an inefficient process or asking them to figure out a new one. Optimizing first means that whether you keep doing marketing yourself or eventually delegate it, the system is lean and effective." },
+        { "question": "Will reducing my marketing hours mean I show up less in search results or social media?", "answer": "Not necessarily. The goal is to eliminate wasted effort, not reduce your presence. Many CPAs find that a focused, consistent approach across fewer channels actually produces better visibility than a scattered approach across many channels." }
+      ],
+      "ctaTitle": "Ready to Get Better Marketing Results in Less Time?",
+      "ctaDescription": "Book a free call and we will identify where your marketing hours are going and which ones you can safely reclaim without losing pipeline momentum."
+    }
   }
 }

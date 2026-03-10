@@ -87,13 +87,13 @@ export const faqCategories: FAQCategory[] = [
         firstSentence: "SmartFirm.io automation pricing is customized based on your firm size and specific requirements — a one-time setup fee and monthly subscription with no long-term contract."
       },
       {
-        question: "Do you offer guarantees?",
-        slug: "smartfirm-performance-guarantees",
+        question: "How do you ensure results?",
+        slug: "smartfirm-performance-accountability",
         answer: "We stand behind our work with clear success metrics and ongoing support to ensure your satisfaction. We set specific KPIs for each engagement—whether that's lead volume, response times, or hours saved—and track progress monthly. If something isn't working, we adjust the approach.",
-        h1Override: "Do you offer guarantees?",
-        metaTitle: "SmartFirm.io Performance Guarantees | SmartFirm.io",
+        h1Override: "How do you ensure results?",
+        metaTitle: "SmartFirm.io Performance Accountability | SmartFirm.io",
         metaDescription: "SmartFirm.io sets specific KPIs for each engagement — lead volume, conversion rates, or time savings — and stands behind our work with clear metrics.",
-        firstSentence: "SmartFirm.io performance guarantees are built on clear success metrics — we set specific KPIs for each engagement, whether that's lead volume, conversion rates, or time savings."
+        firstSentence: "SmartFirm.io performance accountability is built on clear success metrics — we set specific KPIs for each engagement, whether that's lead volume, conversion rates, or time savings."
       }
     ]
   },

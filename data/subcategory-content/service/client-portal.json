@@ -68,5 +68,337 @@
     "tax preparers": {
       "heroDescription": "During tax season, your clients need a reliable way to send you sensitive documents, check on the status of their return, and communicate with your team without clogging up your email or voicemail. A client portal provides a secure, self service hub where clients can do all of that on their own time, which means fewer interruptions for your team and a more professional experience for your clients."
     }
+  },
+  "slugOverrides": {
+    "client-portal-for-cpas": {
+      "heroSubtitleTemplate": "Provide your CPA clients with a centralized portal where they can exchange documents, send messages, and track every task across their engagements without chasing your team for updates.",
+      "heroDescription": "Managing client communication across emails, phone calls, and shared drives often creates gaps that slow down your CPA practice. A full-featured client portal consolidates document exchange, secure messaging, and task tracking into a single hub that both your team and your clients can rely on. When clients have one place to upload files, ask questions, and see what needs their attention, your firm spends less time on follow-up and more time on the work that matters.",
+      "benefits": [
+        {
+          "title": "Centralized Document Exchange That Reduces Back and Forth",
+          "description": "Rather than managing attachments across dozens of email threads, your CPA clients upload everything to one secure location. Your team can see at a glance which documents have arrived, which are still outstanding, and who needs a reminder, all without digging through inboxes."
+        },
+        {
+          "title": "Built-In Messaging That Keeps Conversations Organized",
+          "description": "When client questions live inside the portal alongside the relevant engagement, nothing gets lost. Your team can respond in context, reference attached documents, and maintain a clear record of every conversation without switching between systems."
+        },
+        {
+          "title": "Task Tracking That Gives Both Sides Visibility",
+          "description": "Clients can see what your team is working on and what still needs their input. This kind of transparency tends to reduce status inquiry calls significantly and helps your CPA practice feel more responsive even during peak periods."
+        }
+      ],
+      "features": [
+        {
+          "title": "Integrated Document Exchange and File Management",
+          "description": "Your CPA clients get a secure space to upload tax records, financial statements, and supporting documents whenever it works for them. Files are organized by engagement and accessible to the right team members immediately.",
+          "details": [
+            "Simple drag and drop uploads that clients can use from any device without training",
+            "Automatic categorization by engagement type, tax year, and document category",
+            "Version tracking so your team always works with the most current files"
+          ]
+        },
+        {
+          "title": "Secure Messaging and Communication Threads",
+          "description": "Every message between your team and a CPA client stays connected to the relevant engagement. This eliminates the confusion that comes from scattered email chains and helps new team members get up to speed quickly.",
+          "details": [
+            "Threaded conversations tied to specific engagements or document requests",
+            "Read receipts and notification settings so nothing falls through the cracks",
+            "Full message history that serves as an audit trail for client interactions"
+          ]
+        },
+        {
+          "title": "Task Assignment and Progress Visibility",
+          "description": "Your team can assign tasks to clients, set due dates, and track completion within the portal. Clients see their outstanding items clearly, which tends to improve response times and reduce the need for manual follow-up.",
+          "details": [
+            "Client-facing task lists with clear descriptions and deadlines",
+            "Automated reminders that go out when items remain outstanding",
+            "Dashboard views that show your team which clients need attention"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How long does it typically take to get CPA clients onboarded to the portal?",
+          "answer": "Most CPA firms find that initial portal setup and configuration takes a few weeks, with client onboarding happening in waves after that. We help you create introduction materials and a rollout plan that makes the transition feel natural rather than disruptive. Many firms start with their most engaged clients and expand from there.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the portal handle the volume of documents we exchange during busy season?",
+          "answer": "The portal solutions we work with are built to handle significant document volumes without performance issues. During tax season or audit periods, having a structured upload process actually tends to reduce bottlenecks compared to managing everything through email attachments and shared drives.",
+          "category": "General"
+        },
+        {
+          "question": "Does the portal integrate with the practice management tools our CPA firm already uses?",
+          "answer": "Many of the portal platforms we configure offer integrations with popular practice management and tax preparation software. During our initial assessment, we review your existing technology stack and identify which integrations would create the most value for your workflow.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Centralize Your CPA Client Communication?",
+      "ctaDescription": "Schedule a consultation and we will walk through your current client communication workflow to identify where a full-featured portal could save your team time and improve the client experience."
+    },
+    "automated-client-portal-for-accounting-firms": {
+      "heroSubtitleTemplate": "Give your accounting firm clients a self-service portal where they can access documents, check engagement status, and receive automated updates without waiting for someone on your team to respond.",
+      "heroDescription": "Accounting firms that rely on manual communication for every client touchpoint often find that their team spends a surprising amount of time answering status questions, resending documents, and following up on outstanding items. An automated client portal shifts much of that workload to the system itself. Clients get self-service access to their documents, real-time visibility into where things stand, and automated notifications when something needs their attention. Your team gets hours back each week to focus on advisory work and client relationships.",
+      "benefits": [
+        {
+          "title": "Self-Service Document Access That Eliminates Resend Requests",
+          "description": "When clients can log in and find their own documents, your team stops fielding requests to resend engagement letters, tax returns, and financial statements. Everything lives in one organized library that clients can browse on their own schedule."
+        },
+        {
+          "title": "Real-Time Status Visibility That Reduces Inquiry Volume",
+          "description": "Clients who can see exactly where their engagement stands are far less likely to call or email asking for updates. Automated status tracking gives them the transparency they want while freeing your accounting team from repetitive status conversations."
+        },
+        {
+          "title": "Automated Notifications That Keep Engagements Moving",
+          "description": "Instead of your team manually reminding clients about outstanding documents or upcoming deadlines, the portal handles it automatically. This consistent follow-up tends to improve client response times and keeps engagements on track without adding to your staff workload."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Document Delivery and Client Access",
+          "description": "Completed documents are published to the portal automatically, and clients receive a notification that their files are ready. No more emailing PDFs or wondering whether a client received what you sent.",
+          "details": [
+            "Automatic document publishing with configurable client notifications",
+            "Organized document library searchable by date, type, and engagement",
+            "Download history so your team can see which documents clients have accessed"
+          ]
+        },
+        {
+          "title": "Live Engagement Status and Progress Tracking",
+          "description": "Clients see a clear, up-to-date view of where their engagement stands at any point. Status updates can flow from your practice management system into the portal, so the information stays current without extra effort from your team.",
+          "details": [
+            "Engagement progress indicators that update as your team completes milestones",
+            "Configurable status stages that match your accounting firm workflow",
+            "Client-facing timeline showing completed steps and what comes next"
+          ]
+        },
+        {
+          "title": "Automated Reminders and Notification Workflows",
+          "description": "The portal sends reminders to clients when documents are due, tasks are outstanding, or deadlines are approaching. Your team sets the rules once, and the system handles ongoing communication consistently.",
+          "details": [
+            "Scheduled reminder sequences for document requests and outstanding items",
+            "Customizable notification templates that reflect your firm branding and tone",
+            "Escalation rules that alert your team when clients remain unresponsive"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much manual work does it take to keep the portal updated for our accounting clients?",
+          "answer": "The goal of an automated portal is to minimize that manual effort. Once configured, most updates happen through integrations with your existing practice management tools or through simple workflows your team sets up during implementation. The initial setup requires some investment of time, but the ongoing maintenance tends to be minimal compared to the hours saved on manual communication.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will the automated notifications feel impersonal to our accounting firm clients?",
+          "answer": "The notifications are fully customizable in both content and tone. We help you write messages that sound like they come from your team rather than a generic system. Most clients appreciate the consistency and responsiveness, and many firms report that automated follow-up actually improves the perception of attentiveness.",
+          "category": "General"
+        },
+        {
+          "question": "Can the portal connect with our existing accounting and practice management software?",
+          "answer": "Most portal platforms we work with offer integration capabilities with widely used accounting and practice management systems. During setup, we map out your current tools and configure the connections that will provide the most automation value for your specific workflow.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your Accounting Firm Client Portal?",
+      "ctaDescription": "Book a free assessment and we will review your current client communication process to show you where automation could reduce manual work and improve the client experience."
+    },
+    "secure-portal-for-tax-preparers": {
+      "heroSubtitleTemplate": "Offer your tax preparation clients a security-first portal for encrypted document uploads, compliant file sharing, and confidential messaging that protects sensitive financial information at every step.",
+      "heroDescription": "Tax preparers handle some of the most sensitive financial information clients will ever share with a professional. Social Security numbers, bank account details, income records, and investment statements all need to move between your clients and your team regularly. Relying on standard email for this exchange introduces risk that most clients do not fully appreciate until something goes wrong. A security-focused client portal provides encrypted uploads, compliant file sharing, and secure messaging that protects both your clients and your practice from data exposure.",
+      "benefits": [
+        {
+          "title": "Encrypted Document Uploads That Protect Sensitive Tax Data",
+          "description": "Every file your tax clients upload passes through encryption protocols that far exceed the protection offered by standard email. Social Security numbers, W-2s, and bank statements travel through a secure channel rather than sitting exposed in an email inbox."
+        },
+        {
+          "title": "Compliant File Sharing That Supports Your Professional Obligations",
+          "description": "Tax preparers have a professional responsibility to safeguard client data. A portal designed with compliance in mind helps you meet those obligations consistently, providing documentation and audit trails that demonstrate your commitment to data protection."
+        },
+        {
+          "title": "Confidential Messaging That Keeps Conversations Private",
+          "description": "When clients need to discuss sensitive financial situations, a secure messaging channel within the portal ensures those conversations stay private. Unlike email, which can be intercepted or forwarded, portal messages remain within the encrypted environment."
+        }
+      ],
+      "features": [
+        {
+          "title": "End-to-End Encrypted Document Upload",
+          "description": "Clients upload their tax documents through an encrypted channel that protects files from the moment they leave the client device until they reach your team. This approach is substantially more secure than email attachments or consumer file sharing services.",
+          "details": [
+            "Encryption in transit and at rest for every uploaded file",
+            "Secure upload links that can be sent to clients who are new to the portal",
+            "File type validation that helps prevent accidental uploads of incorrect documents"
+          ]
+        },
+        {
+          "title": "Secure Messaging for Confidential Tax Conversations",
+          "description": "Your tax clients can ask questions about deductions, share details about their financial situation, and receive guidance from your team through a messaging system that keeps everything confidential and organized.",
+          "details": [
+            "Messages stored within the encrypted portal rather than in email systems",
+            "Conversation threads tied to specific tax returns or engagement periods",
+            "Notification alerts that bring clients back to the portal to read responses securely"
+          ]
+        },
+        {
+          "title": "Compliance-Ready File Sharing and Audit Trails",
+          "description": "Every document exchange and message is logged with timestamps and access records. This creates an audit trail that supports your compliance obligations and provides documentation if questions ever arise about how client data was handled.",
+          "details": [
+            "Detailed access logs showing who viewed or downloaded each document",
+            "Configurable retention policies that align with tax record keeping requirements",
+            "Secure delivery confirmation when completed returns or documents are shared back to clients"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does the portal security compare to what we currently use for sharing tax documents?",
+          "answer": "If your tax preparation practice currently relies on email or consumer-grade file sharing tools, the security improvement is substantial. The portal provides encryption that meets professional standards for handling financial data, whereas standard email offers very limited protection. We can walk you through the specific differences during an initial consultation.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will our less tech-savvy tax clients be able to use the secure portal?",
+          "answer": "The portals we configure are designed to be straightforward for clients of all technical comfort levels. The upload process is typically simpler than attaching a file to an email. We also help you create clear instructions and onboarding materials that guide clients through their first login and upload without needing to call your office.",
+          "category": "General"
+        },
+        {
+          "question": "What encryption standards does the portal use to protect our tax client data?",
+          "answer": "The portal platforms we work with typically use AES-256 encryption for data at rest and TLS 1.2 or higher for data in transit. These are the same encryption standards used by major financial institutions. We verify the specific security certifications during the selection process to ensure they meet the requirements of your tax preparation practice.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Secure Your Tax Client Document Exchange?",
+      "ctaDescription": "Schedule a free security assessment and we will evaluate your current document sharing process, identify potential vulnerabilities, and show you how a secure portal could better protect your tax clients and your practice."
+    },
+    "document-portal-for-bookkeepers": {
+      "heroSubtitleTemplate": "Provide your bookkeeping clients with a dedicated document portal for uploading receipts, sharing financial statements, and keeping files organized so monthly collaboration runs smoothly.",
+      "heroDescription": "Bookkeeping relationships depend on a steady flow of documents. Receipts, bank statements, invoices, and expense reports need to move from your clients to your team on a regular basis, and finished reports need to get back to them just as reliably. When this exchange happens through email attachments, text messages, and random file sharing links, things get lost, deadlines slip, and your team spends time hunting down documents instead of doing bookkeeping work. A document portal built for bookkeeping gives your clients one clear place to upload what you need and access what you have prepared for them.",
+      "benefits": [
+        {
+          "title": "Streamlined Receipt and Document Collection Each Month",
+          "description": "Instead of chasing clients for receipts and bank statements through multiple channels, a document portal gives them a single destination for uploading everything your team needs. Clients can upload from their phone right after a purchase or batch their documents at the end of the week, whatever works for their routine."
+        },
+        {
+          "title": "Organized File Structure That Saves Time During Reconciliation",
+          "description": "Documents uploaded through the portal can be automatically sorted by month, category, or account. When your bookkeeping team sits down to reconcile, the files they need are already organized and waiting rather than scattered across email threads and shared folders."
+        },
+        {
+          "title": "Easy Statement Sharing That Keeps Clients Informed",
+          "description": "Financial statements, reconciliation summaries, and monthly reports can be published to the portal for your bookkeeping clients to access whenever they need them. This eliminates the cycle of clients requesting reports and your team stopping to resend files that were already delivered."
+        }
+      ],
+      "features": [
+        {
+          "title": "Mobile-Friendly Receipt Upload for Bookkeeping Clients",
+          "description": "Your bookkeeping clients can snap a photo of a receipt and upload it directly to the portal from their phone. This captures expenses in real time and reduces the pile of paper receipts that often arrives in a shoebox at the end of the month.",
+          "details": [
+            "Camera-to-portal upload that works on any smartphone without a separate app",
+            "Automatic date and amount detection that helps categorize receipts on upload",
+            "Upload confirmation so clients know their documents were received successfully"
+          ]
+        },
+        {
+          "title": "Monthly Document Organization and Filing Structure",
+          "description": "The portal organizes client documents into a logical filing structure that mirrors your bookkeeping workflow. Each month gets its own folder, and documents are categorized by type so your team can find what they need without searching.",
+          "details": [
+            "Pre-configured folder templates organized by month and document category",
+            "Tagging and labeling options that match your bookkeeping chart of accounts",
+            "Missing document indicators that show your team which items are still outstanding"
+          ]
+        },
+        {
+          "title": "Financial Statement Distribution and Client Access",
+          "description": "When monthly bookkeeping is complete, you publish the finished reports to the portal and your client receives a notification. They can review their financial statements, download what they need, and reference past months all from one location.",
+          "details": [
+            "One-click publishing of completed financial statements and reports",
+            "Historical archive where clients can access any prior month without requesting it",
+            "Read receipts that confirm when clients have viewed their financial reports"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can our bookkeeping clients really be trained to upload receipts consistently through a portal?",
+          "answer": "Consistency improves significantly when the process is simple and convenient. The portals we set up allow clients to upload a receipt photo directly from their phone in under thirty seconds. We also help you establish expectations during onboarding so clients understand the routine. Most bookkeeping firms see a noticeable improvement in document collection within the first two to three months.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does the document portal handle the different types of files our bookkeeping clients send?",
+          "answer": "The portal accepts all common file types including photos, PDFs, spreadsheets, and scanned documents. Files are organized by the categories you define, so whether a client uploads a photo of a gas receipt or a PDF bank statement, it lands in the right place for your team to find during reconciliation.",
+          "category": "General"
+        },
+        {
+          "question": "Can the portal integrate with our bookkeeping software so we do not have to re-enter data?",
+          "answer": "Many of the portal platforms we work with offer integrations or export options that connect with popular bookkeeping and accounting software. During our initial assessment, we review your current tools and identify the most efficient way to move data from the portal into your bookkeeping workflow without manual re-entry.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Simplify Document Collection for Your Bookkeeping Practice?",
+      "ctaDescription": "Book a free consultation and we will look at how your bookkeeping clients currently send you documents, then show you how a dedicated portal could make the whole process faster and more organized."
+    },
+    "client-access-portal-for-cpas": {
+      "heroSubtitleTemplate": "Give your CPA clients a dedicated access portal where they can check engagement progress, review upcoming deadlines, and access completed deliverables without needing to contact your office.",
+      "heroDescription": "CPA clients often want to know where things stand but do not want to feel like they are bothering your team with every question. An access portal gives them a window into engagement progress, upcoming deadlines, and completed deliverables that they can check anytime. This kind of visibility tends to strengthen client relationships because it demonstrates transparency and builds confidence that your firm is on top of their work. For your team, it means fewer interruption calls and more time spent on billable work.",
+      "benefits": [
+        {
+          "title": "Engagement Progress Visibility That Builds Client Confidence",
+          "description": "When CPA clients can see that their tax return is in review, their audit fieldwork is seventy percent complete, or their advisory report is in final editing, they feel informed and reassured. This visibility often strengthens the client relationship more than any status update email could."
+        },
+        {
+          "title": "Deadline Awareness That Keeps Clients Proactive",
+          "description": "Clients who can see upcoming deadlines in their portal are more likely to provide requested information on time. Instead of your team sending repeated reminders, the portal keeps deadlines visible and sends automated alerts as dates approach."
+        },
+        {
+          "title": "On-Demand Deliverable Access That Reduces Administrative Requests",
+          "description": "Once your team publishes a completed deliverable to the portal, the client can download it whenever they need it. Tax returns, financial statements, and advisory reports all live in one accessible archive, which means your staff stops fielding requests to resend documents that were delivered months ago."
+        }
+      ],
+      "features": [
+        {
+          "title": "Real-Time Engagement Progress Dashboard",
+          "description": "Each CPA client sees a dashboard showing the current status of every active engagement. Progress indicators, milestone markers, and stage descriptions give clients a clear picture of where their work stands without requiring a phone call.",
+          "details": [
+            "Visual progress bars that show completion percentage for each engagement",
+            "Milestone descriptions that explain what each stage involves in plain language",
+            "Last-updated timestamps so clients know the information is current"
+          ]
+        },
+        {
+          "title": "Deadline Calendar and Automated Reminders",
+          "description": "The portal presents a clear view of all upcoming deadlines relevant to each CPA client. Filing deadlines, document submission dates, and meeting schedules are all visible in one place, with automated reminders that help clients stay ahead.",
+          "details": [
+            "Personalized deadline calendar showing only the dates relevant to each client",
+            "Configurable reminder schedules that alert clients as deadlines approach",
+            "Integration points with your firm calendar to keep internal and client-facing dates aligned"
+          ]
+        },
+        {
+          "title": "Deliverable Library and Document Archive",
+          "description": "Completed work products are published to the portal where clients can review, download, and reference them at any time. This creates a growing archive of everything your CPA firm has produced for each client, organized by year and engagement type.",
+          "details": [
+            "Chronological archive of all deliverables organized by engagement and year",
+            "Secure download with access logging for compliance and record keeping purposes",
+            "Notification to clients when new deliverables are published and ready for review"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much effort does it take for our CPA team to keep the client access portal up to date?",
+          "answer": "The portal is designed to pull status information from your existing workflow, so the effort for your team is typically minimal once the initial configuration is complete. If your practice management system tracks engagement stages, those updates can flow into the portal automatically. We work with you during setup to find the approach that adds the least friction to your existing process.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What kind of information should we make visible to CPA clients through the portal?",
+          "answer": "We recommend starting with engagement status, upcoming deadlines, and completed deliverables. These are the three things CPA clients ask about most frequently. From there, you can decide whether to add billing information, historical documents, or other resources based on what your clients find most valuable. We help you make those decisions during the planning phase.",
+          "category": "General"
+        },
+        {
+          "question": "Can different CPA clients see different levels of detail based on their engagement type?",
+          "answer": "Yes, the portal can be configured with different access levels and views based on client type, engagement scope, or any other criteria that makes sense for your practice. An audit client might see different status stages than a tax-only client, and each view can be tailored to show the information that is most relevant to their specific engagement.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Give Your CPA Clients Better Visibility?",
+      "ctaDescription": "Schedule a free consultation and we will review how your CPA firm currently communicates engagement progress, then show you how a client access portal could reduce status inquiries and strengthen client relationships."
+    }
   }
 }

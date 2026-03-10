@@ -1,8 +1,6 @@
 import ServicePageTemplate from "@/templates/ServicePageTemplate";
 import { ServicePageData } from "@/types/cms";
 import SEO from "@/components/SEO";
-import RelatedContent from "@/components/sections/RelatedContent";
-import { getRelationships } from "@/config/internalLinks";
 
 const EmailMarketing = () => {
   const serviceData: ServicePageData = {
@@ -104,34 +102,9 @@ const EmailMarketing = () => {
     relatedBlogTags: ['email-marketing', 'lead-generation', 'client-retention', 'accounting-automation']
   };
 
-  const links = getRelationships("/services/email-marketing-for-accounting-firms");
   return (
     <ServicePageTemplate
       data={serviceData}
-      beforeFinalCta={
-        <>
-          <section className="py-10 px-6 md:px-12 bg-gradient-to-r from-primary/5 to-secondary/5">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-foreground font-medium">
-                Looking for full-funnel automation beyond email? Our{" "}
-                <a href="/services/marketing-automation-for-accounting-firms/" className="text-primary font-semibold underline hover:text-secondary transition-colors">
-                  Marketing Automation service
-                </a>{" "}
-                connects email, SMS, and lead follow-up into one system.
-              </p>
-            </div>
-          </section>
-          {links.relatedServices && (
-            <RelatedContent heading="Related Services" items={links.relatedServices} />
-          )}
-          {links.relatedSolutions && (
-            <RelatedContent heading="Solutions This Supports" items={links.relatedSolutions} variant="teal" />
-          )}
-          {links.relatedTools && (
-            <RelatedContent heading="Free Tools" items={links.relatedTools} />
-          )}
-        </>
-      }
     />
   );
 };

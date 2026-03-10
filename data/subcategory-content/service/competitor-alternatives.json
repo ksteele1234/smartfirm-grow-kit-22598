@@ -68,5 +68,469 @@
     "tax preparers": {
       "heroDescription": "Tax preparation has a unique cadence that most general agencies and automation consultants simply do not understand. The seasonal intensity, the document collection crunch, the extension management process, and the off season advisory opportunity are all specific to your world. When your automation partner already knows these patterns, the systems they build reflect your reality instead of a generic small business template that needs constant adjustment."
     }
+  },
+  "slugOverrides": {
+    "alternative-to-cpasitesolutions-for-accounting-firms": {
+      "heroSubtitleTemplate": "CPA Site Solutions builds clean websites for accounting firms, and they have served the industry for years. But if your firm has outgrown a template website and needs a full done-for-you marketing engine, it may be time to explore what a more comprehensive approach could look like.",
+      "heroDescription": "Many accounting firms start with CPA Site Solutions because it offers a straightforward way to get a professional website up and running. That is a perfectly reasonable starting point. However, as your practice grows and you begin thinking about lead generation, automated follow-up sequences, client onboarding workflows, and measurable marketing performance, you may find that a website alone does not move the needle the way you need. SmartFirm takes a different approach by building an integrated marketing and automation system designed specifically for accounting firms, so your online presence works as a growth engine rather than a digital brochure.",
+      "benefits": [
+        {
+          "title": "A Complete Marketing System, Not Just a Website",
+          "description": "A professional website is one piece of the puzzle, but accounting firms that want to grow consistently often need lead capture, nurture sequences, reputation management, and client communication workflows all working together. SmartFirm builds these systems as a connected whole, which can help your firm convert more of the visitors who already find you online."
+        },
+        {
+          "title": "Done-for-You Implementation From Start to Finish",
+          "description": "Rather than handing you a template and leaving you to figure out the rest, our team handles the strategy, build-out, content creation, and ongoing optimization. For accounting firm owners who are already stretched thin managing client work, having a partner who executes the entire process can free up significant time and mental bandwidth."
+        },
+        {
+          "title": "Built Around How Accounting Firms Actually Grow",
+          "description": "Every system we build reflects the realities of running an accounting practice, from seasonal client acquisition patterns to the specific service lines that tend to drive the most revenue. This specialization means your marketing infrastructure is designed to support your actual growth goals rather than following a one-size-fits-all playbook."
+        }
+      ],
+      "features": [
+        {
+          "title": "Integrated Lead Generation and Nurture Workflows",
+          "description": "Instead of a website that simply displays your services and contact information, SmartFirm builds lead capture mechanisms paired with automated follow-up sequences. When a prospective client visits your site, the system is designed to guide them toward scheduling a consultation rather than leaving them to browse and move on.",
+          "details": [
+            "Landing pages and forms tailored to the services accounting firms promote most",
+            "Automated email and text sequences that follow up with prospects who express interest",
+            "Lead scoring and routing so your team focuses on the most promising opportunities"
+          ]
+        },
+        {
+          "title": "Reputation and Review Management Built In",
+          "description": "Online reviews play an increasingly important role in how prospective clients choose an accounting firm. SmartFirm includes automated review request workflows that encourage satisfied clients to share their experience, helping your firm build the kind of social proof that can influence a prospect's decision before they ever contact you.",
+          "details": [
+            "Automated review requests triggered at natural points in your client workflow",
+            "Monitoring and alerts so you can respond to reviews promptly",
+            "Integration with the platforms where accounting firm clients are most likely to search"
+          ]
+        },
+        {
+          "title": "Performance Tracking That Connects Marketing to Revenue",
+          "description": "Knowing how many people visited your website is useful, but understanding which marketing activities are actually driving new client engagements is what helps you make smarter decisions. SmartFirm provides reporting that connects your marketing efforts to real business outcomes, giving you visibility into what is working and where adjustments could improve results.",
+          "details": [
+            "Dashboard reporting that ties lead sources to client acquisition",
+            "Campaign-level performance data so you can see which efforts produce the best return",
+            "Regular performance reviews with recommendations for optimization"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "We already have a CPA Site Solutions website. Is it difficult to transition to SmartFirm?",
+          "answer": "The transition process is designed to be as smooth as possible. Our team handles the migration, including content transfer and redirect setup, so you do not lose the SEO value your current site has built. Most firms find the transition takes a few weeks, and we work around your schedule to minimize any disruption to your day-to-day operations.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What does SmartFirm offer that a template website provider does not?",
+          "answer": "The core difference is scope. A template website gives you an online presence, which is important but limited. SmartFirm builds an integrated system that includes lead generation, automated follow-up, client communication workflows, review management, and performance reporting. It is the difference between having a storefront and having a full sales and marketing operation working behind the scenes.",
+          "category": "General"
+        },
+        {
+          "question": "Can SmartFirm integrate with the practice management tools we already use?",
+          "answer": "Yes. SmartFirm is designed to work with the tools accounting firms commonly rely on, including popular practice management platforms, email systems, and scheduling software. During onboarding, we map out your existing technology stack and build integrations that keep your systems connected without requiring you to change the tools you already know and trust.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Move Beyond a Template Website?",
+      "ctaDescription": "Schedule a free consultation and we will walk you through how SmartFirm's done-for-you marketing system could help your accounting firm attract and convert more of the right clients."
+    },
+    "better-than-buildyourfirm-for-cpas": {
+      "heroSubtitleTemplate": "BuildYourFirm has helped many CPAs with traditional marketing services like newsletters and website design. If your practice is looking for a more automated, technology-driven approach that handles the full client acquisition journey, SmartFirm may be worth exploring.",
+      "heroDescription": "BuildYourFirm has been a trusted name in accounting firm marketing for a long time, and they have helped plenty of CPAs establish their brand and stay in touch with clients through newsletters and content. That foundation matters. But as the way people find and choose their CPA has evolved, many firms are discovering they need more than traditional marketing deliverables. They need connected systems that capture leads, nurture prospects automatically, and provide clear data on what is working. SmartFirm offers CPAs a comprehensive automation platform that brings marketing, sales follow-up, and client communication into a single system built specifically for how modern accounting practices operate.",
+      "benefits": [
+        {
+          "title": "Automation That Works While You Focus on Client Work",
+          "description": "Traditional marketing often requires ongoing manual effort to stay consistent. SmartFirm builds automated workflows that continue nurturing prospects, requesting reviews, and following up with leads even when you are deep in a busy season or focused on complex client engagements. This can help CPAs maintain a steady pipeline without adding to their daily workload."
+        },
+        {
+          "title": "One Connected Platform Instead of Separate Services",
+          "description": "When your website, email marketing, CRM, and follow-up sequences all live in separate systems, things tend to fall through the cracks. SmartFirm consolidates these functions into a single platform, which means your lead data, communication history, and marketing performance are all visible in one place rather than scattered across multiple tools and vendors."
+        },
+        {
+          "title": "A Modern Client Acquisition Experience",
+          "description": "The way prospective clients evaluate and choose a CPA has shifted significantly in recent years. They research online, read reviews, compare options, and expect a responsive experience. SmartFirm helps CPAs meet those expectations with a modern digital presence backed by the automation needed to convert interest into consultations."
+        }
+      ],
+      "features": [
+        {
+          "title": "Full-Funnel Lead Management for CPA Practices",
+          "description": "SmartFirm does not just help you attract attention. It provides the infrastructure to manage leads from first touch through onboarding. For CPAs who have relied on traditional marketing to generate awareness but struggled to convert that awareness into booked meetings, this end-to-end approach can make a meaningful difference.",
+          "details": [
+            "Automated lead capture from multiple channels including your website, social profiles, and paid campaigns",
+            "Intelligent follow-up sequences that adapt based on how prospects engage with your content",
+            "Pipeline visibility that shows exactly where each prospect stands in their decision-making process"
+          ]
+        },
+        {
+          "title": "Automated Client Communication Workflows",
+          "description": "Staying in touch with clients and prospects consistently is one of the most effective ways to grow a CPA practice, but it is also one of the hardest to maintain manually. SmartFirm builds communication workflows that handle routine outreach automatically, from seasonal reminders and document requests to check-in messages and referral prompts.",
+          "details": [
+            "Pre-built communication templates designed around the CPA client lifecycle",
+            "Trigger-based messaging that sends the right communication at the right time",
+            "Multi-channel delivery including email and text so you reach clients where they are most responsive"
+          ]
+        },
+        {
+          "title": "Data-Driven Marketing Decisions",
+          "description": "One of the challenges with traditional marketing services is that it can be hard to know exactly what is driving results. SmartFirm provides CPAs with clear reporting that connects marketing activity to new client acquisition, so you can make informed decisions about where to invest your marketing budget going forward.",
+          "details": [
+            "Attribution reporting that shows which marketing channels produce the most qualified leads",
+            "ROI tracking that helps you understand the actual return on your marketing investment",
+            "Actionable insights delivered in plain language rather than marketing jargon"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "We have used BuildYourFirm for years. Why should we consider changing?",
+          "answer": "BuildYourFirm has served the accounting profession well, and there is nothing wrong with the work they do. The question is whether your practice has outgrown what traditional marketing deliverables can accomplish. If you find yourself wanting more automation, better lead tracking, and clearer data on what is actually driving new clients, SmartFirm may offer the next level of capability your firm needs. We are happy to walk you through the differences so you can decide what makes the most sense.",
+          "category": "General"
+        },
+        {
+          "question": "How does the setup process work if we are transitioning from another provider?",
+          "answer": "Our onboarding team manages the transition from start to finish. We audit your current marketing assets, identify what should be carried forward, and build your new system without disrupting your existing client relationships. The typical onboarding process takes a few weeks, and we coordinate closely with you throughout to make sure nothing important gets lost in the transition.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Does SmartFirm integrate with the accounting software and tools we already use?",
+          "answer": "SmartFirm is built to connect with the platforms CPAs rely on every day. During onboarding, we review your current technology stack and configure integrations so that your marketing and automation system works in harmony with your practice management software, email platform, and scheduling tools. The goal is to enhance your existing workflow rather than replace it.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Curious What a More Automated Approach Could Look Like?",
+      "ctaDescription": "Book a free strategy call and we will show you how SmartFirm's all-in-one platform could help your CPA practice generate and convert more leads with less manual effort."
+    },
+    "replacement-for-taxpromarketer-services": {
+      "heroSubtitleTemplate": "TaxProMarketer has helped tax professionals with client acquisition through direct mail and proven outreach methods. If your practice is ready to complement those traditional approaches with modern digital automation, SmartFirm offers a fresh perspective built for how today's tax clients find and choose their preparer.",
+      "heroDescription": "TaxProMarketer built their reputation on helping tax preparers attract new clients through direct mail campaigns and grassroots marketing strategies, and those methods have delivered results for many firms over the years. As the landscape has shifted, though, more and more tax clients begin their search online, read reviews before making a decision, and expect a digital-first experience when they reach out. SmartFirm helps tax preparers meet clients where they are now, with a comprehensive digital marketing and automation platform that handles everything from online lead generation to automated follow-up, client onboarding, and retention workflows, all designed specifically for tax preparation businesses.",
+      "benefits": [
+        {
+          "title": "Meet Tax Clients Where They Are Searching Today",
+          "description": "While direct mail still has a place in certain markets, the majority of people looking for a new tax preparer start their search online. SmartFirm ensures your practice shows up when and where prospective clients are looking, with a digital presence optimized for the way people actually find and evaluate tax professionals in today's environment."
+        },
+        {
+          "title": "Automated Systems That Handle the Seasonal Surge",
+          "description": "Tax preparation businesses face a unique challenge. Inquiries flood in during the busiest time of year, which is exactly when you have the least capacity to follow up manually. SmartFirm builds automated workflows that capture, qualify, and nurture leads even during peak season, so you do not lose potential clients simply because your team was too busy to respond quickly enough."
+        },
+        {
+          "title": "Year-Round Client Engagement, Not Just Seasonal Campaigns",
+          "description": "One of the most common growth opportunities for tax preparers is staying connected with clients throughout the year rather than only during filing season. SmartFirm creates automated communication sequences that keep your practice top of mind, encourage referrals, and introduce additional services during the months when traditional tax marketing goes quiet."
+        }
+      ],
+      "features": [
+        {
+          "title": "Digital Lead Generation Designed for Tax Practices",
+          "description": "SmartFirm builds a lead generation system tailored to the services tax preparers offer and the clients they want to attract. Rather than casting a wide net with generic campaigns, we focus on reaching the specific types of clients your practice serves best, whether that is individual filers, small business owners, or clients with more complex tax situations.",
+          "details": [
+            "Targeted landing pages for the tax services that drive the most revenue for your practice",
+            "Local search optimization so nearby prospects find you when they search for tax preparation help",
+            "Paid advertising management focused on the geographic areas and client types you want to reach"
+          ]
+        },
+        {
+          "title": "Automated Follow-Up That Converts Inquiries Into Appointments",
+          "description": "When a potential client reaches out to a tax preparer, speed and consistency matter. SmartFirm builds automated response and follow-up sequences that engage prospects within minutes of their inquiry, guide them toward booking an appointment, and continue nurturing those who are not quite ready to commit. This can dramatically improve your conversion rate compared to relying on manual callbacks.",
+          "details": [
+            "Instant automated responses that acknowledge inquiries and set expectations",
+            "Multi-step follow-up sequences delivered via email and text over days and weeks",
+            "Appointment scheduling integration that makes booking a meeting frictionless for the prospect"
+          ]
+        },
+        {
+          "title": "Client Retention and Referral Automation",
+          "description": "Keeping existing clients coming back year after year and encouraging them to refer friends and family is one of the most cost-effective ways to grow a tax practice. SmartFirm automates the touchpoints that drive retention and referrals, so these critical activities happen consistently without requiring you to remember to send that email or make that call.",
+          "details": [
+            "Automated post-season thank you messages and satisfaction surveys",
+            "Referral request workflows triggered at optimal moments in the client relationship",
+            "Year-round content and communication that positions your practice as a trusted resource beyond tax season"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can SmartFirm work alongside our existing direct mail efforts?",
+          "answer": "Absolutely. Many tax preparers find that combining traditional outreach with a strong digital presence and automated follow-up produces better results than either approach alone. SmartFirm can be set up to complement your current marketing activities, capturing and nurturing leads from all sources so nothing falls through the cracks regardless of how a prospect first learns about your practice.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does SmartFirm handle the seasonal nature of tax preparation?",
+          "answer": "Our system is designed with tax seasonality in mind. We ramp up lead generation and follow-up automation ahead of filing season, build in capacity for the high volume of inquiries during peak months, and shift to retention and referral workflows during the off-season. This means your marketing system adapts to your calendar rather than running on a static schedule that ignores the reality of your business.",
+          "category": "General"
+        },
+        {
+          "question": "What kind of technology or software do we need to have in place to use SmartFirm?",
+          "answer": "SmartFirm is a managed platform, so you do not need to purchase or maintain separate marketing technology. We provide the tools and handle the configuration. If you already use tax preparation software, practice management tools, or email platforms, we can typically integrate with those systems so everything works together. Our onboarding team assesses your current setup and makes recommendations during the initial consultation.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Interested in a Modern Approach to Growing Your Tax Practice?",
+      "ctaDescription": "Schedule a free consultation and we will walk you through how SmartFirm's digital marketing and automation platform could help your tax preparation business attract more clients and keep them coming back year after year."
+    },
+    "cpasitesolutions-alternative-with-transparent-roi": {
+      "heroSubtitleTemplate": "CPA Site Solutions provides accounting firms with professional websites, and that online foundation is important. If your firm wants to go further and understand exactly how your marketing investment translates into new clients and revenue, SmartFirm's ROI-focused approach may be the next step.",
+      "heroDescription": "Having a polished website is table stakes for any accounting firm that wants to be taken seriously by prospective clients. CPA Site Solutions has helped many firms achieve that. But for accounting firms that are investing in marketing and want to see a clear connection between what they spend and what they get back, a website alone often does not provide enough visibility. SmartFirm is built around the principle that every marketing dollar should be traceable to a result. Our platform gives accounting firms transparent reporting that connects your marketing activities to actual client acquisition, so you always know whether your investment is producing a meaningful return or whether adjustments are needed.",
+      "benefits": [
+        {
+          "title": "Know Exactly What Your Marketing Investment Produces",
+          "description": "Many accounting firms spend money on marketing without a clear picture of what they are getting in return. SmartFirm provides transparent reporting that tracks leads from their first interaction all the way through to becoming a paying client. This visibility helps you make confident decisions about where to allocate your marketing budget based on real data rather than assumptions."
+        },
+        {
+          "title": "Measurable Results Tied to Business Outcomes",
+          "description": "Website traffic and page views can be interesting, but they do not pay the bills. SmartFirm focuses on the metrics that matter to an accounting firm, such as the number of qualified leads generated, consultations booked, and new clients acquired. When your reporting is tied to business outcomes, you can evaluate your marketing as a true investment rather than an expense."
+        },
+        {
+          "title": "Continuous Optimization Based on Performance Data",
+          "description": "Transparent ROI reporting is not just about knowing what happened. It is about using that information to improve what happens next. SmartFirm uses performance data to continuously refine your campaigns, messaging, and automation workflows, which means your system should get more effective over time rather than delivering static results."
+        }
+      ],
+      "features": [
+        {
+          "title": "End-to-End Lead Attribution for Accounting Firms",
+          "description": "SmartFirm tracks every lead from the moment they first interact with your marketing through to their decision to engage your firm. This end-to-end attribution gives you a clear picture of which channels, campaigns, and content pieces are actually driving new business, eliminating the guesswork that often accompanies marketing investments.",
+          "details": [
+            "Source tracking that identifies where each lead first discovered your firm",
+            "Touchpoint mapping that shows the full journey from initial awareness to consultation booking",
+            "Channel comparison reporting so you can see which marketing investments produce the strongest results"
+          ]
+        },
+        {
+          "title": "Revenue-Connected Reporting Dashboards",
+          "description": "SmartFirm's reporting goes beyond standard marketing metrics by connecting your lead generation data to actual revenue outcomes. For accounting firm owners and partners who want to understand the true return on their marketing spend, this level of transparency can fundamentally change how you evaluate and plan your growth investments.",
+          "details": [
+            "Cost-per-lead and cost-per-acquisition calculations updated in real time",
+            "Revenue attribution that estimates the lifetime value of clients acquired through each marketing channel",
+            "Monthly and quarterly ROI summaries delivered in a format that is easy to share with partners and stakeholders"
+          ]
+        },
+        {
+          "title": "Proactive Performance Management",
+          "description": "Rather than simply showing you a report and leaving you to interpret it, SmartFirm's team actively monitors your performance data and makes recommendations for improvement. If a campaign is underperforming, we identify the issue and propose changes. If a channel is outperforming, we look for ways to expand it. This proactive approach helps ensure your marketing investment stays on track.",
+          "details": [
+            "Regular performance reviews with actionable recommendations from our team",
+            "Early identification of underperforming campaigns with suggested adjustments",
+            "Opportunity analysis that highlights areas where increased investment could yield strong returns"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How is SmartFirm's reporting different from the analytics we get with our current website?",
+          "answer": "Standard website analytics tell you things like how many people visited your site and which pages they viewed. SmartFirm's reporting goes several steps further by tracking what those visitors did after they arrived. Did they fill out a form? Did they book a consultation? Did they become a client? By connecting the full journey, we give you visibility into which marketing efforts are actually producing revenue for your firm, not just traffic.",
+          "category": "General"
+        },
+        {
+          "question": "How long does it typically take to see meaningful data in the ROI reports?",
+          "answer": "Most accounting firms begin seeing actionable lead generation data within the first few weeks after launch. ROI reporting that connects marketing spend to client acquisition typically becomes more robust after sixty to ninety days, once enough leads have moved through the full pipeline. We set expectations clearly during onboarding so you know what to look for at each stage.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can we integrate SmartFirm's reporting with our existing accounting or practice management software?",
+          "answer": "In many cases, yes. SmartFirm is designed to connect with the tools accounting firms commonly use, and our team works with you during onboarding to determine which integrations make the most sense for your workflow. The goal is to create a unified view of your business development efforts without requiring you to adopt entirely new systems.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Want to See the Real Return on Your Marketing Investment?",
+      "ctaDescription": "Book a free consultation and we will show you how SmartFirm's transparent ROI reporting can give your accounting firm clear visibility into what your marketing dollars are actually producing."
+    },
+    "buildyourfirm-alternative-with-done-for-you-setup": {
+      "heroSubtitleTemplate": "BuildYourFirm provides CPAs with marketing tools and resources that your team can put to work. If your practice needs a partner who handles the entire setup and ongoing management so you can stay focused on serving clients, SmartFirm's done-for-you model may be a better fit.",
+      "heroDescription": "BuildYourFirm has earned its reputation by offering CPAs a range of marketing resources, from newsletters to website design and branding. For firms with the internal bandwidth to manage those tools and keep the marketing engine running, that approach can work well. But many CPAs tell us they simply do not have the time, the team, or the desire to manage their own marketing on top of everything else they are responsible for. SmartFirm was built for that reality. Our done-for-you model means we handle strategy, implementation, content, automation, and ongoing optimization on your behalf, so your marketing runs effectively without requiring your constant attention.",
+      "benefits": [
+        {
+          "title": "Your Marketing Runs Without Adding to Your Workload",
+          "description": "For CPAs who are already managing client relationships, compliance deadlines, and team oversight, adding marketing management to the list often means it gets deprioritized or done inconsistently. SmartFirm's done-for-you approach means your lead generation, follow-up automation, and client communication workflows operate continuously without requiring your involvement in the day-to-day execution."
+        },
+        {
+          "title": "Professional Execution Without Hiring an In-House Team",
+          "description": "Building an internal marketing team is expensive and time-consuming, and for many CPA practices it is not practical. SmartFirm gives you access to a team of specialists who handle everything from strategy to technical implementation, effectively functioning as your outsourced marketing department without the overhead of recruiting, training, and managing additional staff."
+        },
+        {
+          "title": "Faster Time to Results With a Managed Setup Process",
+          "description": "When you are given marketing tools and left to set them up yourself, it can take months before anything is fully operational, especially if marketing is not your area of expertise. SmartFirm's onboarding team builds and launches your entire system, typically getting you to a fully operational state significantly faster than a self-service approach because our team does this every day for practices like yours."
+        }
+      ],
+      "features": [
+        {
+          "title": "Complete Onboarding Managed by Our Team",
+          "description": "SmartFirm's onboarding process is designed so that you spend your time answering a few strategic questions about your practice and goals, and we handle everything else. From setting up your CRM and building automation workflows to creating landing pages and configuring integrations, our team manages the technical work so you do not have to learn a new platform or carve out weeks of time for setup.",
+          "details": [
+            "A structured onboarding process that captures your practice goals and client profile in a single discovery session",
+            "Technical setup including CRM configuration, automation workflows, and landing page creation handled entirely by our team",
+            "Integration with your existing tools so the new system works alongside what you already have in place"
+          ]
+        },
+        {
+          "title": "Ongoing Marketing Management and Optimization",
+          "description": "The done-for-you model does not stop at setup. SmartFirm's team continues managing your marketing operations on an ongoing basis, monitoring performance, adjusting campaigns, updating content, and refining automation workflows. This means your marketing stays current and effective without requiring you to keep a constant eye on it.",
+          "details": [
+            "Continuous monitoring of campaign performance with proactive adjustments when needed",
+            "Regular content updates and seasonal campaign modifications aligned with your practice calendar",
+            "Periodic strategy reviews to ensure your marketing approach evolves as your practice grows"
+          ]
+        },
+        {
+          "title": "Responsive Support When You Need It",
+          "description": "Even with a done-for-you model, there are times when you want to discuss strategy, request a change, or ask a question. SmartFirm provides dedicated support from a team that understands your practice and your system. You are not submitting tickets to a generic help desk. You are reaching out to people who know your business and can act on your requests quickly.",
+          "details": [
+            "A dedicated point of contact who is familiar with your practice and your marketing system",
+            "Responsive communication channels for questions, change requests, and strategy discussions",
+            "Support that is informed by your practice context so you spend less time explaining and more time getting answers"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much of our time does the done-for-you setup actually require?",
+          "answer": "The primary time commitment on your end is a discovery session where we learn about your practice, your goals, and your ideal client profile. After that, our team handles the build-out, and we check in with you at key milestones for review and feedback. Most CPAs tell us the process requires far less of their time than they expected, which is exactly the point.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if we want to be more involved in the marketing process?",
+          "answer": "The done-for-you model is flexible. Some CPAs prefer to be hands-off and trust us to run things, while others want to review content before it goes out or be more involved in strategic decisions. We adapt to your preferred level of involvement. The key difference from a self-service model is that you always have the option to step back and let us handle things when your plate is full.",
+          "category": "General"
+        },
+        {
+          "question": "What platforms and technologies does SmartFirm use for the automation and marketing system?",
+          "answer": "SmartFirm uses a proprietary platform built specifically for professional service firms, combined with integrations to widely used tools in the accounting space. During onboarding, we assess your current technology environment and configure everything to work together. You do not need to become an expert in any new software because our team manages the technology on your behalf.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Want a Marketing System That Runs Without Your Constant Attention?",
+      "ctaDescription": "Schedule a free consultation and we will show you how SmartFirm's done-for-you model could take marketing off your plate so you can focus on serving your CPA clients."
+    },
+    "alternative-to-we-are-pf-for-cpas": {
+      "heroSubtitleTemplate": "We Are PF has built a community around helping accounting professionals think differently about their practices and their marketing. SmartFirm shares that spirit of innovation but takes a different path, focusing on building and managing the actual systems that turn marketing ideas into client acquisition results.",
+      "heroDescription": "We Are PF has done meaningful work in encouraging CPAs to rethink how they present themselves, engage with clients, and build their brands. Their community-driven approach and emphasis on authenticity have resonated with many forward-thinking accounting professionals, and that contribution to the profession is valuable. Where SmartFirm takes a different approach is in execution. While We Are PF provides inspiration, education, and community, SmartFirm focuses on building the concrete marketing and automation infrastructure that translates those ideas into measurable client growth. For CPAs who appreciate the philosophy behind modern, client-centric marketing but need a partner to actually implement and manage the systems, SmartFirm bridges the gap between vision and operational reality.",
+      "benefits": [
+        {
+          "title": "From Inspiration to Implementation",
+          "description": "Great marketing ideas only produce results when they are implemented effectively. SmartFirm takes the principles of modern, client-centric marketing and builds them into working systems, including lead generation funnels, automated nurture sequences, and client communication workflows. If you have been inspired to modernize your approach but need help making it operational, that is exactly where we focus."
+        },
+        {
+          "title": "Managed Systems That Produce Measurable Outcomes",
+          "description": "Community and education are powerful, but at some point you need systems that run and results you can measure. SmartFirm provides CPAs with a managed platform that generates leads, nurtures prospects, and tracks the outcomes so you can see what your marketing investment is actually producing. This complements any educational resources you have benefited from by adding the execution layer."
+        },
+        {
+          "title": "A Partner Focused on Your Individual Practice Results",
+          "description": "Community-based programs are designed to serve a broad audience with shared learning experiences. SmartFirm works with your practice individually, building custom systems based on your specific services, target clients, and growth goals. This personalized approach means the solutions you get are tailored to your situation rather than adapted from general best practices."
+        }
+      ],
+      "features": [
+        {
+          "title": "Custom Marketing Systems Built for Your CPA Practice",
+          "description": "SmartFirm does not offer a one-size-fits-all program or a set of courses to work through on your own. We build a marketing and automation system customized to your practice, including the specific services you want to promote, the types of clients you want to attract, and the workflow that fits your team. This personalized build means the system reflects your practice from day one.",
+          "details": [
+            "Customized lead generation strategy based on your ideal client profile and service mix",
+            "Automation workflows designed around how your specific practice operates",
+            "Content and messaging developed to reflect your firm's voice and positioning"
+          ]
+        },
+        {
+          "title": "End-to-End Client Acquisition Infrastructure",
+          "description": "SmartFirm provides the full infrastructure needed to attract, nurture, and convert prospective clients. From the moment someone discovers your practice online through to their first engagement, every step is supported by automation and tracked for performance. This end-to-end approach ensures nothing falls through the cracks in your client acquisition process.",
+          "details": [
+            "Lead capture mechanisms integrated across your digital presence",
+            "Multi-channel follow-up automation that stays in touch with prospects until they are ready to move forward",
+            "Conversion tracking that shows you exactly how prospects become clients"
+          ]
+        },
+        {
+          "title": "Ongoing Optimization and Strategic Guidance",
+          "description": "Building a system is just the starting point. SmartFirm continuously monitors your marketing performance and makes data-driven adjustments to improve results over time. You also receive strategic guidance from a team that works exclusively with accounting professionals, so the advice you get is grounded in real experience with practices similar to yours.",
+          "details": [
+            "Continuous performance monitoring with proactive adjustments to campaigns and workflows",
+            "Regular strategy sessions to discuss results and plan for the next phase of growth",
+            "Access to insights from across our client base about what is working for CPAs right now"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Is SmartFirm a replacement for We Are PF, or can we use both?",
+          "answer": "SmartFirm and We Are PF serve different purposes, and many CPAs could benefit from both. We Are PF provides community, education, and inspiration around modern marketing approaches. SmartFirm provides the implementation and management of the actual systems that put those ideas into practice. If you value what you have learned from the PF community, SmartFirm can be the execution partner that helps you turn that knowledge into operational results.",
+          "category": "General"
+        },
+        {
+          "question": "We already have a brand identity from working with another creative partner. Can SmartFirm work with that?",
+          "answer": "Absolutely. SmartFirm is not a branding or creative agency. We build marketing and automation systems. If you already have a strong brand identity, visual guidelines, or messaging framework, we incorporate those into the system we build for you. Our focus is on the infrastructure that drives client acquisition, and we are happy to work within the brand you have already established.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How does SmartFirm measure success for a CPA practice?",
+          "answer": "We measure success based on the outcomes that matter to your practice, such as the number of qualified leads generated, consultations booked, and new clients acquired. While we track supporting metrics like website traffic and email engagement, our primary focus is on the business results that directly impact your revenue. We share this data with you regularly so you always know how your system is performing.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Turn Marketing Ideas Into a Working System?",
+      "ctaDescription": "Book a free strategy call and we will show you how SmartFirm can build the marketing and automation infrastructure your CPA practice needs to turn great ideas into consistent client growth."
+    },
+    "rootworks-alternative-with-implementation-for-accounting-firms": {
+      "heroSubtitleTemplate": "Rootworks has helped accounting firms think strategically about modernizing their practices through coaching and advisory programs. If your firm is looking for a partner that goes beyond the advisory stage and actually builds and manages the marketing and automation systems for you, SmartFirm's implementation-focused model may be the right fit.",
+      "heroDescription": "Rootworks has earned respect in the accounting profession for its coaching programs and strategic advisory services that help firms modernize their approach to business development, technology adoption, and practice management. That kind of strategic thinking is valuable, and many firms have benefited from the framework Rootworks provides. Where some firms find a gap, however, is in the transition from strategy to execution. Knowing what to do and actually having the systems built, configured, launched, and managed on an ongoing basis are two very different things. SmartFirm focuses specifically on that implementation layer. We take the strategic vision, whether you developed it on your own, with a coach, or with our team, and turn it into a working marketing and automation system that operates day in and day out for your accounting firm.",
+      "benefits": [
+        {
+          "title": "Strategy That Comes With Built-In Execution",
+          "description": "Many accounting firms invest in strategic advisory programs and come away with a clear plan but no one to execute it. SmartFirm combines strategic planning with hands-on implementation, so the marketing and automation strategy we develop together becomes a functioning system rather than a document that sits in a shared drive. For firms that want both the roadmap and the builder, this integrated approach can save months of time."
+        },
+        {
+          "title": "A Fully Managed System, Not a Coaching Program",
+          "description": "Coaching programs are designed to teach you how to do something. SmartFirm is designed to do it for you. If your accounting firm wants a marketing and automation system that runs without requiring your team to learn new platforms, manage campaigns, or troubleshoot technical issues, our managed model delivers that. You focus on running your practice while we focus on running your growth engine."
+        },
+        {
+          "title": "Tangible Results You Can Measure From the Start",
+          "description": "Advisory and coaching programs often deliver their value over a longer time horizon as your team absorbs and applies the learning. SmartFirm's implementation model is designed to produce measurable results relatively quickly because we are building and launching working systems from the beginning of the engagement. Most firms begin seeing lead generation activity within weeks of going live."
+        }
+      ],
+      "features": [
+        {
+          "title": "Complete Marketing and Automation Build-Out",
+          "description": "SmartFirm does not hand you a playbook and wish you well. Our team builds your entire marketing and automation system from the ground up, including your website, landing pages, lead capture forms, email and text sequences, CRM configuration, review management, and reporting dashboards. Every component is customized for your accounting firm and designed to work together as an integrated system.",
+          "details": [
+            "Full website and landing page build optimized for accounting firm client acquisition",
+            "CRM setup with custom pipelines that reflect how your firm manages prospects and clients",
+            "Automated communication workflows for lead nurture, onboarding, and client retention"
+          ]
+        },
+        {
+          "title": "Hands-On Launch and Ongoing Management",
+          "description": "Once your system is built, SmartFirm does not step away. Our team manages the launch process, monitors early performance, and makes adjustments to optimize results. This ongoing management continues beyond the initial launch, so your system remains effective as market conditions shift and your practice evolves. You always have a team behind the scenes keeping things running smoothly.",
+          "details": [
+            "Managed launch process with performance monitoring during the critical early weeks",
+            "Ongoing campaign management including content updates, audience adjustments, and budget optimization",
+            "Regular performance reporting with clear explanations of what the data means for your firm"
+          ]
+        },
+        {
+          "title": "Implementation That Respects Your Firm's Pace",
+          "description": "Every accounting firm is different, and some are ready to move quickly while others need a more measured approach. SmartFirm's implementation process is flexible enough to match your firm's pace and priorities. Whether you want to launch everything at once or roll out capabilities in phases, we design the implementation timeline around what works for your team and your calendar.",
+          "details": [
+            "Flexible implementation timelines that can be compressed or extended based on your preferences",
+            "Phased rollout options that let you prioritize the capabilities that matter most to your firm right now",
+            "Regular check-ins to ensure the pace of implementation feels right and your team is comfortable"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "We went through a coaching program and have a strategy document. Can SmartFirm implement it?",
+          "answer": "That is exactly the kind of situation SmartFirm is built for. If you already have a strategic plan from a coaching program or advisor, we can review it and translate the relevant components into a working marketing and automation system. We may also identify opportunities to enhance the plan based on what we have seen work for other accounting firms, but we are happy to use your existing strategy as the foundation for implementation.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How is working with SmartFirm different from working with a practice management consultant?",
+          "answer": "Practice management consultants and coaching programs typically help you develop strategy, improve processes, and adopt better business practices. SmartFirm focuses specifically on the marketing and client acquisition side, and we build and manage the technology systems that power those efforts. Think of it as the execution arm for the growth-related components of your broader practice strategy. The two can work very well together.",
+          "category": "General"
+        },
+        {
+          "question": "What kind of technical setup does our firm need to have before working with SmartFirm?",
+          "answer": "You do not need any specific technology in place before starting with SmartFirm. Our platform provides the marketing and automation tools, and we handle all of the technical configuration. If you already use practice management software, email systems, or other business tools, we integrate with those wherever possible. The onboarding process includes a full technology assessment so we can design the system to fit seamlessly into your existing environment.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Move From Strategy to a Working System?",
+      "ctaDescription": "Schedule a free consultation and we will show you how SmartFirm's implementation-focused approach can turn your growth strategy into a fully operational marketing and automation system for your accounting firm."
+    }
   }
 }

@@ -68,5 +68,337 @@
     "tax preparers": {
       "heroDescription": "Tax season puts enormous pressure on document collection, and when you are managing hundreds of clients who all need to submit forms, receipts, and statements, a manual process simply does not scale. Document automation services give your firm a secure, organized system for requesting and collecting tax documents, with automated reminders that follow up persistently so your team does not have to. We typically implement platforms like LedgerDocs to keep everything in one place."
     }
+  },
+  "slugOverrides": {
+    "document-automation-for-cpas": {
+      "heroSubtitleTemplate": "Your CPA practice produces a steady stream of engagement letters, audit reports, and client deliverables that deserve better than manual drafting. We build document automation systems that generate these critical outputs from your existing data, letting your team focus on advisory work instead of formatting.",
+      "heroDescription": "Most CPA firms spend far more time than they realize assembling engagement letters, compiling reports, and formatting client deliverables by hand. When every document starts from scratch or from a half-updated template, inconsistencies creep in and billable hours disappear into administrative work. Full document automation takes the structured data your firm already maintains and uses it to produce polished engagement letters, financial reports, and client-ready deliverables without the repetitive manual effort. The result is a more consistent client experience and a team that can redirect significant time toward higher-value services.",
+      "benefits": [
+        {
+          "title": "Engagement Letters Produced in Minutes Instead of Hours",
+          "description": "Generating engagement letters typically involves pulling client details, customizing terms, and formatting everything to match your firm's standards. With document automation, these letters are assembled automatically from your client records and predefined terms, so what used to take your team an hour or more can often be completed in just a few minutes with minimal review."
+        },
+        {
+          "title": "Consistent, Professional Reports Across Every Engagement",
+          "description": "When reports are built manually, formatting variations and small errors tend to accumulate. Automated report generation draws from a single set of approved templates and populates them directly from your workpapers, which typically results in more uniform deliverables and fewer rounds of revision before client delivery."
+        },
+        {
+          "title": "More Hours Available for Advisory and Client Relationships",
+          "description": "Document assembly is necessary work, but it rarely represents the best use of a CPA's expertise. By automating the production of routine deliverables, your professionals may find they can reallocate meaningful portions of their week toward client advisory, complex analysis, and the strategic work that drives firm growth."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Engagement Letter Generation",
+          "description": "We configure systems that pull client information, engagement scope, and fee structures directly from your practice management platform and produce formatted engagement letters ready for review and signature. Your team sets the terms once, and the system handles the assembly.",
+          "details": [
+            "Client data and engagement terms populated automatically from your existing records",
+            "Firm-branded formatting applied consistently across every letter produced",
+            "Electronic signature integration so clients can review and sign without printing"
+          ]
+        },
+        {
+          "title": "Financial Report Assembly from Workpaper Data",
+          "description": "Rather than copying figures from workpapers into report templates, automated assembly pulls finalized numbers directly into your approved report formats. This approach tends to reduce transcription errors and can significantly shorten the time between completing fieldwork and delivering the final product.",
+          "details": [
+            "Direct data connections between your workpaper platform and report templates",
+            "Conditional sections that adjust based on engagement type and reporting requirements",
+            "Built-in review checkpoints so your team can verify content before finalization"
+          ]
+        },
+        {
+          "title": "Client Deliverable Packaging and Distribution",
+          "description": "Once reports and supporting documents are finalized, the system can compile them into a complete deliverable package and distribute it through your client portal or secure email. This removes the manual step of assembling, attaching, and sending individual files for each client.",
+          "details": [
+            "Automatic compilation of reports, letters, and supporting schedules into a single package",
+            "Delivery through your existing client portal with notification to the recipient",
+            "Archive copies filed automatically in the appropriate client folder for future reference"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does document automation handle the variations between different engagement types in a CPA practice?",
+          "answer": "That is one of the first things we address during setup. We map out your engagement types and build conditional logic into the templates so the system knows which sections, disclosures, and formatting to include based on the engagement. An audit engagement letter will look meaningfully different from a compilation letter, and the automation reflects those distinctions. You maintain control over the content and structure, while the system handles the assembly.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will our engagement letters and reports still look like they came from our firm?",
+          "answer": "Absolutely. Every template is built to match your firm's branding, formatting preferences, and writing style. We work from your existing documents as a starting point and preserve the professional presentation your clients expect. The only difference your clients are likely to notice is that deliverables may arrive more quickly and with greater consistency.",
+          "category": "General"
+        },
+        {
+          "question": "Can this integrate with the practice management and workpaper platforms we already use?",
+          "answer": "In most cases, yes. We design the automation to connect with the platforms your firm already relies on, whether that includes tools like CCH, Caseware, or similar systems. During our discovery process, we evaluate your current technology stack and build the data connections needed so the automation fits into your existing workflow rather than requiring you to adopt entirely new systems.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your Firm's Document Production?",
+      "ctaDescription": "Schedule a complimentary consultation and we will walk through your current engagement letter, report, and deliverable workflows to identify where automation could save your team the most time."
+    },
+    "automated-document-generation-for-accounting-firms": {
+      "heroSubtitleTemplate": "Your accounting firm produces the same categories of reports, financial statements, and client communications month after month. We help you build document generation systems that assemble these outputs from templates and live data, so your team can stop recreating documents from scratch.",
+      "heroDescription": "Accounting firms of every size share a common challenge: they produce a high volume of similar documents, yet each one still requires manual assembly, formatting, and review. Financial statements follow the same structure but need different numbers. Client communications cover the same topics but require different details. When these documents are built by hand every time, the process eats into capacity that could be spent on analysis and advisory. Automated document generation uses your approved templates and your firm's live data to produce these outputs reliably, with less manual effort and more consistent quality across every client engagement.",
+      "benefits": [
+        {
+          "title": "Templated Reports That Populate Themselves",
+          "description": "Rather than copying data into report templates manually, automated generation pulls figures directly from your accounting platform and populates the appropriate fields. This approach can significantly reduce the time between completing the underlying work and delivering a polished report, while also limiting the transcription errors that come with manual data entry."
+        },
+        {
+          "title": "Financial Statements Assembled with Greater Consistency",
+          "description": "When every financial statement is generated from the same approved template structure, your firm's output maintains a consistent level of quality and formatting regardless of which team member handles the engagement. Clients receive a uniform experience, and your review process can focus on the substance rather than catching formatting issues."
+        },
+        {
+          "title": "Client Communications Sent Without the Bottleneck",
+          "description": "Routine client communications such as engagement confirmations, document request letters, and status updates can be generated and sent based on workflow triggers rather than waiting for someone on your team to draft them individually. This typically means clients hear from your firm more promptly and your staff spends less time on correspondence."
+        }
+      ],
+      "features": [
+        {
+          "title": "Template-Driven Report Generation",
+          "description": "We build and configure a library of report templates tailored to your firm's standards. When a report needs to be produced, the system draws on client data and engagement details to generate a complete draft, formatted and ready for your team's review.",
+          "details": [
+            "Custom template library reflecting your firm's formatting standards and report types",
+            "Automatic data population from your accounting and practice management systems",
+            "Version tracking so every generated report is archived with the data it was built from"
+          ]
+        },
+        {
+          "title": "Financial Statement Automation",
+          "description": "Financial statement preparation often involves pulling trial balance data, mapping it to the correct line items, and applying presentation formatting. We configure automation that handles these mechanical steps, producing statements that follow your chosen framework and are ready for review rather than assembly.",
+          "details": [
+            "Trial balance data mapped automatically to the correct statement line items",
+            "Presentation formatting applied based on the reporting framework and client preferences",
+            "Comparative period data included automatically when prior period figures are available"
+          ]
+        },
+        {
+          "title": "Automated Client Communication Workflows",
+          "description": "From engagement kickoff letters to monthly status updates, we set up communication templates that generate and send at the right moments in your workflow. Your team defines the messaging and timing, and the system handles the execution.",
+          "details": [
+            "Communication templates personalized with client-specific details and engagement context",
+            "Trigger-based sending tied to workflow milestones, calendar dates, or status changes",
+            "Delivery tracking so your team can see which communications have been opened and read"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How long does it typically take to set up automated document generation for an accounting firm?",
+          "answer": "The timeline depends on how many document types you want to automate and how complex your current templates are. For most firms, we can have the first set of templates configured and generating documents within a few weeks. We usually recommend starting with your highest-volume documents, such as monthly financial statements or standard engagement letters, so your team begins seeing time savings quickly while we continue building out additional templates.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens if we need to customize a generated document for a specific client?",
+          "answer": "Every generated document is a starting point that your team can review and edit before it goes out. The automation handles the assembly and data population, but you always retain the ability to make client-specific adjustments before finalizing. We also build conditional logic into templates where appropriate, so many common variations are handled automatically without requiring manual edits.",
+          "category": "General"
+        },
+        {
+          "question": "Does the system work with cloud-based accounting platforms or only desktop software?",
+          "answer": "We work with both cloud-based and on-premise platforms. In practice, cloud-based systems like QuickBooks Online, Xero, and similar tools often offer more straightforward integration options, but we have experience connecting with desktop platforms as well. During our initial assessment, we review your firm's technology environment and design the integration approach that fits your specific setup.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Stop Rebuilding the Same Documents Every Month?",
+      "ctaDescription": "Book a free consultation and we will review your firm's most common document types to show you where automated generation could reclaim meaningful hours for your team."
+    },
+    "document-workflow-automation-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparation involves long chains of documents that need to be collected, routed, processed, and filed in the right order. We build document workflow automation that moves these chains forward without your team manually tracking every step.",
+      "heroDescription": "In a tax preparation practice, every return involves a sequence of document-dependent steps: intake forms need to arrive before source documents can be matched, source documents need to be reviewed before preparation begins, and completed returns need to route through review before filing. When any link in that chain depends on someone remembering to move it forward, delays accumulate and deadlines get tighter. Document workflow automation connects these steps into a managed process where documents flow from intake through routing, processing, and filing with the system tracking progress and flagging exceptions. Your team stays focused on preparation and review while the workflow keeps everything moving.",
+      "benefits": [
+        {
+          "title": "Intake Documents Routed Automatically to the Right Preparer",
+          "description": "When client documents arrive, the system can identify the document type, match it to the correct client engagement, and route it to the assigned preparer without anyone on your team sorting through uploads manually. This tends to eliminate the lag between document receipt and the start of preparation work."
+        },
+        {
+          "title": "Processing Steps That Trigger the Next Action in the Chain",
+          "description": "Rather than relying on team members to check whether a prior step is complete before starting the next one, workflow automation moves documents through your defined sequence automatically. When source documents are marked complete, preparation can begin. When preparation is finished, the return routes to review. Each step triggers the next without manual intervention."
+        },
+        {
+          "title": "Filing Readiness Tracked Across Your Entire Client Base",
+          "description": "During peak season, knowing which returns are ready to file, which are stuck waiting on documents, and which need review is critical. Automated workflows give you a real-time view of where every engagement stands in the process, which can help your team prioritize effectively and avoid last-minute surprises."
+        }
+      ],
+      "features": [
+        {
+          "title": "Intelligent Document Intake and Matching",
+          "description": "We configure intake workflows that receive documents from your client portal, email, or other channels and automatically match them to the correct client and engagement. Documents are categorized by type and flagged as received against the outstanding document checklist.",
+          "details": [
+            "Multi-channel intake that captures documents regardless of how clients submit them",
+            "Automatic client and engagement matching based on metadata, naming conventions, or portal structure",
+            "Real-time checklist updates so your team can see which documents have arrived and which remain outstanding"
+          ]
+        },
+        {
+          "title": "Sequential Workflow Routing and Status Tracking",
+          "description": "Once documents are received and categorized, the workflow engine routes them through your defined preparation and review sequence. Each step has clear ownership and status tracking, so your team always knows who is responsible for the current action and whether it is on schedule.",
+          "details": [
+            "Configurable workflow stages that mirror your firm's actual preparation and review process",
+            "Automatic assignment and notification when a document or return reaches a new stage",
+            "Dashboard views showing real-time status across all active engagements"
+          ]
+        },
+        {
+          "title": "Pre-Filing Quality Checks and Submission Tracking",
+          "description": "Before a return moves to filing, the workflow can enforce quality checkpoints to confirm that all required documents are present, all review steps are completed, and the preparer has signed off. Once filed, the system tracks confirmation and archives the completed package.",
+          "details": [
+            "Configurable quality gates that prevent filing until all prerequisites are met",
+            "Preparer and reviewer sign-off captured digitally within the workflow",
+            "Filing confirmation tracked and archived alongside the completed return package"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can document workflow automation handle the volume spikes that come with tax season?",
+          "answer": "That is actually one of the strongest arguments for automating these workflows. Manual processes tend to break down under volume pressure because they depend on people remembering steps and checking statuses. Automated workflows scale with your volume because the system applies the same routing and tracking logic regardless of whether you have fifty active engagements or five hundred. The consistency actually becomes more valuable as volume increases.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if our preparation process is different from what the system expects?",
+          "answer": "We do not impose a standard process on your firm. During setup, we document your actual workflow, including all the steps, handoffs, and decision points your team uses today, and configure the automation to reflect that process. If your firm routes certain return types through additional review or has different assignment rules for different client categories, we build those variations into the workflow. The goal is to automate your process, not replace it with a generic one.",
+          "category": "General"
+        },
+        {
+          "question": "How does the system handle documents that arrive in unexpected formats or with missing information?",
+          "answer": "The workflow includes exception handling for situations like unrecognized document types, files that cannot be matched to a client, or submissions that appear incomplete. When the system encounters something it cannot process automatically, it flags the item for manual review and notifies the appropriate team member. This way, unusual situations get human attention promptly rather than sitting unnoticed in a queue.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Streamline Your Tax Document Workflows?",
+      "ctaDescription": "Schedule a free consultation and we will map out your current document chain from intake through filing to show you where workflow automation could help your team move faster during the seasons that matter most."
+    },
+    "file-management-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "Bookkeeping practices handle a constant flow of client files that need to be organized, named correctly, stored securely, and retrieved quickly. We build file management automation that handles these routine tasks so your team can stay focused on the numbers.",
+      "heroDescription": "Every bookkeeping engagement generates a steady stream of files: bank statements, receipts, invoices, payroll records, and more. When organizing and managing those files depends on individual team members following naming conventions and remembering folder structures, inconsistencies build up quickly. Files end up in the wrong folder, named inconsistently, or simply lost in a cluttered shared drive. File management automation brings structure to this process by automatically organizing incoming files, applying consistent naming conventions, storing them in the correct client folders, and making them easy to retrieve when you need them. For bookkeeping firms that handle multiple clients with recurring monthly workflows, this kind of automation can meaningfully reduce the time spent on administrative file handling.",
+      "benefits": [
+        {
+          "title": "Every File Organized and Named Consistently Without Manual Effort",
+          "description": "When files are automatically renamed and sorted into the correct folders based on client, document type, and date, your team no longer needs to spend time organizing uploads or fixing filing mistakes. This consistency also makes it significantly easier to find specific documents later, whether for a client question or a year-end review."
+        },
+        {
+          "title": "Client Files Stored Securely with Controlled Access",
+          "description": "Automated file management includes proper access controls so each team member sees only the client files relevant to their work. Files are stored with appropriate security measures, and you maintain a clear record of who accessed what and when. This level of organization can be particularly helpful if your firm ever faces a client inquiry or regulatory question about document handling."
+        },
+        {
+          "title": "Fast, Reliable File Retrieval When You Need It",
+          "description": "Instead of digging through nested folders or searching your email for an attachment someone sent months ago, automated file management gives you structured search and retrieval capabilities. Finding a specific bank statement from three months ago or pulling all receipts for a particular expense category becomes a matter of seconds rather than minutes."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automatic File Sorting and Naming",
+          "description": "We configure rules that automatically sort incoming files into the correct client and engagement folders and apply your firm's naming conventions. Whether files arrive through a client portal, email integration, or direct upload, they end up in the right place with the right name without anyone on your team handling the filing.",
+          "details": [
+            "Rule-based sorting that matches files to the correct client folder based on source and metadata",
+            "Consistent naming conventions applied automatically to every file as it enters the system",
+            "Duplicate detection that flags or merges files when the same document is submitted more than once"
+          ]
+        },
+        {
+          "title": "Structured Folder Hierarchies for Recurring Engagements",
+          "description": "Bookkeeping engagements tend to follow monthly cycles, and your file structure should reflect that. We set up folder templates that automatically create the right structure for each new period, so your team always has an organized place to work without manually creating folders or wondering where to put things.",
+          "details": [
+            "Monthly folder structures generated automatically at the start of each period",
+            "Engagement-specific folder templates that reflect the document types each client typically provides",
+            "Year-end rollover that archives completed periods and creates a clean structure for the new year"
+          ]
+        },
+        {
+          "title": "Search and Retrieval with Metadata Tagging",
+          "description": "Beyond folder organization, we implement metadata tagging that lets your team search for files by client, document type, date range, or other criteria. This means finding a specific document does not depend on remembering which folder it is in, because the search function can locate it based on its attributes.",
+          "details": [
+            "Automatic metadata tagging applied to files during the intake and sorting process",
+            "Search interface that allows filtering by client, document type, date range, and custom tags",
+            "Quick retrieval from any device with appropriate access credentials"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How does file management automation handle the different document types that come in from bookkeeping clients each month?",
+          "answer": "We configure the system to recognize the common document types your firm receives, such as bank statements, receipts, invoices, and payroll records, and apply the appropriate sorting and naming rules for each. During setup, we work with your team to catalog the document types you see most frequently and build the recognition rules around those. If a document type is not recognized, the system flags it for manual classification rather than filing it incorrectly.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will this work if our clients send files in different ways, like some through email and others through a portal?",
+          "answer": "Yes, and that is actually one of the main advantages. We set up intake channels that capture files regardless of how they arrive, whether through a client portal, email attachment, or even a scanned upload from your office. All files funnel into the same automated sorting and naming process, so the end result is a consistently organized file structure no matter how the document originally came in.",
+          "category": "General"
+        },
+        {
+          "question": "What happens to our existing files when we set up the automation?",
+          "answer": "We typically recommend a phased approach. New files coming in are handled by the automation immediately, while your existing file library can be migrated and reorganized over time. Depending on the volume and current state of your files, we may be able to batch-process a significant portion of your historical documents to bring them into the new structure. We assess this during our initial review and give you a realistic picture of what the migration looks like for your specific situation.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Bring Order to Your Firm's File Management?",
+      "ctaDescription": "Book a complimentary call and we will review your current file handling process to show you where automation could eliminate the manual organizing and help your team retrieve what they need in seconds."
+    },
+    "document-processing-automation-for-cpas": {
+      "heroSubtitleTemplate": "Your CPA firm receives a constant stream of incoming documents that need to be read, categorized, and turned into usable data. We build document processing automation that handles OCR, data extraction, and categorization so your team can work with the information instead of manually entering it.",
+      "heroDescription": "CPA firms receive documents in every format imaginable: scanned tax forms, photographed receipts, emailed bank statements, and PDF financial records. Before your team can use the information in those documents, someone typically has to open each one, identify what it is, extract the relevant data, and enter it into the right system. That process is tedious, error-prone, and consumes hours that could be spent on analysis and advisory. Document processing automation applies OCR technology and intelligent data extraction to incoming documents, reading them, pulling out key information, and categorizing them based on content. The result is that documents arriving at your firm are converted into structured, usable data with significantly less manual handling.",
+      "benefits": [
+        {
+          "title": "Incoming Documents Read and Interpreted Automatically",
+          "description": "OCR technology converts scanned and photographed documents into machine-readable text, while extraction logic identifies the specific data points that matter for your work. Bank account numbers, transaction amounts, taxpayer identification details, and other key fields can be captured without your team keying them in manually."
+        },
+        {
+          "title": "Documents Categorized and Routed Without Manual Sorting",
+          "description": "Once a document is processed, the system can determine its type, whether it is a W-2, a bank statement, a receipt, or something else, and route it to the appropriate location in your file structure. This automatic categorization tends to eliminate the sorting step that typically falls on administrative staff or junior team members."
+        },
+        {
+          "title": "Extracted Data Available for Immediate Use in Your Systems",
+          "description": "Rather than creating a separate data entry step after documents are received, processing automation feeds extracted data directly into your tax preparation, accounting, or practice management platform. This can meaningfully compress the time between receiving a document and being able to use its contents in your work."
+        }
+      ],
+      "features": [
+        {
+          "title": "Multi-Format OCR Processing",
+          "description": "We implement OCR capabilities that handle the full range of document formats your firm encounters, from high-quality PDFs to low-resolution phone photographs. The system processes each document and produces clean, searchable text that subsequent extraction steps can work with reliably.",
+          "details": [
+            "Processing support for PDFs, scanned images, photographs, and common office document formats",
+            "Image enhancement and cleanup applied automatically to improve recognition accuracy on lower-quality inputs",
+            "Batch processing capability so large volumes of documents can be handled without manual queuing"
+          ]
+        },
+        {
+          "title": "Intelligent Data Extraction and Field Mapping",
+          "description": "Beyond converting documents to text, we configure extraction rules that identify and capture the specific data fields your firm needs. The system learns the layouts of common document types and knows where to find account numbers, dates, amounts, and identifying information.",
+          "details": [
+            "Pre-configured extraction templates for common tax forms, bank statements, and financial documents",
+            "Custom extraction rules for document types specific to your firm's practice areas",
+            "Confidence scoring on extracted data so your team can prioritize review of lower-confidence results"
+          ]
+        },
+        {
+          "title": "Automated Categorization and Downstream Routing",
+          "description": "Once a document is processed and its data extracted, the system categorizes it by type and routes both the document and its extracted data to the appropriate destination. Tax documents go to the tax preparation queue, financial records route to the accounting workspace, and supporting documents file themselves in the correct client folder.",
+          "details": [
+            "Document type classification based on content analysis rather than relying on file names alone",
+            "Configurable routing rules that direct documents and data to the correct systems and folders",
+            "Exception handling that flags unrecognized or ambiguous documents for human review"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How accurate is the OCR and data extraction for documents that are not perfectly scanned?",
+          "answer": "Modern OCR technology handles a wide range of document quality, including slightly skewed scans, phone photographs, and faded originals. That said, accuracy does vary with input quality, so we build in image enhancement steps that clean up common issues before the OCR runs. We also implement confidence scoring so your team can see which extractions the system is highly confident about and which ones may benefit from a quick manual check. In practice, most firms find that the vast majority of documents process accurately without intervention.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the system handle the variety of document types that a CPA firm typically receives?",
+          "answer": "Yes, and versatility is one of the core design goals. We configure the system to recognize standard tax forms like W-2s, 1099s, and K-1s, as well as common financial documents like bank statements, brokerage statements, and invoices. For document types that are unique to your practice or your clients, we can create custom extraction templates. The system becomes more effective over time as it encounters and learns from the specific documents your firm processes.",
+          "category": "General"
+        },
+        {
+          "question": "How does extracted data get into our existing tax preparation or accounting software?",
+          "answer": "We design the integration to match your firm's technology environment. For widely used platforms, there are often direct integration paths or import formats that allow extracted data to flow in with minimal configuration. For other systems, we can set up structured exports that your platform can ingest. The key principle is that extracted data should arrive in your working system in a format that is ready to use, not in a format that requires additional transformation or re-entry on your end.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate How Your Firm Processes Incoming Documents?",
+      "ctaDescription": "Schedule a free consultation and we will review your current document intake to show you where OCR and extraction automation could reduce manual data entry and help your team work with information faster."
+    }
   }
 }

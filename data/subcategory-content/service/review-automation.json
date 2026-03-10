@@ -71,5 +71,337 @@
     "tax preparers": {
       "heroDescription": "Tax preparers have a unique advantage when it comes to reviews. Clients are often relieved and grateful right after their returns are filed, which is the perfect moment to request feedback. But during busy season, asking for reviews is the last thing on your mind. Review automation captures that window of client satisfaction automatically, sending requests at the optimal moment and following up without anyone on your team lifting a finger. By the time next season rolls around, you could have significantly more reviews working for you than you do today."
     }
+  },
+  "slugOverrides": {
+    "review-request-automation-for-cpas": {
+      "heroSubtitleTemplate": "A done-for-you review request system designed specifically for CPA firms. We configure the timing, channels, and follow-up sequences so every satisfied client receives a well-timed invitation to share their experience on Google.",
+      "heroDescription": "Most CPA firms recognize that online reviews matter, but very few have a repeatable process for collecting them. Partners might ask a client here and there, or a staff member might send an occasional email, but there is no consistent rhythm. The result is a Google profile with a handful of aging reviews that does not reflect the quality of work your firm actually delivers. Review request automation solves this by building a system around the moments when clients are most likely to respond. After a successful audit engagement wraps up, after a complex tax situation is resolved favorably, after an advisory session produces a meaningful insight, these are the windows where a well-crafted request converts at the highest rate. We configure your system to recognize these milestones and trigger personalized requests through email and text, with intelligent follow-up for clients who intend to leave a review but simply forget. Over time, this creates a compounding effect where your review count grows month after month without anyone on your team needing to think about it.",
+      "benefits": [
+        {
+          "title": "Consistent Review Volume Without Partner Involvement",
+          "description": "Your review pipeline runs independently of how busy the firm gets. Whether it is peak season or a slower stretch, the system sends requests on schedule and follows up automatically. Partners and managers stay focused on client work while your Google profile strengthens in the background."
+        },
+        {
+          "title": "Timing That Matches the CPA Client Journey",
+          "description": "Review requests arrive when the value of your work is freshest in a client's mind. For audit clients, that might be the day after delivering a clean opinion. For tax clients, it could be the moment they see their refund amount. We work with you to identify the right triggers for each service line your firm offers."
+        },
+        {
+          "title": "Multi-Channel Delivery for Higher Response Rates",
+          "description": "Some clients respond to email immediately. Others are more likely to act on a text message they see on their phone. Your automated system reaches clients through the channels they actually use, and the direct links reduce the process to just a few taps. This convenience is often the difference between a client who means to leave a review and one who actually does."
+        }
+      ],
+      "features": [
+        {
+          "title": "Milestone-Based Request Triggers",
+          "description": "We map your client engagement lifecycle and identify the natural moments where satisfaction peaks. Then we configure automated triggers so review requests deploy at precisely those moments, personalized with the client's name and relevant engagement details.",
+          "details": [
+            "Engagement completion triggers tied to your practice management workflow",
+            "Personalized request content that references the specific service delivered",
+            "Configurable delay windows so requests arrive at the optimal moment after delivery"
+          ]
+        },
+        {
+          "title": "Intelligent Follow-Up Sequences",
+          "description": "A single review request converts a fraction of the clients who receive it. Our follow-up sequences send gentle reminders to clients who opened but did not act, using varied messaging and alternate channels to catch them at a better time without feeling repetitive or pushy.",
+          "details": [
+            "Behavior-based follow-up that adjusts based on whether the client opened the initial request",
+            "Channel rotation between email and SMS to reach clients where they are most responsive",
+            "Automatic suppression once a review is detected so clients never receive unnecessary reminders"
+          ]
+        },
+        {
+          "title": "Performance Tracking and Optimization",
+          "description": "We set up reporting so you can see exactly how many requests are going out, how many convert to reviews, and which service lines or engagement types produce the highest response rates. This data allows us to continuously refine your approach over time.",
+          "details": [
+            "Monthly reporting on request volume, open rates, and review conversion percentages",
+            "Service line breakdowns showing which areas of your practice generate the most reviews",
+            "Trend analysis that highlights seasonal patterns and opportunities to adjust timing"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do review requests get triggered for different CPA service lines?",
+          "answer": "We work with your team to map out the key milestones in each service line, whether that is audit completion, tax filing acceptance, or advisory deliverable sign-off. Each milestone becomes a trigger point in the system. When your practice management tool or workflow marks that milestone complete, the review request sequence activates automatically. If your current tools do not support direct integration, we can set up lightweight manual triggers that still save significant time compared to remembering to ask each client individually.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will automated requests feel impersonal to our long-standing CPA clients?",
+          "answer": "The requests are designed to feel like a natural extension of your client relationship, not a mass marketing blast. Each message includes the client's name, references the specific engagement, and is written in your firm's voice. Long-standing clients typically appreciate being asked for their opinion, and many are happy to support a firm they have worked with for years. The key is that the message feels genuine and the process is effortless for them.",
+          "category": "General"
+        },
+        {
+          "question": "What technical setup is needed on our end to get started?",
+          "answer": "The technical requirements are minimal for most CPA firms. We need access to your client contact information and a way to identify when engagements reach completion. If you use a practice management system like CCH, Thomson Reuters, or Canopy, we can often connect directly. If your workflow is more manual, we set up a simple process where a team member marks an engagement complete and the system handles everything from there. Most firms are fully operational within two to three weeks of kickoff.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Review Requests for Your CPA Firm?",
+      "ctaDescription": "Schedule a free consultation and we will walk through your current review profile, identify the best trigger points for your service lines, and show you what an automated request system could look like in practice."
+    },
+    "automated-review-generation-for-accounting-firms": {
+      "heroSubtitleTemplate": "A complete review generation system built for accounting firms. We design and manage the full pipeline, from identifying satisfied clients to converting their goodwill into published reviews that drive new business.",
+      "heroDescription": "Accounting firms that consistently win new clients from online search share one thing in common: a strong, growing collection of authentic reviews. But building that collection does not happen by accident. It requires a pipeline, a systematic approach that identifies the right clients at the right moments, reaches them through the right channels, and makes the review process so simple that following through takes less than a minute. Most accounting firms we work with have delivered excellent service to hundreds of clients over the years, yet their Google profile shows a fraction of that satisfaction. The gap is not about quality. It is about process. Review generation for accounting firms means building an end-to-end system that captures the positive sentiment your team creates every day and translates it into visible social proof. We handle the strategy, the technical configuration, the messaging, and the ongoing optimization so that your review count grows steadily while your team stays focused on serving clients. Over the course of several months, firms that implement this kind of system typically see a meaningful shift in both the volume and recency of their reviews, which directly influences how prospective clients perceive your firm when comparing options.",
+      "benefits": [
+        {
+          "title": "A Complete Pipeline From Satisfaction to Published Review",
+          "description": "Review generation is not just about sending a request. It starts with identifying which clients are most likely to respond positively, choosing the right moment to ask, crafting a message that motivates action, and making the review process itself as frictionless as possible. We build every stage of this pipeline for your firm so nothing falls through the cracks."
+        },
+        {
+          "title": "Recency That Signals an Active, Thriving Practice",
+          "description": "Search engines and prospective clients both pay attention to when reviews were posted. A firm with 50 reviews but nothing in the last six months sends a different signal than a firm with 50 reviews and three new ones this month. Your review generation system keeps fresh reviews flowing so your profile always looks current and active."
+        },
+        {
+          "title": "Authentic Social Proof That Reflects Real Client Experiences",
+          "description": "Every review in your pipeline comes from a real client who had a genuine experience with your firm. There are no shortcuts or manufactured testimonials. The system simply ensures that the clients who are already satisfied have a convenient, well-timed opportunity to share their perspective publicly."
+        }
+      ],
+      "features": [
+        {
+          "title": "Client Segmentation and Prioritization",
+          "description": "Not every client is equally likely to leave a review, and not every review carries the same weight. We help you identify the clients and engagement types that produce the most compelling, detailed reviews and prioritize outreach accordingly.",
+          "details": [
+            "Engagement type analysis to identify which services generate the most enthusiastic feedback",
+            "Client relationship scoring to prioritize long-term clients who can speak to sustained quality",
+            "New client identification to capture fresh perspectives from recent positive experiences"
+          ]
+        },
+        {
+          "title": "Full-Funnel Messaging and Delivery",
+          "description": "We create the complete messaging sequence from initial request through follow-up, across email and text channels. Each message is crafted to be warm, professional, and consistent with how your firm communicates with clients in every other context.",
+          "details": [
+            "Custom-written request messages that align with your firm's communication style",
+            "Platform-specific direct links that take clients straight to the review form with no extra steps",
+            "Sequenced follow-ups that vary in tone and channel to maximize conversion without overreaching"
+          ]
+        },
+        {
+          "title": "Ongoing Pipeline Management and Reporting",
+          "description": "We do not just build the system and walk away. Our team monitors performance, adjusts timing and messaging based on what the data shows, and provides regular updates on how your review profile is developing compared to where it started.",
+          "details": [
+            "Monthly pipeline reports showing outreach volume, conversion rates, and review growth trends",
+            "Quarterly strategy reviews to adjust targeting and messaging based on performance data",
+            "Platform monitoring to track where reviews are appearing and flag any that need attention"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How is review generation different from simply asking clients for reviews?",
+          "answer": "Asking clients for reviews is one step in the process. Review generation encompasses the entire system: identifying which clients to ask, determining when to ask them, crafting messages that motivate action, delivering those messages through the right channels, following up appropriately, and monitoring the results. Most accounting firms that try asking on their own do it inconsistently and without optimization. A generation system removes the variability and builds a repeatable process that compounds over time.",
+          "category": "General"
+        },
+        {
+          "question": "How long does it typically take to see meaningful results?",
+          "answer": "Most accounting firms begin seeing new reviews within the first two to three weeks after the system goes live. The pace depends on factors like your client volume, how recently engagements were completed, and how responsive your particular client base tends to be. Over a three to six month period, firms typically build a noticeably stronger review profile. We track progress from day one and share regular updates so you can see the trajectory clearly.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can the system integrate with our existing accounting practice management software?",
+          "answer": "In most cases, yes. We have experience connecting with widely used platforms in the accounting space, including QuickBooks Online Accountant, Xero Practice Manager, Karbon, and others. The integration allows us to trigger review requests based on workflow milestones within your existing tools, so there is no need for your team to adopt a new platform. If direct integration is not feasible with your particular setup, we design a simple workaround that still automates the majority of the process.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Build a Review Generation System for Your Accounting Firm?",
+      "ctaDescription": "Book a free strategy session and we will evaluate your current review profile, outline a generation plan tailored to your firm's client base, and explain exactly how the pipeline would work from start to finish."
+    },
+    "review-collection-system-for-tax-preparers": {
+      "heroSubtitleTemplate": "A seasonal review collection system designed for tax preparers. We help you capture client satisfaction during and after filing season, turning your busiest months into your most productive period for building online reputation.",
+      "heroDescription": "Tax preparation has a rhythm that no other profession shares. For several months each year, you are deeply immersed in client work, solving problems, saving money, and delivering peace of mind. Your clients walk away relieved, grateful, and satisfied. And then the moment passes. By the time the dust settles and you catch your breath, those clients have moved on with their lives and the window for capturing their positive sentiment has closed. A review collection system designed for tax preparers works with your seasonal reality rather than against it. It captures reviews during the peak of client satisfaction, right after filing, when the value of your work is most tangible. The system handles the outreach, the follow-up, and the logistics so you are not adding one more task to an already overwhelming workload. When the next filing season arrives, your Google profile tells a much stronger story about the quality of work your practice delivers. Prospective clients searching for a tax preparer in your area see recent, authentic reviews from real people, and that social proof can be the deciding factor in who they choose to call first.",
+      "benefits": [
+        {
+          "title": "Capture the Post-Filing Satisfaction Window",
+          "description": "The days immediately following a completed return are when clients feel the most positive about your work. A refund is on the way, a stressful obligation is handled, or a complex situation has been resolved. Your collection system activates during this narrow window and converts that goodwill into published reviews before the feeling fades."
+        },
+        {
+          "title": "Build Your Reputation During Season Without Lifting a Finger",
+          "description": "During filing season, every minute counts. You cannot afford to spend time crafting review request emails or reminding clients to follow through. The collection system runs on autopilot, sending requests as returns are filed and following up automatically. Your review count grows while you stay focused on the work that matters most."
+        },
+        {
+          "title": "Start Next Season With a Stronger Competitive Position",
+          "description": "When prospective clients begin searching for tax preparers in January and February, your review profile is one of the first things they evaluate. A collection system that runs during the current season means you enter the next season with significantly more social proof than competitors who are still relying on a few outdated reviews."
+        }
+      ],
+      "features": [
+        {
+          "title": "Filing-Triggered Review Requests",
+          "description": "We connect your review collection system to the milestones that matter most in tax preparation. When a return is filed, accepted, or when a client receives their refund notification, the system automatically sends a personalized review request timed to that specific event.",
+          "details": [
+            "Return filing and acceptance triggers that deploy requests at the peak moment of client relief",
+            "Personalized messages that reference the client's specific engagement and filing outcome",
+            "Configurable timing delays so requests arrive when the client has had a moment to process the good news"
+          ]
+        },
+        {
+          "title": "Season-Optimized Follow-Up Sequences",
+          "description": "Tax clients are busy too, and even a well-timed initial request may get overlooked. Our follow-up sequences are designed for the pace of filing season, with reminders spaced appropriately and delivered through alternate channels to catch clients when they have a spare moment.",
+          "details": [
+            "Two-step follow-up that balances persistence with respect for the client's time",
+            "SMS follow-up options for clients who are more responsive to text messages than email",
+            "Automatic suppression for clients who leave a review so they are never contacted again unnecessarily"
+          ]
+        },
+        {
+          "title": "Off-Season Collection for Year-Round Clients",
+          "description": "If your practice includes bookkeeping, advisory, or other year-round services, we configure a secondary collection track that captures reviews from these engagements outside of filing season. This keeps your review flow active even when tax preparation is not the primary driver.",
+          "details": [
+            "Separate messaging tracks for advisory, bookkeeping, and other non-seasonal services",
+            "Year-round scheduling that fills the gap between filing seasons with steady review activity",
+            "Service-specific request language that reflects the value delivered in each engagement type"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "When is the best time during filing season to start collecting reviews?",
+          "answer": "The ideal time to begin is as soon as the first returns are being filed and accepted. Early filers tend to be among the most responsive because they are organized and motivated. Starting early also means you are building momentum throughout the season rather than trying to collect everything at the end when both you and your clients are fatigued. We recommend having the system configured and ready to go before the season begins so it activates automatically with your first completed returns.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What happens to the review collection system during the off-season?",
+          "answer": "If your practice only handles tax preparation, the system can pause during the off-season and reactivate automatically when the next season begins. If you also offer bookkeeping, payroll, or advisory services, we configure the system to continue collecting reviews from those engagements year-round. Many tax preparers find that keeping the system active between seasons, even at a lower volume, helps maintain a fresh and current review profile that looks active to prospective clients who search outside of traditional tax season.",
+          "category": "General"
+        },
+        {
+          "question": "How does the system know when a return has been filed or accepted?",
+          "answer": "The approach depends on your workflow and the tools you use. If your tax software supports status updates or notifications, we can often use those as triggers. For firms using Drake, Lacerte, ProConnect, UltraTax, or similar platforms, we explore the available integration options during setup. If direct integration is not possible, we configure a simple process where marking a return as complete in a shared tracker triggers the review request. Either way, the goal is to make the trigger as automatic as possible so it does not add any steps to your existing workflow.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Turn This Filing Season Into a Reputation-Building Opportunity?",
+      "ctaDescription": "Schedule a free call and we will review your current online presence, design a collection system that fits your seasonal workflow, and have everything configured before the next wave of returns hits your desk."
+    },
+    "client-feedback-automation-for-bookkeepers": {
+      "heroSubtitleTemplate": "A client feedback automation system built for bookkeeping practices. We set up satisfaction surveys, feedback workflows, and review pathways that turn everyday client interactions into testimonials and published reviews.",
+      "heroDescription": "Bookkeeping is an ongoing relationship, not a one-time transaction. Your clients work with you month after month, and that continuity creates a depth of trust that is rare in professional services. But that same ongoing nature can make it hard to identify a single moment to ask for feedback. There is no dramatic conclusion, no big reveal, just steady, reliable work that keeps businesses running smoothly. Client feedback automation solves this by creating natural touchpoints throughout the relationship where clients can share how things are going. Some of that feedback stays private and helps you improve your service. Some of it surfaces clients who are especially satisfied and routes them toward leaving a public review or testimonial. The system handles the survey distribution, the follow-up, and the routing logic so your team does not need to manage any of it manually. Over time, you build both a feedback loop that makes your practice better and a growing collection of reviews and testimonials that help you attract new clients. For bookkeepers who have always struggled with the question of when to ask for a review, this approach removes the guesswork entirely by letting client satisfaction data guide the process.",
+      "benefits": [
+        {
+          "title": "Feedback That Improves Your Service and Your Reputation Simultaneously",
+          "description": "Every survey response gives you insight into what clients value most and where there might be room to improve. Clients who express high satisfaction are automatically invited to share their experience publicly. This means your feedback system does double duty: making your practice better while also building the social proof that attracts new business."
+        },
+        {
+          "title": "Natural Review Pathways That Feel Organic to Clients",
+          "description": "Instead of asking for a review out of the blue, your system first asks how things are going. Clients who respond positively receive a warm invitation to share that sentiment on Google or another platform. This two-step approach feels more natural and typically produces reviews that are more detailed and enthusiastic because the client has already reflected on their experience."
+        },
+        {
+          "title": "Testimonials You Can Use Across Your Marketing",
+          "description": "Not every piece of positive feedback needs to go to Google. Your system also captures written testimonials that you can use on your website, in proposals, in email signatures, and in any other context where social proof helps. With proper consent workflows built in, you have a growing library of client endorsements ready to use whenever you need them."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Satisfaction Surveys",
+          "description": "We design and deploy short, focused surveys that go out to your clients at regular intervals or after specific milestones like month-end close or quarterly reporting. The surveys are brief enough that clients complete them in under a minute, but detailed enough to give you actionable insight into their experience.",
+          "details": [
+            "Customizable survey templates tailored to bookkeeping service milestones and deliverables",
+            "Automated distribution on a cadence that fits your client engagement rhythm",
+            "Response tracking and scoring that identifies your most satisfied clients in real time"
+          ]
+        },
+        {
+          "title": "Satisfaction-Based Review Routing",
+          "description": "When a client's survey responses indicate high satisfaction, the system automatically invites them to share their feedback publicly. Clients who report issues are routed to a private follow-up pathway instead, giving you a chance to address concerns before they become public. This routing logic protects your reputation while maximizing the positive reviews you collect.",
+          "details": [
+            "Score-based routing that directs happy clients to review platforms and flags concerns for your team",
+            "Customizable satisfaction thresholds so you control when public review invitations are triggered",
+            "Private escalation pathways for clients who report dissatisfaction so issues are resolved quickly"
+          ]
+        },
+        {
+          "title": "Testimonial Collection and Consent Management",
+          "description": "Beyond Google reviews, we build a system for collecting and managing written testimonials with proper client consent. This gives you a bank of authentic client quotes you can use across your website, marketing materials, and sales conversations without worrying about permissions.",
+          "details": [
+            "Testimonial request flows that capture detailed client feedback in their own words",
+            "Digital consent workflows so you have documented permission before using any testimonial publicly",
+            "Organized testimonial library tagged by service type so you can quickly find relevant quotes"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How often should we survey our bookkeeping clients?",
+          "answer": "For most bookkeeping practices, quarterly surveys strike the right balance between staying informed and not overwhelming clients. Some firms prefer to survey after specific milestones like year-end close or after the first three months of a new engagement. We work with you to find a cadence that fits your practice and your clients' expectations. The key is consistency, so that feedback collection becomes a natural part of your client relationship rather than a one-off event.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What if a client gives negative feedback through the survey?",
+          "answer": "Negative feedback is routed privately to your team so you can address the concern directly with the client. The system never invites a dissatisfied client to leave a public review. In our experience, reaching out promptly to a client who has expressed a concern often strengthens the relationship because it demonstrates that you are listening and willing to make things right. Many firms find that their feedback system actually helps them retain clients they might otherwise have lost.",
+          "category": "General"
+        },
+        {
+          "question": "Can the surveys integrate with our bookkeeping or practice management tools?",
+          "answer": "We design the system to work with the tools you already use. Whether you manage clients in QuickBooks Online, Xero, FreshBooks, or a dedicated practice management platform like Karbon or Jetpack Workflow, we explore integration options during setup. At minimum, we can use your client list to automate survey distribution. In many cases, we can tie surveys to specific workflow milestones so they deploy automatically when you complete a deliverable like month-end reconciliation or a financial report.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Turn Client Feedback Into Your Biggest Growth Asset?",
+      "ctaDescription": "Book a free consultation and we will assess your current client feedback process, design a survey and review pathway that fits your bookkeeping practice, and show you how other firms are using this approach to grow."
+    },
+    "online-reputation-automation-for-cpas": {
+      "heroSubtitleTemplate": "A comprehensive reputation automation system for CPA firms. We build and manage the monitoring, response, and growth infrastructure that keeps your online presence strong across every platform where prospective clients research your firm.",
+      "heroDescription": "Your CPA firm's online reputation extends well beyond a star rating on Google. It is the sum of every review, every response, every directory listing, and every mention of your firm across the platforms where prospective clients do their research. Managing all of this manually is not realistic for a busy practice. Reviews appear on Google, Yelp, Facebook, and industry directories. Clients leave comments on social media. Business listings contain outdated information. Without a system to monitor and manage these touchpoints, your reputation is shaped by whatever happens to appear first when someone searches your firm name. Online reputation automation brings order to this complexity. We set up monitoring across every platform that matters for your firm, configure alerts so nothing goes unnoticed, establish response workflows so reviews are acknowledged promptly, and build a proactive review generation program so your reputation grows stronger over time rather than stagnating. For CPA firms that serve business clients, the stakes are especially high. A CFO or business owner researching accounting firms will often check multiple sources before making contact. They read reviews carefully, they notice whether the firm responds to feedback, and they compare what they find against competing firms. A well-managed online reputation does not just attract more inquiries. It attracts better-fit clients who arrive already confident in your firm's capabilities.",
+      "benefits": [
+        {
+          "title": "Complete Visibility Across Every Platform That Matters",
+          "description": "Your monitoring system covers Google Business Profile, Yelp, Facebook, LinkedIn, and the industry-specific directories where accounting firm reviews appear. Instead of checking each platform individually or discovering reviews months after they are posted, you have a single view of your entire online reputation with real-time alerts when anything changes."
+        },
+        {
+          "title": "Professional Response Management That Builds Trust",
+          "description": "Every review your firm receives gets a thoughtful, timely response. Positive reviews are acknowledged in a way that reinforces the client relationship. Critical reviews are addressed professionally with a tone that demonstrates accountability. Prospective clients who read these responses form an impression of a firm that cares about its clients and takes feedback seriously."
+        },
+        {
+          "title": "Proactive Reputation Growth Instead of Passive Waiting",
+          "description": "Rather than hoping that satisfied clients will leave reviews on their own, your system actively builds your reputation through strategic outreach. This proactive approach means your firm's online presence keeps pace with the quality of your work, closing the gap between how good your firm actually is and how it appears to someone researching you online."
+        }
+      ],
+      "features": [
+        {
+          "title": "Cross-Platform Monitoring and Alerting",
+          "description": "We configure comprehensive monitoring across every review platform and directory where your firm has a presence. Alerts notify your designated team member within hours of a new review appearing, and our dashboard gives you a unified view of your reputation across all platforms in one place.",
+          "details": [
+            "Monitoring coverage across Google, Yelp, Facebook, LinkedIn, and accounting industry directories",
+            "Real-time alert configuration delivered via email or your preferred communication channel",
+            "Unified dashboard showing review volume, average ratings, and sentiment trends across all platforms"
+          ]
+        },
+        {
+          "title": "Response Workflow and Template Library",
+          "description": "We build a complete response system with templates tailored to different review types and scenarios. Your team has pre-approved language for positive reviews, constructive criticism, and the occasional unfair or inaccurate review, along with escalation protocols for situations that require partner involvement.",
+          "details": [
+            "Categorized response templates covering positive, neutral, negative, and inaccurate review scenarios",
+            "Escalation workflows that route sensitive reviews to the appropriate partner or manager",
+            "Response time targets and tracking so reviews are acknowledged within your firm's standard"
+          ]
+        },
+        {
+          "title": "Proactive Reputation Building Program",
+          "description": "Beyond monitoring and responding, we implement a systematic program to grow your review presence over time. This includes automated review requests, strategic outreach to long-standing clients, and periodic campaigns aligned with seasonal milestones in your practice.",
+          "details": [
+            "Automated review request sequences integrated with your client engagement workflow",
+            "Targeted outreach campaigns to long-term clients who have not yet shared their experience publicly",
+            "Seasonal reputation campaigns timed to post-tax-season satisfaction and year-end advisory milestones"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How many platforms does the monitoring system cover?",
+          "answer": "We typically monitor between five and ten platforms depending on where your firm has active listings and where your prospective clients are most likely to research CPA firms in your market. At minimum, this includes Google Business Profile, Yelp, and Facebook. Beyond that, we assess which industry directories and local business sites are relevant for your geographic area and service specialties. During the setup process, we audit your existing listings and recommend which platforms to include based on where reviews are most likely to appear and where prospective clients are actually looking.",
+          "category": "General"
+        },
+        {
+          "question": "What is the typical setup timeline for a full reputation automation system?",
+          "answer": "Most CPA firms are fully operational within three to four weeks. The first week focuses on auditing your current online presence and configuring monitoring across all relevant platforms. The second week involves building your response template library and establishing escalation workflows. Weeks three and four are dedicated to setting up the proactive review generation program and testing everything end to end. Your team receives training on using the dashboard and responding to alerts during this period as well. After launch, we continue managing and optimizing the system on an ongoing basis.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can you help us address existing negative reviews that are already published?",
+          "answer": "Yes, addressing your existing review landscape is part of the initial setup. We review every published review across your platforms and develop a response strategy for any that have not yet been addressed. For reviews that may violate platform guidelines, such as those from non-clients or containing factually inaccurate claims, we can assist with the dispute process. For legitimate negative reviews, we craft professional responses that demonstrate your firm's commitment to client satisfaction. Over time, the proactive review generation program also helps by building a volume of positive reviews that naturally reduces the visibility and impact of any older negative feedback.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Take Control of Your CPA Firm's Online Reputation?",
+      "ctaDescription": "Schedule a free reputation audit and we will assess your current presence across every platform that matters, identify the biggest opportunities for improvement, and outline a management plan tailored to your firm's goals."
+    }
   }
 }

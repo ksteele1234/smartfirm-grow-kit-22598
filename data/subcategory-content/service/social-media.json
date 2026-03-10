@@ -83,5 +83,337 @@
     "tax preparers": {
       "heroDescription": "Most tax preparers have social media accounts that go dark after April and only come alive again when filing season approaches. That feast or famine pattern hurts your visibility and makes it harder to promote advisory services during the off season. We manage your social media year round, creating and scheduling content that keeps your firm visible to prospects and referral partners whether it is January or July."
     }
+  },
+  "slugOverrides": {
+    "social-media-automation-for-cpas": {
+      "heroSubtitleTemplate": "Running a CPA firm leaves little room for managing social media manually. Our full social media automation service handles everything from content creation to multi-platform scheduling, so your practice stays visible to prospects and referral partners without pulling you away from billable work.",
+      "heroDescription": "Between audits, tax engagements, and advisory work, most CPAs simply cannot dedicate the hours needed to maintain a meaningful social media presence across multiple platforms. That is where full automation changes the equation. We build out your content strategy, create posts tailored to your areas of expertise, and schedule them across the platforms where your ideal clients and referral sources spend their time. The entire process runs in the background while you focus on what you do best, serving your clients and growing your practice.",
+      "benefits": [
+        {
+          "title": "Consistent Multi-Platform Visibility Without Manual Effort",
+          "description": "Your CPA firm appears on LinkedIn, Facebook, and other relevant platforms with fresh, professional content published on a regular cadence. Because everything is automated after our initial strategy and content development sessions, no one on your team needs to log in, write posts, or remember to click publish."
+        },
+        {
+          "title": "Content That Reflects Your Specific Expertise",
+          "description": "We develop posts around the services and specialties that differentiate your CPA practice. Whether your firm focuses on business advisory, tax planning for high-net-worth individuals, or nonprofit audits, the content we create speaks directly to those areas rather than offering generic accounting advice that could come from any firm."
+        },
+        {
+          "title": "Streamlined Workflow That Scales With Your Firm",
+          "description": "As your firm grows or your service offerings evolve, the automation framework adapts with you. Adding a new service line or targeting a new client segment does not mean starting over. We adjust the content strategy and scheduling parameters to reflect your current priorities without disrupting what is already working."
+        }
+      ],
+      "features": [
+        {
+          "title": "End-to-End Content Creation and Scheduling",
+          "description": "We handle every step of the content lifecycle for your CPA firm, from topic research and copywriting to formatting and scheduled publication across each platform you want to be active on.",
+          "details": [
+            "Monthly content batches written specifically for CPA audiences and their clients",
+            "Platform-specific formatting so each post looks native whether it appears on LinkedIn or Facebook",
+            "Automated scheduling that maintains your preferred posting frequency without any manual intervention"
+          ]
+        },
+        {
+          "title": "Multi-Platform Management From a Single Strategy",
+          "description": "Rather than treating each social platform as a separate project, we develop one cohesive strategy and adapt the messaging for each channel. This keeps your brand voice consistent while respecting the nuances of how different audiences engage on different platforms.",
+          "details": [
+            "Unified content calendar that maps topics across all active platforms",
+            "Platform-appropriate adjustments to tone, length, and formatting for each channel",
+            "Coordinated publishing schedules that avoid redundancy while maximizing reach"
+          ]
+        },
+        {
+          "title": "Performance Tracking and Ongoing Refinement",
+          "description": "Automation does not mean set it and forget it. We monitor engagement metrics across every platform and use that data to refine your content mix, posting schedule, and targeting over time so results continue to improve.",
+          "details": [
+            "Monthly performance reports covering reach, engagement, and audience growth by platform",
+            "Content analysis identifying which post types and topics are resonating most",
+            "Quarterly strategy reviews where we recommend adjustments based on what the data is telling us"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you ensure the automated content sounds like it comes from our firm and not a generic marketing agency?",
+          "answer": "We start with a thorough discovery process where we learn about your firm's specialties, your client base, the way your partners communicate, and the topics that matter most to your practice. Every piece of content is developed from that foundation. We also build in a review period during the first few months so you can refine the voice until it feels authentically yours.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Will this automation work if our firm is active on more than two social platforms?",
+          "answer": "Absolutely. While we typically recommend focusing your efforts on the one or two platforms where your ideal clients are most active, the automation framework supports as many platforms as make strategic sense for your firm. We will help you evaluate which channels deserve your investment and build out the scheduling and content accordingly.",
+          "category": "General"
+        },
+        {
+          "question": "What tools and systems do you use to manage the automation?",
+          "answer": "We use professional-grade scheduling and publishing platforms that integrate with all major social networks. The specific tools may vary depending on your firm's needs and any existing systems you already have in place. During onboarding, we walk you through the technology stack and make sure you have visibility into how everything works, even though you will not need to manage it day to day.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Automate Your Firm's Social Media?",
+      "ctaDescription": "Schedule a complimentary consultation and we will assess your current social presence, identify the platforms that matter most for your CPA practice, and outline what a fully automated social media program would look like for your firm."
+    },
+    "content-scheduling-automation-for-accounting-firms": {
+      "heroSubtitleTemplate": "Most accounting firms have great ideas for social media content but struggle to publish consistently. Our content scheduling automation takes the guesswork and manual effort out of distribution, so your posts reach the right platforms at the right times without anyone on your team managing a calendar.",
+      "heroDescription": "The hardest part of social media for most accounting firms is not coming up with something to say. It is actually getting that content published consistently across multiple platforms while managing the daily demands of client work. Content scheduling automation solves that exact problem. We plan your publishing calendar, queue up posts in advance, and automate the distribution so your firm maintains a steady presence on every channel that matters. You stay focused on client service while your social media runs on a reliable, professional schedule.",
+      "benefits": [
+        {
+          "title": "Reliable Publishing Cadence Across Every Platform",
+          "description": "Your accounting firm shows up consistently on social media because posts are scheduled and distributed automatically. No more weeks-long gaps when the team gets busy during quarter-end or filing season. The schedule runs independently of your workload, keeping your firm visible to prospects and referral partners year round."
+        },
+        {
+          "title": "Strategic Timing That Reaches Your Audience",
+          "description": "We analyze when your target audience is most active and schedule content distribution accordingly. Rather than posting whenever someone on your team happens to have a free moment, your content hits each platform during the windows that tend to generate the most visibility and engagement for professional services firms."
+        },
+        {
+          "title": "Freed-Up Time for Higher-Value Activities",
+          "description": "The hours your team currently spends logging into platforms, formatting posts, and trying to remember what was supposed to go out this week get returned to client work and business development. Content scheduling automation removes the operational burden while keeping the results flowing."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automated Content Calendar and Distribution",
+          "description": "We build a structured content calendar for your firm and set up automated distribution so approved posts publish on schedule without any manual intervention from your team.",
+          "details": [
+            "Monthly content calendars mapping topics and post types across your active platforms",
+            "Automated queuing and publishing at optimized times for each channel",
+            "Buffer scheduling that maintains your posting frequency even during holidays and busy seasons"
+          ]
+        },
+        {
+          "title": "Cross-Platform Scheduling Coordination",
+          "description": "Different platforms require different posting frequencies and formats. We manage the scheduling nuances for each channel so your content is appropriately adapted and timed, whether it is going to LinkedIn, Facebook, or another network your firm uses.",
+          "details": [
+            "Platform-specific scheduling rules that respect the norms and algorithms of each channel",
+            "Staggered publishing to avoid flooding all platforms simultaneously",
+            "Format adjustments so each post looks native to the platform where it appears"
+          ]
+        },
+        {
+          "title": "Calendar Visibility and Approval Workflows",
+          "description": "You always know what is scheduled and when. We provide calendar access so your team can review upcoming posts, and we can build in approval steps if your firm prefers to sign off on content before it goes live.",
+          "details": [
+            "Shared content calendar with full visibility into scheduled posts and publication dates",
+            "Optional approval workflows for firms that want to review content before it publishes",
+            "Easy rescheduling capabilities when you need to adjust timing around firm events or announcements"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How far in advance do you schedule content for our firm?",
+          "answer": "We typically work one month ahead, which gives your team time to review the calendar and request any changes while also allowing us to respond to timely industry developments. During particularly busy seasons like tax filing deadlines, we may extend the buffer to six weeks so nothing falls through the cracks when your attention is focused on client work.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Can we still post spontaneously if something timely comes up?",
+          "answer": "Of course. The automated schedule is a foundation, not a constraint. If your firm wants to share a timely industry update, celebrate a team milestone, or respond to breaking news, those posts can be added at any time without disrupting the existing calendar. We can also help you draft and schedule those timely posts quickly when needed.",
+          "category": "General"
+        },
+        {
+          "question": "What happens if a scheduled post needs to be pulled or edited after it has been queued?",
+          "answer": "You can request changes at any point before a post publishes, and we can pause or remove scheduled content within the platform quickly. We build a reasonable buffer into publication times precisely so there is room to make last-minute adjustments if circumstances change or you spot something that needs revision.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Put Your Content on Autopilot?",
+      "ctaDescription": "Book a free consultation and we will review your current publishing workflow, identify where the bottlenecks are, and show you how content scheduling automation can keep your accounting firm visible without the manual effort."
+    },
+    "social-media-management-system-for-tax-preparers": {
+      "heroSubtitleTemplate": "Tax preparation is inherently seasonal, but your social media presence should not be. Our social media management system keeps your firm active and engaging year round with content that reflects where you are in the tax calendar, from filing season urgency to off-season advisory topics.",
+      "heroDescription": "Most tax preparation firms face a unique social media challenge. During filing season, you are too busy to post. During the off season, it feels like there is nothing urgent to say. The result is an inconsistent presence that makes it harder to attract new clients and stay top of mind with existing ones. Our social media management system is built specifically for the rhythm of tax preparation work. We create seasonal content strategies that keep your firm visible and relevant throughout the entire year, handle community engagement so prospects feel welcomed when they reach out, and manage the day-to-day execution so your team can focus entirely on serving clients.",
+      "benefits": [
+        {
+          "title": "Year-Round Visibility That Matches the Tax Calendar",
+          "description": "Your social media content aligns with what your audience cares about at each point in the year. During filing season, posts address deadlines, last-minute planning tips, and extension information. During summer and fall, the focus shifts to estimated payments, year-end planning, and advisory services that many tax preparers want to promote but struggle to market effectively."
+        },
+        {
+          "title": "Community Engagement That Builds Client Relationships",
+          "description": "Social media is not just about publishing content. It is about responding to comments, answering questions, and creating a sense of connection with your community. We monitor your profiles and engage with followers on your behalf, making sure inquiries get timely responses and your firm comes across as approachable and attentive."
+        },
+        {
+          "title": "A Professional System That Runs Without Your Oversight",
+          "description": "The management system handles content planning, creation, scheduling, community monitoring, and performance tracking in one coordinated workflow. You receive regular updates on what is happening and how it is performing, but you do not need to be involved in the daily execution unless you want to be."
+        }
+      ],
+      "features": [
+        {
+          "title": "Seasonal Content Strategy and Creation",
+          "description": "We develop content that maps to the tax preparation calendar, ensuring your firm always has timely, relevant posts going out. Each piece of content is written to demonstrate your expertise during the season when that expertise matters most to your audience.",
+          "details": [
+            "Quarterly content plans aligned with tax deadlines, legislative changes, and seasonal client needs",
+            "Posts that transition naturally from filing season urgency to off-season advisory topics",
+            "Content that helps position your firm for advisory and planning services beyond basic tax preparation"
+          ]
+        },
+        {
+          "title": "Community Monitoring and Engagement",
+          "description": "We keep an eye on your social profiles and respond to comments, messages, and mentions in a way that is consistent with your firm's voice and standards. When a potential client reaches out through social media, they get a prompt, professional response that moves the conversation forward.",
+          "details": [
+            "Daily monitoring of comments, direct messages, and mentions across active platforms",
+            "Professional responses crafted in your firm's voice for common inquiries and engagement",
+            "Escalation protocols for messages that require a partner or team member to respond personally"
+          ]
+        },
+        {
+          "title": "Integrated Reporting and Seasonal Performance Analysis",
+          "description": "We track how your content performs across different seasons and use that data to refine the strategy for the next cycle. This means your social media approach gets smarter every year as we learn what resonates with your specific audience.",
+          "details": [
+            "Monthly engagement reports broken down by content type and seasonal relevance",
+            "Year-over-year comparisons to track how your audience is growing and engaging over time",
+            "Actionable recommendations for adjusting the content mix based on seasonal performance patterns"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do you handle the transition between filing season content and off-season content?",
+          "answer": "We plan the transition well in advance so it feels natural rather than abrupt. As filing season winds down, the content gradually shifts from deadline-focused posts to topics like estimated tax payments, mid-year planning opportunities, and advisory services your firm offers. This approach helps your audience see your firm as a year-round resource rather than a seasonal service provider.",
+          "category": "Implementation"
+        },
+        {
+          "question": "What does community engagement look like in practice for a tax preparation firm?",
+          "answer": "It typically involves responding to comments on your posts, answering general questions that come through direct messages, thanking people who share your content, and engaging with relevant posts from others in your professional community. We do not provide tax advice on your behalf, but we can acknowledge questions and direct people to schedule a consultation when appropriate.",
+          "category": "General"
+        },
+        {
+          "question": "Can the system integrate with our existing client communication tools?",
+          "answer": "We work with the major social media management and scheduling platforms and can coordinate with most CRM or client communication systems your firm already uses. During onboarding, we review your current technology stack and identify the most efficient way to integrate social media management without creating duplicate work or compatibility issues.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready for Social Media That Works Year Round?",
+      "ctaDescription": "Schedule a free call and we will evaluate your current social presence, discuss how a seasonal content strategy could work for your tax preparation firm, and outline a management system tailored to your practice."
+    },
+    "automated-posting-for-bookkeepers": {
+      "heroSubtitleTemplate": "As a bookkeeper, your days are filled with reconciliations, client communications, and deadlines that leave little room for social media. Our automated posting service gives your practice a consistent, professional online presence without requiring you to write, schedule, or even think about social media.",
+      "heroDescription": "Bookkeeping is a hands-on profession that demands attention to detail and consistent client communication. Finding time to also maintain an active social media presence is a challenge most bookkeepers simply cannot solve by adding it to their to-do list. Automated posting changes the dynamic entirely. We learn about your practice, develop content that speaks to the clients you want to attract, and set up a fully automated posting schedule that runs in the background. Your practice stays visible on social media, prospects see that you are active and professional, and you never have to spend an evening trying to come up with something to post.",
+      "benefits": [
+        {
+          "title": "A Hands-Off Social Presence That Still Feels Personal",
+          "description": "The content we create and automate for your bookkeeping practice reflects your personality and expertise, not generic accounting templates. Because we invest time upfront learning about your services, your ideal clients, and how you communicate, the automated posts feel like they come from you even though you did not write them."
+        },
+        {
+          "title": "Steady Visibility That Builds Trust Over Time",
+          "description": "When potential clients search for a bookkeeper and find your social profiles, they see a consistent stream of professional, helpful content. That steady presence builds confidence that your practice is active, established, and engaged with your professional community. It is often the difference between someone reaching out or moving on to the next option."
+        },
+        {
+          "title": "Zero Disruption to Your Daily Workflow",
+          "description": "Automated posting means exactly what it sounds like. Once the content is developed and the schedule is set, posts go out on their own. There are no daily tasks, no apps to check, and no content calendars to manage. If you want to review what is going out, you can. But you do not have to."
+        }
+      ],
+      "features": [
+        {
+          "title": "Personalized Content Development",
+          "description": "We start by understanding your bookkeeping practice, the types of clients you serve, and the services you want to be known for. From there, we develop a library of content that positions you as knowledgeable and approachable, covering topics your ideal clients actually care about.",
+          "details": [
+            "Discovery session to understand your practice, services, and the types of clients you want to attract",
+            "Content library built around your specific expertise and the questions your prospects commonly ask",
+            "Posts that highlight the value of professional bookkeeping in language your audience connects with"
+          ]
+        },
+        {
+          "title": "Set-and-Forget Scheduling",
+          "description": "After content is approved, we load it into an automated scheduling system that publishes posts at optimal times across your active platforms. The schedule runs continuously, and we refresh the content library on a regular basis so your feed never goes stale.",
+          "details": [
+            "Automated publishing at times optimized for your target audience and platform",
+            "Recurring content refresh cycles so your social feed always features current, relevant posts",
+            "Hands-off operation that requires no daily action or monitoring from you"
+          ]
+        },
+        {
+          "title": "Simple Reporting You Can Actually Use",
+          "description": "We provide straightforward updates on how your social media is performing without burying you in data you do not need. You will know whether your audience is growing, which posts are getting noticed, and whether the overall strategy is working.",
+          "details": [
+            "Monthly summary reports focused on the metrics that actually matter for your practice",
+            "Clear language explanations of what is working and what we are adjusting",
+            "Recommendations delivered in a way that does not require you to become a social media expert"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much of my time does this actually require?",
+          "answer": "After the initial discovery session, which typically takes about an hour, your ongoing time commitment is minimal. We send you content for review once a month, and most bookkeepers spend fifteen to twenty minutes looking it over. If you prefer to skip the review process entirely and trust us to handle everything, that works too. The whole point is to keep this off your plate.",
+          "category": "Implementation"
+        },
+        {
+          "question": "Is automated posting effective for a small bookkeeping practice?",
+          "answer": "It can be especially effective for small practices because it provides professional visibility that might otherwise be impossible to maintain. When you are the only person running the business, you cannot also be a part-time content creator. Automated posting gives you a level of social media presence that might typically require a dedicated marketing person, but at a fraction of the cost and with none of the time commitment.",
+          "category": "General"
+        },
+        {
+          "question": "What platforms do you typically recommend for bookkeepers?",
+          "answer": "For most bookkeepers, LinkedIn tends to be the most productive platform because it is where business owners and decision-makers spend time looking for professional services. Depending on your local market and the types of clients you serve, Facebook can also be worthwhile. We assess your specific situation during discovery and recommend the platforms that make the most sense rather than spreading your presence across channels that are unlikely to generate results.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready for Social Media That Runs Itself?",
+      "ctaDescription": "Book a free consultation and we will take a look at your current online presence, discuss the types of clients you want to attract, and show you how automated posting can keep your bookkeeping practice visible without adding anything to your workload."
+    },
+    "linkedin-automation-for-cpas": {
+      "heroSubtitleTemplate": "LinkedIn is where your ideal clients, referral partners, and professional peers spend their time. Our LinkedIn automation service helps your CPA firm build thought leadership, grow meaningful connections, and maintain a commanding presence on the platform without requiring hours of manual effort each week.",
+      "heroDescription": "For CPAs, LinkedIn is not just another social network. It is the platform where business owners evaluate potential advisors, where attorneys and bankers look for trusted referral partners, and where your professional reputation either reinforces or undermines every other marketing investment you make. The challenge is that building a meaningful LinkedIn presence takes consistent effort that most CPAs cannot sustain alongside client responsibilities. Our LinkedIn automation service solves that problem by handling your content strategy, post creation, and publishing cadence so your firm builds visibility and credibility on the platform that matters most, all while you focus on the work that actually requires your expertise.",
+      "benefits": [
+        {
+          "title": "Thought Leadership That Positions You as a Trusted Advisor",
+          "description": "We develop LinkedIn content that showcases your firm's expertise on the topics your ideal clients and referral partners care about. Rather than generic accounting tips, your posts address the real questions business owners face, the planning strategies that set great CPAs apart, and the insights that make other professionals want to refer clients to you."
+        },
+        {
+          "title": "Connection Growth With the Right Professional Audience",
+          "description": "A large network means nothing if it is full of people who will never become clients or referral sources. Our approach focuses on growing your connections strategically, helping you build a network that includes the business owners, attorneys, financial advisors, and other professionals who are most likely to create opportunities for your firm."
+        },
+        {
+          "title": "Consistent Presence That Compounds Over Time",
+          "description": "LinkedIn rewards consistency. Firms that post regularly and engage with their network see their content surfaced to more people over time. Our automation ensures your firm maintains the posting frequency needed to build momentum, so the visibility you earn this month contributes to even greater reach next month and beyond."
+        }
+      ],
+      "features": [
+        {
+          "title": "LinkedIn Content Strategy and Creation",
+          "description": "We develop a content strategy specifically designed for how CPAs succeed on LinkedIn, then create the posts, articles, and commentary that bring that strategy to life. Every piece of content is written to engage your professional audience and reinforce your firm's areas of expertise.",
+          "details": [
+            "Content strategy built around the topics and perspectives that differentiate your CPA practice",
+            "A mix of original posts, longer articles, and industry commentary tailored for the LinkedIn format",
+            "Content that addresses the questions and concerns your ideal clients are already thinking about"
+          ]
+        },
+        {
+          "title": "Strategic Profile Optimization and Connection Building",
+          "description": "Your LinkedIn profile is often the first impression prospects and referral partners get of your firm. We provide recommendations for optimizing every element of your profile and develop a connection-building approach that expands your network with the right people.",
+          "details": [
+            "Profile review and optimization recommendations for partners and key team members",
+            "Connection strategy focused on prospects, referral sources, and industry leaders in your market",
+            "Engagement guidelines that help build authentic relationships without feeling transactional"
+          ]
+        },
+        {
+          "title": "Automated Publishing and Engagement Monitoring",
+          "description": "We handle the scheduling and publishing of all LinkedIn content so your firm shows up consistently. We also monitor engagement on your posts and provide summaries of meaningful interactions so you can follow up personally when a high-value conversation emerges.",
+          "details": [
+            "Automated post scheduling that maintains your optimal publishing cadence on LinkedIn",
+            "Engagement monitoring to flag comments and interactions that deserve a personal response",
+            "Weekly or monthly summaries highlighting the most meaningful engagement and connection opportunities"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Should this be on the firm's LinkedIn page or the individual partner profiles?",
+          "answer": "Ideally both, but if you have to choose, individual partner profiles tend to generate significantly more engagement on LinkedIn than company pages. People connect with people, not logos. We typically recommend a strategy that uses the firm page for credibility and announcements while focusing the thought leadership and relationship-building content on one or two key partner profiles where the engagement is strongest.",
+          "category": "Implementation"
+        },
+        {
+          "question": "How is this different from just scheduling posts on LinkedIn?",
+          "answer": "Scheduling posts is one small piece of what we do. The real value is in the strategy behind what gets posted, when, and why. We research what topics are resonating with your target audience, develop content that positions your firm as a thought leader rather than just another accounting practice posting tips, and continuously refine the approach based on what is actually generating engagement and attracting the right connections.",
+          "category": "General"
+        },
+        {
+          "question": "Does LinkedIn automation comply with LinkedIn's terms of service?",
+          "answer": "We use LinkedIn-approved publishing and scheduling tools and follow all platform guidelines. Our approach focuses on creating genuine, valuable content and publishing it through supported methods rather than using any techniques that could put your profile at risk. We stay current with LinkedIn's policies and adjust our methods whenever the platform updates its terms.",
+          "category": "Technical"
+        }
+      ],
+      "ctaTitle": "Ready to Own Your LinkedIn Presence?",
+      "ctaDescription": "Schedule a complimentary strategy session and we will review your current LinkedIn presence, discuss where the biggest opportunities are for your CPA firm, and outline a plan for building the kind of thought leadership that attracts clients and referral partners."
+    }
   }
 }
