@@ -145,7 +145,7 @@ const GetStarted = () => {
         <div className="px-4 md:px-6">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-1 elevation-1 w-full max-w-container-3xl mx-auto">
-              <CalEmbed calLink="PLACEHOLDER/30min" className="rounded-lg" />
+              <CalEmbed calLink="katie-smartfirm.io/30min" className="rounded-lg" />
             </div>
           </div>
         </div>
