@@ -15,7 +15,13 @@
 # (hashed assets: immutable 1yr, images: 30d, HTML: must-revalidate, security headers)
 
 [functions]
-[functions."*"]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# HARO/SOS check uses two functions:
+#   haro-check.mts      = Scheduled trigger (cron, runs <5s, within 30s limit)
+#   haro-worker-background.mts = Background worker (does the AI processing, up to 15min)
+# Schedule: weekdays at 2:25 AM, 3:45 AM, 9:25 AM, 10:45 AM, 2:25 PM Pacific (UTC in code)
 
 [build]
   publish = "dist"
