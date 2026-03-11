@@ -74,6 +74,7 @@ const PageGrader = lazy(() => import("./pages/tools/PageGrader"));
 const AdvancedSEOQA = lazy(() => import("./pages/tools/AdvancedSEOQA"));
 const GrowthCalculator = lazy(() => import("./pages/GrowthCalculator"));
 const Diagnostic = lazy(() => import("./pages/Diagnostic"));
+const GuestPostLanding = lazy(() => import("./pages/GuestPostLanding"));
 
 // Programmatic SEO Pages
 const ProgrammaticPage = lazy(() => import("./pages/grow/ProgrammaticPage"));
@@ -290,6 +291,8 @@ const App = () => (
             {/* Funnel Pages */}
             <Route path="/diagnostic" element={<Diagnostic />} />
             <Route path="/diagnostic/" element={<Diagnostic />} />
+            <Route path="/welcome" element={<GuestPostLanding />} />
+            <Route path="/guest-post" element={<Navigate to="/welcome" replace />} />
             <Route path="/accounting-firm-growth-calculator" element={<GrowthCalculator />} />
             <Route path="/growth-calculator" element={<Navigate to="/accounting-firm-growth-calculator" replace />} />
 

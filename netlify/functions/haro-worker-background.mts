@@ -1,11 +1,11 @@
 // netlify/functions/haro-worker-background.mts
-// Netlify Background Function: does the actual HARO/SOS processing
+// Netlify Background Function: does the actual HARO/SOS/SourceBottle/Featured processing
 //
 // Named with "-background" suffix so Netlify treats it as a background function
 // (returns 202 immediately, runs for up to 15 minutes async).
 //
 // Workflow:
-// 1. Fetch unread HARO/SOS emails from Gmail
+// 1. Fetch unread HARO/SOS/SourceBottle/Featured emails from Gmail
 // 2. Parse into individual reporter queries
 // 3. AI-evaluate relevance (Claude API)
 // 4. Draft responses for matches
@@ -79,6 +79,11 @@ async function getUnreadHaroEmails(): Promise<EmailMessage[]> {
     "OR from:sourceofsources.com",
     "OR from:peter@shankman.com",
     'OR subject:"Source of Sources"',
+    "OR from:sourcebottle.com",
+    'OR subject:"SourceBottle"',
+    'OR subject:"Drink Up"',
+    "OR from:featured.com",
+    'OR subject:"Featured"',
     ")",
   ].join(" ");
 
@@ -203,6 +208,20 @@ async function addLabel(messageId: string, labelName: string) {
   });
 }
 
+// ── Source Detection ─────────────────────────────────────────
+
+type QuerySource = "HARO" | "SOS" | "SourceBottle" | "Featured" | "Unknown";
+
+function detectEmailSource(from: string, subject: string): QuerySource {
+  const f = from.toLowerCase();
+  const s = subject.toLowerCase();
+  if (f.includes("featured.com") || s.includes("featured")) return "Featured";
+  if (f.includes("sourcebottle.com") || s.includes("sourcebottle") || s.includes("drink up")) return "SourceBottle";
+  if (f.includes("sourceofsources.com") || f.includes("peter@shankman.com") || s.includes("source of sources")) return "SOS";
+  if (f.includes("helpareporter.com") || s.includes("haro") || s.includes("help a reporter")) return "HARO";
+  return "Unknown";
+}
+
 // ── HARO Parser ─────────────────────────────────────────────
 
 interface HaroQuery {
@@ -215,6 +234,7 @@ interface HaroQuery {
   requirements: string;
   contactEmail: string;
   sourceEmail: string;
+  querySource: QuerySource;
   _emailId?: string;
   _threadId?: string;
   _emailFrom?: string;
@@ -250,20 +270,29 @@ function extractFirstSentence(text: string): string {
   return match ? match[1] : cleaned.substring(0, 200);
 }
 
-function extractQueryFromSection(section: string): HaroQuery | null {
+function extractQueryFromSection(section: string, querySource: QuerySource = "Unknown"): HaroQuery | null {
   const text = section.trim();
   if (text.length < 30) return null;
 
+  // SourceBottle emails may use "Title:", "Brief:", "Description:" labels
   const category = extractField(text, /category[:\s]+(.+)/i) || extractField(text, /topic[:\s]+(.+)/i) || "";
   const summary =
     extractField(text, /summary[:\s]+(.+)/i) ||
+    extractField(text, /title[:\s]+(.+)/i) ||
     extractField(text, /subject[:\s]+(.+)/i) ||
     extractField(text, /query[:\s]+(.+)/i) ||
+    extractField(text, /brief[:\s]+(.+)/i) ||
     extractFirstSentence(text);
-  const reporterName = extractField(text, /(?:reporter|journalist|name)[:\s]+(.+)/i) || extractField(text, /(?:from|by)[:\s]+(.+)/i) || "";
-  const outlet = extractField(text, /(?:outlet|publication|media|for)[:\s]+(.+)/i) || "";
-  const deadline = extractField(text, /(?:deadline|due|respond by|date)[:\s]+(.+)/i) || "";
-  const requirements = extractField(text, /(?:requirements?|looking for|seeking|needs?)[:\s]+(.+)/i) || "";
+  const reporterName =
+    extractField(text, /(?:reporter|journalist|name)[:\s]+(.+)/i) ||
+    extractField(text, /(?:posted by|submitted by|from|by)[:\s]+(.+)/i) || "";
+  const outlet =
+    extractField(text, /(?:outlet|publication|media outlet|for)[:\s]+(.+)/i) ||
+    extractField(text, /(?:website|blog|magazine)[:\s]+(.+)/i) || "";
+  const deadline =
+    extractField(text, /(?:deadline|due|respond by|date|closes?)[:\s]+(.+)/i) || "";
+  const requirements =
+    extractField(text, /(?:requirements?|looking for|seeking|needs?|description)[:\s]+(.+)/i) || "";
   const emailMatch = text.match(/[\w.+-]+@[\w-]+\.[\w.]+/);
 
   return {
@@ -276,15 +305,17 @@ function extractQueryFromSection(section: string): HaroQuery | null {
     requirements: requirements.trim(),
     contactEmail: emailMatch ? emailMatch[0] : "",
     sourceEmail: "",
+    querySource,
   };
 }
 
-function parseHaroEmail(emailBody: string, emailSubject: string = ""): HaroQuery[] {
+function parseHaroEmail(emailBody: string, emailSubject: string = "", emailFrom: string = ""): HaroQuery[] {
   const queries: HaroQuery[] = [];
   const text = stripHtml(emailBody);
+  const querySource = detectEmailSource(emailFrom, emailSubject);
 
   // Try splitting by common separators
-  const separators = [/\n-{3,}\n/g, /\n\*{3,}\n/g, /\n={3,}\n/g, /\n_{3,}\n/g, /\nQuery\s*#?\d+/gi, /\n\d+\.\s+(?=[A-Z])/g, /\n(?=Category:)/gi, /\n(?=Summary:)/gi];
+  const separators = [/\n-{3,}\n/g, /\n\*{3,}\n/g, /\n={3,}\n/g, /\n_{3,}\n/g, /\nQuery\s*#?\d+/gi, /\n\d+\.\s+(?=[A-Z])/g, /\n(?=Category:)/gi, /\n(?=Summary:)/gi, /\n(?=Title:)/gi];
 
   let sections: string[] = [text];
   for (const sep of separators) {
@@ -296,7 +327,7 @@ function parseHaroEmail(emailBody: string, emailSubject: string = ""): HaroQuery
   }
 
   for (const section of sections) {
-    const query = extractQueryFromSection(section);
+    const query = extractQueryFromSection(section, querySource);
     if (query && query.summary) {
       query.sourceEmail = emailSubject;
       queries.push(query);
@@ -314,6 +345,7 @@ function parseHaroEmail(emailBody: string, emailSubject: string = ""): HaroQuery
       requirements: "",
       contactEmail: "",
       sourceEmail: emailSubject,
+      querySource,
     });
   }
 
@@ -442,11 +474,12 @@ async function sendTelegramAlert(results: any[], skippedCount: number) {
   const matchList = results
     .map((r: any, i: number) => {
       const outlet = r.query.outlet ? ` (${r.query.outlet})` : "";
-      return `${i + 1}. <b>${escapeHtml(r.query.summary.substring(0, 80))}</b>${outlet}\n   Score: ${r.evaluation.score}/100`;
+      const src = r.query.querySource || "HARO";
+      return `${i + 1}. [${src}] <b>${escapeHtml(r.query.summary.substring(0, 80))}</b>${outlet}\n   Score: ${r.evaluation.score}/100`;
     })
     .join("\n\n");
 
-  const message = `<b>HARO/SOS Alert</b>\n${results.length} match${results.length === 1 ? "" : "es"} found (${skippedCount} skipped)\n\n${matchList}\n\nDrafts are in your Gmail. Review and send!`;
+  const message = `<b>HARO/SOS/SourceBottle/Featured Alert</b>\n${results.length} match${results.length === 1 ? "" : "es"} found (${skippedCount} skipped)\n\n${matchList}\n\nDrafts are in your Gmail. Review and send!`;
 
   try {
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -478,7 +511,7 @@ async function sendNotificationEmail(results: any[], totalQueries: number, skipp
     )
     .join("");
 
-  const html = `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:640px;margin:0 auto;color:#333"><div style="background:#0A7265;color:white;padding:20px;border-radius:8px 8px 0 0"><h2 style="margin:0">HARO/SOS Response Drafts Ready</h2><p style="margin:8px 0 0;opacity:0.9">${results.length} relevant match${results.length === 1 ? "" : "es"} out of ${totalQueries} total${skippedCount > 0 ? ` (${skippedCount} skipped)` : ""}</p></div><div style="background:#f8f9fa;padding:16px;border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0"><p style="margin:0;color:#666;font-size:14px">Draft responses have been saved to your Gmail Drafts folder. Review each one, personalize if needed, and hit send.</p></div><table style="width:100%;border-collapse:collapse;border:1px solid #e0e0e0">${queryRows}</table><div style="background:#f8f9fa;padding:16px;border:1px solid #e0e0e0;border-radius:0 0 8px 8px"><p style="margin:0;font-size:13px;color:#888">Processed at ${new Date().toLocaleString("en-US", { timeZone: CONFIG.timezone })}<br/>Powered by SmartFirm AIOS</p></div></div>`;
+  const html = `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:640px;margin:0 auto;color:#333"><div style="background:#0A7265;color:white;padding:20px;border-radius:8px 8px 0 0"><h2 style="margin:0">HARO/SOS/SourceBottle/Featured Response Drafts Ready</h2><p style="margin:8px 0 0;opacity:0.9">${results.length} relevant match${results.length === 1 ? "" : "es"} out of ${totalQueries} total${skippedCount > 0 ? ` (${skippedCount} skipped)` : ""}</p></div><div style="background:#f8f9fa;padding:16px;border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0"><p style="margin:0;color:#666;font-size:14px">Draft responses have been saved to your Gmail Drafts folder. Review each one, personalize if needed, and hit send.</p></div><table style="width:100%;border-collapse:collapse;border:1px solid #e0e0e0">${queryRows}</table><div style="background:#f8f9fa;padding:16px;border:1px solid #e0e0e0;border-radius:0 0 8px 8px"><p style="margin:0;font-size:13px;color:#888">Processed at ${new Date().toLocaleString("en-US", { timeZone: CONFIG.timezone })}<br/>Powered by SmartFirm AIOS</p></div></div>`;
 
   try {
     await fetch("https://api.resend.com/emails", {
@@ -508,11 +541,11 @@ async function runHaroWorkflow() {
   console.log(`[HARO] Workflow started at ${new Date().toISOString()}`);
 
   // Step 1: Fetch unread emails
-  console.log("[HARO] Fetching unread HARO/SOS emails...");
+  console.log("[HARO] Fetching unread HARO/SOS/SourceBottle/Featured emails...");
   const emails = await getUnreadHaroEmails();
 
   if (emails.length === 0) {
-    console.log("[HARO] No unread HARO/SOS emails. Done.");
+    console.log("[HARO] No unread HARO/SOS/SourceBottle/Featured emails. Done.");
     return { success: true, emailsFound: 0, queriesFound: 0, draftsCreated: 0 };
   }
   console.log(`[HARO] Found ${emails.length} unread email(s)`);
@@ -520,8 +553,9 @@ async function runHaroWorkflow() {
   // Step 2: Parse into queries
   const allQueries: HaroQuery[] = [];
   for (const email of emails) {
-    const queries = parseHaroEmail(email.body, email.subject);
-    console.log(`[HARO] "${email.subject}" -> ${queries.length} queries`);
+    const queries = parseHaroEmail(email.body, email.subject, email.from);
+    const source = queries[0]?.querySource || "Unknown";
+    console.log(`[${source}] "${email.subject}" -> ${queries.length} queries`);
     for (const q of queries) {
       q._emailId = email.id;
       q._threadId = email.threadId;
