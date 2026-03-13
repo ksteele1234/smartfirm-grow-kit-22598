@@ -66,7 +66,7 @@ const prerenderRoutes = [
   "/services/client-onboarding-automation",
 
   // Offer Pages
-  "/ai-transformation-offer",
+  // REMOVED: /ai-transformation-offer has noindex={true}
 
   // Industry Pages
   "/industries/automation-for-tax-preparation-firms",
@@ -86,9 +86,7 @@ const prerenderRoutes = [
   "/tools/lead-generation-scorecard-for-accounting-firms",
   "/tools/modern-accounting-firm-assessment",
   "/tools/accounting-firm-growth-scorecard",
-  "/tools/seo-audit",
-  "/tools/page-grader",
-  "/tools/advanced-seo-qa",
+  // REMOVED: /tools/seo-audit, /tools/page-grader, /tools/advanced-seo-qa have noindex
 
   // Funnel Pages
   "/accounting-firm-growth-calculator",
@@ -400,12 +398,19 @@ async function prerender() {
   const blogRoutes = await fetchPublishedBlogSlugs();
   const tagRoutes = await fetchBlogTagSlugs();
 
+  // Safeguard: if running in CI and zero blog posts fetched, something is wrong
+  if (process.env.CI && blogRoutes.length < 5) {
+    console.error(`[Prerender] ERROR: Only ${blogRoutes.length} blog posts fetched from Supabase in CI (expected 5+).`);
+    console.error('[Prerender] The site has 9+ published posts - this likely means Supabase is down or env vars are wrong.');
+    process.exit(1);
+  }
+
   // Combine all routes
   const allRoutes = [...prerenderRoutes, ...faqRoutes, ...blogRoutes, ...tagRoutes];
   console.log(`[Prerender] Total routes to prerender: ${allRoutes.length}`);
 
-  // Create SPA fallback pages first
-  ensureSpaFallbackPages(allRoutes);
+  // NOTE: SPA fallback pages are created AFTER prerendering (only for skipped routes)
+  // This prevents SPA shell from persisting when prerender fails
 
   // Find Chrome executable
   const executablePath = findChrome();
@@ -436,10 +441,16 @@ async function prerender() {
   let successCount = 0;
   let errorCount = 0;
   let skippedCount = 0;
+  const erroredRoutes = [];
+  const skippedRoutes = [];
+  const criticalRoutes = ['/', '/solutions', '/services', '/blog', '/faq', '/get-started-accounting-firm-automation'];
+  const funnelRoutes = ['/accounting-firm-growth-calculator']; // Intentional minimal nav (FunnelHeader) - relax link threshold
 
   for (const route of allRoutes) {
     try {
       const page = await browser.newPage();
+      // Set desktop viewport so full navigation renders (Radix NavigationMenu needs lg/1024px+)
+      await page.setViewport({ width: 1280, height: 800 });
       const url = `http://localhost:3000${route}`;
 
       await page.goto(url, {
@@ -491,6 +502,44 @@ async function prerender() {
         }
       }
 
+      // Wait for actual page CONTENT to render (H1, body text, internal links)
+      // This is the critical fix: previously we only waited for metadata (title/canonical)
+      // but the body was empty, causing Ahrefs to see 12-16 word pages with no outgoing links
+      const isFunnelRoute = funnelRoutes.includes(route);
+      const minLinks = isFunnelRoute ? 1 : 5;
+      try {
+        await page.waitForFunction((minLinksParam) => {
+          const h1 = document.querySelector('h1');
+          const body = document.querySelector('#root');
+          const links = document.querySelectorAll('a[href^="/"]');
+          const wordCount = (body?.innerText || '').trim().split(/\s+/).filter(w => w.length > 0).length;
+          const hasError = document.querySelector('[data-error-boundary]') !== null;
+          return !hasError && h1 && h1.textContent.trim().length > 0 && wordCount > 30 && links.length > minLinksParam;
+        }, { timeout: 20000 }, minLinks);
+      } catch (contentErr) {
+        // Log which specific condition failed for debugging
+        const diagnostics = await page.evaluate(() => {
+          const h1 = document.querySelector('h1');
+          const body = document.querySelector('#root');
+          const links = document.querySelectorAll('a[href^="/"]');
+          const wordCount = (body?.innerText || '').trim().split(/\s+/).filter(w => w.length > 0).length;
+          const hasError = document.querySelector('[data-error-boundary]') !== null;
+          return {
+            hasH1: !!(h1 && h1.textContent.trim().length > 0),
+            h1Text: h1 ? h1.textContent.trim().substring(0, 80) : 'NONE',
+            wordCount,
+            linkCount: links.length,
+            hasError,
+          };
+        });
+        console.error(`[Prerender] ❌ ${route}: Content not ready after 20s`);
+        console.error(`[Prerender]   → H1: ${diagnostics.hasH1} ("${diagnostics.h1Text}")`);
+        console.error(`[Prerender]   → Words: ${diagnostics.wordCount} (need >30)`);
+        console.error(`[Prerender]   → Links: ${diagnostics.linkCount} (need >5)`);
+        console.error(`[Prerender]   → Error boundary: ${diagnostics.hasError}`);
+        throw new Error(`Content not ready for ${route}: ${diagnostics.wordCount} words, ${diagnostics.linkCount} links, H1=${diagnostics.hasH1}`);
+      }
+
       // NOTE: Blog post tags are now rendered via static TagCloud component
       // No need to wait for async tag fetching - all 70+ tags render immediately
 
@@ -530,8 +579,24 @@ async function prerender() {
           );
           console.log(`[Prerender] ✓ /blog/: ${postCount} blog post link(s) captured`);
         } catch (blogErr) {
-          console.log(`[Prerender] ⚠ /blog/: Blog posts wait timeout - capturing anyway`);
+          throw new Error(`/blog/ page: Blog posts did not render within 15s - Supabase may be unavailable`);
         }
+      }
+
+      // Belt-and-suspenders: validate content quality before capturing HTML
+      // (redundant with content readiness check above, but catches edge cases)
+      const contentStats = await page.evaluate(() => {
+        const body = document.querySelector('#root');
+        const h1 = document.querySelector('h1');
+        const text = (body?.innerText || '').trim();
+        const wordCount = text.split(/\s+/).filter(w => w.length > 0).length;
+        const linkCount = document.querySelectorAll('a[href]').length;
+        const hasH1 = !!(h1 && h1.textContent.trim().length > 0);
+        return { wordCount, linkCount, hasH1 };
+      });
+
+      if (contentStats.wordCount < 30 || !contentStats.hasH1 || contentStats.linkCount < 3) {
+        throw new Error(`Content too thin for ${route}: ${contentStats.wordCount} words, ${contentStats.linkCount} links, H1=${contentStats.hasH1}`);
       }
 
       // Get the rendered HTML
@@ -551,19 +616,24 @@ async function prerender() {
 
       // Write the prerendered HTML
       fs.writeFileSync(outputPath, html);
-      console.log(`[Prerender] ✓ ${route}`);
+      console.log(`[Prerender] ✓ ${route} (${contentStats.wordCount} words, ${contentStats.linkCount} links)`);
       successCount++;
 
-      await page.close();
     } catch (err) {
       // Special handling for homepage timeout - don't fail the build
       if (route === '/' && err.message.includes('timeout')) {
         console.log(`[Prerender] ⚠ ${route}: Timeout occurred (will render client-side)`);
         console.log('[Prerender]   → This is expected for heavy pages and does not affect functionality');
         skippedCount++;
+        skippedRoutes.push(route);
       } else {
-        console.error(`[Prerender] ✗ ${route}: ${err.message}`);
+        console.error(`[Prerender] ✗ ${route}: ${err.stack || err.message}`);
         errorCount++;
+        erroredRoutes.push(route);
+      }
+    } finally {
+      if (page && !page.isClosed()) {
+        await page.close().catch(() => {});
       }
     }
   }
@@ -573,9 +643,37 @@ async function prerender() {
 
   console.log(`\n[Prerender] Complete: ${successCount} success, ${errorCount} errors, ${skippedCount} skipped`);
 
-  // Don't fail build for errors - routes will fall back to SPA
+  // Create SPA fallback pages ONLY for explicitly skipped routes (not errored ones)
+  // Errored routes should NOT get fallback files - they should be caught by the build failure below
+  if (skippedRoutes.length > 0) {
+    console.log(`[Prerender] Creating SPA fallback for ${skippedRoutes.length} skipped route(s)...`);
+    ensureSpaFallbackPages(skippedRoutes);
+  }
+
+  // Threshold-based build failure
   if (errorCount > 0) {
-    console.log('[Prerender] Note: Failed routes will use SPA fallback (client-side rendering)');
+    // Check if any critical routes failed
+    const criticalErrors = erroredRoutes.filter(r => criticalRoutes.some(cr => r === cr || r === cr + '/'));
+    if (criticalErrors.length > 0) {
+      console.error(`\n[Prerender] BUILD FAILED: ${criticalErrors.length} critical route(s) failed:`);
+      criticalErrors.forEach(r => console.error(`  - ${r}`));
+      process.exit(1);
+    }
+
+    // Check overall failure rate (start at 20%, tighten after confirming stability)
+    const failureRate = errorCount / allRoutes.length;
+    if (failureRate > 0.2) {
+      console.error(`\n[Prerender] BUILD FAILED: ${(failureRate * 100).toFixed(0)}% failure rate (${errorCount}/${allRoutes.length}).`);
+      console.error('[Prerender] Failed routes:');
+      erroredRoutes.slice(0, 20).forEach(r => console.error(`  - ${r}`));
+      if (erroredRoutes.length > 20) console.error(`  ... and ${erroredRoutes.length - 20} more`);
+      process.exit(1);
+    }
+
+    // Below threshold - warn but don't fail
+    console.log(`[Prerender] ⚠ ${errorCount} non-critical route(s) failed (${(failureRate * 100).toFixed(1)}% - below 20% threshold)`);
+    console.log('[Prerender] Failed routes will NOT have prerendered HTML (SPA catch-all will serve them):');
+    erroredRoutes.forEach(r => console.log(`  - ${r}`));
   }
 }
 

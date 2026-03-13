@@ -66,15 +66,43 @@ function validateSitemapTrailingSlashes() {
   return errors;
 }
 
+const crypto = require('crypto');
+
 function extractMetadata(html) {
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
   const canonicalMatch = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i) ||
                          html.match(/<link[^>]+href=["']([^"']+)["'][^>]+rel=["']canonical["']/i);
-  
+
   return {
     title: titleMatch ? titleMatch[1] : null,
     canonical: canonicalMatch ? canonicalMatch[1] : null
   };
+}
+
+/**
+ * Extract content quality metrics from prerendered HTML
+ * Checks for actual body content (not just metadata)
+ */
+function extractContentMetrics(html) {
+  // Extract text from body, stripping HTML tags
+  const bodyMatch = html.match(/<div id="root"[^>]*>([\s\S]*?)<\/div>\s*<script/i);
+  const bodyText = bodyMatch
+    ? bodyMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+    : '';
+  const wordCount = bodyText.split(/\s+/).filter(w => w.length > 0).length;
+
+  // Check for H1
+  const h1Match = html.match(/<h1[^>]*>([^<]+)<\/h1>/i);
+  const hasH1 = !!(h1Match && h1Match[1].trim().length > 0);
+
+  // Count links
+  const linkMatches = html.match(/<a\s+[^>]*href=/gi);
+  const linkCount = linkMatches ? linkMatches.length : 0;
+
+  // Hash body content for duplicate detection
+  const bodyHash = crypto.createHash('md5').update(bodyText.substring(0, 2000)).digest('hex');
+
+  return { wordCount, hasH1, linkCount, bodyHash, bodyTextPreview: bodyText.substring(0, 100) };
 }
 
 /**
@@ -115,6 +143,8 @@ function validatePrerenders() {
   
   // Track found FAQ pages for validation
   const foundFaqSlugs = new Set();
+  // Track content hashes for SPA shell duplicate detection
+  const contentHashes = {};
   
   // FIRST: Check for forbidden deprecated FAQ pages
   console.log('[Validate] Checking for forbidden deprecated FAQ pages...');
@@ -164,30 +194,51 @@ function validatePrerenders() {
         
         const html = fs.readFileSync(fullPath, 'utf-8');
         const { title, canonical } = extractMetadata(html);
-        
+        const { wordCount, hasH1, linkCount, bodyHash } = extractContentMetrics(html);
+
+        // Track body hashes for SPA shell duplicate detection
+        if (!contentHashes[bodyHash]) {
+          contentHashes[bodyHash] = [];
+        }
+        contentHashes[bodyHash].push(route);
+
         let hasError = false;
-        
+
         // Check for homepage canonical on non-homepage
         if (canonical === homepageCanonical || canonical === homepageCanonicalAlt) {
           errors.push(`${route}: Has homepage canonical URL (${canonical})`);
           hasError = true;
         }
-        
+
         // Check for homepage title on non-homepage
         if (title === homepageTitle) {
           errors.push(`${route}: Has homepage title`);
           hasError = true;
         }
-        
+
         // Check for missing metadata
         if (!canonical) {
           warnings.push(`${route}: Missing canonical URL`);
         }
-        
+
         if (!title) {
           warnings.push(`${route}: Missing title`);
         }
-        
+
+        // Content quality checks
+        if (wordCount < 30) {
+          errors.push(`${route}: Content too thin (${wordCount} words, need 30+)`);
+          hasError = true;
+        }
+
+        if (!hasH1) {
+          warnings.push(`${route}: Missing or empty H1 tag`);
+        }
+
+        if (linkCount < 3) {
+          warnings.push(`${route}: Very few links (${linkCount}, expected 3+)`);
+        }
+
         if (!hasError) {
           validPages++;
         }
@@ -195,9 +246,39 @@ function validatePrerenders() {
     }
   }
   
+  // Verify gone.html exists (needed by 410 redirect rules in _redirects)
+  const goneHtmlPath = path.join(distPath, 'gone.html');
+  if (!fs.existsSync(goneHtmlPath)) {
+    errors.push('CRITICAL: gone.html missing from dist/ - all 410 redirect rules will fail');
+  } else {
+    console.log('[Validate] ✓ gone.html exists');
+  }
+
+  // Verify 404.html exists (needed by asset 404 rules in _redirects)
+  const notFoundHtmlPath = path.join(distPath, '404.html');
+  if (!fs.existsSync(notFoundHtmlPath)) {
+    errors.push('CRITICAL: 404.html missing from dist/ - asset 404 rules will fail');
+  } else {
+    console.log('[Validate] ✓ 404.html exists');
+  }
+
   console.log('[Validate] Starting prerender validation...');
   walkDir(distPath);
-  
+
+  // SPA shell duplicate detection
+  const duplicateGroups = Object.entries(contentHashes).filter(([hash, routes]) => routes.length > 3);
+  if (duplicateGroups.length > 0) {
+    console.error(`\n[Validate] ❌ Detected ${duplicateGroups.length} group(s) of duplicate content (possible SPA shell):`);
+    for (const [hash, routes] of duplicateGroups) {
+      console.error(`  Hash ${hash.substring(0, 8)}: ${routes.length} pages`);
+      routes.slice(0, 5).forEach(r => console.error(`    - ${r}`));
+      if (routes.length > 5) console.error(`    ... and ${routes.length - 5} more`);
+      errors.push(`Duplicate content detected: ${routes.length} pages share body hash ${hash.substring(0, 8)} (likely SPA shell not prerendered)`);
+    }
+  } else {
+    console.log('[Validate] ✓ No duplicate content groups detected');
+  }
+
   // Validate FAQ coverage
   const expectedFaqSlugs = extractExpectedFaqSlugs();
   const missingFaqSlugs = expectedFaqSlugs.filter(slug => !foundFaqSlugs.has(slug));

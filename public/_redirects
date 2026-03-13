@@ -355,5 +355,26 @@ https://solutions.smartfirm.io/*   https://smartfirm.io/solutions/   301
 /faq/attract-small-business-clients-bookkeeping/  /faq/attract-small-business-bookkeeping-clients/  301
 /faq/difference-growth-vs-scaling/  /faq/growth-vs-scaling-for-accounting-firms/  301
 
+# Return 404 for missing static assets (not SPA routes)
+# Without these, the SPA catch-all serves HTML for missing images/scripts
+/*.png   /404.html  404
+/*.jpg   /404.html  404
+/*.jpeg  /404.html  404
+/*.gif   /404.html  404
+/*.svg   /404.html  404
+/*.webp  /404.html  404
+/*.pdf   /404.html  404
+/*.css   /404.html  404
+/*.js    /404.html  404
+/*.map   /404.html  404
+/*.ico   /404.html  404
+/*.woff  /404.html  404
+/*.woff2 /404.html  404
+
+# Common junk URL patterns
+/wp-admin/*    /404.html  404
+/wp-content/*  /404.html  404
+/.env          /404.html  404
+
 # SPA fallback - MUST BE LAST
 /* /index.html 200

@@ -240,8 +240,8 @@ function injectSchemaIntoHTML(htmlPath, schema) {
     
     let html = readFileSync(htmlPath, 'utf-8');
     
-    // Check if Service schema already exists
-    if (html.includes('"@type": "Service"') && html.includes('"@id"')) {
+    // Check if Service schema already exists (with or without space after colon)
+    if ((html.includes('"@type": "Service"') || html.includes('"@type":"Service"')) && html.includes('"@id"')) {
       return false;
     }
     

@@ -91,6 +91,7 @@ function generateArticleSchema(post) {
       "width": 1200,
       "height": 630
     },
+    "articleBody": post.meta_description || post.excerpt || '',
     "articleSection": "Blog",
     "inLanguage": "en-US",
     "keywords": [

@@ -40,8 +40,8 @@ function generateArticleSchema(baseUrl, urlPath) {
       "@type": "Organization",
       "@id": `${baseUrl}#organization`
     },
-    "datePublished": new Date().toISOString().split('T')[0],
-    "dateModified": new Date().toISOString().split('T')[0],
+    "datePublished": "2026-03-12",
+    "dateModified": "2026-03-12",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `${baseUrl}${urlPath}`
@@ -72,8 +72,8 @@ function injectSchemaIntoHTML(htmlPath, baseUrl, urlPath) {
     
     let html = readFileSync(htmlPath, 'utf-8');
     
-    // Check if Article schema already exists
-    if (html.includes('"@type": "Article"') && html.includes('"@id"')) {
+    // Check if Article schema already exists (with or without space after colon)
+    if ((html.includes('"@type": "Article"') || html.includes('"@type":"Article"')) && html.includes('"@id"')) {
       return false;
     }
     

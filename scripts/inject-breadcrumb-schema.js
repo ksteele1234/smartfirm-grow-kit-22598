@@ -61,8 +61,8 @@ function injectSchemaIntoHTML(htmlPath, baseUrl, urlPath) {
       return false;
     }
     
-    // Check if BreadcrumbList schema already exists
-    if (html.includes('"@type": "BreadcrumbList"')) {
+    // Check if BreadcrumbList schema already exists (with or without space after colon)
+    if (html.includes('"@type": "BreadcrumbList"') || html.includes('"@type":"BreadcrumbList"')) {
       return false;
     }
     

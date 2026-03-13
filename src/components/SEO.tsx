@@ -11,7 +11,7 @@ interface SEOProps {
   robots?: string;
   canonicalUrl?: string; // Override canonical URL for pages with multiple route aliases
   // Template fields
-  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'collection' | 'default';
+  pageType?: 'service' | 'blog' | 'solution' | 'industry' | 'faq' | 'tool' | 'success-story' | 'legal' | 'default';
   serviceName?: string;
   audience?: string;
   topic?: string;
@@ -90,7 +90,7 @@ const SEO = ({
     generatedDescription = description;
   } else if (pageType === 'service' && serviceName) {
     const targetAudience = audience || 'accounting firms';
-    generatedDescription = `Discover how SmartFirm's ${serviceName} helps ${targetAudience} automate processes, improve client experience, and grow.`;
+    generatedDescription = `Discover how SmartFirm's ${serviceName} can help ${targetAudience} automate processes, improve client experience, and achieve measurable growth with proven strategies.`;
   } else if (pageType === 'blog' && topic) {
     generatedDescription = `Learn ${topic} for finance firms: actionable tips and tools from SmartFirm.`;
   }
@@ -192,7 +192,10 @@ const SEO = ({
     });
 
     // 3. WebPage (always present with enhancements)
-    const webPageType = pageType === 'collection' ? 'CollectionPage' : 'WebPage';
+    // Note: CollectionPage schema with mainEntity/ItemList is handled by
+    // inject-breadcrumb-collection-schema.cjs with real Supabase data.
+    // Using WebPage here avoids blocking that richer schema injection.
+    const webPageType = 'WebPage';
 
     const webPageSchema: any = {
       "@type": webPageType,
@@ -212,7 +215,7 @@ const SEO = ({
         "@type": "SpeakableSpecification",
         "cssSelector": speakableSelectors || ["h1", "p:first-of-type", ".value-proposition"]
       },
-      "dateModified": dateModified || new Date().toISOString(),
+      "dateModified": dateModified || "2026-03-12",
       "isPartOf": {
         "@id": `https://${primaryDomain}/#website`
       },
@@ -258,8 +261,8 @@ const SEO = ({
         "@type": "Article",
         "@id": `${canonicalUrl}#article`,
         "headline": topic,
-        "datePublished": datePublished || new Date().toISOString(),
-        "dateModified": dateModified || datePublished || new Date().toISOString(),
+        "datePublished": datePublished || "2026-03-12",
+        "dateModified": dateModified || datePublished || "2026-03-12",
         "author": {
           "@id": `https://${primaryDomain}/#organization`
         },
@@ -268,6 +271,7 @@ const SEO = ({
         },
         "image": pageImageFull,
         "description": pageDescription,
+        "articleBody": pageDescription,
         "mainEntityOfPage": {
           "@id": `${canonicalUrl}#webpage`
         }
@@ -279,8 +283,8 @@ const SEO = ({
         "@type": "Article",
         "@id": `${canonicalUrl}#article`,
         "headline": articleHeadline || pageTitle,
-        "datePublished": datePublished || new Date().toISOString(),
-        "dateModified": dateModified || datePublished || new Date().toISOString(),
+        "datePublished": datePublished || "2026-03-12",
+        "dateModified": dateModified || datePublished || "2026-03-12",
         "author": {
           "@type": "Organization",
           "name": "SmartFirm"
@@ -294,7 +298,8 @@ const SEO = ({
           }
         },
         "image": pageImageFull,
-        "description": pageDescription
+        "description": pageDescription,
+        "articleBody": pageDescription
       });
 
       webPageSchema.mainEntity = { "@id": `${canonicalUrl}#article` };
@@ -307,6 +312,7 @@ const SEO = ({
         "@type": "SoftwareApplication",
         "@id": `${canonicalUrl}#software`,
         "name": toolDisplayName,
+        "url": canonicalUrl,
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web Browser",
         "offers": {

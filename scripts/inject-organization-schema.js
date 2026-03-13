@@ -86,8 +86,8 @@ function injectSchemaIntoHTML(htmlPath, schema) {
     const schemaString = JSON.stringify(schema, null, 2);
     const scriptTag = `<script type="application/ld+json">\n${schemaString}\n</script>`;
     
-    // Check if Organization schema already exists
-    if (html.includes('"@type": "Organization"') && html.includes('"@id"')) {
+    // Check if Organization schema already exists (with or without space after colon)
+    if ((html.includes('"@type": "Organization"') || html.includes('"@type":"Organization"')) && html.includes('"@id"')) {
       console.log(`✓ Organization schema already exists in ${htmlPath}`);
       return;
     }

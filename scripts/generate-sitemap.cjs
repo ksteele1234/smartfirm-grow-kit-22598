@@ -57,7 +57,7 @@ const staticRoutes = [
   { path: '/services/client-onboarding-automation/', changefreq: 'weekly', priority: 0.8 },
 
   // Offer Pages
-  { path: '/ai-transformation-offer/', changefreq: 'monthly', priority: 0.7 },
+  // REMOVED: /ai-transformation-offer/ has noindex={true} in AITransformationOffer.tsx
 
   // Industry Pages
   { path: '/industries/automation-for-tax-preparation-firms/', changefreq: 'weekly', priority: 0.8 },
@@ -77,9 +77,8 @@ const staticRoutes = [
   { path: '/tools/lead-generation-scorecard-for-accounting-firms/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/modern-accounting-firm-assessment/', changefreq: 'monthly', priority: 0.7 },
   { path: '/tools/accounting-firm-growth-scorecard/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/seo-audit/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/page-grader/', changefreq: 'monthly', priority: 0.7 },
-  { path: '/tools/advanced-seo-qa/', changefreq: 'monthly', priority: 0.7 },
+  // REMOVED: /tools/seo-audit/, /tools/page-grader/, /tools/advanced-seo-qa/
+  // These have robots="noindex, nofollow" and should not be in sitemap
 
   // Funnel Pages
   { path: '/accounting-firm-growth-calculator/', changefreq: 'weekly', priority: 0.8 },
@@ -219,8 +218,9 @@ async function fetchBlogTags() {
   }
 
   try {
+    // Try to fetch tags with post count to filter empty tags
     const url = new URL(`${baseUrl}/rest/v1/blog_tags`);
-    url.searchParams.set('select', 'slug,created_at');
+    url.searchParams.set('select', 'slug,created_at,blog_post_tags(count)');
 
     const res = await fetch(url.toString(), {
       headers: {
@@ -230,11 +230,33 @@ async function fetchBlogTags() {
     });
 
     if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+      // Fallback to simple query if join fails
+      console.log(`[Sitemap] Blog tags: join query returned ${res.status}, falling back to simple query`);
+      const fallbackUrl = new URL(`${baseUrl}/rest/v1/blog_tags`);
+      fallbackUrl.searchParams.set('select', 'slug,created_at');
+      const fallbackRes = await fetch(fallbackUrl.toString(), {
+        headers: { apikey: anonKey, authorization: `Bearer ${anonKey}` },
+      });
+      if (!fallbackRes.ok) throw new Error(`HTTP ${fallbackRes.status}`);
+      const rows = await fallbackRes.json();
+      return Array.isArray(rows) ? rows : [];
     }
 
     const rows = await res.json();
-    return Array.isArray(rows) ? rows : [];
+    if (!Array.isArray(rows)) return [];
+
+    // Filter to only tags with at least 1 post
+    const tagsWithPosts = rows.filter(tag => {
+      const count = tag.blog_post_tags?.[0]?.count || 0;
+      return count > 0;
+    });
+
+    const filtered = rows.length - tagsWithPosts.length;
+    if (filtered > 0) {
+      console.log(`[Sitemap] Filtered out ${filtered} empty tag(s) with no published posts`);
+    }
+
+    return tagsWithPosts;
   } catch (e) {
     console.log(`[Sitemap] Blog tags: failed to fetch (${e.message || e})`);
     return [];
@@ -340,9 +362,11 @@ async function main() {
   const faqRoutes = generateFaqRoutes();
   console.log(`[Sitemap] Generated ${faqRoutes.length} FAQ routes`);
 
-  // Generate programmatic SEO routes
-  const seoRoutes = generateProgrammaticSeoRoutes();
-  console.log(`[Sitemap] Generated ${seoRoutes.length} programmatic SEO routes`);
+  // Programmatic SEO /grow/* pages - disabled until September 2026
+  // These pages have zero internal links (removed from navigation) and serve as SPA shell to crawlers
+  // const seoRoutes = generateProgrammaticSeoRoutes();
+  const seoRoutes = [];
+  console.log(`[Sitemap] Programmatic SEO routes: disabled (set aside until Sept 2026)`);
 
   // Convert blog posts to sitemap routes
   const blogRoutes = blogPosts.map(post => ({

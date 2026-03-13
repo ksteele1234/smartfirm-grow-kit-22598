@@ -48,9 +48,7 @@ const SingleProcessAITransformation = () => {
           <style>{heroStyles}</style>
 
           <div className="hero-container max-w-container-3xl mx-auto relative flex items-center justify-center min-h-[unset] pt-1">
-            <h1 className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-              AI Process Optimization for Accounting Firms
-            </h1>
+            <span className="sr-only">AI Process Optimization for Accounting Firms</span>
 
             {/* Hero Content - Centered */}
             <div className="hero-content relative z-10 text-center max-w-container-lg px-4">

@@ -8,6 +8,9 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://app.cal.com https://*.supabase.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.resend.com https://app.cal.com; frame-src https://app.cal.com https://cal.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'
+  X-XSS-Protection: 1; mode=block
 
 # ─── Hashed Assets (Vite generates fingerprinted filenames) ──────────────────
 # These files have content hashes in their names, so they can be cached forever.
@@ -16,7 +19,9 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # ─── Static Images & Media ──────────────────────────────────────────────────
-# Images that don't change often — cache aggressively with revalidation
+# Only cache images/fonts that actually exist as static files.
+# Hashed assets in /assets/* are already covered above with immutable caching.
+# Root-level images (og-default, logo, etc.) get 30-day cache.
 /*.webp
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 /*.png
@@ -37,6 +42,16 @@
 # ─── Favicons ────────────────────────────────────────────────────────────────
 /favicon*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# ─── 404 page ─────────────────────────────────────────────────────────────────
+# Prevent 404 responses from being cached (asset 404 rules in _redirects
+# serve /404.html for missing static files - don't cache these)
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ─── Admin pages ──────────────────────────────────────────────────────────────
+/admin/*
+  X-Robots-Tag: noindex, nofollow
 
 # ─── Sitemap & Robots ───────────────────────────────────────────────────────
 /sitemap.xml
